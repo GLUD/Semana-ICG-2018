@@ -1,0 +1,98 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:700,800';
+
+header {
+  background: rgba(75, 91, 110, 0.8);
+  margin: 0;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  top: 0;
+}
+
+#logo {
+  color: #fff;
+  font-size: 25px;
+  font-family: 'Open Sans';
+  font-weight: 800;
+  margin: 20px 0px 20px 80px;
+}
+
+#menu{
+  margin-right: 40px;
+  margin-top: 10px;
+}
+
+#menu ul{
+  list-style: none;
+}
+
+#menu ul li{
+  display: inline-block;
+  margin-left: 15px;
+}
+
+#menu ul li:first-child {
+  margin-left: 0px;
+}
+
+#menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding-bottom: 5px;
+}
+
+#menu ul li a:hover {
+  border-bottom: 2px solid white;
+}
+
+#menu ul li a.active {
+  border-bottom: 2px solid white;
+}
+
+#info {
+  height: 700px;
+  background: url('../img/ud1.jpg') no-repeat fixed;
+  padding-top: 75px;
+  display: flex;
+  justify-content: center;
+}
+
+#info .content {
+  /*background: rgba(204, 0, 51, 0.8);*/
+  margin: 150px 200px 0 200px;
+  height: 280px;
+  padding: 20px 40px;
+  color: #fff;
+  font-family: 'Open Sans';
+  text-align: center;
+
+  /*-moz-box-shadow:    2px 5px 10px 3px #383838 ;
+  -webkit-box-shadow: 2px 5px 10px 3px #383838 ;
+  box-shadow:         2px 5px 10px 3px #383838 ;*/
+}
+
+#info .content h1{
+  font-size: 36px;
+  font-weight: 800;
+}
+
+#info .content p {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#info .content .boton {
+  background: #fecc09;
+  margin-top: 20px;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 5%;
+  cursor: pointer;
+}
+
+#slide2 {
+  background: white fixed;
+  height: 700px;
+}
