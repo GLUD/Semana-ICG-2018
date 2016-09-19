@@ -51,54 +51,52 @@ header {
   border-bottom: 2px solid white;
 }
 
-/*.slide {
-  height: 700px;
-}*/
-
-.slide .content {
-  /*margin-top: 75px;*/
-}
-
-#info {
+.info {
   background: url('../img/ud1.jpg') no-repeat fixed;
   display: flex;
   justify-content: center;
   height: 700px;
+  align-items: center;
 }
 
-#info .content {
-  /*background: rgba(204, 0, 51, 0.8);*/
-  margin: 150px 200px 0 200px;
-  height: 280px;
-  padding: 20px 40px 20px 40px;
-  color: #fff;
-  font-family: 'Open Sans';
-  text-align: center;
-  height: 100%
-  /*-moz-box-shadow:    2px 5px 10px 3px #383838 ;
-  -webkit-box-shadow: 2px 5px 10px 3px #383838 ;
-  box-shadow:         2px 5px 10px 3px #383838 ;*/
-}
+  .info__poster {
+    border-top-left-radius: 5%;
+    border-bottom-left-radius: 5%;
+  }
 
+  .info__descripcion {
+    background: rgba(37, 165, 95, 0.7);
+    color: white;
+    font-family: 'Open Sans';
+    height: 400px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
 
-#info .content h1{
-  font-size: 36px;
-  font-weight: 800;
-}
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+  }
 
-#info .content p {
-  font-size: 20px;
-  font-weight: 700;
-}
+  .info__descripcion h1 {
+    font-size: 36px;
+    font-weight: 800;
+  }
 
-#info .content .boton {
-  background: #fecc09;
-  margin-top: 20px;
-  padding: 10px 20px;
-  display: inline-block;
-  border-radius: 5%;
-  cursor: pointer;
-}
+  .info__descripcion p {
+    text-align: center;
+  }
+
+  .info__boton {
+    background: #fecc09;
+    margin-top: 20px;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 5%;
+    cursor: pointer;
+  }
 
 #expositores {
   height: 700px;
@@ -148,5 +146,5 @@ header {
 
 #patrocinadores {
   background: url('../img/dark.png') fixed;
-  height: 300px;
+  height: 200px;
 }
