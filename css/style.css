@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Open+Sans:700,800';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,700,800';
 
 header {
   background: rgba(75, 91, 110, 0.8);
@@ -51,27 +51,35 @@ header {
   border-bottom: 2px solid white;
 }
 
-#info {
+/*.slide {
   height: 700px;
+}*/
+
+.slide .content {
+  /*margin-top: 75px;*/
+}
+
+#info {
   background: url('../img/ud1.jpg') no-repeat fixed;
-  padding-top: 75px;
   display: flex;
   justify-content: center;
+  height: 700px;
 }
 
 #info .content {
   /*background: rgba(204, 0, 51, 0.8);*/
   margin: 150px 200px 0 200px;
   height: 280px;
-  padding: 20px 40px;
+  padding: 20px 40px 20px 40px;
   color: #fff;
   font-family: 'Open Sans';
   text-align: center;
-
+  height: 100%
   /*-moz-box-shadow:    2px 5px 10px 3px #383838 ;
   -webkit-box-shadow: 2px 5px 10px 3px #383838 ;
   box-shadow:         2px 5px 10px 3px #383838 ;*/
 }
+
 
 #info .content h1{
   font-size: 36px;
@@ -92,7 +100,53 @@ header {
   cursor: pointer;
 }
 
-#slide2 {
-  background: white fixed;
+#expositores {
   height: 700px;
+}
+
+#expositores .content {
+  background: #F9690E fixed;
+  height: 100%;
+
+}
+
+#ubicacion {
+  background: url('../img/map-pattern.png') fixed;
+  /*background-size: cover;*/
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  height: 500px;
+}
+
+#ubicacion #direccion {
+  font-family: "Open Sans";
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0 30px;
+  color: white;
+  height: 300px;
+  justify-content: center;
+}
+
+#ubicacion #direccion #universidad {
+  font-size: 25px;
+  font-weight: 800;
+}
+
+#ubicacion #direccion #facultad {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+#ubicacion #direccion #locacion {
+  font-weight: 400;
+}
+
+#patrocinadores {
+  background: url('../img/dark.png') fixed;
+  height: 300px;
 }
