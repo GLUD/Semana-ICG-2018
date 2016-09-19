@@ -98,24 +98,72 @@ header {
     cursor: pointer;
   }
 
-#expositores {
-  height: 700px;
+.expositores {
+  background: #F6F6F6 fixed;
+  padding: 80px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#expositores .content {
-  background: #F9690E fixed;
-  height: 100%;
+  .expositores h2 {
+    text-align: center;
+    font-weight: 400;
+  }
 
-}
+  .expositores__lista {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 70%;
+    margin-top: 20px;
+  }
+
+      .lista__persona {
+        width: 30%;
+        margin: 10px 5px 15px 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .lista__persona img{
+          border-radius: 50%;
+      }
+
+      .lista__persona div {
+        font-weight: 400;
+        width: 100%;
+      }
+
+      .lista__persona div span{
+        font-family: 'Open Sans';
+        display: block;
+        text-align: center;
+      }
+
+      .lista__persona div span:first-child{
+        background-color: rgb(75, 91, 110);
+        width: 100%;
+        color: white;
+        font-weight: 700;
+        padding: 10px 5px;
+        margin: 10px 0;
+        box-sizing: padding-box;
+      }
+
+      .lista__persona div span:last-child {
+        margin-bottom: 10px;
+      }
 
 #ubicacion {
   background: url('../img/map-pattern.png') fixed;
-  /*background-size: cover;*/
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  height: 500px;
+  height: 600px;
 }
 
 #ubicacion #direccion {
