@@ -1,5 +1,45 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:400,700,800';
 
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?freep9');
+  src:  url('fonts/icomoon.eot?freep9#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?freep9') format('truetype'),
+    url('fonts/icomoon.woff?freep9') format('woff'),
+    url('fonts/icomoon.svg?freep9#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook:hover {
+  color: #3B5998;
+}
+.icon-facebook:before {
+  content: "\ea91";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+
+.icon-twitter:hover {
+  color: #00ACED;
+}
+
 header {
   background: rgba(75, 91, 110, 0.8);
   margin: 0;
@@ -38,6 +78,8 @@ header {
 }
 
 #menu ul li a {
+  font-family: 'Open Sans';
+  font-weight: 400;
   text-decoration: none;
   color: #fff;
   padding-bottom: 5px;
@@ -155,6 +197,7 @@ header {
 
       .lista__persona div span:last-child {
         margin-bottom: 10px;
+        font-weight: 400;
       }
 
 #ubicacion {
@@ -196,3 +239,25 @@ header {
   background: url('../img/dark.png') fixed;
   height: 200px;
 }
+
+footer {
+  height: 40px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Open Sans';
+  font-weight: bold;
+  color: #ABB7B7;
+}
+
+  footer a {
+    color: #ABB7B7;
+    margin-right: 5px;
+    text-decoration: none;
+    outline: 0;
+  }
+
+  footer a:first-child {
+    margin-left: 15px;
+  }
