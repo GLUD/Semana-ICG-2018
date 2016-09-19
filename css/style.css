@@ -49,49 +49,53 @@ header {
   justify-content: space-between;
   width: 100%;
   top: 0;
+  align-items: center;
+  height: 65px;
 }
 
-#logo {
-  color: #fff;
-  font-size: 25px;
-  font-family: 'Open Sans';
-  font-weight: 800;
-  margin: 20px 0px 20px 80px;
-}
+  .logo {
+    color: #fff;
+    font-size: 25px;
+    font-family: 'Open Sans';
+    font-weight: 800;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+  }
 
-#menu{
-  margin-right: 40px;
-  margin-top: 10px;
-}
+  .menu{
+    margin-right: 40px;
+    margin-top: 10px;
+  }
 
-#menu ul{
-  list-style: none;
-}
+    .menu__lista{
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
 
-#menu ul li{
-  display: inline-block;
-  margin-left: 15px;
-}
+    .lista__item{
+      display: inline-block;
+      margin-left: 20px;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 5px;
+    }
 
-#menu ul li:first-child {
-  margin-left: 0px;
-}
+      .lista__item:first-child {
+        margin-left: 0px;
+      }
 
-#menu ul li a {
-  font-family: 'Open Sans';
-  font-weight: 400;
-  text-decoration: none;
-  color: #fff;
-  padding-bottom: 5px;
-}
+      .lista__item a {
+        font-family: 'Open Sans';
+        font-weight: 400;
+        text-decoration: none;
+        color: #fff;
+      }
 
-#menu ul li a:hover {
-  border-bottom: 2px solid white;
-}
-
-#menu ul li a.active {
-  border-bottom: 2px solid white;
-}
+      .lista__item:hover {
+        border-bottom: 2px solid white;
+      }
 
 .info {
   background: url('../img/ud1.jpg') no-repeat fixed;
