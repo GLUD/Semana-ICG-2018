@@ -41,6 +41,7 @@
 }
 
 header {
+  z-index: 1;
   background: rgba(75, 91, 110, 0.8);
   margin: 0;
   position: fixed;
@@ -146,39 +147,35 @@ header {
 
 .expositores {
   background: #F6F6F6 fixed;
-  padding: 80px 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 40px;
 }
 
   .expositores h2 {
     text-align: center;
     font-weight: 400;
+    margin-bottom: 20px;
   }
 
   .expositores__lista {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 70%;
     margin-top: 20px;
   }
 
       .lista__persona {
-        width: 30%;
-        margin: 10px 5px 15px 5px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 20px;
       }
 
       .lista__persona img{
           border-radius: 50%;
+          width: 120px;
+          height: 120px;
       }
 
       .lista__persona div {
+        margin-top: 10px;
         font-weight: 400;
         width: 100%;
       }
@@ -191,17 +188,13 @@ header {
 
       .lista__persona div span:first-child{
         background-color: rgb(75, 91, 110);
-        width: 100%;
         color: white;
         font-weight: 700;
         padding: 10px 5px;
-        margin: 10px 0;
-        box-sizing: padding-box;
       }
 
       .lista__persona div span:last-child {
         margin-bottom: 10px;
-        font-weight: 400;
       }
 
 #ubicacion {
