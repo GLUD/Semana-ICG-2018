@@ -40,6 +40,11 @@
   color: #00ACED;
 }
 
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   font-family: 'Open Sans';
 }
@@ -69,36 +74,32 @@ header {
   }
 
 .info {
-  background: url('../img/ud1.jpg') no-repeat fixed;
+  background: url('../img/ud1.jpg') fixed;
+  background-size: cover;
+  padding: 70px 0px;
+  height: 100%;
+
   display: flex;
-  justify-content: center;
-  height: 700px;
   align-items: center;
 }
 
   .info__poster {
-    border-top-left-radius: 5%;
-    border-bottom-left-radius: 5%;
+    display: none;
   }
 
   .info__descripcion {
     background: rgba(37, 165, 95, 0.7);
     color: white;
-    height: 400px;
-    width: 40%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     padding: 0 20px;
-
-    border-top-right-radius: 5%;
-    border-bottom-right-radius: 5%;
   }
 
   .info__descripcion h1 {
-    font-size: 36px;
-    font-weight: 800;
+    font-weight: 700;
+    text-align: center;
   }
 
   .info__descripcion p {
@@ -107,7 +108,7 @@ header {
 
   .info__boton {
     background: #fecc09;
-    margin-top: 20px;
+    margin-bottom: 15px;
     padding: 10px 20px;
     display: inline-block;
     border-radius: 5%;
@@ -231,5 +232,14 @@ footer {
     background: none;
     color: white;
     border-bottom: 2px solid white;
+  }
+
+  .info-container {
+    display: flex;
+  }
+
+  .info__poster {
+    display: block;
+    padding: 0;
   }
 }
