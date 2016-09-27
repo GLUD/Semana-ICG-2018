@@ -235,6 +235,12 @@ footer {
     border-bottom: 2px solid white;
   }
 
+  .lista__persona img{
+      border-radius: 50%;
+      width: 180px;
+      height: 180px;
+  }
+
   .info-container {
     display: flex;
   }
