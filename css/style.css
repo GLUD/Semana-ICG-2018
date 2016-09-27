@@ -166,39 +166,40 @@ header {
         margin-bottom: 10px;
       }
 
-#ubicacion {
+.ubicacion {
   background: url('../img/map-pattern.png') fixed;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-  height: 600px;
+  padding: 20px 0px;
 }
 
-#ubicacion #direccion {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 0 30px;
-  color: white;
-  height: 300px;
-  justify-content: center;
-}
+  .ubicacion .frame {
+    padding: 0px;
+  }
 
-#ubicacion #direccion #universidad {
-  font-size: 25px;
-  font-weight: 800;
-}
+  .ubicacion .direccion {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px 0px;
+    color: white;
+    justify-content: center;
+    height: 300px;
+  }
 
-#ubicacion #direccion #facultad {
-  font-size: 20px;
-  font-weight: 400;
-}
+  .ubicacion .direccion .universidad {
+    font-size: 25px;
+    font-weight: 800;
+  }
 
-#ubicacion #direccion #locacion {
-  font-weight: 400;
-}
+  .ubicacion .direccion .facultad {
+    font-size: 20px;
+    font-weight: 400;
+    display: block;
+  }
+
+  .ubicacion .direccion .locacion {
+    display: block;
+  }
 
 #patrocinadores {
   background: url('../img/dark.png') fixed;
@@ -240,6 +241,25 @@ footer {
 
   .info__poster {
     display: block;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .direccion {
+    width: 100%;
+  }
+  .ubicacion .direccion  {
+    padding: 10px 0px;
+    height: 110px;
+  }
+  .ubicacion .direccion .universidad {
+    margin: 10px;
+  }
+  .ubicacion .frame {
+    width: 100%;
+    height: 100%;
+    margin: 0;
     padding: 0;
   }
 }
