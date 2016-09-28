@@ -11,6 +11,8 @@
 
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+
   </head>
   <body>
     <!-- HEADER -->
@@ -26,7 +28,9 @@
           </button>
 
           <div class="logo">
-            <a href="http://glud.org"><img width="80" height="40" src="img/logo_glud.svg"/></a>
+            <a href="http://glud.org">
+              <img data-aos="fade-right" width="80" height="40" src="img/logo_glud.svg"/>
+            </a>
             <span>SLUD 2016<span>
           </div>
         </div>
@@ -51,7 +55,7 @@
   </header>
     <!--  SLIDES  -->
     <section class="info">
-      <div class="info-container container">
+      <div class="info-container container" data-aos="fade-up">
         <img class="info__poster col-xs-12 col-sm-5 col-md-4" width="350" height="400" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=POSTER&w=350&h=400" />
         <div class="info__descripcion col-xs-12 col-sm-7 col-md-8">
           <h1>Semana Linux 2016</h1>
@@ -63,44 +67,44 @@
       </div>
     </section>
     <section id="expositores" class="expositores container-fluid">
-      <h2>Expositores</h2>
+      <h2 data-aos="fade-down">Expositores</h2>
       <div class="expositores__lista container">
-        <article class="lista__persona col-xs-12 col-sm-4">
+        <article class="lista__persona col-xs-12 col-sm-4"  data-aos="fade-right">
           <img width="200" height="200" src="http://www.oalaska.com/wp-content/themes/pointfinder/images/empty_avatar.jpg"/>
           <div>
             <span>Nombre Expositor</span>
             <span>Lugar de Trabajo</span>
           </div>
         </article>
-        <article class="lista__persona col-xs-12 col-sm-4">
+        <article class="lista__persona col-xs-12 col-sm-4" data-aos="fade-right">
           <img width="200" height="200" src="http://www.oalaska.com/wp-content/themes/pointfinder/images/empty_avatar.jpg"/>
           <div>
             <span>Nombre Expositor</span>
             <span>Lugar de Trabajo </span>
           </div>
         </article>
-        <article class="lista__persona col-xs-12 col-sm-4">
+        <article class="lista__persona col-xs-12 col-sm-4" data-aos="fade-right">
           <img width="200" height="200" src="http://www.oalaska.com/wp-content/themes/pointfinder/images/empty_avatar.jpg"/>
           <div>
             <span>Nombre Expositor</span>
             <span>Lugar de Trabajo </span>
           </div>
         </article>
-        <article class="lista__persona col-xs-12 col-sm-4">
+        <article class="lista__persona col-xs-12 col-sm-4" data-aos="fade-right">
           <img width="200" height="200" src="http://www.oalaska.com/wp-content/themes/pointfinder/images/empty_avatar.jpg"/>
           <div>
             <span>Nombre Expositor</span>
             <span>Lugar de Trabajo </span>
           </div>
         </article>
-        <article class="lista__persona col-xs-12 col-sm-4">
+        <article class="lista__persona col-xs-12 col-sm-4" data-aos="fade-right">
           <img width="200" height="200" src="http://www.oalaska.com/wp-content/themes/pointfinder/images/empty_avatar.jpg"/>
           <div>
             <span>Nombre Expositor</span>
             <span>Lugar de Trabajo </span>
           </div>
         </article>
-        <article class="lista__persona col-xs-12 col-sm-4">
+        <article class="lista__persona col-xs-12 col-sm-4" data-aos="fade-right">
           <img width="200" height="200" src="http://www.oalaska.com/wp-content/themes/pointfinder/images/empty_avatar.jpg"/>
           <div>
             <span>Nombre Expositor</span>
@@ -140,5 +144,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <!-- Bootstap js -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="js/aos.js"></script>
+    <script>
+      AOS.init({
+        easing: 'ease-out-back',
+        duration: 1000
+  		});
+		</script>
+
   </body>
 </html>
