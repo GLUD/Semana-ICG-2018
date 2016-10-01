@@ -201,10 +201,21 @@ header {
     display: block;
   }
 
-#patrocinadores {
+.patrocinadores {
   background: url('../img/dark.png') fixed;
-  height: 200px;
+  padding: 20px 0px;
 }
+  .patrocinadores h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+  }
+  .patrocinadores img {
+    margin-bottom: 15px;
+  }
+  .patrocinadores .zeety {
+    border-radius: 50%;
+  }
 
 footer {
   height: 40px;
