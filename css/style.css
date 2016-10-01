@@ -166,6 +166,41 @@ header {
         margin-bottom: 10px;
       }
 
+.agenda {
+  background: url('../img/bogota.jpg') fixed;
+  background-size: cover;
+  padding-top: 70px;
+  padding-bottom: 40px;
+}
+  .agenda div {
+    border: none;
+  }
+  .agenda h2 {
+    text-align: center;
+    padding-bottom: 10px;
+    color: white;
+    font-weight: 700;
+  }
+
+  .agenda table {
+    background-color: #F6F6F6;
+  }
+  .agenda thead {
+    background: rgb(37, 165, 95);
+    color: white;
+    font-size: 18px;
+    padding: 10px 0px;
+  }
+
+  .agenda .fecha {
+    width: 15%;
+    max-width: 100px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
 .ubicacion {
   background: url('../img/map-pattern.png') fixed;
   padding: 20px 0px;
