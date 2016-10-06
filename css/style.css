@@ -1,5 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:400,700,800';
-@import 'https://fonts.googleapis.com/css?family=Calligraffitti';
+@import 'https://fonts.googleapis.com/css?family=Handlee';
 
 @font-face {
   font-family: 'icomoon';
@@ -101,7 +101,7 @@ header {
   .info__descripcion h1 {
     font-weight: 700;
     text-align: center;
-    font-family: 'Calligraffitti';
+    font-family: 'Handlee';
   }
 
   .info__descripcion p {
@@ -179,7 +179,7 @@ header {
   }
   .agenda h2 {
     //-------------------------------------------
-    font-family: 'Calligraffitti';
+    font-family: 'Handlee';
     text-align: center;
     padding-bottom: 10px;
     color: white;
