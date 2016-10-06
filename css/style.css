@@ -178,7 +178,6 @@ header {
     border: none;
   }
   .agenda h2 {
-    //-------------------------------------------
     font-family: 'Handlee';
     text-align: center;
     padding-bottom: 10px;
@@ -194,6 +193,14 @@ header {
     color: white;
     font-size: 18px;
     padding: 10px 0px;
+  }
+
+  .agenda .dia{
+    background: #333333;
+  }
+
+  .agenda thead .span {
+    text-align: center;
   }
 
   .agenda .fecha {
@@ -222,12 +229,18 @@ header {
     padding: 15px 0px;
     color: white;
     justify-content: center;
+    align-items: center;
     height: 300px;
+  }
+
+  .ubicacion .direccion img {
+    display: none;
   }
 
   .ubicacion .direccion .universidad {
     font-size: 25px;
     font-weight: 800;
+    margin-bottom: 5px;
   }
 
   .ubicacion .direccion .facultad {
@@ -241,20 +254,25 @@ header {
   }
 
 .patrocinadores {
-  background: url('../img/dark.png') fixed;
   padding: 20px 0px;
 }
   .patrocinadores h2 {
     text-align: center;
-    color: white;
     margin-bottom: 20px;
   }
   .patrocinadores img {
     margin-bottom: 15px;
   }
-  .patrocinadores .zeety {
-    border-radius: 50%;
-  }
+
+.registro {
+  background: url('../img/dark.png') fixed;
+}
+
+.registro h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
 
 footer {
   height: 40px;
@@ -298,6 +316,17 @@ footer {
   .info__poster {
     display: block;
     padding: 0;
+  }
+
+  .ubicacion .direccion img {
+    display: block;
+  }
+
+  .ubicacion .direccion .universidad {
+    display: none;
+  }
+  .ubicacion .direccion .facultad {
+    font-weight: 700;
   }
 }
 
