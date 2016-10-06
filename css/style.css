@@ -120,6 +120,7 @@ header {
 
 .expositores {
   background: #F6F6F6 fixed;
+  font-family: 'EB Garamond';
   padding-top: 80px;
   padding-bottom: 40px;
 }
@@ -179,7 +180,8 @@ header {
     border: none;
   }
   .agenda h2 {
-    font-family: 'Droid Serif';
+
+    font-family: 'EB Garamond';
     text-align: center;
     padding-bottom: 10px;
     color: white;
@@ -194,6 +196,14 @@ header {
     color: white;
     font-size: 18px;
     padding: 10px 0px;
+  }
+
+  .agenda .dia{
+    background: #333333;
+  }
+
+  .agenda thead .span {
+    text-align: center;
   }
 
   .agenda .fecha {
@@ -240,12 +250,19 @@ header {
     padding: 15px 0px;
     color: white;
     justify-content: center;
+    align-items: center;
     height: 300px;
+  }
+
+  .ubicacion .direccion img {
+    display: none;
   }
 
   .ubicacion .direccion .universidad {
     font-size: 25px;
     font-weight: 800;
+    margin-bottom: 5px;
+    display: none;
   }
 
   .ubicacion .direccion .facultad {
@@ -259,7 +276,10 @@ header {
   }
 
 .patrocinadores {
+<<<<<<< HEAD
   /*background: url('../img/dark.png') fixed;*/
+=======
+>>>>>>> 01fcaf667206ae03897fa8eef02ad0bcaddbaae2
   padding: 20px 0px;
 }
   .patrocinadores h2 {
@@ -270,6 +290,19 @@ header {
   .patrocinadores img {
     margin-bottom: 15px;
   }
+<<<<<<< HEAD
+=======
+
+.registro {
+  background: url('../img/dark.png') fixed;
+}
+
+.registro h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+>>>>>>> 01fcaf667206ae03897fa8eef02ad0bcaddbaae2
 
 footer {
   height: 40px;
@@ -314,6 +347,10 @@ footer {
     display: block;
     padding: 0;
   }
+
+  .ubicacion .direccion .facultad {
+    font-weight: 700;
+  }
 }
 
 @media screen and (max-width: 769px) {
@@ -332,5 +369,17 @@ footer {
     height: 100%;
     margin: 0;
     padding: 0;
+  }
+}
+
+@media screen and (min-width: 799px) {
+  .ubicacion .direccion img {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .ubicacion .direccion .universidad {
+    display: block;
   }
 }
