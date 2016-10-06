@@ -1,5 +1,6 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:400,700,800';
-@import 'https://fonts.googleapis.com/css?family=Handlee';
+@import 'https://fonts.googleapis.com/css?family=Droid+Serif';
+@import 'https://fonts.googleapis.com/css?family=EB+Garamond';
 
 @font-face {
   font-family: 'icomoon';
@@ -101,7 +102,7 @@ header {
   .info__descripcion h1 {
     font-weight: 700;
     text-align: center;
-    font-family: 'Handlee';
+    font-family: 'Droid Serif';
   }
 
   .info__descripcion p {
@@ -178,12 +179,11 @@ header {
     border: none;
   }
   .agenda h2 {
-    //-------------------------------------------
-    font-family: 'Handlee';
+    font-family: 'Droid Serif';
     text-align: center;
     padding-bottom: 10px;
     color: white;
-    font-weight: 800;
+    font-weight: 700;
   }
 
   .agenda table {
@@ -197,12 +197,30 @@ header {
   }
 
   .agenda .fecha {
+    text-align: center;
     width: 15%;
     max-width: 100px;
-    text-align: center;
     font-size: 18px;
     font-weight: bold;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
+  }
+
+  .agenda .charla {
+    text-align: center;
+    width: 15%;
+    max-width: 100px;
+    font-size: 18px;
+    font-weight: bold;
+    /*text-transform: uppercase;*/
+  }
+
+  .agenda .expositor {
+    text-align: center;
+    width: 15%;
+    max-width: 100px;
+    font-size: 18px;
+    font-weight: bold;
+    /*text-transform: uppercase;*/
   }
 
 .ubicacion {
@@ -241,19 +259,16 @@ header {
   }
 
 .patrocinadores {
-  background: url('../img/dark.png') fixed;
+  /*background: url('../img/dark.png') fixed;*/
   padding: 20px 0px;
 }
   .patrocinadores h2 {
     text-align: center;
-    color: white;
     margin-bottom: 20px;
+    font-family: 'EB Garamond';
   }
   .patrocinadores img {
     margin-bottom: 15px;
-  }
-  .patrocinadores .zeety {
-    border-radius: 50%;
   }
 
 footer {
