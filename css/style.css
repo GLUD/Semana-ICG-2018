@@ -241,6 +241,7 @@ header {
     font-size: 25px;
     font-weight: 800;
     margin-bottom: 5px;
+    display: none;
   }
 
   .ubicacion .direccion .facultad {
@@ -318,13 +319,6 @@ footer {
     padding: 0;
   }
 
-  .ubicacion .direccion img {
-    display: block;
-  }
-
-  .ubicacion .direccion .universidad {
-    display: none;
-  }
   .ubicacion .direccion .facultad {
     font-weight: 700;
   }
@@ -346,5 +340,17 @@ footer {
     height: 100%;
     margin: 0;
     padding: 0;
+  }
+}
+
+@media screen and (min-width: 799px) {
+  .ubicacion .direccion img {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .ubicacion .direccion .universidad {
+    display: block;
   }
 }
