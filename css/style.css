@@ -1,4 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:400,700,800';
+@import 'https://fonts.googleapis.com/css?family=Calligraffitti';
 
 @font-face {
   font-family: 'icomoon';
@@ -100,6 +101,7 @@ header {
   .info__descripcion h1 {
     font-weight: 700;
     text-align: center;
+    font-family: 'Calligraffitti';
   }
 
   .info__descripcion p {
@@ -176,10 +178,12 @@ header {
     border: none;
   }
   .agenda h2 {
+    //-------------------------------------------
+    font-family: 'Calligraffitti';
     text-align: center;
     padding-bottom: 10px;
     color: white;
-    font-weight: 700;
+    font-weight: 800;
   }
 
   .agenda table {
