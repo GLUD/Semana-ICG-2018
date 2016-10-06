@@ -65,6 +65,9 @@ header {
     font-weight: 800;
     font-size: 19px;
   }
+  .navbar .logo:hover {
+    color: rgb(37, 165, 95);
+  }
   .icon-bar {
     background: white;
   }
