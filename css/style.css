@@ -77,9 +77,10 @@ header {
 
 .info {
   background: url('../img/ud1.jpg') fixed;
-  background-size: cover;
-  padding: 70px 0px;
-  height: 100%;
+  background-size: inherit;
+  padding: 60px 0px;
+  height: auto;
+  width: auto;
 
   display: flex;
   align-items: center;
@@ -100,7 +101,7 @@ header {
   }
 
   .info__descripcion h1 {
-    font-weight: 700;
+    font-weight: auto;
     text-align: center;
     font-family: 'Droid Serif';
   }
