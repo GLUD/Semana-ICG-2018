@@ -59,23 +59,27 @@ header {
 }
   .navbar {
     background: rgba(75, 91, 110, 0.8);
+    color: white;
   }
   .navbar .logo {
     margin: 10px;
     font-weight: 800;
     font-size: 19px;
+    outline: 0;
   }
-  .navbar .logo:hover {
-    color: rgb(37, 165, 95);
-  }
+
   .icon-bar {
     background: white;
   }
   .nav li a{
     color: white;
+    outline: 0;
   }
   .nav li a:hover{
     color: #337ab7;
+  }
+  .nav li a:focus{
+    background: transparent;
   }
 
 .info {
@@ -84,7 +88,7 @@ header {
   padding: 60px 0px;
   height: auto;
   width: auto;
-
+  height: 100%;
   display: flex;
   align-items: center;
 }
