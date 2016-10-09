@@ -306,6 +306,7 @@ body {
 
 
 footer {
+  background: url('../img/dark.png');
   height: 40px;
   text-align: center;
   display: flex;
@@ -314,6 +315,7 @@ footer {
   font-family: 'Open Sans';
   font-weight: bold;
   color: #ABB7B7;
+  /*color: white;*/
 }
 
   footer a {
@@ -361,6 +363,7 @@ footer {
   }
   .info__descripcion h1 {
     font-size: 17px;
+    margin-bottom: 10px;
   }
   .info__descripcion p {
     font-size: 15px;
