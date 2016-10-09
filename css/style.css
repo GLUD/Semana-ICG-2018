@@ -85,6 +85,7 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
   .info__poster {
@@ -98,26 +99,41 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 0 20px;
+    padding: 20px 20px 10px 20px;
   }
 
   .info__descripcion h1 {
+    font-weight: bold;
     font-weight: auto;
     text-align: center;
     font-family: 'Droid Serif';
+    margin-bottom: 20px;
+    font-size: 24px;
   }
 
   .info__descripcion p {
-    text-align: center;
+    text-align: justify;
   }
 
   .info__boton {
     background: #fecc09;
     margin-bottom: 15px;
-    padding: 10px 20px;
     display: inline-block;
+    padding: 10px 0px;
+    margin-top: 10px;
     border-radius: 5%;
     cursor: pointer;
+    box-sizing: padding-box;
+  }
+  .info__boton:hover {
+    background: #FE9B09;
+  }
+  .info__boton a {
+    text-decoration: none;
+    outline: 0;
+    color: white;
+    margin: 0px 20px;
+    font-weight: 700;
   }
 
 .expositores {
@@ -339,6 +355,16 @@ footer {
 }
 
 @media screen and (max-width: 769px) {
+  .info-container {
+    margin: 0;
+    padding: 0;
+  }
+  .info__descripcion h1 {
+    font-size: 17px;
+  }
+  .info__descripcion p {
+    font-size: 15px;
+  }
   .direccion {
     width: 100%;
   }
