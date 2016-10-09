@@ -16,45 +16,33 @@
   </head>
   <body>
     <!-- HEADER -->
-  <!-- <header> -->
-  <nav class="navbar navbar-fixed-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-          <span class="sr-only">Desplegar navegación</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <div class="logo">
-          <a href="http://glud.org">
-            <img data-aos="fade-right" width="80" height="40" src="img/logo_glud.svg"/>
-          </a>
-          <span>SLUD 2016<span>
+    <!-- <header> -->
+    <nav class="navbar navbar-fixed-top" role="navigation" ng-controller="Menu as menu">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Desplegar navegación</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="logo">
+            <a href="http://glud.org">
+              <img data-aos="fade-right" width="80" height="40" src="img/logo_glud.svg"/>
+            </a>
+            <span>SLUD 2016<span>
+          </div>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li ng-repeat="item in menu.lista">
+              <a href={{item.url}}>{{item.text}}</a>
+            </li>
+  	      </ul>
         </div>
       </div>
-      <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li >
-            <a href="#expositores">Expositores</a>
-          </li>
-          <li>
-            <a href="#agenda">Agenda</a>
-          </li>
-          <li>
-            <a href="#ubicacion">Ubicación</a>
-          </li>
-          <li>
-            <a href="#patrocinadores">Patrocinadores</a>
-          </li>
-          <li>
-            <a href="#registro">Registro</a>
-          </li>
-	       </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- </header> -->
+    </nav>
+    <!-- </header> -->
     <section class="info">
       <div class="info-container container" data-aos="fade-up">
         <img class="info__poster col-xs-12 col-sm-5 col-md-4" width="350" height="400" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=POSTER&w=350&h=400" />
@@ -67,7 +55,48 @@
         </div>
       </div>
     </section>
-<div ng-view></div>
+    <!-- <div ng-view></div> -->
+    <section id="expositores" class="expositores container-fluid" ng-controller="Expositores as expositores">
+      <h2 data-aos="fade-down">Expositores</h2>
+      <div class="expositores__lista container">
+        <article class="lista__persona col-xs-12 col-sm-4" data-aos="fade-right" ng-repeat="e in expositores.lista">
+          <img width="200" height="200" src={{e.foto}} />
+          <div>
+            <span>{{e.nombre}}</span>
+            <span>{{e.trabajo}}</span>
+          </div>
+        </article>
+        <article class="lista__persona col-xs-12 col-sm-4" data-aos="fade-right">
+        </article>
+      </div>
+    </section>
+    <section id="agenda" class="agenda container-fluid" ng-controller="Agenda as agenda">
+      <div class="container">
+        <h2 data-aos="fade-right">Agenda de charlas y talleres</h2>
+        <div class="container table-responsive">
+         <!-- <h2 data-aos="fade-right">Agenda</h2> -->
+         <table class="table" ng-repeat="dia in agenda.dias">
+           <thead>
+             <tr class="dia">
+               <th class="span" colspan="3">{{dia.header}}</th>
+             </tr>
+             <tr>
+               <th class="fecha">Hora</th>
+               <th>Charla</th>
+               <th>Expositor</th>
+             </tr>
+           </thead>
+           <tbody>
+             <tr ng-repeat="charla in dia.charlas">
+               <td class="fecha">{{charla.hora}}</td>
+               <td>{{charla.nombre}}</td>
+               <td>{{charla.expositor}}</td>
+             </tr>
+           </tbody>
+         </table>
+       </div>
+      </div>
+    </section>
     <footer>
       Grupo de trabajo GNU/Linux Universidad Distrital
       <a href="https://www.facebook.com/GrupoLinuxUD" class="icon-facebook"></a>
@@ -85,6 +114,7 @@
     <script src="https://code.angularjs.org/1.5.8/angular-resource.min.js"></script>
     <script src="https://code.angularjs.org/1.5.8/angular-route.min.js"></script>
 
+    <script src="js/util.js"></script>
     <script src="js/app.js"></script>
     <script src="js/home/home-controller.js"></script>
 

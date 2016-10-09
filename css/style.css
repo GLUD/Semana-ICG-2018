@@ -51,12 +51,6 @@ body {
   font-family: 'Open Sans';
 }
 
-header {
-  position: fixed;
-  width: 100%;
-  z-index: 1;
-  color: white;
-}
   .navbar {
     background: rgba(75, 91, 110, 0.8);
     color: white;
@@ -84,7 +78,7 @@ header {
 
 .info {
   background: url('../img/ud1.jpg') fixed;
-  background-size: inherit;
+  background-size: cover;
   padding: 60px 0px;
   height: auto;
   width: auto;
@@ -198,6 +192,7 @@ header {
 
   .agenda table {
     background-color: #F6F6F6;
+    margin-bottom: 0;
   }
   .agenda thead {
     background: rgb(37, 165, 95);
