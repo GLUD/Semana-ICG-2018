@@ -267,6 +267,13 @@ body {
     margin-bottom: 20px;
     font-family: 'EB Garamond';
   }
+  .patrocinadores .logos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+  }
   .patrocinadores img {
     margin-bottom: 15px;
   }
