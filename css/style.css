@@ -368,6 +368,14 @@ footer {
   .info__descripcion p {
     font-size: 15px;
   }
+  .agenda {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .agenda div {
+    padding-right: 0;
+    padding-left: 0;
+  }
   .direccion {
     width: 100%;
   }
