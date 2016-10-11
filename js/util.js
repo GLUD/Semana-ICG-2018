@@ -34,11 +34,31 @@ util.procesarCharlas = function(charlas){
     }
 
     nuevoFormato[charla.fecha].charlas.push({
-      hora: charla.hora,
+      hora: util.procesarHora(charla.hora),
       nombre: charla.titulo,
       expositor: util.expositoresToString(charla.speakers)
     });
   }
 
+  nuevoFormato = util.ordenarDiccionario(nuevoFormato);
   return nuevoFormato;
 };
+
+util.ordenarDiccionario = function(dir) {
+  var answ = [];
+
+  var keys = Object.keys(dir);
+  keys = keys.sort();
+
+  for(var i=0; i<keys.length; i++)
+    answ.push(dir[keys[i]]);
+
+  return answ;
+};
+
+util.procesarHora = function(hora) {
+  var horaRegex = /^(\d{2}:\d{2})/g;
+  var answ = horaRegex.exec(hora);
+
+  return answ[0];
+}
