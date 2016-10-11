@@ -12,7 +12,7 @@
   })
   .controller('Expositores', ['$http' , function Expositores($http){
     // Obtener los expositores del API
-    // $http.get('http://slud.pythonanywhere.com/api/speakers/')
+    // $http.get('https://slud.pythonanywhere.com/api/speakers/')
     //   .success(data => {
     //     this.lista = data;
     //   })
@@ -33,7 +33,7 @@
   }])
   .controller('Agenda', ['$http', function Agenda($http){
     // Consultar las charlas del API
-    $http.get('http://slud.pythonanywhere.com/api/charlas/')
+    $http.get('https://slud.pythonanywhere.com/api/charlas/')
       .success(data => {
         this.dias = util.procesarCharlas(data);
       });
