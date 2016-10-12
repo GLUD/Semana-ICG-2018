@@ -48,14 +48,7 @@ body {
     font-family: 'Open Sans';
 }
 
-header {
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-    color: white;
-}
-
-.navbar {
+  .navbar {
     background: rgba(75, 91, 110, 0.8);
     color: white;
 }
@@ -85,14 +78,15 @@ header {
 }
 
 .info {
-    background: url('../img/ud1.jpg') fixed;
-    background-size: inherit;
-    padding: 60px 0px;
-    height: auto;
-    width: auto;
-    height: 100%;
-    display: flex;
-    align-items: center;
+  background: url('../img/ud1.jpg') fixed;
+  background-size: cover;
+  padding: 60px 0px;
+  height: auto;
+  width: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .info__poster {
@@ -106,27 +100,42 @@ header {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 0 20px;
-}
+    padding: 20px 20px 10px 20px;
+  }
 
-.info__descripcion h1 {
+  .info__descripcion h1 {
+    font-weight: bold;
     font-weight: auto;
     text-align: center;
     font-family: 'Droid Serif';
-}
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
 
-.info__descripcion p {
-    text-align: center;
-}
+  .info__descripcion p {
+    text-align: justify;
+  }
 
 .info__boton {
     background: #fecc09;
     margin-bottom: 15px;
-    padding: 10px 20px;
     display: inline-block;
+    padding: 10px 0px;
+    margin-top: 10px;
     border-radius: 5%;
     cursor: pointer;
-}
+    box-sizing: padding-box;
+  }
+  .info__boton:hover {
+    background: #FE9B09;
+  }
+  .info__boton a {
+    text-decoration: none;
+    outline: 0;
+    color: white;
+    margin: 0px 20px;
+    font-weight: 700;
+  }
 
 .expositores {
     background: #F6F6F6 fixed;
@@ -204,6 +213,9 @@ header {
 }
 
 .agenda thead {
+    margin-bottom: 0;
+  }
+  .agenda thead {
     background: rgb(37, 165, 95);
     color: white;
     font-size: 18px;
@@ -279,6 +291,15 @@ header {
 }
 
 .patrocinadores img {
+  }
+  .patrocinadores .logos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+  }
+  .patrocinadores img {
     margin-bottom: 15px;
 }
 
@@ -293,14 +314,16 @@ header {
 }
 
 footer {
-    height: 40px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Open Sans';
-    font-weight: bold;
-    color: #ABB7B7;
+  background: url('../img/dark.png');
+  height: 40px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Open Sans';
+  font-weight: bold;
+  color: #ABB7B7;
+  /*color: white;*/
 }
 
 footer a {
@@ -338,22 +361,41 @@ footer a:first-child {
 }
 
 @media screen and (max-width: 769px) {
-    .direccion {
-        width: 100%;
-    }
-    .ubicacion .direccion {
-        padding: 10px 0px;
-        height: 110px;
-    }
-    .ubicacion .direccion .universidad {
-        margin: 10px;
-    }
-    .ubicacion .frame {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
+  .info-container {
+    margin: 0;
+    padding: 0;
+  }
+  .info__descripcion h1 {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+  .info__descripcion p {
+    font-size: 15px;
+  }
+  .agenda {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .agenda div {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .direccion {
+    width: 100%;
+  }
+  .ubicacion .direccion  {
+    padding: 10px 0px;
+    height: 110px;
+  }
+  .ubicacion .direccion .universidad {
+    margin: 10px;
+  }
+  .ubicacion .frame {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 @media screen and (min-width: 799px) {
