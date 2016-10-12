@@ -53,29 +53,29 @@ body {
     color: white;
 }
 
-.navbar .logo {
-    margin: 10px;
-    font-weight: 800;
-    font-size: 19px;
-    outline: 0;
-}
+    .navbar .logo {
+        margin: 10px;
+        font-weight: 800;
+        font-size: 19px;
+        outline: 0;
+    }
 
-.icon-bar {
-    background: white;
-}
+    .icon-bar {
+        background: white;
+    }
 
-.nav li a {
-    color: white;
-    outline: 0;
-}
+    .nav li a {
+        color: white;
+        outline: 0;
+    }
 
-.nav li a:hover {
-    color: #337ab7;
-}
+    .nav li a:hover {
+        color: #337ab7;
+    }
 
-.nav li a:focus {
-    background: transparent;
-}
+    .nav li a:focus {
+        background: transparent;
+    }
 
 .info {
   background: url('../img/ud1.jpg') fixed;
@@ -88,12 +88,10 @@ body {
   align-items: center;
   justify-content: center;
 }
-
-.info__poster {
+  .info__poster {
     display: none;
-}
-
-.info__descripcion {
+  }
+  .info__descripcion {
     background: rgba(37, 165, 95, 0.7);
     color: white;
     display: flex;
@@ -102,7 +100,6 @@ body {
     align-items: center;
     padding: 20px 20px 10px 20px;
   }
-
   .info__descripcion h1 {
     font-weight: bold;
     font-weight: auto;
@@ -111,12 +108,10 @@ body {
     margin-bottom: 20px;
     font-size: 24px;
   }
-
   .info__descripcion p {
     text-align: justify;
   }
-
-.info__boton {
+  .info__boton {
     background: #fecc09;
     margin-bottom: 15px;
     display: inline-block;
@@ -126,94 +121,93 @@ body {
     cursor: pointer;
     box-sizing: padding-box;
   }
-  .info__boton:hover {
-    background: #FE9B09;
-  }
-  .info__boton a {
-    text-decoration: none;
-    outline: 0;
-    color: white;
-    margin: 0px 20px;
-    font-weight: 700;
-  }
+    .info__boton:hover {
+      background: #FE9B09;
+    }
+    .info__boton a {
+      text-decoration: none;
+      outline: 0;
+      color: white;
+      margin: 0px 20px;
+      font-weight: 700;
+    }
 
 .expositores {
-    background: #F6F6F6 fixed;
-    font-family: 'EB Garamond';
-    padding-top: 80px;
-    padding-bottom: 40px;
+  background: #F6F6F6 fixed;
+  font-family: 'EB Garamond';
+  padding-top: 80px;
+  padding-bottom: 40px;
 }
-
-.expositores h2 {
+  .expositores h2 {
     text-align: center;
     font-weight: 400;
     margin-bottom: 50px;
-}
+  }
 
-.expositores__lista {
+  .expositores__lista {
     margin-top: 20px;
-}
+  }
 
-.lista__persona {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-}
+    .lista__persona {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
 
-.lista__persona img {
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-}
+    .lista__persona img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+    }
 
-.lista__persona div {
-    margin-top: 10px;
-    font-weight: 400;
-    width: 100%;
-}
+    .lista__persona div {
+      margin-top: 10px;
+      font-weight: 400;
+      width: 100%;
+    }
 
-.lista__persona div span {
-    display: block;
-    text-align: center;
-}
+    .lista__persona div span {
+      display: block;
+      text-align: center;
+    }
 
-.lista__persona div span:first-child {
-    background-color: rgb(75, 91, 110);
-    color: white;
-    font-weight: 700;
-    padding: 10px 5px;
-}
+    .lista__persona div span:first-child {
+      background-color: rgb(75, 91, 110);
+      color: white;
+      font-weight: 700;
+      padding: 10px 5px;
+    }
 
-.lista__persona div span:last-child {
-    margin-bottom: 10px;
-}
+    .lista__persona div span:last-child {
+      margin-bottom: 10px;
+    }
 
 .agenda {
-    background: url('../img/bogota.jpg') fixed;
-    background-size: cover;
-    padding-top: 70px;
-    padding-bottom: 40px;
+  background: url('../img/bogota.jpg') fixed;
+  background-size: cover;
+  padding-top: 70px;
+  padding-bottom: 40px;
 }
 
-.agenda div {
+  .agenda div {
     border: none;
-}
+  }
 
-.agenda h2 {
+  .agenda h2 {
     font-family: 'EB Garamond';
     text-align: center;
     padding-bottom: 10px;
     color: white;
     font-weight: 700;
-}
+  }
 
-.agenda table {
+  .agenda table {
     background-color: #F6F6F6;
     margin-bottom: 0;
-}
+  }
 
-.agenda thead {
+  .agenda thead {
     margin-bottom: 0;
   }
   .agenda thead {
@@ -221,34 +215,34 @@ body {
     color: white;
     font-size: 18px;
     padding: 10px 0px;
-}
+  }
 
-.agenda .dia {
+  .agenda .dia {
     background: #333333;
-}
+  }
 
-.agenda thead .span {
+  .agenda thead .span {
     text-align: center;
-}
+  }
 
-.agenda .fecha {
+  .agenda .fecha {
     text-align: center;
     width: 15%;
     max-width: 100px;
     font-size: 18px;
     font-weight: bold;
-}
+  }
 
 .ubicacion {
-    background: url('../img/map-pattern.png') fixed;
-    padding: 20px 0px;
+  background: url('../img/map-pattern.png') fixed;
+  padding: 20px 0px;
 }
 
-.ubicacion .frame {
+  .ubicacion .frame {
     padding: 0px;
-}
+  }
 
-.ubicacion .direccion {
+  .ubicacion .direccion {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -258,41 +252,39 @@ body {
     justify-content: center;
     align-items: center;
     height: 300px;
-}
+  }
 
-.ubicacion .direccion img {
+  .ubicacion .direccion img {
     display: none;
-}
+  }
 
-.ubicacion .direccion .universidad {
+  .ubicacion .direccion .universidad {
     font-size: 25px;
     font-weight: 800;
     margin-bottom: 5px;
     display: none;
-}
+  }
 
-.ubicacion .direccion .facultad {
+  .ubicacion .direccion .facultad {
     font-size: 20px;
     font-weight: 400;
     display: block;
-}
+  }
 
-.ubicacion .direccion .locacion {
+  .ubicacion .direccion .locacion {
     display: block;
-}
+  }
 
 .patrocinadores {
-    padding: 20px 0px;
+  padding: 20px 0px;
 }
 
-.patrocinadores h2 {
+  .patrocinadores h2 {
     text-align: center;
     margin-bottom: 20px;
     font-family: 'EB Garamond';
-}
-
-.patrocinadores img {
   }
+
   .patrocinadores .logos {
     display: flex;
     flex-direction: row;
@@ -302,17 +294,7 @@ body {
   }
   .patrocinadores img {
     margin-bottom: 15px;
-}
-
-.registro {
-    background: url('../img/dark.png') fixed;
-}
-
-.registro h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: white;
-}
+  }
 
 footer {
   background: url('../img/dark.png');
@@ -327,38 +309,38 @@ footer {
   /*color: white;*/
 }
 
-footer a {
+  footer a {
     color: #ABB7B7;
     margin-right: 5px;
     text-decoration: none;
     outline: 0;
-}
+  }
 
-footer a:first-child {
+  footer a:first-child {
     margin-left: 15px;
-}
+  }
 
 @media screen and (min-width: 768px) {
-    .nav li a:hover {
-        background: none;
-        color: white;
-        border-bottom: 2px solid white;
-    }
-    .lista__persona img {
-        border-radius: 50%;
-        width: 180px;
-        height: 180px;
-    }
-    .info-container {
-        display: flex;
-    }
-    .info__poster {
-        display: block;
-        padding: 0;
-    }
-    .ubicacion .direccion .facultad {
-        font-weight: 700;
-    }
+  .nav li a:hover {
+    background: none;
+    color: white;
+    border-bottom: 2px solid white;
+  }
+  .lista__persona img {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+  }
+  .info-container {
+    display: flex;
+  }
+  .info__poster {
+    display: block;
+    padding: 0;
+  }
+  .ubicacion .direccion .facultad {
+    font-weight: 700;
+  }
 }
 
 @media screen and (max-width: 769px) {
@@ -400,13 +382,13 @@ footer a:first-child {
 }
 
 @media screen and (min-width: 799px) {
-    .ubicacion .direccion img {
-        display: block;
-    }
+  .ubicacion .direccion img {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 799px) {
-    .ubicacion .direccion .universidad {
-        display: block;
-    }
+  .ubicacion .direccion .universidad {
+    display: block;
+  }
 }
