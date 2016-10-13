@@ -49,7 +49,8 @@ body {
 }
 
   .navbar {
-    background: rgba(75, 91, 110, 0.8);
+    /*background: rgba(75, 91, 110, 0.8);*/
+    background: rgba(4,94,151, 0.6);
     color: white;
 }
 
@@ -78,7 +79,8 @@ body {
     }
 
 .info {
-  background: url('../img/ud1.jpg') fixed;
+  /*background: url('../img/ud1.jpg') fixed;*/
+  background: url('../img/sede.jpg') fixed;
   background-size: cover;
   padding: 60px 0px;
   height: auto;
@@ -92,7 +94,8 @@ body {
     display: none;
   }
   .info__descripcion {
-    background: rgba(37, 165, 95, 0.7);
+    /*background: rgba(37, 165, 95, 0.7);*/
+    background: rgba(0,0,0, 0.5);
     color: white;
     display: flex;
     justify-content: center;
@@ -133,7 +136,8 @@ body {
     }
 
 .expositores {
-  background: #F6F6F6 fixed;
+  /*background: #F6F6F6 fixed;*/
+  background: url('../img/dark.png');
   font-family: 'EB Garamond';
   padding-top: 80px;
   padding-bottom: 40px;
