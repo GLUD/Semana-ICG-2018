@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.0.4/dist/aos.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto:400,700i');
+  </style>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -40,8 +43,8 @@
   </nav>
   <section class="info">
     <div class="info-container container" data-aos="fade-up">
-      <img class="info__poster col-xs-12 col-sm-3 col-md-4" width="auto" height="500" src="img/PosterSLUD.jpg" />
-      <div class="info__descripcion col-xs-12 col-sm-7 col-md-8">
+      <img class="info__poster col-xs-12 col-sm-6 col-md-4" width="auto" height="500" src="img/PosterSLUD.jpg" />
+      <div class="info__descripcion col-xs-12 col-sm-6 col-md-8">
         <h1>Semana Linux Universidad Distrital 2016</h1>
         <p>La Semana Linux es un evento anual de visibilidad nacional, organizado por el Grupo GNU/Linux de la Universidad Distrital, donde se da a conocer el Software Libre y sus ventajas para el progreso tecnológico de la sociedad, allí convergen estudiantes, profesores, expertos en software libre y usuarios finales, interesados en familiarizarse con el uso de software libre y su filosofía.</p>
         <div class="info__boton">
@@ -51,7 +54,7 @@
       </div>
   </section>
   <section id="expositores" class="expositores container-fluid" ng-controller="Expositores as expositores">
-    <h2 data-aos="fade-down">Expositores</h2>
+    <h2 class="subtitle" data-aos="fade-down">Expositores</h2>
     <div class="expositores__lista container">
       <article class="lista__persona col-xs-12 col-sm-4" data-aos="fade-right" ng-repeat="e in expositores.lista">
         <img width="200" height="200" src={{e.foto}} />
@@ -64,8 +67,7 @@
   </section>
   <section id="agenda" class="agenda container-fluid" ng-controller="Agenda as agenda">
     <div class="container">
-      <h2 data-aos="fade-right">Agenda de charlas y talleres</h2>
-      <div class="container">
+      <h2 class="subtitle" data-aos="fade-right">Agenda de charlas y talleres</h2>
          <table class="table" ng-repeat="dia in agenda.dias">
            <thead>
              <tr class="dia">
@@ -84,12 +86,12 @@
                <td>{{charla.expositor}}</td>
              </tr>
            </tbody>
-          </table>
-      </div>
+        </table>
     </div>
   </section>
   <section id="ubicacion" class="ubicacion container-fluid">
     <div class="container">
+      <h2 class="subtitle" data-aos="fade-right">Ubicación</h2>
       <div class="direccion col-xs-12 col-sm-5 pull-right">
         <img src="img/EscudoUD.png" align="top" alt="Universidad Distrital" width=200>
         <span class="universidad">Universidad Distrital</span>
@@ -101,10 +103,11 @@
   </section>
   <section id="patrocinadores" class="patrocinadores container-fluid">
     <div class="container">
-      <h2 data-aos="fade-right">Patrocinadores</h2>
+      <h2 class="subtitle" data-aos="fade-right">Patrocinadores</h2>
       <div class="logos">
         <img src="img/zeety.png" alt="Zeety" width="150" height="80"/>
         <img src="img/UDIng.jpg" alt="UDIng" width="190" height="85"/>
+        <img src="img/wekantu.png" alt="Wekantu" width="120" height="80"/>
       </div>
     </div>
   </section>

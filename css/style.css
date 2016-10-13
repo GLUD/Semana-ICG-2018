@@ -95,7 +95,7 @@ body {
   }
   .info__descripcion {
     /*background: rgba(37, 165, 95, 0.7);*/
-    background: rgba(0,0,0, 0.5);
+    background: rgba(0,0,0, 0.9);
     color: white;
     display: flex;
     justify-content: center;
@@ -113,19 +113,21 @@ body {
   }
   .info__descripcion p {
     text-align: justify;
+    font-size: 18px;
   }
   .info__boton {
-    background: #fecc09;
+    background: #58BDFC;
+    font-size: 18px;
     margin-bottom: 15px;
     display: inline-block;
-    padding: 10px 0px;
-    margin-top: 10px;
+    padding: 20px 10px;
+    margin-top: 30px;
     border-radius: 5%;
     cursor: pointer;
     box-sizing: padding-box;
   }
     .info__boton:hover {
-      background: #FE9B09;
+      background: #AF711A;
     }
     .info__boton a {
       text-decoration: none;
@@ -137,7 +139,8 @@ body {
 
 .expositores {
   /*background: #F6F6F6 fixed;*/
-  background: url('../img/dark.png');
+  background: url('../img/p3.png');
+  background-attachment: fixed;
   font-family: 'EB Garamond';
   padding-top: 80px;
   padding-bottom: 40px;
@@ -146,6 +149,7 @@ body {
     text-align: center;
     font-weight: 400;
     margin-bottom: 50px;
+    color: white;
   }
 
   .expositores__lista {
@@ -177,14 +181,20 @@ body {
     }
 
     .lista__persona div span:first-child {
-      background-color: rgb(75, 91, 110);
+      background: rgba(4,94,151, 0.4);
       color: white;
       font-weight: 700;
-      padding: 10px 5px;
+      padding: 10px 5px 5px 5px;
+      font-family: 'Roboto';
+      font-weight: 700;
+      font-style: italic;
+      font-size: 18px;
     }
 
     .lista__persona div span:last-child {
-      margin-bottom: 10px;
+      margin: 5px 0px;
+      font-family: 'Roboto';
+      color: white;
     }
 
 .agenda {
@@ -199,11 +209,7 @@ body {
   }
 
   .agenda h2 {
-    font-family: 'EB Garamond';
-    text-align: center;
-    padding-bottom: 10px;
     color: white;
-    font-weight: 700;
   }
 
   .agenda table {
@@ -215,7 +221,7 @@ body {
     margin-bottom: 0;
   }
   .agenda thead {
-    background: rgb(37, 165, 95);
+    background: rgba(4,94,151, 1);
     color: white;
     font-size: 18px;
     padding: 10px 0px;
@@ -283,12 +289,6 @@ body {
   padding: 20px 0px;
 }
 
-  .patrocinadores h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-family: 'EB Garamond';
-  }
-
   .patrocinadores .logos {
     display: flex;
     flex-direction: row;
@@ -298,7 +298,16 @@ body {
   }
   .patrocinadores img {
     margin-bottom: 15px;
+    margin-left: 15px;
   }
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-style: italic;
+}
 
 footer {
   background: url('../img/dark.png');
@@ -347,7 +356,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 767px) {
   .info-container {
     margin: 0;
     padding: 0;
@@ -363,7 +372,7 @@ footer {
     padding-right: 0;
     padding-left: 0;
   }
-  .agenda div {
+  .agenda .container {
     padding-right: 0;
     padding-left: 0;
   }
@@ -390,7 +399,13 @@ footer {
     display: block;
   }
 }
-
+@media screen and (max-width: 990px) {
+  .info__boton {
+    padding: 15px 10px;
+    margin: 5px 0px;
+    font-size: 15px;
+  }
+}
 @media screen and (max-width: 799px) {
   .ubicacion .direccion .universidad {
     display: block;
