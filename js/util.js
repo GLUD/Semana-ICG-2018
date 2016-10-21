@@ -40,9 +40,25 @@ util.procesarCharlas = function(charlas){
     });
   }
 
+  util.ordenarCharlas(nuevoFormato);
   nuevoFormato = util.ordenarDiccionario(nuevoFormato);
   return nuevoFormato;
 };
+
+util.ordenarCharlas = function(dir) {
+  for(var dia in dir) {
+    dir[dia].charlas = dir[dia].charlas.sort(function(a, b) {
+      if(a.hora < b.hora)
+        return -1;
+
+      if(a.hora > b.hora)
+        return 1;
+
+      if(a.hora == b.hora)
+        return 0;
+    })
+  }
+}
 
 util.ordenarDiccionario = function(dir) {
   var answ = [];
