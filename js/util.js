@@ -36,7 +36,8 @@ util.procesarCharlas = function(charlas){
     nuevoFormato[charla.fecha].charlas.push({
       hora: util.procesarHora(charla.hora),
       nombre: charla.titulo,
-      expositor: util.expositoresToString(charla.speakers)
+      expositor: util.expositoresToString(charla.speakers),
+      lugar: charla.lugar
     });
   }
 

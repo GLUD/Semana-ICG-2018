@@ -77,12 +77,13 @@
          <table class="table" ng-repeat="dia in agenda.dias">
            <thead>
              <tr class="dia">
-               <th class="span" colspan="3">{{dia.header}}</th>
+               <th class="span" colspan="4">{{dia.header}}</th>
              </tr>
              <tr>
                <th class="fecha">Hora</th>
                <th>Charla</th>
                <th>Expositor</th>
+               <th>Lugar</th>
              </tr>
            </thead>
            <tbody>
@@ -90,6 +91,7 @@
                <td class="fecha">{{charla.hora}}</td>
                <td>{{charla.nombre}}</td>
                <td>{{charla.expositor}}</td>
+               <td>{{charla.lugar}}</td>
              </tr>
            </tbody>
         </table>
