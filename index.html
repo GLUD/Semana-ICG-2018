@@ -1,146 +1,36 @@
 <!DOCTYPE html>
-<html lang="es" ng-app="SLUD">
-<head>
-  <meta name="google-site-verification" content="d0lBlz35EvM2K47bDytCOjmfhvnK3PJsFnNKSz_2a9s" />
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Te invitamos al evento anual de la Semana Linux de la Universidad Distrital, donde se da a conocer el Software Libre y sus ventajas para el progreso tecnológico de la sociedad. Este evento se llevara a cabo del 24 al 29 de Octubre de 2016 en la facultad de Ingenieria.">
-  <meta name="keywords" content="Linux,GNU,Universidad Distrital,OpenSource,SLUD,Semana,Octubre,Charlas,Talleres,Hackathon">
-  <meta http-equiv="revisit-after" content="1 days">
-  <title>Semana Linux - XIII SLUD - Univeridad Distrial FJC</title>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>SLUD 2017</title>
+        <style media="screen">
+            html {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                border: 10px solid yellow;
+                background: black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                box-sizing: border-box;
+            }
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.0.4/dist/aos.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
-  <link rel="shortcut icon" type="image/png" href="img/Logo_GLUD_site.png" />
-  <link rel="image_src" href="img/PosterSLUD.jpg" />
-  <style>
-    @import url('https://fonts.googleapis.com/css?family=Roboto:400,700i');
-  </style>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-  <nav class="navbar navbar-fixed-top" role="navigation" ng-controller="Menu as menu">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-          <span class="sr-only">Desplegar navegación</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <div class="logo">
-          <a href="http://glud.org">
-            <img data-aos="fade-right" width="80" height="40" src="img/logo_glud.svg"/>
-          </a>
-          <span>SLUD 2016<span>
-        </div>
-      </div>
-      <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li ng-repeat="item in menu.lista">
-            <a href={{item.url}}>{{item.text}}</a>
-          </li>
-  	    </ul>
-      </div>
-    </div>
-  </nav>
-  <section class="info">
-    <div class="info-container container" data-aos="fade-up">
-      <img class="info__poster col-xs-12 col-sm-6 col-md-4" width="auto" height="500" src="img/PosterSLUD2.jpg" />
-      <div class="info__descripcion col-xs-12 col-sm-6 col-md-8">
-        <h1>Semana Linux Universidad Distrital 2016</h1>
-        <p>La Semana Linux es un evento anual de visibilidad nacional, organizado por el Grupo GNU/Linux de la Universidad Distrital, donde se da a conocer el Software Libre y sus ventajas para el progreso tecnológico de la sociedad, allí convergen estudiantes, profesores, expertos en software libre y usuarios finales, interesados en familiarizarse con el uso de software libre y su filosofía.</p>
-        <div class="info__boton">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUkCz3o3VgP1LB_bfLdMzb47f-8npODkD3QRgiY4Kugk1Vow/viewform">Participa</a>
-        </div>
-      </div>
-      </div>
-  </section>
-  <section id="expositores" class="expositores container-fluid" ng-controller="Expositores as expositores">
-    <h2 class="subtitle" data-aos="fade-down">Expositores</h2>
-    <div class="expositores__lista container">
-      <article class="lista__persona col-xs-12 col-sm-4" data-aos="fade-right" ng-repeat="e in expositores.lista">
-        <img width="200" height="200" src={{e.foto}} />
-        <div>
-          <span>{{e.nombre}}</span>
-          <span>{{e.trabajo}}</span>
-        </div>
-      </article>
-    </div>
-  </section>
-  <section id="agenda" class="agenda container-fluid" ng-controller="Agenda as agenda">
-    <div class="container table-responsive">
-      <h2 class="subtitle" data-aos="fade-right">Agenda de charlas y talleres</h2>
-         <table class="table" ng-repeat="dia in agenda.dias">
-           <thead>
-             <tr class="dia">
-               <th class="span" colspan="4">{{dia.header}}</th>
-             </tr>
-             <tr>
-               <th class="fecha">Hora</th>
-               <th>Charla</th>
-               <th>Expositor</th>
-               <th>Lugar</th>
-             </tr>
-           </thead>
-           <tbody>
-             <tr ng-repeat="charla in dia.charlas">
-               <td class="fecha">{{charla.hora}}</td>
-               <td>{{charla.nombre}}</td>
-               <td>{{charla.expositor}}</td>
-               <td>{{charla.lugar}}</td>
-             </tr>
-           </tbody>
-        </table>
-    </div>
-  </section>
-  <section id="ubicacion" class="ubicacion container-fluid">
-    <div class="container">
-      <h2 class="subtitle" data-aos="fade-right">Ubicación</h2>
-      <div class="direccion col-xs-12 col-sm-5 pull-right">
-        <img src="img/EscudoUD.png" align="top" alt="Universidad Distrital" width=200>
-        <span class="universidad">Universidad Distrital</span>
-        <span class="facultad">Facultad de Ingeniería</span>
-        <span class="locacion">Dirección: Cra. 8 # 40 - 62</span>
-      </div>
-      <iframe class="frame col-xs-12 col-sm-7" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.8101263330436!2d-74.06762644944611!3d4.627939143555758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a286d598bd5%3A0xddf14904a87dfb47!2sUniversidad+Distrital+Francisco+Jose+de+Caldas!5e0!3m2!1ses!2sco!4v1474493415529" width="600" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </div>
-  </section>
-  <section id="patrocinadores" class="patrocinadores container-fluid">
-    <div class="container">
-      <h2 class="subtitle" data-aos="fade-right">Patrocinadores</h2>
-      <div class="logos">
-        <img src="img/UDIng.jpg" alt="UDIng" width="180" height="75"/>
-        <img src="img/zeety.png" alt="Zeety" width="150" height="80"/>
-        <img src="img/Toptal.png" alt="UDIng" width="180" height="85"/>
-        <img src="img/wekantu.png" alt="Wekantu" width="115" height="75"/>
-        <img src="img/logoRITAtransp2.png" alt="Wekantu" width="150" height="100"/>
+            img {
+                margin: 0;
+                padding: 0;
+                max-height: 70%;
+            }
 
-      </div>
-    </div>
-  </section>
-  <footer>
-    Grupo de trabajo GNU/Linux Universidad Distrital
-    <a href="https://www.facebook.com/GrupoLinuxUD" class="icon-facebook"></a>
-    <a href="https://twitter.com/GrupoLinuxUD" class="icon-twitter"></a>
-  </footer>
-  <!-- jquery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <!-- Bootstap js -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-  <script src="https://cdn.rawgit.com/michalsnik/aos/2.0.4/dist/aos.js"></script>
-
-  <script src="js/util.js"></script>
-  <script src="js/app.js"></script>
-  <script>
-    AOS.init({
-      easing: 'ease-out-back',
-        duration: 1000
-    	});
-  </script>
-</body>
+        </style>
+    </head>
+    <body>
+        <img src="SLUD_4.svg" alt="" />
+    </body>
 </html>
