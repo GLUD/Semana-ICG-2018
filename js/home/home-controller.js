@@ -1,10 +1,11 @@
 angular.module('SLUD').controller('HomeController', [
     '$http',
     '$scope',
-    function($http, $scope) {
+    'CONFIG',
+    function($http, $scope, CONFIG) {
         console.log("Entro");
         var f = [];
-        $http.get("http://slud.pythonanywhere.com/api/charlas").success(function(data) {
+        $http.get(CONFIG.API_URL + "/api/charlas").success(function(data) {
             // data.forEach(function(entry, index) {
             // f[index] = entry.Id;
             // });
