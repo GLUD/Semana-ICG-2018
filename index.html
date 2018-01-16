@@ -10,16 +10,15 @@
   <meta http-equiv="revisit-after" content="1 days">
   <title>Semana Linux - XIII SLUD - Univeridad Distrial FJC</title>
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.0.4/dist/aos.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+  <!--TODO: usar webpack para los CSS -->
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+
   <link rel="shortcut icon" type="image/png" href="img/Logo_GLUD_site.png" />
   <link rel="image_src" href="img/PosterSLUD.jpg" />
   <style>
     @import url('https://fonts.googleapis.com/css?family=Roboto:400,700i');
-  </style>
-  <link rel="stylesheet" href="css/style.css" />
+  </style>2
 </head>
 <body>
   <nav class="navbar navbar-fixed-top" role="navigation" ng-controller="Menu as menu">
@@ -127,20 +126,6 @@
     <a href="https://www.facebook.com/GrupoLinuxUD" class="icon-facebook"></a>
     <a href="https://twitter.com/GrupoLinuxUD" class="icon-twitter"></a>
   </footer>
-  <!-- jquery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <!-- Bootstap js -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-  <script src="https://cdn.rawgit.com/michalsnik/aos/2.0.4/dist/aos.js"></script>
-
-  <script src="js/util.js"></script>
-  <script src="js/app.js"></script>
-  <script>
-    AOS.init({
-      easing: 'ease-out-back',
-        duration: 1000
-    	});
-  </script>
+  <script src="bundle.js"></script>
 </body>
 </html>

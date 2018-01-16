@@ -1,0 +1,45 @@
+{
+  "name": "slud-frontend",
+  "version": "0.1.0",
+  "description": "Frontend para la semana linux",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --progress -p",
+    "watch": "webpack --progress --watch",
+    "server": "webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GLUD/SLUD-frontend.git"
+  },
+  "keywords": [
+    "glud",
+    "slud",
+    "semana-linux"
+  ],
+  "author": "GLUD",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/GLUD/SLUD-frontend/issues"
+  },
+  "homepage": "https://github.com/GLUD/SLUD-frontend#readme",
+  "dependencies": {
+    "angular": "^1.6.8",
+    "aos": "^2.2.0",
+    "bootstrap": "^3.3.7",
+    "jquery": "^2.2.4",
+    "normalize.css": "^7.0.0",
+    "popper.js": "^1.12.9"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.8",
+    "file-loader": "^1.1.6",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.0"
+  }
+}
