@@ -39,7 +39,6 @@ $ docker stack deploy -c docker-stack.yml slud
 - [x] Eliminar hardcoding (url, claves, etc) -> se usa el método constants en el módulo SLUD en el archivo js/app.js, agregar mas variables pertinentes
 - [ ] Organizar archivos angular y assets
 - [ ] Agregar traducciones (ingles,...)
-- [ ] Agregar configuración para analítica de datos (Goggle Analytics, etc)
 - [x] se centraliza las dependencias del proyecto en *package.json*.
 - [x] actualización de bootstrap, jquery, normalize, etc.
 - [x] uso básico de webpack (para minimizar js).
