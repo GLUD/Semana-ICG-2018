@@ -16,36 +16,49 @@
 
   <link rel="shortcut icon" type="image/png" href="img/Logo_GLUD_site.png" />
   <link rel="image_src" href="img/PosterSLUD.jpg" />
-<!--   <style>
-    @import url('https://fonts.googleapis.com/css?family=Roboto:400,700i');
-  </style> -->
 </head>
 <body>
-  <nav class="navbar navbar-fixed-top" role="navigation" ng-controller="Menu as menu">
+  <!-- Menú de naveción -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" ng-controller="Menu as menu">
+    <!-- El div hace que el contenido del navbar no ocupe toda la pantalla en resoluciones grandes -->
     <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-          <span class="sr-only">Desplegar navegación</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <div class="logo">
-          <a href="http://glud.org">
-            <img data-aos="fade-right" width="80" height="40" src="img/logo_glud.svg"/>
-          </a>
-          <span>SLUD 2018<span>
-        </div>
+      <!-- Logo del GLUD -->
+      <div class="logo">
+        <a  href="http://glud.org">
+          <img data-aos="fade-right" width="80" height="40" src="img/logo_glud.svg"/>
+        </a>
+        <span>SLUD 2018</span>
       </div>
-      <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li ng-repeat="item in menu.lista">
-            <a href={{item.url}}>{{item.text}}</a>
+
+      <!-- Botón para cuando colapsa el menú -->
+      <button class="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Lista de elementos -->
+      <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <!-- Elementos, cargados dinámicamente con Angular -->
+          <li class="nav-item" ng-repeat="item in menu.lista">
+              <a class="nav-link" href={{item.url}}>{{item.text}}</a>
           </li>
-  	    </ul>
+        </ul>
       </div>
     </div>
   </nav>
+
+<!--   <section class="info">
+    <div class="info-container container" data-aos="fade-up">
+      <img class="info__poster col-xs-12 col-sm-6 col-md-4" width="auto" height="500" src="img/PosterSLUD2.jpg" />
+      <div class="info__descripcion col-xs-12 col-sm-6 col-md-8">
+        <h1>Semana Linux Universidad Distrital 2018</h1>
+        <p>La Semana Linux es un evento anual de visibilidad nacional, organizado por el Grupo GNU/Linux de la Universidad Distrital, donde se da a conocer el Software Libre y sus ventajas para el progreso tecnológico de la sociedad, allí convergen estudiantes, profesores, expertos en software libre y usuarios finales, interesados en familiarizarse con el uso de software libre y su filosofía.</p>
+        <div class="info__boton">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUkCz3o3VgP1LB_bfLdMzb47f-8npODkD3QRgiY4Kugk1Vow/viewform">Participa</a>
+        </div>
+      </div>
+      </div>
+  </section> -->
   <section class="info">
     <div class="info-container container" data-aos="fade-up">
       <img class="info__poster col-xs-12 col-sm-6 col-md-4" width="auto" height="500" src="img/PosterSLUD2.jpg" />
