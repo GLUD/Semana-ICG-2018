@@ -48,7 +48,6 @@
   </nav>
 
   <section class="info">
-
     <div class="container container-logo" data-aos="fade-up">
 
       <img class="logo_slud" width="auto" src="img/logo_slud_xv_2.png" />
@@ -61,18 +60,27 @@
     </div>
   </section>
 
-  <section id="expositores" class="expositores container-fluid" ng-controller="Expositores as expositores">
+  <!-- Sección de Expositores -->
+  <section id="expositores" class="expositores" ng-controller="Expositores as expositores">
+    <!-- Título de la Sección -->
     <h2 class="subtitle" data-aos="fade-down">Expositores</h2>
+    <!-- Fila de elementos -->
     <div class="expositores__lista container">
-      <article class="lista__persona col-xs-12 col-sm-4" data-aos="fade-right" ng-repeat="e in expositores.lista">
-        <img width="200" height="200" src={{e.foto}} />
-        <div>
-          <span>{{e.nombre}}</span>
-          <span>{{e.trabajo}}</span>
-        </div>
-      </article>
+      <div class="row">
+        <!-- Con este article se renderiza la información de un expositor -->
+        <article class="lista__persona col-12 col-sm-6 col-md-4 col-xl-3" data-aos="fade-right" ng-repeat="e in expositores.lista">
+          <!-- Foto del expositor -->
+          <img width="200" height="200" src={{e.foto}} />
+          <!-- Información básica del expositor -->
+          <div>
+            <span>{{e.nombre}}</span>
+            <span>{{e.trabajo}}</span>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
+
   <section id="agenda" class="agenda container-fluid" ng-controller="Agenda as agenda">
     <div class="container table-responsive">
       <h2 class="subtitle" data-aos="fade-right">Agenda de charlas y talleres</h2>
