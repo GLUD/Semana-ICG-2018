@@ -79,17 +79,34 @@ body {
         background: transparent;
     }
 
+.container-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo_slud {
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 100px 0px;
+}
+
+.logo_slud:hover {
+  transform: rotate(720deg);
+  transition: all 1.5s ease-in-out 0s;
+}
+
 .info {
   /*background: url('../img/ud1.jpg') fixed;*/
-  background: url('../img/sede.jpg') fixed;
-  background-size: cover;
+  background: url('../img/pattern.jpg') fixed;
+/*  background-size: cover;
   padding: 60px 0px;
   height: auto;
   width: auto;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center;*/
 }
   .info__poster {
     display: none;
