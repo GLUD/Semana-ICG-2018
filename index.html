@@ -47,6 +47,7 @@
     </div>
   </nav>
 
+  <!-- Seccion con el logo de la Semana -->
   <section class="info">
     <div class="container">
       <div class="container-logo" data-aos="fade-up">
@@ -84,44 +85,55 @@
     </div>
   </section>
 
-  <section id="agenda" class="agenda container-fluid" ng-controller="Agenda as agenda">
+  <!-- Sección con la agenda de la semana -->
+  <section id="agenda" class="agenda" ng-controller="Agenda as agenda">
+    <!-- Tabla responsive para que no se rompa en pantallas muy pequeñas -->
     <div class="container table-responsive">
       <h2 class="subtitle" data-aos="fade-right">Agenda de charlas y talleres</h2>
-         <table class="table" ng-repeat="dia in agenda.dias">
-           <thead>
-             <tr class="dia">
-               <th class="span" colspan="4">{{dia.header}}</th>
-             </tr>
-             <tr>
-               <th class="fecha">Hora</th>
-               <th>Charla</th>
-               <th>Expositor</th>
-               <th>Lugar</th>
-             </tr>
-           </thead>
-           <tbody>
-             <tr ng-repeat="charla in dia.charlas">
-               <td class="fecha">{{charla.hora}}</td>
-               <td>{{charla.nombre}}</td>
-               <td>{{charla.expositor}}</td>
-               <td>{{charla.lugar}}</td>
-             </tr>
-           </tbody>
-        </table>
+      <table class="table" ng-repeat="dia in agenda.dias">
+        <thead>
+          <!-- Este header indica el día de la semana -->
+          <tr class="dia">
+            <th class="span" colspan="4">{{dia.header}}</th>
+          </tr>
+          <!-- Información básica de la charla -->
+          <tr>
+            <th class="fecha">Hora</th>
+            <th>Charla</th>
+            <th>Expositor</th>
+            <th>Lugar</th>
+          </tr>
+        </thead>
+        <!-- Charlas -->
+        <tbody>
+          <tr ng-repeat="charla in dia.charlas">
+          <td class="fecha">{{charla.hora}}</td>
+            <td>{{charla.nombre}}</td>
+            <td>{{charla.expositor}}</td>
+            <td>{{charla.lugar}}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </section>
-  <section id="ubicacion" class="ubicacion container-fluid">
+
+  <!-- Seccion en donde aparece la información de la ubicación de la universidad -->
+  <section id="ubicacion" class="ubicacion">
     <div class="container">
       <h2 class="subtitle" data-aos="fade-right">Ubicación</h2>
-      <div class="direccion col-xs-12 col-sm-5 pull-right">
-        <img src="img/EscudoUD.png" align="top" alt="Universidad Distrital" width=200>
-        <span class="universidad">Universidad Distrital</span>
-        <span class="facultad">Facultad de Ingeniería</span>
-        <span class="locacion">Dirección: Cra. 8 # 40 - 62</span>
+      <div class="row">
+        <iframe class="frame col-12 col-sm-7" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.8101263330436!2d-74.06762644944611!3d4.627939143555758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a286d598bd5%3A0xddf14904a87dfb47!2sUniversidad+Distrital+Francisco+Jose+de+Caldas!5e0!3m2!1ses!2sco!4v1474493415529" width="600" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <div class="direccion col-12 col-sm-5 pull-right">
+          <img src="img/EscudoUD.png" align="top" alt="Universidad Distrital" width=200>
+          <span class="universidad">Universidad Distrital</span>
+          <span class="facultad">Facultad de Ingeniería</span>
+          <span class="locacion">Dirección: Cra. 8 # 40 - 62</span>
+        </div>
       </div>
-      <!-- <iframe class="frame col-xs-12 col-sm-7" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.8101263330436!2d-74.06762644944611!3d4.627939143555758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a286d598bd5%3A0xddf14904a87dfb47!2sUniversidad+Distrital+Francisco+Jose+de+Caldas!5e0!3m2!1ses!2sco!4v1474493415529" width="600" height="300" frameborder="0" style="border:0" allowfullscreen></iframe> -->
     </div>
   </section>
+
+  <!-- Seccion de patrocinadores -->
   <section id="patrocinadores" class="patrocinadores container-fluid">
     <div class="container">
       <h2 class="subtitle" data-aos="fade-right">Patrocinadores</h2>
@@ -130,6 +142,8 @@
       </div>
     </div>
   </section>
+
+  <!-- Footer -->
   <footer>
     Grupo de trabajo GNU/Linux Universidad Distrital
     <a href="https://www.facebook.com/GrupoLinuxUD" class="icon-facebook"></a>

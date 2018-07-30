@@ -241,7 +241,8 @@ body {
     margin-bottom: 0;
   }
   .agenda thead {
-    background: rgba(4,94,151, 1);
+    /* background: rgba(4,94,151, 1); */
+    background: #009c5a;
     color: white;
     font-size: 18px;
     padding: 10px 0px;
@@ -265,7 +266,9 @@ body {
 
 .ubicacion {
   background: url('../img/map-pattern.png') fixed;
-  padding: 20px 0px;
+  /* padding: 20px 0px; */
+  padding-top: 70px;
+  padding-bottom: 40px;
 }
 
   .ubicacion .frame {
