@@ -1,6 +1,8 @@
+import util from '../js/util.js';
+
 (function(angular){
   'use strict';
-   
+
   angular.module('SLUD', [])
   .constant('CONFIG', {
       'APP_NAME' : 'SLUD fontend',
@@ -20,16 +22,16 @@
   })
   .controller('Expositores', ['$http' , 'CONFIG', function Expositores($http, CONFIG){
     // Obtener los expositores del API
-    // $http.get(CONFIG.API_URL + '/api/speakers/')
-    //   .success(data => {
-    //     this.lista = data;
-    //   })
+    $http.get(CONFIG.API_URL + '/api/speakers/')
+      .then(response => {
+        this.lista = response.data
+      })
   }])
   .controller('Agenda', ['$http', 'CONFIG', function Agenda($http, CONFIG){
     // Consultar las charlas del API
-    // $http.get(CONFIG.API_URL + '/api/charlas/')
-    //   .success(data => {
-    //     this.dias = util.procesarCharlas(data);
-    //   });
+    $http.get(CONFIG.API_URL + '/api/charlas/')
+      .then(response => {
+        this.dias = util.procesarCharlas(response.data)
+      })
   }]);
 })(window.angular);

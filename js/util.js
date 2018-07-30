@@ -3,7 +3,19 @@
 var util = {};
 
 util.dias = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'];
-util.mes = {'9': 'Octubre'};
+
+util.mes = ['Enero',
+            'Febrero',
+            'Marzo',
+            'Abril',
+            'Mayo',
+            'Junio',
+            'Julio',
+            'Agosto',
+            'Septiembre',
+            'Octubre',
+            'Noviembre',
+            'Diciembre'];
 
 util.expositoresToString = function(speakers) {
 
@@ -79,3 +91,5 @@ util.procesarHora = function(hora) {
 
   return answ[0];
 }
+
+module.exports = util
