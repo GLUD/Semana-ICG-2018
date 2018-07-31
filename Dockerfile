@@ -6,4 +6,4 @@ RUN apk add --no-cache nodejs
 WORKDIR /usr/share/nginx/html
 COPY . .
 
-RUN npm install && npm build
+RUN npm install && npm run-script build

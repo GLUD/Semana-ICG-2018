@@ -10,12 +10,12 @@ Este proyecto requiere un servidor HTML con acceso a Internet (como nginx) ó ej
 se puede ejecutar un servidor de desarrollo local con live reload así:
 ```bash
 $ npm install # ó yarn install
-$ npm server # ó yarn server
+$ npm run-script server # ó yarn server
 ```
 una vez que se quiera pasar a produccion, ejecutar:
 
 ```bash
-$ npm build # ó yarn build
+$ npm run-script build # ó yarn build
 ```
 que creará el archivo *bundle.js* que necesita *index.html*.
 
