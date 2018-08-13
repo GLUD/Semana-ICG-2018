@@ -33,5 +33,12 @@ import util from '../js/util.js';
       .then(response => {
         this.dias = util.procesarCharlas(response.data)
       })
+  }])
+  .controller('Sponsors', ['$http', 'CONFIG', function Sponsors($http, CONFIG){
+    $http.get(CONFIG.API_URL + '/api/sponsors/')
+      .then(response => {
+        console.log(response.data)
+        this.lista = response.data
+      })
   }]);
 })(window.angular);
