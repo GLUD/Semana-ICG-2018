@@ -1,6 +1,6 @@
-# SLUD_WEB
-Página web (frontend) de la Semana Linux 2017 y de las anteriores organizadas en diferentes branchs. Se complementa con el [backend](https://github.com/GLUD/SLUD-backend)
+# Semana de Ingeniería Catastral y Geodesia 2018
 
+Página web (frontend) de la Semana de  Ingeniería Catastral y Geodesia, este repositorio es un fork del repositorio [SLUD-frontend](https://github.com/GLUD/SLUD-frontend).
 
 Este proyecto requiere un servidor HTML con acceso a Internet (como nginx) ó ejecutar npm server como se explica a continuación.
 
@@ -35,14 +35,7 @@ $ docker stack deploy -c docker-stack.yml slud
 
 ## TODO
 
-- [x] Dar soporte a Docker
-- [x] Eliminar hardcoding (url, claves, etc) -> se usa el método constants en el módulo SLUD en el archivo js/app.js, agregar mas variables pertinentes
 - [ ] Organizar archivos angular y assets
 - [ ] Agregar traducciones (ingles,...)
-- [x] se centraliza las dependencias del proyecto en *package.json*.
-- [x] actualización de bootstrap, jquery, normalize, etc.
-- [x] uso básico de webpack (para minimizar js).
-- [x] agregar soporte para ES6 (import, classes, etc).
-- [x] agregar reglas ESLint (para buenas prácticas de codificación).
 - [ ] usar webpack (minimizar) para los CSS, img, etc (para producción).
 - [ ] agregar sourcemaps.
