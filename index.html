@@ -5,10 +5,14 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Te invitamos al evento anual de la Semana Linux de la Universidad Distrital, donde se da a conocer el Software Libre y sus ventajas para el progreso tecnológico de la sociedad. Este evento se llevara a cabo del 27 de agosto al 1 de septiembre del 2018 en la facultad de Ingenieria.">
-  <meta name="keywords" content="Linux,GNU,Universidad Distrital,OpenSource,SLUD,Semana,Octubre,Charlas,Talleres,Hackathon">
+
+  <!-- TODO: Add description content -->
+  <meta name="description" content="">
+
+  <!-- TODO: Add keywords -->
+  <meta name="keywords" content="">
   <meta http-equiv="revisit-after" content="1 days">
-  <title>Semana Linux - XV SLUD - Univeridad Distrial FJC</title>
+  <title>XXIV Semana ICG 2018 - Universidad Distrital Francisco José de Caldas</title>
 
   <!--TODO: usar webpack para los CSS -->
   <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -16,7 +20,10 @@
   <link rel="stylesheet" href="./css/style.css">
 
   <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-  <link rel="image_src" href="img/PosterSLUD.png" />
+
+  <!-- TODO: Add image_src -->
+  <!-- <link rel="image_src" href="img/" /> -->
+
 </head>
 <body>
   <!-- Menú de naveción -->
@@ -25,10 +32,11 @@
     <div class="container">
       <!-- Logo del GLUD -->
       <div class="logo">
-        <a  href="http://glud.org">
-          <img data-aos="fade-right" width="80" height="40" src="img/logo_glud.svg"/>
+        <a  href="#">
+          <!-- TODO: Add some logo -->
+          <!-- <img data-aos="fade-right" width="80" height="40" src="img/"/> -->
         </a>
-        <span>SLUD 2018</span>
+        <span>SEMANA ICG 2018</span>
       </div>
 
       <!-- Botón para cuando colapsa el menú -->
@@ -53,12 +61,7 @@
     <div class="container">
       <div class="container-logo" data-aos="zoom-in-down">
 
-        <img class="logo_slud" width="auto" src="img/logo_slud_xv_2.png" />
-        <!-- <div class="">
-
-          <h1>Semana Linux Universidad Distrital 2018</h1>
-          <p>La Semana Linux es un evento anual de visibilidad nacional, organizado por el Grupo GNU/Linux de la Universidad Distrital, donde se da a conocer el Software Libre y sus ventajas para el progreso tecnológico de la sociedad, allí convergen estudiantes, profesores, expertos en software libre y usuarios finales, interesados en familiarizarse con el uso de software libre y su filosofía.</p>
-        </div> -->
+        <!-- <img class="logo_slud" width="auto" src="img/logo_slud_xv_2.png" /> -->
 
       </div>
     </div>
@@ -68,36 +71,36 @@
   <!-- Sección de Expositores -->
   <section id="expositores" class="expositores" ng-controller="Expositores as expositores">
     <!-- Título de la Sección -->
-    <h2 class="subtitle" data-aos="fade-down">Expositores</h2>
-    <!-- Fila de elementos -->
+    <!-- <h2 class="subtitle" data-aos="fade-down">Expositores</h2>
+    Fila de elementos
     <div class="expositores__lista container">
       <div class="row">
-        <!-- Con este article se renderiza la información de un expositor -->
+        Con este article se renderiza la información de un expositor
         <article class="lista__persona col-12 col-sm-6 col-md-4 col-xl-3" data-aos="fade-right" ng-repeat="e in expositores.lista">
-          <!-- Foto del expositor -->
+          Foto del expositor
           <img width="200" height="200" src={{e.foto}} />
-          <!-- Información básica del expositor -->
+          Información básica del expositor
           <div>
             <span>{{e.nombre}}</span>
             <span>{{e.trabajo}}</span>
           </div>
         </article>
       </div>
-    </div>
+    </div> -->
   </section>
 
   <!-- Sección con la agenda de la semana -->
   <section id="agenda" class="agenda" ng-controller="Agenda as agenda">
     <!-- Tabla responsive para que no se rompa en pantallas muy pequeñas -->
-    <div class="container table-responsive">
+    <!-- <div class="container table-responsive">
       <h2 class="subtitle" data-aos="fade-right">Agenda de charlas y talleres</h2>
       <table class="table" ng-repeat="dia in agenda.dias">
         <thead>
-          <!-- Este header indica el día de la semana -->
+          Este header indica el día de la semana
           <tr class="dia">
             <th class="span" colspan="4">{{dia.header}}</th>
           </tr>
-          <!-- Información básica de la charla -->
+          Información básica de la charla
           <tr>
             <th class="fecha">Hora</th>
             <th>Charla</th>
@@ -105,7 +108,7 @@
             <th>Lugar</th>
           </tr>
         </thead>
-        <!-- Charlas -->
+        Charlas
         <tbody>
           <tr ng-repeat="charla in dia.charlas">
           <td class="fecha">{{charla.hora}}</td>
@@ -115,7 +118,7 @@
           </tr>
         </tbody>
       </table>
-    </div>
+    </div> -->
   </section>
 
   <!-- Seccion en donde aparece la información de la ubicación de la universidad -->
@@ -135,7 +138,7 @@
   </section>
 
   <!-- Seccion de patrocinadores -->
-  <section id="patrocinadores" class="patrocinadores container-fluid" ng-controller="Sponsors as sponsors">
+  <!-- <section id="patrocinadores" class="patrocinadores container-fluid" ng-controller="Sponsors as sponsors">
     <div class="container">
       <h2 class="subtitle" data-aos="fade-right">Patrocinadores</h2>
       <div class="logos">
@@ -143,13 +146,17 @@
         <img ng-repeat="s in sponsors.lista" src="{{s.logo}}" alt="{{e.nombre}}" width="180" height="75"/>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Footer -->
   <footer>
-    Grupo de trabajo GNU/Linux Universidad Distrital
-    <a href="https://www.facebook.com/GrupoLinuxUD" class="icon-facebook"></a>
-    <a href="https://twitter.com/GrupoLinuxUD" class="icon-twitter"></a>
+    <a href="https://glud.udistrital.edu.co/">Powered By GLUD</a>
+
+    <!-- TODO: Add facebook url -->
+    <a href="" class="icon-facebook"></a>
+
+    <!-- TODO: Add twitter url -->
+    <a href="" class="icon-twitter"></a>
   </footer>
   <script src="bundle.js"></script>
 </body>

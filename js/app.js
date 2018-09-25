@@ -13,11 +13,11 @@ import util from '../js/util.js';
   })
   .controller('Menu', function MenuController(){
     this.lista = [
-      {url: '#inicio', text: 'Inicio'},
-      {url: '#expositores', text: 'Expositores'},
-      {url: '#agenda', text: 'Agenda'},
-      {url: '#ubicacion', text: 'Ubicación'},
-      {url: '#patrocinadores', text: 'Patrocinadores'},
+      {url: '#informacion', text: 'Información'},
+      {url: '#tematica', text: 'Temática'},
+      {url: '#talleres_conferencias', text: 'Talleres y Conferencias'},
+      {url: '#comite', text: 'Comite'},
+      {url: '#contactenos', text: 'Contáctenos'},
     ];
   })
   .controller('Expositores', ['$http' , 'CONFIG', function Expositores($http, CONFIG){
