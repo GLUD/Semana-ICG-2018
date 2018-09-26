@@ -49,113 +49,48 @@ body {
     font-family: 'Open Sans';
 }
 
-  .navbar {
-    /*background: rgba(75, 91, 110, 0.8);*/
-    background: rgba(4,94,151, 0.6);
+.navbar {
+    background: black;
     color: white;
 }
 
-    .navbar .logo {
-        margin: 10px;
-        font-weight: 800;
-        font-size: 19px;
-        outline: 0;
-    }
+.navbar .logo {
+    margin: 10px;
+    font-weight: 800;
+    font-size: 19px;
+    outline: 0;
+}
 
-    .icon-bar {
-        background: white;
-    }
+.icon-bar {
+    background: white;
+}
 
-    .nav li a {
-        color: white;
-        outline: 0;
-    }
+.nav li a {
+    color: white;
+    outline: 0;
+}
 
-    .nav li a:hover {
-        color: #337ab7;
-    }
+.nav li a:hover {
+    color: #337ab7;
+}
 
-    .nav li a:focus {
-        background: transparent;
-    }
+.nav li a:focus {
+    background: transparent;
+}
 
 .container-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo_slud {
-  cursor: pointer;
-  border-radius: 50%;
-  margin: 100px 0px;
-  width: 100%;
-  max-width: 300px;
-}
-
-.logo_slud:hover {
-  transform: rotate(720deg);
-  transition: all 1.5s ease-in-out 0s;
-}
-
-.info {
-  background: url('../img/pattern_final.jpg') fixed;
-  background-color: #009c5a;
-  /*background-size: cover;
-  padding: 60px 0px;
-  height: auto;
-  width: auto;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;*/
-}
-  .info__poster {
-    display: none;
-  }
-  .info__descripcion {
-    /*background: rgba(37, 165, 95, 0.7);*/
-    background: rgba(0,0,0, 0.9);
-    color: white;
+    font-family: 'Open Sans';
+    padding-top: 90px;
+    height: 380px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
-    padding: 20px 20px 10px 20px;
-  }
-  .info__descripcion h1 {
-    font-weight: bold;
-    font-weight: auto;
-    text-align: center;
-    font-family: 'Droid Serif';
-    margin-bottom: 20px;
-    font-size: 24px;
-  }
-  .info__descripcion p {
-    text-align: justify;
-    font-size: 18px;
-  }
-  .info__boton {
-    background: #58BDFC;
-    font-size: 18px;
-    margin-bottom: 15px;
-    display: inline-block;
-    padding: 20px 10px;
-    margin-top: 30px;
-    border-radius: 5%;
-    cursor: pointer;
-    box-sizing: padding-box;
-  }
-    .info__boton:hover {
-      background: #AF711A;
-    }
-    .info__boton a {
-      text-decoration: none;
-      outline: 0;
-      color: white;
-      margin: 0px 20px;
-      font-weight: 700;
-    }
+}
+
+.info {
+  /* background: url('../img/pattern_final.jpg') fixed; */
+  background-color: #f4f5f6;
+}
 
 .expositores {
   /*background: #F6F6F6 fixed;*/
