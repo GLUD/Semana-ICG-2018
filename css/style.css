@@ -92,6 +92,63 @@ body {
   background-color: #f4f5f6;
 }
 
+.detalles {
+  padding-top: 15px;
+  background: url('../img/map-pattern.png') fixed;
+}
+
+.detalles .heading {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+.detalles p {
+  text-align: center;
+}
+
+.detalles .body {
+  text-align: center;
+}
+
+.detalles .body .item {
+  padding: 20px;
+}
+
+.detalles .body .item ul > li{
+  float: left;
+}
+
+.detalles .body .item h5 {
+  margin-bottom: 20px;
+}
+
+.detalles .body .item p {
+  font-size: 15px;
+  text-align: justify;
+}
+.detalles .body .item span {
+  display: block;
+  font-size: 15px;
+}
+
+.detalles .body .item .botom {
+  margin-bottom: 5px;
+}
+
+.detalles .body .item .content {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.detalles .body .item .fecha {
+  font-weight: bold;
+}
 .expositores {
   /*background: #F6F6F6 fixed;*/
   background: url('../img/p3.png');
@@ -269,6 +326,7 @@ body {
 
 footer {
   background: url('../img/dark.png');
+  padding-top: 10px;
   height: 40px;
   text-align: center;
   display: flex;

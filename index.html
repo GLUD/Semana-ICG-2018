@@ -70,71 +70,47 @@
     </div>
 
   </section>
-
-  <!-- Sección de Expositores -->
-  <section id="expositores" class="expositores" ng-controller="Expositores as expositores">
-    <!-- Título de la Sección -->
-    <!-- <h2 class="subtitle" data-aos="fade-down">Expositores</h2>
-    Fila de elementos
-    <div class="expositores__lista container">
-      <div class="row">
-        Con este article se renderiza la información de un expositor
-        <article class="lista__persona col-12 col-sm-6 col-md-4 col-xl-3" data-aos="fade-right" ng-repeat="e in expositores.lista">
-          Foto del expositor
-          <img width="200" height="200" src={{e.foto}} />
-          Información básica del expositor
-          <div>
-            <span>{{e.nombre}}</span>
-            <span>{{e.trabajo}}</span>
-          </div>
-        </article>
-      </div>
-    </div> -->
-  </section>
-
-  <!-- Sección con la agenda de la semana -->
-  <section id="agenda" class="agenda" ng-controller="Agenda as agenda">
-    <!-- Tabla responsive para que no se rompa en pantallas muy pequeñas -->
-    <!-- <div class="container table-responsive">
-      <h2 class="subtitle" data-aos="fade-right">Agenda de charlas y talleres</h2>
-      <table class="table" ng-repeat="dia in agenda.dias">
-        <thead>
-          Este header indica el día de la semana
-          <tr class="dia">
-            <th class="span" colspan="4">{{dia.header}}</th>
-          </tr>
-          Información básica de la charla
-          <tr>
-            <th class="fecha">Hora</th>
-            <th>Charla</th>
-            <th>Expositor</th>
-            <th>Lugar</th>
-          </tr>
-        </thead>
-        Charlas
-        <tbody>
-          <tr ng-repeat="charla in dia.charlas">
-          <td class="fecha">{{charla.hora}}</td>
-            <td>{{charla.nombre}}</td>
-            <td>{{charla.expositor}}</td>
-            <td>{{charla.lugar}}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div> -->
-  </section>
-
-  <!-- Seccion en donde aparece la información de la ubicación de la universidad -->
-  <section id="ubicacion" class="ubicacion">
+  <section class="detalles">
     <div class="container">
-      <h2 class="subtitle" data-aos="fade-right">Ubicación</h2>
       <div class="row">
-        <iframe class="frame col-12 col-sm-7" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.8101263330436!2d-74.06762644944611!3d4.627939143555758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a286d598bd5%3A0xddf14904a87dfb47!2sUniversidad+Distrital+Francisco+Jose+de+Caldas!5e0!3m2!1ses!2sco!4v1474493415529" width="600" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-        <div class="direccion col-12 col-sm-5 pull-right">
-          <img src="img/EscudoUD.png" align="top" alt="Universidad Distrital" width=200>
-          <span class="universidad">Universidad Distrital</span>
-          <span class="facultad">Facultad de Ingeniería</span>
-          <span class="locacion">Dirección: Cra. 8 # 40 - 62</span>
+				<div class="col-sm heading">
+	        <h3>XXIII Semana de Ingeniería Catastral y Geodesia</h3>
+	        <p>Del {día} al {día} de {mes} de 2018 <br>
+	        Bogotá, Colombia</p>
+				</div>
+      </div>
+      <div class="row body">
+        <div class="col-sm item">
+          <h5>Objetivo</h5>
+          <p><span>Ofrecer Talleres y Conferencias de los temas relacionados con la carrera, con el fin de incentivar la participación de los estudiantes, profesores y egresados de Ingeniería Catastral y Geodesia, en la transferencia de conocimientos lo cual permitirá enriquecer las actividades acadámicas del programa y propiciará el mejoramiento continuo del mismo.</span></p>
+        </div>
+        <div class="col-sm item">
+					<h5>Temática</h5>
+					<p><span class="botom">La XXIV Semana ICG 2018 "Geociencias, Catastro y Sistemas Territoriales" se centra, entre otras, en las siguientes temáticas:</span>
+
+					<span>Catastro, Geociencias, Geodesia, Geofísica, Sistemas Territoriales, Sistemas Catastrales, Sistemas de Teledetección, Imágenes de Satélite, Geomática y Aplicaciones en Geomática.</span></p>
+        </div>
+        <div class="col-sm item">
+					<h5>Fechas Importantes</h5>
+          <div>
+						<div class="tag">
+							<span class="fecha">{00} al {00} de {Mes} de 2018</span>
+							<span class="content">Conferencias para Estudiantes y Docentes</span>
+						</div>
+						<div class="tag">
+							<span class="fecha">{00} al {00} de {Mes} de 2018</span>
+							<span class="content">Talleres para Estudiantes y Docentes</span>
+						</div>
+						<div class="tag">
+							<span class="fecha">{00} al {00} de {Mes} de 2018</span>
+							<span class="content">Jornada para Profesionales - Egresados ICG</span>
+						</div>
+						<div class="tag">
+							<span>Mayor información a los siguientes correos electrónicos:</span>
+							<a href="mailto:semanaicg@udistrital.edu.co">semanaicg@udistrital.edu.co</a>
+							<a href="mailto:ingcatastral@udistrital.edu.co">ingcatastral@udistrital.edu.co</a>
+						</div>
+					</div>
         </div>
       </div>
     </div>
@@ -154,12 +130,11 @@
   <!-- Footer -->
   <footer>
     <a href="https://glud.udistrital.edu.co/">Powered By GLUD</a>
-
     <!-- TODO: Add facebook url -->
-    <a href="" class="icon-facebook"></a>
+    <!-- <a href="" class="icon-facebook"></a> -->
 
     <!-- TODO: Add twitter url -->
-    <a href="" class="icon-twitter"></a>
+    <!-- <a href="" class="icon-twitter"></a> -->
   </footer>
   <script src="bundle.js"></script>
 </body>
