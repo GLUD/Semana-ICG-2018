@@ -170,6 +170,30 @@ body {
   font-weight: bold;
 }
 
+.informacion {
+  padding-top: 90px;
+  padding-bottom: 20px;
+}
+
+.informacion .descripcion {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-right: 1px solid black;
+}
+
+.informacion .descripcion  div{
+  margin: 20px;
+}
+
+.informacion .items {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
 footer {
   background: #343a40;
   padding-top: 10px;
