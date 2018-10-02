@@ -26,6 +26,7 @@
   "homepage": "https://github.com/GLUD/SLUD-frontend#readme",
   "dependencies": {
     "angular": "^1.6.8",
+    "angular-route": "1.6",
     "aos": "^2.2.0",
     "bootstrap": "^4.0.0",
     "bootstrap-loader": "^2.2.0",

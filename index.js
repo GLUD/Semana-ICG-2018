@@ -1,5 +1,6 @@
 import AOS from 'aos'
 import 'angular'
+import 'angular-route'
 import 'normalize.css/normalize.css'
 import 'bootstrap'
 
