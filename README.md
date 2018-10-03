@@ -37,5 +37,4 @@ $ docker stack deploy -c docker-stack.yml slud
 
 - [ ] Organizar archivos angular y assets
 - [ ] Agregar traducciones (ingles,...)
-- [ ] usar webpack (minimizar) para los CSS, img, etc (para producción).
 - [ ] agregar sourcemaps.
