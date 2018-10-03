@@ -11,13 +11,13 @@ import util from '../js/util.js';
       $locationProvider.hashPrefix('!');
 
       $routeProvider
-        .when('/', {
+        .when('', {
           templateUrl: 'views/inicio.html'
         })
-        .when('/informacion', {
+        .when('informacion', {
           templateUrl: 'views/informacion.html'
         })
-        .otherwise('/');
+        .otherwise('');
 
     }
   ])
