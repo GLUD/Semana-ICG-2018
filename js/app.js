@@ -14,8 +14,11 @@ import util from '../js/util.js';
         .when('/', {
           templateUrl: 'views/inicio.html'
         })
-        .when('informacion', {
+        .when('/informacion', {
           templateUrl: 'views/informacion.html'
+        })
+        .when('/ejemplo', {
+            templateUrl: 'views/ejemplo.html'
         })
         .otherwise('/');
 
