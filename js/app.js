@@ -14,11 +14,14 @@ import util from '../js/util.js';
         .when('/', {
           templateUrl: 'views/inicio.html'
         })
-        .when('/informacion', {
-          templateUrl: 'views/informacion.html'
+        .when('/conferencias_talleres', {
+            templateUrl: 'views/conferencias_talleres.html'
         })
-        .when('/ejemplo', {
-            templateUrl: 'views/ejemplo.html'
+        .when('/comite', {
+            templateUrl: 'views/comite.html'
+        })
+        .when('/contacto', {
+            templateUrl: 'views/contacto.html'
         })
         .otherwise('/');
 
@@ -26,11 +29,10 @@ import util from '../js/util.js';
   ])
   .controller('Menu', function MenuController(){
     this.lista = [
-      {url: '/#!/informacion', text: 'Información'},
       {url: '#tematica', text: 'Temática'},
-      {url: '#talleres_conferencias', text: 'Talleres y Conferencias'},
-      {url: '#comite', text: 'Comite'},
-      {url: '#contactenos', text: 'Contáctenos'},
+      {url: '/#!/conferencias_talleres', text: 'Talleres y Conferencias'},
+      {url: '/#!/comite', text: 'Comité'},
+      {url: '/#!/contacto', text: 'Contáctenos'},
     ];
   })
 

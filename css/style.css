@@ -88,14 +88,73 @@ body {
 }
 
 .info {
-  /* background: url('../img/pattern_final.jpg') fixed; */
-  background-color: #f4f5f6;
+  background: url('../img/back1.jpg') fixed; 
+  background-color: #f4f5f6; text-shadow: white 0.1em 0.1em 0.2em; 
 }
+
+/*MAS INVENTOS WII*/
+
+
+
+.infoa {
+  background: url('../img/bogota.jpg') fixed; 
+  background-color: #f4f5f6; text-shadow: white 0.1em 0.1em 0.2em; 
+}
+
+.infob {
+  background-color: #f4f5f6; text-shadow: white 0.1em 0.1em 0.2em; 
+  background:url('../img/back7.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+.infoc {
+  background: url('../img/back4.jpg') fixed; 
+  background-color: #f4f5f6; text-shadow: white 0.1em 0.1em 0.2em; 
+}
+.infod {
+  background: url('../img/back5.jpg') fixed; 
+  background-color: #f4f5f6; text-shadow: white 0.1em 0.1em 0.2em; 
+}
+
+
 
 .detalles {
   padding-top: 15px;
   background: url('../img/map-pattern.png') fixed;
 }
+
+/*Aqui inventado*/
+
+#contenedor_principal{
+width:1024px;
+height:50%;
+position:relative;
+margin:auto;
+}
+.contenedor_imagen_texto{
+width:335px;
+height:45%;
+position:relative;
+display:inline-block;
+vertical-align:top;
+overflow:hidden;
+}
+.imagen, .texto{
+width:30%;
+height:40%;
+position:relative;
+display:inline;
+}
+.textoo{
+height:auto;
+text-align:center
+}
+
+/*cierre de invento*/
 
 .detalles .heading {
   text-align: center;
