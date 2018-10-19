@@ -29,9 +29,8 @@ import util from '../js/util.js';
   ])
   .controller('Menu', function MenuController(){
     this.lista = [
-      {url: '#tematica', text: 'Temática'},
+      {url: '#inicio', text: 'Inicio'},
       {url: '/#!/conferencias_talleres', text: 'Talleres y Conferencias'},
-      {url: '/#!/comite', text: 'Comité'},
       {url: '/#!/contacto', text: 'Contáctenos'},
     ];
   })
