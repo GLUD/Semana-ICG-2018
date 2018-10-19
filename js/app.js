@@ -24,6 +24,9 @@ import data from '../js/data.js';
         .when('/contacto', {
             templateUrl: 'views/contacto.html'
         })
+        .when('/test', {
+            templateUrl: 'views/conferencias_talleres.html'
+        })
         .otherwise('/');
 
     }
@@ -34,6 +37,7 @@ import data from '../js/data.js';
       {url: '/#!/', text: 'Inicio'},
       {url: '/#!/agenda', text: 'Talleres y Conferencias'},
       {url: '/#!/contacto', text: 'Contáctenos'},
+      {url: '/#!/test', text: 'Whats up'}
     ];
   })
   .controller('Agenda', function AgendaController() {

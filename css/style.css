@@ -151,12 +151,28 @@ margin:auto;
 }
 .contenedor_imagen_texto{
 width:335px;
-height:45%;
+/* height:45%; */
 position:relative;
 display:inline-block;
 vertical-align:top;
 overflow:hidden;
 }
+
+.imagen img {
+    max-width: -moz-available;
+}
+
+.actividades {
+    padding: 40px 0px;
+    background: #333333;
+}
+
+.actividades h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 25px;
+}
+
 .imagen, .texto{
 width:30%;
 height:40%;
