@@ -41,11 +41,11 @@
            <th>Lugar</th>
          </tr>
        </thead>
-       <!-- Charlas -->
+       <!-- Talleres -->
        <tbody>
          <tr ng-repeat="charla in dia.charlas">
          <td class="fecha">{{charla.hora}}</td>
-           <td>{{charla.nombre}}</td>
+           <td ng-bind-html="charla.nombre | unsafe"></td>
            <td>{{charla.expositor}}</td>
            <td>{{charla.lugar}}</td>
          </tr>

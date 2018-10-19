@@ -43,6 +43,10 @@ import data from '../js/data.js';
   .controller('Agenda', function AgendaController() {
       this.dias = data.agenda
       this.talleres = data.talleres
-  })
+  }).filter('unsafe', function($sce) {
+	    return function(val) {
+	    return $sce.trustAsHtml(val);
+	    };
+	});
 
 })(window.angular);

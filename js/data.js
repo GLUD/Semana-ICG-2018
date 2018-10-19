@@ -128,13 +128,13 @@ data.talleres = [
         charlas: [
             {
                 hora: '10:00 - 12:00',
-                nombre: 'Procesamiento GNSS herramientas disponibles en la web',
+                nombre: '<p>Procesamiento GNSS herramientas disponibles en la web.  <a href=#"> Inscríbete! </a> </p>',
                 expositor: 'Ing. Andrés Cardenas',
                 lugar: 'Salón 703 Edificio Sabio Caldas'
             },
             {
                 hora: '14:00 - 18:00',
-                nombre: 'Herramientas para la modernización de la administración de tierras en colombia',
+                nombre: 'Herramientas para la modernización de la administración de tierras en colombia.  <a href=#"> Inscríbete! </a>',
                 expositor:  'AGENCIA BSF',
                 lugar: 'Salón 703 Edificio Sabio Caldas'
             },
@@ -145,13 +145,13 @@ data.talleres = [
         charlas: [
             {
                 hora: '14:00 - 16:00',
-                nombre: 'Usos herramientas SIG en el catastro',
+                nombre: 'Usos herramientas SIG en el catastro.  <a href=#"> Inscríbete! </a>',
                 expositor:  'AGENCIA BSF',
                 lugar: 'Salón 703 Edificio Sabio Caldas'
             },
             {
                 hora: '14:00 - 18:00',
-                nombre: 'Taller básico de ARCGIS PRO',
+                nombre: 'Taller básico de ARCGIS PRO.  <a href=#"> Inscríbete! </a>',
                 expositor:  'ESRI COLOMBIA',
                 lugar: ''
             },
@@ -162,13 +162,13 @@ data.talleres = [
         charlas: [
             {
                 hora: '14:00 - 16:00',
-                nombre: 'Introducciòn a NETLOGO',
+                nombre: 'Introducciòn a NETLOGO.  <a href=#"> Inscríbete! </a>',
                 expositor:  'Ing. Felox Lopez',
                 lugar: 'Salón 507 Edificio Sabio Caldas'
             },
             {
                 hora: '14:00 - 16:00',
-                nombre: 'Taller de procesamiento digital e interpretación de imágenes UAB para mapas de uso y coberturas del suelo',
+                nombre: 'Taller de procesamiento digital e interpretación de imágenes UAB para mapas de uso y coberturas del suelo.  <a href=#"> Inscríbete! </a>',
                 expositor:  'Rafael Gonzalez Rubio',
                 lugar: 'Salón 703 Edificio Sabio Caldas'
             },
