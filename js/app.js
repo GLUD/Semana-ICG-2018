@@ -31,8 +31,8 @@ import data from '../js/data.js';
   .controller('Menu', function MenuController(){
     this.lista = [
       // {url: '#tematica', text: 'Temática'},
+      {url: '/#!/', text: 'Inicio'},
       {url: '/#!/agenda', text: 'Talleres y Conferencias'},
-      {url: '/#!/comite', text: 'Comité'},
       {url: '/#!/contacto', text: 'Contáctenos'},
     ];
   })

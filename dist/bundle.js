@@ -53103,7 +53103,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   }]).controller('Menu', function MenuController() {
     this.lista = [
     // {url: '#tematica', text: 'Temática'},
-    { url: '/#!/agenda', text: 'Talleres y Conferencias' }, { url: '/#!/comite', text: 'Comité' }, { url: '/#!/contacto', text: 'Contáctenos' }];
+    { url: '/#!/', text: 'Inicio' }, { url: '/#!/agenda', text: 'Talleres y Conferencias' }, { url: '/#!/contacto', text: 'Contáctenos' }];
   }).controller('Agenda', function AgendaController() {
     this.dias = _data2.default.agenda;
     this.talleres = _data2.default.talleres;
