@@ -1,0 +1,55 @@
+<section id="agenda" class="agenda" ng-controller="Agenda as agenda">
+   <!-- Tabla responsive para que no se rompa en pantallas muy pequeñas -->
+   <div class="container table-responsive">
+     <h2 class="subtitle" data-aos="fade-right">Agenda de Charlas</h2>
+     <table class="table" ng-repeat="dia in agenda.dias">
+       <thead>
+         <!-- Este header indica el día de la semana -->
+         <tr class="dia">
+           <th class="span" colspan="4">{{dia.header}}</th>
+         </tr>
+         <!-- Información básica de la charla -->
+         <tr>
+           <th class="fecha">Hora</th>
+           <th>Charla</th>
+           <th>Expositor</th>
+         </tr>
+       </thead>
+       <!-- Charlas -->
+       <tbody>
+         <tr ng-repeat="charla in dia.charlas">
+         <td class="fecha">{{charla.hora}}</td>
+           <td>{{charla.nombre}}</td>
+           <td>{{charla.expositor}}</td>
+         </tr>
+       </tbody>
+     </table>
+   </div>
+   <div class="container table-responsive">
+     <h2 class="subtitle" data-aos="fade-right">Agenda de Talleres</h2>
+     <table class="table" ng-repeat="dia in agenda.talleres">
+       <thead>
+         <!-- Este header indica el día de la semana -->
+         <tr class="dia">
+           <th class="span" colspan="4">{{dia.header}}</th>
+         </tr>
+         <!-- Información básica de la charla -->
+         <tr>
+           <th class="fecha">Hora</th>
+           <th>Taller</th>
+           <th>Expositor</th>
+           <th>Lugar</th>
+         </tr>
+       </thead>
+       <!-- Charlas -->
+       <tbody>
+         <tr ng-repeat="charla in dia.charlas">
+         <td class="fecha">{{charla.hora}}</td>
+           <td>{{charla.nombre}}</td>
+           <td>{{charla.expositor}}</td>
+           <td>{{charla.lugar}}</td>
+         </tr>
+       </tbody>
+     </table>
+   </div>
+ </section>

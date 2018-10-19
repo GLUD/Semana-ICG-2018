@@ -1,4 +1,5 @@
 import util from '../js/util.js';
+import data from '../js/data.js';
 
 (function(angular){
   'use strict';
@@ -14,8 +15,8 @@ import util from '../js/util.js';
         .when('/', {
           templateUrl: 'views/inicio.html'
         })
-        .when('/conferencias_talleres', {
-            templateUrl: 'views/conferencias_talleres.html'
+        .when('/agenda', {
+            templateUrl: 'views/agenda.html'
         })
         .when('/comite', {
             templateUrl: 'views/comite.html'
@@ -29,11 +30,15 @@ import util from '../js/util.js';
   ])
   .controller('Menu', function MenuController(){
     this.lista = [
-      {url: '#tematica', text: 'Temática'},
-      {url: '/#!/conferencias_talleres', text: 'Talleres y Conferencias'},
+      // {url: '#tematica', text: 'Temática'},
+      {url: '/#!/agenda', text: 'Talleres y Conferencias'},
       {url: '/#!/comite', text: 'Comité'},
       {url: '/#!/contacto', text: 'Contáctenos'},
     ];
+  })
+  .controller('Agenda', function AgendaController() {
+      this.dias = data.agenda
+      this.talleres = data.talleres
   })
 
 })(window.angular);
