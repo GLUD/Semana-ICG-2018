@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/dist/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 5);
@@ -662,7 +662,8 @@ _aos2.default.init();
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-!function(e,t){ true?module.exports=t():"function"==typeof define&&define.amd?define([],t):"object"==typeof exports?exports.AOS=t():e.AOS=t()}(this,function(){return function(e){function t(o){if(n[o])return n[o].exports;var i=n[o]={exports:{},id:o,loaded:!1};return e[o].call(i.exports,i,i.exports,t),i.loaded=!0,i.exports}var n={};return t.m=e,t.c=n,t.p="dist/",t(0)}([function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{default:e}}var i=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var o in n)Object.prototype.hasOwnProperty.call(n,o)&&(e[o]=n[o])}return e},r=n(1),a=(o(r),n(6)),u=o(a),c=n(7),s=o(c),f=n(8),d=o(f),l=n(9),p=o(l),m=n(10),b=o(m),v=n(11),y=o(v),g=n(14),h=o(g),w=[],k=!1,x={offset:120,delay:0,easing:"ease",duration:400,disable:!1,once:!1,startEvent:"DOMContentLoaded",throttleDelay:99,debounceDelay:50,disableMutationObserver:!1},j=function(){var e=arguments.length>0&&void 0!==arguments[0]&&arguments[0];if(e&&(k=!0),k)return w=(0,y.default)(w,x),(0,b.default)(w,x.once),w},O=function(){w=(0,h.default)(),j()},M=function(){w.forEach(function(e,t){e.node.removeAttribute("data-aos"),e.node.removeAttribute("data-aos-easing"),e.node.removeAttribute("data-aos-duration"),e.node.removeAttribute("data-aos-delay")})},S=function(e){return e===!0||"mobile"===e&&p.default.mobile()||"phone"===e&&p.default.phone()||"tablet"===e&&p.default.tablet()||"function"==typeof e&&e()===!0},_=function(e){x=i(x,e),w=(0,h.default)();var t=document.all&&!window.atob;return S(x.disable)||t?M():(x.disableMutationObserver||d.default.isSupported()||(console.info('\n      aos: MutationObserver is not supported on this browser,\n      code mutations observing has been disabled.\n      You may have to call "refreshHard()" by yourself.\n    '),x.disableMutationObserver=!0),document.querySelector("body").setAttribute("data-aos-easing",x.easing),document.querySelector("body").setAttribute("data-aos-duration",x.duration),document.querySelector("body").setAttribute("data-aos-delay",x.delay),"DOMContentLoaded"===x.startEvent&&["complete","interactive"].indexOf(document.readyState)>-1?j(!0):"load"===x.startEvent?window.addEventListener(x.startEvent,function(){j(!0)}):document.addEventListener(x.startEvent,function(){j(!0)}),window.addEventListener("resize",(0,s.default)(j,x.debounceDelay,!0)),window.addEventListener("orientationchange",(0,s.default)(j,x.debounceDelay,!0)),window.addEventListener("scroll",(0,u.default)(function(){(0,b.default)(w,x.once)},x.throttleDelay)),x.disableMutationObserver||d.default.ready("[data-aos]",O),w)};e.exports={init:_,refresh:j,refreshHard:O}},function(e,t){},,,,,function(e,t){(function(t){"use strict";function n(e,t,n){function o(t){var n=b,o=v;return b=v=void 0,k=t,g=e.apply(o,n)}function r(e){return k=e,h=setTimeout(f,t),M?o(e):g}function a(e){var n=e-w,o=e-k,i=t-n;return S?j(i,y-o):i}function c(e){var n=e-w,o=e-k;return void 0===w||n>=t||n<0||S&&o>=y}function f(){var e=O();return c(e)?d(e):void(h=setTimeout(f,a(e)))}function d(e){return h=void 0,_&&b?o(e):(b=v=void 0,g)}function l(){void 0!==h&&clearTimeout(h),k=0,b=w=v=h=void 0}function p(){return void 0===h?g:d(O())}function m(){var e=O(),n=c(e);if(b=arguments,v=this,w=e,n){if(void 0===h)return r(w);if(S)return h=setTimeout(f,t),o(w)}return void 0===h&&(h=setTimeout(f,t)),g}var b,v,y,g,h,w,k=0,M=!1,S=!1,_=!0;if("function"!=typeof e)throw new TypeError(s);return t=u(t)||0,i(n)&&(M=!!n.leading,S="maxWait"in n,y=S?x(u(n.maxWait)||0,t):y,_="trailing"in n?!!n.trailing:_),m.cancel=l,m.flush=p,m}function o(e,t,o){var r=!0,a=!0;if("function"!=typeof e)throw new TypeError(s);return i(o)&&(r="leading"in o?!!o.leading:r,a="trailing"in o?!!o.trailing:a),n(e,t,{leading:r,maxWait:t,trailing:a})}function i(e){var t="undefined"==typeof e?"undefined":c(e);return!!e&&("object"==t||"function"==t)}function r(e){return!!e&&"object"==("undefined"==typeof e?"undefined":c(e))}function a(e){return"symbol"==("undefined"==typeof e?"undefined":c(e))||r(e)&&k.call(e)==d}function u(e){if("number"==typeof e)return e;if(a(e))return f;if(i(e)){var t="function"==typeof e.valueOf?e.valueOf():e;e=i(t)?t+"":t}if("string"!=typeof e)return 0===e?e:+e;e=e.replace(l,"");var n=m.test(e);return n||b.test(e)?v(e.slice(2),n?2:8):p.test(e)?f:+e}var c="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},s="Expected a function",f=NaN,d="[object Symbol]",l=/^\s+|\s+$/g,p=/^[-+]0x[0-9a-f]+$/i,m=/^0b[01]+$/i,b=/^0o[0-7]+$/i,v=parseInt,y="object"==("undefined"==typeof t?"undefined":c(t))&&t&&t.Object===Object&&t,g="object"==("undefined"==typeof self?"undefined":c(self))&&self&&self.Object===Object&&self,h=y||g||Function("return this")(),w=Object.prototype,k=w.toString,x=Math.max,j=Math.min,O=function(){return h.Date.now()};e.exports=o}).call(t,function(){return this}())},function(e,t){(function(t){"use strict";function n(e,t,n){function i(t){var n=b,o=v;return b=v=void 0,O=t,g=e.apply(o,n)}function r(e){return O=e,h=setTimeout(f,t),M?i(e):g}function u(e){var n=e-w,o=e-O,i=t-n;return S?x(i,y-o):i}function s(e){var n=e-w,o=e-O;return void 0===w||n>=t||n<0||S&&o>=y}function f(){var e=j();return s(e)?d(e):void(h=setTimeout(f,u(e)))}function d(e){return h=void 0,_&&b?i(e):(b=v=void 0,g)}function l(){void 0!==h&&clearTimeout(h),O=0,b=w=v=h=void 0}function p(){return void 0===h?g:d(j())}function m(){var e=j(),n=s(e);if(b=arguments,v=this,w=e,n){if(void 0===h)return r(w);if(S)return h=setTimeout(f,t),i(w)}return void 0===h&&(h=setTimeout(f,t)),g}var b,v,y,g,h,w,O=0,M=!1,S=!1,_=!0;if("function"!=typeof e)throw new TypeError(c);return t=a(t)||0,o(n)&&(M=!!n.leading,S="maxWait"in n,y=S?k(a(n.maxWait)||0,t):y,_="trailing"in n?!!n.trailing:_),m.cancel=l,m.flush=p,m}function o(e){var t="undefined"==typeof e?"undefined":u(e);return!!e&&("object"==t||"function"==t)}function i(e){return!!e&&"object"==("undefined"==typeof e?"undefined":u(e))}function r(e){return"symbol"==("undefined"==typeof e?"undefined":u(e))||i(e)&&w.call(e)==f}function a(e){if("number"==typeof e)return e;if(r(e))return s;if(o(e)){var t="function"==typeof e.valueOf?e.valueOf():e;e=o(t)?t+"":t}if("string"!=typeof e)return 0===e?e:+e;e=e.replace(d,"");var n=p.test(e);return n||m.test(e)?b(e.slice(2),n?2:8):l.test(e)?s:+e}var u="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},c="Expected a function",s=NaN,f="[object Symbol]",d=/^\s+|\s+$/g,l=/^[-+]0x[0-9a-f]+$/i,p=/^0b[01]+$/i,m=/^0o[0-7]+$/i,b=parseInt,v="object"==("undefined"==typeof t?"undefined":u(t))&&t&&t.Object===Object&&t,y="object"==("undefined"==typeof self?"undefined":u(self))&&self&&self.Object===Object&&self,g=v||y||Function("return this")(),h=Object.prototype,w=h.toString,k=Math.max,x=Math.min,j=function(){return g.Date.now()};e.exports=n}).call(t,function(){return this}())},function(e,t){"use strict";function n(e){var t=void 0,o=void 0,i=void 0;for(t=0;t<e.length;t+=1){if(o=e[t],o.dataset&&o.dataset.aos)return!0;if(i=o.children&&n(o.children))return!0}return!1}function o(){return window.MutationObserver||window.WebKitMutationObserver||window.MozMutationObserver}function i(){return!!o()}function r(e,t){var n=window.document,i=o(),r=new i(a);u=t,r.observe(n.documentElement,{childList:!0,subtree:!0,removedNodes:!0})}function a(e){e&&e.forEach(function(e){var t=Array.prototype.slice.call(e.addedNodes),o=Array.prototype.slice.call(e.removedNodes),i=t.concat(o);if(n(i))return u()})}Object.defineProperty(t,"__esModule",{value:!0});var u=function(){};t.default={isSupported:i,ready:r}},function(e,t){"use strict";function n(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function o(){return navigator.userAgent||navigator.vendor||window.opera||""}Object.defineProperty(t,"__esModule",{value:!0});var i=function(){function e(e,t){for(var n=0;n<t.length;n++){var o=t[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}return function(t,n,o){return n&&e(t.prototype,n),o&&e(t,o),t}}(),r=/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i,a=/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i,u=/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i,c=/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i,s=function(){function e(){n(this,e)}return i(e,[{key:"phone",value:function(){var e=o();return!(!r.test(e)&&!a.test(e.substr(0,4)))}},{key:"mobile",value:function(){var e=o();return!(!u.test(e)&&!c.test(e.substr(0,4)))}},{key:"tablet",value:function(){return this.mobile()&&!this.phone()}}]),e}();t.default=new s},function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=function(e,t,n){var o=e.node.getAttribute("data-aos-once");t>e.position?e.node.classList.add("aos-animate"):"undefined"!=typeof o&&("false"===o||!n&&"true"!==o)&&e.node.classList.remove("aos-animate")},o=function(e,t){var o=window.pageYOffset,i=window.innerHeight;e.forEach(function(e,r){n(e,i+o,t)})};t.default=o},function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(t,"__esModule",{value:!0});var i=n(12),r=o(i),a=function(e,t){return e.forEach(function(e,n){e.node.classList.add("aos-init"),e.position=(0,r.default)(e.node,t.offset)}),e};t.default=a},function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(t,"__esModule",{value:!0});var i=n(13),r=o(i),a=function(e,t){var n=0,o=0,i=window.innerHeight,a={offset:e.getAttribute("data-aos-offset"),anchor:e.getAttribute("data-aos-anchor"),anchorPlacement:e.getAttribute("data-aos-anchor-placement")};switch(a.offset&&!isNaN(a.offset)&&(o=parseInt(a.offset)),a.anchor&&document.querySelectorAll(a.anchor)&&(e=document.querySelectorAll(a.anchor)[0]),n=(0,r.default)(e).top,a.anchorPlacement){case"top-bottom":break;case"center-bottom":n+=e.offsetHeight/2;break;case"bottom-bottom":n+=e.offsetHeight;break;case"top-center":n+=i/2;break;case"bottom-center":n+=i/2+e.offsetHeight;break;case"center-center":n+=i/2+e.offsetHeight/2;break;case"top-top":n+=i;break;case"bottom-top":n+=e.offsetHeight+i;break;case"center-top":n+=e.offsetHeight/2+i}return a.anchorPlacement||a.offset||isNaN(t)||(o=t),n+o};t.default=a},function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=function(e){for(var t=0,n=0;e&&!isNaN(e.offsetLeft)&&!isNaN(e.offsetTop);)t+=e.offsetLeft-("BODY"!=e.tagName?e.scrollLeft:0),n+=e.offsetTop-("BODY"!=e.tagName?e.scrollTop:0),e=e.offsetParent;return{top:n,left:t}};t.default=n},function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=function(e){return e=e||document.querySelectorAll("[data-aos]"),Array.prototype.map.call(e,function(e){return{node:e}})};t.default=n}])});
+!function(e,t){ true?module.exports=t():"function"==typeof define&&define.amd?define([],t):"object"==typeof exports?exports.AOS=t():e.AOS=t()}(this,function(){return function(e){function t(o){if(n[o])return n[o].exports;var i=n[o]={exports:{},id:o,loaded:!1};return e[o].call(i.exports,i,i.exports,t),i.loaded=!0,i.exports}var n={};return t.m=e,t.c=n,t.p="dist/",t(0)}([function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{default:e}}var i=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var o in n)Object.prototype.hasOwnProperty.call(n,o)&&(e[o]=n[o])}return e},r=n(1),a=(o(r),n(6)),u=o(a),c=n(7),f=o(c),s=n(8),d=o(s),l=n(9),p=o(l),m=n(10),b=o(m),v=n(11),y=o(v),g=n(14),h=o(g),w=[],k=!1,x=document.all&&!window.atob,j={offset:120,delay:0,easing:"ease",duration:400,disable:!1,once:!1,startEvent:"DOMContentLoaded"},O=function(){var e=arguments.length>0&&void 0!==arguments[0]&&arguments[0];if(e&&(k=!0),k)return w=(0,y.default)(w,j),(0,b.default)(w,j.once),w},S=function(){w=(0,h.default)(),O()},_=function(){w.forEach(function(e,t){e.node.removeAttribute("data-aos"),e.node.removeAttribute("data-aos-easing"),e.node.removeAttribute("data-aos-duration"),e.node.removeAttribute("data-aos-delay")})},E=function(e){return e===!0||"mobile"===e&&p.default.mobile()||"phone"===e&&p.default.phone()||"tablet"===e&&p.default.tablet()||"function"==typeof e&&e()===!0},z=function(e){return j=i(j,e),w=(0,h.default)(),E(j.disable)||x?_():(document.querySelector("body").setAttribute("data-aos-easing",j.easing),document.querySelector("body").setAttribute("data-aos-duration",j.duration),document.querySelector("body").setAttribute("data-aos-delay",j.delay),"DOMContentLoaded"===j.startEvent&&["complete","interactive"].indexOf(document.readyState)>-1?O(!0):"load"===j.startEvent?window.addEventListener(j.startEvent,function(){O(!0)}):document.addEventListener(j.startEvent,function(){O(!0)}),window.addEventListener("resize",(0,f.default)(O,50,!0)),window.addEventListener("orientationchange",(0,f.default)(O,50,!0)),window.addEventListener("scroll",(0,u.default)(function(){(0,b.default)(w,j.once)},99)),document.addEventListener("DOMNodeRemoved",function(e){var t=e.target;t&&1===t.nodeType&&t.hasAttribute&&t.hasAttribute("data-aos")&&(0,f.default)(S,50,!0)}),(0,d.default)("[data-aos]",S),w)};e.exports={init:z,refresh:O,refreshHard:S}},function(e,t){},,,,,function(e,t){(function(t){"use strict";function n(e,t,n){function o(t){var n=b,o=v;return b=v=void 0,k=t,g=e.apply(o,n)}function r(e){return k=e,h=setTimeout(s,t),S?o(e):g}function a(e){var n=e-w,o=e-k,i=t-n;return _?j(i,y-o):i}function c(e){var n=e-w,o=e-k;return void 0===w||n>=t||n<0||_&&o>=y}function s(){var e=O();return c(e)?d(e):void(h=setTimeout(s,a(e)))}function d(e){return h=void 0,E&&b?o(e):(b=v=void 0,g)}function l(){void 0!==h&&clearTimeout(h),k=0,b=w=v=h=void 0}function p(){return void 0===h?g:d(O())}function m(){var e=O(),n=c(e);if(b=arguments,v=this,w=e,n){if(void 0===h)return r(w);if(_)return h=setTimeout(s,t),o(w)}return void 0===h&&(h=setTimeout(s,t)),g}var b,v,y,g,h,w,k=0,S=!1,_=!1,E=!0;if("function"!=typeof e)throw new TypeError(f);return t=u(t)||0,i(n)&&(S=!!n.leading,_="maxWait"in n,y=_?x(u(n.maxWait)||0,t):y,E="trailing"in n?!!n.trailing:E),m.cancel=l,m.flush=p,m}function o(e,t,o){var r=!0,a=!0;if("function"!=typeof e)throw new TypeError(f);return i(o)&&(r="leading"in o?!!o.leading:r,a="trailing"in o?!!o.trailing:a),n(e,t,{leading:r,maxWait:t,trailing:a})}function i(e){var t="undefined"==typeof e?"undefined":c(e);return!!e&&("object"==t||"function"==t)}function r(e){return!!e&&"object"==("undefined"==typeof e?"undefined":c(e))}function a(e){return"symbol"==("undefined"==typeof e?"undefined":c(e))||r(e)&&k.call(e)==d}function u(e){if("number"==typeof e)return e;if(a(e))return s;if(i(e)){var t="function"==typeof e.valueOf?e.valueOf():e;e=i(t)?t+"":t}if("string"!=typeof e)return 0===e?e:+e;e=e.replace(l,"");var n=m.test(e);return n||b.test(e)?v(e.slice(2),n?2:8):p.test(e)?s:+e}var c="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},f="Expected a function",s=NaN,d="[object Symbol]",l=/^\s+|\s+$/g,p=/^[-+]0x[0-9a-f]+$/i,m=/^0b[01]+$/i,b=/^0o[0-7]+$/i,v=parseInt,y="object"==("undefined"==typeof t?"undefined":c(t))&&t&&t.Object===Object&&t,g="object"==("undefined"==typeof self?"undefined":c(self))&&self&&self.Object===Object&&self,h=y||g||Function("return this")(),w=Object.prototype,k=w.toString,x=Math.max,j=Math.min,O=function(){return h.Date.now()};e.exports=o}).call(t,function(){return this}())},function(e,t){(function(t){"use strict";function n(e,t,n){function i(t){var n=b,o=v;return b=v=void 0,O=t,g=e.apply(o,n)}function r(e){return O=e,h=setTimeout(s,t),S?i(e):g}function u(e){var n=e-w,o=e-O,i=t-n;return _?x(i,y-o):i}function f(e){var n=e-w,o=e-O;return void 0===w||n>=t||n<0||_&&o>=y}function s(){var e=j();return f(e)?d(e):void(h=setTimeout(s,u(e)))}function d(e){return h=void 0,E&&b?i(e):(b=v=void 0,g)}function l(){void 0!==h&&clearTimeout(h),O=0,b=w=v=h=void 0}function p(){return void 0===h?g:d(j())}function m(){var e=j(),n=f(e);if(b=arguments,v=this,w=e,n){if(void 0===h)return r(w);if(_)return h=setTimeout(s,t),i(w)}return void 0===h&&(h=setTimeout(s,t)),g}var b,v,y,g,h,w,O=0,S=!1,_=!1,E=!0;if("function"!=typeof e)throw new TypeError(c);return t=a(t)||0,o(n)&&(S=!!n.leading,_="maxWait"in n,y=_?k(a(n.maxWait)||0,t):y,E="trailing"in n?!!n.trailing:E),m.cancel=l,m.flush=p,m}function o(e){var t="undefined"==typeof e?"undefined":u(e);return!!e&&("object"==t||"function"==t)}function i(e){return!!e&&"object"==("undefined"==typeof e?"undefined":u(e))}function r(e){return"symbol"==("undefined"==typeof e?"undefined":u(e))||i(e)&&w.call(e)==s}function a(e){if("number"==typeof e)return e;if(r(e))return f;if(o(e)){var t="function"==typeof e.valueOf?e.valueOf():e;e=o(t)?t+"":t}if("string"!=typeof e)return 0===e?e:+e;e=e.replace(d,"");var n=p.test(e);return n||m.test(e)?b(e.slice(2),n?2:8):l.test(e)?f:+e}var u="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},c="Expected a function",f=NaN,s="[object Symbol]",d=/^\s+|\s+$/g,l=/^[-+]0x[0-9a-f]+$/i,p=/^0b[01]+$/i,m=/^0o[0-7]+$/i,b=parseInt,v="object"==("undefined"==typeof t?"undefined":u(t))&&t&&t.Object===Object&&t,y="object"==("undefined"==typeof self?"undefined":u(self))&&self&&self.Object===Object&&self,g=v||y||Function("return this")(),h=Object.prototype,w=h.toString,k=Math.max,x=Math.min,j=function(){return g.Date.now()};e.exports=n}).call(t,function(){return this}())},function(e,t){"use strict";function n(e,t){a.push({selector:e,fn:t}),!u&&r&&(u=new r(o),u.observe(i.documentElement,{childList:!0,subtree:!0,removedNodes:!0})),o()}function o(){for(var e,t,n=0,o=a.length;n<o;n++){e=a[n],t=i.querySelectorAll(e.selector);for(var r,u=0,c=t.length;u<c;u++)r=t[u],r.ready||(r.ready=!0,e.fn.call(r,r))}}Object.defineProperty(t,"__esModule",{value:!0});var i=window.document,r=window.MutationObserver||window.WebKitMutationObserver,a=[],u=void 0;t.default=n},function(e,t){"use strict";function n(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function o(){return navigator.userAgent||navigator.vendor||window.opera||""}Object.defineProperty(t,"__esModule",{value:!0});var i=function(){function e(e,t){for(var n=0;n<t.length;n++){var o=t[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}return function(t,n,o){return n&&e(t.prototype,n),o&&e(t,o),t}}(),r=/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i,a=/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i,u=/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i,c=/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i,f=function(){function e(){n(this,e)}return i(e,[{key:"phone",value:function(){var e=o();return!(!r.test(e)&&!a.test(e.substr(0,4)))}},{key:"mobile",value:function(){var e=o();return!(!u.test(e)&&!c.test(e.substr(0,4)))}},{key:"tablet",value:function(){return this.mobile()&&!this.phone()}}]),e}();t.default=new f},function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=function(e,t,n){var o=e.node.getAttribute("data-aos-once");t>e.position?e.node.classList.add("aos-animate"):"undefined"!=typeof o&&("false"===o||!n&&"true"!==o)&&e.node.classList.remove("aos-animate")},o=function(e,t){var o=window.pageYOffset,i=window.innerHeight;e.forEach(function(e,r){n(e,i+o,t)})};t.default=o},function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(t,"__esModule",{value:!0});var i=n(12),r=o(i),a=function(e,t){return e.forEach(function(e,n){e.node.classList.add("aos-init"),e.position=(0,r.default)(e.node,t.offset)}),e};t.default=a},function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(t,"__esModule",{value:!0});var i=n(13),r=o(i),a=function(e,t){var n=0,o=0,i=window.innerHeight,a={offset:e.getAttribute("data-aos-offset"),anchor:e.getAttribute("data-aos-anchor"),anchorPlacement:e.getAttribute("data-aos-anchor-placement")};switch(a.offset&&!isNaN(a.offset)&&(o=parseInt(a.offset)),a.anchor&&document.querySelectorAll(a.anchor)&&(e=document.querySelectorAll(a.anchor)[0]),n=(0,r.default)(e).top,a.anchorPlacement){case"top-bottom":break;case"center-bottom":n+=e.offsetHeight/2;break;case"bottom-bottom":n+=e.offsetHeight;break;case"top-center":n+=i/2;break;case"bottom-center":n+=i/2+e.offsetHeight;break;case"center-center":n+=i/2+e.offsetHeight/2;break;case"top-top":n+=i;break;case"bottom-top":n+=e.offsetHeight+i;break;case"center-top":n+=e.offsetHeight/2+i}return a.anchorPlacement||a.offset||isNaN(t)||(o=t),n+o};t.default=a},function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=function(e){for(var t=0,n=0;e&&!isNaN(e.offsetLeft)&&!isNaN(e.offsetTop);)t+=e.offsetLeft-("BODY"!=e.tagName?e.scrollLeft:0),n+=e.offsetTop-("BODY"!=e.tagName?e.scrollTop:0),e=e.offsetParent;return{top:n,left:t}};t.default=n},function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=function(e){e=e||document.querySelectorAll("[data-aos]");var t=[];return[].forEach.call(e,function(e,n){t.push({node:e})}),t};t.default=n}])});
+//# sourceMappingURL=aos.js.map
 
 /***/ }),
 /* 7 */
@@ -677,8 +678,8 @@ module.exports = angular;
 /***/ (function(module, exports) {
 
 /**
- * @license AngularJS v1.7.5
- * (c) 2010-2018 Google, Inc. http://angularjs.org
+ * @license AngularJS v1.6.8
+ * (c) 2010-2017 Google, Inc. http://angularjs.org
  * License: MIT
  */
 (function(window) {'use strict';
@@ -690,8 +691,7 @@ module.exports = angular;
 */
 
 var minErrConfig = {
-  objectMaxDepth: 5,
-  urlErrorParamsEnabled: true
+  objectMaxDepth: 5
 };
 
 /**
@@ -714,20 +714,11 @@ var minErrConfig = {
  * * `objectMaxDepth`  **{Number}** - The max depth for stringifying objects. Setting to a
  *   non-positive or non-numeric value, removes the max depth limit.
  *   Default: 5
- *
- * * `urlErrorParamsEnabled`  **{Boolean}** - Specifies wether the generated error url will
- *   contain the parameters of the thrown error. Disabling the parameters can be useful if the
- *   generated error url is very long.
- *
- *   Default: true. When used without argument, it returns the current value.
  */
 function errorHandlingConfig(config) {
   if (isObject(config)) {
     if (isDefined(config.objectMaxDepth)) {
       minErrConfig.objectMaxDepth = isValidObjectMaxDepth(config.objectMaxDepth) ? config.objectMaxDepth : NaN;
-    }
-    if (isDefined(config.urlErrorParamsEnabled) && isBoolean(config.urlErrorParamsEnabled)) {
-      minErrConfig.urlErrorParamsEnabled = config.urlErrorParamsEnabled;
     }
   } else {
     return minErrConfig;
@@ -743,12 +734,11 @@ function isValidObjectMaxDepth(maxDepth) {
   return isNumber(maxDepth) && maxDepth > 0;
 }
 
-
 /**
  * @description
  *
  * This object provides a utility for producing rich Error messages within
- * AngularJS. It can be called as follows:
+ * Angular. It can be called as follows:
  *
  * var exampleMinErr = minErr('example');
  * throw exampleMinErr('one', 'This {0} is {1}', foo, bar);
@@ -776,11 +766,6 @@ function isValidObjectMaxDepth(maxDepth) {
 
 function minErr(module, ErrorConstructor) {
   ErrorConstructor = ErrorConstructor || Error;
-
-  var url = 'https://errors.angularjs.org/1.7.5/';
-  var regex = url.replace('.', '\\.') + '[\\s\\S]*';
-  var errRegExp = new RegExp(regex, 'g');
-
   return function() {
     var code = arguments[0],
       template = arguments[1],
@@ -790,27 +775,21 @@ function minErr(module, ErrorConstructor) {
       }),
       paramPrefix, i;
 
-    // A minErr message has two parts: the message itself and the url that contains the
-    // encoded message.
-    // The message's parameters can contain other error messages which also include error urls.
-    // To prevent the messages from getting too long, we strip the error urls from the parameters.
-
     message += template.replace(/\{\d+\}/g, function(match) {
       var index = +match.slice(1, -1);
 
       if (index < templateArgs.length) {
-        return templateArgs[index].replace(errRegExp, '');
+        return templateArgs[index];
       }
 
       return match;
     });
 
-    message += '\n' + url + (module ? module + '/' : '') + code;
+    message += '\nhttp://errors.angularjs.org/1.6.8/' +
+      (module ? module + '/' : '') + code;
 
-    if (minErrConfig.urlErrorParamsEnabled) {
-      for (i = 0, paramPrefix = '?'; i < templateArgs.length; i++, paramPrefix = '&') {
-        message += paramPrefix + 'p' + i + '=' + encodeURIComponent(templateArgs[i]);
-      }
+    for (i = 0, paramPrefix = '?'; i < templateArgs.length; i++, paramPrefix = '&') {
+      message += paramPrefix + 'p' + i + '=' + encodeURIComponent(templateArgs[i]);
     }
 
     return new ErrorConstructor(message);
@@ -838,6 +817,8 @@ function minErr(module, ErrorConstructor) {
 
   lowercase,
   uppercase,
+  manualLowercase,
+  manualUppercase,
   nodeName_,
   isArrayLike,
   forEach,
@@ -890,7 +871,6 @@ function minErr(module, ErrorConstructor) {
   fromJson,
   convertTimezoneToLocal,
   timezoneToOffset,
-  addDateMinutes,
   startingTag,
   tryDecodeURIComponent,
   parseKeyValue,
@@ -945,7 +925,15 @@ var VALIDITY_STATE_PROPERTY = 'validity';
 var hasOwnProperty = Object.prototype.hasOwnProperty;
 
 /**
- * @private
+ * @ngdoc function
+ * @name angular.lowercase
+ * @module ng
+ * @kind function
+ *
+ * @deprecated
+ * sinceVersion="1.5.0"
+ * removeVersion="1.7.0"
+ * Use [String.prototype.toLowerCase](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase) instead.
  *
  * @description Converts the specified string to lowercase.
  * @param {string} string String to be converted to lowercase.
@@ -954,13 +942,46 @@ var hasOwnProperty = Object.prototype.hasOwnProperty;
 var lowercase = function(string) {return isString(string) ? string.toLowerCase() : string;};
 
 /**
- * @private
+ * @ngdoc function
+ * @name angular.uppercase
+ * @module ng
+ * @kind function
+ *
+ * @deprecated
+ * sinceVersion="1.5.0"
+ * removeVersion="1.7.0"
+ * Use [String.prototype.toUpperCase](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase) instead.
  *
  * @description Converts the specified string to uppercase.
  * @param {string} string String to be converted to uppercase.
  * @returns {string} Uppercased string.
  */
 var uppercase = function(string) {return isString(string) ? string.toUpperCase() : string;};
+
+
+var manualLowercase = function(s) {
+  /* eslint-disable no-bitwise */
+  return isString(s)
+      ? s.replace(/[A-Z]/g, function(ch) {return String.fromCharCode(ch.charCodeAt(0) | 32);})
+      : s;
+  /* eslint-enable */
+};
+var manualUppercase = function(s) {
+  /* eslint-disable no-bitwise */
+  return isString(s)
+      ? s.replace(/[a-z]/g, function(ch) {return String.fromCharCode(ch.charCodeAt(0) & ~32);})
+      : s;
+  /* eslint-enable */
+};
+
+
+// String#toLowerCase and String#toUpperCase don't produce correct results in browsers with Turkish
+// locale, for this reason we need to detect this case and redefine lowercase/uppercase methods
+// with correct but slower alternatives. See https://github.com/angular/angular.js/issues/11387
+if ('i' !== 'I'.toLowerCase()) {
+  lowercase = manualLowercase;
+  uppercase = manualUppercase;
+}
 
 
 var
@@ -1010,7 +1031,8 @@ function isArrayLike(obj) {
 
   // NodeList objects (with `item` method) and
   // other objects with suitable length characteristics are array-like
-  return isNumber(length) && (length >= 0 && (length - 1) in obj || typeof obj.item === 'function');
+  return isNumber(length) &&
+    (length >= 0 && ((length - 1) in obj || obj instanceof Array) || typeof obj.item === 'function');
 
 }
 
@@ -1425,14 +1447,12 @@ function isDate(value) {
  * @kind function
  *
  * @description
- * Determines if a reference is an `Array`.
+ * Determines if a reference is an `Array`. Alias of Array.isArray.
  *
  * @param {*} value Reference to check.
  * @returns {boolean} True if `value` is an `Array`.
  */
-function isArray(arr) {
-  return Array.isArray(arr) || arr instanceof Array;
-}
+var isArray = Array.isArray;
 
 /**
  * @description
@@ -1609,16 +1629,15 @@ function arrayRemove(array, value) {
  * * If `source` is identical to `destination` an exception will be thrown.
  *
  * <br />
- *
  * <div class="alert alert-warning">
  *   Only enumerable properties are taken into account. Non-enumerable properties (both on `source`
  *   and on `destination`) will be ignored.
  * </div>
  *
- * @param {*} source The source that will be used to make a copy. Can be any type, including
- *     primitives, `null`, and `undefined`.
- * @param {(Object|Array)=} destination Destination into which the source is copied. If provided,
- *     must be of the same type as `source`.
+ * @param {*} source The source that will be used to make a copy.
+ *                   Can be any type, including primitives, `null`, and `undefined`.
+ * @param {(Object|Array)=} destination Destination into which the source is copied. If
+ *     provided, must be of the same type as `source`.
  * @returns {*} The copy or updated `destination`, if `destination` was specified.
  *
  * @example
@@ -1962,7 +1981,7 @@ var csp = function() {
  * used to force either jqLite by leaving ng-jq blank or setting the name of
  * the jquery variable under window (eg. jQuery).
  *
- * Since AngularJS looks for this directive when it is loaded (doesn't wait for the
+ * Since angular looks for this directive when it is loaded (doesn't wait for the
  * DOMContentLoaded event), it must be placed on an element that comes before the script
  * which loads angular. Also, only the first instance of `ng-jq` will be used and all
  * others ignored.
@@ -2075,7 +2094,7 @@ function toJsonReplacer(key, value) {
  *
  * @description
  * Serializes input into a JSON-formatted string. Properties with leading $$ characters will be
- * stripped since AngularJS uses this notation internally.
+ * stripped since angular uses this notation internally.
  *
  * @param {Object|Array|Date|string|number|boolean} obj Input to be serialized into JSON.
  * @param {boolean|number} [pretty=2] If set to true, the JSON output will contain newlines and whitespace.
@@ -2161,7 +2180,7 @@ function convertTimezoneToLocal(date, timezone, reverse) {
  */
 function startingTag(element) {
   element = jqLite(element).clone().empty();
-  var elemHtml = jqLite('<div></div>').append(element).html();
+  var elemHtml = jqLite('<div>').append(element).html();
   try {
     return element[0].nodeType === NODE_TYPE_TEXT ? lowercase(elemHtml) :
         elemHtml.
@@ -2513,13 +2532,8 @@ function angularInit(element, bootstrap) {
   });
   if (appElement) {
     if (!isAutoBootstrapAllowed) {
-      try {
-        window.console.error('AngularJS: disabling automatic bootstrap. <script> protocol indicates ' +
+      window.console.error('Angular: disabling automatic bootstrap. <script> protocol indicates ' +
           'an extension, document.location.href does not match.');
-      } catch (e) {
-        // Support: Safari 11 w/ Webdriver
-        // The console.error will throw and make the test fail
-      }
       return;
     }
     config.strictDi = getNgAttribute(appElement, 'strict-di') !== null;
@@ -2532,14 +2546,14 @@ function angularInit(element, bootstrap) {
  * @name angular.bootstrap
  * @module ng
  * @description
- * Use this function to manually start up AngularJS application.
+ * Use this function to manually start up angular application.
  *
  * For more information, see the {@link guide/bootstrap Bootstrap guide}.
  *
- * AngularJS will detect if it has been loaded into the browser more than once and only allow the
+ * Angular will detect if it has been loaded into the browser more than once and only allow the
  * first loaded script to be bootstrapped and will report a warning to the browser console for
  * each of the subsequent scripts. This prevents strange results in applications, where otherwise
- * multiple instances of AngularJS try to work on the DOM.
+ * multiple instances of Angular try to work on the DOM.
  *
  * <div class="alert alert-warning">
  * **Note:** Protractor based end-to-end tests cannot use this function to bootstrap manually.
@@ -2573,7 +2587,7 @@ function angularInit(element, bootstrap) {
  * </html>
  * ```
  *
- * @param {DOMElement} element DOM element which is the root of AngularJS application.
+ * @param {DOMElement} element DOM element which is the root of angular application.
  * @param {Array<String|Function|Array>=} modules an array of modules to load into the application.
  *     Each item in the array should be the name of a predefined module or a (DI annotated)
  *     function that will be invoked by the injector as a `config` block.
@@ -2673,9 +2687,9 @@ function reloadWithDebugInfo() {
  * @name angular.getTestability
  * @module ng
  * @description
- * Get the testability service for the instance of AngularJS on the given
+ * Get the testability service for the instance of Angular on the given
  * element.
- * @param {DOMElement} element DOM element which is the root of AngularJS application.
+ * @param {DOMElement} element DOM element which is the root of angular application.
  */
 function getTestability(rootElement) {
   var injector = angular.element(rootElement).injector();
@@ -2709,8 +2723,8 @@ function bindJQuery() {
                                  window[jqName];   // use jQuery specified by `ngJq`
 
   // Use jQuery if it exists with proper functionality, otherwise default to us.
-  // AngularJS 1.2+ requires jQuery 1.7+ for on()/off() support.
-  // AngularJS 1.3+ technically requires at least jQuery 2.1+ but it may work with older
+  // Angular 1.2+ requires jQuery 1.7+ for on()/off() support.
+  // Angular 1.3+ technically requires at least jQuery 2.1+ but it may work with older
   // versions. It will not work for sure with jQuery <1.7, though.
   if (jQuery && jQuery.fn.on) {
     jqLite = jQuery;
@@ -2721,24 +2735,24 @@ function bindJQuery() {
       injector: JQLitePrototype.injector,
       inheritedData: JQLitePrototype.inheritedData
     });
+
+    // All nodes removed from the DOM via various jQuery APIs like .remove()
+    // are passed through jQuery.cleanData. Monkey-patch this method to fire
+    // the $destroy event on all removed nodes.
+    originalCleanData = jQuery.cleanData;
+    jQuery.cleanData = function(elems) {
+      var events;
+      for (var i = 0, elem; (elem = elems[i]) != null; i++) {
+        events = jQuery._data(elem, 'events');
+        if (events && events.$destroy) {
+          jQuery(elem).triggerHandler('$destroy');
+        }
+      }
+      originalCleanData(elems);
+    };
   } else {
     jqLite = JQLite;
   }
-
-  // All nodes removed from the DOM via various jqLite/jQuery APIs like .remove()
-  // are passed through jqLite/jQuery.cleanData. Monkey-patch this method to fire
-  // the $destroy event on all removed nodes.
-  originalCleanData = jqLite.cleanData;
-  jqLite.cleanData = function(elems) {
-    var events;
-    for (var i = 0, elem; (elem = elems[i]) != null; i++) {
-      events = (jqLite._data(elem) || {}).events;
-      if (events && events.$destroy) {
-        jqLite(elem).triggerHandler('$destroy');
-      }
-    }
-    originalCleanData(elems);
-  };
 
   angular.element = jqLite;
 
@@ -2877,7 +2891,7 @@ var NODE_TYPE_DOCUMENT_FRAGMENT = 11;
  * @module ng
  * @description
  *
- * Interface for configuring AngularJS {@link angular.module modules}.
+ * Interface for configuring angular {@link angular.module modules}.
  */
 
 function setupModuleLoader(window) {
@@ -2904,9 +2918,9 @@ function setupModuleLoader(window) {
      * @module ng
      * @description
      *
-     * The `angular.module` is a global place for creating, registering and retrieving AngularJS
+     * The `angular.module` is a global place for creating, registering and retrieving Angular
      * modules.
-     * All modules (AngularJS core or 3rd party) that should be available to an application must be
+     * All modules (angular core or 3rd party) that should be available to an application must be
      * registered using this mechanism.
      *
      * Passing one argument retrieves an existing {@link angular.Module},
@@ -3156,13 +3170,13 @@ function setupModuleLoader(window) {
            * @ngdoc method
            * @name angular.Module#filter
            * @module ng
-           * @param {string} name Filter name - this must be a valid AngularJS expression identifier
+           * @param {string} name Filter name - this must be a valid angular expression identifier
            * @param {Function} filterFactory Factory function for creating new instance of filter.
            * @description
            * See {@link ng.$filterProvider#register $filterProvider.register()}.
            *
            * <div class="alert alert-warning">
-           * **Note:** Filter names must be valid AngularJS {@link expression} identifiers, such as `uppercase` or `orderBy`.
+           * **Note:** Filter names must be valid angular {@link expression} identifiers, such as `uppercase` or `orderBy`.
            * Names with special characters, such as hyphens and dots, are not allowed. If you wish to namespace
            * your filters, then you can use capitalization (`myappSubsectionFilterx`) or underscores
            * (`myapp_subsection_filterx`).
@@ -3199,8 +3213,7 @@ function setupModuleLoader(window) {
            * @ngdoc method
            * @name angular.Module#component
            * @module ng
-           * @param {string|Object} name Name of the component in camelCase (i.e. `myComp` which will match `<my-comp>`),
-           *    or an object map of components where the keys are the names and the values are the component definition objects.
+           * @param {string} name Name of the component in camel-case (i.e. myComp which will match as my-comp)
            * @param {Object} options Component definition object (a simplified
            *    {@link ng.$compile#directive-definition-object directive definition object})
            *
@@ -3216,13 +3229,7 @@ function setupModuleLoader(window) {
            * @param {Function} configFn Execute this function on module load. Useful for service
            *    configuration.
            * @description
-           * Use this method to configure services by injecting their
-           * {@link angular.Module#provider `providers`}, e.g. for adding routes to the
-           * {@link ngRoute.$routeProvider $routeProvider}.
-           *
-           * Note that you can only inject {@link angular.Module#provider `providers`} and
-           * {@link angular.Module#constant `constants`} into this function.
-           *
+           * Use this method to register work which needs to be performed on module loading.
            * For more about how to configure services, see
            * {@link providers#provider-recipe Provider Recipe}.
            */
@@ -3374,7 +3381,6 @@ function toDebugString(obj, maxDepth) {
   ngInitDirective,
   ngNonBindableDirective,
   ngPluralizeDirective,
-  ngRefDirective,
   ngRepeatDirective,
   ngShowDirective,
   ngStyleDirective,
@@ -3416,7 +3422,6 @@ function toDebugString(obj, maxDepth) {
   $FilterProvider,
   $$ForceReflowProvider,
   $InterpolateProvider,
-  $$IntervalFactoryProvider,
   $IntervalProvider,
   $HttpProvider,
   $HttpParamSerializerProvider,
@@ -3435,7 +3440,6 @@ function toDebugString(obj, maxDepth) {
   $SceProvider,
   $SceDelegateProvider,
   $SnifferProvider,
-  $$TaskTrackerFactoryProvider,
   $TemplateCacheProvider,
   $TemplateRequestProvider,
   $$TestabilityProvider,
@@ -3465,11 +3469,11 @@ function toDebugString(obj, maxDepth) {
 var version = {
   // These placeholder strings will be replaced by grunt's `build` task.
   // They need to be double- or single-quoted.
-  full: '1.7.5',
+  full: '1.6.8',
   major: 1,
-  minor: 7,
-  dot: 5,
-  codeName: 'anti-prettification'
+  minor: 6,
+  dot: 8,
+  codeName: 'beneficial-tincture'
 };
 
 
@@ -3499,6 +3503,8 @@ function publishExternalAPI(angular) {
     'isArray': isArray,
     'version': version,
     'isDate': isDate,
+    'lowercase': lowercase,
+    'uppercase': uppercase,
     'callbacks': {$$counter: 0},
     'getTestability': getTestability,
     'reloadWithDebugInfo': reloadWithDebugInfo,
@@ -3506,9 +3512,7 @@ function publishExternalAPI(angular) {
     '$$csp': csp,
     '$$encodeUriSegment': encodeUriSegment,
     '$$encodeUriQuery': encodeUriQuery,
-    '$$lowercase': lowercase,
-    '$$stringify': stringify,
-    '$$uppercase': uppercase
+    '$$stringify': stringify
   });
 
   angularModule = setupModuleLoader(window);
@@ -3543,7 +3547,6 @@ function publishExternalAPI(angular) {
             ngInit: ngInitDirective,
             ngNonBindable: ngNonBindableDirective,
             ngPluralize: ngPluralizeDirective,
-            ngRef: ngRefDirective,
             ngRepeat: ngRepeatDirective,
             ngShow: ngShowDirective,
             ngStyle: ngStyleDirective,
@@ -3589,7 +3592,6 @@ function publishExternalAPI(angular) {
         $$forceReflow: $$ForceReflowProvider,
         $interpolate: $InterpolateProvider,
         $interval: $IntervalProvider,
-        $$intervalFactory: $$IntervalFactoryProvider,
         $http: $HttpProvider,
         $httpParamSerializer: $HttpParamSerializerProvider,
         $httpParamSerializerJQLike: $HttpParamSerializerJQLikeProvider,
@@ -3605,7 +3607,6 @@ function publishExternalAPI(angular) {
         $sce: $SceProvider,
         $sceDelegate: $SceDelegateProvider,
         $sniffer: $SnifferProvider,
-        $$taskTrackerFactory: $$TaskTrackerFactoryProvider,
         $templateCache: $TemplateCacheProvider,
         $templateRequest: $TemplateRequestProvider,
         $$testability: $$TestabilityProvider,
@@ -3618,7 +3619,7 @@ function publishExternalAPI(angular) {
       });
     }
   ])
-  .info({ angularVersion: '1.7.5' });
+  .info({ angularVersion: '1.6.8' });
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -3653,30 +3654,29 @@ function publishExternalAPI(angular) {
  *
  * If jQuery is available, `angular.element` is an alias for the
  * [jQuery](http://api.jquery.com/jQuery/) function. If jQuery is not available, `angular.element`
- * delegates to AngularJS's built-in subset of jQuery, called "jQuery lite" or **jqLite**.
+ * delegates to Angular's built-in subset of jQuery, called "jQuery lite" or **jqLite**.
  *
  * jqLite is a tiny, API-compatible subset of jQuery that allows
- * AngularJS to manipulate the DOM in a cross-browser compatible way. jqLite implements only the most
+ * Angular to manipulate the DOM in a cross-browser compatible way. jqLite implements only the most
  * commonly needed functionality with the goal of having a very small footprint.
  *
  * To use `jQuery`, simply ensure it is loaded before the `angular.js` file. You can also use the
  * {@link ngJq `ngJq`} directive to specify that jqlite should be used over jQuery, or to use a
  * specific version of jQuery if multiple versions exist on the page.
  *
- * <div class="alert alert-info">**Note:** All element references in AngularJS are always wrapped with jQuery or
+ * <div class="alert alert-info">**Note:** All element references in Angular are always wrapped with jQuery or
  * jqLite (such as the element argument in a directive's compile / link function). They are never raw DOM references.</div>
  *
  * <div class="alert alert-warning">**Note:** Keep in mind that this function will not find elements
  * by tag name / CSS selector. For lookups by tag name, try instead `angular.element(document).find(...)`
  * or `$document.find()`, or use the standard DOM APIs, e.g. `document.querySelectorAll()`.</div>
  *
- * ## AngularJS's jqLite
+ * ## Angular's jqLite
  * jqLite provides only the following jQuery methods:
  *
  * - [`addClass()`](http://api.jquery.com/addClass/) - Does not support a function as first argument
  * - [`after()`](http://api.jquery.com/after/)
- * - [`append()`](http://api.jquery.com/append/) - Contrary to jQuery, this doesn't clone elements
- *   so will not work correctly when invoked on a jqLite object containing more than one DOM node
+ * - [`append()`](http://api.jquery.com/append/)
  * - [`attr()`](http://api.jquery.com/attr/) - Does not support functions as parameters
  * - [`bind()`](http://api.jquery.com/bind/) (_deprecated_, use [`on()`](http://api.jquery.com/on/)) - Does not support namespaces, selectors or eventData
  * - [`children()`](http://api.jquery.com/children/) - Does not support selectors
@@ -3712,7 +3712,7 @@ function publishExternalAPI(angular) {
  * - [`wrap()`](http://api.jquery.com/wrap/)
  *
  * ## jQuery/jqLite Extras
- * AngularJS also provides the following additional methods and events to both jQuery and jqLite:
+ * Angular also provides the following additional methods and events to both jQuery and jqLite:
  *
  * ### Events
  * - `$destroy` - AngularJS intercepts all jqLite/jQuery's DOM destruction apis and fires this event
@@ -3932,28 +3932,6 @@ function jqLiteDealoc(element, onlyDescendants) {
   }
 }
 
-function isEmptyObject(obj) {
-  var name;
-
-  for (name in obj) {
-    return false;
-  }
-  return true;
-}
-
-function removeIfEmptyData(element) {
-  var expandoId = element.ng339;
-  var expandoStore = expandoId && jqCache[expandoId];
-
-  var events = expandoStore && expandoStore.events;
-  var data = expandoStore && expandoStore.data;
-
-  if ((!data || isEmptyObject(data)) && (!events || isEmptyObject(events))) {
-    delete jqCache[expandoId];
-    element.ng339 = undefined; // don't delete DOM expandos. IE and Chrome don't like it
-  }
-}
-
 function jqLiteOff(element, type, fn, unsupported) {
   if (isDefined(unsupported)) throw jqLiteMinErr('offargs', 'jqLite#off() does not support the `selector` argument');
 
@@ -3990,8 +3968,6 @@ function jqLiteOff(element, type, fn, unsupported) {
       }
     });
   }
-
-  removeIfEmptyData(element);
 }
 
 function jqLiteRemoveData(element, name) {
@@ -4001,11 +3977,17 @@ function jqLiteRemoveData(element, name) {
   if (expandoStore) {
     if (name) {
       delete expandoStore.data[name];
-    } else {
-      expandoStore.data = {};
+      return;
     }
 
-    removeIfEmptyData(element);
+    if (expandoStore.handle) {
+      if (expandoStore.events.$destroy) {
+        expandoStore.handle({}, '$destroy');
+      }
+      jqLiteOff(element);
+    }
+    delete jqCache[expandoId];
+    element.ng339 = undefined; // don't delete DOM expandos. IE and Chrome don't like it
   }
 }
 
@@ -4255,7 +4237,6 @@ forEach({
   cleanData: function jqLiteCleanData(nodes) {
     for (var i = 0, ii = nodes.length; i < ii; i++) {
       jqLiteRemoveData(nodes[i]);
-      jqLiteOff(nodes[i]);
     }
   }
 }, function(fn, name) {
@@ -4798,10 +4779,11 @@ function NgMapShim() {
 }
 NgMapShim.prototype = {
   _idx: function(key) {
-    if (key !== this._lastKey) {
-      this._lastKey = key;
-      this._lastIndex = this._keys.indexOf(key);
+    if (key === this._lastKey) {
+      return this._lastIndex;
     }
+    this._lastKey = key;
+    this._lastIndex = this._keys.indexOf(key);
     return this._lastIndex;
   },
   _transformKey: function(key) {
@@ -4813,11 +4795,6 @@ NgMapShim.prototype = {
     if (idx !== -1) {
       return this._values[idx];
     }
-  },
-  has: function(key) {
-    key = this._transformKey(key);
-    var idx = this._idx(key);
-    return idx !== -1;
   },
   set: function(key, value) {
     key = this._transformKey(key);
@@ -4886,8 +4863,8 @@ var $$MapProvider = [/** @this */function() {
  *   });
  * ```
  *
- * Sometimes you want to get access to the injector of a currently running AngularJS app
- * from outside AngularJS. Perhaps, you want to inject and compile some markup after the
+ * Sometimes you want to get access to the injector of a currently running Angular app
+ * from outside Angular. Perhaps, you want to inject and compile some markup after the
  * application has been bootstrapped. You can do this using the extra `injector()` added
  * to JQuery/jqLite elements. See {@link angular.element}.
  *
@@ -5244,7 +5221,7 @@ function annotate(fn, strictDi, name) {
  * with the {@link auto.$injector $injector}. Many of these functions are also exposed on
  * {@link angular.Module}.
  *
- * An AngularJS **service** is a singleton object created by a **service factory**.  These **service
+ * An Angular **service** is a singleton object created by a **service factory**.  These **service
  * factories** are functions which, in turn, are created by a **service provider**.
  * The **service providers** are constructor functions. When instantiated they must contain a
  * property called `$get`, which holds the **service factory** function.
@@ -5295,9 +5272,6 @@ function annotate(fn, strictDi, name) {
  * method {@link ng.$logProvider#debugEnabled debugEnabled}
  * which lets you specify whether the {@link ng.$log $log} service will log debug messages to the
  * console or not.
- *
- * It is possible to inject other providers into the provider function,
- * but the injected provider must have been defined before the one that requires it.
  *
  * @param {string} name The name of the instance. NOTE: the provider will be available under `name +
                         'Provider'` key.
@@ -5475,7 +5449,7 @@ function annotate(fn, strictDi, name) {
  *
  * Value services are similar to constant services, except that they cannot be injected into a
  * module configuration function (see {@link angular.Module#config}) but they can be overridden by
- * an AngularJS {@link auto.$provide#decorator decorator}.
+ * an Angular {@link auto.$provide#decorator decorator}.
  *
  * @param {string} name The name of the instance.
  * @param {*} value The value.
@@ -5506,7 +5480,7 @@ function annotate(fn, strictDi, name) {
  *
  * But unlike {@link auto.$provide#value value}, a constant can be
  * injected into a module configuration function (see {@link angular.Module#config}) and it cannot
- * be overridden by an AngularJS {@link auto.$provide#decorator decorator}.
+ * be overridden by an Angular {@link auto.$provide#decorator decorator}.
  *
  * @param {string} name The name of the constant.
  * @param {*} value The constant value.
@@ -5778,7 +5752,9 @@ function createInjector(modulesToLoad, strictDi) {
       }
       var result = func.$$ngIsClass;
       if (!isBoolean(result)) {
-        result = func.$$ngIsClass = /^class\b/.test(stringifyFn(func));
+        // Support: Edge 12-13 only
+        // See: https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/6156135/
+        result = func.$$ngIsClass = /^(?:class\b|constructor\()/.test(stringifyFn(func));
       }
       return result;
     }
@@ -6472,39 +6448,14 @@ var $AnimateProvider = ['$provide', /** @this */ function($provide) {
        * );
        * ```
        *
-       * <div class="alert alert-warning">
-       * **Note**: Generally, the events that are fired correspond 1:1 to `$animate` method names,
-       * e.g. {@link ng.$animate#addClass addClass()} will fire `addClass`, and {@link ng.ngClass}
-       * will fire `addClass` if classes are added, and `removeClass` if classes are removed.
-       * However, there are two exceptions:
-       *
-       * <ul>
-       *   <li>if both an {@link ng.$animate#addClass addClass()} and a
-       *   {@link ng.$animate#removeClass removeClass()} action are performed during the same
-       *   animation, the event fired will be `setClass`. This is true even for `ngClass`.</li>
-       *   <li>an {@link ng.$animate#animate animate()} call that adds and removes classes will fire
-       *   the `setClass` event, but if it either removes or adds classes,
-       *   it will fire `animate` instead.</li>
-       * </ul>
-       *
-       * </div>
-       *
        * @param {string} event the animation event that will be captured (e.g. enter, leave, move, addClass, removeClass, etc...)
        * @param {DOMElement} container the container element that will capture each of the animation events that are fired on itself
        *     as well as among its children
-       * @param {Function} callback the callback function that will be fired when the listener is triggered.
+       * @param {Function} callback the callback function that will be fired when the listener is triggered
        *
        * The arguments present in the callback function are:
        * * `element` - The captured DOM element that the animation was fired on.
        * * `phase` - The phase of the animation. The two possible phases are **start** (when the animation starts) and **close** (when it ends).
-       * * `data` - an object with these properties:
-       *     * addClass - `{string|null}` - space-separated CSS classes to add to the element
-       *     * removeClass - `{string|null}` - space-separated CSS classes to remove from the element
-       *     * from - `{Object|null}` - CSS properties & values at the beginning of the animation
-       *     * to - `{Object|null}` - CSS properties & values at the end of the animation
-       *
-       * Note that the callback does not trigger a scope digest. Wrap your call into a
-       * {@link $rootScope.Scope#$apply scope.$apply} to propagate changes to the scope.
        */
       on: $$animateQueue.on,
 
@@ -6544,7 +6495,7 @@ var $AnimateProvider = ['$provide', /** @this */ function($provide) {
        * @name $animate#pin
        * @kind function
        * @description Associates the provided element with a host parent element to allow the element to be animated even if it exists
-       *    outside of the DOM structure of the AngularJS application. By doing so, any animation triggered via `$animate` can be issued on the
+       *    outside of the DOM structure of the Angular application. By doing so, any animation triggered via `$animate` can be issued on the
        *    element despite being outside the realm of the application or within another application. Say for example if the application
        *    was bootstrapped on an element that is somewhere inside of the `<body>` tag, but we wanted to allow for an element to be situated
        *    as a direct child of `document.body`, then this can be achieved by pinning the element via `$animate.pin(element)`. Keep in mind
@@ -6592,77 +6543,13 @@ var $AnimateProvider = ['$provide', /** @this */ function($provide) {
        * @ngdoc method
        * @name $animate#cancel
        * @kind function
-       * @description Cancels the provided animation and applies the end state of the animation.
-       * Note that this does not cancel the underlying operation, e.g. the setting of classes or
-       * adding the element to the DOM.
+       * @description Cancels the provided animation.
        *
-       * @param {animationRunner} animationRunner An animation runner returned by an $animate function.
-       *
-       * @example
-        <example module="animationExample" deps="angular-animate.js" animations="true" name="animate-cancel">
-          <file name="app.js">
-            angular.module('animationExample', ['ngAnimate']).component('cancelExample', {
-              templateUrl: 'template.html',
-              controller: function($element, $animate) {
-                this.runner = null;
-
-                this.addClass = function() {
-                  this.runner = $animate.addClass($element.find('div'), 'red');
-                  var ctrl = this;
-                  this.runner.finally(function() {
-                    ctrl.runner = null;
-                  });
-                };
-
-                this.removeClass = function() {
-                  this.runner = $animate.removeClass($element.find('div'), 'red');
-                  var ctrl = this;
-                  this.runner.finally(function() {
-                    ctrl.runner = null;
-                  });
-                };
-
-                this.cancel = function() {
-                  $animate.cancel(this.runner);
-                };
-              }
-            });
-          </file>
-          <file name="template.html">
-            <p>
-              <button id="add" ng-click="$ctrl.addClass()">Add</button>
-              <button ng-click="$ctrl.removeClass()">Remove</button>
-              <br>
-              <button id="cancel" ng-click="$ctrl.cancel()" ng-disabled="!$ctrl.runner">Cancel</button>
-              <br>
-              <div id="target">CSS-Animated Text</div>
-            </p>
-          </file>
-          <file name="index.html">
-            <cancel-example></cancel-example>
-          </file>
-          <file name="style.css">
-            .red-add, .red-remove {
-              transition: all 4s cubic-bezier(0.250, 0.460, 0.450, 0.940);
-            }
-
-            .red,
-            .red-add.red-add-active {
-              color: #FF0000;
-              font-size: 40px;
-            }
-
-            .red-remove.red-remove-active {
-              font-size: 10px;
-              color: black;
-            }
-
-          </file>
-        </example>
+       * @param {Promise} animationPromise The animation promise that is returned when an animation is started.
        */
       cancel: function(runner) {
-        if (runner.cancel) {
-          runner.cancel();
+        if (runner.end) {
+          runner.end();
         }
       },
 
@@ -6688,7 +6575,7 @@ var $AnimateProvider = ['$provide', /** @this */ function($provide) {
        *   - **removeClass** - `{string}` - space-separated CSS classes to remove from element
        *   - **to** - `{Object}` - CSS properties & values at end of animation. Must have matching `from`
        *
-       * @return {Runner} the animation runner
+       * @return {Promise} the animation callback promise
        */
       enter: function(element, parent, after, options) {
         parent = parent && jqLite(parent);
@@ -6720,7 +6607,7 @@ var $AnimateProvider = ['$provide', /** @this */ function($provide) {
        *   - **removeClass** - `{string}` - space-separated CSS classes to remove from element
        *   - **to** - `{Object}` - CSS properties & values at end of animation. Must have matching `from`
        *
-       * @return {Runner} the animation runner
+       * @return {Promise} the animation callback promise
        */
       move: function(element, parent, after, options) {
         parent = parent && jqLite(parent);
@@ -6747,7 +6634,7 @@ var $AnimateProvider = ['$provide', /** @this */ function($provide) {
        *   - **removeClass** - `{string}` - space-separated CSS classes to remove from element
        *   - **to** - `{Object}` - CSS properties & values at end of animation. Must have matching `from`
        *
-       * @return {Runner} the animation runner
+       * @return {Promise} the animation callback promise
        */
       leave: function(element, options) {
         return $$animateQueue.push(element, 'leave', prepareAnimateOptions(options), function() {
@@ -6772,11 +6659,12 @@ var $AnimateProvider = ['$provide', /** @this */ function($provide) {
        * @param {object=} options an optional collection of options/styles that will be applied to the element.
        *   The object can have the following properties:
        *
-       *   - **removeClass** - `{string}` - space-separated CSS classes to remove from element
+       *   - **addClass** - `{string}` - space-separated CSS classes to add to element
        *   - **from** - `{Object}` - CSS properties & values at the beginning of animation. Must have matching `to`
+       *   - **removeClass** - `{string}` - space-separated CSS classes to remove from element
        *   - **to** - `{Object}` - CSS properties & values at end of animation. Must have matching `from`
        *
-       * @return {Runner} animationRunner the animation runner
+       * @return {Promise} the animation callback promise
        */
       addClass: function(element, className, options) {
         options = prepareAnimateOptions(options);
@@ -6803,9 +6691,10 @@ var $AnimateProvider = ['$provide', /** @this */ function($provide) {
        *
        *   - **addClass** - `{string}` - space-separated CSS classes to add to element
        *   - **from** - `{Object}` - CSS properties & values at the beginning of animation. Must have matching `to`
+       *   - **removeClass** - `{string}` - space-separated CSS classes to remove from element
        *   - **to** - `{Object}` - CSS properties & values at end of animation. Must have matching `from`
        *
-       * @return {Runner} the animation runner
+       * @return {Promise} the animation callback promise
        */
       removeClass: function(element, className, options) {
         options = prepareAnimateOptions(options);
@@ -6832,11 +6721,11 @@ var $AnimateProvider = ['$provide', /** @this */ function($provide) {
        *   The object can have the following properties:
        *
        *   - **addClass** - `{string}` - space-separated CSS classes to add to element
-       *   - **removeClass** - `{string}` - space-separated CSS classes to remove from element
        *   - **from** - `{Object}` - CSS properties & values at the beginning of animation. Must have matching `to`
+       *   - **removeClass** - `{string}` - space-separated CSS classes to remove from element
        *   - **to** - `{Object}` - CSS properties & values at end of animation. Must have matching `from`
        *
-       * @return {Runner} the animation runner
+       * @return {Promise} the animation callback promise
        */
       setClass: function(element, add, remove, options) {
         options = prepareAnimateOptions(options);
@@ -6883,7 +6772,7 @@ var $AnimateProvider = ['$provide', /** @this */ function($provide) {
        *   - **removeClass** - `{string}` - space-separated CSS classes to remove from element
        *   - **to** - `{Object}` - CSS properties & values at end of animation. Must have matching `from`
        *
-       * @return {Runner} the animation runner
+       * @return {Promise} the animation callback promise
        */
       animate: function(element, from, to, className, options) {
         options = prepareAnimateOptions(options);
@@ -7160,16 +7049,7 @@ var $CoreAnimateCssProvider = function() {
   }];
 };
 
-/* global getHash: true, stripHash: false */
-
-function getHash(url) {
-  var index = url.indexOf('#');
-  return index === -1 ? '' : url.substr(index);
-}
-
-function trimEmptyHash(url) {
-  return url.replace(/#$/, '');
-}
+/* global stripHash: true */
 
 /**
  * ! This is a private undocumented service !
@@ -7192,27 +7072,61 @@ function trimEmptyHash(url) {
  * @param {object} $log window.console or an object with the same interface.
  * @param {object} $sniffer $sniffer service
  */
-function Browser(window, document, $log, $sniffer, $$taskTrackerFactory) {
+function Browser(window, document, $log, $sniffer) {
   var self = this,
       location = window.location,
       history = window.history,
       setTimeout = window.setTimeout,
       clearTimeout = window.clearTimeout,
-      pendingDeferIds = {},
-      taskTracker = $$taskTrackerFactory($log);
+      pendingDeferIds = {};
 
   self.isMock = false;
 
-  //////////////////////////////////////////////////////////////
-  // Task-tracking API
-  //////////////////////////////////////////////////////////////
+  var outstandingRequestCount = 0;
+  var outstandingRequestCallbacks = [];
 
   // TODO(vojta): remove this temporary api
-  self.$$completeOutstandingRequest = taskTracker.completeTask;
-  self.$$incOutstandingRequestCount = taskTracker.incTaskCount;
+  self.$$completeOutstandingRequest = completeOutstandingRequest;
+  self.$$incOutstandingRequestCount = function() { outstandingRequestCount++; };
 
-  // TODO(vojta): prefix this method with $$ ?
-  self.notifyWhenNoOutstandingRequests = taskTracker.notifyWhenNoPendingTasks;
+  /**
+   * Executes the `fn` function(supports currying) and decrements the `outstandingRequestCallbacks`
+   * counter. If the counter reaches 0, all the `outstandingRequestCallbacks` are executed.
+   */
+  function completeOutstandingRequest(fn) {
+    try {
+      fn.apply(null, sliceArgs(arguments, 1));
+    } finally {
+      outstandingRequestCount--;
+      if (outstandingRequestCount === 0) {
+        while (outstandingRequestCallbacks.length) {
+          try {
+            outstandingRequestCallbacks.pop()();
+          } catch (e) {
+            $log.error(e);
+          }
+        }
+      }
+    }
+  }
+
+  function getHash(url) {
+    var index = url.indexOf('#');
+    return index === -1 ? '' : url.substr(index);
+  }
+
+  /**
+   * @private
+   * TODO(vojta): prefix this method with $$ ?
+   * @param {function()} callback Function that will be called when no outstanding request
+   */
+  self.notifyWhenNoOutstandingRequests = function(callback) {
+    if (outstandingRequestCount === 0) {
+      callback();
+    } else {
+      outstandingRequestCallbacks.push(callback);
+    }
+  };
 
   //////////////////////////////////////////////////////////////
   // URL API
@@ -7237,21 +7151,20 @@ function Browser(window, document, $log, $sniffer, $$taskTrackerFactory) {
    *
    * @description
    * GETTER:
-   * Without any argument, this method just returns current value of `location.href` (with a
-   * trailing `#` stripped of if the hash is empty).
+   * Without any argument, this method just returns current value of location.href.
    *
    * SETTER:
    * With at least one argument, this method sets url to new value.
-   * If html5 history api supported, `pushState`/`replaceState` is used, otherwise
-   * `location.href`/`location.replace` is used.
-   * Returns its own instance to allow chaining.
+   * If html5 history api supported, pushState/replaceState is used, otherwise
+   * location.href/location.replace is used.
+   * Returns its own instance to allow chaining
    *
-   * NOTE: this api is intended for use only by the `$location` service. Please use the
+   * NOTE: this api is intended for use only by the $location service. Please use the
    * {@link ng.$location $location service} to change url.
    *
    * @param {string} url New url (when used as setter)
    * @param {boolean=} replace Should new url replace current history record?
-   * @param {object=} state State object to use with `pushState`/`replaceState`
+   * @param {object=} state object to use with pushState/replaceState
    */
   self.url = function(url, replace, state) {
     // In modern browsers `history.state` is `null` by default; treating it separately
@@ -7309,7 +7222,8 @@ function Browser(window, document, $log, $sniffer, $$taskTrackerFactory) {
       // - pendingLocation is needed as browsers don't allow to read out
       //   the new location.href if a reload happened or if there is a bug like in iOS 9 (see
       //   https://openradar.appspot.com/22186109).
-      return trimEmptyHash(pendingLocation || location.href);
+      // - the replacement is a workaround for https://bugzilla.mozilla.org/show_bug.cgi?id=407172
+      return pendingLocation || location.href.replace(/%27/g,'\'');
     }
   };
 
@@ -7372,7 +7286,7 @@ function Browser(window, document, $log, $sniffer, $$taskTrackerFactory) {
    * @description
    * Register callback function that will be called, when url changes.
    *
-   * It's only called when the url is changed from outside of AngularJS:
+   * It's only called when the url is changed from outside of angular:
    * - user types different url into address bar
    * - user clicks on history (forward/back) button
    * - user clicks on a link
@@ -7382,7 +7296,7 @@ function Browser(window, document, $log, $sniffer, $$taskTrackerFactory) {
    * The listener gets called with new url as parameter.
    *
    * NOTE: this api is intended for use only by the $location service. Please use the
-   * {@link ng.$location $location service} to monitor url changes in AngularJS apps.
+   * {@link ng.$location $location service} to monitor url changes in angular apps.
    *
    * @param {function(string)} listener Listener function to be called when url changes.
    * @return {function(string)} Returns the registered listener fn - handy if the fn is anonymous.
@@ -7417,7 +7331,7 @@ function Browser(window, document, $log, $sniffer, $$taskTrackerFactory) {
   };
 
   /**
-   * Checks whether the url has changed outside of AngularJS.
+   * Checks whether the url has changed outside of Angular.
    * Needs to be exported to be able to check for changes that have been done in sync,
    * as hashchange/popstate events fire in async.
    */
@@ -7444,8 +7358,7 @@ function Browser(window, document, $log, $sniffer, $$taskTrackerFactory) {
   /**
    * @name $browser#defer
    * @param {function()} fn A function, who's execution should be deferred.
-   * @param {number=} [delay=0] Number of milliseconds to defer the function execution.
-   * @param {string=} [taskType=DEFAULT_TASK_TYPE] The type of task that is deferred.
+   * @param {number=} [delay=0] of milliseconds to defer the function execution.
    * @returns {*} DeferId that can be used to cancel the task via `$browser.defer.cancel()`.
    *
    * @description
@@ -7456,19 +7369,14 @@ function Browser(window, document, $log, $sniffer, $$taskTrackerFactory) {
    * via `$browser.defer.flush()`.
    *
    */
-  self.defer = function(fn, delay, taskType) {
+  self.defer = function(fn, delay) {
     var timeoutId;
-
-    delay = delay || 0;
-    taskType = taskType || taskTracker.DEFAULT_TASK_TYPE;
-
-    taskTracker.incTaskCount(taskType);
+    outstandingRequestCount++;
     timeoutId = setTimeout(function() {
       delete pendingDeferIds[timeoutId];
-      taskTracker.completeTask(fn, taskType);
-    }, delay);
-    pendingDeferIds[timeoutId] = taskType;
-
+      completeOutstandingRequest(fn);
+    }, delay || 0);
+    pendingDeferIds[timeoutId] = true;
     return timeoutId;
   };
 
@@ -7484,11 +7392,10 @@ function Browser(window, document, $log, $sniffer, $$taskTrackerFactory) {
    *                    canceled.
    */
   self.defer.cancel = function(deferId) {
-    if (pendingDeferIds.hasOwnProperty(deferId)) {
-      var taskType = pendingDeferIds[deferId];
+    if (pendingDeferIds[deferId]) {
       delete pendingDeferIds[deferId];
       clearTimeout(deferId);
-      taskTracker.completeTask(noop, taskType);
+      completeOutstandingRequest(noop);
       return true;
     }
     return false;
@@ -7498,10 +7405,10 @@ function Browser(window, document, $log, $sniffer, $$taskTrackerFactory) {
 
 /** @this */
 function $BrowserProvider() {
-  this.$get = ['$window', '$log', '$sniffer', '$document', '$$taskTrackerFactory',
-       function($window,   $log,   $sniffer,   $document,   $$taskTrackerFactory) {
-    return new Browser($window, $document, $log, $sniffer, $$taskTrackerFactory);
-  }];
+  this.$get = ['$window', '$log', '$sniffer', '$document',
+      function($window, $log, $sniffer, $document) {
+        return new Browser($window, $document, $log, $sniffer);
+      }];
 }
 
 /**
@@ -8031,7 +7938,7 @@ function $TemplateCacheProvider() {
  * ```
  *
  * ### Life-cycle hooks
- * Directive controllers can provide the following methods that are called by AngularJS at points in the life-cycle of the
+ * Directive controllers can provide the following methods that are called by Angular at points in the life-cycle of the
  * directive:
  * * `$onInit()` - Called on each controller after all the controllers on an element have been constructed and
  *   had their bindings initialized (and before the pre &amp; post linking functions for the directives on
@@ -8045,7 +7952,7 @@ function $TemplateCacheProvider() {
  *   changes. Any actions that you wish to take in response to the changes that you detect must be
  *   invoked from this hook; implementing this has no effect on when `$onChanges` is called. For example, this hook
  *   could be useful if you wish to perform a deep equality check, or to check a Date object, changes to which would not
- *   be detected by AngularJS's change detector and thus not trigger `$onChanges`. This hook is invoked with no arguments;
+ *   be detected by Angular's change detector and thus not trigger `$onChanges`. This hook is invoked with no arguments;
  *   if detecting changes, you must store the previous value(s) for comparison to the current values.
  * * `$onDestroy()` - Called on a controller when its containing scope is destroyed. Use this hook for releasing
  *   external resources, watches and event handlers. Note that components have their `$onDestroy()` hooks called in
@@ -8057,18 +7964,18 @@ function $TemplateCacheProvider() {
  *   they are waiting for their template to load asynchronously and their own compilation and linking has been
  *   suspended until that occurs.
  *
- * #### Comparison with life-cycle hooks in the new Angular
- * The new Angular also uses life-cycle hooks for its components. While the AngularJS life-cycle hooks are similar there are
- * some differences that you should be aware of, especially when it comes to moving your code from AngularJS to Angular:
+ * #### Comparison with Angular 2 life-cycle hooks
+ * Angular 2 also uses life-cycle hooks for its components. While the Angular 1 life-cycle hooks are similar there are
+ * some differences that you should be aware of, especially when it comes to moving your code from Angular 1 to Angular 2:
  *
- * * AngularJS hooks are prefixed with `$`, such as `$onInit`. Angular hooks are prefixed with `ng`, such as `ngOnInit`.
- * * AngularJS hooks can be defined on the controller prototype or added to the controller inside its constructor.
- *   In Angular you can only define hooks on the prototype of the Component class.
- * * Due to the differences in change-detection, you may get many more calls to `$doCheck` in AngularJS than you would to
- *   `ngDoCheck` in Angular.
+ * * Angular 1 hooks are prefixed with `$`, such as `$onInit`. Angular 2 hooks are prefixed with `ng`, such as `ngOnInit`.
+ * * Angular 1 hooks can be defined on the controller prototype or added to the controller inside its constructor.
+ *   In Angular 2 you can only define hooks on the prototype of the Component class.
+ * * Due to the differences in change-detection, you may get many more calls to `$doCheck` in Angular 1 than you would to
+ *   `ngDoCheck` in Angular 2
  * * Changes to the model inside `$doCheck` will trigger new turns of the digest loop, which will cause the changes to be
  *   propagated throughout the application.
- *   Angular does not allow the `ngDoCheck` hook to trigger a change outside of the component. It will either throw an
+ *   Angular 2 does not allow the `ngDoCheck` hook to trigger a change outside of the component. It will either throw an
  *   error or do nothing depending upon the state of `enableProdMode()`.
  *
  * #### Life-cycle hook examples
@@ -8214,22 +8121,21 @@ function $TemplateCacheProvider() {
  *   name. Given `<my-component my-attr="parentModel">` and the isolate scope definition `scope: {
  *   localModel: '=myAttr' }`, the property `localModel` on the directive's scope will reflect the
  *   value of `parentModel` on the parent scope. Changes to `parentModel` will be reflected in
- *   `localModel` and vice versa. If the binding expression is non-assignable, or if the attribute
- *   isn't  optional and doesn't exist, an exception
- *   ({@link error/$compile/nonassign `$compile:nonassign`}) will be thrown upon discovering changes
- *   to the local value, since it will be impossible to sync them back to the parent scope.
- *
- *   By default, the {@link ng.$rootScope.Scope#$watch `$watch`}
+ *   `localModel` and vice versa. Optional attributes should be marked as such with a question mark:
+ *   `=?` or `=?attr`. If the binding expression is non-assignable, or if the attribute isn't
+ *   optional and doesn't exist, an exception ({@link error/$compile/nonassign `$compile:nonassign`})
+ *   will be thrown upon discovering changes to the local value, since it will be impossible to sync
+ *   them back to the parent scope. By default, the {@link ng.$rootScope.Scope#$watch `$watch`}
  *   method is used for tracking changes, and the equality check is based on object identity.
  *   However, if an object literal or an array literal is passed as the binding expression, the
  *   equality check is done by value (using the {@link angular.equals} function). It's also possible
  *   to watch the evaluated value shallowly with {@link ng.$rootScope.Scope#$watchCollection
- *   `$watchCollection`}: use `=*` or `=*attr`
+ *   `$watchCollection`}: use `=*` or `=*attr` (`=*?` or `=*?attr` if the attribute is optional).
  *
   * * `<` or `<attr` - set up a one-way (one-directional) binding between a local scope property and an
  *   expression passed via the attribute `attr`. The expression is evaluated in the context of the
  *   parent scope. If no `attr` name is specified then the attribute name is assumed to be the same as the
- *   local name.
+ *   local name. You can also make the binding optional by adding `?`: `<?` or `<?attr`.
  *
  *   For example, given `<my-component my-attr="parentModel">` and directive definition of
  *   `scope: { localModel:'<myAttr' }`, then the isolated scope property `localModel` will reflect the
@@ -8250,11 +8156,6 @@ function $TemplateCacheProvider() {
  *   One-way binding is useful if you do not plan to propagate changes to your isolated scope bindings
  *   back to the parent. However, it does not make this completely impossible.
  *
- *   By default, the {@link ng.$rootScope.Scope#$watch `$watch`}
- *   method is used for tracking changes, and the equality check is based on object identity.
- *   It's also possible to watch the evaluated value shallowly with
- *   {@link ng.$rootScope.Scope#$watchCollection `$watchCollection`}: use `<*` or `<*attr`
- *
  * * `&` or `&attr` - provides a way to execute an expression in the context of the parent scope. If
  *   no `attr` name is specified then the attribute name is assumed to be the same as the local name.
  *   Given `<my-component my-attr="count = count + value">` and the isolate scope definition `scope: {
@@ -8263,36 +8164,6 @@ function $TemplateCacheProvider() {
  *   via an expression to the parent scope. This can be done by passing a map of local variable names
  *   and values into the expression wrapper fn. For example, if the expression is `increment(amount)`
  *   then we can specify the amount value by calling the `localFn` as `localFn({amount: 22})`.
- *
- * All 4 kinds of bindings (`@`, `=`, `<`, and `&`) can be made optional by adding `?` to the expression.
- * The marker must come after the mode and before the attribute name.
- * See the {@link error/$compile/iscp Invalid Isolate Scope Definition error} for definition examples.
- * This is useful to refine the interface directives provide.
- * One subtle difference between optional and non-optional happens **when the binding attribute is not
- * set**:
- * - the binding is optional: the property will not be defined
- * - the binding is not optional: the property is defined
- *
- * ```js
- *app.directive('testDir', function() {
-    return {
-      scope: {
-        notoptional: '=',
-        optional: '=?',
-      },
-      bindToController: true,
-      controller: function() {
-        this.$onInit = function() {
-          console.log(this.hasOwnProperty('notoptional')) // true
-          console.log(this.hasOwnProperty('optional')) // false
-        }
-      }
-    }
-  })
- *```
- *
- *
- * ##### Combining directives with different scope defintions
  *
  * In general it's possible to apply more than one directive to one element, but there might be limitations
  * depending on the type of scope required by the directives. The following points will help explain these limitations.
@@ -8320,6 +8191,12 @@ function $TemplateCacheProvider() {
  * properties. You can access these bindings once they have been initialized by providing a controller method called
  * `$onInit`, which is called after all the controllers on an element have been constructed and had their bindings
  * initialized.
+ *
+ * <div class="alert alert-warning">
+ * **Deprecation warning:** if `$compileProcvider.preAssignBindingsEnabled(true)` was called, bindings for non-ES6 class
+ * controllers are bound to `this` before the controller constructor is called but this use is now deprecated. Please
+ * place initialization code that relies upon bindings inside a `$onInit` method on the controller, instead.
+ * </div>
  *
  * It is also possible to set `bindToController` to an object hash with the same format as the `scope` property.
  * This will set up the scope bindings to the controller directly. Note that `scope` can still be used
@@ -8447,10 +8324,9 @@ function $TemplateCacheProvider() {
  * $sce#getTrustedResourceUrl $sce.getTrustedResourceUrl}.
  *
  *
- * #### `replace`
- * <div class="alert alert-danger">
- * **Note:** `replace` is deprecated in AngularJS and has been removed in the new Angular (v2+).
- * </div>
+ * #### `replace` (*DEPRECATED*)
+ *
+ * `replace` will be removed in next major release - i.e. v2.0).
  *
  * Specifies what the template should replace. Defaults to `false`.
  *
@@ -8792,7 +8668,7 @@ function $TemplateCacheProvider() {
         });
       })
       .controller('GreeterController', ['$scope', function($scope) {
-        $scope.name = 'AngularJS';
+        $scope.name = 'Angular';
         $scope.html = 'Hello {{name}}';
       }]);
     </script>
@@ -8806,11 +8682,11 @@ function $TemplateCacheProvider() {
      it('should auto compile', function() {
        var textarea = $('textarea');
        var output = $('div[compile]');
-       // The initial state reads 'Hello AngularJS'.
-       expect(output.getText()).toBe('Hello AngularJS');
+       // The initial state reads 'Hello Angular'.
+       expect(output.getText()).toBe('Hello Angular');
        textarea.clear();
        textarea.sendKeys('{{name}}!');
-       expect(output.getText()).toBe('AngularJS!');
+       expect(output.getText()).toBe('Angular!');
      });
    </file>
  </example>
@@ -8864,7 +8740,7 @@ function $TemplateCacheProvider() {
  * element passed in, or the clone of the element if the `cloneAttachFn` is provided.
  *
  * After linking the view is not updated until after a call to $digest which typically is done by
- * AngularJS automatically.
+ * Angular automatically.
  *
  * If you need access to the bound view, there are two ways to do it:
  *
@@ -8890,7 +8766,7 @@ function $TemplateCacheProvider() {
  *
  *
  * For information on how the compiler works, see the
- * {@link guide/compiler AngularJS HTML Compiler} section of the Developer Guide.
+ * {@link guide/compiler Angular HTML Compiler} section of the Developer Guide.
  *
  * @knownIssue
  *
@@ -8900,378 +8776,7 @@ function $TemplateCacheProvider() {
    compiled again. This is an undesired effect and can lead to misbehaving directives, performance issues,
    and memory leaks. Refer to the Compiler Guide {@link guide/compiler#double-compilation-and-how-to-avoid-it
    section on double compilation} for an in-depth explanation and ways to avoid it.
-
- * @knownIssue
-
-   ### Issues with `replace: true`
  *
- * <div class="alert alert-danger">
- *   **Note**: {@link $compile#-replace- `replace: true`} is deprecated and not recommended to use,
- *   mainly due to the issues listed here. It has been completely removed in the new Angular.
- * </div>
- *
- * #### Attribute values are not merged
- *
- * When a `replace` directive encounters the same attribute on the original and the replace node,
- * it will simply deduplicate the attribute and join the values with a space or with a `;` in case of
- * the `style` attribute.
- * ```html
- * Original Node: <span class="original" style="color: red;"></span>
- * Replace Template: <span class="replaced" style="background: blue;"></span>
- * Result: <span class="original replaced" style="color: red; background: blue;"></span>
- * ```
- *
- * That means attributes that contain AngularJS expressions will not be merged correctly, e.g.
- * {@link ngShow} or {@link ngClass} will cause a {@link $parse} error:
- *
- * ```html
- * Original Node: <span ng-class="{'something': something}" ng-show="!condition"></span>
- * Replace Template: <span ng-class="{'else': else}" ng-show="otherCondition"></span>
- * Result: <span ng-class="{'something': something} {'else': else}" ng-show="!condition otherCondition"></span>
- * ```
- *
- * See issue [#5695](https://github.com/angular/angular.js/issues/5695).
- *
- * #### Directives are not deduplicated before compilation
- *
- * When the original node and the replace template declare the same directive(s), they will be
- * {@link guide/compiler#double-compilation-and-how-to-avoid-it compiled twice} because the compiler
- * does not deduplicate them. In many cases, this is not noticable, but e.g. {@link ngModel} will
- * attach `$formatters` and `$parsers` twice.
- *
- * See issue [#2573](https://github.com/angular/angular.js/issues/2573).
- *
- * #### `transclude: element` in the replace template root can have unexpected effects
- *
- * When the replace template has a directive at the root node that uses
- * {@link $compile#-transclude- `transclude: element`}, e.g.
- * {@link ngIf} or {@link ngRepeat}, the DOM structure or scope inheritance can be incorrect.
- * See the following issues:
- *
- * - Incorrect scope on replaced element:
- * [#9837](https://github.com/angular/angular.js/issues/9837)
- * - Different DOM between `template` and `templateUrl`:
- * [#10612](https://github.com/angular/angular.js/issues/14326)
- *
- */
-
-/**
- * @ngdoc directive
- * @name ngProp
- * @restrict A
- * @element ANY
- *
- * @usage
- *
- * ```html
- * <ANY ng-prop-propname="expression">
- * </ANY>
- * ```
- *
- * or with uppercase letters in property (e.g. "propName"):
- *
- *
- * ```html
- * <ANY ng-prop-prop_name="expression">
- * </ANY>
- * ```
- *
- *
- * @description
- * The `ngProp` directive binds an expression to a DOM element property.
- * `ngProp` allows writing to arbitrary properties by including
- * the property name in the attribute, e.g. `ng-prop-value="'my value'"` binds 'my value' to
- * the `value` property.
- *
- * Usually, it's not necessary to write to properties in AngularJS, as the built-in directives
- * handle the most common use cases (instead of the above example, you would use {@link ngValue}).
- *
- * However, [custom elements](https://developer.mozilla.org/docs/Web/Web_Components/Using_custom_elements)
- * often use custom properties to hold data, and `ngProp` can be used to provide input to these
- * custom elements.
- *
- * ## Binding to camelCase properties
- *
- * Since HTML attributes are case-insensitive, camelCase properties like `innerHTML` must be escaped.
- * AngularJS uses the underscore (_) in front of a character to indicate that it is uppercase, so
- * `innerHTML`  must be written as `ng-prop-inner_h_t_m_l="expression"` (Note that this is just an
- * example, and for binding HTML {@link ngBindHtml} should be used.
- *
- * ## Security
- *
- * Binding expressions to arbitrary properties poses a security risk, as  properties like `innerHTML`
- * can insert potentially dangerous HTML into the application, e.g. script tags that execute
- * malicious code.
- * For this reason, `ngProp` applies Strict Contextual Escaping with the {@link ng.$sce $sce service}.
- * This means vulnerable properties require their content to be "trusted", based on the
- * context of the property. For example, the `innerHTML` is in the `HTML` context, and the
- * `iframe.src` property is in the `RESOURCE_URL` context, which requires that values written to
- * this property are trusted as a `RESOURCE_URL`.
- *
- * This can be set explicitly by calling $sce.trustAs(type, value) on the value that is
- * trusted before passing it to the `ng-prop-*` directive. There are exist shorthand methods for
- * each context type in the form of {@link ng.$sce#trustAsResourceUrl $sce.trustAsResourceUrl()} et al.
- *
- * In some cases you can also rely upon automatic sanitization of untrusted values - see below.
- *
- * Based on the context, other options may exist to mark a value as trusted / configure the behavior
- * of {@link ng.$sce}. For example, to restrict the `RESOURCE_URL` context to specific origins, use
- * the {@link $sceDelegateProvider#resourceUrlWhitelist resourceUrlWhitelist()}
- * and {@link $sceDelegateProvider#resourceUrlBlacklist resourceUrlBlacklist()}.
- *
- * {@link ng.$sce#what-trusted-context-types-are-supported- Find out more about the different context types}.
- *
- * ### HTML Sanitization
- *
- * By default, `$sce` will throw an error if it detects untrusted HTML content, and will not bind the
- * content.
- * However, if you include the {@link ngSanitize ngSanitize module}, it will try to sanitize the
- * potentially dangerous HTML, e.g. strip non-whitelisted tags and attributes when binding to
- * `innerHTML`.
- *
- * @example
- * ### Binding to different contexts
- *
- * <example name="ngProp" module="exampleNgProp">
- *   <file name="app.js">
- *     angular.module('exampleNgProp', [])
- *       .component('main', {
- *         templateUrl: 'main.html',
- *         controller: function($sce) {
- *           this.safeContent = '<strong>Safe content</strong>';
- *           this.unsafeContent = '<button onclick="alert(\'Hello XSS!\')">Click for XSS</button>';
- *           this.trustedUnsafeContent = $sce.trustAsHtml(this.unsafeContent);
- *         }
- *       });
- *   </file>
- *   <file name="main.html">
- *     <div>
- *       <div class="prop-unit">
- *         Binding to a property without security context:
- *         <div class="prop-binding" ng-prop-inner_text="$ctrl.safeContent"></div>
- *         <span class="prop-note">innerText</span> (safeContent)
- *       </div>
- *
- *       <div class="prop-unit">
- *         "Safe" content that requires a security context will throw because the contents could potentially be dangerous ...
- *         <div class="prop-binding" ng-prop-inner_h_t_m_l="$ctrl.safeContent"></div>
- *         <span class="prop-note">innerHTML</span> (safeContent)
- *       </div>
- *
- *       <div class="prop-unit">
- *         ... so that actually dangerous content cannot be executed:
- *         <div class="prop-binding" ng-prop-inner_h_t_m_l="$ctrl.unsafeContent"></div>
- *         <span class="prop-note">innerHTML</span> (unsafeContent)
- *       </div>
- *
- *       <div class="prop-unit">
- *         ... but unsafe Content that has been trusted explicitly works - only do this if you are 100% sure!
- *         <div class="prop-binding" ng-prop-inner_h_t_m_l="$ctrl.trustedUnsafeContent"></div>
- *         <span class="prop-note">innerHTML</span> (trustedUnsafeContent)
- *       </div>
- *     </div>
- *   </file>
- *   <file name="index.html">
- *     <main></main>
- *   </file>
- *   <file name="styles.css">
- *     .prop-unit {
- *       margin-bottom: 10px;
- *     }
- *
- *     .prop-binding {
- *       min-height: 30px;
- *       border: 1px solid blue;
- *     }
- *
- *     .prop-note {
- *       font-family: Monospace;
- *     }
- *   </file>
- * </example>
- *
- *
- * @example
- * ### Binding to innerHTML with ngSanitize
- *
- * <example name="ngProp" module="exampleNgProp" deps="angular-sanitize.js">
- *   <file name="app.js">
- *     angular.module('exampleNgProp', ['ngSanitize'])
- *       .component('main', {
- *         templateUrl: 'main.html',
- *         controller: function($sce) {
- *           this.safeContent = '<strong>Safe content</strong>';
- *           this.unsafeContent = '<button onclick="alert(\'Hello XSS!\')">Click for XSS</button>';
- *           this.trustedUnsafeContent = $sce.trustAsHtml(this.unsafeContent);
- *         }
- *       });
- *   </file>
- *   <file name="main.html">
- *     <div>
- *       <div class="prop-unit">
- *         "Safe" content will be sanitized ...
- *         <div class="prop-binding" ng-prop-inner_h_t_m_l="$ctrl.safeContent"></div>
- *         <span class="prop-note">innerHTML</span> (safeContent)
- *       </div>
- *
- *       <div class="prop-unit">
- *         ... as will dangerous content:
- *         <div class="prop-binding" ng-prop-inner_h_t_m_l="$ctrl.unsafeContent"></div>
- *         <span class="prop-note">innerHTML</span> (unsafeContent)
- *       </div>
- *
- *       <div class="prop-unit">
- *         ... and content that has been trusted explicitly works the same as without ngSanitize:
- *         <div class="prop-binding" ng-prop-inner_h_t_m_l="$ctrl.trustedUnsafeContent"></div>
- *         <span class="prop-note">innerHTML</span> (trustedUnsafeContent)
- *       </div>
- *     </div>
- *   </file>
- *   <file name="index.html">
- *     <main></main>
- *   </file>
- *   <file name="styles.css">
- *     .prop-unit {
- *       margin-bottom: 10px;
- *     }
- *
- *     .prop-binding {
- *       min-height: 30px;
- *       border: 1px solid blue;
- *     }
- *
- *     .prop-note {
- *       font-family: Monospace;
- *     }
- *   </file>
- * </example>
- *
- */
-
-/** @ngdoc directive
- * @name ngOn
- * @restrict A
- * @element ANY
- *
- * @usage
- *
- * ```html
- * <ANY ng-on-eventname="expression">
- * </ANY>
- * ```
- *
- * or with uppercase letters in property (e.g. "eventName"):
- *
- *
- * ```html
- * <ANY ng-on-event_name="expression">
- * </ANY>
- * ```
- *
- * @description
- * The `ngOn` directive adds an event listener to a DOM element via
- * {@link angular.element angular.element().on()}, and evaluates an expression when the event is
- * fired.
- * `ngOn` allows adding listeners for arbitrary events by including
- * the event name in the attribute, e.g. `ng-on-drop="onDrop()"` executes the 'onDrop()' expression
- * when the `drop` event is fired.
- *
- * AngularJS provides specific directives for many events, such as {@link ngClick}, so in most
- * cases it is not necessary to use `ngOn`. However, AngularJS does not support all events
- * (e.g. the `drop` event in the example above), and new events might be introduced in later DOM
- * standards.
- *
- * Another use-case for `ngOn` is listening to
- * [custom events](https://developer.mozilla.org/docs/Web/Guide/Events/Creating_and_triggering_events)
- * fired by
- * [custom elements](https://developer.mozilla.org/docs/Web/Web_Components/Using_custom_elements).
- *
- * ## Binding to camelCase properties
- *
- * Since HTML attributes are case-insensitive, camelCase properties like `myEvent` must be escaped.
- * AngularJS uses the underscore (_) in front of a character to indicate that it is uppercase, so
- * `myEvent` must be written as `ng-on-my_event="expression"`.
- *
- * @example
- * ### Bind to built-in DOM events
- *
- * <example name="ngOn" module="exampleNgOn">
- *   <file name="app.js">
- *     angular.module('exampleNgOn', [])
- *       .component('main', {
- *         templateUrl: 'main.html',
- *         controller: function() {
- *           this.clickCount = 0;
- *           this.mouseoverCount = 0;
- *
- *           this.loadingState = 0;
- *         }
- *       });
- *   </file>
- *   <file name="main.html">
- *     <div>
- *       This is equivalent to `ngClick` and `ngMouseover`:<br>
- *       <button
- *         ng-on-click="$ctrl.clickCount = $ctrl.clickCount + 1"
- *         ng-on-mouseover="$ctrl.mouseoverCount = $ctrl.mouseoverCount + 1">Click or mouseover</button><br>
- *       clickCount: {{$ctrl.clickCount}}<br>
- *       mouseover: {{$ctrl.mouseoverCount}}
- *
- *       <hr>
- *
- *       For the `error` and `load` event on images no built-in AngularJS directives exist:<br>
- *       <img src="thisimagedoesnotexist.png" ng-on-error="$ctrl.loadingState = -1" ng-on-load="$ctrl.loadingState = 1"><br>
- *       <div ng-switch="$ctrl.loadingState">
- *         <span ng-switch-when="0">Image is loading</span>
- *         <span ng-switch-when="-1">Image load error</span>
- *         <span ng-switch-when="1">Image loaded successfully</span>
- *       </div>
- *     </div>
- *   </file>
- *   <file name="index.html">
- *     <main></main>
- *   </file>
- * </example>
- *
- *
- * @example
- * ### Bind to custom DOM events
- *
- * <example name="ngOnCustom" module="exampleNgOn">
- *   <file name="app.js">
- *     angular.module('exampleNgOn', [])
- *       .component('main', {
- *         templateUrl: 'main.html',
- *         controller: function() {
- *           this.eventLog = '';
- *
- *           this.listener = function($event) {
- *             this.eventLog = 'Event with type "' + $event.type + '" fired at ' + $event.detail;
- *           };
- *         }
- *       })
- *       .component('childComponent', {
- *         templateUrl: 'child.html',
- *         controller: function($element) {
- *           this.fireEvent = function() {
- *             var event = new CustomEvent('customtype', { detail: new Date()});
- *
- *             $element[0].dispatchEvent(event);
- *           };
- *         }
- *       });
- *   </file>
- *   <file name="main.html">
- *     <child-component ng-on-customtype="$ctrl.listener($event)"></child-component><br>
- *     <span>Event log: {{$ctrl.eventLog}}</span>
- *   </file>
- *   <file name="child.html">
-      <button ng-click="$ctrl.fireEvent()">Fire custom event</button>
- *   </file>
- *   <file name="index.html">
- *     <main></main>
- *   </file>
- * </example>
  */
 
 var $compileMinErr = minErr('$compile');
@@ -9302,13 +8807,11 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
   var bindingCache = createMap();
 
   function parseIsolateBindings(scope, directiveName, isController) {
-    var LOCAL_REGEXP = /^([@&]|[=<](\*?))(\??)\s*([\w$]*)$/;
+    var LOCAL_REGEXP = /^\s*([@&<]|=(\*?))(\??)\s*([\w$]*)\s*$/;
 
     var bindings = createMap();
 
     forEach(scope, function(definition, scopeName) {
-      definition = definition.trim();
-
       if (definition in bindingCache) {
         bindings[scopeName] = bindingCache[definition];
         return;
@@ -9587,7 +9090,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
 
     // TODO(pete) remove the following `forEach` before we release 1.6.0
     // The component-router@0.2.0 looks for the annotations on the controller constructor
-    // Nothing in AngularJS looks for annotations on the factory function but we can't remove
+    // Nothing in Angular looks for annotations on the factory function but we can't remove
     // it from 1.5.x yet.
 
     // Copy any annotation properties (starting with $) over to the factory and controller constructor functions
@@ -9703,21 +9206,54 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
 
   /**
    * @ngdoc method
-   * @name  $compileProvider#strictComponentBindingsEnabled
+   * @name  $compileProvider#preAssignBindingsEnabled
    *
-   * @param {boolean=} enabled update the strictComponentBindingsEnabled state if provided,
-   * otherwise return the current strictComponentBindingsEnabled state.
+   * @param {boolean=} enabled update the preAssignBindingsEnabled state if provided, otherwise just return the
+   * current preAssignBindingsEnabled state
    * @returns {*} current value if used as getter or itself (chaining) if used as setter
    *
    * @kind function
    *
    * @description
-   * Call this method to enable / disable the strict component bindings check. If enabled, the
-   * compiler will enforce that all scope / controller bindings of a
-   * {@link $compileProvider#directive directive} / {@link $compileProvider#component component}
-   * that are not set as optional with `?`, must be provided when the directive is instantiated.
-   * If not provided, the compiler will throw the
-   * {@link error/$compile/missingattr $compile:missingattr error}.
+   * Call this method to enable/disable whether directive controllers are assigned bindings before
+   * calling the controller's constructor.
+   * If enabled (true), the compiler assigns the value of each of the bindings to the
+   * properties of the controller object before the constructor of this object is called.
+   *
+   * If disabled (false), the compiler calls the constructor first before assigning bindings.
+   *
+   * The default value is false.
+   *
+   * @deprecated
+   * sinceVersion="1.6.0"
+   * removeVersion="1.7.0"
+   *
+   * This method and the option to assign the bindings before calling the controller's constructor
+   * will be removed in v1.7.0.
+   */
+  var preAssignBindingsEnabled = false;
+  this.preAssignBindingsEnabled = function(enabled) {
+    if (isDefined(enabled)) {
+      preAssignBindingsEnabled = enabled;
+      return this;
+    }
+    return preAssignBindingsEnabled;
+  };
+
+  /**
+   * @ngdoc method
+   * @name  $compileProvider#strictComponentBindingsEnabled
+   *
+   * @param {boolean=} enabled update the strictComponentBindingsEnabled state if provided, otherwise just return the
+   * current strictComponentBindingsEnabled state
+   * @returns {*} current value if used as getter or itself (chaining) if used as setter
+   *
+   * @kind function
+   *
+   * @description
+   * Call this method to enable/disable strict component bindings check. If enabled, the compiler will enforce that
+   * for all bindings of a component that are not set as optional with `?`, an attribute needs to be provided
+   * on the component's HTML tag.
    *
    * The default value is false.
    */
@@ -9816,96 +9352,11 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
     return cssClassDirectivesEnabledConfig;
   };
 
-
-  /**
-   * The security context of DOM Properties.
-   * @private
-   */
-  var PROP_CONTEXTS = createMap();
-
-  /**
-   * @ngdoc method
-   * @name $compileProvider#addPropertySecurityContext
-   * @description
-   *
-   * Defines the security context for DOM properties bound by ng-prop-*.
-   *
-   * @param {string} elementName The element name or '*' to match any element.
-   * @param {string} propertyName The DOM property name.
-   * @param {string} ctx The {@link $sce} security context in which this value is safe for use, e.g. `$sce.URL`
-   * @returns {object} `this` for chaining
-   */
-  this.addPropertySecurityContext = function(elementName, propertyName, ctx) {
-    var key = (elementName.toLowerCase() + '|' + propertyName.toLowerCase());
-
-    if (key in PROP_CONTEXTS && PROP_CONTEXTS[key] !== ctx) {
-      throw $compileMinErr('ctxoverride', 'Property context \'{0}.{1}\' already set to \'{2}\', cannot override to \'{3}\'.', elementName, propertyName, PROP_CONTEXTS[key], ctx);
-    }
-
-    PROP_CONTEXTS[key] = ctx;
-    return this;
-  };
-
-  /* Default property contexts.
-   *
-   * Copy of https://github.com/angular/angular/blob/6.0.6/packages/compiler/src/schema/dom_security_schema.ts#L31-L58
-   * Changing:
-   * - SecurityContext.* => SCE_CONTEXTS/$sce.*
-   * - STYLE => CSS
-   * - various URL => MEDIA_URL
-   * - *|formAction, form|action URL => RESOURCE_URL (like the attribute)
-   */
-  (function registerNativePropertyContexts() {
-    function registerContext(ctx, values) {
-      forEach(values, function(v) { PROP_CONTEXTS[v.toLowerCase()] = ctx; });
-    }
-
-    registerContext(SCE_CONTEXTS.HTML, [
-      'iframe|srcdoc',
-      '*|innerHTML',
-      '*|outerHTML'
-    ]);
-    registerContext(SCE_CONTEXTS.CSS, ['*|style']);
-    registerContext(SCE_CONTEXTS.URL, [
-      'area|href',       'area|ping',
-      'a|href',          'a|ping',
-      'blockquote|cite',
-      'body|background',
-      'del|cite',
-      'input|src',
-      'ins|cite',
-      'q|cite'
-    ]);
-    registerContext(SCE_CONTEXTS.MEDIA_URL, [
-      'audio|src',
-      'img|src',    'img|srcset',
-      'source|src', 'source|srcset',
-      'track|src',
-      'video|src',  'video|poster'
-    ]);
-    registerContext(SCE_CONTEXTS.RESOURCE_URL, [
-      '*|formAction',
-      'applet|code',      'applet|codebase',
-      'base|href',
-      'embed|src',
-      'frame|src',
-      'form|action',
-      'head|profile',
-      'html|manifest',
-      'iframe|src',
-      'link|href',
-      'media|src',
-      'object|codebase',  'object|data',
-      'script|src'
-    ]);
-  })();
-
-
   this.$get = [
             '$injector', '$interpolate', '$exceptionHandler', '$templateRequest', '$parse',
-            '$controller', '$rootScope', '$sce', '$animate',
+            '$controller', '$rootScope', '$sce', '$animate', '$$sanitizeUri',
     function($injector,   $interpolate,   $exceptionHandler,   $templateRequest,   $parse,
-             $controller,   $rootScope,   $sce,   $animate) {
+             $controller,   $rootScope,   $sce,   $animate,   $$sanitizeUri) {
 
     var SIMPLE_ATTR_NAME = /^\w/;
     var specialAttrHolder = window.document.createElement('div');
@@ -9930,70 +9381,23 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
         }
         // We must run this hook in an apply since the $$postDigest runs outside apply
         $rootScope.$apply(function() {
+          var errors = [];
           for (var i = 0, ii = onChangesQueue.length; i < ii; ++i) {
             try {
               onChangesQueue[i]();
             } catch (e) {
-              $exceptionHandler(e);
+              errors.push(e);
             }
           }
           // Reset the queue to trigger a new schedule next time there is a change
           onChangesQueue = undefined;
+          if (errors.length) {
+            throw errors;
+          }
         });
       } finally {
         onChangesTtl++;
       }
-    }
-
-
-    function sanitizeSrcset(value, invokeType) {
-      if (!value) {
-        return value;
-      }
-      if (!isString(value)) {
-        throw $compileMinErr('srcset', 'Can\'t pass trusted values to `{0}`: "{1}"', invokeType, value.toString());
-      }
-
-      // Such values are a bit too complex to handle automatically inside $sce.
-      // Instead, we sanitize each of the URIs individually, which works, even dynamically.
-
-      // It's not possible to work around this using `$sce.trustAsMediaUrl`.
-      // If you want to programmatically set explicitly trusted unsafe URLs, you should use
-      // `$sce.trustAsHtml` on the whole `img` tag and inject it into the DOM using the
-      // `ng-bind-html` directive.
-
-      var result = '';
-
-      // first check if there are spaces because it's not the same pattern
-      var trimmedSrcset = trim(value);
-      //                (   999x   ,|   999w   ,|   ,|,   )
-      var srcPattern = /(\s+\d+x\s*,|\s+\d+w\s*,|\s+,|,\s+)/;
-      var pattern = /\s/.test(trimmedSrcset) ? srcPattern : /(,)/;
-
-      // split srcset into tuple of uri and descriptor except for the last item
-      var rawUris = trimmedSrcset.split(pattern);
-
-      // for each tuples
-      var nbrUrisWith2parts = Math.floor(rawUris.length / 2);
-      for (var i = 0; i < nbrUrisWith2parts; i++) {
-        var innerIdx = i * 2;
-        // sanitize the uri
-        result += $sce.getTrustedMediaUrl(trim(rawUris[innerIdx]));
-        // add the descriptor
-        result += ' ' + trim(rawUris[innerIdx + 1]);
-      }
-
-      // split the last item into uri and descriptor
-      var lastTuple = trim(rawUris[i * 2]).split(/\s/);
-
-      // sanitize the last uri
-      result += $sce.getTrustedMediaUrl(trim(lastTuple[0]));
-
-      // and add the last descriptor if any
-      if (lastTuple.length === 2) {
-        result += (' ' + trim(lastTuple[1]));
-      }
-      return result;
     }
 
 
@@ -10101,8 +9505,8 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
        */
       $set: function(key, value, writeAttr, attrName) {
         // TODO: decide whether or not to throw an error if "class"
-        // is set through this function since it may cause $updateClass to
-        // become unstable.
+        //is set through this function since it may cause $updateClass to
+        //become unstable.
 
         var node = this.$$element[0],
             booleanKey = getBooleanAttrName(node, key),
@@ -10132,9 +9536,44 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
 
         nodeName = nodeName_(this.$$element);
 
-        // Sanitize img[srcset] values.
-        if (nodeName === 'img' && key === 'srcset') {
-          this[key] = value = sanitizeSrcset(value, '$set(\'srcset\', value)');
+        if ((nodeName === 'a' && (key === 'href' || key === 'xlinkHref')) ||
+            (nodeName === 'img' && key === 'src')) {
+          // sanitize a[href] and img[src] values
+          this[key] = value = $$sanitizeUri(value, key === 'src');
+        } else if (nodeName === 'img' && key === 'srcset' && isDefined(value)) {
+          // sanitize img[srcset] values
+          var result = '';
+
+          // first check if there are spaces because it's not the same pattern
+          var trimmedSrcset = trim(value);
+          //                (   999x   ,|   999w   ,|   ,|,   )
+          var srcPattern = /(\s+\d+x\s*,|\s+\d+w\s*,|\s+,|,\s+)/;
+          var pattern = /\s/.test(trimmedSrcset) ? srcPattern : /(,)/;
+
+          // split srcset into tuple of uri and descriptor except for the last item
+          var rawUris = trimmedSrcset.split(pattern);
+
+          // for each tuples
+          var nbrUrisWith2parts = Math.floor(rawUris.length / 2);
+          for (var i = 0; i < nbrUrisWith2parts; i++) {
+            var innerIdx = i * 2;
+            // sanitize the uri
+            result += $$sanitizeUri(trim(rawUris[innerIdx]), true);
+            // add the descriptor
+            result += (' ' + trim(rawUris[innerIdx + 1]));
+          }
+
+          // split the last item into uri and descriptor
+          var lastTuple = trim(rawUris[i * 2]).split(/\s/);
+
+          // sanitize the last uri
+          result += $$sanitizeUri(trim(lastTuple[0]), true);
+
+          // and add the last descriptor if any
+          if (lastTuple.length === 2) {
+            result += (' ' + trim(lastTuple[1]));
+          }
+          this[key] = value = result;
         }
 
         if (writeAttr !== false) {
@@ -10231,7 +9670,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
             : function denormalizeTemplate(template) {
               return template.replace(/\{\{/g, startSymbol).replace(/}}/g, endSymbol);
         },
-        NG_PREFIX_BINDING = /^ng(Attr|Prop|On)([A-Z].*)$/;
+        NG_ATTR_BINDING = /^ngAttr[A-Z]/;
     var MULTI_ELEMENT_DIR_RE = /^(.+)Start$/;
 
     compile.$$addBindingInfo = debugInfoEnabled ? function $$addBindingInfo($element, binding) {
@@ -10322,7 +9761,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
           // for call to the link function.
           // Note: This will already clone the nodes...
           $linkNode = jqLite(
-            wrapTemplate(namespace, jqLite('<div></div>').append($compileNodes).html())
+            wrapTemplate(namespace, jqLite('<div>').append($compileNodes).html())
           );
         } else if (cloneConnectFn) {
           // important!!: we must call our jqLite.clone() since the jQuery one is trying to be smart
@@ -10567,66 +10006,43 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
               directiveNormalize(nodeName), 'E', maxPriority, ignoreDirective);
 
           // iterate over the attributes
-          for (var attr, name, nName, value, ngPrefixMatch, nAttrs = node.attributes,
+          for (var attr, name, nName, ngAttrName, value, isNgAttr, nAttrs = node.attributes,
                    j = 0, jj = nAttrs && nAttrs.length; j < jj; j++) {
             var attrStartName = false;
             var attrEndName = false;
-
-            var isNgAttr = false, isNgProp = false, isNgEvent = false;
-            var multiElementMatch;
 
             attr = nAttrs[j];
             name = attr.name;
             value = attr.value;
 
-            nName = directiveNormalize(name.toLowerCase());
-
-            // Support ng-attr-*, ng-prop-* and ng-on-*
-            if ((ngPrefixMatch = nName.match(NG_PREFIX_BINDING))) {
-              isNgAttr = ngPrefixMatch[1] === 'Attr';
-              isNgProp = ngPrefixMatch[1] === 'Prop';
-              isNgEvent = ngPrefixMatch[1] === 'On';
-
-              // Normalize the non-prefixed name
+            // support ngAttr attribute binding
+            ngAttrName = directiveNormalize(name);
+            isNgAttr = NG_ATTR_BINDING.test(ngAttrName);
+            if (isNgAttr) {
               name = name.replace(PREFIX_REGEXP, '')
-                .toLowerCase()
-                .substr(4 + ngPrefixMatch[1].length).replace(/_(.)/g, function(match, letter) {
+                .substr(8).replace(/_(.)/g, function(match, letter) {
                   return letter.toUpperCase();
                 });
+            }
 
-            // Support *-start / *-end multi element directives
-            } else if ((multiElementMatch = nName.match(MULTI_ELEMENT_DIR_RE)) && directiveIsMultiElement(multiElementMatch[1])) {
+            var multiElementMatch = ngAttrName.match(MULTI_ELEMENT_DIR_RE);
+            if (multiElementMatch && directiveIsMultiElement(multiElementMatch[1])) {
               attrStartName = name;
               attrEndName = name.substr(0, name.length - 5) + 'end';
               name = name.substr(0, name.length - 6);
             }
 
-            if (isNgProp || isNgEvent) {
-              attrs[nName] = value;
-              attrsMap[nName] = attr.name;
-
-              if (isNgProp) {
-                addPropertyDirective(node, directives, nName, name);
-              } else {
-                addEventDirective(directives, nName, name);
-              }
-            } else {
-              // Update nName for cases where a prefix was removed
-              // NOTE: the .toLowerCase() is unnecessary and causes https://github.com/angular/angular.js/issues/16624 for ng-attr-*
-              nName = directiveNormalize(name.toLowerCase());
-              attrsMap[nName] = name;
-
-              if (isNgAttr || !attrs.hasOwnProperty(nName)) {
+            nName = directiveNormalize(name.toLowerCase());
+            attrsMap[nName] = name;
+            if (isNgAttr || !attrs.hasOwnProperty(nName)) {
                 attrs[nName] = value;
                 if (getBooleanAttrName(node, nName)) {
                   attrs[nName] = true; // presence means true
                 }
-              }
-
-              addAttrInterpolateDirective(node, directives, value, nName, isNgAttr);
-              addDirective(directives, nName, 'A', maxPriority, ignoreDirective, attrStartName,
-                            attrEndName);
             }
+            addAttrInterpolateDirective(node, directives, value, nName, isNgAttr);
+            addDirective(directives, nName, 'A', maxPriority, ignoreDirective, attrStartName,
+                          attrEndName);
           }
 
           if (nodeName === 'input' && node.getAttribute('type') === 'hidden') {
@@ -10899,6 +10315,17 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
             compileNode = $compileNode[0];
             replaceWith(jqCollection, sliceArgs($template), compileNode);
 
+            // Support: Chrome < 50
+            // https://github.com/angular/angular.js/issues/14041
+
+            // In the versions of V8 prior to Chrome 50, the document fragment that is created
+            // in the `replaceWith` function is improperly garbage collected despite still
+            // being referenced by the `parentNode` property of all of the child nodes.  By adding
+            // a reference to the fragment via a different property, we can avoid that incorrect
+            // behavior.
+            // TODO: remove this line after Chrome 50 has been released
+            $template[0].$$parentNode = $template[0].parentNode;
+
             childTranscludeFn = compilationGenerator(mightHaveMultipleTransclusionError, $template, transcludeFn, terminalPriority,
                                         replaceDirective && replaceDirective.name, {
                                           // Don't pass in:
@@ -10920,7 +10347,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
 
               // We have transclusion slots,
               // collect them up, compile them and store their transclusion functions
-              $template = window.document.createDocumentFragment();
+              $template = [];
 
               var slotMap = createMap();
               var filledSlots = createMap();
@@ -10948,10 +10375,10 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
                 var slotName = slotMap[directiveNormalize(nodeName_(node))];
                 if (slotName) {
                   filledSlots[slotName] = true;
-                  slots[slotName] = slots[slotName] || window.document.createDocumentFragment();
-                  slots[slotName].appendChild(node);
+                  slots[slotName] = slots[slotName] || [];
+                  slots[slotName].push(node);
                 } else {
-                  $template.appendChild(node);
+                  $template.push(node);
                 }
               });
 
@@ -10965,12 +10392,9 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
               for (var slotName in slots) {
                 if (slots[slotName]) {
                   // Only define a transclusion function if the slot was filled
-                  var slotCompileNodes = jqLite(slots[slotName].childNodes);
-                  slots[slotName] = compilationGenerator(mightHaveMultipleTransclusionError, slotCompileNodes, transcludeFn);
+                  slots[slotName] = compilationGenerator(mightHaveMultipleTransclusionError, slots[slotName], transcludeFn);
                 }
               }
-
-              $template = jqLite($template.childNodes);
             }
 
             $compileNode.empty(); // clear contents
@@ -11161,11 +10585,33 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
           var controller = elementControllers[name];
           var bindings = controllerDirective.$$bindings.bindToController;
 
-          controller.instance = controller();
-          $element.data('$' + controllerDirective.name + 'Controller', controller.instance);
-          controller.bindingInfo =
-            initializeDirectiveBindings(controllerScope, attrs, controller.instance, bindings, controllerDirective);
+          if (preAssignBindingsEnabled) {
+            if (bindings) {
+              controller.bindingInfo =
+                initializeDirectiveBindings(controllerScope, attrs, controller.instance, bindings, controllerDirective);
+            } else {
+              controller.bindingInfo = {};
+            }
+
+            var controllerResult = controller();
+            if (controllerResult !== controller.instance) {
+              // If the controller constructor has a return value, overwrite the instance
+              // from setupControllers
+              controller.instance = controllerResult;
+              $element.data('$' + controllerDirective.name + 'Controller', controllerResult);
+              if (controller.bindingInfo.removeWatches) {
+                controller.bindingInfo.removeWatches();
+              }
+              controller.bindingInfo =
+                initializeDirectiveBindings(controllerScope, attrs, controller.instance, bindings, controllerDirective);
+            }
+          } else {
+            controller.instance = controller();
+            $element.data('$' + controllerDirective.name + 'Controller', controller.instance);
+            controller.bindingInfo =
+              initializeDirectiveBindings(controllerScope, attrs, controller.instance, bindings, controllerDirective);
           }
+        }
 
         // Bind the required controllers to the controller, if `require` is an object and `bindToController` is truthy
         forEach(controllerDirectives, function(controllerDirective, name) {
@@ -11306,14 +10752,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
 
         if (!value) {
           var dataName = '$' + name + 'Controller';
-
-          if (inheritType === '^^' && $element[0] && $element[0].nodeType === NODE_TYPE_DOCUMENT) {
-            // inheritedData() uses the documentElement when it finds the document, so we would
-            // require from the element itself.
-            value = null;
-          } else {
-            value = inheritType ? $element.inheritedData(dataName) : $element.data(dataName);
-          }
+          value = inheritType ? $element.inheritedData(dataName) : $element.data(dataName);
         }
 
         if (!value && !optional) {
@@ -11670,95 +11109,30 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
     }
 
 
-    function getTrustedAttrContext(nodeName, attrNormalizedName) {
+    function getTrustedContext(node, attrNormalizedName) {
       if (attrNormalizedName === 'srcdoc') {
         return $sce.HTML;
       }
-      // All nodes with src attributes require a RESOURCE_URL value, except for
-      // img and various html5 media nodes, which require the MEDIA_URL context.
+      var tag = nodeName_(node);
+      // All tags with src attributes require a RESOURCE_URL value, except for
+      // img and various html5 media tags.
       if (attrNormalizedName === 'src' || attrNormalizedName === 'ngSrc') {
-        if (['img', 'video', 'audio', 'source', 'track'].indexOf(nodeName) === -1) {
+        if (['img', 'video', 'audio', 'source', 'track'].indexOf(tag) === -1) {
           return $sce.RESOURCE_URL;
         }
-        return $sce.MEDIA_URL;
-      } else if (attrNormalizedName === 'xlinkHref') {
-        // Some xlink:href are okay, most aren't
-        if (nodeName === 'image') return $sce.MEDIA_URL;
-        if (nodeName === 'a') return $sce.URL;
-        return $sce.RESOURCE_URL;
-      } else if (
-          // Formaction
-          (nodeName === 'form' && attrNormalizedName === 'action') ||
-          // If relative URLs can go where they are not expected to, then
-          // all sorts of trust issues can arise.
-          (nodeName === 'base' && attrNormalizedName === 'href') ||
+      // maction[xlink:href] can source SVG.  It's not limited to <maction>.
+      } else if (attrNormalizedName === 'xlinkHref' ||
+          (tag === 'form' && attrNormalizedName === 'action') ||
           // links can be stylesheets or imports, which can run script in the current origin
-          (nodeName === 'link' && attrNormalizedName === 'href')
+          (tag === 'link' && attrNormalizedName === 'href')
       ) {
         return $sce.RESOURCE_URL;
-      } else if (nodeName === 'a' && (attrNormalizedName === 'href' ||
-                                 attrNormalizedName === 'ngHref')) {
-        return $sce.URL;
       }
     }
 
-    function getTrustedPropContext(nodeName, propNormalizedName) {
-      var prop = propNormalizedName.toLowerCase();
-      return PROP_CONTEXTS[nodeName + '|' + prop] || PROP_CONTEXTS['*|' + prop];
-    }
-
-    function sanitizeSrcsetPropertyValue(value) {
-      return sanitizeSrcset($sce.valueOf(value), 'ng-prop-srcset');
-    }
-    function addPropertyDirective(node, directives, attrName, propName) {
-      if (EVENT_HANDLER_ATTR_REGEXP.test(propName)) {
-        throw $compileMinErr('nodomevents', 'Property bindings for HTML DOM event properties are disallowed');
-      }
-
-      var nodeName = nodeName_(node);
-      var trustedContext = getTrustedPropContext(nodeName, propName);
-
-      var sanitizer = identity;
-      // Sanitize img[srcset] + source[srcset] values.
-      if (propName === 'srcset' && (nodeName === 'img' || nodeName === 'source')) {
-        sanitizer = sanitizeSrcsetPropertyValue;
-      } else if (trustedContext) {
-        sanitizer = $sce.getTrusted.bind($sce, trustedContext);
-      }
-
-      directives.push({
-        priority: 100,
-        compile: function ngPropCompileFn(_, attr) {
-          var ngPropGetter = $parse(attr[attrName]);
-          var ngPropWatch = $parse(attr[attrName], function sceValueOf(val) {
-            // Unwrap the value to compare the actual inner safe value, not the wrapper object.
-            return $sce.valueOf(val);
-          });
-
-          return {
-            pre: function ngPropPreLinkFn(scope, $element) {
-              function applyPropValue() {
-                var propValue = ngPropGetter(scope);
-                $element.prop(propName, sanitizer(propValue));
-              }
-
-              applyPropValue();
-              scope.$watch(ngPropWatch, applyPropValue);
-            }
-          };
-        }
-      });
-    }
-
-    function addEventDirective(directives, attrName, eventName) {
-      directives.push(
-        createEventDirective($parse, $rootScope, $exceptionHandler, attrName, eventName, /*forceAsync=*/false)
-      );
-    }
 
     function addAttrInterpolateDirective(node, directives, value, name, isNgAttr) {
-      var nodeName = nodeName_(node);
-      var trustedContext = getTrustedAttrContext(nodeName, name);
+      var trustedContext = getTrustedContext(node, name);
       var mustHaveExpression = !isNgAttr;
       var allOrNothing = ALL_OR_NOTHING_ATTRS[name] || isNgAttr;
 
@@ -11767,14 +11141,16 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
       // no interpolation found -> ignore
       if (!interpolateFn) return;
 
-      if (name === 'multiple' && nodeName === 'select') {
+      if (name === 'multiple' && nodeName_(node) === 'select') {
         throw $compileMinErr('selmulti',
             'Binding to the \'multiple\' attribute is not supported. Element: {0}',
             startingTag(node));
       }
 
       if (EVENT_HANDLER_ATTR_REGEXP.test(name)) {
-        throw $compileMinErr('nodomevents', 'Interpolations for HTML DOM event attributes are disallowed');
+        throw $compileMinErr('nodomevents',
+            'Interpolations for HTML DOM event attributes are disallowed.  Please use the ' +
+                'ng- versions (such as ng-click instead of onclick) instead.');
       }
 
       directives.push({
@@ -11881,7 +11257,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
       }
 
       if (jqLite.hasData(firstElementToRemove)) {
-        // Copy over user data (that includes AngularJS's $scope etc.). Don't copy private
+        // Copy over user data (that includes Angular's $scope etc.). Don't copy private
         // data here because there's no public interface in jQuery to do that and copying over
         // event listeners (which is the main use of private data) wouldn't work anyway.
         jqLite.data(newNode, jqLite.data(firstElementToRemove));
@@ -11959,7 +11335,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
               // the value is there for use in the link fn
               destination[scopeName] = $interpolate(lastValue)(scope);
             } else if (isBoolean(lastValue)) {
-              // If the attributes is one of the BOOLEAN_ATTR then AngularJS will have converted
+              // If the attributes is one of the BOOLEAN_ATTR then Angular will have converted
               // the value to boolean rather than a string, so we special case this situation
               destination[scopeName] = lastValue;
             }
@@ -12021,21 +11397,21 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
             if (optional && !attrs[attrName]) break;
 
             parentGet = $parse(attrs[attrName]);
-            var isLiteral = parentGet.literal;
+            var deepWatch = parentGet.literal;
 
             var initialValue = destination[scopeName] = parentGet(scope);
             initialChanges[scopeName] = new SimpleChange(_UNINITIALIZED_VALUE, destination[scopeName]);
 
-            removeWatch = scope[definition.collection ? '$watchCollection' : '$watch'](parentGet, function parentValueWatchAction(newValue, oldValue) {
+            removeWatch = scope.$watch(parentGet, function parentValueWatchAction(newValue, oldValue) {
               if (oldValue === newValue) {
-                if (oldValue === initialValue || (isLiteral && equals(oldValue, initialValue))) {
+                if (oldValue === initialValue || (deepWatch && equals(oldValue, initialValue))) {
                   return;
                 }
                 oldValue = initialValue;
               }
               recordChanges(scopeName, newValue, oldValue);
               destination[scopeName] = newValue;
-            });
+            }, deepWatch);
 
             removeWatchCollection.push(removeWatch);
             break;
@@ -12125,7 +11501,7 @@ function directiveNormalize(name) {
  * @description
  * A shared object between directive compile / linking functions which contains normalized DOM
  * element attributes. The values reflect current binding state `{{ }}`. The normalization is
- * needed since all of these are treated as equivalent in AngularJS:
+ * needed since all of these are treated as equivalent in Angular:
  *
  * ```
  *    <span ng:bind="a" ng-bind="a" data-ng-bind="a" x-ng-bind="a">
@@ -12231,14 +11607,15 @@ function identifierForController(controller, ident) {
  * @this
  *
  * @description
- * The {@link ng.$controller $controller service} is used by AngularJS to create new
+ * The {@link ng.$controller $controller service} is used by Angular to create new
  * controllers.
  *
  * This provider allows controller registration via the
  * {@link ng.$controllerProvider#register register} method.
  */
 function $ControllerProvider() {
-  var controllers = {};
+  var controllers = {},
+      globals = false;
 
   /**
    * @ngdoc method
@@ -12266,7 +11643,22 @@ function $ControllerProvider() {
     }
   };
 
-  this.$get = ['$injector', function($injector) {
+  /**
+   * @ngdoc method
+   * @name $controllerProvider#allowGlobals
+   * @description If called, allows `$controller` to find controller constructors on `window`
+   *
+   * @deprecated
+   * sinceVersion="v1.3.0"
+   * removeVersion="v1.7.0"
+   * This method of finding controllers has been deprecated.
+   */
+  this.allowGlobals = function() {
+    globals = true;
+  };
+
+
+  this.$get = ['$injector', '$window', function($injector, $window) {
 
     /**
      * @ngdoc service
@@ -12279,6 +11671,8 @@ function $ControllerProvider() {
      *
      *    * check if a controller with given name is registered via `$controllerProvider`
      *    * check if evaluating the string on the current scope returns a constructor
+     *    * if $controllerProvider#allowGlobals, check `window[constructor]` on the global
+     *      `window` object (deprecated, not recommended)
      *
      *    The string can use the `controller as property` syntax, where the controller instance is published
      *    as the specified property on the `scope`; the `scope` must be injected into `locals` param for this
@@ -12318,7 +11712,8 @@ function $ControllerProvider() {
         identifier = identifier || match[3];
         expression = controllers.hasOwnProperty(constructor)
             ? controllers[constructor]
-            : getter(locals.$scope, constructor, true);
+            : getter(locals.$scope, constructor, true) ||
+                (globals ? getter($window, constructor, true) : undefined);
 
         if (!expression) {
           throw $controllerMinErr('ctrlreg',
@@ -12450,7 +11845,7 @@ function $$IsDocumentHiddenProvider() {
  * @this
  *
  * @description
- * Any uncaught exception in AngularJS expressions is delegated to this service.
+ * Any uncaught exception in angular expressions is delegated to this service.
  * The default implementation simply delegates to `$log.error` which logs it into
  * the browser console.
  *
@@ -12552,7 +11947,7 @@ function $HttpParamSerializerProvider() {
    * * `{'foo': {'bar':'baz'}}` results in `foo=%7B%22bar%22%3A%22baz%22%7D` (stringified and encoded representation of an object)
    *
    * Note that serializer will sort the request parameters alphabetically.
-   */
+   * */
 
   this.$get = function() {
     return function ngParamSerializer(params) {
@@ -12619,7 +12014,7 @@ function $HttpParamSerializerJQLikeProvider() {
    * });
    * ```
    *
-   */
+   * */
   this.$get = function() {
     return function jQueryLikeParamSerializer(params) {
       if (!params) return '';
@@ -12628,6 +12023,7 @@ function $HttpParamSerializerJQLikeProvider() {
       return parts.join('&');
 
       function serialize(toSerialize, prefix, topLevel) {
+        if (toSerialize === null || isUndefined(toSerialize)) return;
         if (isArray(toSerialize)) {
           forEach(toSerialize, function(value, index) {
             serialize(value, prefix + '[' + (isObject(value) ? index : '') + ']');
@@ -12640,11 +12036,7 @@ function $HttpParamSerializerJQLikeProvider() {
                 (topLevel ? '' : ']'));
           });
         } else {
-          if (isFunction(toSerialize)) {
-            toSerialize = toSerialize();
-          }
-          parts.push(encodeUriQuery(prefix) + '=' +
-              (toSerialize == null ? '' : encodeUriQuery(serializeValue(toSerialize))));
+          parts.push(encodeUriQuery(prefix) + '=' + encodeUriQuery(serializeValue(toSerialize)));
         }
       }
     };
@@ -12779,7 +12171,7 @@ function isSuccess(status) {
  *
  * @description
  * Use `$httpProvider` to change the default behavior of the {@link ng.$http $http} service.
- */
+ * */
 function $HttpProvider() {
   /**
    * @ngdoc property
@@ -12833,7 +12225,7 @@ function $HttpProvider() {
    * - **`defaults.xsrfHeaderName`** - {string} - Name of HTTP header to populate with the
    * XSRF token. Defaults value is `'X-XSRF-TOKEN'`.
    *
-   */
+   **/
   var defaults = this.defaults = {
     // transform incoming response data
     transformResponse: [defaultHttpResponseTransform],
@@ -12880,7 +12272,7 @@ function $HttpProvider() {
    *
    * @returns {boolean|Object} If a value is specified, returns the $httpProvider for chaining.
    *    otherwise, returns the current configured value.
-   */
+   **/
   this.useApplyAsync = function(value) {
     if (isDefined(value)) {
       useApplyAsync = !!value;
@@ -12901,50 +12293,8 @@ function $HttpProvider() {
    * array, on request, but reverse order, on response.
    *
    * {@link ng.$http#interceptors Interceptors detailed info}
-   */
+   **/
   var interceptorFactories = this.interceptors = [];
-
-  /**
-   * @ngdoc property
-   * @name $httpProvider#xsrfWhitelistedOrigins
-   * @description
-   *
-   * Array containing URLs whose origins are trusted to receive the XSRF token. See the
-   * {@link ng.$http#security-considerations Security Considerations} sections for more details on
-   * XSRF.
-   *
-   * **Note:** An "origin" consists of the [URI scheme](https://en.wikipedia.org/wiki/URI_scheme),
-   * the [hostname](https://en.wikipedia.org/wiki/Hostname) and the
-   * [port number](https://en.wikipedia.org/wiki/Port_(computer_networking). For `http:` and
-   * `https:`, the port number can be omitted if using th default ports (80 and 443 respectively).
-   * Examples: `http://example.com`, `https://api.example.com:9876`
-   *
-   * <div class="alert alert-warning">
-   *   It is not possible to whitelist specific URLs/paths. The `path`, `query` and `fragment` parts
-   *   of a URL will be ignored. For example, `https://foo.com/path/bar?query=baz#fragment` will be
-   *   treated as `https://foo.com`, meaning that **all** requests to URLs starting with
-   *   `https://foo.com/` will include the XSRF token.
-   * </div>
-   *
-   * @example
-   *
-   * ```js
-   * // App served from `https://example.com/`.
-   * angular.
-   *   module('xsrfWhitelistedOriginsExample', []).
-   *   config(['$httpProvider', function($httpProvider) {
-   *     $httpProvider.xsrfWhitelistedOrigins.push('https://api.example.com');
-   *   }]).
-   *   run(['$http', function($http) {
-   *     // The XSRF token will be sent.
-   *     $http.get('https://api.example.com/preferences').then(...);
-   *
-   *     // The XSRF token will NOT be sent.
-   *     $http.get('https://stats.example.com/activity').then(...);
-   *   }]);
-   * ```
-   */
-  var xsrfWhitelistedOrigins = this.xsrfWhitelistedOrigins = [];
 
   this.$get = ['$browser', '$httpBackend', '$$cookieReader', '$cacheFactory', '$rootScope', '$q', '$injector', '$sce',
       function($browser, $httpBackend, $$cookieReader, $cacheFactory, $rootScope, $q, $injector, $sce) {
@@ -12970,11 +12320,6 @@ function $HttpProvider() {
     });
 
     /**
-     * A function to check request URLs against a list of allowed origins.
-     */
-    var urlIsAllowedOrigin = urlIsAllowedOriginFactory(xsrfWhitelistedOrigins);
-
-    /**
      * @ngdoc service
      * @kind function
      * @name $http
@@ -12985,7 +12330,7 @@ function $HttpProvider() {
      * @requires $injector
      *
      * @description
-     * The `$http` service is a core AngularJS service that facilitates communication with the remote
+     * The `$http` service is a core Angular service that facilitates communication with the remote
      * HTTP servers via the browser's [XMLHttpRequest](https://developer.mozilla.org/en/xmlhttprequest)
      * object or via [JSONP](http://en.wikipedia.org/wiki/JSONP).
      *
@@ -13002,9 +12347,7 @@ function $HttpProvider() {
      *
      * ## General usage
      * The `$http` service is a function which takes a single argument — a {@link $http#usage configuration object} —
-     * that is used to generate an HTTP request and returns  a {@link ng.$q promise} that is
-     * resolved (request success) or rejected (request failure) with a
-     * {@link ng.$http#$http-returns response} object.
+     * that is used to generate an HTTP request and returns  a {@link ng.$q promise}.
      *
      * ```js
      *   // Simple GET request example:
@@ -13019,6 +12362,24 @@ function $HttpProvider() {
      *       // or server returns response with an error status.
      *     });
      * ```
+     *
+     * The response object has these properties:
+     *
+     *   - **data** – `{string|Object}` – The response body transformed with the transform
+     *     functions.
+     *   - **status** – `{number}` – HTTP status code of the response.
+     *   - **headers** – `{function([headerName])}` – Header getter function.
+     *   - **config** – `{Object}` – The configuration object that was used to generate the request.
+     *   - **statusText** – `{string}` – HTTP status text of the response.
+     *   - **xhrStatus** – `{string}` – Status of the XMLHttpRequest (`complete`, `error`, `timeout` or `abort`).
+     *
+     * A response status code between 200 and 299 is considered a success status and will result in
+     * the success callback being called. Any response status code outside of that range is
+     * considered an error status and will result in the error callback being called.
+     * Also, status codes less than -1 are normalized to zero. -1 usually means the request was
+     * aborted, e.g. using a `config.timeout`.
+     * Note that if the response is a redirect, XMLHttpRequest will transparently follow it, meaning
+     * that the outcome (success or error) will be determined by the final response status code.
      *
      *
      * ## Shortcut methods
@@ -13108,7 +12469,7 @@ function $HttpProvider() {
      * which allows you to `push` or `unshift` a new transformation function into the transformation chain.
      *
      * <div class="alert alert-warning">
-     * **Note:** AngularJS does not make a copy of the `data` parameter before it is passed into the `transformRequest` pipeline.
+     * **Note:** Angular does not make a copy of the `data` parameter before it is passed into the `transformRequest` pipeline.
      * That means changes to the properties of `data` are not local to the transform function (since Javascript passes objects by reference).
      * For example, when calling `$http.get(url, $scope.myObject)`, modifications to the object's properties in a transformRequest
      * function will be reflected on the scope and in any templates where the object is data-bound.
@@ -13125,7 +12486,7 @@ function $HttpProvider() {
      * You can augment or replace the default transformations by modifying these properties by adding to or
      * replacing the array.
      *
-     * AngularJS provides the following default transformations:
+     * Angular provides the following default transformations:
      *
      * Request transformations (`$httpProvider.defaults.transformRequest` and `$http.defaults.transformRequest`) is
      * an array with one function that does the following:
@@ -13298,7 +12659,7 @@ function $HttpProvider() {
      * - [JSON vulnerability](http://haacked.com/archive/2008/11/20/anatomy-of-a-subtle-json-vulnerability.aspx)
      * - [XSRF](http://en.wikipedia.org/wiki/Cross-site_request_forgery)
      *
-     * Both server and the client must cooperate in order to eliminate these threats. AngularJS comes
+     * Both server and the client must cooperate in order to eliminate these threats. Angular comes
      * pre-configured with strategies that address these issues, but for this to work backend server
      * cooperation is required.
      *
@@ -13308,7 +12669,7 @@ function $HttpProvider() {
      * allows third party website to turn your JSON resource URL into
      * [JSONP](http://en.wikipedia.org/wiki/JSONP) request under some conditions. To
      * counter this your server can prefix all JSON requests with following string `")]}',\n"`.
-     * AngularJS will automatically strip the prefix before processing it as JSON.
+     * Angular will automatically strip the prefix before processing it as JSON.
      *
      * For example if your server needs to return:
      * ```js
@@ -13321,51 +12682,34 @@ function $HttpProvider() {
      * ['one','two']
      * ```
      *
-     * AngularJS will strip the prefix, before processing the JSON.
+     * Angular will strip the prefix, before processing the JSON.
      *
      *
      * ### Cross Site Request Forgery (XSRF) Protection
      *
      * [XSRF](http://en.wikipedia.org/wiki/Cross-site_request_forgery) is an attack technique by
      * which the attacker can trick an authenticated user into unknowingly executing actions on your
-     * website. AngularJS provides a mechanism to counter XSRF. When performing XHR requests, the
+     * website. Angular provides a mechanism to counter XSRF. When performing XHR requests, the
      * $http service reads a token from a cookie (by default, `XSRF-TOKEN`) and sets it as an HTTP
-     * header (by default `X-XSRF-TOKEN`). Since only JavaScript that runs on your domain could read
-     * the cookie, your server can be assured that the XHR came from JavaScript running on your
-     * domain.
+     * header (`X-XSRF-TOKEN`). Since only JavaScript that runs on your domain could read the
+     * cookie, your server can be assured that the XHR came from JavaScript running on your domain.
+     * The header will not be set for cross-domain requests.
      *
      * To take advantage of this, your server needs to set a token in a JavaScript readable session
      * cookie called `XSRF-TOKEN` on the first HTTP GET request. On subsequent XHR requests the
-     * server can verify that the cookie matches the `X-XSRF-TOKEN` HTTP header, and therefore be
-     * sure that only JavaScript running on your domain could have sent the request. The token must
-     * be unique for each user and must be verifiable by the server (to prevent the JavaScript from
+     * server can verify that the cookie matches `X-XSRF-TOKEN` HTTP header, and therefore be sure
+     * that only JavaScript running on your domain could have sent the request. The token must be
+     * unique for each user and must be verifiable by the server (to prevent the JavaScript from
      * making up its own tokens). We recommend that the token is a digest of your site's
      * authentication cookie with a [salt](https://en.wikipedia.org/wiki/Salt_(cryptography&#41;)
      * for added security.
      *
-     * The header will &mdash; by default &mdash; **not** be set for cross-domain requests. This
-     * prevents unauthorized servers (e.g. malicious or compromised 3rd-party APIs) from gaining
-     * access to your users' XSRF tokens and exposing them to Cross Site Request Forgery. If you
-     * want to, you can whitelist additional origins to also receive the XSRF token, by adding them
-     * to {@link ng.$httpProvider#xsrfWhitelistedOrigins xsrfWhitelistedOrigins}. This might be
-     * useful, for example, if your application, served from `example.com`, needs to access your API
-     * at `api.example.com`.
-     * See {@link ng.$httpProvider#xsrfWhitelistedOrigins $httpProvider.xsrfWhitelistedOrigins} for
-     * more details.
+     * The name of the headers can be specified using the xsrfHeaderName and xsrfCookieName
+     * properties of either $httpProvider.defaults at config-time, $http.defaults at run-time,
+     * or the per-request config object.
      *
-     * <div class="alert alert-danger">
-     *   **Warning**<br />
-     *   Only whitelist origins that you have control over and make sure you understand the
-     *   implications of doing so.
-     * </div>
-     *
-     * The name of the cookie and the header can be specified using the `xsrfCookieName` and
-     * `xsrfHeaderName` properties of either `$httpProvider.defaults` at config-time,
-     * `$http.defaults` at run-time, or the per-request config object.
-     *
-     * In order to prevent collisions in environments where multiple AngularJS apps share the
-     * same domain or subdomain, we recommend that each application uses a unique cookie name.
-     *
+     * In order to prevent collisions in environments where multiple Angular apps share the
+     * same domain or subdomain, we recommend that each application uses unique cookie name.
      *
      * @param {object} config Object describing the request to be made and how it should be
      *    processed. The object has following properties:
@@ -13411,44 +12755,14 @@ function $HttpProvider() {
      *      See {@link $http#caching $http Caching} for more information.
      *    - **timeout** – `{number|Promise}` – timeout in milliseconds, or {@link ng.$q promise}
      *      that should abort the request when resolved.
-     *
-     *      A numerical timeout or a promise returned from {@link ng.$timeout $timeout}, will set
-     *      the `xhrStatus` in the {@link $http#$http-returns response} to "timeout", and any other
-     *      resolved promise will set it to "abort", following standard XMLHttpRequest behavior.
-     *
      *    - **withCredentials** - `{boolean}` - whether to set the `withCredentials` flag on the
      *      XHR object. See [requests with credentials](https://developer.mozilla.org/docs/Web/HTTP/Access_control_CORS#Requests_with_credentials)
      *      for more information.
      *    - **responseType** - `{string}` - see
      *      [XMLHttpRequest.responseType](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#xmlhttprequest-responsetype).
      *
-     * @returns {HttpPromise} A {@link ng.$q `Promise}` that will be resolved (request success)
-     *   or rejected (request failure) with a response object.
-     *
-     *   The response object has these properties:
-     *
-     *   - **data** – `{string|Object}` – The response body transformed with
-     *     the transform functions.
-     *   - **status** – `{number}` – HTTP status code of the response.
-     *   - **headers** – `{function([headerName])}` – Header getter function.
-     *   - **config** – `{Object}` – The configuration object that was used
-     *     to generate the request.
-     *   - **statusText** – `{string}` – HTTP status text of the response.
-     *   - **xhrStatus** – `{string}` – Status of the XMLHttpRequest
-     *     (`complete`, `error`, `timeout` or `abort`).
-     *
-     *
-     *   A response status code between 200 and 299 is considered a success status
-     *   and will result in the success callback being called. Any response status
-     *   code outside of that range is considered an error status and will result
-     *   in the error callback being called.
-     *   Also, status codes less than -1 are normalized to zero. -1 usually means
-     *   the request was aborted, e.g. using a `config.timeout`. More information
-     *   about the status might be available in the `xhrStatus` property.
-     *
-     *   Note that if the response is a redirect, XMLHttpRequest will transparently
-     *   follow it, meaning that the outcome (success or error) will be determined
-     *   by the final response status code.
+     * @returns {HttpPromise} Returns a {@link ng.$q `Promise}` that will be resolved to a response object
+     *                        when the request succeeds or fails.
      *
      *
      * @property {Array.<Object>} pendingRequests Array of config objects for currently pending
@@ -13572,7 +12886,7 @@ function $HttpProvider() {
       config.paramSerializer = isString(config.paramSerializer) ?
           $injector.get(config.paramSerializer) : config.paramSerializer;
 
-      $browser.$$incOutstandingRequestCount('$http');
+      $browser.$$incOutstandingRequestCount();
 
       var requestInterceptors = [];
       var responseInterceptors = [];
@@ -13610,7 +12924,7 @@ function $HttpProvider() {
       }
 
       function completeOutstandingRequest() {
-        $browser.$$completeOutstandingRequest(noop, '$http');
+        $browser.$$completeOutstandingRequest(noop);
       }
 
       function executeHeaderFns(headers, config) {
@@ -13698,9 +13012,8 @@ function $HttpProvider() {
      *
      * @param {string|TrustedObject} url Absolute or relative URL of the resource that is being requested;
      *                                   or an object created by a call to `$sce.trustAsResourceUrl(url)`.
-     * @param {Object=} config Optional configuration object. See {@link ng.$http#$http-arguments `$http()` arguments}.
-     * @returns {HttpPromise}  A Promise that will be resolved or rejected with a response object.
-     * See {@link ng.$http#$http-returns `$http()` return value}.
+     * @param {Object=} config Optional configuration object. See https://docs.angularjs.org/api/ng/service/$http#usage
+     * @returns {HttpPromise} Future object
      */
 
     /**
@@ -13712,9 +13025,8 @@ function $HttpProvider() {
      *
      * @param {string|TrustedObject} url Absolute or relative URL of the resource that is being requested;
      *                                   or an object created by a call to `$sce.trustAsResourceUrl(url)`.
-     * @param {Object=} config Optional configuration object. See {@link ng.$http#$http-arguments `$http()` arguments}.
-     * @returns {HttpPromise}  A Promise that will be resolved or rejected with a response object.
-     * See {@link ng.$http#$http-returns `$http()` return value}.
+     * @param {Object=} config Optional configuration object. See https://docs.angularjs.org/api/ng/service/$http#usage
+     * @returns {HttpPromise} Future object
      */
 
     /**
@@ -13726,9 +13038,8 @@ function $HttpProvider() {
      *
      * @param {string|TrustedObject} url Absolute or relative URL of the resource that is being requested;
      *                                   or an object created by a call to `$sce.trustAsResourceUrl(url)`.
-     * @param {Object=} config Optional configuration object. See {@link ng.$http#$http-arguments `$http()` arguments}.
-     * @returns {HttpPromise}  A Promise that will be resolved or rejected with a response object.
-     * See {@link ng.$http#$http-returns `$http()` return value}.
+     * @param {Object=} config Optional configuration object. See https://docs.angularjs.org/api/ng/service/$http#usage
+     * @returns {HttpPromise} Future object
      */
 
     /**
@@ -13769,9 +13080,8 @@ function $HttpProvider() {
      *
      * @param {string|TrustedObject} url Absolute or relative URL of the resource that is being requested;
      *                                   or an object created by a call to `$sce.trustAsResourceUrl(url)`.
-     * @param {Object=} config Optional configuration object. See {@link ng.$http#$http-arguments `$http()` arguments}.
-     * @returns {HttpPromise}  A Promise that will be resolved or rejected with a response object.
-     * See {@link ng.$http#$http-returns `$http()` return value}.
+     * @param {Object=} config Optional configuration object. See https://docs.angularjs.org/api/ng/service/$http#usage
+     * @returns {HttpPromise} Future object
      */
     createShortMethods('get', 'delete', 'head', 'jsonp');
 
@@ -13784,9 +13094,8 @@ function $HttpProvider() {
      *
      * @param {string} url Relative or absolute URL specifying the destination of the request
      * @param {*} data Request content
-     * @param {Object=} config Optional configuration object. See {@link ng.$http#$http-arguments `$http()` arguments}.
-     * @returns {HttpPromise}  A Promise that will be resolved or rejected with a response object.
-     * See {@link ng.$http#$http-returns `$http()` return value}.
+     * @param {Object=} config Optional configuration object. See https://docs.angularjs.org/api/ng/service/$http#usage
+     * @returns {HttpPromise} Future object
      */
 
     /**
@@ -13798,9 +13107,8 @@ function $HttpProvider() {
      *
      * @param {string} url Relative or absolute URL specifying the destination of the request
      * @param {*} data Request content
-     * @param {Object=} config Optional configuration object. See {@link ng.$http#$http-arguments `$http()` arguments}.
-     * @returns {HttpPromise}  A Promise that will be resolved or rejected with a response object.
-     * See {@link ng.$http#$http-returns `$http()` return value}.
+     * @param {Object=} config Optional configuration object. See https://docs.angularjs.org/api/ng/service/$http#usage
+     * @returns {HttpPromise} Future object
      */
 
      /**
@@ -13812,9 +13120,8 @@ function $HttpProvider() {
       *
       * @param {string} url Relative or absolute URL specifying the destination of the request
       * @param {*} data Request content
-      * @param {Object=} config Optional configuration object. See {@link ng.$http#$http-arguments `$http()` arguments}.
-      * @returns {HttpPromise}  A Promise that will be resolved or rejected with a response object.
-      * See {@link ng.$http#$http-returns `$http()` return value}.
+      * @param {Object=} config Optional configuration object. See https://docs.angularjs.org/api/ng/service/$http#usage
+      * @returns {HttpPromise} Future object
       */
     createShortMethodsWithData('post', 'put', 'patch');
 
@@ -13925,7 +13232,7 @@ function $HttpProvider() {
       // if we won't have the response in cache, set the xsrf headers and
       // send the request to the backend
       if (isUndefined(cachedResp)) {
-        var xsrfValue = urlIsAllowedOrigin(config.url)
+        var xsrfValue = urlIsSameOrigin(config.url)
             ? $$cookieReader()[config.xsrfCookieName || defaults.xsrfCookieName]
             : undefined;
         if (xsrfValue) {
@@ -14123,7 +13430,6 @@ function createHttpBackend($browser, createXhr, $browserDefer, callbacks, rawDoc
     } else {
 
       var xhr = createXhr(method, url);
-      var abortedByTimeout = false;
 
       xhr.open(method, url, true);
       forEach(headers, function(value, key) {
@@ -14164,7 +13470,7 @@ function createHttpBackend($browser, createXhr, $browserDefer, callbacks, rawDoc
       };
 
       var requestAborted = function() {
-        completeRequest(callback, -1, null, null, '', abortedByTimeout ? 'timeout' : 'abort');
+        completeRequest(callback, -1, null, null, '', 'abort');
       };
 
       var requestTimeout = function() {
@@ -14174,11 +13480,11 @@ function createHttpBackend($browser, createXhr, $browserDefer, callbacks, rawDoc
       };
 
       xhr.onerror = requestError;
-      xhr.ontimeout = requestTimeout;
       xhr.onabort = requestAborted;
+      xhr.ontimeout = requestTimeout;
 
       forEach(eventHandlers, function(value, key) {
-        xhr.addEventListener(key, value);
+          xhr.addEventListener(key, value);
       });
 
       forEach(uploadEventHandlers, function(value, key) {
@@ -14209,26 +13515,14 @@ function createHttpBackend($browser, createXhr, $browserDefer, callbacks, rawDoc
       xhr.send(isUndefined(post) ? null : post);
     }
 
-    // Since we are using xhr.abort() when a request times out, we have to set a flag that
-    // indicates to requestAborted if the request timed out or was aborted.
-    //
-    // http.timeout = numerical timeout   timeout
-    // http.timeout = $timeout            timeout
-    // http.timeout = promise             abort
-    // xhr.abort()                        abort (The xhr object is normally inaccessible, but
-    //                                    can be exposed with the xhrFactory)
     if (timeout > 0) {
-      var timeoutId = $browserDefer(function() {
-        timeoutRequest('timeout');
-      }, timeout);
+      var timeoutId = $browserDefer(timeoutRequest, timeout);
     } else if (isPromiseLike(timeout)) {
-      timeout.then(function() {
-        timeoutRequest(isDefined(timeout.$$timeoutId) ? 'timeout' : 'abort');
-      });
+      timeout.then(timeoutRequest);
     }
 
-    function timeoutRequest(reason) {
-      abortedByTimeout = reason === 'timeout';
+
+    function timeoutRequest() {
       if (jsonpDone) {
         jsonpDone();
       }
@@ -14308,9 +13602,9 @@ $interpolateMinErr.interr = function(text, err) {
  * Used for configuring the interpolation markup. Defaults to `{{` and `}}`.
  *
  * <div class="alert alert-danger">
- * This feature is sometimes used to mix different markup languages, e.g. to wrap an AngularJS
+ * This feature is sometimes used to mix different markup languages, e.g. to wrap an Angular
  * template within a Python Jinja template (or any other template language). Mixing templating
- * languages is **very dangerous**. The embedding template language will not safely escape AngularJS
+ * languages is **very dangerous**. The embedding template language will not safely escape Angular
  * expressions, so any user-controlled values in the template will cause Cross Site Scripting (XSS)
  * security bugs!
  * </div>
@@ -14359,8 +13653,9 @@ function $InterpolateProvider() {
     if (value) {
       startSymbol = value;
       return this;
+    } else {
+      return startSymbol;
     }
-    return startSymbol;
   };
 
   /**
@@ -14376,8 +13671,9 @@ function $InterpolateProvider() {
     if (value) {
       endSymbol = value;
       return this;
+    } else {
+      return endSymbol;
     }
-    return endSymbol;
   };
 
 
@@ -14424,7 +13720,7 @@ function $InterpolateProvider() {
      * ```js
      *   var $interpolate = ...; // injected
      *   var exp = $interpolate('Hello {{name | uppercase}}!');
-     *   expect(exp({name:'AngularJS'})).toEqual('Hello ANGULARJS!');
+     *   expect(exp({name:'Angular'})).toEqual('Hello ANGULAR!');
      * ```
      *
      * `$interpolate` takes an optional fourth argument, `allOrNothing`. If `allOrNothing` is
@@ -14442,8 +13738,8 @@ function $InterpolateProvider() {
      *   // "allOrNothing" mode
      *   exp = $interpolate('{{greeting}} {{name}}!', false, null, true);
      *   expect(exp(context)).toBeUndefined();
-     *   context.name = 'AngularJS';
-     *   expect(exp(context)).toEqual('Hello AngularJS!');
+     *   context.name = 'Angular';
+     *   expect(exp(context)).toEqual('Hello Angular!');
      * ```
      *
      * `allOrNothing` is useful for interpolating URLs. `ngSrc` and `ngSrcset` use this behavior.
@@ -14524,21 +13820,16 @@ function $InterpolateProvider() {
      * - `context`: evaluation context for all expressions embedded in the interpolated text
      */
     function $interpolate(text, mustHaveExpression, trustedContext, allOrNothing) {
-      var contextAllowsConcatenation = trustedContext === $sce.URL || trustedContext === $sce.MEDIA_URL;
-
       // Provide a quick exit and simplified result function for text with no interpolation
       if (!text.length || text.indexOf(startSymbol) === -1) {
-        if (mustHaveExpression && !contextAllowsConcatenation) return;
-
-        var unescapedText = unescapeText(text);
-        if (contextAllowsConcatenation) {
-          unescapedText = $sce.getTrusted(trustedContext, unescapedText);
+        var constantInterp;
+        if (!mustHaveExpression) {
+          var unescapedText = unescapeText(text);
+          constantInterp = valueFn(unescapedText);
+          constantInterp.exp = text;
+          constantInterp.expressions = [];
+          constantInterp.$$watchDelegate = constantWatchDelegate;
         }
-        var constantInterp = valueFn(unescapedText);
-        constantInterp.exp = text;
-        constantInterp.expressions = [];
-        constantInterp.$$watchDelegate = constantWatchDelegate;
-
         return constantInterp;
       }
 
@@ -14547,13 +13838,11 @@ function $InterpolateProvider() {
           endIndex,
           index = 0,
           expressions = [],
-          parseFns,
+          parseFns = [],
           textLength = text.length,
           exp,
           concat = [],
-          expressionPositions = [],
-          singleExpression;
-
+          expressionPositions = [];
 
       while (index < textLength) {
         if (((startIndex = text.indexOf(startSymbol, index)) !== -1) &&
@@ -14563,9 +13852,10 @@ function $InterpolateProvider() {
           }
           exp = text.substring(startIndex + startSymbolLength, endIndex);
           expressions.push(exp);
+          parseFns.push($parse(exp, parseStringifyInterceptor));
           index = endIndex + endSymbolLength;
           expressionPositions.push(concat.length);
-          concat.push(''); // Placeholder that will get replaced with the evaluated expression.
+          concat.push('');
         } else {
           // we did not find an interpolation, so we have to add the remainder to the separators array
           if (index !== textLength) {
@@ -14575,25 +13865,15 @@ function $InterpolateProvider() {
         }
       }
 
-      singleExpression = concat.length === 1 && expressionPositions.length === 1;
-      // Intercept expression if we need to stringify concatenated inputs, which may be SCE trusted
-      // objects rather than simple strings
-      // (we don't modify the expression if the input consists of only a single trusted input)
-      var interceptor = contextAllowsConcatenation && singleExpression ? undefined : parseStringifyInterceptor;
-      parseFns = expressions.map(function(exp) { return $parse(exp, interceptor); });
-
       // Concatenating expressions makes it hard to reason about whether some combination of
       // concatenated values are unsafe to use and could easily lead to XSS.  By requiring that a
-      // single expression be used for some $sce-managed secure contexts (RESOURCE_URLs mostly),
-      // we ensure that the value that's used is assigned or constructed by some JS code somewhere
-      // that is more testable or make it obvious that you bound the value to some user controlled
-      // value.  This helps reduce the load when auditing for XSS issues.
-
-      // Note that URL and MEDIA_URL $sce contexts do not need this, since `$sce` can sanitize the values
-      // passed to it. In that case, `$sce.getTrusted` will be called on either the single expression
-      // or on the overall concatenated string (losing trusted types used in the mix, by design).
-      // Both these methods will sanitize plain strings. Also, HTML could be included, but since it's
-      // only used in srcdoc attributes, this would not be very useful.
+      // single expression be used for iframe[src], object[src], etc., we ensure that the value
+      // that's used is assigned or constructed by some JS code somewhere that is more testable or
+      // make it obvious that you bound the value to some user controlled value.  This helps reduce
+      // the load when auditing for XSS issues.
+      if (trustedContext && concat.length > 1) {
+          $interpolateMinErr.throwNoconcat(text);
+      }
 
       if (!mustHaveExpression || expressions.length) {
         var compute = function(values) {
@@ -14601,16 +13881,13 @@ function $InterpolateProvider() {
             if (allOrNothing && isUndefined(values[i])) return;
             concat[expressionPositions[i]] = values[i];
           }
-
-          if (contextAllowsConcatenation) {
-            // If `singleExpression` then `concat[0]` might be a "trusted" value or `null`, rather than a string
-            return $sce.getTrusted(trustedContext, singleExpression ? concat[0] : concat.join(''));
-          } else if (trustedContext && concat.length > 1) {
-            // This context does not allow more than one part, e.g. expr + string or exp + exp.
-            $interpolateMinErr.throwNoconcat(text);
-          }
-          // In an unprivileged context or only one part: just concatenate and return.
           return concat.join('');
+        };
+
+        var getValue = function(value) {
+          return trustedContext ?
+            $sce.getTrusted(trustedContext, value) :
+            $sce.valueOf(value);
         };
 
         return extend(function interpolationFn(context) {
@@ -14645,13 +13922,7 @@ function $InterpolateProvider() {
 
       function parseStringifyInterceptor(value) {
         try {
-          // In concatenable contexts, getTrusted comes at the end, to avoid sanitizing individual
-          // parts of a full URL. We don't care about losing the trustedness here.
-          // In non-concatenable contexts, where there is only one expression, this interceptor is
-          // not applied to the expression.
-          value = (trustedContext && !contextAllowsConcatenation) ?
-                    $sce.getTrusted(trustedContext, value) :
-                    $sce.valueOf(value);
+          value = getValue(value);
           return allOrNothing && !isDefined(value) ? value : stringify(value);
         } catch (err) {
           $exceptionHandler($interpolateMinErr.interr(text, err));
@@ -14695,230 +13966,206 @@ function $InterpolateProvider() {
   }];
 }
 
-var $intervalMinErr = minErr('$interval');
-
 /** @this */
 function $IntervalProvider() {
-  this.$get = ['$$intervalFactory', '$window',
-       function($$intervalFactory,   $window) {
+  this.$get = ['$rootScope', '$window', '$q', '$$q', '$browser',
+       function($rootScope,   $window,   $q,   $$q,   $browser) {
     var intervals = {};
-    var setIntervalFn = function(tick, delay, deferred) {
-      var id = $window.setInterval(tick, delay);
-      intervals[id] = deferred;
-      return id;
-    };
-    var clearIntervalFn = function(id) {
-      $window.clearInterval(id);
-      delete intervals[id];
-    };
 
-    /**
-     * @ngdoc service
-     * @name $interval
-     *
-     * @description
-     * AngularJS's wrapper for `window.setInterval`. The `fn` function is executed every `delay`
-     * milliseconds.
-     *
-     * The return value of registering an interval function is a promise. This promise will be
-     * notified upon each tick of the interval, and will be resolved after `count` iterations, or
-     * run indefinitely if `count` is not defined. The value of the notification will be the
-     * number of iterations that have run.
-     * To cancel an interval, call `$interval.cancel(promise)`.
-     *
-     * In tests you can use {@link ngMock.$interval#flush `$interval.flush(millis)`} to
-     * move forward by `millis` milliseconds and trigger any functions scheduled to run in that
-     * time.
-     *
-     * <div class="alert alert-warning">
-     * **Note**: Intervals created by this service must be explicitly destroyed when you are finished
-     * with them.  In particular they are not automatically destroyed when a controller's scope or a
-     * directive's element are destroyed.
-     * You should take this into consideration and make sure to always cancel the interval at the
-     * appropriate moment.  See the example below for more details on how and when to do this.
-     * </div>
-     *
-     * @param {function()} fn A function that should be called repeatedly. If no additional arguments
-     *   are passed (see below), the function is called with the current iteration count.
-     * @param {number} delay Number of milliseconds between each function call.
-     * @param {number=} [count=0] Number of times to repeat. If not set, or 0, will repeat
-     *   indefinitely.
-     * @param {boolean=} [invokeApply=true] If set to `false` skips model dirty checking, otherwise
-     *   will invoke `fn` within the {@link ng.$rootScope.Scope#$apply $apply} block.
-     * @param {...*=} Pass additional parameters to the executed function.
-     * @returns {promise} A promise which will be notified on each iteration. It will resolve once all iterations of the interval complete.
-     *
-     * @example
-     * <example module="intervalExample" name="interval-service">
-     * <file name="index.html">
-     *   <script>
-     *     angular.module('intervalExample', [])
-     *       .controller('ExampleController', ['$scope', '$interval',
-     *         function($scope, $interval) {
-     *           $scope.format = 'M/d/yy h:mm:ss a';
-     *           $scope.blood_1 = 100;
-     *           $scope.blood_2 = 120;
-     *
-     *           var stop;
-     *           $scope.fight = function() {
-     *             // Don't start a new fight if we are already fighting
-     *             if ( angular.isDefined(stop) ) return;
-     *
-     *             stop = $interval(function() {
-     *               if ($scope.blood_1 > 0 && $scope.blood_2 > 0) {
-     *                 $scope.blood_1 = $scope.blood_1 - 3;
-     *                 $scope.blood_2 = $scope.blood_2 - 4;
-     *               } else {
-     *                 $scope.stopFight();
-     *               }
-     *             }, 100);
-     *           };
-     *
-     *           $scope.stopFight = function() {
-     *             if (angular.isDefined(stop)) {
-     *               $interval.cancel(stop);
-     *               stop = undefined;
-     *             }
-     *           };
-     *
-     *           $scope.resetFight = function() {
-     *             $scope.blood_1 = 100;
-     *             $scope.blood_2 = 120;
-     *           };
-     *
-     *           $scope.$on('$destroy', function() {
-     *             // Make sure that the interval is destroyed too
-     *             $scope.stopFight();
-     *           });
-     *         }])
-     *       // Register the 'myCurrentTime' directive factory method.
-     *       // We inject $interval and dateFilter service since the factory method is DI.
-     *       .directive('myCurrentTime', ['$interval', 'dateFilter',
-     *         function($interval, dateFilter) {
-     *           // return the directive link function. (compile function not needed)
-     *           return function(scope, element, attrs) {
-     *             var format,  // date format
-     *                 stopTime; // so that we can cancel the time updates
-     *
-     *             // used to update the UI
-     *             function updateTime() {
-     *               element.text(dateFilter(new Date(), format));
-     *             }
-     *
-     *             // watch the expression, and update the UI on change.
-     *             scope.$watch(attrs.myCurrentTime, function(value) {
-     *               format = value;
-     *               updateTime();
-     *             });
-     *
-     *             stopTime = $interval(updateTime, 1000);
-     *
-     *             // listen on DOM destroy (removal) event, and cancel the next UI update
-     *             // to prevent updating time after the DOM element was removed.
-     *             element.on('$destroy', function() {
-     *               $interval.cancel(stopTime);
-     *             });
-     *           }
-     *         }]);
-     *   </script>
-     *
-     *   <div>
-     *     <div ng-controller="ExampleController">
-     *       <label>Date format: <input ng-model="format"></label> <hr/>
-     *       Current time is: <span my-current-time="format"></span>
-     *       <hr/>
-     *       Blood 1 : <font color='red'>{{blood_1}}</font>
-     *       Blood 2 : <font color='red'>{{blood_2}}</font>
-     *       <button type="button" data-ng-click="fight()">Fight</button>
-     *       <button type="button" data-ng-click="stopFight()">StopFight</button>
-     *       <button type="button" data-ng-click="resetFight()">resetFight</button>
-     *     </div>
-     *   </div>
-     *
-     * </file>
-     * </example>
-     */
-    var interval = $$intervalFactory(setIntervalFn, clearIntervalFn);
 
-    /**
-     * @ngdoc method
-     * @name $interval#cancel
-     *
-     * @description
-     * Cancels a task associated with the `promise`.
-     *
-     * @param {Promise=} promise returned by the `$interval` function.
-     * @returns {boolean} Returns `true` if the task was successfully canceled.
-     */
-    interval.cancel = function(promise) {
-      if (!promise) return false;
+     /**
+      * @ngdoc service
+      * @name $interval
+      *
+      * @description
+      * Angular's wrapper for `window.setInterval`. The `fn` function is executed every `delay`
+      * milliseconds.
+      *
+      * The return value of registering an interval function is a promise. This promise will be
+      * notified upon each tick of the interval, and will be resolved after `count` iterations, or
+      * run indefinitely if `count` is not defined. The value of the notification will be the
+      * number of iterations that have run.
+      * To cancel an interval, call `$interval.cancel(promise)`.
+      *
+      * In tests you can use {@link ngMock.$interval#flush `$interval.flush(millis)`} to
+      * move forward by `millis` milliseconds and trigger any functions scheduled to run in that
+      * time.
+      *
+      * <div class="alert alert-warning">
+      * **Note**: Intervals created by this service must be explicitly destroyed when you are finished
+      * with them.  In particular they are not automatically destroyed when a controller's scope or a
+      * directive's element are destroyed.
+      * You should take this into consideration and make sure to always cancel the interval at the
+      * appropriate moment.  See the example below for more details on how and when to do this.
+      * </div>
+      *
+      * @param {function()} fn A function that should be called repeatedly. If no additional arguments
+      *   are passed (see below), the function is called with the current iteration count.
+      * @param {number} delay Number of milliseconds between each function call.
+      * @param {number=} [count=0] Number of times to repeat. If not set, or 0, will repeat
+      *   indefinitely.
+      * @param {boolean=} [invokeApply=true] If set to `false` skips model dirty checking, otherwise
+      *   will invoke `fn` within the {@link ng.$rootScope.Scope#$apply $apply} block.
+      * @param {...*=} Pass additional parameters to the executed function.
+      * @returns {promise} A promise which will be notified on each iteration. It will resolve once all iterations of the interval complete.
+      *
+      * @example
+      * <example module="intervalExample" name="interval-service">
+      * <file name="index.html">
+      *   <script>
+      *     angular.module('intervalExample', [])
+      *       .controller('ExampleController', ['$scope', '$interval',
+      *         function($scope, $interval) {
+      *           $scope.format = 'M/d/yy h:mm:ss a';
+      *           $scope.blood_1 = 100;
+      *           $scope.blood_2 = 120;
+      *
+      *           var stop;
+      *           $scope.fight = function() {
+      *             // Don't start a new fight if we are already fighting
+      *             if ( angular.isDefined(stop) ) return;
+      *
+      *             stop = $interval(function() {
+      *               if ($scope.blood_1 > 0 && $scope.blood_2 > 0) {
+      *                 $scope.blood_1 = $scope.blood_1 - 3;
+      *                 $scope.blood_2 = $scope.blood_2 - 4;
+      *               } else {
+      *                 $scope.stopFight();
+      *               }
+      *             }, 100);
+      *           };
+      *
+      *           $scope.stopFight = function() {
+      *             if (angular.isDefined(stop)) {
+      *               $interval.cancel(stop);
+      *               stop = undefined;
+      *             }
+      *           };
+      *
+      *           $scope.resetFight = function() {
+      *             $scope.blood_1 = 100;
+      *             $scope.blood_2 = 120;
+      *           };
+      *
+      *           $scope.$on('$destroy', function() {
+      *             // Make sure that the interval is destroyed too
+      *             $scope.stopFight();
+      *           });
+      *         }])
+      *       // Register the 'myCurrentTime' directive factory method.
+      *       // We inject $interval and dateFilter service since the factory method is DI.
+      *       .directive('myCurrentTime', ['$interval', 'dateFilter',
+      *         function($interval, dateFilter) {
+      *           // return the directive link function. (compile function not needed)
+      *           return function(scope, element, attrs) {
+      *             var format,  // date format
+      *                 stopTime; // so that we can cancel the time updates
+      *
+      *             // used to update the UI
+      *             function updateTime() {
+      *               element.text(dateFilter(new Date(), format));
+      *             }
+      *
+      *             // watch the expression, and update the UI on change.
+      *             scope.$watch(attrs.myCurrentTime, function(value) {
+      *               format = value;
+      *               updateTime();
+      *             });
+      *
+      *             stopTime = $interval(updateTime, 1000);
+      *
+      *             // listen on DOM destroy (removal) event, and cancel the next UI update
+      *             // to prevent updating time after the DOM element was removed.
+      *             element.on('$destroy', function() {
+      *               $interval.cancel(stopTime);
+      *             });
+      *           }
+      *         }]);
+      *   </script>
+      *
+      *   <div>
+      *     <div ng-controller="ExampleController">
+      *       <label>Date format: <input ng-model="format"></label> <hr/>
+      *       Current time is: <span my-current-time="format"></span>
+      *       <hr/>
+      *       Blood 1 : <font color='red'>{{blood_1}}</font>
+      *       Blood 2 : <font color='red'>{{blood_2}}</font>
+      *       <button type="button" data-ng-click="fight()">Fight</button>
+      *       <button type="button" data-ng-click="stopFight()">StopFight</button>
+      *       <button type="button" data-ng-click="resetFight()">resetFight</button>
+      *     </div>
+      *   </div>
+      *
+      * </file>
+      * </example>
+      */
+    function interval(fn, delay, count, invokeApply) {
+      var hasParams = arguments.length > 4,
+          args = hasParams ? sliceArgs(arguments, 4) : [],
+          setInterval = $window.setInterval,
+          clearInterval = $window.clearInterval,
+          iteration = 0,
+          skipApply = (isDefined(invokeApply) && !invokeApply),
+          deferred = (skipApply ? $$q : $q).defer(),
+          promise = deferred.promise;
 
-      if (!promise.hasOwnProperty('$$intervalId')) {
-        throw $intervalMinErr('badprom',
-            '`$interval.cancel()` called with a promise that was not generated by `$interval()`.');
+      count = isDefined(count) ? count : 0;
+
+      promise.$$intervalId = setInterval(function tick() {
+        if (skipApply) {
+          $browser.defer(callback);
+        } else {
+          $rootScope.$evalAsync(callback);
+        }
+        deferred.notify(iteration++);
+
+        if (count > 0 && iteration >= count) {
+          deferred.resolve(iteration);
+          clearInterval(promise.$$intervalId);
+          delete intervals[promise.$$intervalId];
+        }
+
+        if (!skipApply) $rootScope.$apply();
+
+      }, delay);
+
+      intervals[promise.$$intervalId] = deferred;
+
+      return promise;
+
+      function callback() {
+        if (!hasParams) {
+          fn(iteration);
+        } else {
+          fn.apply(null, args);
+        }
       }
+    }
 
-      if (!intervals.hasOwnProperty(promise.$$intervalId)) return false;
 
-      var id = promise.$$intervalId;
-      var deferred = intervals[id];
-
-      // Interval cancels should not report an unhandled promise.
-      markQExceptionHandled(deferred.promise);
-      deferred.reject('canceled');
-      clearIntervalFn(id);
-
-      return true;
+     /**
+      * @ngdoc method
+      * @name $interval#cancel
+      *
+      * @description
+      * Cancels a task associated with the `promise`.
+      *
+      * @param {Promise=} promise returned by the `$interval` function.
+      * @returns {boolean} Returns `true` if the task was successfully canceled.
+      */
+    interval.cancel = function(promise) {
+      if (promise && promise.$$intervalId in intervals) {
+        // Interval cancels should not report as unhandled promise.
+        markQExceptionHandled(intervals[promise.$$intervalId].promise);
+        intervals[promise.$$intervalId].reject('canceled');
+        $window.clearInterval(promise.$$intervalId);
+        delete intervals[promise.$$intervalId];
+        return true;
+      }
+      return false;
     };
 
     return interval;
-  }];
-}
-
-/** @this */
-function $$IntervalFactoryProvider() {
-  this.$get = ['$browser', '$q', '$$q', '$rootScope',
-       function($browser,   $q,   $$q,   $rootScope) {
-    return function intervalFactory(setIntervalFn, clearIntervalFn) {
-      return function intervalFn(fn, delay, count, invokeApply) {
-        var hasParams = arguments.length > 4,
-            args = hasParams ? sliceArgs(arguments, 4) : [],
-            iteration = 0,
-            skipApply = isDefined(invokeApply) && !invokeApply,
-            deferred = (skipApply ? $$q : $q).defer(),
-            promise = deferred.promise;
-
-        count = isDefined(count) ? count : 0;
-
-        function callback() {
-          if (!hasParams) {
-            fn(iteration);
-          } else {
-            fn.apply(null, args);
-          }
-        }
-
-        function tick() {
-          if (skipApply) {
-            $browser.defer(callback);
-          } else {
-            $rootScope.$evalAsync(callback);
-          }
-          deferred.notify(iteration++);
-
-          if (count > 0 && iteration >= count) {
-            deferred.resolve(iteration);
-            clearIntervalFn(promise.$$intervalId);
-          }
-
-          if (!skipApply) $rootScope.$apply();
-        }
-
-        promise.$$intervalId = setIntervalFn(tick, delay, deferred, skipApply);
-
-        return promise;
-      };
-    };
   }];
 }
 
@@ -15008,13 +14255,11 @@ var $jsonpCallbacksProvider = /** @this */ function() {
  * @name $locale
  *
  * @description
- * $locale service provides localization rules for various AngularJS components. As of right now the
+ * $locale service provides localization rules for various Angular components. As of right now the
  * only public api is:
  *
  * * `id` – `{string}` – locale id formatted as `languageId-countryId` (e.g. `en-us`)
  */
-
-/* global stripHash: true */
 
 var PATH_MATCH = /^([^?#]*)(\?([^#]*))?(#(.*))?$/,
     DEFAULT_PORTS = {'http': 80, 'https': 443, 'ftp': 21};
@@ -15052,14 +14297,6 @@ function decodePath(path, html5Mode) {
   }
 
   return segments.join('/');
-}
-
-function normalizePath(pathValue, searchValue, hashValue) {
-  var search = toKeyValue(searchValue),
-    hash = hashValue ? '#' + encodeUriSegment(hashValue) : '',
-    path = encodePath(pathValue);
-
-  return path + (search ? '?' + search : '') + hash;
 }
 
 function parseAbsoluteUrl(absoluteUrl, locationObj) {
@@ -15110,10 +14347,16 @@ function stripBaseUrl(base, url) {
   }
 }
 
+
 function stripHash(url) {
   var index = url.indexOf('#');
   return index === -1 ? url : url.substr(0, index);
 }
+
+function trimEmptyHash(url) {
+  return url.replace(/(#.+)|#$/, '$1');
+}
+
 
 function stripFile(url) {
   return url.substr(0, stripHash(url).lastIndexOf('/') + 1);
@@ -15161,8 +14404,18 @@ function LocationHtml5Url(appBase, appBaseNoFile, basePrefix) {
     this.$$compose();
   };
 
-  this.$$normalizeUrl = function(url) {
-    return appBaseNoFile + url.substr(1); // first char is always '/'
+  /**
+   * Compose url and update `absUrl` property
+   * @private
+   */
+  this.$$compose = function() {
+    var search = toKeyValue(this.$$search),
+        hash = this.$$hash ? '#' + encodeUriSegment(this.$$hash) : '';
+
+    this.$$url = encodePath(this.$$path) + (search ? '?' + search : '') + hash;
+    this.$$absUrl = appBaseNoFile + this.$$url.substr(1); // first char is always '/'
+
+    this.$$urlUpdatedByLocation = true;
   };
 
   this.$$parseLinkUrl = function(url, relHref) {
@@ -15259,7 +14512,7 @@ function LocationHashbangUrl(appBase, appBaseNoFile, hashPrefix) {
      *  * a.setAttribute('href', '/foo')
      *   * a.pathname === '/C:/foo' //true
      *
-     * Inside of AngularJS, we're always using pathnames that
+     * Inside of Angular, we're always using pathnames that
      * do not include drive names for routing.
      */
     function removeWindowsDriveName(path, url, base) {
@@ -15286,8 +14539,18 @@ function LocationHashbangUrl(appBase, appBaseNoFile, hashPrefix) {
     }
   };
 
-  this.$$normalizeUrl = function(url) {
-    return appBase + (url ? hashPrefix + url : '');
+  /**
+   * Compose hashbang URL and update `absUrl` property
+   * @private
+   */
+  this.$$compose = function() {
+    var search = toKeyValue(this.$$search),
+        hash = this.$$hash ? '#' + encodeUriSegment(this.$$hash) : '';
+
+    this.$$url = encodePath(this.$$path) + (search ? '?' + search : '') + hash;
+    this.$$absUrl = appBase + (this.$$url ? hashPrefix + this.$$url : '');
+
+    this.$$urlUpdatedByLocation = true;
   };
 
   this.$$parseLinkUrl = function(url, relHref) {
@@ -15338,10 +14601,17 @@ function LocationHashbangInHtml5Url(appBase, appBaseNoFile, hashPrefix) {
     return !!rewrittenUrl;
   };
 
-  this.$$normalizeUrl = function(url) {
+  this.$$compose = function() {
+    var search = toKeyValue(this.$$search),
+        hash = this.$$hash ? '#' + encodeUriSegment(this.$$hash) : '';
+
+    this.$$url = encodePath(this.$$path) + (search ? '?' + search : '') + hash;
     // include hashPrefix in $$absUrl when $$url is empty so IE9 does not reload page because of removal of '#'
-    return appBase + hashPrefix + url;
+    this.$$absUrl = appBase + hashPrefix + this.$$url;
+
+    this.$$urlUpdatedByLocation = true;
   };
+
 }
 
 
@@ -15364,16 +14634,6 @@ var locationPrototype = {
    * @private
    */
   $$replace: false,
-
-  /**
-   * Compose url and update `url` and `absUrl` property
-   * @private
-   */
-  $$compose: function() {
-    this.$$url = normalizePath(this.$$path, this.$$search, this.$$hash);
-    this.$$absUrl = this.$$normalizeUrl(this.$$url);
-    this.$$urlUpdatedByLocation = true;
-  },
 
   /**
    * @ngdoc method
@@ -15459,7 +14719,7 @@ var locationPrototype = {
    *
    * Return host of current URL.
    *
-   * Note: compared to the non-AngularJS version `location.host` which returns `hostname:port`, this returns the `hostname` portion only.
+   * Note: compared to the non-angular version `location.host` which returns `hostname:port`, this returns the `hostname` portion only.
    *
    *
    * ```js
@@ -15880,13 +15140,6 @@ function $LocationProvider() {
 
     var IGNORE_URI_REGEXP = /^\s*(javascript|mailto):/i;
 
-    // Determine if two URLs are equal despite potentially having different encoding/normalizing
-    //  such as $location.absUrl() vs $browser.url()
-    // See https://github.com/angular/angular.js/issues/16592
-    function urlsEqual(a, b) {
-      return a === b || urlResolve(a).href === urlResolve(b).href;
-    }
-
     function setBrowserUrlWithFallback(url, replace, state) {
       var oldUrl = $location.url();
       var oldState = $location.$$state;
@@ -15939,13 +15192,15 @@ function $LocationProvider() {
 
       if (absHref && !elm.attr('target') && !event.isDefaultPrevented()) {
         if ($location.$$parseLinkUrl(absHref, relHref)) {
-          // We do a preventDefault for all urls that are part of the AngularJS application,
+          // We do a preventDefault for all urls that are part of the angular application,
           // in html5mode and also without, so that we are able to abort navigation without
           // getting double entries in the location history.
           event.preventDefault();
           // update location manually
           if ($location.absUrl() !== $browser.url()) {
             $rootScope.$apply();
+            // hack to work around FF6 bug 684208 when scenario runner clicks on links
+            $window.angular['ff-684208-preventDefault'] = true;
           }
         }
       }
@@ -15953,7 +15208,7 @@ function $LocationProvider() {
 
 
     // rewrite hashbang url <> html5 url
-    if ($location.absUrl() !== initialUrl) {
+    if (trimEmptyHash($location.absUrl()) !== trimEmptyHash(initialUrl)) {
       $browser.url($location.absUrl(), true);
     }
 
@@ -15972,6 +15227,7 @@ function $LocationProvider() {
         var oldUrl = $location.absUrl();
         var oldState = $location.$$state;
         var defaultPrevented;
+        newUrl = trimEmptyHash(newUrl);
         $location.$$parse(newUrl);
         $location.$$state = newState;
 
@@ -15999,11 +15255,11 @@ function $LocationProvider() {
       if (initializing || $location.$$urlUpdatedByLocation) {
         $location.$$urlUpdatedByLocation = false;
 
-        var oldUrl = $browser.url();
-        var newUrl = $location.absUrl();
+        var oldUrl = trimEmptyHash($browser.url());
+        var newUrl = trimEmptyHash($location.absUrl());
         var oldState = $browser.state();
         var currentReplace = $location.$$replace;
-        var urlOrStateChanged = !urlsEqual(oldUrl, newUrl) ||
+        var urlOrStateChanged = oldUrl !== newUrl ||
           ($location.$$html5 && $sniffer.history && oldState !== $location.$$state);
 
         if (initializing || urlOrStateChanged) {
@@ -16232,12 +15488,12 @@ var $parseMinErr = minErr('$parse');
 
 var objectValueOf = {}.constructor.prototype.valueOf;
 
-// Sandboxing AngularJS Expressions
+// Sandboxing Angular Expressions
 // ------------------------------
-// AngularJS expressions are no longer sandboxed. So it is now even easier to access arbitrary JS code by
+// Angular expressions are no longer sandboxed. So it is now even easier to access arbitrary JS code by
 // various means such as obtaining a reference to native JS functions like the Function constructor.
 //
-// As an example, consider the following AngularJS expression:
+// As an example, consider the following Angular expression:
 //
 //   {}.toString.constructor('alert("evil JS code")')
 //
@@ -17897,15 +17153,15 @@ function getValueOf(value) {
  *
  * @description
  *
- * Converts AngularJS {@link guide/expression expression} into a function.
+ * Converts Angular {@link guide/expression expression} into a function.
  *
  * ```js
  *   var getter = $parse('user.name');
  *   var setter = getter.assign;
- *   var context = {user:{name:'AngularJS'}};
+ *   var context = {user:{name:'angular'}};
  *   var locals = {user:{name:'local'}};
  *
- *   expect(getter(context)).toEqual('AngularJS');
+ *   expect(getter(context)).toEqual('angular');
  *   setter(context, 'newValue');
  *   expect(context.user.name).toEqual('newValue');
  *   expect(getter(context, locals)).toEqual('local');
@@ -17971,7 +17227,7 @@ function $ParseProvider() {
   *
   * @description
   *
-  * Allows defining the set of characters that are allowed in AngularJS expressions. The function
+  * Allows defining the set of characters that are allowed in Angular expressions. The function
   * `identifierStart` will get called to know if a given character is a valid character to be the
   * first character for an identifier. The function `identifierContinue` will get called to know if
   * a given character is a valid character to be a follow-up identifier character. The functions
@@ -18020,8 +17276,15 @@ function $ParseProvider() {
             var lexer = new Lexer($parseOptions);
             var parser = new Parser(lexer, $filter, $parseOptions);
             parsedExpression = parser.parse(exp);
-
-            cache[cacheKey] = addWatchDelegate(parsedExpression);
+            if (parsedExpression.constant) {
+              parsedExpression.$$watchDelegate = constantWatchDelegate;
+            } else if (parsedExpression.oneTime) {
+              parsedExpression.$$watchDelegate = parsedExpression.literal ?
+                  oneTimeLiteralWatchDelegate : oneTimeWatchDelegate;
+            } else if (parsedExpression.inputs) {
+              parsedExpression.$$watchDelegate = inputsWatchDelegate;
+            }
+            cache[cacheKey] = parsedExpression;
           }
           return addInterceptor(parsedExpression, interceptorFn);
 
@@ -18109,48 +17372,57 @@ function $ParseProvider() {
     }
 
     function oneTimeWatchDelegate(scope, listener, objectEquality, parsedExpression, prettyPrintExpression) {
-      var isDone = parsedExpression.literal ? isAllDefined : isDefined;
       var unwatch, lastValue;
-
-      var exp = parsedExpression.$$intercepted || parsedExpression;
-      var post = parsedExpression.$$interceptor || identity;
-
-      var useInputs = parsedExpression.inputs && !exp.inputs;
-
-      // Propogate the literal/inputs/constant attributes
-      // ... but not oneTime since we are handling it
-      oneTimeWatch.literal = parsedExpression.literal;
-      oneTimeWatch.constant = parsedExpression.constant;
-      oneTimeWatch.inputs = parsedExpression.inputs;
-
-      // Allow other delegates to run on this wrapped expression
-      addWatchDelegate(oneTimeWatch);
-
-      unwatch = scope.$watch(oneTimeWatch, listener, objectEquality, prettyPrintExpression);
-
+      if (parsedExpression.inputs) {
+        unwatch = inputsWatchDelegate(scope, oneTimeListener, objectEquality, parsedExpression, prettyPrintExpression);
+      } else {
+        unwatch = scope.$watch(oneTimeWatch, oneTimeListener, objectEquality);
+      }
       return unwatch;
 
-      function unwatchIfDone() {
-        if (isDone(lastValue)) {
-          unwatch();
-        }
+      function oneTimeWatch(scope) {
+        return parsedExpression(scope);
       }
-
-      function oneTimeWatch(scope, locals, assign, inputs) {
-        lastValue = useInputs && inputs ? inputs[0] : exp(scope, locals, assign, inputs);
-        if (isDone(lastValue)) {
-          scope.$$postDigest(unwatchIfDone);
+      function oneTimeListener(value, old, scope) {
+        lastValue = value;
+        if (isFunction(listener)) {
+          listener(value, old, scope);
         }
-        return post(lastValue);
+        if (isDefined(value)) {
+          scope.$$postDigest(function() {
+            if (isDefined(lastValue)) {
+              unwatch();
+            }
+          });
+        }
       }
     }
 
-    function isAllDefined(value) {
-      var allDefined = true;
-      forEach(value, function(val) {
-        if (!isDefined(val)) allDefined = false;
-      });
-      return allDefined;
+    function oneTimeLiteralWatchDelegate(scope, listener, objectEquality, parsedExpression) {
+      var unwatch, lastValue;
+      unwatch = scope.$watch(function oneTimeWatch(scope) {
+        return parsedExpression(scope);
+      }, function oneTimeListener(value, old, scope) {
+        lastValue = value;
+        if (isFunction(listener)) {
+          listener(value, old, scope);
+        }
+        if (isAllDefined(value)) {
+          scope.$$postDigest(function() {
+            if (isAllDefined(lastValue)) unwatch();
+          });
+        }
+      }, objectEquality);
+
+      return unwatch;
+
+      function isAllDefined(value) {
+        var allDefined = true;
+        forEach(value, function(val) {
+          if (!isDefined(val)) allDefined = false;
+        });
+        return allDefined;
+      }
     }
 
     function constantWatchDelegate(scope, listener, objectEquality, parsedExpression) {
@@ -18161,74 +17433,49 @@ function $ParseProvider() {
       return unwatch;
     }
 
-    function addWatchDelegate(parsedExpression) {
-      if (parsedExpression.constant) {
-        parsedExpression.$$watchDelegate = constantWatchDelegate;
-      } else if (parsedExpression.oneTime) {
-        parsedExpression.$$watchDelegate = oneTimeWatchDelegate;
-      } else if (parsedExpression.inputs) {
-        parsedExpression.$$watchDelegate = inputsWatchDelegate;
-      }
-
-      return parsedExpression;
-    }
-
-    function chainInterceptors(first, second) {
-      function chainedInterceptor(value) {
-        return second(first(value));
-      }
-      chainedInterceptor.$stateful = first.$stateful || second.$stateful;
-      chainedInterceptor.$$pure = first.$$pure && second.$$pure;
-
-      return chainedInterceptor;
-    }
-
     function addInterceptor(parsedExpression, interceptorFn) {
       if (!interceptorFn) return parsedExpression;
-
-      // Extract any existing interceptors out of the parsedExpression
-      // to ensure the original parsedExpression is always the $$intercepted
-      if (parsedExpression.$$interceptor) {
-        interceptorFn = chainInterceptors(parsedExpression.$$interceptor, interceptorFn);
-        parsedExpression = parsedExpression.$$intercepted;
-      }
-
+      var watchDelegate = parsedExpression.$$watchDelegate;
       var useInputs = false;
 
-      var fn = function interceptedExpression(scope, locals, assign, inputs) {
+      var regularWatch =
+          watchDelegate !== oneTimeLiteralWatchDelegate &&
+          watchDelegate !== oneTimeWatchDelegate;
+
+      var fn = regularWatch ? function regularInterceptedExpression(scope, locals, assign, inputs) {
         var value = useInputs && inputs ? inputs[0] : parsedExpression(scope, locals, assign, inputs);
-        return interceptorFn(value);
+        return interceptorFn(value, scope, locals);
+      } : function oneTimeInterceptedExpression(scope, locals, assign, inputs) {
+        var value = parsedExpression(scope, locals, assign, inputs);
+        var result = interceptorFn(value, scope, locals);
+        // we only return the interceptor's result if the
+        // initial value is defined (for bind-once)
+        return isDefined(value) ? result : value;
       };
 
-      // Maintain references to the interceptor/intercepted
-      fn.$$intercepted = parsedExpression;
-      fn.$$interceptor = interceptorFn;
-
-      // Propogate the literal/oneTime/constant attributes
-      fn.literal = parsedExpression.literal;
-      fn.oneTime = parsedExpression.oneTime;
-      fn.constant = parsedExpression.constant;
-
-      // Treat the interceptor like filters.
-      // If it is not $stateful then only watch its inputs.
-      // If the expression itself has no inputs then use the full expression as an input.
-      if (!interceptorFn.$stateful) {
-        useInputs = !parsedExpression.inputs;
+      // Propagate $$watchDelegates other then inputsWatchDelegate
+      useInputs = !parsedExpression.inputs;
+      if (watchDelegate && watchDelegate !== inputsWatchDelegate) {
+        fn.$$watchDelegate = watchDelegate;
+        fn.inputs = parsedExpression.inputs;
+      } else if (!interceptorFn.$stateful) {
+        // Treat interceptor like filters - assume non-stateful by default and use the inputsWatchDelegate
+        fn.$$watchDelegate = inputsWatchDelegate;
         fn.inputs = parsedExpression.inputs ? parsedExpression.inputs : [parsedExpression];
+      }
 
-        if (!interceptorFn.$$pure) {
-          fn.inputs = fn.inputs.map(function(e) {
+      if (fn.inputs) {
+        fn.inputs = fn.inputs.map(function(e) {
               // Remove the isPure flag of inputs when it is not absolute because they are now wrapped in a
-              // non-pure interceptor function.
+              // potentially non-pure interceptor function.
               if (e.isPure === PURITY_RELATIVE) {
                 return function depurifier(s) { return e(s); };
               }
               return e;
             });
-        }
       }
 
-      return addWatchDelegate(fn);
+      return fn;
     }
   }];
 }
@@ -18415,7 +17662,7 @@ function $ParseProvider() {
  *  There are two main differences:
  *
  * - $q is integrated with the {@link ng.$rootScope.Scope} Scope model observation
- *   mechanism in AngularJS, which means faster propagation of resolution or rejection into your
+ *   mechanism in angular, which means faster propagation of resolution or rejection into your
  *   models and avoiding unnecessary browser repaints, which would result in flickering UI.
  * - Q has many more features than $q, but that comes at a cost of bytes. $q is tiny, but contains
  *   all the important functionality needed for common async tasks.
@@ -19041,7 +18288,6 @@ function $RootScopeProvider() {
       this.$$watchersCount = 0;
       this.$id = nextUid();
       this.$$ChildScope = null;
-      this.$$suspended = false;
     }
     ChildScope.prototype = parent;
     return ChildScope;
@@ -19129,7 +18375,6 @@ function $RootScopeProvider() {
                      this.$$childHead = this.$$childTail = null;
       this.$root = this;
       this.$$destroyed = false;
-      this.$$suspended = false;
       this.$$listeners = {};
       this.$$listenerCount = {};
       this.$$watchersCount = 0;
@@ -19249,8 +18494,8 @@ function $RootScopeProvider() {
        *   according to the {@link angular.equals} function. To save the value of the object for
        *   later comparison, the {@link angular.copy} function is used. This therefore means that
        *   watching complex objects will have adverse memory and performance implications.
-       * - This should not be used to watch for changes in objects that are (or contain)
-       *   [File](https://developer.mozilla.org/docs/Web/API/File) objects due to limitations with {@link angular.copy `angular.copy`}.
+       * - This should not be used to watch for changes in objects that are
+       *   or contain [File](https://developer.mozilla.org/docs/Web/API/File) objects due to limitations with {@link angular.copy `angular.copy`}.
        * - The watch `listener` may change the model, which may trigger other `listener`s to fire.
        *   This is achieved by rerunning the watchers until no changes are detected. The rerun
        *   iteration limit is 10 to prevent an infinite loop deadlock.
@@ -19398,6 +18643,12 @@ function $RootScopeProvider() {
        *   values are examined for changes on every call to `$digest`.
        * - The `listener` is called whenever any expression in the `watchExpressions` array changes.
        *
+       * `$watchGroup` is more performant than watching each expression individually, and should be
+       * used when the listener does not need to know which expression has changed.
+       * If the listener needs to know which expression has changed,
+       * {@link ng.$rootScope.Scope#$watch $watch()} or
+       * {@link ng.$rootScope.Scope#$watchCollection $watchCollection()} should be used.
+       *
        * @param {Array.<string|Function(scope)>} watchExpressions Array of expressions that will be individually
        * watched using {@link ng.$rootScope.Scope#$watch $watch()}
        *
@@ -19406,7 +18657,34 @@ function $RootScopeProvider() {
        *    The `newValues` array contains the current values of the `watchExpressions`, with the indexes matching
        *    those of `watchExpression`
        *    and the `oldValues` array contains the previous values of the `watchExpressions`, with the indexes matching
-       *    those of `watchExpression`
+       *    those of `watchExpression`.
+       *
+       *    Note that `newValues` and `oldValues` reflect the differences in each **individual**
+       *    expression, and not the difference of the values between each call of the listener.
+       *    That means the difference between `newValues` and `oldValues` cannot be used to determine
+       *    which expression has changed / remained stable:
+       *
+       *    ```js
+       *
+       *    $scope.$watchGroup(['v1', 'v2'], function(newValues, oldValues) {
+       *      console.log(newValues, oldValues);
+       *    });
+       *
+       *    // newValues, oldValues initially
+       *    // [undefined, undefined], [undefined, undefined]
+       *
+       *    $scope.v1 = 'a';
+       *    $scope.v2 = 'a';
+       *
+       *    // ['a', 'a'], [undefined, undefined]
+       *
+       *    $scope.v2 = 'b'
+       *
+       *    // v1 hasn't changed since it became `'a'`, therefore its oldValue is still `undefined`
+       *    // ['a', 'b'], [undefined, 'a']
+       *
+       *    ```
+       *
        *    The `scope` refers to the current scope.
        * @returns {function()} Returns a de-registration function for all listeners.
        */
@@ -19439,8 +18717,9 @@ function $RootScopeProvider() {
         }
 
         forEach(watchExpressions, function(expr, i) {
-          var unwatchFn = self.$watch(expr, function watchGroupSubAction(value) {
+          var unwatchFn = self.$watch(expr, function watchGroupSubAction(value, oldValue) {
             newValues[i] = value;
+            oldValues[i] = oldValue;
             if (!changeReactionScheduled) {
               changeReactionScheduled = true;
               self.$evalAsync(watchGroupAction);
@@ -19452,17 +18731,11 @@ function $RootScopeProvider() {
         function watchGroupAction() {
           changeReactionScheduled = false;
 
-          try {
-            if (firstRun) {
-              firstRun = false;
-              listener(newValues, newValues, self);
-            } else {
-              listener(newValues, oldValues, self);
-            }
-          } finally {
-            for (var i = 0; i < watchExpressions.length; i++) {
-              oldValues[i] = newValues[i];
-            }
+          if (firstRun) {
+            firstRun = false;
+            listener(newValues, newValues, self);
+          } else {
+            listener(newValues, oldValues, self);
           }
         }
 
@@ -19530,11 +18803,7 @@ function $RootScopeProvider() {
        *    de-registration function is executed, the internal watch operation is terminated.
        */
       $watchCollection: function(obj, listener) {
-        // Mark the interceptor as
-        // ... $$pure when literal since the instance will change when any input changes
-        $watchCollectionInterceptor.$$pure = $parse(obj).literal;
-        // ... $stateful when non-literal since we must read the state of the collection
-        $watchCollectionInterceptor.$stateful = !$watchCollectionInterceptor.$$pure;
+        $watchCollectionInterceptor.$stateful = true;
 
         var self = this;
         // the current value, updated on each dirty-check run
@@ -19722,7 +18991,7 @@ function $RootScopeProvider() {
         var watch, value, last, fn, get,
             watchers,
             dirty, ttl = TTL,
-            next, current, target = asyncQueue.length ? $rootScope : this,
+            next, current, target = this,
             watchLog = [],
             logIdx, asyncTask;
 
@@ -19760,7 +19029,7 @@ function $RootScopeProvider() {
 
           traverseScopesLoop:
           do { // "traverse the scopes" loop
-            if ((watchers = !current.$$suspended && current.$$watchers)) {
+            if ((watchers = current.$$watchers)) {
               // process our watches
               watchers.$$digestWatchIndex = watchers.length;
               while (watchers.$$digestWatchIndex--) {
@@ -19804,9 +19073,7 @@ function $RootScopeProvider() {
             // Insanity Warning: scope depth-first traversal
             // yes, this code is a bit crazy, but it works and we have tests to prove it!
             // this piece should be kept in sync with the traversal in $broadcast
-            // (though it differs due to having the extra check for $$suspended and does not
-            // check $$listenerCount)
-            if (!(next = ((!current.$$suspended && current.$$watchersCount && current.$$childHead) ||
+            if (!(next = ((current.$$watchersCount && current.$$childHead) ||
                 (current !== target && current.$$nextSibling)))) {
               while (current !== target && !(next = current.$$nextSibling)) {
                 current = current.$parent;
@@ -19843,95 +19110,6 @@ function $RootScopeProvider() {
         $browser.$$checkUrlChange();
       },
 
-      /**
-       * @ngdoc method
-       * @name $rootScope.Scope#$suspend
-       * @kind function
-       *
-       * @description
-       * Suspend watchers of this scope subtree so that they will not be invoked during digest.
-       *
-       * This can be used to optimize your application when you know that running those watchers
-       * is redundant.
-       *
-       * **Warning**
-       *
-       * Suspending scopes from the digest cycle can have unwanted and difficult to debug results.
-       * Only use this approach if you are confident that you know what you are doing and have
-       * ample tests to ensure that bindings get updated as you expect.
-       *
-       * Some of the things to consider are:
-       *
-       * * Any external event on a directive/component will not trigger a digest while the hosting
-       *   scope is suspended - even if the event handler calls `$apply()` or `$rootScope.$digest()`.
-       * * Transcluded content exists on a scope that inherits from outside a directive but exists
-       *   as a child of the directive's containing scope. If the containing scope is suspended the
-       *   transcluded scope will also be suspended, even if the scope from which the transcluded
-       *   scope inherits is not suspended.
-       * * Multiple directives trying to manage the suspended status of a scope can confuse each other:
-       *    * A call to `$suspend()` on an already suspended scope is a no-op.
-       *    * A call to `$resume()` on a non-suspended scope is a no-op.
-       *    * If two directives suspend a scope, then one of them resumes the scope, the scope will no
-       *      longer be suspended. This could result in the other directive believing a scope to be
-       *      suspended when it is not.
-       * * If a parent scope is suspended then all its descendants will be also excluded from future
-       *   digests whether or not they have been suspended themselves. Note that this also applies to
-       *   isolate child scopes.
-       * * Calling `$digest()` directly on a descendant of a suspended scope will still run the watchers
-       *   for that scope and its descendants. When digesting we only check whether the current scope is
-       *   locally suspended, rather than checking whether it has a suspended ancestor.
-       * * Calling `$resume()` on a scope that has a suspended ancestor will not cause the scope to be
-       *   included in future digests until all its ancestors have been resumed.
-       * * Resolved promises, e.g. from explicit `$q` deferreds and `$http` calls, trigger `$apply()`
-       *   against the `$rootScope` and so will still trigger a global digest even if the promise was
-       *   initiated by a component that lives on a suspended scope.
-       */
-      $suspend: function() {
-        this.$$suspended = true;
-      },
-
-      /**
-       * @ngdoc method
-       * @name $rootScope.Scope#$isSuspended
-       * @kind function
-       *
-       * @description
-       * Call this method to determine if this scope has been explicitly suspended. It will not
-       * tell you whether an ancestor has been suspended.
-       * To determine if this scope will be excluded from a digest triggered at the $rootScope,
-       * for example, you must check all its ancestors:
-       *
-       * ```
-       * function isExcludedFromDigest(scope) {
-       *   while(scope) {
-       *     if (scope.$isSuspended()) return true;
-       *     scope = scope.$parent;
-       *   }
-       *   return false;
-       * ```
-       *
-       * Be aware that a scope may not be included in digests if it has a suspended ancestor,
-       * even if `$isSuspended()` returns false.
-       *
-       * @returns true if the current scope has been suspended.
-       */
-      $isSuspended: function() {
-        return this.$$suspended;
-      },
-
-      /**
-       * @ngdoc method
-       * @name $rootScope.Scope#$resume
-       * @kind function
-       *
-       * @description
-       * Resume watchers of this scope subtree in case it was suspended.
-       *
-       * See {@link $rootScope.Scope#$suspend} for information about the dangers of using this approach.
-       */
-      $resume: function() {
-        this.$$suspended = false;
-      },
 
       /**
        * @ngdoc event
@@ -20009,7 +19187,7 @@ function $RootScopeProvider() {
        *
        * @description
        * Executes the `expression` on the current scope and returns the result. Any exceptions in
-       * the expression are propagated (uncaught). This is useful when evaluating AngularJS
+       * the expression are propagated (uncaught). This is useful when evaluating Angular
        * expressions.
        *
        * @example
@@ -20022,7 +19200,7 @@ function $RootScopeProvider() {
            expect(scope.$eval(function(scope){ return scope.a + scope.b; })).toEqual(3);
        * ```
        *
-       * @param {(string|function())=} expression An AngularJS expression to be executed.
+       * @param {(string|function())=} expression An angular expression to be executed.
        *
        *    - `string`: execute using the rules as defined in  {@link guide/expression expression}.
        *    - `function(scope)`: execute the function with the current `scope` parameter.
@@ -20057,7 +19235,7 @@ function $RootScopeProvider() {
        * will be scheduled. However, it is encouraged to always call code that changes the model
        * from within an `$apply` call. That includes code evaluated via `$evalAsync`.
        *
-       * @param {(string|function())=} expression An AngularJS expression to be executed.
+       * @param {(string|function())=} expression An angular expression to be executed.
        *
        *    - `string`: execute using the rules as defined in {@link guide/expression expression}.
        *    - `function(scope)`: execute the function with the current `scope` parameter.
@@ -20072,7 +19250,7 @@ function $RootScopeProvider() {
             if (asyncQueue.length) {
               $rootScope.$digest();
             }
-          }, null, '$evalAsync');
+          });
         }
 
         asyncQueue.push({scope: this, fn: $parse(expr), locals: locals});
@@ -20088,9 +19266,9 @@ function $RootScopeProvider() {
        * @kind function
        *
        * @description
-       * `$apply()` is used to execute an expression in AngularJS from outside of the AngularJS
+       * `$apply()` is used to execute an expression in angular from outside of the angular
        * framework. (For example from browser DOM events, setTimeout, XHR or third party libraries).
-       * Because we are calling into the AngularJS framework we need to perform proper scope life
+       * Because we are calling into the angular framework we need to perform proper scope life
        * cycle of {@link ng.$exceptionHandler exception handling},
        * {@link ng.$rootScope.Scope#$digest executing watches}.
        *
@@ -20119,7 +19297,7 @@ function $RootScopeProvider() {
        *    expression was executed using the {@link ng.$rootScope.Scope#$digest $digest()} method.
        *
        *
-       * @param {(string|function())=} exp An AngularJS expression to be executed.
+       * @param {(string|function())=} exp An angular expression to be executed.
        *
        *    - `string`: execute using the rules as defined in {@link guide/expression expression}.
        *    - `function(scope)`: execute the function with current `scope` parameter.
@@ -20159,7 +19337,7 @@ function $RootScopeProvider() {
        * This can be used to queue up multiple expressions which need to be evaluated in the same
        * digest.
        *
-       * @param {(string|function())=} exp An AngularJS expression to be executed.
+       * @param {(string|function())=} exp An angular expression to be executed.
        *
        *    - `string`: execute using the rules as defined in {@link guide/expression expression}.
        *    - `function(scope)`: execute the function with current `scope` parameter.
@@ -20367,8 +19545,7 @@ function $RootScopeProvider() {
           // Insanity Warning: scope depth-first traversal
           // yes, this code is a bit crazy, but it works and we have tests to prove it!
           // this piece should be kept in sync with the traversal in $digest
-          // (though it differs due to having the extra check for $$listenerCount and
-          // does not check $$suspended)
+          // (though it differs due to having the extra check for $$listenerCount)
           if (!(next = ((current.$$listenerCount[name] && current.$$childHead) ||
               (current !== target && current.$$nextSibling)))) {
             while (current !== target && !(next = current.$$nextSibling)) {
@@ -20443,7 +19620,7 @@ function $RootScopeProvider() {
       if (applyAsyncId === null) {
         applyAsyncId = $browser.defer(function() {
           $rootScope.$apply(flushApplyAsync);
-        }, null, '$applyAsync');
+        });
       }
     }
   }];
@@ -20454,7 +19631,7 @@ function $RootScopeProvider() {
  * @name $rootElement
  *
  * @description
- * The root element of AngularJS application. This is either the element where {@link
+ * The root element of Angular application. This is either the element where {@link
  * ng.directive:ngApp ngApp} was declared or the element passed into
  * {@link angular.bootstrap}. The element represents the root element of application. It is also the
  * location where the application's {@link auto.$injector $injector} service gets
@@ -20470,7 +19647,6 @@ function $RootScopeProvider() {
  * Private service to sanitize uris for links and images. Used by $compile and $sanitize.
  */
 function $$SanitizeUriProvider() {
-
   var aHrefSanitizationWhitelist = /^\s*(https?|s?ftp|mailto|tel|file):/,
     imgSrcSanitizationWhitelist = /^\s*((https?|ftp|file|blob):|data:image\/)/;
 
@@ -20479,16 +19655,12 @@ function $$SanitizeUriProvider() {
    * Retrieves or overrides the default regular expression that is used for whitelisting of safe
    * urls during a[href] sanitization.
    *
-   * The sanitization is a security measure aimed at prevent XSS attacks via HTML anchor links.
+   * The sanitization is a security measure aimed at prevent XSS attacks via html links.
    *
-   * Any url due to be assigned to an `a[href]` attribute via interpolation is marked as requiring
-   * the $sce.URL security context. When interpolation occurs a call is made to `$sce.trustAsUrl(url)`
-   * which in turn may call `$$sanitizeUri(url, isMedia)` to sanitize the potentially malicious URL.
-   *
-   * If the URL matches the `aHrefSanitizationWhitelist` regular expression, it is returned unchanged.
-   *
-   * If there is no match the URL is returned prefixed with `'unsafe:'` to ensure that when it is written
-   * to the DOM it is inactive and potentially malicious code will not be executed.
+   * Any url about to be assigned to a[href] via data-binding is first normalized and turned into
+   * an absolute url. Afterwards, the url is matched against the `aHrefSanitizationWhitelist`
+   * regular expression. If a match is found, the original url is written into the dom. Otherwise,
+   * the absolute url is prefixed with `'unsafe:'` string and only then is it written into the DOM.
    *
    * @param {RegExp=} regexp New regexp to whitelist urls with.
    * @returns {RegExp|ng.$compileProvider} Current RegExp if called without value or self for
@@ -20508,17 +19680,12 @@ function $$SanitizeUriProvider() {
    * Retrieves or overrides the default regular expression that is used for whitelisting of safe
    * urls during img[src] sanitization.
    *
-   * The sanitization is a security measure aimed at prevent XSS attacks via HTML image src links.
+   * The sanitization is a security measure aimed at prevent XSS attacks via html links.
    *
-   * Any URL due to be assigned to an `img[src]` attribute via interpolation is marked as requiring
-   * the $sce.MEDIA_URL security context. When interpolation occurs a call is made to
-   * `$sce.trustAsMediaUrl(url)` which in turn may call `$$sanitizeUri(url, isMedia)` to sanitize
-   * the potentially malicious URL.
-   *
-   * If the URL matches the `aImgSanitizationWhitelist` regular expression, it is returned unchanged.
-   *
-   * If there is no match the URL is returned prefixed with `'unsafe:'` to ensure that when it is written
-   * to the DOM it is inactive and potentially malicious code will not be executed.
+   * Any url about to be assigned to img[src] via data-binding is first normalized and turned into
+   * an absolute url. Afterwards, the url is matched against the `imgSrcSanitizationWhitelist`
+   * regular expression. If a match is found, the original url is written into the dom. Otherwise,
+   * the absolute url is prefixed with `'unsafe:'` string and only then is it written into the DOM.
    *
    * @param {RegExp=} regexp New regexp to whitelist urls with.
    * @returns {RegExp|ng.$compileProvider} Current RegExp if called without value or self for
@@ -20533,10 +19700,10 @@ function $$SanitizeUriProvider() {
   };
 
   this.$get = function() {
-    return function sanitizeUri(uri, isMediaUrl) {
-      // if (!uri) return uri;
-      var regex = isMediaUrl ? imgSrcSanitizationWhitelist : aHrefSanitizationWhitelist;
-      var normalizedVal = urlResolve(uri && uri.trim()).href;
+    return function sanitizeUri(uri, isImage) {
+      var regex = isImage ? imgSrcSanitizationWhitelist : aHrefSanitizationWhitelist;
+      var normalizedVal;
+      normalizedVal = urlResolve(uri && uri.trim()).href;
       if (normalizedVal !== '' && !normalizedVal.match(regex)) {
         return 'unsafe:' + normalizedVal;
       }
@@ -20567,17 +19734,12 @@ var SCE_CONTEXTS = {
   // Style statements or stylesheets. Currently unused in AngularJS.
   CSS: 'css',
 
-  // An URL used in a context where it refers to the source of media, which are not expected to be run
-  // as scripts, such as an image, audio, video, etc.
-  MEDIA_URL: 'mediaUrl',
-
-  // An URL used in a context where it does not refer to a resource that loads code.
-  // A value that can be trusted as a URL can also trusted as a MEDIA_URL.
+  // An URL used in a context where it does not refer to a resource that loads code. Currently
+  // unused in AngularJS.
   URL: 'url',
 
   // RESOURCE_URL is a subtype of URL used where the referred-to resource could be interpreted as
   // code. (e.g. ng-include, script src binding, templateUrl)
-  // A value that can be trusted as a RESOURCE_URL, can also trusted as a URL and a MEDIA_URL.
   RESOURCE_URL: 'resourceUrl',
 
   // Script. Currently unused in AngularJS.
@@ -20686,7 +19848,7 @@ function adjustMatchers(matchers) {
  * and
  * {@link ng.$sceDelegateProvider#resourceUrlBlacklist $sceDelegateProvider.resourceUrlBlacklist},
  *
- * For the general details about this service in AngularJS, read the main page for {@link ng.$sce
+ * For the general details about this service in Angular, read the main page for {@link ng.$sce
  * Strict Contextual Escaping (SCE)}.
  *
  * **Example**:  Consider the following case. <a name="example"></a>
@@ -20792,7 +19954,7 @@ function $SceDelegateProvider() {
     return resourceUrlBlacklist;
   };
 
-  this.$get = ['$injector', '$$sanitizeUri', function($injector, $$sanitizeUri) {
+  this.$get = ['$injector', function($injector) {
 
     var htmlSanitizer = function htmlSanitizer(html) {
       throw $sceMinErr('unsafe', 'Attempting to use an unsafe value in a safe context.');
@@ -20805,7 +19967,7 @@ function $SceDelegateProvider() {
 
     function matchUrl(matcher, parsedUrl) {
       if (matcher === 'self') {
-        return urlIsSameOrigin(parsedUrl) || urlIsSameOriginAsBaseUrl(parsedUrl);
+        return urlIsSameOrigin(parsedUrl);
       } else {
         // definitely a regex.  See adjustMatchers()
         return !!matcher.exec(parsedUrl.href);
@@ -20857,8 +20019,7 @@ function $SceDelegateProvider() {
 
     byType[SCE_CONTEXTS.HTML] = generateHolderType(trustedValueHolderBase);
     byType[SCE_CONTEXTS.CSS] = generateHolderType(trustedValueHolderBase);
-    byType[SCE_CONTEXTS.MEDIA_URL] = generateHolderType(trustedValueHolderBase);
-    byType[SCE_CONTEXTS.URL] = generateHolderType(byType[SCE_CONTEXTS.MEDIA_URL]);
+    byType[SCE_CONTEXTS.URL] = generateHolderType(trustedValueHolderBase);
     byType[SCE_CONTEXTS.JS] = generateHolderType(trustedValueHolderBase);
     byType[SCE_CONTEXTS.RESOURCE_URL] = generateHolderType(byType[SCE_CONTEXTS.URL]);
 
@@ -20937,27 +20098,15 @@ function $SceDelegateProvider() {
      * @name $sceDelegate#getTrusted
      *
      * @description
-     * Given an object and a security context in which to assign it, returns a value that's safe to
-     * use in this context, which was represented by the parameter. To do so, this function either
-     * unwraps the safe type it has been given (for instance, a {@link ng.$sceDelegate#trustAs
-     * `$sceDelegate.trustAs`} result), or it might try to sanitize the value given, depending on
-     * the context and sanitizer availablility.
+     * Takes any input, and either returns a value that's safe to use in the specified context, or
+     * throws an exception.
      *
-     * The contexts that can be sanitized are $sce.MEDIA_URL, $sce.URL and $sce.HTML. The first two are available
-     * by default, and the third one relies on the `$sanitize` service (which may be loaded through
-     * the `ngSanitize` module). Furthermore, for $sce.RESOURCE_URL context, a plain string may be
-     * accepted if the resource url policy defined by {@link ng.$sceDelegateProvider#resourceUrlWhitelist
-     * `$sceDelegateProvider.resourceUrlWhitelist`} and {@link ng.$sceDelegateProvider#resourceUrlBlacklist
-     * `$sceDelegateProvider.resourceUrlBlacklist`} accepts that resource.
-     *
-     * This function will throw if the safe type isn't appropriate for this context, or if the
-     * value given cannot be accepted in the context (which might be caused by sanitization not
-     * being available, or the value not being recognized as safe).
-     *
-     * <div class="alert alert-danger">
-     * Disabling auto-escaping is extremely dangerous, it usually creates a Cross Site Scripting
-     * (XSS) vulnerability in your application.
-     * </div>
+     * In practice, there are several cases. When given a string, this function runs checks
+     * and sanitization to make it safe without prior assumptions. When given the result of a {@link
+     * ng.$sceDelegate#trustAs `$sceDelegate.trustAs`} call, it returns the originally supplied
+     * value if that value's context is valid for this call's context. Finally, this function can
+     * also throw when there is no way to turn `maybeTrusted` in a safe value (e.g., no sanitization
+     * is available or possible.)
      *
      * @param {string} type The context in which this value is to be used (such as `$sce.HTML`).
      * @param {*} maybeTrusted The result of a prior {@link ng.$sceDelegate#trustAs
@@ -20975,18 +20124,12 @@ function $SceDelegateProvider() {
       if (constructor && maybeTrusted instanceof constructor) {
         return maybeTrusted.$$unwrapTrustedValue();
       }
-
-      // If maybeTrusted is a trusted class instance but not of the correct trusted type
-      // then unwrap it and allow it to pass through to the rest of the checks
-      if (isFunction(maybeTrusted.$$unwrapTrustedValue)) {
-        maybeTrusted = maybeTrusted.$$unwrapTrustedValue();
-      }
-
-      // If we get here, then we will either sanitize the value or throw an exception.
-      if (type === SCE_CONTEXTS.MEDIA_URL || type === SCE_CONTEXTS.URL) {
-        // we attempt to sanitize non-resource URLs
-        return $$sanitizeUri(maybeTrusted.toString(), type === SCE_CONTEXTS.MEDIA_URL);
-      } else if (type === SCE_CONTEXTS.RESOURCE_URL) {
+      // Otherwise, if we get here, then we may either make it safe, or throw an exception. This
+      // depends on the context: some are sanitizatible (HTML), some use whitelists (RESOURCE_URL),
+      // some are impossible to do (JS). This step isn't implemented for CSS and URL, as AngularJS
+      // has no corresponding sinks.
+      if (type === SCE_CONTEXTS.RESOURCE_URL) {
+        // RESOURCE_URL uses a whitelist.
         if (isResourceUrlAllowedByPolicy(maybeTrusted)) {
           return maybeTrusted;
         } else {
@@ -21120,7 +20263,7 @@ function $SceDelegateProvider() {
  * This applies both to the {@link ng.directive:ngInclude `ng-include`} directive as well as
  * `templateUrl`'s specified by {@link guide/directive directives}.
  *
- * By default, AngularJS only loads templates from the same domain and protocol as the application
+ * By default, Angular only loads templates from the same domain and protocol as the application
  * document.  This is done by calling {@link ng.$sce#getTrustedResourceUrl
  * $sce.getTrustedResourceUrl} on the template URL.  To load templates from other domains and/or
  * protocols, you may either {@link ng.$sceDelegateProvider#resourceUrlWhitelist whitelist
@@ -21141,10 +20284,9 @@ function $SceDelegateProvider() {
  *
  * If your expressions are constant literals, they're automatically trusted and you don't need to
  * call `$sce.trustAs` on them (e.g.
- * `<div ng-bind-html="'<b>implicitly trusted</b>'"></div>`) just works (remember to include the
- * `ngSanitize` module). The `$sceDelegate` will also use the `$sanitize` service if it is available
- * when binding untrusted values to `$sce.HTML` context.
- * AngularJS provides an implementation in `angular-sanitize.js`, and if you
+ * `<div ng-bind-html="'<b>implicitly trusted</b>'"></div>`) just works. The `$sceDelegate` will
+ * also use the `$sanitize` service if it is available when binding untrusted values to
+ * `$sce.HTML` context. AngularJS provides an implementation in `angular-sanitize.js`, and if you
  * wish to use it, you will also need to depend on the {@link ngSanitize `ngSanitize`} module in
  * your application.
  *
@@ -21164,27 +20306,17 @@ function $SceDelegateProvider() {
  *
  * | Context             | Notes          |
  * |---------------------|----------------|
- * | `$sce.HTML`         | For HTML that's safe to source into the application.  The {@link ng.directive:ngBindHtml ngBindHtml} directive uses this context for bindings. If an unsafe value is encountered and the {@link ngSanitize $sanitize} module is present this will sanitize the value instead of throwing an error. |
- * | `$sce.CSS`          | For CSS that's safe to source into the application.  Currently unused.  Feel free to use it in your own directives. |
- * | `$sce.MEDIA_URL`    | For URLs that are safe to render as media. Is automatically converted from string by sanitizing when needed. |
- * | `$sce.URL`          | For URLs that are safe to follow as links. Is automatically converted from string by sanitizing when needed. Note that `$sce.URL` makes a stronger statement about the URL than `$sce.MEDIA_URL` does and therefore contexts requiring values trusted for `$sce.URL` can be used anywhere that values trusted for `$sce.MEDIA_URL` are required.|
- * | `$sce.RESOURCE_URL` | For URLs that are not only safe to follow as links, but whose contents are also safe to include in your application.  Examples include `ng-include`, `src` / `ngSrc` bindings for tags other than `IMG` (e.g. `IFRAME`, `OBJECT`, etc.)  <br><br>Note that `$sce.RESOURCE_URL` makes a stronger statement about the URL than `$sce.URL` or `$sce.MEDIA_URL` do and therefore contexts requiring values trusted for `$sce.RESOURCE_URL` can be used anywhere that values trusted for `$sce.URL` or `$sce.MEDIA_URL` are required. <br><br> The {@link $sceDelegateProvider#resourceUrlWhitelist $sceDelegateProvider#resourceUrlWhitelist()} and {@link $sceDelegateProvider#resourceUrlBlacklist $sceDelegateProvider#resourceUrlBlacklist()} can be used to restrict trusted origins for `RESOURCE_URL` |
- * | `$sce.JS`           | For JavaScript that is safe to execute in your application's context.  Currently unused.  Feel free to use it in your own directives. |
+ * | `$sce.HTML`         | For HTML that's safe to source into the application.  The {@link ng.directive:ngBindHtml ngBindHtml} directive uses this context for bindings. If an unsafe value is encountered, and the {@link ngSanitize.$sanitize $sanitize} service is available (implemented by the {@link ngSanitize ngSanitize} module) this will sanitize the value instead of throwing an error. |
+ * | `$sce.CSS`          | For CSS that's safe to source into the application.  Currently, no bindings require this context. Feel free to use it in your own directives. |
+ * | `$sce.URL`          | For URLs that are safe to follow as links.  Currently unused (`<a href=`, `<img src=`, and some others sanitize their urls and don't constitute an SCE context.) |
+ * | `$sce.RESOURCE_URL` | For URLs that are not only safe to follow as links, but whose contents are also safe to include in your application.  Examples include `ng-include`, `src` / `ngSrc` bindings for tags other than `IMG`, `VIDEO`, `AUDIO`, `SOURCE`, and `TRACK` (e.g. `IFRAME`, `OBJECT`, etc.)  <br><br>Note that `$sce.RESOURCE_URL` makes a stronger statement about the URL than `$sce.URL` does (it's not just the URL that matters, but also what is at the end of it), and therefore contexts requiring values trusted for `$sce.RESOURCE_URL` can be used anywhere that values trusted for `$sce.URL` are required. |
+ * | `$sce.JS`           | For JavaScript that is safe to execute in your application's context.  Currently, no bindings require this context.  Feel free to use it in your own directives. |
  *
  *
- * <div class="alert alert-warning">
- * Be aware that, before AngularJS 1.7.0, `a[href]` and `img[src]` used to sanitize their
- * interpolated values directly rather than rely upon {@link ng.$sce#getTrusted `$sce.getTrusted`}.
- *
- * **As of 1.7.0, this is no longer the case.**
- *
- * Now such interpolations are marked as requiring `$sce.URL` (for `a[href]`) or `$sce.MEDIA_URL`
- * (for `img[src]`), so that the sanitization happens (via `$sce.getTrusted...`) when the `$interpolate`
- * service evaluates the expressions.
- * </div>
- *
- * There are no CSS or JS context bindings in AngularJS currently, so their corresponding `$sce.trustAs`
- * functions aren't useful yet. This might evolve.
+ * Be aware that `a[href]` and `img[src]` automatically sanitize their URLs and do not pass them
+ * through {@link ng.$sce#getTrusted $sce.getTrusted}. There's no CSS-, URL-, or JS-context bindings
+ * in AngularJS currently, so their corresponding `$sce.trustAs` functions aren't useful yet. This
+ * might evolve.
  *
  * ### Format of items in {@link ng.$sceDelegateProvider#resourceUrlWhitelist resourceUrlWhitelist}/{@link ng.$sceDelegateProvider#resourceUrlBlacklist Blacklist} <a name="resourceUrlPatternItem"></a>
  *
@@ -21358,7 +20490,7 @@ function $SceProvider() {
    *     such a value.
    *
    * - getTrusted(contextEnum, value)
-   *     This function should return the value that is safe to use in the context specified by
+   *     This function should return the a value that is safe to use in the context specified by
    *     contextEnum or throw and exception otherwise.
    *
    * NOTE: This contract deliberately does NOT state that values returned by trustAs() must be
@@ -21428,7 +20560,7 @@ function $SceProvider() {
      * @name $sce#parseAs
      *
      * @description
-     * Converts AngularJS {@link guide/expression expression} into a function.  This is like {@link
+     * Converts Angular {@link guide/expression expression} into a function.  This is like {@link
      * ng.$parse $parse} and is identical when the expression is a literal constant.  Otherwise, it
      * wraps the expression in a call to {@link ng.$sce#getTrusted $sce.getTrusted(*type*,
      * *result*)}
@@ -21810,128 +20942,7 @@ function $SnifferProvider() {
   }];
 }
 
-/**
- * ! This is a private undocumented service !
- *
- * @name $$taskTrackerFactory
- * @description
- * A function to create `TaskTracker` instances.
- *
- * A `TaskTracker` can keep track of pending tasks (grouped by type) and can notify interested
- * parties when all pending tasks (or tasks of a specific type) have been completed.
- *
- * @param {$log} log - A logger instance (such as `$log`). Used to log error during callback
- *     execution.
- *
- * @this
- */
-function $$TaskTrackerFactoryProvider() {
-  this.$get = valueFn(function(log) { return new TaskTracker(log); });
-}
-
-function TaskTracker(log) {
-  var self = this;
-  var taskCounts = {};
-  var taskCallbacks = [];
-
-  var ALL_TASKS_TYPE = self.ALL_TASKS_TYPE = '$$all$$';
-  var DEFAULT_TASK_TYPE = self.DEFAULT_TASK_TYPE = '$$default$$';
-
-  /**
-   * Execute the specified function and decrement the appropriate `taskCounts` counter.
-   * If the counter reaches 0, all corresponding `taskCallbacks` are executed.
-   *
-   * @param {Function} fn - The function to execute.
-   * @param {string=} [taskType=DEFAULT_TASK_TYPE] - The type of task that is being completed.
-   */
-  self.completeTask = completeTask;
-
-  /**
-   * Increase the task count for the specified task type (or the default task type if non is
-   * specified).
-   *
-   * @param {string=} [taskType=DEFAULT_TASK_TYPE] - The type of task whose count will be increased.
-   */
-  self.incTaskCount = incTaskCount;
-
-  /**
-   * Execute the specified callback when all pending tasks have been completed.
-   *
-   * If there are no pending tasks, the callback is executed immediately. You can optionally limit
-   * the tasks that will be waited for to a specific type, by passing a `taskType`.
-   *
-   * @param {function} callback - The function to call when there are no pending tasks.
-   * @param {string=} [taskType=ALL_TASKS_TYPE] - The type of tasks that will be waited for.
-   */
-  self.notifyWhenNoPendingTasks = notifyWhenNoPendingTasks;
-
-  function completeTask(fn, taskType) {
-    taskType = taskType || DEFAULT_TASK_TYPE;
-
-    try {
-      fn();
-    } finally {
-      decTaskCount(taskType);
-
-      var countForType = taskCounts[taskType];
-      var countForAll = taskCounts[ALL_TASKS_TYPE];
-
-      // If at least one of the queues (`ALL_TASKS_TYPE` or `taskType`) is empty, run callbacks.
-      if (!countForAll || !countForType) {
-        var getNextCallback = !countForAll ? getLastCallback : getLastCallbackForType;
-        var nextCb;
-
-        while ((nextCb = getNextCallback(taskType))) {
-          try {
-            nextCb();
-          } catch (e) {
-            log.error(e);
-          }
-        }
-      }
-    }
-  }
-
-  function decTaskCount(taskType) {
-    taskType = taskType || DEFAULT_TASK_TYPE;
-    if (taskCounts[taskType]) {
-      taskCounts[taskType]--;
-      taskCounts[ALL_TASKS_TYPE]--;
-    }
-  }
-
-  function getLastCallback() {
-    var cbInfo = taskCallbacks.pop();
-    return cbInfo && cbInfo.cb;
-  }
-
-  function getLastCallbackForType(taskType) {
-    for (var i = taskCallbacks.length - 1; i >= 0; --i) {
-      var cbInfo = taskCallbacks[i];
-      if (cbInfo.type === taskType) {
-        taskCallbacks.splice(i, 1);
-        return cbInfo.cb;
-      }
-    }
-  }
-
-  function incTaskCount(taskType) {
-    taskType = taskType || DEFAULT_TASK_TYPE;
-    taskCounts[taskType] = (taskCounts[taskType] || 0) + 1;
-    taskCounts[ALL_TASKS_TYPE] = (taskCounts[ALL_TASKS_TYPE] || 0) + 1;
-  }
-
-  function notifyWhenNoPendingTasks(callback, taskType) {
-    taskType = taskType || ALL_TASKS_TYPE;
-    if (!taskCounts[taskType]) {
-      callback();
-    } else {
-      taskCallbacks.push({type: taskType, cb: callback});
-    }
-  }
-}
-
-var $templateRequestMinErr = minErr('$templateRequest');
+var $templateRequestMinErr = minErr('$compile');
 
 /**
  * @ngdoc provider
@@ -22005,7 +21016,7 @@ function $TemplateRequestProvider() {
 
         // We consider the template cache holds only trusted templates, so
         // there's no need to go through whitelisting again for keys that already
-        // are included in there. This also makes AngularJS accept any script
+        // are included in there. This also makes Angular accept any script
         // directive, no matter its name. However, we still need to unwrap trusted
         // types.
         if (!isString(tpl) || isUndefined($templateCache.get(tpl))) {
@@ -22030,7 +21041,8 @@ function $TemplateRequestProvider() {
             handleRequestFn.totalPendingRequests--;
           })
           .then(function(response) {
-            return $templateCache.put(tpl, response.data);
+            $templateCache.put(tpl, response.data);
+            return response.data;
           }, handleError);
 
         function handleError(resp) {
@@ -22157,15 +21169,7 @@ function $$TestabilityProvider() {
      * @name $$testability#whenStable
      *
      * @description
-     * Calls the callback when all pending tasks are completed.
-     *
-     * Types of tasks waited for include:
-     * - Pending timeouts (via {@link $timeout}).
-     * - Pending HTTP requests (via {@link $http}).
-     * - In-progress route transitions (via {@link $route}).
-     * - Pending tasks scheduled via {@link $rootScope#$applyAsync}.
-     * - Pending tasks scheduled via {@link $rootScope#$evalAsync}.
-     *   These include tasks scheduled via `$evalAsync()` indirectly (such as {@link $q} promises).
+     * Calls the callback when $timeout and $http requests are completed.
      *
      * @param {function} callback
      */
@@ -22177,8 +21181,6 @@ function $$TestabilityProvider() {
   }];
 }
 
-var $timeoutMinErr = minErr('$timeout');
-
 /** @this */
 function $TimeoutProvider() {
   this.$get = ['$rootScope', '$browser', '$q', '$$q', '$exceptionHandler',
@@ -22187,35 +21189,35 @@ function $TimeoutProvider() {
     var deferreds = {};
 
 
-    /**
-     * @ngdoc service
-     * @name $timeout
-     *
-     * @description
-     * AngularJS's wrapper for `window.setTimeout`. The `fn` function is wrapped into a try/catch
-     * block and delegates any exceptions to
-     * {@link ng.$exceptionHandler $exceptionHandler} service.
-     *
-     * The return value of calling `$timeout` is a promise, which will be resolved when
-     * the delay has passed and the timeout function, if provided, is executed.
-     *
-     * To cancel a timeout request, call `$timeout.cancel(promise)`.
-     *
-     * In tests you can use {@link ngMock.$timeout `$timeout.flush()`} to
-     * synchronously flush the queue of deferred functions.
-     *
-     * If you only want a promise that will be resolved after some specified delay
-     * then you can call `$timeout` without the `fn` function.
-     *
-     * @param {function()=} fn A function, whose execution should be delayed.
-     * @param {number=} [delay=0] Delay in milliseconds.
-     * @param {boolean=} [invokeApply=true] If set to `false` skips model dirty checking, otherwise
-     *   will invoke `fn` within the {@link ng.$rootScope.Scope#$apply $apply} block.
-     * @param {...*=} Pass additional parameters to the executed function.
-     * @returns {Promise} Promise that will be resolved when the timeout is reached. The promise
-     *   will be resolved with the return value of the `fn` function.
-     *
-     */
+     /**
+      * @ngdoc service
+      * @name $timeout
+      *
+      * @description
+      * Angular's wrapper for `window.setTimeout`. The `fn` function is wrapped into a try/catch
+      * block and delegates any exceptions to
+      * {@link ng.$exceptionHandler $exceptionHandler} service.
+      *
+      * The return value of calling `$timeout` is a promise, which will be resolved when
+      * the delay has passed and the timeout function, if provided, is executed.
+      *
+      * To cancel a timeout request, call `$timeout.cancel(promise)`.
+      *
+      * In tests you can use {@link ngMock.$timeout `$timeout.flush()`} to
+      * synchronously flush the queue of deferred functions.
+      *
+      * If you only want a promise that will be resolved after some specified delay
+      * then you can call `$timeout` without the `fn` function.
+      *
+      * @param {function()=} fn A function, whose execution should be delayed.
+      * @param {number=} [delay=0] Delay in milliseconds.
+      * @param {boolean=} [invokeApply=true] If set to `false` skips model dirty checking, otherwise
+      *   will invoke `fn` within the {@link ng.$rootScope.Scope#$apply $apply} block.
+      * @param {...*=} Pass additional parameters to the executed function.
+      * @returns {Promise} Promise that will be resolved when the timeout is reached. The promise
+      *   will be resolved with the return value of the `fn` function.
+      *
+      */
     function timeout(fn, delay, invokeApply) {
       if (!isFunction(fn)) {
         invokeApply = delay;
@@ -22240,7 +21242,7 @@ function $TimeoutProvider() {
         }
 
         if (!skipApply) $rootScope.$apply();
-      }, delay, '$timeout');
+      }, delay);
 
       promise.$$timeoutId = timeoutId;
       deferreds[timeoutId] = deferred;
@@ -22249,37 +21251,27 @@ function $TimeoutProvider() {
     }
 
 
-    /**
-     * @ngdoc method
-     * @name $timeout#cancel
-     *
-     * @description
-     * Cancels a task associated with the `promise`. As a result of this, the promise will be
-     * resolved with a rejection.
-     *
-     * @param {Promise=} promise Promise returned by the `$timeout` function.
-     * @returns {boolean} Returns `true` if the task hasn't executed yet and was successfully
-     *   canceled.
-     */
+     /**
+      * @ngdoc method
+      * @name $timeout#cancel
+      *
+      * @description
+      * Cancels a task associated with the `promise`. As a result of this, the promise will be
+      * resolved with a rejection.
+      *
+      * @param {Promise=} promise Promise returned by the `$timeout` function.
+      * @returns {boolean} Returns `true` if the task hasn't executed yet and was successfully
+      *   canceled.
+      */
     timeout.cancel = function(promise) {
-      if (!promise) return false;
-
-      if (!promise.hasOwnProperty('$$timeoutId')) {
-        throw $timeoutMinErr('badprom',
-            '`$timeout.cancel()` called with a promise that was not generated by `$timeout()`.');
+      if (promise && promise.$$timeoutId in deferreds) {
+        // Timeout cancels should not report an unhandled promise.
+        markQExceptionHandled(deferreds[promise.$$timeoutId].promise);
+        deferreds[promise.$$timeoutId].reject('canceled');
+        delete deferreds[promise.$$timeoutId];
+        return $browser.defer.cancel(promise.$$timeoutId);
       }
-
-      if (!deferreds.hasOwnProperty(promise.$$timeoutId)) return false;
-
-      var id = promise.$$timeoutId;
-      var deferred = deferreds[id];
-
-      // Timeout cancels should not report an unhandled promise.
-      markQExceptionHandled(deferred.promise);
-      deferred.reject('canceled');
-      delete deferreds[id];
-
-      return $browser.defer.cancel(id);
+      return false;
     };
 
     return timeout;
@@ -22295,7 +21287,6 @@ function $TimeoutProvider() {
 // service.
 var urlParsingNode = window.document.createElement('a');
 var originUrl = urlResolve(window.location.href);
-var baseUrlParsingNode;
 
 
 /**
@@ -22327,26 +21318,23 @@ var baseUrlParsingNode;
  *   http://james.padolsey.com/javascript/parsing-urls-with-the-dom/
  *
  * @kind function
- * @param {string|object} url The URL to be parsed. If `url` is not a string, it will be returned
- *     unchanged.
+ * @param {string} url The URL to be parsed.
  * @description Normalizes and parses a URL.
  * @returns {object} Returns the normalized URL as a dictionary.
  *
- *   | member name   | Description                                                            |
- *   |---------------|------------------------------------------------------------------------|
+ *   | member name   | Description    |
+ *   |---------------|----------------|
  *   | href          | A normalized version of the provided URL if it was not an absolute URL |
- *   | protocol      | The protocol without the trailing colon                                |
+ *   | protocol      | The protocol including the trailing colon                              |
  *   | host          | The host and port (if the port is non-default) of the normalizedUrl    |
  *   | search        | The search params, minus the question mark                             |
- *   | hash          | The hash string, minus the hash symbol                                 |
- *   | hostname      | The hostname                                                           |
- *   | port          | The port, without ":"                                                  |
- *   | pathname      | The pathname, beginning with "/"                                       |
+ *   | hash          | The hash string, minus the hash symbol
+ *   | hostname      | The hostname
+ *   | port          | The port, without ":"
+ *   | pathname      | The pathname, beginning with "/"
  *
  */
 function urlResolve(url) {
-  if (!isString(url)) return url;
-
   var href = url;
 
   // Support: IE 9-11 only
@@ -22359,6 +21347,7 @@ function urlResolve(url) {
 
   urlParsingNode.setAttribute('href', href);
 
+  // urlParsingNode provides the UrlUtils interface - http://url.spec.whatwg.org/#urlutils
   return {
     href: urlParsingNode.href,
     protocol: urlParsingNode.protocol ? urlParsingNode.protocol.replace(/:$/, '') : '',
@@ -22374,96 +21363,16 @@ function urlResolve(url) {
 }
 
 /**
- * Parse a request URL and determine whether this is a same-origin request as the application
- * document.
+ * Parse a request URL and determine whether this is a same-origin request as the application document.
  *
  * @param {string|object} requestUrl The url of the request as a string that will be resolved
  * or a parsed URL object.
  * @returns {boolean} Whether the request is for the same origin as the application document.
  */
 function urlIsSameOrigin(requestUrl) {
-  return urlsAreSameOrigin(requestUrl, originUrl);
-}
-
-/**
- * Parse a request URL and determine whether it is same-origin as the current document base URL.
- *
- * Note: The base URL is usually the same as the document location (`location.href`) but can
- * be overriden by using the `<base>` tag.
- *
- * @param {string|object} requestUrl The url of the request as a string that will be resolved
- * or a parsed URL object.
- * @returns {boolean} Whether the URL is same-origin as the document base URL.
- */
-function urlIsSameOriginAsBaseUrl(requestUrl) {
-  return urlsAreSameOrigin(requestUrl, getBaseUrl());
-}
-
-/**
- * Create a function that can check a URL's origin against a list of allowed/whitelisted origins.
- * The current location's origin is implicitly trusted.
- *
- * @param {string[]} whitelistedOriginUrls - A list of URLs (strings), whose origins are trusted.
- *
- * @returns {Function} - A function that receives a URL (string or parsed URL object) and returns
- *     whether it is of an allowed origin.
- */
-function urlIsAllowedOriginFactory(whitelistedOriginUrls) {
-  var parsedAllowedOriginUrls = [originUrl].concat(whitelistedOriginUrls.map(urlResolve));
-
-  /**
-   * Check whether the specified URL (string or parsed URL object) has an origin that is allowed
-   * based on a list of whitelisted-origin URLs. The current location's origin is implicitly
-   * trusted.
-   *
-   * @param {string|Object} requestUrl - The URL to be checked (provided as a string that will be
-   *     resolved or a parsed URL object).
-   *
-   * @returns {boolean} - Whether the specified URL is of an allowed origin.
-   */
-  return function urlIsAllowedOrigin(requestUrl) {
-    var parsedUrl = urlResolve(requestUrl);
-    return parsedAllowedOriginUrls.some(urlsAreSameOrigin.bind(null, parsedUrl));
-  };
-}
-
-/**
- * Determine if two URLs share the same origin.
- *
- * @param {string|Object} url1 - First URL to compare as a string or a normalized URL in the form of
- *     a dictionary object returned by `urlResolve()`.
- * @param {string|object} url2 - Second URL to compare as a string or a normalized URL in the form
- *     of a dictionary object returned by `urlResolve()`.
- *
- * @returns {boolean} - True if both URLs have the same origin, and false otherwise.
- */
-function urlsAreSameOrigin(url1, url2) {
-  url1 = urlResolve(url1);
-  url2 = urlResolve(url2);
-
-  return (url1.protocol === url2.protocol &&
-          url1.host === url2.host);
-}
-
-/**
- * Returns the current document base URL.
- * @returns {string}
- */
-function getBaseUrl() {
-  if (window.document.baseURI) {
-    return window.document.baseURI;
-  }
-
-  // `document.baseURI` is available everywhere except IE
-  if (!baseUrlParsingNode) {
-    baseUrlParsingNode = window.document.createElement('a');
-    baseUrlParsingNode.href = '.';
-
-    // Work-around for IE bug described in Implementation Notes. The fix in `urlResolve()` is not
-    // suitable here because we need to track changes to the base URL.
-    baseUrlParsingNode = baseUrlParsingNode.cloneNode(false);
-  }
-  return baseUrlParsingNode.href;
+  var parsed = (isString(requestUrl)) ? urlResolve(requestUrl) : requestUrl;
+  return (parsed.protocol === originUrl.protocol &&
+          parsed.host === originUrl.host);
 }
 
 /**
@@ -22474,7 +21383,7 @@ function getBaseUrl() {
  * @description
  * A reference to the browser's `window` object. While `window`
  * is globally available in JavaScript, it causes testability problems, because
- * it is a global variable. In AngularJS we always refer to it through the
+ * it is a global variable. In angular we always refer to it through the
  * `$window` service, so it may be overridden, removed or mocked for testing.
  *
  * Expressions, like the one defined for the `ngClick` directive in the example
@@ -22597,7 +21506,7 @@ function $$CookieReaderProvider() {
  * annotated with dependencies and is responsible for creating a filter function.
  *
  * <div class="alert alert-warning">
- * **Note:** Filter names must be valid AngularJS {@link expression} identifiers, such as `uppercase` or `orderBy`.
+ * **Note:** Filter names must be valid angular {@link expression} identifiers, such as `uppercase` or `orderBy`.
  * Names with special characters, such as hyphens and dots, are not allowed. If you wish to namespace
  * your filters, then you can use capitalization (`myappSubsectionFilterx`) or underscores
  * (`myapp_subsection_filterx`).
@@ -22640,8 +21549,8 @@ function $$CookieReaderProvider() {
  * ```
  *
  *
- * For more information about how AngularJS filters work, and how to create your own filters, see
- * {@link guide/filter Filters} in the AngularJS Developer Guide.
+ * For more information about how angular filters work, and how to create your own filters, see
+ * {@link guide/filter Filters} in the Angular Developer Guide.
  */
 
 /**
@@ -22651,7 +21560,7 @@ function $$CookieReaderProvider() {
  * @description
  * Filters are used for formatting data displayed to the user.
  *
- * They can be used in view templates, controllers or services. AngularJS comes
+ * They can be used in view templates, controllers or services.Angular comes
  * with a collection of [built-in filters](api/ng/filter), but it is easy to
  * define your own as well.
  *
@@ -22693,7 +21602,7 @@ function $FilterProvider($provide) {
    *    the keys are the filter names and the values are the filter factories.
    *
    *    <div class="alert alert-warning">
-   *    **Note:** Filter names must be valid AngularJS {@link expression} identifiers, such as `uppercase` or `orderBy`.
+   *    **Note:** Filter names must be valid angular {@link expression} identifiers, such as `uppercase` or `orderBy`.
    *    Names with special characters, such as hyphens and dots, are not allowed. If you wish to namespace
    *    your filters, then you can use capitalization (`myappSubsectionFilterx`) or underscores
    *    (`myapp_subsection_filterx`).
@@ -23081,14 +21990,11 @@ function currencyFilter($locale) {
       fractionSize = formats.PATTERNS[1].maxFrac;
     }
 
-    // If the currency symbol is empty, trim whitespace around the symbol
-    var currencySymbolRe = !currencySymbol ? /\s*\u00A4\s*/g : /\u00A4/g;
-
     // if null or undefined pass it through
     return (amount == null)
         ? amount
         : formatNumber(amount, formats.PATTERNS[1], formats.GROUP_SEP, formats.DECIMAL_SEP, fractionSize).
-            replace(currencySymbolRe, currencySymbol);
+            replace(/\u00A4/g, currencySymbol);
   };
 }
 
@@ -23920,7 +22826,6 @@ function sliceFn(input, begin, end) {
  *      index: ...
  *    }
  *    ```
- *    **Note:** `null` values use `'null'` as their type.
  * 2. The comparator function is used to sort the items, based on the derived values, types and
  *    indices.
  *
@@ -23955,15 +22860,11 @@ function sliceFn(input, begin, end) {
  *
  * The default, built-in comparator should be sufficient for most usecases. In short, it compares
  * numbers numerically, strings alphabetically (and case-insensitively), for objects falls back to
- * using their index in the original collection, sorts values of different types by type and puts
- * `undefined` and `null` values at the end of the sorted list.
+ * using their index in the original collection, and sorts values of different types by type.
  *
  * More specifically, it follows these steps to determine the relative order of items:
  *
- * 1. If the compared values are of different types:
- *    - If one of the values is undefined, consider it "greater than" the other.
- *    - Else if one of the values is null, consider it "greater than" the other.
- *    - Else compare the types themselves alphabetically.
+ * 1. If the compared values are of different types, compare the types themselves alphabetically.
  * 2. If both values are of type `string`, compare them alphabetically in a case- and
  *    locale-insensitive way.
  * 3. If both values are objects, compare their indices instead.
@@ -23974,10 +22875,9 @@ function sliceFn(input, begin, end) {
  *
  * **Note:** If you notice numbers not being sorted as expected, make sure they are actually being
  *           saved as numbers and not strings.
- * **Note:** For the purpose of sorting, `null` and `undefined` are considered "greater than"
- *           any other value (with undefined "greater than" null). This effectively means that `null`
- *           and `undefined` values end up at the end of a list sorted in ascending order.
- * **Note:** `null` values use `'null'` as their type to be able to distinguish them from objects.
+ * **Note:** For the purpose of sorting, `null` values are treated as the string `'null'` (i.e.
+ *           `type: 'string'`, `value: 'null'`). This may cause unexpected sort order relative to
+ *           other values.
  *
  * @param {Array|ArrayLike} collection - The collection (array or array-like object) to sort.
  * @param {(Function|string|Array.<Function|string>)=} expression - A predicate (or list of
@@ -23987,7 +22887,7 @@ function sliceFn(input, begin, end) {
  *
  *    - `Function`: A getter function. This function will be called with each item as argument and
  *      the return value will be used for sorting.
- *    - `string`: An AngularJS expression. This expression will be evaluated against each item and the
+ *    - `string`: An Angular expression. This expression will be evaluated against each item and the
  *      result will be used for sorting. For example, use `'label'` to sort by a property called
  *      `label` or `'label.substring(0, 3)'` to sort by the first 3 characters of the `label`
  *      property.<br />
@@ -24544,7 +23444,8 @@ function orderByFilter($parse) {
   function getPredicateValue(value, index) {
     var type = typeof value;
     if (value === null) {
-      type = 'null';
+      type = 'string';
+      value = 'null';
     } else if (type === 'object') {
       value = objectValue(value);
     }
@@ -24575,11 +23476,7 @@ function orderByFilter($parse) {
         result = value1 < value2 ? -1 : 1;
       }
     } else {
-      result = (type1 === 'undefined') ? 1 :
-        (type2 === 'undefined') ? -1 :
-        (type1 === 'null') ? 1 :
-        (type2 === 'null') ? -1 :
-        (type1 < type2) ? -1 : 1;
+      result = type1 < type2 ? -1 : 1;
     }
 
     return result;
@@ -24636,10 +23533,10 @@ var htmlAnchorDirective = valueFn({
  * @priority 99
  *
  * @description
- * Using AngularJS markup like `{{hash}}` in an href attribute will
+ * Using Angular markup like `{{hash}}` in an href attribute will
  * make the link go to the wrong URL if the user clicks it before
- * AngularJS has a chance to replace the `{{hash}}` markup with its
- * value. Until AngularJS replaces the markup the link will be broken
+ * Angular has a chance to replace the `{{hash}}` markup with its
+ * value. Until Angular replaces the markup the link will be broken
  * and will most likely return a 404 error. The `ngHref` directive
  * solves this problem.
  *
@@ -24687,7 +23584,7 @@ var htmlAnchorDirective = valueFn({
 
           element(by.id('link-3')).click();
 
-          // At this point, we navigate away from an AngularJS page, so we need
+          // At this point, we navigate away from an Angular page, so we need
           // to use browser.driver to get the base webdriver.
 
           browser.wait(function() {
@@ -24716,7 +23613,7 @@ var htmlAnchorDirective = valueFn({
 
           element(by.id('link-6')).click();
 
-          // At this point, we navigate away from an AngularJS page, so we need
+          // At this point, we navigate away from an Angular page, so we need
           // to use browser.driver to get the base webdriver.
           browser.wait(function() {
             return browser.driver.getCurrentUrl().then(function(url) {
@@ -24735,9 +23632,9 @@ var htmlAnchorDirective = valueFn({
  * @priority 99
  *
  * @description
- * Using AngularJS markup like `{{hash}}` in a `src` attribute doesn't
+ * Using Angular markup like `{{hash}}` in a `src` attribute doesn't
  * work right: The browser will fetch from the URL with the literal
- * text `{{hash}}` until AngularJS replaces the expression inside
+ * text `{{hash}}` until Angular replaces the expression inside
  * `{{hash}}`. The `ngSrc` directive solves this problem.
  *
  * The buggy way to write it:
@@ -24761,9 +23658,9 @@ var htmlAnchorDirective = valueFn({
  * @priority 99
  *
  * @description
- * Using AngularJS markup like `{{hash}}` in a `srcset` attribute doesn't
+ * Using Angular markup like `{{hash}}` in a `srcset` attribute doesn't
  * work right: The browser will fetch from the URL with the literal
- * text `{{hash}}` until AngularJS replaces the expression inside
+ * text `{{hash}}` until Angular replaces the expression inside
  * `{{hash}}`. The `ngSrcset` directive solves this problem.
  *
  * The buggy way to write it:
@@ -24871,7 +23768,7 @@ var htmlAnchorDirective = valueFn({
     <example name="ng-readonly">
       <file name="index.html">
         <label>Check me to make text readonly: <input type="checkbox" ng-model="checked"></label><br/>
-        <input type="text" ng-readonly="checked" value="I'm AngularJS" aria-label="Readonly field" />
+        <input type="text" ng-readonly="checked" value="I'm Angular" aria-label="Readonly field" />
       </file>
       <file name="protractor.js" type="protractor">
         it('should toggle readonly attr', function() {
@@ -25065,7 +23962,7 @@ forEach(['src', 'srcset', 'href'], function(attrName) {
           // On IE, if "ng:src" directive declaration is used and "src" attribute doesn't exist
           // then calling element.setAttribute('src', 'foo') doesn't do anything, so we need
           // to set the property as well to achieve the desired effect.
-          // We use attr[attrName] value since $set might have sanitized the url.
+          // We use attr[attrName] value since $set can sanitize the url.
           if (msie && propName) element.prop(propName, attr[name]);
         });
       }
@@ -25077,14 +23974,12 @@ forEach(['src', 'srcset', 'href'], function(attrName) {
  */
 var nullFormCtrl = {
   $addControl: noop,
-  $getControls: valueFn([]),
   $$renameControl: nullFormRenameControl,
   $removeControl: noop,
   $setValidity: noop,
   $setDirty: noop,
   $setPristine: noop,
-  $setSubmitted: noop,
-  $$setSubmitted: noop
+  $setSubmitted: noop
 },
 PENDING_CLASS = 'ng-pending',
 SUBMITTED_CLASS = 'ng-submitted';
@@ -25233,30 +24128,6 @@ FormController.prototype = {
     control.$$parentForm = this;
   },
 
-  /**
-   * @ngdoc method
-   * @name form.FormController#$getControls
-   * @returns {Array} the controls that are currently part of this form
-   *
-   * @description
-   * This method returns a **shallow copy** of the controls that are currently part of this form.
-   * The controls can be instances of {@link form.FormController `FormController`}
-   * ({@link ngForm "child-forms"}) and of {@link ngModel.NgModelController `NgModelController`}.
-   * If you need access to the controls of child-forms, you have to call `$getControls()`
-   * recursively on them.
-   * This can be used for example to iterate over all controls to validate them.
-   *
-   * The controls can be accessed normally, but adding to, or removing controls from the array has
-   * no effect on the form. Instead, use {@link form.FormController#$addControl `$addControl()`} and
-   * {@link form.FormController#$removeControl `$removeControl()`} for this use-case.
-   * Likewise, adding a control to, or removing a control from the form is not reflected
-   * in the shallow copy. That means you should get a fresh copy from `$getControls()` every time
-   * you need access to the controls.
-   */
-  $getControls: function() {
-    return shallowCopy(this.$$controls);
-  },
-
   // Private API: rename a form control
   $$renameControl: function(control, newName) {
     var oldName = control.$name;
@@ -25373,25 +24244,12 @@ FormController.prototype = {
    * @name form.FormController#$setSubmitted
    *
    * @description
-   * Sets the form to its `$submitted` state. This will also set `$submitted` on all child and
-   * parent forms of the form.
+   * Sets the form to its submitted state.
    */
   $setSubmitted: function() {
-    var rootForm = this;
-    while (rootForm.$$parentForm && (rootForm.$$parentForm !== nullFormCtrl)) {
-      rootForm = rootForm.$$parentForm;
-    }
-    rootForm.$$setSubmitted();
-  },
-
-  $$setSubmitted: function() {
     this.$$animate.addClass(this.$$element, SUBMITTED_CLASS);
     this.$submitted = true;
-    forEach(this.$$controls, function(control) {
-      if (control.$$setSubmitted) {
-        control.$$setSubmitted();
-      }
-    });
+    this.$$parentForm.$setSubmitted();
   }
 };
 
@@ -25450,21 +24308,16 @@ addSetValidityMethod({
  * @restrict EAC
  *
  * @description
- * Helper directive that makes it possible to create control groups inside a
- * {@link ng.directive:form `form`} directive.
- * These "child forms" can be used, for example, to determine the validity of a sub-group of
- * controls.
+ * Nestable alias of {@link ng.directive:form `form`} directive. HTML
+ * does not allow nesting of form elements. It is useful to nest forms, for example if the validity of a
+ * sub-group of controls needs to be determined.
  *
- * <div class="alert alert-danger">
- * **Note**: `ngForm` cannot be used as a replacement for `<form>`, because it lacks its
- * [built-in HTML functionality](https://html.spec.whatwg.org/#the-form-element).
- * Specifically, you cannot submit `ngForm` like a `<form>` tag. That means,
- * you cannot send data to the server with `ngForm`, or integrate it with
- * {@link ng.directive:ngSubmit `ngSubmit`}.
- * </div>
+ * Note: the purpose of `ngForm` is to group controls,
+ * but not to be a replacement for the `<form>` tag with all of its capabilities
+ * (e.g. posting to the server, ...).
  *
- * @param {string=} ngForm|name Name of the form. If specified, the form controller will
- *                              be published into the related scope, under this name.
+ * @param {string=} ngForm|name Name of the form. If specified, the form controller will be published into
+ *                       related scope, under this name.
  *
  */
 
@@ -25482,9 +24335,9 @@ addSetValidityMethod({
  *
  * ## Alias: {@link ng.directive:ngForm `ngForm`}
  *
- * In AngularJS, forms can be nested. This means that the outer form is valid when all of the child
+ * In Angular, forms can be nested. This means that the outer form is valid when all of the child
  * forms are valid as well. However, browsers do not allow nesting of `<form>` elements, so
- * AngularJS provides the {@link ng.directive:ngForm `ngForm`} directive, which behaves identically to
+ * Angular provides the {@link ng.directive:ngForm `ngForm`} directive, which behaves identically to
  * `form` but can be nested. Nested forms can be useful, for example, if the validity of a sub-group
  * of controls needs to be determined.
  *
@@ -25501,12 +24354,12 @@ addSetValidityMethod({
  *
  * ## Submitting a form and preventing the default action
  *
- * Since the role of forms in client-side AngularJS applications is different than in classical
+ * Since the role of forms in client-side Angular applications is different than in classical
  * roundtrip apps, it is desirable for the browser not to translate the form submission into a full
  * page reload that sends the data to the server. Instead some javascript logic should be triggered
  * to handle the form submission in an application-specific way.
  *
- * For this reason, AngularJS prevents the default action (form submission to the server) unless the
+ * For this reason, Angular prevents the default action (form submission to the server) unless the
  * `<form>` element has an `action` attribute specified.
  *
  * You can use one of the following two ways to specify what javascript method should be called when
@@ -25844,10 +24697,10 @@ var inputType = {
    * @name input[text]
    *
    * @description
-   * Standard HTML text input with AngularJS data binding, inherited by most of the `input` elements.
+   * Standard HTML text input with angular data binding, inherited by most of the `input` elements.
    *
    *
-   * @param {string} ngModel Assignable AngularJS expression to data-bind to.
+   * @param {string} ngModel Assignable angular expression to data-bind to.
    * @param {string=} name Property name of the form under which the control is published.
    * @param {string=} required Adds `required` validation error key if the value is not entered.
    * @param {string=} ngRequired Adds `required` attribute and `required` validation constraint to
@@ -25862,7 +24715,7 @@ var inputType = {
    *    that contains the regular expression body that will be converted to a regular expression
    *    as in the ngPattern directive.
    * @param {string=} ngPattern Sets `pattern` validation error key if the ngModel {@link ngModel.NgModelController#$viewValue $viewValue}
-   *    does not match a RegExp found by evaluating the AngularJS expression given in the attribute value.
+   *    does not match a RegExp found by evaluating the Angular expression given in the attribute value.
    *    If the expression evaluates to a RegExp object, then this is used directly.
    *    If the expression evaluates to a string, then it will be converted to a RegExp
    *    after wrapping it in `^` and `$` characters. For instance, `"abc"` will be converted to
@@ -25870,9 +24723,9 @@ var inputType = {
    *    **Note:** Avoid using the `g` flag on the RegExp, as it will cause each successive search to
    *    start at the index of the last search's match, thus not taking the whole input value into
    *    account.
-   * @param {string=} ngChange AngularJS expression to be executed when input changes due to user
+   * @param {string=} ngChange Angular expression to be executed when input changes due to user
    *    interaction with the input element.
-   * @param {boolean=} [ngTrim=true] If set to false AngularJS will not automatically trim the input.
+   * @param {boolean=} [ngTrim=true] If set to false Angular will not automatically trim the input.
    *    This parameter is ignored for input[type=password] controls, which will never trim the
    *    input.
    *
@@ -25946,13 +24799,13 @@ var inputType = {
      * modern browsers do not yet support this input type, it is important to provide cues to users on the
      * expected input format via a placeholder or label.
      *
-     * The model must always be a Date object, otherwise AngularJS will throw an error.
+     * The model must always be a Date object, otherwise Angular will throw an error.
      * Invalid `Date` objects (dates whose `getTime()` is `NaN`) will be rendered as an empty string.
      *
      * The timezone to be used to read/write the `Date` instance in the model can be defined using
      * {@link ng.directive:ngModelOptions ngModelOptions}. By default, this is the timezone of the browser.
      *
-     * @param {string} ngModel Assignable AngularJS expression to data-bind to.
+     * @param {string} ngModel Assignable angular expression to data-bind to.
      * @param {string=} name Property name of the form under which the control is published.
      * @param {string=} min Sets the `min` validation error key if the value entered is less than `min`. This must be a
      *   valid ISO date string (yyyy-MM-dd). You can also use interpolation inside this attribute
@@ -25970,7 +24823,7 @@ var inputType = {
      * @param {string=} ngRequired Adds `required` attribute and `required` validation constraint to
      *    the element when the ngRequired expression evaluates to true. Use `ngRequired` instead of
      *    `required` when you want to data-bind to the `required` attribute.
-     * @param {string=} ngChange AngularJS expression to be executed when input changes due to user
+     * @param {string=} ngChange Angular expression to be executed when input changes due to user
      *    interaction with the input element.
      *
      * @example
@@ -26048,17 +24901,13 @@ var inputType = {
     * the HTML5 date input, a text element will be used. In that case, the text must be entered in a valid ISO-8601
     * local datetime format (yyyy-MM-ddTHH:mm:ss), for example: `2010-12-28T14:57:00`.
     *
-    * The model must always be a Date object, otherwise AngularJS will throw an error.
+    * The model must always be a Date object, otherwise Angular will throw an error.
     * Invalid `Date` objects (dates whose `getTime()` is `NaN`) will be rendered as an empty string.
     *
     * The timezone to be used to read/write the `Date` instance in the model can be defined using
     * {@link ng.directive:ngModelOptions ngModelOptions}. By default, this is the timezone of the browser.
     *
-    * The format of the displayed time can be adjusted with the
-    * {@link ng.directive:ngModelOptions#ngModelOptions-arguments ngModelOptions} `timeSecondsFormat`
-    * and `timeStripZeroSeconds`.
-    *
-    * @param {string} ngModel Assignable AngularJS expression to data-bind to.
+    * @param {string} ngModel Assignable angular expression to data-bind to.
     * @param {string=} name Property name of the form under which the control is published.
     * @param {string=} min Sets the `min` validation error key if the value entered is less than `min`.
     *   This must be a valid ISO datetime format (yyyy-MM-ddTHH:mm:ss). You can also use interpolation
@@ -26076,7 +24925,7 @@ var inputType = {
     * @param {string=} ngRequired Adds `required` attribute and `required` validation constraint to
     *    the element when the ngRequired expression evaluates to true. Use `ngRequired` instead of
     *    `required` when you want to data-bind to the `required` attribute.
-    * @param {string=} ngChange AngularJS expression to be executed when input changes due to user
+    * @param {string=} ngChange Angular expression to be executed when input changes due to user
     *    interaction with the input element.
     *
     * @example
@@ -26155,18 +25004,13 @@ var inputType = {
    * local time format (HH:mm:ss), for example: `14:57:00`. Model must be a Date object. This binding will always output a
    * Date object to the model of January 1, 1970, or local date `new Date(1970, 0, 1, HH, mm, ss)`.
    *
-   * The model must always be a Date object, otherwise AngularJS will throw an error.
+   * The model must always be a Date object, otherwise Angular will throw an error.
    * Invalid `Date` objects (dates whose `getTime()` is `NaN`) will be rendered as an empty string.
    *
    * The timezone to be used to read/write the `Date` instance in the model can be defined using
-   * {@link ng.directive:ngModelOptions#ngModelOptions-arguments ngModelOptions}. By default,
-   * this is the timezone of the browser.
+   * {@link ng.directive:ngModelOptions ngModelOptions}. By default, this is the timezone of the browser.
    *
-   * The format of the displayed time can be adjusted with the
-   * {@link ng.directive:ngModelOptions#ngModelOptions-arguments ngModelOptions} `timeSecondsFormat`
-   * and `timeStripZeroSeconds`.
-   *
-   * @param {string} ngModel Assignable AngularJS expression to data-bind to.
+   * @param {string} ngModel Assignable angular expression to data-bind to.
    * @param {string=} name Property name of the form under which the control is published.
    * @param {string=} min Sets the `min` validation error key if the value entered is less than `min`.
    *   This must be a valid ISO time format (HH:mm:ss). You can also use interpolation inside this
@@ -26184,7 +25028,7 @@ var inputType = {
    * @param {string=} ngRequired Adds `required` attribute and `required` validation constraint to
    *    the element when the ngRequired expression evaluates to true. Use `ngRequired` instead of
    *    `required` when you want to data-bind to the `required` attribute.
-   * @param {string=} ngChange AngularJS expression to be executed when input changes due to user
+   * @param {string=} ngChange Angular expression to be executed when input changes due to user
    *    interaction with the input element.
    *
    * @example
@@ -26262,17 +25106,13 @@ var inputType = {
     * the HTML5 week input, a text element will be used. In that case, the text must be entered in a valid ISO-8601
     * week format (yyyy-W##), for example: `2013-W02`.
     *
-    * The model must always be a Date object, otherwise AngularJS will throw an error.
+    * The model must always be a Date object, otherwise Angular will throw an error.
     * Invalid `Date` objects (dates whose `getTime()` is `NaN`) will be rendered as an empty string.
-    *
-    * The value of the resulting Date object will be set to Thursday at 00:00:00 of the requested week,
-    * due to ISO-8601 week numbering standards. Information on ISO's system for numbering the weeks of the
-    * year can be found at: https://en.wikipedia.org/wiki/ISO_8601#Week_dates
     *
     * The timezone to be used to read/write the `Date` instance in the model can be defined using
     * {@link ng.directive:ngModelOptions ngModelOptions}. By default, this is the timezone of the browser.
     *
-    * @param {string} ngModel Assignable AngularJS expression to data-bind to.
+    * @param {string} ngModel Assignable angular expression to data-bind to.
     * @param {string=} name Property name of the form under which the control is published.
     * @param {string=} min Sets the `min` validation error key if the value entered is less than `min`.
     *   This must be a valid ISO week format (yyyy-W##). You can also use interpolation inside this
@@ -26290,7 +25130,7 @@ var inputType = {
     * @param {string=} ngRequired Adds `required` attribute and `required` validation constraint to
     *    the element when the ngRequired expression evaluates to true. Use `ngRequired` instead of
     *    `required` when you want to data-bind to the `required` attribute.
-    * @param {string=} ngChange AngularJS expression to be executed when input changes due to user
+    * @param {string=} ngChange Angular expression to be executed when input changes due to user
     *    interaction with the input element.
     *
     * @example
@@ -26368,7 +25208,7 @@ var inputType = {
    * the HTML5 month input, a text element will be used. In that case, the text must be entered in a valid ISO-8601
    * month format (yyyy-MM), for example: `2009-01`.
    *
-   * The model must always be a Date object, otherwise AngularJS will throw an error.
+   * The model must always be a Date object, otherwise Angular will throw an error.
    * Invalid `Date` objects (dates whose `getTime()` is `NaN`) will be rendered as an empty string.
    * If the model is not set to the first of the month, the next view to model update will set it
    * to the first of the month.
@@ -26376,7 +25216,7 @@ var inputType = {
    * The timezone to be used to read/write the `Date` instance in the model can be defined using
    * {@link ng.directive:ngModelOptions ngModelOptions}. By default, this is the timezone of the browser.
    *
-   * @param {string} ngModel Assignable AngularJS expression to data-bind to.
+   * @param {string} ngModel Assignable angular expression to data-bind to.
    * @param {string=} name Property name of the form under which the control is published.
    * @param {string=} min Sets the `min` validation error key if the value entered is less than `min`.
    *   This must be a valid ISO month format (yyyy-MM). You can also use interpolation inside this
@@ -26395,7 +25235,7 @@ var inputType = {
    * @param {string=} ngRequired Adds `required` attribute and `required` validation constraint to
    *    the element when the ngRequired expression evaluates to true. Use `ngRequired` instead of
    *    `required` when you want to data-bind to the `required` attribute.
-   * @param {string=} ngChange AngularJS expression to be executed when input changes due to user
+   * @param {string=} ngChange Angular expression to be executed when input changes due to user
    *    interaction with the input element.
    *
    * @example
@@ -26473,16 +25313,12 @@ var inputType = {
    * error if not a valid number.
    *
    * <div class="alert alert-warning">
-   * The model must always be of type `number` otherwise AngularJS will throw an error.
+   * The model must always be of type `number` otherwise Angular will throw an error.
    * Be aware that a string containing a number is not enough. See the {@link ngModel:numfmt}
    * error docs for more information and an example of how to convert your model if necessary.
    * </div>
    *
-   *
-   *
-   * @knownIssue
-   *
-   * ### HTML5 constraint validation and `allowInvalid`
+   * ## Issues with HTML5 constraint validation
    *
    * In browsers that follow the
    * [HTML5 specification](https://html.spec.whatwg.org/multipage/forms.html#number-state-%28type=number%29),
@@ -26491,19 +25327,8 @@ var inputType = {
    * which means the view / model values in `ngModel` and subsequently the scope value
    * will also be an empty string.
    *
-   * @knownIssue
    *
-   * ### Large numbers and `step` validation
-   *
-   * The `step` validation will not work correctly for very large numbers (e.g. 9999999999) due to
-   * Javascript's arithmetic limitations. If you need to handle large numbers, purpose-built
-   * libraries (e.g. https://github.com/MikeMcl/big.js/), can be included into AngularJS by
-   * {@link guide/forms#modifying-built-in-validators overwriting the validators}
-   * for `number` and / or `step`, or by {@link guide/forms#custom-validation applying custom validators}
-   * to an `input[text]` element. The source for `input[number]` type can be used as a starting
-   * point for both implementations.
-   *
-   * @param {string} ngModel Assignable AngularJS expression to data-bind to.
+   * @param {string} ngModel Assignable angular expression to data-bind to.
    * @param {string=} name Property name of the form under which the control is published.
    * @param {string=} min Sets the `min` validation error key if the value entered is less than `min`.
    *    Can be interpolated.
@@ -26530,7 +25355,7 @@ var inputType = {
    *    that contains the regular expression body that will be converted to a regular expression
    *    as in the ngPattern directive.
    * @param {string=} ngPattern Sets `pattern` validation error key if the ngModel {@link ngModel.NgModelController#$viewValue $viewValue}
-   *    does not match a RegExp found by evaluating the AngularJS expression given in the attribute value.
+   *    does not match a RegExp found by evaluating the Angular expression given in the attribute value.
    *    If the expression evaluates to a RegExp object, then this is used directly.
    *    If the expression evaluates to a string, then it will be converted to a RegExp
    *    after wrapping it in `^` and `$` characters. For instance, `"abc"` will be converted to
@@ -26538,7 +25363,7 @@ var inputType = {
    *    **Note:** Avoid using the `g` flag on the RegExp, as it will cause each successive search to
    *    start at the index of the last search's match, thus not taking the whole input value into
    *    account.
-   * @param {string=} ngChange AngularJS expression to be executed when input changes due to user
+   * @param {string=} ngChange Angular expression to be executed when input changes due to user
    *    interaction with the input element.
    *
    * @example
@@ -26613,7 +25438,7 @@ var inputType = {
    * the built-in validators (see the {@link guide/forms Forms guide})
    * </div>
    *
-   * @param {string} ngModel Assignable AngularJS expression to data-bind to.
+   * @param {string} ngModel Assignable angular expression to data-bind to.
    * @param {string=} name Property name of the form under which the control is published.
    * @param {string=} required Sets `required` validation error key if the value is not entered.
    * @param {string=} ngRequired Adds `required` attribute and `required` validation constraint to
@@ -26628,7 +25453,7 @@ var inputType = {
    *    that contains the regular expression body that will be converted to a regular expression
    *    as in the ngPattern directive.
    * @param {string=} ngPattern Sets `pattern` validation error key if the ngModel {@link ngModel.NgModelController#$viewValue $viewValue}
-   *    does not match a RegExp found by evaluating the AngularJS expression given in the attribute value.
+   *    does not match a RegExp found by evaluating the Angular expression given in the attribute value.
    *    If the expression evaluates to a RegExp object, then this is used directly.
    *    If the expression evaluates to a string, then it will be converted to a RegExp
    *    after wrapping it in `^` and `$` characters. For instance, `"abc"` will be converted to
@@ -26636,7 +25461,7 @@ var inputType = {
    *    **Note:** Avoid using the `g` flag on the RegExp, as it will cause each successive search to
    *    start at the index of the last search's match, thus not taking the whole input value into
    *    account.
-   * @param {string=} ngChange AngularJS expression to be executed when input changes due to user
+   * @param {string=} ngChange Angular expression to be executed when input changes due to user
    *    interaction with the input element.
    *
    * @example
@@ -26712,7 +25537,7 @@ var inputType = {
    * use `ng-pattern` or modify the built-in validators (see the {@link guide/forms Forms guide})
    * </div>
    *
-   * @param {string} ngModel Assignable AngularJS expression to data-bind to.
+   * @param {string} ngModel Assignable angular expression to data-bind to.
    * @param {string=} name Property name of the form under which the control is published.
    * @param {string=} required Sets `required` validation error key if the value is not entered.
    * @param {string=} ngRequired Adds `required` attribute and `required` validation constraint to
@@ -26727,7 +25552,7 @@ var inputType = {
    *    that contains the regular expression body that will be converted to a regular expression
    *    as in the ngPattern directive.
    * @param {string=} ngPattern Sets `pattern` validation error key if the ngModel {@link ngModel.NgModelController#$viewValue $viewValue}
-   *    does not match a RegExp found by evaluating the AngularJS expression given in the attribute value.
+   *    does not match a RegExp found by evaluating the Angular expression given in the attribute value.
    *    If the expression evaluates to a RegExp object, then this is used directly.
    *    If the expression evaluates to a string, then it will be converted to a RegExp
    *    after wrapping it in `^` and `$` characters. For instance, `"abc"` will be converted to
@@ -26735,7 +25560,7 @@ var inputType = {
    *    **Note:** Avoid using the `g` flag on the RegExp, as it will cause each successive search to
    *    start at the index of the last search's match, thus not taking the whole input value into
    *    account.
-   * @param {string=} ngChange AngularJS expression to be executed when input changes due to user
+   * @param {string=} ngChange Angular expression to be executed when input changes due to user
    *    interaction with the input element.
    *
    * @example
@@ -26803,41 +25628,14 @@ var inputType = {
    * @description
    * HTML radio button.
    *
-   * **Note:**<br>
-   * All inputs controlled by {@link ngModel ngModel} (including those of type `radio`) will use the
-   * value of their `name` attribute to determine the property under which their
-   * {@link ngModel.NgModelController NgModelController} will be published on the parent
-   * {@link form.FormController FormController}. Thus, if you use the same `name` for multiple
-   * inputs of a form (e.g. a group of radio inputs), only _one_ `NgModelController` will be
-   * published on the parent `FormController` under that name. The rest of the controllers will
-   * continue to work as expected, but you won't be able to access them as properties on the parent
-   * `FormController`.
-   *
-   * <div class="alert alert-info">
-   *   <p>
-   *     In plain HTML forms, the `name` attribute is used to identify groups of radio inputs, so
-   *     that the browser can manage their state (checked/unchecked) based on the state of other
-   *     inputs in the same group.
-   *   </p>
-   *   <p>
-   *     In AngularJS forms, this is not necessary. The input's state will be updated based on the
-   *     value of the underlying model data.
-   *   </p>
-   * </div>
-   *
-   * <div class="alert alert-success">
-   *   If you omit the `name` attribute on a radio input, `ngModel` will automatically assign it a
-   *   unique name.
-   * </div>
-   *
-   * @param {string} ngModel Assignable AngularJS expression to data-bind to.
+   * @param {string} ngModel Assignable angular expression to data-bind to.
    * @param {string} value The value to which the `ngModel` expression should be set when selected.
    *    Note that `value` only supports `string` values, i.e. the scope model needs to be a string,
    *    too. Use `ngValue` if you need complex models (`number`, `object`, ...).
    * @param {string=} name Property name of the form under which the control is published.
-   * @param {string=} ngChange AngularJS expression to be executed when input changes due to user
+   * @param {string=} ngChange Angular expression to be executed when input changes due to user
    *    interaction with the input element.
-   * @param {string} ngValue AngularJS expression to which `ngModel` will be be set when the radio
+   * @param {string} ngValue Angular expression to which `ngModel` will be be set when the radio
    *    is selected. Should be used instead of the `value` attribute if you need
    *    a non-string `ngModel` (`boolean`, `array`, ...).
    *
@@ -26915,34 +25713,34 @@ var inputType = {
    * See the [HTML Spec on input[type=range]](https://www.w3.org/TR/html5/forms.html#range-state-(type=range))
    * for more info.
    *
-   * This has the following consequences for AngularJS:
+   * This has the following consequences for Angular:
    *
    * Since the element value should always reflect the current model value, a range input
    * will set the bound ngModel expression to the value that the browser has set for the
    * input element. For example, in the following input `<input type="range" ng-model="model.value">`,
    * if the application sets `model.value = null`, the browser will set the input to `'50'`.
-   * AngularJS will then set the model to `50`, to prevent input and model value being out of sync.
+   * Angular will then set the model to `50`, to prevent input and model value being out of sync.
    *
    * That means the model for range will immediately be set to `50` after `ngModel` has been
    * initialized. It also means a range input can never have the required error.
    *
    * This does not only affect changes to the model value, but also to the values of the `min`,
    * `max`, and `step` attributes. When these change in a way that will cause the browser to modify
-   * the input value, AngularJS will also update the model value.
+   * the input value, Angular will also update the model value.
    *
    * Automatic value adjustment also means that a range input element can never have the `required`,
    * `min`, or `max` errors.
    *
    * However, `step` is currently only fully implemented by Firefox. Other browsers have problems
    * when the step value changes dynamically - they do not adjust the element value correctly, but
-   * instead may set the `stepMismatch` error. If that's the case, the AngularJS will set the `step`
+   * instead may set the `stepMismatch` error. If that's the case, the Angular will set the `step`
    * error on the input, and set the model to `undefined`.
    *
    * Note that `input[range]` is not compatible with`ngMax`, `ngMin`, and `ngStep`, because they do
    * not set the `min` and `max` attributes, which means that the browser won't automatically adjust
    * the input value based on their values, and will always assume min = 0, max = 100, and step = 1.
    *
-   * @param {string}  ngModel Assignable AngularJS expression to data-bind to.
+   * @param {string}  ngModel Assignable angular expression to data-bind to.
    * @param {string=} name Property name of the form under which the control is published.
    * @param {string=} min Sets the `min` validation to ensure that the value entered is greater
    *                  than `min`. Can be interpolated.
@@ -27017,11 +25815,11 @@ var inputType = {
    * @description
    * HTML checkbox.
    *
-   * @param {string} ngModel Assignable AngularJS expression to data-bind to.
+   * @param {string} ngModel Assignable angular expression to data-bind to.
    * @param {string=} name Property name of the form under which the control is published.
    * @param {expression=} ngTrueValue The value to which the expression should be set when selected.
    * @param {expression=} ngFalseValue The value to which the expression should be set when not selected.
-   * @param {string=} ngChange AngularJS expression to be executed when input changes due to user
+   * @param {string=} ngChange Angular expression to be executed when input changes due to user
    *    interaction with the input element.
    *
    * @example
@@ -27098,16 +25896,6 @@ function baseInputType(scope, element, attr, ctrl, $sniffer, $browser) {
       composing = true;
     });
 
-    // Support: IE9+
-    element.on('compositionupdate', function(ev) {
-      // End composition when ev.data is empty string on 'compositionupdate' event.
-      // When the input de-focusses (e.g. by clicking away), IE triggers 'compositionupdate'
-      // instead of 'compositionend'.
-      if (isUndefined(ev.data) || ev.data === '') {
-        composing = false;
-      }
-    });
-
     element.on('compositionend', function() {
       composing = false;
       listener();
@@ -27166,9 +25954,9 @@ function baseInputType(scope, element, attr, ctrl, $sniffer, $browser) {
       deferListener(event, this, this.value);
     });
 
-    // if user modifies input value using context menu in IE, we need "paste", "cut" and "drop" events to catch it
+    // if user modifies input value using context menu in IE, we need "paste" and "cut" events to catch it
     if ($sniffer.hasEvent('paste')) {
-      element.on('paste cut drop', deferListener);
+      element.on('paste cut', deferListener);
     }
   }
 
@@ -27238,7 +26026,7 @@ function weekParser(isoWeek, existingDate) {
 }
 
 function createDateParser(regexp, mapping) {
-  return function(iso, previousDate) {
+  return function(iso, date) {
     var parts, map;
 
     if (isDate(iso)) {
@@ -27260,15 +26048,15 @@ function createDateParser(regexp, mapping) {
 
       if (parts) {
         parts.shift();
-        if (previousDate) {
+        if (date) {
           map = {
-            yyyy: previousDate.getFullYear(),
-            MM: previousDate.getMonth() + 1,
-            dd: previousDate.getDate(),
-            HH: previousDate.getHours(),
-            mm: previousDate.getMinutes(),
-            ss: previousDate.getSeconds(),
-            sss: previousDate.getMilliseconds() / 1000
+            yyyy: date.getFullYear(),
+            MM: date.getMonth() + 1,
+            dd: date.getDate(),
+            HH: date.getHours(),
+            mm: date.getMinutes(),
+            ss: date.getSeconds(),
+            sss: date.getMilliseconds() / 1000
           };
         } else {
           map = { yyyy: 1970, MM: 1, dd: 1, HH: 0, mm: 0, ss: 0, sss: 0 };
@@ -27279,15 +26067,7 @@ function createDateParser(regexp, mapping) {
             map[mapping[index]] = +part;
           }
         });
-
-        var date = new Date(map.yyyy, map.MM - 1, map.dd, map.HH, map.mm, map.ss || 0, map.sss * 1000 || 0);
-        if (map.yyyy < 100) {
-          // In the constructor, 2-digit years map to 1900-1999.
-          // Use `setFullYear()` to set the correct year.
-          date.setFullYear(map.yyyy);
-        }
-
-        return date;
+        return new Date(map.yyyy, map.MM - 1, map.dd, map.HH, map.mm, map.ss || 0, map.sss * 1000 || 0);
       }
     }
 
@@ -27297,23 +26077,24 @@ function createDateParser(regexp, mapping) {
 
 function createDateInputType(type, regexp, parseDate, format) {
   return function dynamicDateInputType(scope, element, attr, ctrl, $sniffer, $browser, $filter) {
-    badInputChecker(scope, element, attr, ctrl, type);
+    badInputChecker(scope, element, attr, ctrl);
     baseInputType(scope, element, attr, ctrl, $sniffer, $browser);
-
-    var isTimeType = type === 'time' || type === 'datetimelocal';
+    var timezone = ctrl && ctrl.$options.getOption('timezone');
     var previousDate;
-    var previousTimezone;
 
+    ctrl.$$parserName = type;
     ctrl.$parsers.push(function(value) {
       if (ctrl.$isEmpty(value)) return null;
-
       if (regexp.test(value)) {
         // Note: We cannot read ctrl.$modelValue, as there might be a different
         // parser/formatter in the processing chain so that the model
         // contains some different data format!
-        return parseDateAndConvertTimeZoneToLocal(value, previousDate);
+        var parsedDate = parseDate(value, previousDate);
+        if (timezone) {
+          parsedDate = convertTimezoneToLocal(parsedDate, timezone);
+        }
+        return parsedDate;
       }
-      ctrl.$$parserName = type;
       return undefined;
     });
 
@@ -27323,17 +26104,12 @@ function createDateInputType(type, regexp, parseDate, format) {
       }
       if (isValidDate(value)) {
         previousDate = value;
-        var timezone = ctrl.$options.getOption('timezone');
-
-        if (timezone) {
-          previousTimezone = timezone;
+        if (previousDate && timezone) {
           previousDate = convertTimezoneToLocal(previousDate, timezone, true);
         }
-
-        return formatter(value, timezone);
+        return $filter('date')(value, format, timezone);
       } else {
         previousDate = null;
-        previousTimezone = null;
         return '';
       }
     });
@@ -27366,68 +26142,27 @@ function createDateInputType(type, regexp, parseDate, format) {
     }
 
     function parseObservedDateValue(val) {
-      return isDefined(val) && !isDate(val) ? parseDateAndConvertTimeZoneToLocal(val) || undefined : val;
-    }
-
-    function parseDateAndConvertTimeZoneToLocal(value, previousDate) {
-      var timezone = ctrl.$options.getOption('timezone');
-
-      if (previousTimezone && previousTimezone !== timezone) {
-        // If the timezone has changed, adjust the previousDate to the default timezone
-        // so that the new date is converted with the correct timezone offset
-        previousDate = addDateMinutes(previousDate, timezoneToOffset(previousTimezone));
-      }
-
-      var parsedDate = parseDate(value, previousDate);
-
-      if (!isNaN(parsedDate) && timezone) {
-        parsedDate = convertTimezoneToLocal(parsedDate, timezone);
-      }
-      return parsedDate;
-    }
-
-    function formatter(value, timezone) {
-      var targetFormat = format;
-
-      if (isTimeType && isString(ctrl.$options.getOption('timeSecondsFormat'))) {
-        targetFormat = format
-          .replace('ss.sss', ctrl.$options.getOption('timeSecondsFormat'))
-          .replace(/:$/, '');
-      }
-
-      var formatted =  $filter('date')(value, targetFormat, timezone);
-
-      if (isTimeType && ctrl.$options.getOption('timeStripZeroSeconds')) {
-        formatted = formatted.replace(/(?::00)?(?:\.000)?$/, '');
-      }
-
-      return formatted;
+      return isDefined(val) && !isDate(val) ? parseDate(val) || undefined : val;
     }
   };
 }
 
-function badInputChecker(scope, element, attr, ctrl, parserName) {
+function badInputChecker(scope, element, attr, ctrl) {
   var node = element[0];
   var nativeValidation = ctrl.$$hasNativeValidators = isObject(node.validity);
   if (nativeValidation) {
     ctrl.$parsers.push(function(value) {
       var validity = element.prop(VALIDITY_STATE_PROPERTY) || {};
-      if (validity.badInput || validity.typeMismatch) {
-        ctrl.$$parserName = parserName;
-        return undefined;
-      }
-
-      return value;
+      return validity.badInput || validity.typeMismatch ? undefined : value;
     });
   }
 }
 
 function numberFormatterParser(ctrl) {
+  ctrl.$$parserName = 'number';
   ctrl.$parsers.push(function(value) {
     if (ctrl.$isEmpty(value))      return null;
     if (NUMBER_REGEXP.test(value)) return parseFloat(value);
-
-    ctrl.$$parserName = 'number';
     return undefined;
   });
 
@@ -27509,7 +26244,7 @@ function isValidForStep(viewValue, stepBase, step) {
 }
 
 function numberInputType(scope, element, attr, ctrl, $sniffer, $browser) {
-  badInputChecker(scope, element, attr, ctrl, 'number');
+  badInputChecker(scope, element, attr, ctrl);
   numberFormatterParser(ctrl);
   baseInputType(scope, element, attr, ctrl, $sniffer, $browser);
 
@@ -27517,8 +26252,8 @@ function numberInputType(scope, element, attr, ctrl, $sniffer, $browser) {
   var maxVal;
 
   if (isDefined(attr.min) || attr.ngMin) {
-    ctrl.$validators.min = function(modelValue, viewValue) {
-      return ctrl.$isEmpty(viewValue) || isUndefined(minVal) || viewValue >= minVal;
+    ctrl.$validators.min = function(value) {
+      return ctrl.$isEmpty(value) || isUndefined(minVal) || value >= minVal;
     };
 
     attr.$observe('min', function(val) {
@@ -27529,8 +26264,8 @@ function numberInputType(scope, element, attr, ctrl, $sniffer, $browser) {
   }
 
   if (isDefined(attr.max) || attr.ngMax) {
-    ctrl.$validators.max = function(modelValue, viewValue) {
-      return ctrl.$isEmpty(viewValue) || isUndefined(maxVal) || viewValue <= maxVal;
+    ctrl.$validators.max = function(value) {
+      return ctrl.$isEmpty(value) || isUndefined(maxVal) || value <= maxVal;
     };
 
     attr.$observe('max', function(val) {
@@ -27556,7 +26291,7 @@ function numberInputType(scope, element, attr, ctrl, $sniffer, $browser) {
 }
 
 function rangeInputType(scope, element, attr, ctrl, $sniffer, $browser) {
-  badInputChecker(scope, element, attr, ctrl, 'range');
+  badInputChecker(scope, element, attr, ctrl);
   numberFormatterParser(ctrl);
   baseInputType(scope, element, attr, ctrl, $sniffer, $browser);
 
@@ -27695,6 +26430,7 @@ function urlInputType(scope, element, attr, ctrl, $sniffer, $browser) {
   baseInputType(scope, element, attr, ctrl, $sniffer, $browser);
   stringBasedInputType(ctrl);
 
+  ctrl.$$parserName = 'url';
   ctrl.$validators.url = function(modelValue, viewValue) {
     var value = modelValue || viewValue;
     return ctrl.$isEmpty(value) || URL_REGEXP.test(value);
@@ -27707,6 +26443,7 @@ function emailInputType(scope, element, attr, ctrl, $sniffer, $browser) {
   baseInputType(scope, element, attr, ctrl, $sniffer, $browser);
   stringBasedInputType(ctrl);
 
+  ctrl.$$parserName = 'email';
   ctrl.$validators.email = function(modelValue, viewValue) {
     var value = modelValue || viewValue;
     return ctrl.$isEmpty(value) || EMAIL_REGEXP.test(value);
@@ -27731,7 +26468,7 @@ function radioInputType(scope, element, attr, ctrl) {
     }
   };
 
-  element.on('change', listener);
+  element.on('click', listener);
 
   ctrl.$render = function() {
     var value = attr.value;
@@ -27765,7 +26502,7 @@ function checkboxInputType(scope, element, attr, ctrl, $sniffer, $browser, $filt
     ctrl.$setViewValue(element[0].checked, ev && ev.type);
   };
 
-  element.on('change', listener);
+  element.on('click', listener);
 
   ctrl.$render = function() {
     element[0].checked = ctrl.$viewValue;
@@ -27794,11 +26531,11 @@ function checkboxInputType(scope, element, attr, ctrl, $sniffer, $browser, $filt
  * @restrict E
  *
  * @description
- * HTML textarea element control with AngularJS data-binding. The data-binding and validation
+ * HTML textarea element control with angular data-binding. The data-binding and validation
  * properties of this element are exactly the same as those of the
  * {@link ng.directive:input input element}.
  *
- * @param {string} ngModel Assignable AngularJS expression to data-bind to.
+ * @param {string} ngModel Assignable angular expression to data-bind to.
  * @param {string=} name Property name of the form under which the control is published.
  * @param {string=} required Sets `required` validation error key if the value is not entered.
  * @param {string=} ngRequired Adds `required` attribute and `required` validation constraint to
@@ -27810,7 +26547,7 @@ function checkboxInputType(scope, element, attr, ctrl, $sniffer, $browser, $filt
  *    maxlength. Setting the attribute to a negative or non-numeric value, allows view values of any
  *    length.
  * @param {string=} ngPattern Sets `pattern` validation error key if the ngModel {@link ngModel.NgModelController#$viewValue $viewValue}
- *    does not match a RegExp found by evaluating the AngularJS expression given in the attribute value.
+ *    does not match a RegExp found by evaluating the Angular expression given in the attribute value.
  *    If the expression evaluates to a RegExp object, then this is used directly.
  *    If the expression evaluates to a string, then it will be converted to a RegExp
  *    after wrapping it in `^` and `$` characters. For instance, `"abc"` will be converted to
@@ -27818,15 +26555,15 @@ function checkboxInputType(scope, element, attr, ctrl, $sniffer, $browser, $filt
  *    **Note:** Avoid using the `g` flag on the RegExp, as it will cause each successive search to
  *    start at the index of the last search's match, thus not taking the whole input value into
  *    account.
- * @param {string=} ngChange AngularJS expression to be executed when input changes due to user
+ * @param {string=} ngChange Angular expression to be executed when input changes due to user
  *    interaction with the input element.
- * @param {boolean=} [ngTrim=true] If set to false AngularJS will not automatically trim the input.
+ * @param {boolean=} [ngTrim=true] If set to false Angular will not automatically trim the input.
  *
  * @knownIssue
  *
  * When specifying the `placeholder` attribute of `<textarea>`, Internet Explorer will temporarily
  * insert the placeholder value as the textarea's content. If the placeholder value contains
- * interpolation (`{{ ... }}`), an error will be logged in the console when AngularJS tries to update
+ * interpolation (`{{ ... }}`), an error will be logged in the console when Angular tries to update
  * the value of the by-then-removed text node. This doesn't affect the functionality of the
  * textarea, but can be undesirable.
  *
@@ -27853,7 +26590,7 @@ function checkboxInputType(scope, element, attr, ctrl, $sniffer, $browser, $filt
  * Specifically, data binding and event handling via `ng-model` is unsupported for `input[file]`.
  * </div>
  *
- * @param {string} ngModel Assignable AngularJS expression to data-bind to.
+ * @param {string} ngModel Assignable angular expression to data-bind to.
  * @param {string=} name Property name of the form under which the control is published.
  * @param {string=} required Sets `required` validation error key if the value is not entered.
  * @param {boolean=} ngRequired Sets `required` attribute if set to true
@@ -27863,7 +26600,7 @@ function checkboxInputType(scope, element, attr, ctrl, $sniffer, $browser, $filt
  *    maxlength. Setting the attribute to a negative or non-numeric value, allows view values of any
  *    length.
  * @param {string=} ngPattern Sets `pattern` validation error key if the ngModel {@link ngModel.NgModelController#$viewValue $viewValue}
- *    value does not match a RegExp found by evaluating the AngularJS expression given in the attribute value.
+ *    value does not match a RegExp found by evaluating the Angular expression given in the attribute value.
  *    If the expression evaluates to a RegExp object, then this is used directly.
  *    If the expression evaluates to a string, then it will be converted to a RegExp
  *    after wrapping it in `^` and `$` characters. For instance, `"abc"` will be converted to
@@ -27871,9 +26608,9 @@ function checkboxInputType(scope, element, attr, ctrl, $sniffer, $browser, $filt
  *    **Note:** Avoid using the `g` flag on the RegExp, as it will cause each successive search to
  *    start at the index of the last search's match, thus not taking the whole input value into
  *    account.
- * @param {string=} ngChange AngularJS expression to be executed when input changes due to user
+ * @param {string=} ngChange Angular expression to be executed when input changes due to user
  *    interaction with the input element.
- * @param {boolean=} [ngTrim=true] If set to false AngularJS will not automatically trim the input.
+ * @param {boolean=} [ngTrim=true] If set to false Angular will not automatically trim the input.
  *    This parameter is ignored for input[type=password] controls, which will never trim the
  *    input.
  *
@@ -28092,7 +26829,7 @@ var ngValueDirective = function() {
  * @restrict AC
  *
  * @description
- * The `ngBind` attribute tells AngularJS to replace the text content of the specified HTML element
+ * The `ngBind` attribute tells Angular to replace the text content of the specified HTML element
  * with the value of a given expression, and to update the text content when the value of that
  * expression changes.
  *
@@ -28100,7 +26837,7 @@ var ngValueDirective = function() {
  * `{{ expression }}` which is similar but less verbose.
  *
  * It is preferable to use `ngBind` instead of `{{ expression }}` if a template is momentarily
- * displayed by the browser in its raw state before AngularJS compiles it. Since `ngBind` is an
+ * displayed by the browser in its raw state before Angular compiles it. Since `ngBind` is an
  * element attribute, it makes the bindings invisible to the user while the page is loading.
  *
  * An alternative solution to this problem would be using the
@@ -28230,7 +26967,7 @@ var ngBindTemplateDirective = ['$interpolate', '$compile', function($interpolate
  * Evaluates the expression and inserts the resulting HTML into the element in a secure way. By default,
  * the resulting HTML content will be sanitized using the {@link ngSanitize.$sanitize $sanitize} service.
  * To utilize this functionality, ensure that `$sanitize` is available, for example, by including {@link
- * ngSanitize} in your module's dependencies (not in core AngularJS). In order to use {@link ngSanitize}
+ * ngSanitize} in your module's dependencies (not in core Angular). In order to use {@link ngSanitize}
  * in your module's dependencies, you need to include "angular-sanitize.js" in your application.
  *
  * You may also bypass sanitization for values you know are safe. To do so, bind to
@@ -28385,6 +27122,13 @@ function classDirective(name, selector) {
     return {
       restrict: 'AC',
       link: function(scope, element, attr) {
+        var expression = attr[name].trim();
+        var isOneTime = (expression.charAt(0) === ':') && (expression.charAt(1) === ':');
+
+        var watchInterceptor = isOneTime ? toFlatValue : toClassString;
+        var watchExpression = $parse(expression, watchInterceptor);
+        var watchAction = isOneTime ? ngClassOneTimeWatchAction : ngClassWatchAction;
+
         var classCounts = element.data('$classCounts');
         var oldModulo = true;
         var oldClassString;
@@ -28407,7 +27151,7 @@ function classDirective(name, selector) {
           scope.$watch(indexWatchExpression, ngClassIndexWatchAction);
         }
 
-        scope.$watch($parse(attr[name], toClassString), ngClassWatchAction);
+        scope.$watch(watchExpression, watchAction, isOneTime);
 
         function addClasses(classString) {
           classString = digestClassCounts(split(classString), 1);
@@ -28449,9 +27193,9 @@ function classDirective(name, selector) {
         }
 
         function ngClassIndexWatchAction(newModulo) {
-          // This watch-action should run before the `ngClassWatchAction()`, thus it
+          // This watch-action should run before the `ngClass[OneTime]WatchAction()`, thus it
           // adds/removes `oldClassString`. If the `ngClass` expression has changed as well, the
-          // `ngClassWatchAction()` will update the classes.
+          // `ngClass[OneTime]WatchAction()` will update the classes.
           if (newModulo === selector) {
             addClasses(oldClassString);
           } else {
@@ -28459,6 +27203,14 @@ function classDirective(name, selector) {
           }
 
           oldModulo = newModulo;
+        }
+
+        function ngClassOneTimeWatchAction(newClassValue) {
+          var newClassString = toClassString(newClassValue);
+
+          if (newClassString !== oldClassString) {
+            ngClassWatchAction(newClassString);
+          }
         }
 
         function ngClassWatchAction(newClassString) {
@@ -28496,8 +27248,6 @@ function classDirective(name, selector) {
   }
 
   function toClassString(classValue) {
-    if (!classValue) return classValue;
-
     var classString = classValue;
 
     if (isArray(classValue)) {
@@ -28506,11 +27256,37 @@ function classDirective(name, selector) {
       classString = Object.keys(classValue).
         filter(function(key) { return classValue[key]; }).
         join(' ');
-    } else if (!isString(classValue)) {
-      classString = classValue + '';
     }
 
     return classString;
+  }
+
+  function toFlatValue(classValue) {
+    var flatValue = classValue;
+
+    if (isArray(classValue)) {
+      flatValue = classValue.map(toFlatValue);
+    } else if (isObject(classValue)) {
+      var hasUndefined = false;
+
+      flatValue = Object.keys(classValue).filter(function(key) {
+        var value = classValue[key];
+
+        if (!hasUndefined && isUndefined(value)) {
+          hasUndefined = true;
+        }
+
+        return value;
+      });
+
+      if (hasUndefined) {
+        // Prevent the `oneTimeLiteralWatchInterceptor` from unregistering
+        // the watcher, by including at least one `undefined` value.
+        flatValue.push(undefined);
+      }
+    }
+
+    return flatValue;
   }
 }
 
@@ -28553,7 +27329,6 @@ function classDirective(name, selector) {
  * |----------------------------------|-------------------------------------|
  * | {@link ng.$animate#addClass addClass}       | just before the class is applied to the element   |
  * | {@link ng.$animate#removeClass removeClass} | just before the class is removed from the element |
- * | {@link ng.$animate#setClass setClass} | just before classes are added and classes are removed from the element at the same time |
  *
  * ### ngClass and pre-existing CSS3 Transitions/Animations
    The ngClass directive still supports CSS3 Transitions/Animations even if they do not follow the ngAnimate CSS naming structure.
@@ -28714,12 +27489,6 @@ var ngClassDirective = classDirective('', true);
  * This directive can be applied only within the scope of an
  * {@link ng.directive:ngRepeat ngRepeat}.
  *
- * @animations
- * | Animation                        | Occurs                              |
- * |----------------------------------|-------------------------------------|
- * | {@link ng.$animate#addClass addClass}       | just before the class is applied to the element   |
- * | {@link ng.$animate#removeClass removeClass} | just before the class is removed from the element |
- *
  * @element ANY
  * @param {expression} ngClassOdd {@link guide/expression Expression} to eval. The result
  *   of the evaluation can be a string representing space delimited class names or an array.
@@ -28752,62 +27521,6 @@ var ngClassDirective = classDirective('', true);
        });
      </file>
    </example>
- *
- * <hr />
- * @example
- * An example on how to implement animations using `ngClassOdd`:
- *
-   <example module="ngAnimate" deps="angular-animate.js" animations="true" name="ng-class-odd-animate">
-     <file name="index.html">
-       <div ng-init="items=['Item 3', 'Item 2', 'Item 1', 'Item 0']">
-         <button ng-click="items.unshift('Item ' + items.length)">Add item</button>
-         <hr />
-         <table>
-           <tr ng-repeat="item in items" ng-class-odd="'odd'">
-             <td>{{ item }}</td>
-           </tr>
-         </table>
-       </div>
-     </file>
-     <file name="style.css">
-       .odd {
-         background: rgba(255, 255, 0, 0.25);
-       }
-
-       .odd-add, .odd-remove {
-         transition: 1.5s;
-       }
-     </file>
-     <file name="protractor.js" type="protractor">
-       it('should add new entries to the beginning of the list', function() {
-         var button = element(by.buttonText('Add item'));
-         var rows = element.all(by.repeater('item in items'));
-
-         expect(rows.count()).toBe(4);
-         expect(rows.get(0).getText()).toBe('Item 3');
-         expect(rows.get(1).getText()).toBe('Item 2');
-
-         button.click();
-
-         expect(rows.count()).toBe(5);
-         expect(rows.get(0).getText()).toBe('Item 4');
-         expect(rows.get(1).getText()).toBe('Item 3');
-       });
-
-       it('should add odd class to odd entries', function() {
-         var button = element(by.buttonText('Add item'));
-         var rows = element.all(by.repeater('item in items'));
-
-         expect(rows.get(0).getAttribute('class')).toMatch(/odd/);
-         expect(rows.get(1).getAttribute('class')).not.toMatch(/odd/);
-
-         button.click();
-
-         expect(rows.get(0).getAttribute('class')).toMatch(/odd/);
-         expect(rows.get(1).getAttribute('class')).not.toMatch(/odd/);
-       });
-     </file>
-   </example>
  */
 var ngClassOddDirective = classDirective('Odd', 0);
 
@@ -28823,12 +27536,6 @@ var ngClassOddDirective = classDirective('Odd', 0);
  *
  * This directive can be applied only within the scope of an
  * {@link ng.directive:ngRepeat ngRepeat}.
- *
- * @animations
- * | Animation                        | Occurs                              |
- * |----------------------------------|-------------------------------------|
- * | {@link ng.$animate#addClass addClass}       | just before the class is applied to the element   |
- * | {@link ng.$animate#removeClass removeClass} | just before the class is removed from the element |
  *
  * @element ANY
  * @param {expression} ngClassEven {@link guide/expression Expression} to eval. The
@@ -28862,62 +27569,6 @@ var ngClassOddDirective = classDirective('Odd', 0);
        });
      </file>
    </example>
- *
- * <hr />
- * @example
- * An example on how to implement animations using `ngClassEven`:
- *
-   <example module="ngAnimate" deps="angular-animate.js" animations="true" name="ng-class-even-animate">
-     <file name="index.html">
-       <div ng-init="items=['Item 3', 'Item 2', 'Item 1', 'Item 0']">
-         <button ng-click="items.unshift('Item ' + items.length)">Add item</button>
-         <hr />
-         <table>
-           <tr ng-repeat="item in items" ng-class-even="'even'">
-             <td>{{ item }}</td>
-           </tr>
-         </table>
-       </div>
-     </file>
-     <file name="style.css">
-       .even {
-         background: rgba(255, 255, 0, 0.25);
-       }
-
-       .even-add, .even-remove {
-         transition: 1.5s;
-       }
-     </file>
-     <file name="protractor.js" type="protractor">
-       it('should add new entries to the beginning of the list', function() {
-         var button = element(by.buttonText('Add item'));
-         var rows = element.all(by.repeater('item in items'));
-
-         expect(rows.count()).toBe(4);
-         expect(rows.get(0).getText()).toBe('Item 3');
-         expect(rows.get(1).getText()).toBe('Item 2');
-
-         button.click();
-
-         expect(rows.count()).toBe(5);
-         expect(rows.get(0).getText()).toBe('Item 4');
-         expect(rows.get(1).getText()).toBe('Item 3');
-       });
-
-       it('should add even class to even entries', function() {
-         var button = element(by.buttonText('Add item'));
-         var rows = element.all(by.repeater('item in items'));
-
-         expect(rows.get(0).getAttribute('class')).not.toMatch(/even/);
-         expect(rows.get(1).getAttribute('class')).toMatch(/even/);
-
-         button.click();
-
-         expect(rows.get(0).getAttribute('class')).not.toMatch(/even/);
-         expect(rows.get(1).getAttribute('class')).toMatch(/even/);
-       });
-     </file>
-   </example>
  */
 var ngClassEvenDirective = classDirective('Even', 1);
 
@@ -28927,7 +27578,7 @@ var ngClassEvenDirective = classDirective('Even', 1);
  * @restrict AC
  *
  * @description
- * The `ngCloak` directive is used to prevent the AngularJS html template from being briefly
+ * The `ngCloak` directive is used to prevent the Angular html template from being briefly
  * displayed by the browser in its raw (uncompiled) form while your application is loading. Use this
  * directive to avoid the undesirable flicker effect caused by the html template display.
  *
@@ -28946,7 +27597,7 @@ var ngClassEvenDirective = classDirective('Even', 1);
  * ```
  *
  * When this css rule is loaded by the browser, all html elements (including their children) that
- * are tagged with the `ngCloak` directive are hidden. When AngularJS encounters this directive
+ * are tagged with the `ngCloak` directive are hidden. When Angular encounters this directive
  * during the compilation of the template it deletes the `ngCloak` element attribute, making
  * the compiled element visible.
  *
@@ -29011,10 +27662,14 @@ var ngCloakDirective = ngDirective({
  * The controller instance can be published into a scope property by specifying
  * `ng-controller="as propertyName"`.
  *
+ * If the current `$controllerProvider` is configured to use globals (via
+ * {@link ng.$controllerProvider#allowGlobals `$controllerProvider.allowGlobals()` }), this may
+ * also be the name of a globally accessible constructor function (deprecated, not recommended).
+ *
  * @example
  * Here is a simple form for editing user contact information. Adding, removing, clearing, and
  * greeting are methods declared on the controller (see source tab). These methods can
- * easily be called from the AngularJS markup. Any changes to the data are automatically reflected
+ * easily be called from the angular markup. Any changes to the data are automatically reflected
  * in the View without the need for a manual update.
  *
  * Two different declaration styles are included below:
@@ -29024,7 +27679,7 @@ var ngCloakDirective = ngDirective({
  * * one injects `$scope` into the controller:
  * `ng-controller="SettingsController2"`
  *
- * The second option is more common in the AngularJS community, and is generally used in boilerplates
+ * The second option is more common in the Angular community, and is generally used in boilerplates
  * and in this guide. However, there are advantages to binding properties directly to the controller
  * and avoiding scope.
  *
@@ -29221,31 +27876,31 @@ var ngControllerDirective = [function() {
  * @element ANY
  * @description
  *
- * AngularJS has some features that can conflict with certain restrictions that are applied when using
+ * Angular has some features that can conflict with certain restrictions that are applied when using
  * [CSP (Content Security Policy)](https://developer.mozilla.org/en/Security/CSP) rules.
  *
- * If you intend to implement CSP with these rules then you must tell AngularJS not to use these
+ * If you intend to implement CSP with these rules then you must tell Angular not to use these
  * features.
  *
  * This is necessary when developing things like Google Chrome Extensions or Universal Windows Apps.
  *
  *
- * The following default rules in CSP affect AngularJS:
+ * The following default rules in CSP affect Angular:
  *
  * * The use of `eval()`, `Function(string)` and similar functions to dynamically create and execute
- * code from strings is forbidden. AngularJS makes use of this in the {@link $parse} service to
- * provide a 30% increase in the speed of evaluating AngularJS expressions. (This CSP rule can be
+ * code from strings is forbidden. Angular makes use of this in the {@link $parse} service to
+ * provide a 30% increase in the speed of evaluating Angular expressions. (This CSP rule can be
  * disabled with the CSP keyword `unsafe-eval`, but it is generally not recommended as it would
  * weaken the protections offered by CSP.)
  *
  * * The use of inline resources, such as inline `<script>` and `<style>` elements, are forbidden.
- * This prevents apps from injecting custom styles directly into the document. AngularJS makes use of
+ * This prevents apps from injecting custom styles directly into the document. Angular makes use of
  * this to include some CSS rules (e.g. {@link ngCloak} and {@link ngHide}). To make these
  * directives work when a CSP rule is blocking inline styles, you must link to the `angular-csp.css`
  * in your HTML manually. (This CSP rule can be disabled with the CSP keyword `unsafe-inline`, but
  * it is generally not recommended as it would weaken the protections offered by CSP.)
  *
- * If you do not provide `ngCsp` then AngularJS tries to autodetect if CSP is blocking dynamic code
+ * If you do not provide `ngCsp` then Angular tries to autodetect if CSP is blocking dynamic code
  * creation from strings (e.g., `unsafe-eval` not specified in CSP header) and automatically
  * deactivates this feature in the {@link $parse} service. This autodetection, however, triggers a
  * CSP error to be logged in the console:
@@ -29262,31 +27917,31 @@ var ngControllerDirective = [function() {
  *
  * *Note: This directive is only available in the `ng-csp` and `data-ng-csp` attribute form.*
  *
- * You can specify which of the CSP related AngularJS features should be deactivated by providing
+ * You can specify which of the CSP related Angular features should be deactivated by providing
  * a value for the `ng-csp` attribute. The options are as follows:
  *
- * * no-inline-style: this stops AngularJS from injecting CSS styles into the DOM
+ * * no-inline-style: this stops Angular from injecting CSS styles into the DOM
  *
- * * no-unsafe-eval: this stops AngularJS from optimizing $parse with unsafe eval of strings
+ * * no-unsafe-eval: this stops Angular from optimizing $parse with unsafe eval of strings
  *
  * You can use these values in the following combinations:
  *
  *
- * * No declaration means that AngularJS will assume that you can do inline styles, but it will do
+ * * No declaration means that Angular will assume that you can do inline styles, but it will do
  * a runtime check for unsafe-eval. E.g. `<body>`. This is backwardly compatible with previous
- * versions of AngularJS.
+ * versions of Angular.
  *
- * * A simple `ng-csp` (or `data-ng-csp`) attribute will tell AngularJS to deactivate both inline
+ * * A simple `ng-csp` (or `data-ng-csp`) attribute will tell Angular to deactivate both inline
  * styles and unsafe eval. E.g. `<body ng-csp>`. This is backwardly compatible with previous
- * versions of AngularJS.
+ * versions of Angular.
  *
- * * Specifying only `no-unsafe-eval` tells AngularJS that we must not use eval, but that we can
+ * * Specifying only `no-unsafe-eval` tells Angular that we must not use eval, but that we can
  * inject inline styles. E.g. `<body ng-csp="no-unsafe-eval">`.
  *
- * * Specifying only `no-inline-style` tells AngularJS that we must not inject styles, but that we can
+ * * Specifying only `no-inline-style` tells Angular that we must not inject styles, but that we can
  * run eval - no automatic check for unsafe eval will occur. E.g. `<body ng-csp="no-inline-style">`
  *
- * * Specifying both `no-unsafe-eval` and `no-inline-style` tells AngularJS that we must not inject
+ * * Specifying both `no-unsafe-eval` and `no-inline-style` tells Angular that we must not inject
  * styles nor use eval, which is the same as an empty: ng-csp.
  * E.g.`<body ng-csp="no-inline-style;no-unsafe-eval">`
  *
@@ -29457,7 +28112,7 @@ var ngControllerDirective = [function() {
  */
 /*
  * A collection of directives that allows creation of custom event handlers that are defined as
- * AngularJS expressions and are compiled and executed within the current scope.
+ * angular expressions and are compiled and executed within the current scope.
  */
 var ngEventDirectives = {};
 
@@ -29472,43 +28127,32 @@ forEach(
   'click dblclick mousedown mouseup mouseover mouseout mousemove mouseenter mouseleave keydown keyup keypress submit focus blur copy cut paste'.split(' '),
   function(eventName) {
     var directiveName = directiveNormalize('ng-' + eventName);
-    ngEventDirectives[directiveName] = ['$parse', '$rootScope', '$exceptionHandler', function($parse, $rootScope, $exceptionHandler) {
-      return createEventDirective($parse, $rootScope, $exceptionHandler, directiveName, eventName, forceAsyncEvents[eventName]);
+    ngEventDirectives[directiveName] = ['$parse', '$rootScope', function($parse, $rootScope) {
+      return {
+        restrict: 'A',
+        compile: function($element, attr) {
+          // NOTE:
+          // We expose the powerful `$event` object on the scope that provides access to the Window,
+          // etc. This is OK, because expressions are not sandboxed any more (and the expression
+          // sandbox was never meant to be a security feature anyway).
+          var fn = $parse(attr[directiveName]);
+          return function ngEventHandler(scope, element) {
+            element.on(eventName, function(event) {
+              var callback = function() {
+                fn(scope, {$event: event});
+              };
+              if (forceAsyncEvents[eventName] && $rootScope.$$phase) {
+                scope.$evalAsync(callback);
+              } else {
+                scope.$apply(callback);
+              }
+            });
+          };
+        }
+      };
     }];
   }
 );
-
-function createEventDirective($parse, $rootScope, $exceptionHandler, directiveName, eventName, forceAsync) {
-  return {
-    restrict: 'A',
-    compile: function($element, attr) {
-      // NOTE:
-      // We expose the powerful `$event` object on the scope that provides access to the Window,
-      // etc. This is OK, because expressions are not sandboxed any more (and the expression
-      // sandbox was never meant to be a security feature anyway).
-      var fn = $parse(attr[directiveName]);
-      return function ngEventHandler(scope, element) {
-        element.on(eventName, function(event) {
-          var callback = function() {
-            fn(scope, {$event: event});
-          };
-
-          if (!$rootScope.$$phase) {
-            scope.$apply(callback);
-          } else if (forceAsync) {
-            scope.$evalAsync(callback);
-          } else {
-            try {
-              callback();
-            } catch (error) {
-              $exceptionHandler(error);
-            }
-          }
-        });
-      };
-    }
-  };
-}
 
 /**
  * @ngdoc directive
@@ -29766,7 +28410,7 @@ function createEventDirective($parse, $rootScope, $exceptionHandler, directiveNa
  * @priority 0
  *
  * @description
- * Enables binding AngularJS expressions to onsubmit events.
+ * Enables binding angular expressions to onsubmit events.
  *
  * Additionally it prevents the default action (which for form means sending the request to the
  * server and reloading the current page), but only if the form does not contain `action`,
@@ -30074,7 +28718,7 @@ var ngIfDirective = ['$animate', '$compile', function($animate, $compile) {
  * application document. This is done by calling {@link $sce#getTrustedResourceUrl
  * $sce.getTrustedResourceUrl} on it. To load templates from other domains or protocols
  * you may either {@link ng.$sceDelegateProvider#resourceUrlWhitelist whitelist them} or
- * {@link $sce#trustAsResourceUrl wrap them} as trusted values. Refer to AngularJS's {@link
+ * {@link $sce#trustAsResourceUrl wrap them} as trusted values. Refer to Angular's {@link
  * ng.$sce Strict Contextual Escaping}.
  *
  * In addition, the browser's
@@ -30697,10 +29341,8 @@ var ngModelMinErr = minErr('ngModel');
  * };
  * ```
  *
- * @property {Array.<Function>} $viewChangeListeners Array of functions to execute whenever
- *     a change to {@link ngModel.NgModelController#$viewValue `$viewValue`} has caused a change
- *     to {@link ngModel.NgModelController#$modelValue `$modelValue`}.
- *     It is called with no arguments, and its return value is ignored.
+ * @property {Array.<Function>} $viewChangeListeners Array of functions to execute whenever the
+ *     view value has changed. It is called with no arguments, and its return value is ignored.
  *     This can be used in place of additional $watches against the model value.
  *
  * @property {Object} $error An object hash with all failing validator ids as keys.
@@ -30722,7 +29364,7 @@ var ngModelMinErr = minErr('ngModel');
  * listening to DOM events.
  * Such DOM related logic should be provided by other directives which make use of
  * `NgModelController` for data-binding to control elements.
- * AngularJS provides this DOM logic for most {@link input `input`} elements.
+ * Angular provides this DOM logic for most {@link input `input`} elements.
  * At the end of this page you can find a {@link ngModel.NgModelController#custom-control-example
  * custom control example} that uses `ngModelController` to bind to `contenteditable` elements.
  *
@@ -30852,12 +29494,12 @@ function NgModelController($scope, $exceptionHandler, $attr, $element, $parse, $
   this.$$ngModelSet = this.$$parsedNgModelAssign;
   this.$$pendingDebounce = null;
   this.$$parserValid = undefined;
-  this.$$parserName = 'parse';
 
   this.$$currentValidationRunId = 0;
 
-  this.$$scope = $scope;
-  this.$$rootScope = $scope.$root;
+  // https://github.com/angular/angular.js/issues/15833
+  // Prevent `$$scope` from being iterated over by `copy` when NgModelController is deep watched
+  Object.defineProperty(this, '$$scope', {value: $scope});
   this.$$attr = $attr;
   this.$$element = $element;
   this.$$animate = $animate;
@@ -31041,7 +29683,7 @@ NgModelController.prototype = {
    * and reset the input to the last committed view value.
    *
    * It is also possible that you run into difficulties if you try to update the ngModel's `$modelValue`
-   * programmatically before these debounced/future events have resolved/occurred, because AngularJS's
+   * programmatically before these debounced/future events have resolved/occurred, because Angular's
    * dirty checking mechanism is not able to tell whether the model has actually changed or not.
    *
    * The `$rollbackViewValue()` method should be called before programmatically changing the model of an
@@ -31184,8 +29826,7 @@ NgModelController.prototype = {
     processAsyncValidators();
 
     function processParseErrors() {
-      var errorKey = that.$$parserName;
-
+      var errorKey = that.$$parserName || 'parse';
       if (isUndefined(that.$$parserValid)) {
         setValidity(errorKey, null);
       } else {
@@ -31197,7 +29838,6 @@ NgModelController.prototype = {
             setValidity(name, null);
           });
         }
-
         // Set the parse error last, to prevent unsetting it, should a $validators key == parserName
         setValidity(errorKey, that.$$parserValid);
         return that.$$parserValid;
@@ -31299,10 +29939,6 @@ NgModelController.prototype = {
     var that = this;
 
     this.$$parserValid = isUndefined(modelValue) ? undefined : true;
-
-    // Reset any previous parse error
-    this.$setValidity(this.$$parserName, null);
-    this.$$parserName = 'parse';
 
     if (this.$$parserValid) {
       for (var i = 0; i < this.$parsers.length; i++) {
@@ -31421,12 +30057,8 @@ NgModelController.prototype = {
 
     if (isNumber(debounceDelay[trigger])) {
       debounceDelay = debounceDelay[trigger];
-    } else if (isNumber(debounceDelay['default']) &&
-      this.$options.getOption('updateOn').indexOf(trigger) === -1
-    ) {
+    } else if (isNumber(debounceDelay['default'])) {
       debounceDelay = debounceDelay['default'];
-    } else if (isNumber(debounceDelay['*'])) {
-      debounceDelay = debounceDelay['*'];
     }
 
     this.$$timeout.cancel(this.$$pendingDebounce);
@@ -31435,7 +30067,7 @@ NgModelController.prototype = {
       this.$$pendingDebounce = this.$$timeout(function() {
         that.$commitViewValue();
       }, debounceDelay);
-    } else if (this.$$rootScope.$$phase) {
+    } else if (this.$$scope.$root.$$phase) {
       this.$commitViewValue();
     } else {
       this.$$scope.$apply(function() {
@@ -31687,7 +30319,7 @@ function setupModelWatcher(ctrl) {
  *        classes and can be bound to as `{{ someForm.someControl.$error.myError }}`.
  * @param {boolean} isValid Whether the current state is valid (true), invalid (false), pending (undefined),
  *                          or skipped (null). Pending is used for unfulfilled `$asyncValidators`.
- *                          Skipped is used by AngularJS when validators do not run because of parse errors and
+ *                          Skipped is used by Angular when validators do not run because of parse errors and
  *                          when `$asyncValidators` do not run because any of the `$validators` failed.
  */
 addSetValidityMethod({
@@ -31847,7 +30479,7 @@ addSetValidityMethod({
  * to the view.
  *
  * <div class="alert alert-success">
- * **Best Practice:** It's best to keep getters fast because AngularJS is likely to call them more
+ * **Best Practice:** It's best to keep getters fast because Angular is likely to call them more
  * frequently than other parts of your code.
  * </div>
  *
@@ -31991,7 +30623,7 @@ ModelOptions.prototype = {
     options = extend({}, options);
 
     // Inherit options from the parent if specified by the value `"$inherit"`
-    forEach(options, /** @this */ function(option, key) {
+    forEach(options, /* @this */ function(option, key) {
       if (option === '$inherit') {
         if (key === '*') {
           inheritAll = true;
@@ -32051,7 +30683,7 @@ defaultModelOptions = new ModelOptions({
  * directives will use the options of their nearest `ngModelOptions` ancestor.
  *
  * The `ngModelOptions` settings are found by evaluating the value of the attribute directive as
- * an AngularJS expression. This expression should evaluate to an object, whose properties contain
+ * an Angular expression. This expression should evaluate to an object, whose properties contain
  * the settings. For example: `<div ng-model-options="{ debounce: 100 }"`.
  *
  * ## Inheriting Options
@@ -32214,105 +30846,6 @@ defaultModelOptions = new ModelOptions({
  *   </file>
  * </example>
  *
- * ### Default events, extra triggers, and catch-all debounce values
- *
- * This example shows the relationship between "default" update events and
- * additional `updateOn` triggers.
- *
- * `default` events are those that are bound to the control, and when fired, update the `$viewValue`
- * via {@link ngModel.NgModelController#$setViewValue $setViewValue}. Every event that is not listed
- * in `updateOn` is considered a "default" event, since different control types have different
- * default events.
- *
- * The control in this example updates by "default", "click", and "blur", with different `debounce`
- * values. You can see that "click" doesn't have an individual `debounce` value -
- * therefore it uses the `*` debounce value.
- *
- * There is also a button that calls {@link ngModel.NgModelController#$setViewValue $setViewValue}
- * directly with a "custom" event. Since "custom" is not defined in the `updateOn` list,
- * it is considered a "default" event and will update the
- * control if "default" is defined in `updateOn`, and will receive the "default" debounce value.
- * Note that this is just to illustrate how custom controls would possibly call `$setViewValue`.
- *
- * You can change the `updateOn` and `debounce` configuration to test different scenarios. This
- * is done with {@link ngModel.NgModelController#$overrideModelOptions $overrideModelOptions}.
- *
-  <example name="ngModelOptions-advanced" module="optionsExample">
-    <file name="index.html">
-       <model-update-demo></model-update-demo>
-    </file>
-    <file name="app.js">
-      angular.module('optionsExample', [])
-        .component('modelUpdateDemo', {
-          templateUrl: 'template.html',
-          controller: function() {
-            this.name = 'Chinua';
-
-            this.options = {
-              updateOn: 'default blur click',
-              debounce: {
-                default: 2000,
-                blur: 0,
-                '*': 1000
-              }
-            };
-
-            this.updateEvents = function() {
-              var eventList = this.options.updateOn.split(' ');
-              eventList.push('*');
-              var events = {};
-
-              for (var i = 0; i < eventList.length; i++) {
-                events[eventList[i]] = this.options.debounce[eventList[i]];
-              }
-
-              this.events = events;
-            };
-
-            this.updateOptions = function() {
-              var options = angular.extend(this.options, {
-                updateOn: Object.keys(this.events).join(' ').replace('*', ''),
-                debounce: this.events
-              });
-
-              this.form.input.$overrideModelOptions(options);
-            };
-
-            // Initialize the event form
-            this.updateEvents();
-          }
-        });
-    </file>
-    <file name="template.html">
-      <form name="$ctrl.form">
-        Input: <input type="text" name="input" ng-model="$ctrl.name" ng-model-options="$ctrl.options" />
-      </form>
-      Model: <tt>{{$ctrl.name}}</tt>
-      <hr>
-      <button ng-click="$ctrl.form.input.$setViewValue('some value', 'custom')">Trigger setViewValue with 'some value' and 'custom' event</button>
-
-      <hr>
-      <form ng-submit="$ctrl.updateOptions()">
-        <b>updateOn</b><br>
-        <input type="text" ng-model="$ctrl.options.updateOn" ng-change="$ctrl.updateEvents()" ng-model-options="{debounce: 500}">
-
-        <table>
-          <tr>
-            <th>Option</th>
-            <th>Debounce value</th>
-          </tr>
-          <tr ng-repeat="(key, value) in $ctrl.events">
-            <td>{{key}}</td>
-            <td><input type="number" ng-model="$ctrl.events[key]" /></td>
-          </tr>
-        </table>
-
-        <br>
-        <input type="submit" value="Update options">
-      </form>
-    </file>
-  </example>
- *
  *
  * ## Model updates and validation
  *
@@ -32356,81 +30889,22 @@ defaultModelOptions = new ModelOptions({
  * </example>
  *
  *
- * ## Programmatically changing options
- *
- * The `ngModelOptions` expression is only evaluated once when the directive is linked; it is not
- * watched for changes. However, it is possible to override the options on a single
- * {@link ngModel.NgModelController} instance with
- * {@link ngModel.NgModelController#$overrideModelOptions `NgModelController#$overrideModelOptions()`}.
- * See also the example for
- * {@link ngModelOptions#default-events-extra-triggers-and-catch-all-debounce-values
- * Default events, extra triggers, and catch-all debounce values}.
- *
- *
  * ## Specifying timezones
  *
  * You can specify the timezone that date/time input directives expect by providing its name in the
  * `timezone` property.
  *
  *
- * ## Formatting the value of `time` and `datetime-local`
+ * ## Programmatically changing options
  *
- * With the options `timeSecondsFormat` and `timeStripZeroSeconds` it is possible to adjust the value
- * that is displayed in the control. Note that browsers may apply their own formatting
- * in the user interface.
+ * The `ngModelOptions` expression is only evaluated once when the directive is linked; it is not
+ * watched for changes. However, it is possible to override the options on a single
+ * {@link ngModel.NgModelController} instance with
+ * {@link ngModel.NgModelController#$overrideModelOptions `NgModelController#$overrideModelOptions()`}.
  *
-   <example name="ngModelOptions-time-format" module="timeExample">
-     <file name="index.html">
-       <time-example></time-example>
-     </file>
-     <file name="script.js">
-        angular.module('timeExample', [])
-          .component('timeExample', {
-            templateUrl: 'timeExample.html',
-            controller: function() {
-              this.time = new Date(1970, 0, 1, 14, 57, 0);
-
-              this.options = {
-                timeSecondsFormat: 'ss',
-                timeStripZeroSeconds: true
-              };
-
-              this.optionChange = function() {
-                this.timeForm.timeFormatted.$overrideModelOptions(this.options);
-                this.time = new Date(this.time);
-              };
-            }
-          });
-     </file>
-     <file name="timeExample.html">
-       <form name="$ctrl.timeForm">
-         <strong>Default</strong>:
-         <input type="time" ng-model="$ctrl.time" step="any" /><br>
-         <strong>With options</strong>:
-         <input type="time" name="timeFormatted" ng-model="$ctrl.time" step="any" ng-model-options="$ctrl.options" />
-         <br>
-
-         Options:<br>
-         <code>timeSecondsFormat</code>:
-         <input
-           type="text"
-           ng-model="$ctrl.options.timeSecondsFormat"
-           ng-change="$ctrl.optionChange()">
-         <br>
-         <code>timeStripZeroSeconds</code>:
-         <input
-           type="checkbox"
-           ng-model="$ctrl.options.timeStripZeroSeconds"
-           ng-change="$ctrl.optionChange()">
-        </form>
-      </file>
- *  </example>
  *
  * @param {Object} ngModelOptions options to apply to {@link ngModel} directives on this element and
- *   and its descendents.
- *
- * **General options**:
- *
+ *   and its descendents. Valid keys are:
  *   - `updateOn`: string specifying which event should the input be bound to. You can set several
  *     events using an space delimited list. There is a special event called `default` that
  *     matches the default events belonging to the control. These are the events that are bound to
@@ -32447,51 +30921,23 @@ defaultModelOptions = new ModelOptions({
  *     custom value for each event. For example:
  *     ```
  *     ng-model-options="{
- *       updateOn: 'default blur',
+ *       updateOn: 'default blur click',
  *       debounce: { 'default': 500, 'blur': 0 }
  *     }"
  *     ```
- *     You can use the `*` key to specify a debounce value that applies to all events that are not
- *     specifically listed. In the following example, `mouseup` would have a debounce delay of 1000:
- *     ```
- *     ng-model-options="{
- *       updateOn: 'default blur mouseup',
- *       debounce: { 'default': 500, 'blur': 0, '*': 1000 }
- *     }"
- *     ```
+ *
+ *     "default" also applies to all events that are listed in `updateOn` but are not
+ *     listed in `debounce`, i.e. "click" would also be debounced by 500 milliseconds.
+ *
  *   - `allowInvalid`: boolean value which indicates that the model can be set with values that did
  *     not validate correctly instead of the default behavior of setting the model to undefined.
  *   - `getterSetter`: boolean value which determines whether or not to treat functions bound to
  *     `ngModel` as getters/setters.
- *
- *
- *  **Input-type specific options**:
- *
  *   - `timezone`: Defines the timezone to be used to read/write the `Date` instance in the model for
  *     `<input type="date" />`, `<input type="time" />`, ... . It understands UTC/GMT and the
  *     continental US time zone abbreviations, but for general use, use a time zone offset, for
  *     example, `'+0430'` (4 hours, 30 minutes east of the Greenwich meridian)
  *     If not specified, the timezone of the browser will be used.
- *     Note that changing the timezone will have no effect on the current date, and is only applied after
- *     the next input / model change.
- *
- *   - `timeSecondsFormat`: Defines if the `time` and `datetime-local` types should show seconds and
- *     milliseconds. The option follows the format string of {@link date date filter}.
- *     By default, the options is `undefined` which is equal to `'ss.sss'` (seconds and milliseconds).
- *     The other options are `'ss'` (strips milliseconds), and `''` (empty string), which strips both
- *     seconds and milliseconds.
- *     Note that browsers that support `time` and `datetime-local` require the hour and minutes
- *     part of the time string, and may show the value differently in the user interface.
- *     {@link ngModelOptions#formatting-the-value-of-time-and-datetime-local- See the example}.
- *
- *   - `timeStripZeroSeconds`: Defines if the `time` and `datetime-local` types should strip the
- *     seconds and milliseconds from the formatted value if they are zero. This option is applied
- *     after `timeSecondsFormat`.
- *     This option can be used to make the formatting consistent over different browsers, as some
- *     browsers with support for `time` will natively hide the milliseconds and
- *     seconds if they are zero, but others won't, and browsers that don't implement these input
- *     types will always show the full string.
- *     {@link ngModelOptions#formatting-the-value-of-time-and-datetime-local- See the example}.
  *
  */
 var ngModelOptionsDirective = function() {
@@ -33286,7 +31732,7 @@ var ngOptionsDirective = ['$compile', '$document', '$parse', function($compile, 
  * @description
  * `ngPluralize` is a directive that displays messages according to en-US localization rules.
  * These rules are bundled with angular.js, but can be overridden
- * (see {@link guide/i18n AngularJS i18n} dev guide). You configure ngPluralize directive
+ * (see {@link guide/i18n Angular i18n} dev guide). You configure ngPluralize directive
  * by specifying the mappings between
  * [plural categories](http://unicode.org/repos/cldr-tmp/trunk/diff/supplemental/language_plural_rules.html)
  * and the strings to be displayed.
@@ -33294,7 +31740,7 @@ var ngOptionsDirective = ['$compile', '$document', '$parse', function($compile, 
  * ## Plural categories and explicit number rules
  * There are two
  * [plural categories](http://unicode.org/repos/cldr-tmp/trunk/diff/supplemental/language_plural_rules.html)
- * in AngularJS's default en-US locale: "one" and "other".
+ * in Angular's default en-US locale: "one" and "other".
  *
  * While a plural category may match many numbers (for example, in en-US locale, "other" can match
  * any number that is not 1), an explicit number rule can only match one number. For example, the
@@ -33306,7 +31752,7 @@ var ngOptionsDirective = ['$compile', '$document', '$parse', function($compile, 
  * You can also provide an optional attribute, `offset`.
  *
  * The value of the `count` attribute can be either a string or an {@link guide/expression
- * AngularJS expression}; these are evaluated on the current scope for its bound value.
+ * Angular expression}; these are evaluated on the current scope for its bound value.
  *
  * The `when` attribute specifies the mappings between plural categories and the actual
  * string to be displayed. The value of the attribute should be a JSON object.
@@ -33328,7 +31774,7 @@ var ngOptionsDirective = ['$compile', '$document', '$parse', function($compile, 
  * show "a dozen people are viewing".
  *
  * You can use a set of closed braces (`{}`) as a placeholder for the number that you want substituted
- * into pluralized strings. In the previous example, AngularJS will replace `{}` with
+ * into pluralized strings. In the previous example, Angular will replace `{}` with
  * <span ng-non-bindable>`{{personCount}}`</span>. The closed braces `{}` is a placeholder
  * for <span ng-non-bindable>{{numberExpression}}</span>.
  *
@@ -33356,7 +31802,7 @@ var ngOptionsDirective = ['$compile', '$document', '$parse', function($compile, 
  * three explicit number rules 0, 1 and 2.
  * When one person, perhaps John, views the document, "John is viewing" will be shown.
  * When three people view the document, no explicit number rule is found, so
- * an offset of 2 is taken off 3, and AngularJS uses 1 to decide the plural category.
+ * an offset of 2 is taken off 3, and Angular uses 1 to decide the plural category.
  * In this case, plural category 'one' is matched and "John, Mary and one other person are viewing"
  * is shown.
  *
@@ -33517,301 +31963,6 @@ var ngPluralizeDirective = ['$locale', '$interpolate', '$log', function($locale,
   };
 }];
 
-/**
- * @ngdoc directive
- * @name ngRef
- * @restrict A
- *
- * @description
- * The `ngRef` attribute tells AngularJS to assign the controller of a component (or a directive)
- * to the given property in the current scope. It is also possible to add the jqlite-wrapped DOM
- * element to the scope.
- *
- * If the element with `ngRef` is destroyed `null` is assigned to the property.
- *
- * Note that if you want to assign from a child into the parent scope, you must initialize the
- * target property on the parent scope, otherwise `ngRef` will assign on the child scope.
- * This commonly happens when assigning elements or components wrapped in {@link ngIf} or
- * {@link ngRepeat}. See the second example below.
- *
- *
- * @element ANY
- * @param {string} ngRef property name - A valid AngularJS expression identifier to which the
- *                       controller or jqlite-wrapped DOM element will be bound.
- * @param {string=} ngRefRead read value - The name of a directive (or component) on this element,
- *                            or the special string `$element`. If a name is provided, `ngRef` will
- *                            assign the matching controller. If `$element` is provided, the element
- *                            itself is assigned (even if a controller is available).
- *
- *
- * @example
- * ### Simple toggle
- * This example shows how the controller of the component toggle
- * is reused in the template through the scope to use its logic.
- * <example name="ng-ref-component" module="myApp">
- *   <file name="index.html">
- *     <my-toggle ng-ref="myToggle"></my-toggle>
- *     <button ng-click="myToggle.toggle()">Toggle</button>
- *     <div ng-show="myToggle.isOpen()">
- *       You are using a component in the same template to show it.
- *     </div>
- *   </file>
- *   <file name="index.js">
- *     angular.module('myApp', [])
- *     .component('myToggle', {
- *       controller: function ToggleController() {
- *         var opened = false;
- *         this.isOpen = function() { return opened; };
- *         this.toggle = function() { opened = !opened; };
- *       }
- *     });
- *   </file>
- *   <file name="protractor.js" type="protractor">
- *      it('should publish the toggle into the scope', function() {
- *        var toggle = element(by.buttonText('Toggle'));
- *        expect(toggle.evaluate('myToggle.isOpen()')).toEqual(false);
- *        toggle.click();
- *        expect(toggle.evaluate('myToggle.isOpen()')).toEqual(true);
- *      });
- *   </file>
- * </example>
- *
- * @example
- * ### ngRef inside scopes
- * This example shows how `ngRef` works with child scopes. The `ngRepeat`-ed `myWrapper` components
- * are assigned to the scope of `myRoot`, because the `toggles` property has been initialized.
- * The repeated `myToggle` components are published to the child scopes created by `ngRepeat`.
- * `ngIf` behaves similarly - the assignment of `myToggle` happens in the `ngIf` child scope,
- * because the target property has not been initialized on the `myRoot` component controller.
- *
- * <example name="ng-ref-scopes" module="myApp">
- *   <file name="index.html">
- *     <my-root></my-root>
- *   </file>
- *   <file name="index.js">
- *     angular.module('myApp', [])
- *     .component('myRoot', {
- *       templateUrl: 'root.html',
- *       controller: function() {
- *         this.wrappers = []; // initialize the array so that the wrappers are assigned into the parent scope
- *       }
- *     })
- *     .component('myToggle', {
- *       template: '<strong>myToggle</strong><button ng-click="$ctrl.toggle()" ng-transclude></button>',
- *       transclude: true,
- *       controller: function ToggleController() {
- *         var opened = false;
- *         this.isOpen = function() { return opened; };
- *         this.toggle = function() { opened = !opened; };
- *       }
- *     })
- *     .component('myWrapper', {
- *       transclude: true,
- *       template: '<strong>myWrapper</strong>' +
- *         '<div>ngRepeatToggle.isOpen(): {{$ctrl.ngRepeatToggle.isOpen() | json}}</div>' +
- *         '<my-toggle ng-ref="$ctrl.ngRepeatToggle"><ng-transclude></ng-transclude></my-toggle>'
- *     });
- *   </file>
- *   <file name="root.html">
- *     <strong>myRoot</strong>
- *     <my-toggle ng-ref="$ctrl.outerToggle">Outer Toggle</my-toggle>
- *     <div>outerToggle.isOpen(): {{$ctrl.outerToggle.isOpen() | json}}</div>
- *     <div><em>wrappers assigned to root</em><br>
- *     <div ng-repeat="wrapper in $ctrl.wrappers">
- *       wrapper.ngRepeatToggle.isOpen(): {{wrapper.ngRepeatToggle.isOpen() | json}}
- *     </div>
- *
- *     <ul>
- *       <li ng-repeat="(index, value) in [1,2,3]">
- *         <strong>ngRepeat</strong>
- *         <div>outerToggle.isOpen(): {{$ctrl.outerToggle.isOpen() | json}}</div>
- *         <my-wrapper ng-ref="$ctrl.wrappers[index]">ngRepeat Toggle {{$index + 1}}</my-wrapper>
- *       </li>
- *     </ul>
- *
- *     <div>ngIfToggle.isOpen(): {{ngIfToggle.isOpen()}} // This is always undefined because it's
- *       assigned to the child scope created by ngIf.
- *     </div>
- *     <div ng-if="true">
-          <strong>ngIf</strong>
- *        <my-toggle ng-ref="ngIfToggle">ngIf Toggle</my-toggle>
- *        <div>ngIfToggle.isOpen(): {{ngIfToggle.isOpen() | json}}</div>
- *        <div>outerToggle.isOpen(): {{$ctrl.outerToggle.isOpen() | json}}</div>
- *     </div>
- *   </file>
- *   <file name="styles.css">
- *     ul {
- *       list-style: none;
- *       padding-left: 0;
- *     }
- *
- *     li[ng-repeat] {
- *       background: lightgreen;
- *       padding: 8px;
- *       margin: 8px;
- *     }
- *
- *     [ng-if] {
- *       background: lightgrey;
- *       padding: 8px;
- *     }
- *
- *     my-root {
- *       background: lightgoldenrodyellow;
- *       padding: 8px;
- *       display: block;
- *     }
- *
- *     my-wrapper {
- *       background: lightsalmon;
- *       padding: 8px;
- *       display: block;
- *     }
- *
- *     my-toggle {
- *       background: lightblue;
- *       padding: 8px;
- *       display: block;
- *     }
- *   </file>
- *   <file name="protractor.js" type="protractor">
- *      var OuterToggle = function() {
- *        this.toggle = function() {
- *          element(by.buttonText('Outer Toggle')).click();
- *        };
- *        this.isOpen = function() {
- *          return element.all(by.binding('outerToggle.isOpen()')).first().getText();
- *        };
- *      };
- *      var NgRepeatToggle = function(i) {
- *        var parent = element.all(by.repeater('(index, value) in [1,2,3]')).get(i - 1);
- *        this.toggle = function() {
- *          element(by.buttonText('ngRepeat Toggle ' + i)).click();
- *        };
- *        this.isOpen = function() {
- *          return parent.element(by.binding('ngRepeatToggle.isOpen() | json')).getText();
- *        };
- *        this.isOuterOpen = function() {
- *          return parent.element(by.binding('outerToggle.isOpen() | json')).getText();
- *        };
- *      };
- *      var NgRepeatToggles = function() {
- *        var toggles = [1,2,3].map(function(i) { return new NgRepeatToggle(i); });
- *        this.forEach = function(fn) {
- *          toggles.forEach(fn);
- *        };
- *        this.isOuterOpen = function(i) {
- *          return toggles[i - 1].isOuterOpen();
- *        };
- *      };
- *      var NgIfToggle = function() {
- *        var parent = element(by.css('[ng-if]'));
- *        this.toggle = function() {
- *          element(by.buttonText('ngIf Toggle')).click();
- *        };
- *        this.isOpen = function() {
- *          return by.binding('ngIfToggle.isOpen() | json').getText();
- *        };
- *        this.isOuterOpen = function() {
- *          return parent.element(by.binding('outerToggle.isOpen() | json')).getText();
- *        };
- *      };
- *
- *      it('should toggle the outer toggle', function() {
- *        var outerToggle = new OuterToggle();
- *        expect(outerToggle.isOpen()).toEqual('outerToggle.isOpen(): false');
- *        outerToggle.toggle();
- *        expect(outerToggle.isOpen()).toEqual('outerToggle.isOpen(): true');
- *      });
- *
- *      it('should toggle all outer toggles', function() {
- *        var outerToggle = new OuterToggle();
- *        var repeatToggles = new NgRepeatToggles();
- *        var ifToggle = new NgIfToggle();
- *        expect(outerToggle.isOpen()).toEqual('outerToggle.isOpen(): false');
- *        expect(repeatToggles.isOuterOpen(1)).toEqual('outerToggle.isOpen(): false');
- *        expect(repeatToggles.isOuterOpen(2)).toEqual('outerToggle.isOpen(): false');
- *        expect(repeatToggles.isOuterOpen(3)).toEqual('outerToggle.isOpen(): false');
- *        expect(ifToggle.isOuterOpen()).toEqual('outerToggle.isOpen(): false');
- *        outerToggle.toggle();
- *        expect(outerToggle.isOpen()).toEqual('outerToggle.isOpen(): true');
- *        expect(repeatToggles.isOuterOpen(1)).toEqual('outerToggle.isOpen(): true');
- *        expect(repeatToggles.isOuterOpen(2)).toEqual('outerToggle.isOpen(): true');
- *        expect(repeatToggles.isOuterOpen(3)).toEqual('outerToggle.isOpen(): true');
- *        expect(ifToggle.isOuterOpen()).toEqual('outerToggle.isOpen(): true');
- *      });
- *
- *      it('should toggle each repeat iteration separately', function() {
- *        var repeatToggles = new NgRepeatToggles();
- *
- *        repeatToggles.forEach(function(repeatToggle) {
- *          expect(repeatToggle.isOpen()).toEqual('ngRepeatToggle.isOpen(): false');
- *          expect(repeatToggle.isOuterOpen()).toEqual('outerToggle.isOpen(): false');
- *          repeatToggle.toggle();
- *          expect(repeatToggle.isOpen()).toEqual('ngRepeatToggle.isOpen(): true');
- *          expect(repeatToggle.isOuterOpen()).toEqual('outerToggle.isOpen(): false');
- *        });
- *      });
- *   </file>
- * </example>
- *
- */
-
-var ngRefMinErr = minErr('ngRef');
-
-var ngRefDirective = ['$parse', function($parse) {
-  return {
-    priority: -1, // Needed for compatibility with element transclusion on the same element
-    restrict: 'A',
-    compile: function(tElement, tAttrs) {
-      // Get the expected controller name, converts <data-some-thing> into "someThing"
-      var controllerName = directiveNormalize(nodeName_(tElement));
-
-      // Get the expression for value binding
-      var getter = $parse(tAttrs.ngRef);
-      var setter = getter.assign || function() {
-        throw ngRefMinErr('nonassign', 'Expression in ngRef="{0}" is non-assignable!', tAttrs.ngRef);
-      };
-
-      return function(scope, element, attrs) {
-        var refValue;
-
-        if (attrs.hasOwnProperty('ngRefRead')) {
-          if (attrs.ngRefRead === '$element') {
-            refValue = element;
-          } else {
-            refValue = element.data('$' + attrs.ngRefRead + 'Controller');
-
-            if (!refValue) {
-              throw ngRefMinErr(
-                'noctrl',
-                'The controller for ngRefRead="{0}" could not be found on ngRef="{1}"',
-                attrs.ngRefRead,
-                tAttrs.ngRef
-              );
-            }
-          }
-        } else {
-          refValue = element.data('$' + controllerName + 'Controller');
-        }
-
-        refValue = refValue || element;
-
-        setter(scope, refValue);
-
-        // when the element is removed, remove it (nullify it)
-        element.on('$destroy', function() {
-          // only remove it if value has not changed,
-          // because animations (and other procedures) may duplicate elements
-          if (getter(scope) === refValue) {
-            setter(scope, null);
-          }
-        });
-      };
-    }
-  };
-}];
-
 /* exported ngRepeatDirective */
 
 /**
@@ -33854,14 +32005,14 @@ var ngRefDirective = ['$parse', function($parse) {
  * However, there are a few limitations compared to array iteration:
  *
  * - The JavaScript specification does not define the order of keys
- *   returned for an object, so AngularJS relies on the order returned by the browser
+ *   returned for an object, so Angular relies on the order returned by the browser
  *   when running `for key in myObj`. Browsers generally follow the strategy of providing
  *   keys in the order in which they were defined, although there are exceptions when keys are deleted
  *   and reinstated. See the
  *   [MDN page on `delete` for more info](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete#Cross-browser_notes).
  *
  * - `ngRepeat` will silently *ignore* object keys starting with `$`, because
- *   it's a prefix used by AngularJS for public (`$`) and private (`$$`) properties.
+ *   it's a prefix used by Angular for public (`$`) and private (`$$`) properties.
  *
  * - The built-in filters {@link ng.orderBy orderBy} and {@link ng.filter filter} do not work with
  *   objects, and will throw an error if used with one.
@@ -33886,148 +32037,71 @@ var ngRefDirective = ['$parse', function($parse) {
  * For example, if an item is added to the collection, `ngRepeat` will know that all other items
  * already have DOM elements, and will not re-render them.
  *
- * All different types of tracking functions, their syntax, and their support for duplicate
- * items in collections can be found in the
- * {@link ngRepeat#ngRepeat-arguments ngRepeat expression description}.
+ * The default tracking function (which tracks items by their identity) does not allow
+ * duplicate items in arrays. This is because when there are duplicates, it is not possible
+ * to maintain a one-to-one mapping between collection items and DOM elements.
+ *
+ * If you do need to repeat duplicate items, you can substitute the default tracking behavior
+ * with your own using the `track by` expression.
+ *
+ * For example, you may track items by the index of each item in the collection, using the
+ * special scope property `$index`:
+ * ```html
+ *    <div ng-repeat="n in [42, 42, 43, 43] track by $index">
+ *      {{n}}
+ *    </div>
+ * ```
+ *
+ * You may also use arbitrary expressions in `track by`, including references to custom functions
+ * on the scope:
+ * ```html
+ *    <div ng-repeat="n in [42, 42, 43, 43] track by myTrackingFunction(n)">
+ *      {{n}}
+ *    </div>
+ * ```
  *
  * <div class="alert alert-success">
- * **Best Practice:** If you are working with objects that have a unique identifier property, you
- * should track by this identifier instead of the object instance,
- * e.g. `item in items track by item.id`.
- * Should you reload your data later, `ngRepeat` will not have to rebuild the DOM elements for items
- * it has already rendered, even if the JavaScript objects in the collection have been substituted
- * for new ones. For large collections, this significantly improves rendering performance.
+ * If you are working with objects that have a unique identifier property, you should track
+ * by this identifier instead of the object instance. Should you reload your data later, `ngRepeat`
+ * will not have to rebuild the DOM elements for items it has already rendered, even if the
+ * JavaScript objects in the collection have been substituted for new ones. For large collections,
+ * this significantly improves rendering performance. If you don't have a unique identifier,
+ * `track by $index` can also provide a performance boost.
  * </div>
  *
- * ### Effects of DOM Element re-use
+ * ```html
+ *    <div ng-repeat="model in collection track by model.id">
+ *      {{model.name}}
+ *    </div>
+ * ```
  *
- * When DOM elements are re-used, ngRepeat updates the scope for the element, which will
- * automatically update any active bindings on the template. However, other
- * functionality will not be updated, because the element is not re-created:
+ * <br />
+ * <div class="alert alert-warning">
+ * Avoid using `track by $index` when the repeated template contains
+ * {@link guide/expression#one-time-binding one-time bindings}. In such cases, the `nth` DOM
+ * element will always be matched with the `nth` item of the array, so the bindings on that element
+ * will not be updated even when the corresponding item changes, essentially causing the view to get
+ * out-of-sync with the underlying data.
+ * </div>
  *
- * - Directives are not re-compiled
- * - {@link guide/expression#one-time-binding one-time expressions} on the repeated template are not
- * updated if they have stabilized.
+ * When no `track by` expression is provided, it is equivalent to tracking by the built-in
+ * `$id` function, which tracks items by their identity:
+ * ```html
+ *    <div ng-repeat="obj in collection track by $id(obj)">
+ *      {{obj.prop}}
+ *    </div>
+ * ```
  *
- * The above affects all kinds of element re-use due to tracking, but may be especially visible
- * when tracking by `$index` due to the way ngRepeat re-uses elements.
+ * <br />
+ * <div class="alert alert-warning">
+ * **Note:** `track by` must always be the last expression:
+ * </div>
+ * ```
+ *    <div ng-repeat="model in collection | orderBy: 'id' as filtered_result track by model.id">
+ *      {{model.name}}
+ *    </div>
+ * ```
  *
- * The following example shows the effects of different actions with tracking:
-
-  <example module="ngRepeat" name="ngRepeat-tracking" deps="angular-animate.js" animations="true">
-    <file name="script.js">
-      angular.module('ngRepeat', ['ngAnimate']).controller('repeatController', function($scope) {
-        var friends = [
-          {name:'John', age:25},
-          {name:'Mary', age:40},
-          {name:'Peter', age:85}
-        ];
-
-        $scope.removeFirst = function() {
-          $scope.friends.shift();
-        };
-
-        $scope.updateAge = function() {
-          $scope.friends.forEach(function(el) {
-            el.age = el.age + 5;
-          });
-        };
-
-        $scope.copy = function() {
-          $scope.friends = angular.copy($scope.friends);
-        };
-
-        $scope.reset = function() {
-          $scope.friends = angular.copy(friends);
-        };
-
-        $scope.reset();
-      });
-    </file>
-    <file name="index.html">
-      <div ng-controller="repeatController">
-        <ol>
-          <li>When you click "Update Age", only the first list updates the age, because all others have
-          a one-time binding on the age property. If you then click "Copy", the current friend list
-          is copied, and now the second list updates the age, because the identity of the collection items
-          has changed and the list must be re-rendered. The 3rd and 4th list stay the same, because all the
-          items are already known according to their tracking functions.
-          </li>
-          <li>When you click "Remove First", the 4th list has the wrong age on both remaining items. This is
-          due to tracking by $index: when the first collection item is removed, ngRepeat reuses the first
-          DOM element for the new first collection item, and so on. Since the age property is one-time
-          bound, the value remains from the collection item which was previously at this index.
-          </li>
-        </ol>
-
-        <button ng-click="removeFirst()">Remove First</button>
-        <button ng-click="updateAge()">Update Age</button>
-        <button ng-click="copy()">Copy</button>
-        <br><button ng-click="reset()">Reset List</button>
-        <br>
-        <code>track by $id(friend)</code> (default):
-        <ul class="example-animate-container">
-          <li class="animate-repeat" ng-repeat="friend in friends">
-            {{friend.name}} is {{friend.age}} years old.
-          </li>
-        </ul>
-        <code>track by $id(friend)</code> (default), with age one-time binding:
-        <ul class="example-animate-container">
-          <li class="animate-repeat" ng-repeat="friend in friends">
-            {{friend.name}} is {{::friend.age}} years old.
-          </li>
-        </ul>
-        <code>track by friend.name</code>, with age one-time binding:
-        <ul class="example-animate-container">
-          <li class="animate-repeat" ng-repeat="friend in friends track by friend.name">
-            {{friend.name}}  is {{::friend.age}} years old.
-          </li>
-        </ul>
-        <code>track by $index</code>, with age one-time binding:
-        <ul class="example-animate-container">
-          <li class="animate-repeat" ng-repeat="friend in friends track by $index">
-            {{friend.name}} is {{::friend.age}} years old.
-          </li>
-        </ul>
-      </div>
-    </file>
-    <file name="animations.css">
-      .example-animate-container {
-        background:white;
-        border:1px solid black;
-        list-style:none;
-        margin:0;
-        padding:0 10px;
-      }
-
-      .animate-repeat {
-        line-height:30px;
-        list-style:none;
-        box-sizing:border-box;
-      }
-
-      .animate-repeat.ng-move,
-      .animate-repeat.ng-enter,
-      .animate-repeat.ng-leave {
-        transition:all linear 0.5s;
-      }
-
-      .animate-repeat.ng-leave.ng-leave-active,
-      .animate-repeat.ng-move,
-      .animate-repeat.ng-enter {
-        opacity:0;
-        max-height:0;
-      }
-
-      .animate-repeat.ng-leave,
-      .animate-repeat.ng-move.ng-move-active,
-      .animate-repeat.ng-enter.ng-enter-active {
-        opacity:1;
-        max-height:30px;
-      }
-    </file>
-  </example>
-
  *
  * ## Special repeat start and end points
  * To repeat a series of elements instead of just one parent element, ngRepeat (as well as other ng directives) supports extending
@@ -34104,38 +32178,24 @@ var ngRefDirective = ['$parse', function($parse) {
  *     more than one tracking expression value resolve to the same key. (This would mean that two distinct objects are
  *     mapped to the same DOM element, which is not possible.)
  *
- *     *Default tracking: $id()*: `item in items` is equivalent to `item in items track by $id(item)`.
- *     This implies that the DOM elements will be associated by item identity in the collection.
- *
- *     The built-in `$id()` function can be used to assign a unique
- *     `$$hashKey` property to each item in the collection. This property is then used as a key to associated DOM elements
- *     with the corresponding item in the collection by identity. Moving the same object would move
- *     the DOM element in the same way in the DOM.
- *     Note that the default id function does not support duplicate primitive values (`number`, `string`),
- *     but supports duplictae non-primitive values (`object`) that are *equal* in shape.
- *
- *     *Custom Expression*: It is possible to use any AngularJS expression to compute the tracking
- *     id, for example with a function, or using a property on the collection items.
- *     `item in items track by item.id` is a typical pattern when the items have a unique identifier,
- *     e.g. database id. In this case the object identity does not matter. Two objects are considered
- *     equivalent as long as their `id` property is same.
- *     Tracking by unique identifier is the most performant way and should be used whenever possible.
- *
- *     *$index*: This special property tracks the collection items by their index, and
- *     re-uses the DOM elements that match that index, e.g. `item in items track by $index`. This can
- *     be used for a performance improvement if no unique identfier is available and the identity of
- *     the collection items cannot be easily computed. It also allows duplicates.
- *
  *     <div class="alert alert-warning">
- *       <strong>Note:</strong> Re-using DOM elements can have unforeseen effects. Read the
- *       {@link ngRepeat#tracking-and-duplicates section on tracking and duplicates} for
- *       more info.
+ *       <strong>Note:</strong> the `track by` expression must come last - after any filters, and the alias expression.
  *     </div>
  *
- *     <div class="alert alert-warning">
- *       <strong>Note:</strong> the `track by` expression must come last - after any filters, and the alias expression:
- *       `item in items | filter:searchText as results  track by item.id`
- *     </div>
+ *     For example: `item in items` is equivalent to `item in items track by $id(item)`. This implies that the DOM elements
+ *     will be associated by item identity in the array.
+ *
+ *     For example: `item in items track by $id(item)`. A built in `$id()` function can be used to assign a unique
+ *     `$$hashKey` property to each item in the array. This property is then used as a key to associated DOM elements
+ *     with the corresponding item in the array by identity. Moving the same object in array would move the DOM
+ *     element in the same way in the DOM.
+ *
+ *     For example: `item in items track by item.id` is a typical pattern when the items come from the database. In this
+ *     case the object identity does not matter. Two objects are considered equivalent as long as their `id`
+ *     property is same.
+ *
+ *     For example: `item in items | filter:searchText track by item.id` is a pattern that might be used to apply a filter
+ *     to items in conjunction with a tracking expression.
  *
  *   * `variable in expression as alias_expression` – You can also provide an optional alias expression which will then store the
  *     intermediate results of the repeater after the filters have been applied. Typically this is used to render a special message
@@ -34144,10 +32204,10 @@ var ngRefDirective = ['$parse', function($parse) {
  *     For example: `item in items | filter:x as results` will store the fragment of the repeated items as `results`, but only after
  *     the items have been processed through the filter.
  *
- *     Please note that `as [variable name] is not an operator but rather a part of ngRepeat
- *     micro-syntax so it can be used only after all filters (and not as operator, inside an expression).
+ *     Please note that `as [variable name] is not an operator but rather a part of ngRepeat micro-syntax so it can be used only at the end
+ *     (and not as operator, inside an expression).
  *
- *     For example: `item in items | filter : x | orderBy : order | limitTo : limit as results track by item.id` .
+ *     For example: `item in items | filter : x | orderBy : order | limitTo : limit as results` .
  *
  * @example
  * This example uses `ngRepeat` to display a list of people. A filter is used to restrict the displayed
@@ -34158,7 +32218,7 @@ var ngRefDirective = ['$parse', function($parse) {
         I have {{friends.length}} friends. They are:
         <input type="search" ng-model="q" placeholder="filter friends..." aria-label="filter friends" />
         <ul class="example-animate-container">
-          <li class="animate-repeat" ng-repeat="friend in friends | filter:q as results track by friend.name">
+          <li class="animate-repeat" ng-repeat="friend in friends | filter:q as results">
             [{{$index + 1}}] {{friend.name}} who is {{friend.age}} years old.
           </li>
           <li class="animate-repeat" ng-if="results.length === 0">
@@ -34652,25 +32712,6 @@ var NG_HIDE_IN_PROGRESS_CLASS = 'ng-hide-animate';
       });
     </file>
   </example>
- *
- * @knownIssue
- *
- * ### Flickering when using ngShow to toggle between elements
- *
- * When using {@link ngShow} and / or {@link ngHide} to toggle between elements, it can
- * happen that both the element to show and the element to hide are visible for a very short time.
- *
- * This usually happens when the {@link ngAnimate ngAnimate module} is included, but no actual animations
- * are defined for {@link ngShow} / {@link ngHide}. Internet Explorer is affected more often than
- * other browsers.
- *
- * There are several way to mitigate this problem:
- *
- * - {@link guide/animations#how-to-selectively-enable-disable-and-skip-animations Disable animations on the affected elements}.
- * - Use {@link ngIf} or {@link ngSwitch} instead of {@link ngShow} / {@link ngHide}.
- * - Use the special CSS selector `ng-hide.ng-hide-animate` to set `{display: none}` or similar on the affected elements.
- * - Use `ng-class="{'ng-hide': expression}` instead of instead of {@link ngShow} / {@link ngHide}.
- * - Define an animation on the affected elements.
  */
 var ngShowDirective = ['$animate', function($animate) {
   return {
@@ -34871,25 +32912,6 @@ var ngShowDirective = ['$animate', function($animate) {
       });
     </file>
   </example>
- *
- * @knownIssue
- *
- * ### Flickering when using ngHide to toggle between elements
- *
- * When using {@link ngShow} and / or {@link ngHide} to toggle between elements, it can
- * happen that both the element to show and the element to hide are visible for a very short time.
- *
- * This usually happens when the {@link ngAnimate ngAnimate module} is included, but no actual animations
- * are defined for {@link ngShow} / {@link ngHide}. Internet Explorer is affected more often than
- * other browsers.
- *
- * There are several way to mitigate this problem:
- *
- * - {@link guide/animations#how-to-selectively-enable-disable-and-skip-animations Disable animations on the affected elements}.
- * - Use {@link ngIf} or {@link ngSwitch} instead of {@link ngShow} / {@link ngHide}.
- * - Use the special CSS selector `ng-hide.ng-hide-animate` to set `{display: none}` or similar on the affected elements.
- * - Use `ng-class="{'ng-hide': expression}` instead of instead of {@link ngShow} / {@link ngHide}.
- * - Define an animation on the affected elements.
  */
 var ngHideDirective = ['$animate', function($animate) {
   return {
@@ -34959,12 +32981,12 @@ var ngHideDirective = ['$animate', function($animate) {
    </example>
  */
 var ngStyleDirective = ngDirective(function(scope, element, attr) {
-  scope.$watchCollection(attr.ngStyle, function ngStyleWatchAction(newStyles, oldStyles) {
+  scope.$watch(attr.ngStyle, function ngStyleWatchAction(newStyles, oldStyles) {
     if (oldStyles && (newStyles !== oldStyles)) {
       forEach(oldStyles, function(val, style) { element.css(style, '');});
     }
     if (newStyles) element.css(newStyles);
-  });
+  }, true);
 });
 
 /**
@@ -35353,6 +33375,7 @@ var ngTranscludeMinErr = minErr('ngTransclude');
 var ngTranscludeDirective = ['$compile', function($compile) {
   return {
     restrict: 'EAC',
+    terminal: true,
     compile: function ngTranscludeCompile(tElement) {
 
       // Remove and cache any original content to act as a fallback
@@ -35847,7 +33870,7 @@ var SelectController =
 
     if (optionAttrs.$attr.ngValue) {
       // The value attribute is set by ngValue
-      var oldVal, hashedVal;
+      var oldVal, hashedVal = NaN;
       optionAttrs.$observe('value', function valueAttributeObserveAction(newVal) {
 
         var removal;
@@ -35952,7 +33975,7 @@ var SelectController =
  * @restrict E
  *
  * @description
- * HTML `select` element with AngularJS data-binding.
+ * HTML `select` element with angular data-binding.
  *
  * The `select` directive is used together with {@link ngModel `ngModel`} to provide data-binding
  * between the scope and the `<select>` control (including setting default values).
@@ -36004,7 +34027,7 @@ var SelectController =
  * Chrome and Internet Explorer / Edge.
  *
  *
- * @param {string} ngModel Assignable AngularJS expression to data-bind to.
+ * @param {string} ngModel Assignable angular expression to data-bind to.
  * @param {string=} name Property name of the form under which the control is published.
  * @param {string=} multiple Allows multiple options to be selected. The selected values will be
  *     bound to the model as an array.
@@ -36012,13 +34035,25 @@ var SelectController =
  * @param {string=} ngRequired Adds required attribute and required validation constraint to
  * the element when the ngRequired expression evaluates to true. Use ngRequired instead of required
  * when you want to data-bind to the required attribute.
- * @param {string=} ngChange AngularJS expression to be executed when selected option(s) changes due to user
+ * @param {string=} ngChange Angular expression to be executed when selected option(s) changes due to user
  *    interaction with the select element.
  * @param {string=} ngOptions sets the options that the select is populated with and defines what is
  * set on the model on selection. See {@link ngOptions `ngOptions`}.
  * @param {string=} ngAttrSize sets the size of the select element dynamically. Uses the
  * {@link guide/interpolation#-ngattr-for-binding-to-arbitrary-attributes ngAttr} directive.
  *
+ *
+ * @knownIssue
+ *
+ * In Firefox, the select model is only updated when the select element is blurred. For example,
+ * when switching between options with the keyboard, the select model is only set to the
+ * currently selected option when the select is blurred, e.g via tab key or clicking the mouse
+ * outside the select.
+ *
+ * This is due to an ambiguity in the select element specification. See the
+ * [issue on the Firefox bug tracker](https://bugzilla.mozilla.org/show_bug.cgi?id=126379)
+ * for more information, and this
+ * [Github comment for a workaround](https://github.com/angular/angular.js/issues/9134#issuecomment-130800488)
  *
  * @example
  * ### Simple `select` elements with static options
@@ -36375,7 +34410,7 @@ var optionDirective = ['$interpolate', function($interpolate) {
  * It is most often used for {@link input `input`} and {@link select `select`} controls, but can also be
  * applied to custom controls.
  *
- * The directive sets the `required` attribute on the element if the AngularJS expression inside
+ * The directive sets the `required` attribute on the element if the Angular expression inside
  * `ngRequired` evaluates to true. A special directive for setting `required` is necessary because we
  * cannot use interpolation inside `required`. See the {@link guide/interpolation interpolation guide}
  * for more info.
@@ -36569,7 +34604,7 @@ var patternDirective = function() {
  * It is most often used for text-based {@link input `input`} controls, but can also be applied to custom text-based controls.
  *
  * The validator sets the `maxlength` error key if the {@link ngModel.NgModelController#$viewValue `ngModel.$viewValue`}
- * is longer than the integer obtained by evaluating the AngularJS expression given in the
+ * is longer than the integer obtained by evaluating the Angular expression given in the
  * `ngMaxlength` attribute value.
  *
  * <div class="alert alert-info">
@@ -36660,7 +34695,7 @@ var maxlengthDirective = function() {
  * It is most often used for text-based {@link input `input`} controls, but can also be applied to custom text-based controls.
  *
  * The validator sets the `minlength` error key if the {@link ngModel.NgModelController#$viewValue `ngModel.$viewValue`}
- * is shorter than the integer obtained by evaluating the AngularJS expression given in the
+ * is shorter than the integer obtained by evaluating the Angular expression given in the
  * `ngMinlength` attribute value.
  *
  * <div class="alert alert-info">
@@ -36736,7 +34771,7 @@ var minlengthDirective = function() {
 if (window.angular.bootstrap) {
   // AngularJS is already loaded, so we can return here...
   if (window.console) {
-    console.log('WARNING: Tried to load AngularJS more than once.');
+    console.log('WARNING: Tried to load angular more than once.');
   }
   return;
 }
@@ -38300,3946 +36335,3896 @@ module.exports = function (css) {
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
-  * Bootstrap v4.1.3 (https://getbootstrap.com/)
+  * Bootstrap v4.0.0 (https://getbootstrap.com)
   * Copyright 2011-2018 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
-   true ? factory(exports, __webpack_require__(15), __webpack_require__(16)) :
-  typeof define === 'function' && define.amd ? define(['exports', 'jquery', 'popper.js'], factory) :
-  (factory((global.bootstrap = {}),global.jQuery,global.Popper));
+	 true ? factory(exports, __webpack_require__(15), __webpack_require__(16)) :
+	typeof define === 'function' && define.amd ? define(['exports', 'jquery', 'popper.js'], factory) :
+	(factory((global.bootstrap = {}),global.jQuery,global.Popper));
 }(this, (function (exports,$,Popper) { 'use strict';
 
-  $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
-  Popper = Popper && Popper.hasOwnProperty('default') ? Popper['default'] : Popper;
+$ = $ && $.hasOwnProperty('default') ? $['default'] : $;
+Popper = Popper && Popper.hasOwnProperty('default') ? Popper['default'] : Popper;
 
-  function _defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
-      descriptor.enumerable = descriptor.enumerable || false;
-      descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
-      Object.defineProperty(target, descriptor.key, descriptor);
-    }
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
   }
+}
 
-  function _createClass(Constructor, protoProps, staticProps) {
-    if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) _defineProperties(Constructor, staticProps);
-    return Constructor;
-  }
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
 
-  function _defineProperty(obj, key, value) {
-    if (key in obj) {
-      Object.defineProperty(obj, key, {
-        value: value,
-        enumerable: true,
-        configurable: true,
-        writable: true
-      });
-    } else {
-      obj[key] = value;
-    }
-
-    return obj;
-  }
-
-  function _objectSpread(target) {
+function _extends() {
+  _extends = Object.assign || function (target) {
     for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i] != null ? arguments[i] : {};
-      var ownKeys = Object.keys(source);
+      var source = arguments[i];
 
-      if (typeof Object.getOwnPropertySymbols === 'function') {
-        ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
-          return Object.getOwnPropertyDescriptor(source, sym).enumerable;
-        }));
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
       }
-
-      ownKeys.forEach(function (key) {
-        _defineProperty(target, key, source[key]);
-      });
     }
 
     return target;
-  }
+  };
 
-  function _inheritsLoose(subClass, superClass) {
-    subClass.prototype = Object.create(superClass.prototype);
-    subClass.prototype.constructor = subClass;
-    subClass.__proto__ = superClass;
-  }
+  return _extends.apply(this, arguments);
+}
 
+function _inheritsLoose(subClass, superClass) {
+  subClass.prototype = Object.create(superClass.prototype);
+  subClass.prototype.constructor = subClass;
+  subClass.__proto__ = superClass;
+}
+
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap (v4.0.0): util.js
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
+var Util = function ($$$1) {
   /**
-   * --------------------------------------------------------------------------
-   * Bootstrap (v4.1.3): util.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-   * --------------------------------------------------------------------------
+   * ------------------------------------------------------------------------
+   * Private TransitionEnd Helpers
+   * ------------------------------------------------------------------------
    */
+  var transition = false;
+  var MAX_UID = 1000000; // Shoutout AngusCroll (https://goo.gl/pxwQGp)
 
-  var Util = function ($$$1) {
-    /**
-     * ------------------------------------------------------------------------
-     * Private TransitionEnd Helpers
-     * ------------------------------------------------------------------------
-     */
-    var TRANSITION_END = 'transitionend';
-    var MAX_UID = 1000000;
-    var MILLISECONDS_MULTIPLIER = 1000; // Shoutout AngusCroll (https://goo.gl/pxwQGp)
+  function toType(obj) {
+    return {}.toString.call(obj).match(/\s([a-zA-Z]+)/)[1].toLowerCase();
+  }
 
-    function toType(obj) {
-      return {}.toString.call(obj).match(/\s([a-z]+)/i)[1].toLowerCase();
-    }
-
-    function getSpecialTransitionEndEvent() {
-      return {
-        bindType: TRANSITION_END,
-        delegateType: TRANSITION_END,
-        handle: function handle(event) {
-          if ($$$1(event.target).is(this)) {
-            return event.handleObj.handler.apply(this, arguments); // eslint-disable-line prefer-rest-params
-          }
-
-          return undefined; // eslint-disable-line no-undefined
+  function getSpecialTransitionEndEvent() {
+    return {
+      bindType: transition.end,
+      delegateType: transition.end,
+      handle: function handle(event) {
+        if ($$$1(event.target).is(this)) {
+          return event.handleObj.handler.apply(this, arguments); // eslint-disable-line prefer-rest-params
         }
-      };
+
+        return undefined; // eslint-disable-line no-undefined
+      }
+    };
+  }
+
+  function transitionEndTest() {
+    if (typeof window !== 'undefined' && window.QUnit) {
+      return false;
     }
 
-    function transitionEndEmulator(duration) {
-      var _this = this;
+    return {
+      end: 'transitionend'
+    };
+  }
 
-      var called = false;
-      $$$1(this).one(Util.TRANSITION_END, function () {
-        called = true;
-      });
-      setTimeout(function () {
-        if (!called) {
-          Util.triggerTransitionEnd(_this);
-        }
-      }, duration);
-      return this;
-    }
+  function transitionEndEmulator(duration) {
+    var _this = this;
 
-    function setTransitionEndSupport() {
-      $$$1.fn.emulateTransitionEnd = transitionEndEmulator;
+    var called = false;
+    $$$1(this).one(Util.TRANSITION_END, function () {
+      called = true;
+    });
+    setTimeout(function () {
+      if (!called) {
+        Util.triggerTransitionEnd(_this);
+      }
+    }, duration);
+    return this;
+  }
+
+  function setTransitionEndSupport() {
+    transition = transitionEndTest();
+    $$$1.fn.emulateTransitionEnd = transitionEndEmulator;
+
+    if (Util.supportsTransitionEnd()) {
       $$$1.event.special[Util.TRANSITION_END] = getSpecialTransitionEndEvent();
     }
-    /**
-     * --------------------------------------------------------------------------
-     * Public Util Api
-     * --------------------------------------------------------------------------
-     */
+  }
 
-
-    var Util = {
-      TRANSITION_END: 'bsTransitionEnd',
-      getUID: function getUID(prefix) {
-        do {
-          // eslint-disable-next-line no-bitwise
-          prefix += ~~(Math.random() * MAX_UID); // "~~" acts like a faster Math.floor() here
-        } while (document.getElementById(prefix));
-
-        return prefix;
-      },
-      getSelectorFromElement: function getSelectorFromElement(element) {
-        var selector = element.getAttribute('data-target');
-
-        if (!selector || selector === '#') {
-          selector = element.getAttribute('href') || '';
-        }
-
-        try {
-          return document.querySelector(selector) ? selector : null;
-        } catch (err) {
-          return null;
-        }
-      },
-      getTransitionDurationFromElement: function getTransitionDurationFromElement(element) {
-        if (!element) {
-          return 0;
-        } // Get transition-duration of the element
-
-
-        var transitionDuration = $$$1(element).css('transition-duration');
-        var floatTransitionDuration = parseFloat(transitionDuration); // Return 0 if element or transition duration is not found
-
-        if (!floatTransitionDuration) {
-          return 0;
-        } // If multiple durations are defined, take the first
-
-
-        transitionDuration = transitionDuration.split(',')[0];
-        return parseFloat(transitionDuration) * MILLISECONDS_MULTIPLIER;
-      },
-      reflow: function reflow(element) {
-        return element.offsetHeight;
-      },
-      triggerTransitionEnd: function triggerTransitionEnd(element) {
-        $$$1(element).trigger(TRANSITION_END);
-      },
-      // TODO: Remove in v5
-      supportsTransitionEnd: function supportsTransitionEnd() {
-        return Boolean(TRANSITION_END);
-      },
-      isElement: function isElement(obj) {
-        return (obj[0] || obj).nodeType;
-      },
-      typeCheckConfig: function typeCheckConfig(componentName, config, configTypes) {
-        for (var property in configTypes) {
-          if (Object.prototype.hasOwnProperty.call(configTypes, property)) {
-            var expectedTypes = configTypes[property];
-            var value = config[property];
-            var valueType = value && Util.isElement(value) ? 'element' : toType(value);
-
-            if (!new RegExp(expectedTypes).test(valueType)) {
-              throw new Error(componentName.toUpperCase() + ": " + ("Option \"" + property + "\" provided type \"" + valueType + "\" ") + ("but expected type \"" + expectedTypes + "\"."));
-            }
-          }
-        }
-      }
-    };
-    setTransitionEndSupport();
-    return Util;
-  }($);
-
+  function escapeId(selector) {
+    // We escape IDs in case of special selectors (selector = '#myId:something')
+    // $.escapeSelector does not exist in jQuery < 3
+    selector = typeof $$$1.escapeSelector === 'function' ? $$$1.escapeSelector(selector).substr(1) : selector.replace(/(:|\.|\[|\]|,|=|@)/g, '\\$1');
+    return selector;
+  }
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.1.3): alert.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+   * Public Util Api
    * --------------------------------------------------------------------------
    */
 
-  var Alert = function ($$$1) {
-    /**
-     * ------------------------------------------------------------------------
-     * Constants
-     * ------------------------------------------------------------------------
-     */
-    var NAME = 'alert';
-    var VERSION = '4.1.3';
-    var DATA_KEY = 'bs.alert';
-    var EVENT_KEY = "." + DATA_KEY;
-    var DATA_API_KEY = '.data-api';
-    var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
-    var Selector = {
-      DISMISS: '[data-dismiss="alert"]'
-    };
-    var Event = {
-      CLOSE: "close" + EVENT_KEY,
-      CLOSED: "closed" + EVENT_KEY,
-      CLICK_DATA_API: "click" + EVENT_KEY + DATA_API_KEY
-    };
-    var ClassName = {
-      ALERT: 'alert',
-      FADE: 'fade',
-      SHOW: 'show'
-      /**
-       * ------------------------------------------------------------------------
-       * Class Definition
-       * ------------------------------------------------------------------------
-       */
 
-    };
+  var Util = {
+    TRANSITION_END: 'bsTransitionEnd',
+    getUID: function getUID(prefix) {
+      do {
+        // eslint-disable-next-line no-bitwise
+        prefix += ~~(Math.random() * MAX_UID); // "~~" acts like a faster Math.floor() here
+      } while (document.getElementById(prefix));
 
-    var Alert =
-    /*#__PURE__*/
-    function () {
-      function Alert(element) {
-        this._element = element;
-      } // Getters
+      return prefix;
+    },
+    getSelectorFromElement: function getSelectorFromElement(element) {
+      var selector = element.getAttribute('data-target');
+
+      if (!selector || selector === '#') {
+        selector = element.getAttribute('href') || '';
+      } // If it's an ID
 
 
-      var _proto = Alert.prototype;
-
-      // Public
-      _proto.close = function close(element) {
-        var rootElement = this._element;
-
-        if (element) {
-          rootElement = this._getRootElement(element);
-        }
-
-        var customEvent = this._triggerCloseEvent(rootElement);
-
-        if (customEvent.isDefaultPrevented()) {
-          return;
-        }
-
-        this._removeElement(rootElement);
-      };
-
-      _proto.dispose = function dispose() {
-        $$$1.removeData(this._element, DATA_KEY);
-        this._element = null;
-      }; // Private
-
-
-      _proto._getRootElement = function _getRootElement(element) {
-        var selector = Util.getSelectorFromElement(element);
-        var parent = false;
-
-        if (selector) {
-          parent = document.querySelector(selector);
-        }
-
-        if (!parent) {
-          parent = $$$1(element).closest("." + ClassName.ALERT)[0];
-        }
-
-        return parent;
-      };
-
-      _proto._triggerCloseEvent = function _triggerCloseEvent(element) {
-        var closeEvent = $$$1.Event(Event.CLOSE);
-        $$$1(element).trigger(closeEvent);
-        return closeEvent;
-      };
-
-      _proto._removeElement = function _removeElement(element) {
-        var _this = this;
-
-        $$$1(element).removeClass(ClassName.SHOW);
-
-        if (!$$$1(element).hasClass(ClassName.FADE)) {
-          this._destroyElement(element);
-
-          return;
-        }
-
-        var transitionDuration = Util.getTransitionDurationFromElement(element);
-        $$$1(element).one(Util.TRANSITION_END, function (event) {
-          return _this._destroyElement(element, event);
-        }).emulateTransitionEnd(transitionDuration);
-      };
-
-      _proto._destroyElement = function _destroyElement(element) {
-        $$$1(element).detach().trigger(Event.CLOSED).remove();
-      }; // Static
-
-
-      Alert._jQueryInterface = function _jQueryInterface(config) {
-        return this.each(function () {
-          var $element = $$$1(this);
-          var data = $element.data(DATA_KEY);
-
-          if (!data) {
-            data = new Alert(this);
-            $element.data(DATA_KEY, data);
-          }
-
-          if (config === 'close') {
-            data[config](this);
-          }
-        });
-      };
-
-      Alert._handleDismiss = function _handleDismiss(alertInstance) {
-        return function (event) {
-          if (event) {
-            event.preventDefault();
-          }
-
-          alertInstance.close(this);
-        };
-      };
-
-      _createClass(Alert, null, [{
-        key: "VERSION",
-        get: function get() {
-          return VERSION;
-        }
-      }]);
-
-      return Alert;
-    }();
-    /**
-     * ------------------------------------------------------------------------
-     * Data Api implementation
-     * ------------------------------------------------------------------------
-     */
-
-
-    $$$1(document).on(Event.CLICK_DATA_API, Selector.DISMISS, Alert._handleDismiss(new Alert()));
-    /**
-     * ------------------------------------------------------------------------
-     * jQuery
-     * ------------------------------------------------------------------------
-     */
-
-    $$$1.fn[NAME] = Alert._jQueryInterface;
-    $$$1.fn[NAME].Constructor = Alert;
-
-    $$$1.fn[NAME].noConflict = function () {
-      $$$1.fn[NAME] = JQUERY_NO_CONFLICT;
-      return Alert._jQueryInterface;
-    };
-
-    return Alert;
-  }($);
-
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap (v4.1.3): button.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
-  var Button = function ($$$1) {
-    /**
-     * ------------------------------------------------------------------------
-     * Constants
-     * ------------------------------------------------------------------------
-     */
-    var NAME = 'button';
-    var VERSION = '4.1.3';
-    var DATA_KEY = 'bs.button';
-    var EVENT_KEY = "." + DATA_KEY;
-    var DATA_API_KEY = '.data-api';
-    var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
-    var ClassName = {
-      ACTIVE: 'active',
-      BUTTON: 'btn',
-      FOCUS: 'focus'
-    };
-    var Selector = {
-      DATA_TOGGLE_CARROT: '[data-toggle^="button"]',
-      DATA_TOGGLE: '[data-toggle="buttons"]',
-      INPUT: 'input',
-      ACTIVE: '.active',
-      BUTTON: '.btn'
-    };
-    var Event = {
-      CLICK_DATA_API: "click" + EVENT_KEY + DATA_API_KEY,
-      FOCUS_BLUR_DATA_API: "focus" + EVENT_KEY + DATA_API_KEY + " " + ("blur" + EVENT_KEY + DATA_API_KEY)
-      /**
-       * ------------------------------------------------------------------------
-       * Class Definition
-       * ------------------------------------------------------------------------
-       */
-
-    };
-
-    var Button =
-    /*#__PURE__*/
-    function () {
-      function Button(element) {
-        this._element = element;
-      } // Getters
-
-
-      var _proto = Button.prototype;
-
-      // Public
-      _proto.toggle = function toggle() {
-        var triggerChangeEvent = true;
-        var addAriaPressed = true;
-        var rootElement = $$$1(this._element).closest(Selector.DATA_TOGGLE)[0];
-
-        if (rootElement) {
-          var input = this._element.querySelector(Selector.INPUT);
-
-          if (input) {
-            if (input.type === 'radio') {
-              if (input.checked && this._element.classList.contains(ClassName.ACTIVE)) {
-                triggerChangeEvent = false;
-              } else {
-                var activeElement = rootElement.querySelector(Selector.ACTIVE);
-
-                if (activeElement) {
-                  $$$1(activeElement).removeClass(ClassName.ACTIVE);
-                }
-              }
-            }
-
-            if (triggerChangeEvent) {
-              if (input.hasAttribute('disabled') || rootElement.hasAttribute('disabled') || input.classList.contains('disabled') || rootElement.classList.contains('disabled')) {
-                return;
-              }
-
-              input.checked = !this._element.classList.contains(ClassName.ACTIVE);
-              $$$1(input).trigger('change');
-            }
-
-            input.focus();
-            addAriaPressed = false;
-          }
-        }
-
-        if (addAriaPressed) {
-          this._element.setAttribute('aria-pressed', !this._element.classList.contains(ClassName.ACTIVE));
-        }
-
-        if (triggerChangeEvent) {
-          $$$1(this._element).toggleClass(ClassName.ACTIVE);
-        }
-      };
-
-      _proto.dispose = function dispose() {
-        $$$1.removeData(this._element, DATA_KEY);
-        this._element = null;
-      }; // Static
-
-
-      Button._jQueryInterface = function _jQueryInterface(config) {
-        return this.each(function () {
-          var data = $$$1(this).data(DATA_KEY);
-
-          if (!data) {
-            data = new Button(this);
-            $$$1(this).data(DATA_KEY, data);
-          }
-
-          if (config === 'toggle') {
-            data[config]();
-          }
-        });
-      };
-
-      _createClass(Button, null, [{
-        key: "VERSION",
-        get: function get() {
-          return VERSION;
-        }
-      }]);
-
-      return Button;
-    }();
-    /**
-     * ------------------------------------------------------------------------
-     * Data Api implementation
-     * ------------------------------------------------------------------------
-     */
-
-
-    $$$1(document).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE_CARROT, function (event) {
-      event.preventDefault();
-      var button = event.target;
-
-      if (!$$$1(button).hasClass(ClassName.BUTTON)) {
-        button = $$$1(button).closest(Selector.BUTTON);
+      if (selector.charAt(0) === '#') {
+        selector = escapeId(selector);
       }
 
-      Button._jQueryInterface.call($$$1(button), 'toggle');
-    }).on(Event.FOCUS_BLUR_DATA_API, Selector.DATA_TOGGLE_CARROT, function (event) {
-      var button = $$$1(event.target).closest(Selector.BUTTON)[0];
-      $$$1(button).toggleClass(ClassName.FOCUS, /^focus(in)?$/.test(event.type));
-    });
-    /**
-     * ------------------------------------------------------------------------
-     * jQuery
-     * ------------------------------------------------------------------------
-     */
-
-    $$$1.fn[NAME] = Button._jQueryInterface;
-    $$$1.fn[NAME].Constructor = Button;
-
-    $$$1.fn[NAME].noConflict = function () {
-      $$$1.fn[NAME] = JQUERY_NO_CONFLICT;
-      return Button._jQueryInterface;
-    };
-
-    return Button;
-  }($);
-
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap (v4.1.3): carousel.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
-  var Carousel = function ($$$1) {
-    /**
-     * ------------------------------------------------------------------------
-     * Constants
-     * ------------------------------------------------------------------------
-     */
-    var NAME = 'carousel';
-    var VERSION = '4.1.3';
-    var DATA_KEY = 'bs.carousel';
-    var EVENT_KEY = "." + DATA_KEY;
-    var DATA_API_KEY = '.data-api';
-    var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
-    var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
-
-    var ARROW_RIGHT_KEYCODE = 39; // KeyboardEvent.which value for right arrow key
-
-    var TOUCHEVENT_COMPAT_WAIT = 500; // Time for mouse compat events to fire after touch
-
-    var Default = {
-      interval: 5000,
-      keyboard: true,
-      slide: false,
-      pause: 'hover',
-      wrap: true
-    };
-    var DefaultType = {
-      interval: '(number|boolean)',
-      keyboard: 'boolean',
-      slide: '(boolean|string)',
-      pause: '(string|boolean)',
-      wrap: 'boolean'
-    };
-    var Direction = {
-      NEXT: 'next',
-      PREV: 'prev',
-      LEFT: 'left',
-      RIGHT: 'right'
-    };
-    var Event = {
-      SLIDE: "slide" + EVENT_KEY,
-      SLID: "slid" + EVENT_KEY,
-      KEYDOWN: "keydown" + EVENT_KEY,
-      MOUSEENTER: "mouseenter" + EVENT_KEY,
-      MOUSELEAVE: "mouseleave" + EVENT_KEY,
-      TOUCHEND: "touchend" + EVENT_KEY,
-      LOAD_DATA_API: "load" + EVENT_KEY + DATA_API_KEY,
-      CLICK_DATA_API: "click" + EVENT_KEY + DATA_API_KEY
-    };
-    var ClassName = {
-      CAROUSEL: 'carousel',
-      ACTIVE: 'active',
-      SLIDE: 'slide',
-      RIGHT: 'carousel-item-right',
-      LEFT: 'carousel-item-left',
-      NEXT: 'carousel-item-next',
-      PREV: 'carousel-item-prev',
-      ITEM: 'carousel-item'
-    };
-    var Selector = {
-      ACTIVE: '.active',
-      ACTIVE_ITEM: '.active.carousel-item',
-      ITEM: '.carousel-item',
-      NEXT_PREV: '.carousel-item-next, .carousel-item-prev',
-      INDICATORS: '.carousel-indicators',
-      DATA_SLIDE: '[data-slide], [data-slide-to]',
-      DATA_RIDE: '[data-ride="carousel"]'
-      /**
-       * ------------------------------------------------------------------------
-       * Class Definition
-       * ------------------------------------------------------------------------
-       */
-
-    };
-
-    var Carousel =
-    /*#__PURE__*/
-    function () {
-      function Carousel(element, config) {
-        this._items = null;
-        this._interval = null;
-        this._activeElement = null;
-        this._isPaused = false;
-        this._isSliding = false;
-        this.touchTimeout = null;
-        this._config = this._getConfig(config);
-        this._element = $$$1(element)[0];
-        this._indicatorsElement = this._element.querySelector(Selector.INDICATORS);
-
-        this._addEventListeners();
-      } // Getters
-
-
-      var _proto = Carousel.prototype;
-
-      // Public
-      _proto.next = function next() {
-        if (!this._isSliding) {
-          this._slide(Direction.NEXT);
-        }
-      };
-
-      _proto.nextWhenVisible = function nextWhenVisible() {
-        // Don't call next when the page isn't visible
-        // or the carousel or its parent isn't visible
-        if (!document.hidden && $$$1(this._element).is(':visible') && $$$1(this._element).css('visibility') !== 'hidden') {
-          this.next();
-        }
-      };
-
-      _proto.prev = function prev() {
-        if (!this._isSliding) {
-          this._slide(Direction.PREV);
-        }
-      };
-
-      _proto.pause = function pause(event) {
-        if (!event) {
-          this._isPaused = true;
-        }
-
-        if (this._element.querySelector(Selector.NEXT_PREV)) {
-          Util.triggerTransitionEnd(this._element);
-          this.cycle(true);
-        }
-
-        clearInterval(this._interval);
-        this._interval = null;
-      };
-
-      _proto.cycle = function cycle(event) {
-        if (!event) {
-          this._isPaused = false;
-        }
-
-        if (this._interval) {
-          clearInterval(this._interval);
-          this._interval = null;
-        }
-
-        if (this._config.interval && !this._isPaused) {
-          this._interval = setInterval((document.visibilityState ? this.nextWhenVisible : this.next).bind(this), this._config.interval);
-        }
-      };
-
-      _proto.to = function to(index) {
-        var _this = this;
-
-        this._activeElement = this._element.querySelector(Selector.ACTIVE_ITEM);
-
-        var activeIndex = this._getItemIndex(this._activeElement);
-
-        if (index > this._items.length - 1 || index < 0) {
-          return;
-        }
-
-        if (this._isSliding) {
-          $$$1(this._element).one(Event.SLID, function () {
-            return _this.to(index);
-          });
-          return;
-        }
-
-        if (activeIndex === index) {
-          this.pause();
-          this.cycle();
-          return;
-        }
-
-        var direction = index > activeIndex ? Direction.NEXT : Direction.PREV;
-
-        this._slide(direction, this._items[index]);
-      };
-
-      _proto.dispose = function dispose() {
-        $$$1(this._element).off(EVENT_KEY);
-        $$$1.removeData(this._element, DATA_KEY);
-        this._items = null;
-        this._config = null;
-        this._element = null;
-        this._interval = null;
-        this._isPaused = null;
-        this._isSliding = null;
-        this._activeElement = null;
-        this._indicatorsElement = null;
-      }; // Private
-
-
-      _proto._getConfig = function _getConfig(config) {
-        config = _objectSpread({}, Default, config);
-        Util.typeCheckConfig(NAME, config, DefaultType);
-        return config;
-      };
-
-      _proto._addEventListeners = function _addEventListeners() {
-        var _this2 = this;
-
-        if (this._config.keyboard) {
-          $$$1(this._element).on(Event.KEYDOWN, function (event) {
-            return _this2._keydown(event);
-          });
-        }
-
-        if (this._config.pause === 'hover') {
-          $$$1(this._element).on(Event.MOUSEENTER, function (event) {
-            return _this2.pause(event);
-          }).on(Event.MOUSELEAVE, function (event) {
-            return _this2.cycle(event);
-          });
-
-          if ('ontouchstart' in document.documentElement) {
-            // If it's a touch-enabled device, mouseenter/leave are fired as
-            // part of the mouse compatibility events on first tap - the carousel
-            // would stop cycling until user tapped out of it;
-            // here, we listen for touchend, explicitly pause the carousel
-            // (as if it's the second time we tap on it, mouseenter compat event
-            // is NOT fired) and after a timeout (to allow for mouse compatibility
-            // events to fire) we explicitly restart cycling
-            $$$1(this._element).on(Event.TOUCHEND, function () {
-              _this2.pause();
-
-              if (_this2.touchTimeout) {
-                clearTimeout(_this2.touchTimeout);
-              }
-
-              _this2.touchTimeout = setTimeout(function (event) {
-                return _this2.cycle(event);
-              }, TOUCHEVENT_COMPAT_WAIT + _this2._config.interval);
-            });
-          }
-        }
-      };
-
-      _proto._keydown = function _keydown(event) {
-        if (/input|textarea/i.test(event.target.tagName)) {
-          return;
-        }
-
-        switch (event.which) {
-          case ARROW_LEFT_KEYCODE:
-            event.preventDefault();
-            this.prev();
-            break;
-
-          case ARROW_RIGHT_KEYCODE:
-            event.preventDefault();
-            this.next();
-            break;
-
-          default:
-        }
-      };
-
-      _proto._getItemIndex = function _getItemIndex(element) {
-        this._items = element && element.parentNode ? [].slice.call(element.parentNode.querySelectorAll(Selector.ITEM)) : [];
-        return this._items.indexOf(element);
-      };
-
-      _proto._getItemByDirection = function _getItemByDirection(direction, activeElement) {
-        var isNextDirection = direction === Direction.NEXT;
-        var isPrevDirection = direction === Direction.PREV;
-
-        var activeIndex = this._getItemIndex(activeElement);
-
-        var lastItemIndex = this._items.length - 1;
-        var isGoingToWrap = isPrevDirection && activeIndex === 0 || isNextDirection && activeIndex === lastItemIndex;
-
-        if (isGoingToWrap && !this._config.wrap) {
-          return activeElement;
-        }
-
-        var delta = direction === Direction.PREV ? -1 : 1;
-        var itemIndex = (activeIndex + delta) % this._items.length;
-        return itemIndex === -1 ? this._items[this._items.length - 1] : this._items[itemIndex];
-      };
-
-      _proto._triggerSlideEvent = function _triggerSlideEvent(relatedTarget, eventDirectionName) {
-        var targetIndex = this._getItemIndex(relatedTarget);
-
-        var fromIndex = this._getItemIndex(this._element.querySelector(Selector.ACTIVE_ITEM));
-
-        var slideEvent = $$$1.Event(Event.SLIDE, {
-          relatedTarget: relatedTarget,
-          direction: eventDirectionName,
-          from: fromIndex,
-          to: targetIndex
-        });
-        $$$1(this._element).trigger(slideEvent);
-        return slideEvent;
-      };
-
-      _proto._setActiveIndicatorElement = function _setActiveIndicatorElement(element) {
-        if (this._indicatorsElement) {
-          var indicators = [].slice.call(this._indicatorsElement.querySelectorAll(Selector.ACTIVE));
-          $$$1(indicators).removeClass(ClassName.ACTIVE);
-
-          var nextIndicator = this._indicatorsElement.children[this._getItemIndex(element)];
-
-          if (nextIndicator) {
-            $$$1(nextIndicator).addClass(ClassName.ACTIVE);
-          }
-        }
-      };
-
-      _proto._slide = function _slide(direction, element) {
-        var _this3 = this;
-
-        var activeElement = this._element.querySelector(Selector.ACTIVE_ITEM);
-
-        var activeElementIndex = this._getItemIndex(activeElement);
-
-        var nextElement = element || activeElement && this._getItemByDirection(direction, activeElement);
-
-        var nextElementIndex = this._getItemIndex(nextElement);
-
-        var isCycling = Boolean(this._interval);
-        var directionalClassName;
-        var orderClassName;
-        var eventDirectionName;
-
-        if (direction === Direction.NEXT) {
-          directionalClassName = ClassName.LEFT;
-          orderClassName = ClassName.NEXT;
-          eventDirectionName = Direction.LEFT;
-        } else {
-          directionalClassName = ClassName.RIGHT;
-          orderClassName = ClassName.PREV;
-          eventDirectionName = Direction.RIGHT;
-        }
-
-        if (nextElement && $$$1(nextElement).hasClass(ClassName.ACTIVE)) {
-          this._isSliding = false;
-          return;
-        }
-
-        var slideEvent = this._triggerSlideEvent(nextElement, eventDirectionName);
-
-        if (slideEvent.isDefaultPrevented()) {
-          return;
-        }
-
-        if (!activeElement || !nextElement) {
-          // Some weirdness is happening, so we bail
-          return;
-        }
-
-        this._isSliding = true;
-
-        if (isCycling) {
-          this.pause();
-        }
-
-        this._setActiveIndicatorElement(nextElement);
-
-        var slidEvent = $$$1.Event(Event.SLID, {
-          relatedTarget: nextElement,
-          direction: eventDirectionName,
-          from: activeElementIndex,
-          to: nextElementIndex
-        });
-
-        if ($$$1(this._element).hasClass(ClassName.SLIDE)) {
-          $$$1(nextElement).addClass(orderClassName);
-          Util.reflow(nextElement);
-          $$$1(activeElement).addClass(directionalClassName);
-          $$$1(nextElement).addClass(directionalClassName);
-          var transitionDuration = Util.getTransitionDurationFromElement(activeElement);
-          $$$1(activeElement).one(Util.TRANSITION_END, function () {
-            $$$1(nextElement).removeClass(directionalClassName + " " + orderClassName).addClass(ClassName.ACTIVE);
-            $$$1(activeElement).removeClass(ClassName.ACTIVE + " " + orderClassName + " " + directionalClassName);
-            _this3._isSliding = false;
-            setTimeout(function () {
-              return $$$1(_this3._element).trigger(slidEvent);
-            }, 0);
-          }).emulateTransitionEnd(transitionDuration);
-        } else {
-          $$$1(activeElement).removeClass(ClassName.ACTIVE);
-          $$$1(nextElement).addClass(ClassName.ACTIVE);
-          this._isSliding = false;
-          $$$1(this._element).trigger(slidEvent);
-        }
-
-        if (isCycling) {
-          this.cycle();
-        }
-      }; // Static
-
-
-      Carousel._jQueryInterface = function _jQueryInterface(config) {
-        return this.each(function () {
-          var data = $$$1(this).data(DATA_KEY);
-
-          var _config = _objectSpread({}, Default, $$$1(this).data());
-
-          if (typeof config === 'object') {
-            _config = _objectSpread({}, _config, config);
-          }
-
-          var action = typeof config === 'string' ? config : _config.slide;
-
-          if (!data) {
-            data = new Carousel(this, _config);
-            $$$1(this).data(DATA_KEY, data);
-          }
-
-          if (typeof config === 'number') {
-            data.to(config);
-          } else if (typeof action === 'string') {
-            if (typeof data[action] === 'undefined') {
-              throw new TypeError("No method named \"" + action + "\"");
-            }
-
-            data[action]();
-          } else if (_config.interval) {
-            data.pause();
-            data.cycle();
-          }
-        });
-      };
-
-      Carousel._dataApiClickHandler = function _dataApiClickHandler(event) {
-        var selector = Util.getSelectorFromElement(this);
-
-        if (!selector) {
-          return;
-        }
-
-        var target = $$$1(selector)[0];
-
-        if (!target || !$$$1(target).hasClass(ClassName.CAROUSEL)) {
-          return;
-        }
-
-        var config = _objectSpread({}, $$$1(target).data(), $$$1(this).data());
-
-        var slideIndex = this.getAttribute('data-slide-to');
-
-        if (slideIndex) {
-          config.interval = false;
-        }
-
-        Carousel._jQueryInterface.call($$$1(target), config);
-
-        if (slideIndex) {
-          $$$1(target).data(DATA_KEY).to(slideIndex);
-        }
-
-        event.preventDefault();
-      };
-
-      _createClass(Carousel, null, [{
-        key: "VERSION",
-        get: function get() {
-          return VERSION;
-        }
-      }, {
-        key: "Default",
-        get: function get() {
-          return Default;
-        }
-      }]);
-
-      return Carousel;
-    }();
-    /**
-     * ------------------------------------------------------------------------
-     * Data Api implementation
-     * ------------------------------------------------------------------------
-     */
-
-
-    $$$1(document).on(Event.CLICK_DATA_API, Selector.DATA_SLIDE, Carousel._dataApiClickHandler);
-    $$$1(window).on(Event.LOAD_DATA_API, function () {
-      var carousels = [].slice.call(document.querySelectorAll(Selector.DATA_RIDE));
-
-      for (var i = 0, len = carousels.length; i < len; i++) {
-        var $carousel = $$$1(carousels[i]);
-
-        Carousel._jQueryInterface.call($carousel, $carousel.data());
+      try {
+        var $selector = $$$1(document).find(selector);
+        return $selector.length > 0 ? selector : null;
+      } catch (err) {
+        return null;
       }
-    });
-    /**
-     * ------------------------------------------------------------------------
-     * jQuery
-     * ------------------------------------------------------------------------
-     */
+    },
+    reflow: function reflow(element) {
+      return element.offsetHeight;
+    },
+    triggerTransitionEnd: function triggerTransitionEnd(element) {
+      $$$1(element).trigger(transition.end);
+    },
+    supportsTransitionEnd: function supportsTransitionEnd() {
+      return Boolean(transition);
+    },
+    isElement: function isElement(obj) {
+      return (obj[0] || obj).nodeType;
+    },
+    typeCheckConfig: function typeCheckConfig(componentName, config, configTypes) {
+      for (var property in configTypes) {
+        if (Object.prototype.hasOwnProperty.call(configTypes, property)) {
+          var expectedTypes = configTypes[property];
+          var value = config[property];
+          var valueType = value && Util.isElement(value) ? 'element' : toType(value);
 
-    $$$1.fn[NAME] = Carousel._jQueryInterface;
-    $$$1.fn[NAME].Constructor = Carousel;
+          if (!new RegExp(expectedTypes).test(valueType)) {
+            throw new Error(componentName.toUpperCase() + ": " + ("Option \"" + property + "\" provided type \"" + valueType + "\" ") + ("but expected type \"" + expectedTypes + "\"."));
+          }
+        }
+      }
+    }
+  };
+  setTransitionEndSupport();
+  return Util;
+}($);
 
-    $$$1.fn[NAME].noConflict = function () {
-      $$$1.fn[NAME] = JQUERY_NO_CONFLICT;
-      return Carousel._jQueryInterface;
-    };
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap (v4.0.0): alert.js
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
+ */
 
-    return Carousel;
-  }($);
-
+var Alert = function ($$$1) {
   /**
-   * --------------------------------------------------------------------------
-   * Bootstrap (v4.1.3): collapse.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-   * --------------------------------------------------------------------------
+   * ------------------------------------------------------------------------
+   * Constants
+   * ------------------------------------------------------------------------
    */
-
-  var Collapse = function ($$$1) {
+  var NAME = 'alert';
+  var VERSION = '4.0.0';
+  var DATA_KEY = 'bs.alert';
+  var EVENT_KEY = "." + DATA_KEY;
+  var DATA_API_KEY = '.data-api';
+  var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
+  var TRANSITION_DURATION = 150;
+  var Selector = {
+    DISMISS: '[data-dismiss="alert"]'
+  };
+  var Event = {
+    CLOSE: "close" + EVENT_KEY,
+    CLOSED: "closed" + EVENT_KEY,
+    CLICK_DATA_API: "click" + EVENT_KEY + DATA_API_KEY
+  };
+  var ClassName = {
+    ALERT: 'alert',
+    FADE: 'fade',
+    SHOW: 'show'
     /**
      * ------------------------------------------------------------------------
-     * Constants
-     * ------------------------------------------------------------------------
-     */
-    var NAME = 'collapse';
-    var VERSION = '4.1.3';
-    var DATA_KEY = 'bs.collapse';
-    var EVENT_KEY = "." + DATA_KEY;
-    var DATA_API_KEY = '.data-api';
-    var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
-    var Default = {
-      toggle: true,
-      parent: ''
-    };
-    var DefaultType = {
-      toggle: 'boolean',
-      parent: '(string|element)'
-    };
-    var Event = {
-      SHOW: "show" + EVENT_KEY,
-      SHOWN: "shown" + EVENT_KEY,
-      HIDE: "hide" + EVENT_KEY,
-      HIDDEN: "hidden" + EVENT_KEY,
-      CLICK_DATA_API: "click" + EVENT_KEY + DATA_API_KEY
-    };
-    var ClassName = {
-      SHOW: 'show',
-      COLLAPSE: 'collapse',
-      COLLAPSING: 'collapsing',
-      COLLAPSED: 'collapsed'
-    };
-    var Dimension = {
-      WIDTH: 'width',
-      HEIGHT: 'height'
-    };
-    var Selector = {
-      ACTIVES: '.show, .collapsing',
-      DATA_TOGGLE: '[data-toggle="collapse"]'
-      /**
-       * ------------------------------------------------------------------------
-       * Class Definition
-       * ------------------------------------------------------------------------
-       */
-
-    };
-
-    var Collapse =
-    /*#__PURE__*/
-    function () {
-      function Collapse(element, config) {
-        this._isTransitioning = false;
-        this._element = element;
-        this._config = this._getConfig(config);
-        this._triggerArray = $$$1.makeArray(document.querySelectorAll("[data-toggle=\"collapse\"][href=\"#" + element.id + "\"]," + ("[data-toggle=\"collapse\"][data-target=\"#" + element.id + "\"]")));
-        var toggleList = [].slice.call(document.querySelectorAll(Selector.DATA_TOGGLE));
-
-        for (var i = 0, len = toggleList.length; i < len; i++) {
-          var elem = toggleList[i];
-          var selector = Util.getSelectorFromElement(elem);
-          var filterElement = [].slice.call(document.querySelectorAll(selector)).filter(function (foundElem) {
-            return foundElem === element;
-          });
-
-          if (selector !== null && filterElement.length > 0) {
-            this._selector = selector;
-
-            this._triggerArray.push(elem);
-          }
-        }
-
-        this._parent = this._config.parent ? this._getParent() : null;
-
-        if (!this._config.parent) {
-          this._addAriaAndCollapsedClass(this._element, this._triggerArray);
-        }
-
-        if (this._config.toggle) {
-          this.toggle();
-        }
-      } // Getters
-
-
-      var _proto = Collapse.prototype;
-
-      // Public
-      _proto.toggle = function toggle() {
-        if ($$$1(this._element).hasClass(ClassName.SHOW)) {
-          this.hide();
-        } else {
-          this.show();
-        }
-      };
-
-      _proto.show = function show() {
-        var _this = this;
-
-        if (this._isTransitioning || $$$1(this._element).hasClass(ClassName.SHOW)) {
-          return;
-        }
-
-        var actives;
-        var activesData;
-
-        if (this._parent) {
-          actives = [].slice.call(this._parent.querySelectorAll(Selector.ACTIVES)).filter(function (elem) {
-            return elem.getAttribute('data-parent') === _this._config.parent;
-          });
-
-          if (actives.length === 0) {
-            actives = null;
-          }
-        }
-
-        if (actives) {
-          activesData = $$$1(actives).not(this._selector).data(DATA_KEY);
-
-          if (activesData && activesData._isTransitioning) {
-            return;
-          }
-        }
-
-        var startEvent = $$$1.Event(Event.SHOW);
-        $$$1(this._element).trigger(startEvent);
-
-        if (startEvent.isDefaultPrevented()) {
-          return;
-        }
-
-        if (actives) {
-          Collapse._jQueryInterface.call($$$1(actives).not(this._selector), 'hide');
-
-          if (!activesData) {
-            $$$1(actives).data(DATA_KEY, null);
-          }
-        }
-
-        var dimension = this._getDimension();
-
-        $$$1(this._element).removeClass(ClassName.COLLAPSE).addClass(ClassName.COLLAPSING);
-        this._element.style[dimension] = 0;
-
-        if (this._triggerArray.length) {
-          $$$1(this._triggerArray).removeClass(ClassName.COLLAPSED).attr('aria-expanded', true);
-        }
-
-        this.setTransitioning(true);
-
-        var complete = function complete() {
-          $$$1(_this._element).removeClass(ClassName.COLLAPSING).addClass(ClassName.COLLAPSE).addClass(ClassName.SHOW);
-          _this._element.style[dimension] = '';
-
-          _this.setTransitioning(false);
-
-          $$$1(_this._element).trigger(Event.SHOWN);
-        };
-
-        var capitalizedDimension = dimension[0].toUpperCase() + dimension.slice(1);
-        var scrollSize = "scroll" + capitalizedDimension;
-        var transitionDuration = Util.getTransitionDurationFromElement(this._element);
-        $$$1(this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
-        this._element.style[dimension] = this._element[scrollSize] + "px";
-      };
-
-      _proto.hide = function hide() {
-        var _this2 = this;
-
-        if (this._isTransitioning || !$$$1(this._element).hasClass(ClassName.SHOW)) {
-          return;
-        }
-
-        var startEvent = $$$1.Event(Event.HIDE);
-        $$$1(this._element).trigger(startEvent);
-
-        if (startEvent.isDefaultPrevented()) {
-          return;
-        }
-
-        var dimension = this._getDimension();
-
-        this._element.style[dimension] = this._element.getBoundingClientRect()[dimension] + "px";
-        Util.reflow(this._element);
-        $$$1(this._element).addClass(ClassName.COLLAPSING).removeClass(ClassName.COLLAPSE).removeClass(ClassName.SHOW);
-        var triggerArrayLength = this._triggerArray.length;
-
-        if (triggerArrayLength > 0) {
-          for (var i = 0; i < triggerArrayLength; i++) {
-            var trigger = this._triggerArray[i];
-            var selector = Util.getSelectorFromElement(trigger);
-
-            if (selector !== null) {
-              var $elem = $$$1([].slice.call(document.querySelectorAll(selector)));
-
-              if (!$elem.hasClass(ClassName.SHOW)) {
-                $$$1(trigger).addClass(ClassName.COLLAPSED).attr('aria-expanded', false);
-              }
-            }
-          }
-        }
-
-        this.setTransitioning(true);
-
-        var complete = function complete() {
-          _this2.setTransitioning(false);
-
-          $$$1(_this2._element).removeClass(ClassName.COLLAPSING).addClass(ClassName.COLLAPSE).trigger(Event.HIDDEN);
-        };
-
-        this._element.style[dimension] = '';
-        var transitionDuration = Util.getTransitionDurationFromElement(this._element);
-        $$$1(this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
-      };
-
-      _proto.setTransitioning = function setTransitioning(isTransitioning) {
-        this._isTransitioning = isTransitioning;
-      };
-
-      _proto.dispose = function dispose() {
-        $$$1.removeData(this._element, DATA_KEY);
-        this._config = null;
-        this._parent = null;
-        this._element = null;
-        this._triggerArray = null;
-        this._isTransitioning = null;
-      }; // Private
-
-
-      _proto._getConfig = function _getConfig(config) {
-        config = _objectSpread({}, Default, config);
-        config.toggle = Boolean(config.toggle); // Coerce string values
-
-        Util.typeCheckConfig(NAME, config, DefaultType);
-        return config;
-      };
-
-      _proto._getDimension = function _getDimension() {
-        var hasWidth = $$$1(this._element).hasClass(Dimension.WIDTH);
-        return hasWidth ? Dimension.WIDTH : Dimension.HEIGHT;
-      };
-
-      _proto._getParent = function _getParent() {
-        var _this3 = this;
-
-        var parent = null;
-
-        if (Util.isElement(this._config.parent)) {
-          parent = this._config.parent; // It's a jQuery object
-
-          if (typeof this._config.parent.jquery !== 'undefined') {
-            parent = this._config.parent[0];
-          }
-        } else {
-          parent = document.querySelector(this._config.parent);
-        }
-
-        var selector = "[data-toggle=\"collapse\"][data-parent=\"" + this._config.parent + "\"]";
-        var children = [].slice.call(parent.querySelectorAll(selector));
-        $$$1(children).each(function (i, element) {
-          _this3._addAriaAndCollapsedClass(Collapse._getTargetFromElement(element), [element]);
-        });
-        return parent;
-      };
-
-      _proto._addAriaAndCollapsedClass = function _addAriaAndCollapsedClass(element, triggerArray) {
-        if (element) {
-          var isOpen = $$$1(element).hasClass(ClassName.SHOW);
-
-          if (triggerArray.length) {
-            $$$1(triggerArray).toggleClass(ClassName.COLLAPSED, !isOpen).attr('aria-expanded', isOpen);
-          }
-        }
-      }; // Static
-
-
-      Collapse._getTargetFromElement = function _getTargetFromElement(element) {
-        var selector = Util.getSelectorFromElement(element);
-        return selector ? document.querySelector(selector) : null;
-      };
-
-      Collapse._jQueryInterface = function _jQueryInterface(config) {
-        return this.each(function () {
-          var $this = $$$1(this);
-          var data = $this.data(DATA_KEY);
-
-          var _config = _objectSpread({}, Default, $this.data(), typeof config === 'object' && config ? config : {});
-
-          if (!data && _config.toggle && /show|hide/.test(config)) {
-            _config.toggle = false;
-          }
-
-          if (!data) {
-            data = new Collapse(this, _config);
-            $this.data(DATA_KEY, data);
-          }
-
-          if (typeof config === 'string') {
-            if (typeof data[config] === 'undefined') {
-              throw new TypeError("No method named \"" + config + "\"");
-            }
-
-            data[config]();
-          }
-        });
-      };
-
-      _createClass(Collapse, null, [{
-        key: "VERSION",
-        get: function get() {
-          return VERSION;
-        }
-      }, {
-        key: "Default",
-        get: function get() {
-          return Default;
-        }
-      }]);
-
-      return Collapse;
-    }();
-    /**
-     * ------------------------------------------------------------------------
-     * Data Api implementation
+     * Class Definition
      * ------------------------------------------------------------------------
      */
 
+  };
 
-    $$$1(document).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, function (event) {
-      // preventDefault only for <a> elements (which change the URL) not inside the collapsible element
-      if (event.currentTarget.tagName === 'A') {
-        event.preventDefault();
+  var Alert =
+  /*#__PURE__*/
+  function () {
+    function Alert(element) {
+      this._element = element;
+    } // Getters
+
+
+    var _proto = Alert.prototype;
+
+    // Public
+    _proto.close = function close(element) {
+      element = element || this._element;
+
+      var rootElement = this._getRootElement(element);
+
+      var customEvent = this._triggerCloseEvent(rootElement);
+
+      if (customEvent.isDefaultPrevented()) {
+        return;
       }
 
-      var $trigger = $$$1(this);
-      var selector = Util.getSelectorFromElement(this);
-      var selectors = [].slice.call(document.querySelectorAll(selector));
-      $$$1(selectors).each(function () {
-        var $target = $$$1(this);
-        var data = $target.data(DATA_KEY);
-        var config = data ? 'toggle' : $trigger.data();
+      this._removeElement(rootElement);
+    };
 
-        Collapse._jQueryInterface.call($target, config);
+    _proto.dispose = function dispose() {
+      $$$1.removeData(this._element, DATA_KEY);
+      this._element = null;
+    }; // Private
+
+
+    _proto._getRootElement = function _getRootElement(element) {
+      var selector = Util.getSelectorFromElement(element);
+      var parent = false;
+
+      if (selector) {
+        parent = $$$1(selector)[0];
+      }
+
+      if (!parent) {
+        parent = $$$1(element).closest("." + ClassName.ALERT)[0];
+      }
+
+      return parent;
+    };
+
+    _proto._triggerCloseEvent = function _triggerCloseEvent(element) {
+      var closeEvent = $$$1.Event(Event.CLOSE);
+      $$$1(element).trigger(closeEvent);
+      return closeEvent;
+    };
+
+    _proto._removeElement = function _removeElement(element) {
+      var _this = this;
+
+      $$$1(element).removeClass(ClassName.SHOW);
+
+      if (!Util.supportsTransitionEnd() || !$$$1(element).hasClass(ClassName.FADE)) {
+        this._destroyElement(element);
+
+        return;
+      }
+
+      $$$1(element).one(Util.TRANSITION_END, function (event) {
+        return _this._destroyElement(element, event);
+      }).emulateTransitionEnd(TRANSITION_DURATION);
+    };
+
+    _proto._destroyElement = function _destroyElement(element) {
+      $$$1(element).detach().trigger(Event.CLOSED).remove();
+    }; // Static
+
+
+    Alert._jQueryInterface = function _jQueryInterface(config) {
+      return this.each(function () {
+        var $element = $$$1(this);
+        var data = $element.data(DATA_KEY);
+
+        if (!data) {
+          data = new Alert(this);
+          $element.data(DATA_KEY, data);
+        }
+
+        if (config === 'close') {
+          data[config](this);
+        }
       });
-    });
-    /**
-     * ------------------------------------------------------------------------
-     * jQuery
-     * ------------------------------------------------------------------------
-     */
-
-    $$$1.fn[NAME] = Collapse._jQueryInterface;
-    $$$1.fn[NAME].Constructor = Collapse;
-
-    $$$1.fn[NAME].noConflict = function () {
-      $$$1.fn[NAME] = JQUERY_NO_CONFLICT;
-      return Collapse._jQueryInterface;
     };
 
-    return Collapse;
-  }($);
-
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap (v4.1.3): dropdown.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
-  var Dropdown = function ($$$1) {
-    /**
-     * ------------------------------------------------------------------------
-     * Constants
-     * ------------------------------------------------------------------------
-     */
-    var NAME = 'dropdown';
-    var VERSION = '4.1.3';
-    var DATA_KEY = 'bs.dropdown';
-    var EVENT_KEY = "." + DATA_KEY;
-    var DATA_API_KEY = '.data-api';
-    var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
-    var ESCAPE_KEYCODE = 27; // KeyboardEvent.which value for Escape (Esc) key
-
-    var SPACE_KEYCODE = 32; // KeyboardEvent.which value for space key
-
-    var TAB_KEYCODE = 9; // KeyboardEvent.which value for tab key
-
-    var ARROW_UP_KEYCODE = 38; // KeyboardEvent.which value for up arrow key
-
-    var ARROW_DOWN_KEYCODE = 40; // KeyboardEvent.which value for down arrow key
-
-    var RIGHT_MOUSE_BUTTON_WHICH = 3; // MouseEvent.which value for the right button (assuming a right-handed mouse)
-
-    var REGEXP_KEYDOWN = new RegExp(ARROW_UP_KEYCODE + "|" + ARROW_DOWN_KEYCODE + "|" + ESCAPE_KEYCODE);
-    var Event = {
-      HIDE: "hide" + EVENT_KEY,
-      HIDDEN: "hidden" + EVENT_KEY,
-      SHOW: "show" + EVENT_KEY,
-      SHOWN: "shown" + EVENT_KEY,
-      CLICK: "click" + EVENT_KEY,
-      CLICK_DATA_API: "click" + EVENT_KEY + DATA_API_KEY,
-      KEYDOWN_DATA_API: "keydown" + EVENT_KEY + DATA_API_KEY,
-      KEYUP_DATA_API: "keyup" + EVENT_KEY + DATA_API_KEY
-    };
-    var ClassName = {
-      DISABLED: 'disabled',
-      SHOW: 'show',
-      DROPUP: 'dropup',
-      DROPRIGHT: 'dropright',
-      DROPLEFT: 'dropleft',
-      MENURIGHT: 'dropdown-menu-right',
-      MENULEFT: 'dropdown-menu-left',
-      POSITION_STATIC: 'position-static'
-    };
-    var Selector = {
-      DATA_TOGGLE: '[data-toggle="dropdown"]',
-      FORM_CHILD: '.dropdown form',
-      MENU: '.dropdown-menu',
-      NAVBAR_NAV: '.navbar-nav',
-      VISIBLE_ITEMS: '.dropdown-menu .dropdown-item:not(.disabled):not(:disabled)'
-    };
-    var AttachmentMap = {
-      TOP: 'top-start',
-      TOPEND: 'top-end',
-      BOTTOM: 'bottom-start',
-      BOTTOMEND: 'bottom-end',
-      RIGHT: 'right-start',
-      RIGHTEND: 'right-end',
-      LEFT: 'left-start',
-      LEFTEND: 'left-end'
-    };
-    var Default = {
-      offset: 0,
-      flip: true,
-      boundary: 'scrollParent',
-      reference: 'toggle',
-      display: 'dynamic'
-    };
-    var DefaultType = {
-      offset: '(number|string|function)',
-      flip: 'boolean',
-      boundary: '(string|element)',
-      reference: '(string|element)',
-      display: 'string'
-      /**
-       * ------------------------------------------------------------------------
-       * Class Definition
-       * ------------------------------------------------------------------------
-       */
-
-    };
-
-    var Dropdown =
-    /*#__PURE__*/
-    function () {
-      function Dropdown(element, config) {
-        this._element = element;
-        this._popper = null;
-        this._config = this._getConfig(config);
-        this._menu = this._getMenuElement();
-        this._inNavbar = this._detectNavbar();
-
-        this._addEventListeners();
-      } // Getters
-
-
-      var _proto = Dropdown.prototype;
-
-      // Public
-      _proto.toggle = function toggle() {
-        if (this._element.disabled || $$$1(this._element).hasClass(ClassName.DISABLED)) {
-          return;
-        }
-
-        var parent = Dropdown._getParentFromElement(this._element);
-
-        var isActive = $$$1(this._menu).hasClass(ClassName.SHOW);
-
-        Dropdown._clearMenus();
-
-        if (isActive) {
-          return;
-        }
-
-        var relatedTarget = {
-          relatedTarget: this._element
-        };
-        var showEvent = $$$1.Event(Event.SHOW, relatedTarget);
-        $$$1(parent).trigger(showEvent);
-
-        if (showEvent.isDefaultPrevented()) {
-          return;
-        } // Disable totally Popper.js for Dropdown in Navbar
-
-
-        if (!this._inNavbar) {
-          /**
-           * Check for Popper dependency
-           * Popper - https://popper.js.org
-           */
-          if (typeof Popper === 'undefined') {
-            throw new TypeError('Bootstrap dropdown require Popper.js (https://popper.js.org)');
-          }
-
-          var referenceElement = this._element;
-
-          if (this._config.reference === 'parent') {
-            referenceElement = parent;
-          } else if (Util.isElement(this._config.reference)) {
-            referenceElement = this._config.reference; // Check if it's jQuery element
-
-            if (typeof this._config.reference.jquery !== 'undefined') {
-              referenceElement = this._config.reference[0];
-            }
-          } // If boundary is not `scrollParent`, then set position to `static`
-          // to allow the menu to "escape" the scroll parent's boundaries
-          // https://github.com/twbs/bootstrap/issues/24251
-
-
-          if (this._config.boundary !== 'scrollParent') {
-            $$$1(parent).addClass(ClassName.POSITION_STATIC);
-          }
-
-          this._popper = new Popper(referenceElement, this._menu, this._getPopperConfig());
-        } // If this is a touch-enabled device we add extra
-        // empty mouseover listeners to the body's immediate children;
-        // only needed because of broken event delegation on iOS
-        // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
-
-
-        if ('ontouchstart' in document.documentElement && $$$1(parent).closest(Selector.NAVBAR_NAV).length === 0) {
-          $$$1(document.body).children().on('mouseover', null, $$$1.noop);
-        }
-
-        this._element.focus();
-
-        this._element.setAttribute('aria-expanded', true);
-
-        $$$1(this._menu).toggleClass(ClassName.SHOW);
-        $$$1(parent).toggleClass(ClassName.SHOW).trigger($$$1.Event(Event.SHOWN, relatedTarget));
-      };
-
-      _proto.dispose = function dispose() {
-        $$$1.removeData(this._element, DATA_KEY);
-        $$$1(this._element).off(EVENT_KEY);
-        this._element = null;
-        this._menu = null;
-
-        if (this._popper !== null) {
-          this._popper.destroy();
-
-          this._popper = null;
-        }
-      };
-
-      _proto.update = function update() {
-        this._inNavbar = this._detectNavbar();
-
-        if (this._popper !== null) {
-          this._popper.scheduleUpdate();
-        }
-      }; // Private
-
-
-      _proto._addEventListeners = function _addEventListeners() {
-        var _this = this;
-
-        $$$1(this._element).on(Event.CLICK, function (event) {
-          event.preventDefault();
-          event.stopPropagation();
-
-          _this.toggle();
-        });
-      };
-
-      _proto._getConfig = function _getConfig(config) {
-        config = _objectSpread({}, this.constructor.Default, $$$1(this._element).data(), config);
-        Util.typeCheckConfig(NAME, config, this.constructor.DefaultType);
-        return config;
-      };
-
-      _proto._getMenuElement = function _getMenuElement() {
-        if (!this._menu) {
-          var parent = Dropdown._getParentFromElement(this._element);
-
-          if (parent) {
-            this._menu = parent.querySelector(Selector.MENU);
-          }
-        }
-
-        return this._menu;
-      };
-
-      _proto._getPlacement = function _getPlacement() {
-        var $parentDropdown = $$$1(this._element.parentNode);
-        var placement = AttachmentMap.BOTTOM; // Handle dropup
-
-        if ($parentDropdown.hasClass(ClassName.DROPUP)) {
-          placement = AttachmentMap.TOP;
-
-          if ($$$1(this._menu).hasClass(ClassName.MENURIGHT)) {
-            placement = AttachmentMap.TOPEND;
-          }
-        } else if ($parentDropdown.hasClass(ClassName.DROPRIGHT)) {
-          placement = AttachmentMap.RIGHT;
-        } else if ($parentDropdown.hasClass(ClassName.DROPLEFT)) {
-          placement = AttachmentMap.LEFT;
-        } else if ($$$1(this._menu).hasClass(ClassName.MENURIGHT)) {
-          placement = AttachmentMap.BOTTOMEND;
-        }
-
-        return placement;
-      };
-
-      _proto._detectNavbar = function _detectNavbar() {
-        return $$$1(this._element).closest('.navbar').length > 0;
-      };
-
-      _proto._getPopperConfig = function _getPopperConfig() {
-        var _this2 = this;
-
-        var offsetConf = {};
-
-        if (typeof this._config.offset === 'function') {
-          offsetConf.fn = function (data) {
-            data.offsets = _objectSpread({}, data.offsets, _this2._config.offset(data.offsets) || {});
-            return data;
-          };
-        } else {
-          offsetConf.offset = this._config.offset;
-        }
-
-        var popperConfig = {
-          placement: this._getPlacement(),
-          modifiers: {
-            offset: offsetConf,
-            flip: {
-              enabled: this._config.flip
-            },
-            preventOverflow: {
-              boundariesElement: this._config.boundary
-            }
-          } // Disable Popper.js if we have a static display
-
-        };
-
-        if (this._config.display === 'static') {
-          popperConfig.modifiers.applyStyle = {
-            enabled: false
-          };
-        }
-
-        return popperConfig;
-      }; // Static
-
-
-      Dropdown._jQueryInterface = function _jQueryInterface(config) {
-        return this.each(function () {
-          var data = $$$1(this).data(DATA_KEY);
-
-          var _config = typeof config === 'object' ? config : null;
-
-          if (!data) {
-            data = new Dropdown(this, _config);
-            $$$1(this).data(DATA_KEY, data);
-          }
-
-          if (typeof config === 'string') {
-            if (typeof data[config] === 'undefined') {
-              throw new TypeError("No method named \"" + config + "\"");
-            }
-
-            data[config]();
-          }
-        });
-      };
-
-      Dropdown._clearMenus = function _clearMenus(event) {
-        if (event && (event.which === RIGHT_MOUSE_BUTTON_WHICH || event.type === 'keyup' && event.which !== TAB_KEYCODE)) {
-          return;
-        }
-
-        var toggles = [].slice.call(document.querySelectorAll(Selector.DATA_TOGGLE));
-
-        for (var i = 0, len = toggles.length; i < len; i++) {
-          var parent = Dropdown._getParentFromElement(toggles[i]);
-
-          var context = $$$1(toggles[i]).data(DATA_KEY);
-          var relatedTarget = {
-            relatedTarget: toggles[i]
-          };
-
-          if (event && event.type === 'click') {
-            relatedTarget.clickEvent = event;
-          }
-
-          if (!context) {
-            continue;
-          }
-
-          var dropdownMenu = context._menu;
-
-          if (!$$$1(parent).hasClass(ClassName.SHOW)) {
-            continue;
-          }
-
-          if (event && (event.type === 'click' && /input|textarea/i.test(event.target.tagName) || event.type === 'keyup' && event.which === TAB_KEYCODE) && $$$1.contains(parent, event.target)) {
-            continue;
-          }
-
-          var hideEvent = $$$1.Event(Event.HIDE, relatedTarget);
-          $$$1(parent).trigger(hideEvent);
-
-          if (hideEvent.isDefaultPrevented()) {
-            continue;
-          } // If this is a touch-enabled device we remove the extra
-          // empty mouseover listeners we added for iOS support
-
-
-          if ('ontouchstart' in document.documentElement) {
-            $$$1(document.body).children().off('mouseover', null, $$$1.noop);
-          }
-
-          toggles[i].setAttribute('aria-expanded', 'false');
-          $$$1(dropdownMenu).removeClass(ClassName.SHOW);
-          $$$1(parent).removeClass(ClassName.SHOW).trigger($$$1.Event(Event.HIDDEN, relatedTarget));
-        }
-      };
-
-      Dropdown._getParentFromElement = function _getParentFromElement(element) {
-        var parent;
-        var selector = Util.getSelectorFromElement(element);
-
-        if (selector) {
-          parent = document.querySelector(selector);
-        }
-
-        return parent || element.parentNode;
-      }; // eslint-disable-next-line complexity
-
-
-      Dropdown._dataApiKeydownHandler = function _dataApiKeydownHandler(event) {
-        // If not input/textarea:
-        //  - And not a key in REGEXP_KEYDOWN => not a dropdown command
-        // If input/textarea:
-        //  - If space key => not a dropdown command
-        //  - If key is other than escape
-        //    - If key is not up or down => not a dropdown command
-        //    - If trigger inside the menu => not a dropdown command
-        if (/input|textarea/i.test(event.target.tagName) ? event.which === SPACE_KEYCODE || event.which !== ESCAPE_KEYCODE && (event.which !== ARROW_DOWN_KEYCODE && event.which !== ARROW_UP_KEYCODE || $$$1(event.target).closest(Selector.MENU).length) : !REGEXP_KEYDOWN.test(event.which)) {
-          return;
-        }
-
-        event.preventDefault();
-        event.stopPropagation();
-
-        if (this.disabled || $$$1(this).hasClass(ClassName.DISABLED)) {
-          return;
-        }
-
-        var parent = Dropdown._getParentFromElement(this);
-
-        var isActive = $$$1(parent).hasClass(ClassName.SHOW);
-
-        if (!isActive && (event.which !== ESCAPE_KEYCODE || event.which !== SPACE_KEYCODE) || isActive && (event.which === ESCAPE_KEYCODE || event.which === SPACE_KEYCODE)) {
-          if (event.which === ESCAPE_KEYCODE) {
-            var toggle = parent.querySelector(Selector.DATA_TOGGLE);
-            $$$1(toggle).trigger('focus');
-          }
-
-          $$$1(this).trigger('click');
-          return;
-        }
-
-        var items = [].slice.call(parent.querySelectorAll(Selector.VISIBLE_ITEMS));
-
-        if (items.length === 0) {
-          return;
-        }
-
-        var index = items.indexOf(event.target);
-
-        if (event.which === ARROW_UP_KEYCODE && index > 0) {
-          // Up
-          index--;
-        }
-
-        if (event.which === ARROW_DOWN_KEYCODE && index < items.length - 1) {
-          // Down
-          index++;
-        }
-
-        if (index < 0) {
-          index = 0;
-        }
-
-        items[index].focus();
-      };
-
-      _createClass(Dropdown, null, [{
-        key: "VERSION",
-        get: function get() {
-          return VERSION;
-        }
-      }, {
-        key: "Default",
-        get: function get() {
-          return Default;
-        }
-      }, {
-        key: "DefaultType",
-        get: function get() {
-          return DefaultType;
-        }
-      }]);
-
-      return Dropdown;
-    }();
-    /**
-     * ------------------------------------------------------------------------
-     * Data Api implementation
-     * ------------------------------------------------------------------------
-     */
-
-
-    $$$1(document).on(Event.KEYDOWN_DATA_API, Selector.DATA_TOGGLE, Dropdown._dataApiKeydownHandler).on(Event.KEYDOWN_DATA_API, Selector.MENU, Dropdown._dataApiKeydownHandler).on(Event.CLICK_DATA_API + " " + Event.KEYUP_DATA_API, Dropdown._clearMenus).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, function (event) {
-      event.preventDefault();
-      event.stopPropagation();
-
-      Dropdown._jQueryInterface.call($$$1(this), 'toggle');
-    }).on(Event.CLICK_DATA_API, Selector.FORM_CHILD, function (e) {
-      e.stopPropagation();
-    });
-    /**
-     * ------------------------------------------------------------------------
-     * jQuery
-     * ------------------------------------------------------------------------
-     */
-
-    $$$1.fn[NAME] = Dropdown._jQueryInterface;
-    $$$1.fn[NAME].Constructor = Dropdown;
-
-    $$$1.fn[NAME].noConflict = function () {
-      $$$1.fn[NAME] = JQUERY_NO_CONFLICT;
-      return Dropdown._jQueryInterface;
-    };
-
-    return Dropdown;
-  }($, Popper);
-
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap (v4.1.3): modal.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
-  var Modal = function ($$$1) {
-    /**
-     * ------------------------------------------------------------------------
-     * Constants
-     * ------------------------------------------------------------------------
-     */
-    var NAME = 'modal';
-    var VERSION = '4.1.3';
-    var DATA_KEY = 'bs.modal';
-    var EVENT_KEY = "." + DATA_KEY;
-    var DATA_API_KEY = '.data-api';
-    var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
-    var ESCAPE_KEYCODE = 27; // KeyboardEvent.which value for Escape (Esc) key
-
-    var Default = {
-      backdrop: true,
-      keyboard: true,
-      focus: true,
-      show: true
-    };
-    var DefaultType = {
-      backdrop: '(boolean|string)',
-      keyboard: 'boolean',
-      focus: 'boolean',
-      show: 'boolean'
-    };
-    var Event = {
-      HIDE: "hide" + EVENT_KEY,
-      HIDDEN: "hidden" + EVENT_KEY,
-      SHOW: "show" + EVENT_KEY,
-      SHOWN: "shown" + EVENT_KEY,
-      FOCUSIN: "focusin" + EVENT_KEY,
-      RESIZE: "resize" + EVENT_KEY,
-      CLICK_DISMISS: "click.dismiss" + EVENT_KEY,
-      KEYDOWN_DISMISS: "keydown.dismiss" + EVENT_KEY,
-      MOUSEUP_DISMISS: "mouseup.dismiss" + EVENT_KEY,
-      MOUSEDOWN_DISMISS: "mousedown.dismiss" + EVENT_KEY,
-      CLICK_DATA_API: "click" + EVENT_KEY + DATA_API_KEY
-    };
-    var ClassName = {
-      SCROLLBAR_MEASURER: 'modal-scrollbar-measure',
-      BACKDROP: 'modal-backdrop',
-      OPEN: 'modal-open',
-      FADE: 'fade',
-      SHOW: 'show'
-    };
-    var Selector = {
-      DIALOG: '.modal-dialog',
-      DATA_TOGGLE: '[data-toggle="modal"]',
-      DATA_DISMISS: '[data-dismiss="modal"]',
-      FIXED_CONTENT: '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top',
-      STICKY_CONTENT: '.sticky-top'
-      /**
-       * ------------------------------------------------------------------------
-       * Class Definition
-       * ------------------------------------------------------------------------
-       */
-
-    };
-
-    var Modal =
-    /*#__PURE__*/
-    function () {
-      function Modal(element, config) {
-        this._config = this._getConfig(config);
-        this._element = element;
-        this._dialog = element.querySelector(Selector.DIALOG);
-        this._backdrop = null;
-        this._isShown = false;
-        this._isBodyOverflowing = false;
-        this._ignoreBackdropClick = false;
-        this._scrollbarWidth = 0;
-      } // Getters
-
-
-      var _proto = Modal.prototype;
-
-      // Public
-      _proto.toggle = function toggle(relatedTarget) {
-        return this._isShown ? this.hide() : this.show(relatedTarget);
-      };
-
-      _proto.show = function show(relatedTarget) {
-        var _this = this;
-
-        if (this._isTransitioning || this._isShown) {
-          return;
-        }
-
-        if ($$$1(this._element).hasClass(ClassName.FADE)) {
-          this._isTransitioning = true;
-        }
-
-        var showEvent = $$$1.Event(Event.SHOW, {
-          relatedTarget: relatedTarget
-        });
-        $$$1(this._element).trigger(showEvent);
-
-        if (this._isShown || showEvent.isDefaultPrevented()) {
-          return;
-        }
-
-        this._isShown = true;
-
-        this._checkScrollbar();
-
-        this._setScrollbar();
-
-        this._adjustDialog();
-
-        $$$1(document.body).addClass(ClassName.OPEN);
-
-        this._setEscapeEvent();
-
-        this._setResizeEvent();
-
-        $$$1(this._element).on(Event.CLICK_DISMISS, Selector.DATA_DISMISS, function (event) {
-          return _this.hide(event);
-        });
-        $$$1(this._dialog).on(Event.MOUSEDOWN_DISMISS, function () {
-          $$$1(_this._element).one(Event.MOUSEUP_DISMISS, function (event) {
-            if ($$$1(event.target).is(_this._element)) {
-              _this._ignoreBackdropClick = true;
-            }
-          });
-        });
-
-        this._showBackdrop(function () {
-          return _this._showElement(relatedTarget);
-        });
-      };
-
-      _proto.hide = function hide(event) {
-        var _this2 = this;
-
+    Alert._handleDismiss = function _handleDismiss(alertInstance) {
+      return function (event) {
         if (event) {
           event.preventDefault();
         }
 
-        if (this._isTransitioning || !this._isShown) {
-          return;
-        }
-
-        var hideEvent = $$$1.Event(Event.HIDE);
-        $$$1(this._element).trigger(hideEvent);
-
-        if (!this._isShown || hideEvent.isDefaultPrevented()) {
-          return;
-        }
-
-        this._isShown = false;
-        var transition = $$$1(this._element).hasClass(ClassName.FADE);
-
-        if (transition) {
-          this._isTransitioning = true;
-        }
-
-        this._setEscapeEvent();
-
-        this._setResizeEvent();
-
-        $$$1(document).off(Event.FOCUSIN);
-        $$$1(this._element).removeClass(ClassName.SHOW);
-        $$$1(this._element).off(Event.CLICK_DISMISS);
-        $$$1(this._dialog).off(Event.MOUSEDOWN_DISMISS);
-
-        if (transition) {
-          var transitionDuration = Util.getTransitionDurationFromElement(this._element);
-          $$$1(this._element).one(Util.TRANSITION_END, function (event) {
-            return _this2._hideModal(event);
-          }).emulateTransitionEnd(transitionDuration);
-        } else {
-          this._hideModal();
-        }
+        alertInstance.close(this);
       };
-
-      _proto.dispose = function dispose() {
-        $$$1.removeData(this._element, DATA_KEY);
-        $$$1(window, document, this._element, this._backdrop).off(EVENT_KEY);
-        this._config = null;
-        this._element = null;
-        this._dialog = null;
-        this._backdrop = null;
-        this._isShown = null;
-        this._isBodyOverflowing = null;
-        this._ignoreBackdropClick = null;
-        this._scrollbarWidth = null;
-      };
-
-      _proto.handleUpdate = function handleUpdate() {
-        this._adjustDialog();
-      }; // Private
-
-
-      _proto._getConfig = function _getConfig(config) {
-        config = _objectSpread({}, Default, config);
-        Util.typeCheckConfig(NAME, config, DefaultType);
-        return config;
-      };
-
-      _proto._showElement = function _showElement(relatedTarget) {
-        var _this3 = this;
-
-        var transition = $$$1(this._element).hasClass(ClassName.FADE);
-
-        if (!this._element.parentNode || this._element.parentNode.nodeType !== Node.ELEMENT_NODE) {
-          // Don't move modal's DOM position
-          document.body.appendChild(this._element);
-        }
-
-        this._element.style.display = 'block';
-
-        this._element.removeAttribute('aria-hidden');
-
-        this._element.scrollTop = 0;
-
-        if (transition) {
-          Util.reflow(this._element);
-        }
-
-        $$$1(this._element).addClass(ClassName.SHOW);
-
-        if (this._config.focus) {
-          this._enforceFocus();
-        }
-
-        var shownEvent = $$$1.Event(Event.SHOWN, {
-          relatedTarget: relatedTarget
-        });
-
-        var transitionComplete = function transitionComplete() {
-          if (_this3._config.focus) {
-            _this3._element.focus();
-          }
-
-          _this3._isTransitioning = false;
-          $$$1(_this3._element).trigger(shownEvent);
-        };
-
-        if (transition) {
-          var transitionDuration = Util.getTransitionDurationFromElement(this._element);
-          $$$1(this._dialog).one(Util.TRANSITION_END, transitionComplete).emulateTransitionEnd(transitionDuration);
-        } else {
-          transitionComplete();
-        }
-      };
-
-      _proto._enforceFocus = function _enforceFocus() {
-        var _this4 = this;
-
-        $$$1(document).off(Event.FOCUSIN) // Guard against infinite focus loop
-        .on(Event.FOCUSIN, function (event) {
-          if (document !== event.target && _this4._element !== event.target && $$$1(_this4._element).has(event.target).length === 0) {
-            _this4._element.focus();
-          }
-        });
-      };
-
-      _proto._setEscapeEvent = function _setEscapeEvent() {
-        var _this5 = this;
-
-        if (this._isShown && this._config.keyboard) {
-          $$$1(this._element).on(Event.KEYDOWN_DISMISS, function (event) {
-            if (event.which === ESCAPE_KEYCODE) {
-              event.preventDefault();
-
-              _this5.hide();
-            }
-          });
-        } else if (!this._isShown) {
-          $$$1(this._element).off(Event.KEYDOWN_DISMISS);
-        }
-      };
-
-      _proto._setResizeEvent = function _setResizeEvent() {
-        var _this6 = this;
-
-        if (this._isShown) {
-          $$$1(window).on(Event.RESIZE, function (event) {
-            return _this6.handleUpdate(event);
-          });
-        } else {
-          $$$1(window).off(Event.RESIZE);
-        }
-      };
-
-      _proto._hideModal = function _hideModal() {
-        var _this7 = this;
-
-        this._element.style.display = 'none';
-
-        this._element.setAttribute('aria-hidden', true);
-
-        this._isTransitioning = false;
-
-        this._showBackdrop(function () {
-          $$$1(document.body).removeClass(ClassName.OPEN);
-
-          _this7._resetAdjustments();
-
-          _this7._resetScrollbar();
-
-          $$$1(_this7._element).trigger(Event.HIDDEN);
-        });
-      };
-
-      _proto._removeBackdrop = function _removeBackdrop() {
-        if (this._backdrop) {
-          $$$1(this._backdrop).remove();
-          this._backdrop = null;
-        }
-      };
-
-      _proto._showBackdrop = function _showBackdrop(callback) {
-        var _this8 = this;
-
-        var animate = $$$1(this._element).hasClass(ClassName.FADE) ? ClassName.FADE : '';
-
-        if (this._isShown && this._config.backdrop) {
-          this._backdrop = document.createElement('div');
-          this._backdrop.className = ClassName.BACKDROP;
-
-          if (animate) {
-            this._backdrop.classList.add(animate);
-          }
-
-          $$$1(this._backdrop).appendTo(document.body);
-          $$$1(this._element).on(Event.CLICK_DISMISS, function (event) {
-            if (_this8._ignoreBackdropClick) {
-              _this8._ignoreBackdropClick = false;
-              return;
-            }
-
-            if (event.target !== event.currentTarget) {
-              return;
-            }
-
-            if (_this8._config.backdrop === 'static') {
-              _this8._element.focus();
-            } else {
-              _this8.hide();
-            }
-          });
-
-          if (animate) {
-            Util.reflow(this._backdrop);
-          }
-
-          $$$1(this._backdrop).addClass(ClassName.SHOW);
-
-          if (!callback) {
-            return;
-          }
-
-          if (!animate) {
-            callback();
-            return;
-          }
-
-          var backdropTransitionDuration = Util.getTransitionDurationFromElement(this._backdrop);
-          $$$1(this._backdrop).one(Util.TRANSITION_END, callback).emulateTransitionEnd(backdropTransitionDuration);
-        } else if (!this._isShown && this._backdrop) {
-          $$$1(this._backdrop).removeClass(ClassName.SHOW);
-
-          var callbackRemove = function callbackRemove() {
-            _this8._removeBackdrop();
-
-            if (callback) {
-              callback();
-            }
-          };
-
-          if ($$$1(this._element).hasClass(ClassName.FADE)) {
-            var _backdropTransitionDuration = Util.getTransitionDurationFromElement(this._backdrop);
-
-            $$$1(this._backdrop).one(Util.TRANSITION_END, callbackRemove).emulateTransitionEnd(_backdropTransitionDuration);
-          } else {
-            callbackRemove();
-          }
-        } else if (callback) {
-          callback();
-        }
-      }; // ----------------------------------------------------------------------
-      // the following methods are used to handle overflowing modals
-      // todo (fat): these should probably be refactored out of modal.js
-      // ----------------------------------------------------------------------
-
-
-      _proto._adjustDialog = function _adjustDialog() {
-        var isModalOverflowing = this._element.scrollHeight > document.documentElement.clientHeight;
-
-        if (!this._isBodyOverflowing && isModalOverflowing) {
-          this._element.style.paddingLeft = this._scrollbarWidth + "px";
-        }
-
-        if (this._isBodyOverflowing && !isModalOverflowing) {
-          this._element.style.paddingRight = this._scrollbarWidth + "px";
-        }
-      };
-
-      _proto._resetAdjustments = function _resetAdjustments() {
-        this._element.style.paddingLeft = '';
-        this._element.style.paddingRight = '';
-      };
-
-      _proto._checkScrollbar = function _checkScrollbar() {
-        var rect = document.body.getBoundingClientRect();
-        this._isBodyOverflowing = rect.left + rect.right < window.innerWidth;
-        this._scrollbarWidth = this._getScrollbarWidth();
-      };
-
-      _proto._setScrollbar = function _setScrollbar() {
-        var _this9 = this;
-
-        if (this._isBodyOverflowing) {
-          // Note: DOMNode.style.paddingRight returns the actual value or '' if not set
-          //   while $(DOMNode).css('padding-right') returns the calculated value or 0 if not set
-          var fixedContent = [].slice.call(document.querySelectorAll(Selector.FIXED_CONTENT));
-          var stickyContent = [].slice.call(document.querySelectorAll(Selector.STICKY_CONTENT)); // Adjust fixed content padding
-
-          $$$1(fixedContent).each(function (index, element) {
-            var actualPadding = element.style.paddingRight;
-            var calculatedPadding = $$$1(element).css('padding-right');
-            $$$1(element).data('padding-right', actualPadding).css('padding-right', parseFloat(calculatedPadding) + _this9._scrollbarWidth + "px");
-          }); // Adjust sticky content margin
-
-          $$$1(stickyContent).each(function (index, element) {
-            var actualMargin = element.style.marginRight;
-            var calculatedMargin = $$$1(element).css('margin-right');
-            $$$1(element).data('margin-right', actualMargin).css('margin-right', parseFloat(calculatedMargin) - _this9._scrollbarWidth + "px");
-          }); // Adjust body padding
-
-          var actualPadding = document.body.style.paddingRight;
-          var calculatedPadding = $$$1(document.body).css('padding-right');
-          $$$1(document.body).data('padding-right', actualPadding).css('padding-right', parseFloat(calculatedPadding) + this._scrollbarWidth + "px");
-        }
-      };
-
-      _proto._resetScrollbar = function _resetScrollbar() {
-        // Restore fixed content padding
-        var fixedContent = [].slice.call(document.querySelectorAll(Selector.FIXED_CONTENT));
-        $$$1(fixedContent).each(function (index, element) {
-          var padding = $$$1(element).data('padding-right');
-          $$$1(element).removeData('padding-right');
-          element.style.paddingRight = padding ? padding : '';
-        }); // Restore sticky content
-
-        var elements = [].slice.call(document.querySelectorAll("" + Selector.STICKY_CONTENT));
-        $$$1(elements).each(function (index, element) {
-          var margin = $$$1(element).data('margin-right');
-
-          if (typeof margin !== 'undefined') {
-            $$$1(element).css('margin-right', margin).removeData('margin-right');
-          }
-        }); // Restore body padding
-
-        var padding = $$$1(document.body).data('padding-right');
-        $$$1(document.body).removeData('padding-right');
-        document.body.style.paddingRight = padding ? padding : '';
-      };
-
-      _proto._getScrollbarWidth = function _getScrollbarWidth() {
-        // thx d.walsh
-        var scrollDiv = document.createElement('div');
-        scrollDiv.className = ClassName.SCROLLBAR_MEASURER;
-        document.body.appendChild(scrollDiv);
-        var scrollbarWidth = scrollDiv.getBoundingClientRect().width - scrollDiv.clientWidth;
-        document.body.removeChild(scrollDiv);
-        return scrollbarWidth;
-      }; // Static
-
-
-      Modal._jQueryInterface = function _jQueryInterface(config, relatedTarget) {
-        return this.each(function () {
-          var data = $$$1(this).data(DATA_KEY);
-
-          var _config = _objectSpread({}, Default, $$$1(this).data(), typeof config === 'object' && config ? config : {});
-
-          if (!data) {
-            data = new Modal(this, _config);
-            $$$1(this).data(DATA_KEY, data);
-          }
-
-          if (typeof config === 'string') {
-            if (typeof data[config] === 'undefined') {
-              throw new TypeError("No method named \"" + config + "\"");
-            }
-
-            data[config](relatedTarget);
-          } else if (_config.show) {
-            data.show(relatedTarget);
-          }
-        });
-      };
-
-      _createClass(Modal, null, [{
-        key: "VERSION",
-        get: function get() {
-          return VERSION;
-        }
-      }, {
-        key: "Default",
-        get: function get() {
-          return Default;
-        }
-      }]);
-
-      return Modal;
-    }();
-    /**
-     * ------------------------------------------------------------------------
-     * Data Api implementation
-     * ------------------------------------------------------------------------
-     */
-
-
-    $$$1(document).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, function (event) {
-      var _this10 = this;
-
-      var target;
-      var selector = Util.getSelectorFromElement(this);
-
-      if (selector) {
-        target = document.querySelector(selector);
-      }
-
-      var config = $$$1(target).data(DATA_KEY) ? 'toggle' : _objectSpread({}, $$$1(target).data(), $$$1(this).data());
-
-      if (this.tagName === 'A' || this.tagName === 'AREA') {
-        event.preventDefault();
-      }
-
-      var $target = $$$1(target).one(Event.SHOW, function (showEvent) {
-        if (showEvent.isDefaultPrevented()) {
-          // Only register focus restorer if modal will actually get shown
-          return;
-        }
-
-        $target.one(Event.HIDDEN, function () {
-          if ($$$1(_this10).is(':visible')) {
-            _this10.focus();
-          }
-        });
-      });
-
-      Modal._jQueryInterface.call($$$1(target), config, this);
-    });
-    /**
-     * ------------------------------------------------------------------------
-     * jQuery
-     * ------------------------------------------------------------------------
-     */
-
-    $$$1.fn[NAME] = Modal._jQueryInterface;
-    $$$1.fn[NAME].Constructor = Modal;
-
-    $$$1.fn[NAME].noConflict = function () {
-      $$$1.fn[NAME] = JQUERY_NO_CONFLICT;
-      return Modal._jQueryInterface;
     };
 
-    return Modal;
-  }($);
-
+    _createClass(Alert, null, [{
+      key: "VERSION",
+      get: function get() {
+        return VERSION;
+      }
+    }]);
+    return Alert;
+  }();
   /**
-   * --------------------------------------------------------------------------
-   * Bootstrap (v4.1.3): tooltip.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-   * --------------------------------------------------------------------------
+   * ------------------------------------------------------------------------
+   * Data Api implementation
+   * ------------------------------------------------------------------------
    */
 
-  var Tooltip = function ($$$1) {
+
+  $$$1(document).on(Event.CLICK_DATA_API, Selector.DISMISS, Alert._handleDismiss(new Alert()));
+  /**
+   * ------------------------------------------------------------------------
+   * jQuery
+   * ------------------------------------------------------------------------
+   */
+
+  $$$1.fn[NAME] = Alert._jQueryInterface;
+  $$$1.fn[NAME].Constructor = Alert;
+
+  $$$1.fn[NAME].noConflict = function () {
+    $$$1.fn[NAME] = JQUERY_NO_CONFLICT;
+    return Alert._jQueryInterface;
+  };
+
+  return Alert;
+}($);
+
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap (v4.0.0): button.js
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
+var Button = function ($$$1) {
+  /**
+   * ------------------------------------------------------------------------
+   * Constants
+   * ------------------------------------------------------------------------
+   */
+  var NAME = 'button';
+  var VERSION = '4.0.0';
+  var DATA_KEY = 'bs.button';
+  var EVENT_KEY = "." + DATA_KEY;
+  var DATA_API_KEY = '.data-api';
+  var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
+  var ClassName = {
+    ACTIVE: 'active',
+    BUTTON: 'btn',
+    FOCUS: 'focus'
+  };
+  var Selector = {
+    DATA_TOGGLE_CARROT: '[data-toggle^="button"]',
+    DATA_TOGGLE: '[data-toggle="buttons"]',
+    INPUT: 'input',
+    ACTIVE: '.active',
+    BUTTON: '.btn'
+  };
+  var Event = {
+    CLICK_DATA_API: "click" + EVENT_KEY + DATA_API_KEY,
+    FOCUS_BLUR_DATA_API: "focus" + EVENT_KEY + DATA_API_KEY + " " + ("blur" + EVENT_KEY + DATA_API_KEY)
     /**
      * ------------------------------------------------------------------------
-     * Constants
+     * Class Definition
      * ------------------------------------------------------------------------
      */
-    var NAME = 'tooltip';
-    var VERSION = '4.1.3';
-    var DATA_KEY = 'bs.tooltip';
-    var EVENT_KEY = "." + DATA_KEY;
-    var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
-    var CLASS_PREFIX = 'bs-tooltip';
-    var BSCLS_PREFIX_REGEX = new RegExp("(^|\\s)" + CLASS_PREFIX + "\\S+", 'g');
-    var DefaultType = {
-      animation: 'boolean',
-      template: 'string',
-      title: '(string|element|function)',
-      trigger: 'string',
-      delay: '(number|object)',
-      html: 'boolean',
-      selector: '(string|boolean)',
-      placement: '(string|function)',
-      offset: '(number|string)',
-      container: '(string|element|boolean)',
-      fallbackPlacement: '(string|array)',
-      boundary: '(string|element)'
-    };
-    var AttachmentMap = {
-      AUTO: 'auto',
-      TOP: 'top',
-      RIGHT: 'right',
-      BOTTOM: 'bottom',
-      LEFT: 'left'
-    };
-    var Default = {
-      animation: true,
-      template: '<div class="tooltip" role="tooltip">' + '<div class="arrow"></div>' + '<div class="tooltip-inner"></div></div>',
-      trigger: 'hover focus',
-      title: '',
-      delay: 0,
-      html: false,
-      selector: false,
-      placement: 'top',
-      offset: 0,
-      container: false,
-      fallbackPlacement: 'flip',
-      boundary: 'scrollParent'
-    };
-    var HoverState = {
-      SHOW: 'show',
-      OUT: 'out'
-    };
-    var Event = {
-      HIDE: "hide" + EVENT_KEY,
-      HIDDEN: "hidden" + EVENT_KEY,
-      SHOW: "show" + EVENT_KEY,
-      SHOWN: "shown" + EVENT_KEY,
-      INSERTED: "inserted" + EVENT_KEY,
-      CLICK: "click" + EVENT_KEY,
-      FOCUSIN: "focusin" + EVENT_KEY,
-      FOCUSOUT: "focusout" + EVENT_KEY,
-      MOUSEENTER: "mouseenter" + EVENT_KEY,
-      MOUSELEAVE: "mouseleave" + EVENT_KEY
-    };
-    var ClassName = {
-      FADE: 'fade',
-      SHOW: 'show'
-    };
-    var Selector = {
-      TOOLTIP: '.tooltip',
-      TOOLTIP_INNER: '.tooltip-inner',
-      ARROW: '.arrow'
-    };
-    var Trigger = {
-      HOVER: 'hover',
-      FOCUS: 'focus',
-      CLICK: 'click',
-      MANUAL: 'manual'
-      /**
-       * ------------------------------------------------------------------------
-       * Class Definition
-       * ------------------------------------------------------------------------
-       */
 
+  };
+
+  var Button =
+  /*#__PURE__*/
+  function () {
+    function Button(element) {
+      this._element = element;
+    } // Getters
+
+
+    var _proto = Button.prototype;
+
+    // Public
+    _proto.toggle = function toggle() {
+      var triggerChangeEvent = true;
+      var addAriaPressed = true;
+      var rootElement = $$$1(this._element).closest(Selector.DATA_TOGGLE)[0];
+
+      if (rootElement) {
+        var input = $$$1(this._element).find(Selector.INPUT)[0];
+
+        if (input) {
+          if (input.type === 'radio') {
+            if (input.checked && $$$1(this._element).hasClass(ClassName.ACTIVE)) {
+              triggerChangeEvent = false;
+            } else {
+              var activeElement = $$$1(rootElement).find(Selector.ACTIVE)[0];
+
+              if (activeElement) {
+                $$$1(activeElement).removeClass(ClassName.ACTIVE);
+              }
+            }
+          }
+
+          if (triggerChangeEvent) {
+            if (input.hasAttribute('disabled') || rootElement.hasAttribute('disabled') || input.classList.contains('disabled') || rootElement.classList.contains('disabled')) {
+              return;
+            }
+
+            input.checked = !$$$1(this._element).hasClass(ClassName.ACTIVE);
+            $$$1(input).trigger('change');
+          }
+
+          input.focus();
+          addAriaPressed = false;
+        }
+      }
+
+      if (addAriaPressed) {
+        this._element.setAttribute('aria-pressed', !$$$1(this._element).hasClass(ClassName.ACTIVE));
+      }
+
+      if (triggerChangeEvent) {
+        $$$1(this._element).toggleClass(ClassName.ACTIVE);
+      }
     };
 
-    var Tooltip =
-    /*#__PURE__*/
-    function () {
-      function Tooltip(element, config) {
+    _proto.dispose = function dispose() {
+      $$$1.removeData(this._element, DATA_KEY);
+      this._element = null;
+    }; // Static
+
+
+    Button._jQueryInterface = function _jQueryInterface(config) {
+      return this.each(function () {
+        var data = $$$1(this).data(DATA_KEY);
+
+        if (!data) {
+          data = new Button(this);
+          $$$1(this).data(DATA_KEY, data);
+        }
+
+        if (config === 'toggle') {
+          data[config]();
+        }
+      });
+    };
+
+    _createClass(Button, null, [{
+      key: "VERSION",
+      get: function get() {
+        return VERSION;
+      }
+    }]);
+    return Button;
+  }();
+  /**
+   * ------------------------------------------------------------------------
+   * Data Api implementation
+   * ------------------------------------------------------------------------
+   */
+
+
+  $$$1(document).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE_CARROT, function (event) {
+    event.preventDefault();
+    var button = event.target;
+
+    if (!$$$1(button).hasClass(ClassName.BUTTON)) {
+      button = $$$1(button).closest(Selector.BUTTON);
+    }
+
+    Button._jQueryInterface.call($$$1(button), 'toggle');
+  }).on(Event.FOCUS_BLUR_DATA_API, Selector.DATA_TOGGLE_CARROT, function (event) {
+    var button = $$$1(event.target).closest(Selector.BUTTON)[0];
+    $$$1(button).toggleClass(ClassName.FOCUS, /^focus(in)?$/.test(event.type));
+  });
+  /**
+   * ------------------------------------------------------------------------
+   * jQuery
+   * ------------------------------------------------------------------------
+   */
+
+  $$$1.fn[NAME] = Button._jQueryInterface;
+  $$$1.fn[NAME].Constructor = Button;
+
+  $$$1.fn[NAME].noConflict = function () {
+    $$$1.fn[NAME] = JQUERY_NO_CONFLICT;
+    return Button._jQueryInterface;
+  };
+
+  return Button;
+}($);
+
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap (v4.0.0): carousel.js
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
+var Carousel = function ($$$1) {
+  /**
+   * ------------------------------------------------------------------------
+   * Constants
+   * ------------------------------------------------------------------------
+   */
+  var NAME = 'carousel';
+  var VERSION = '4.0.0';
+  var DATA_KEY = 'bs.carousel';
+  var EVENT_KEY = "." + DATA_KEY;
+  var DATA_API_KEY = '.data-api';
+  var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
+  var TRANSITION_DURATION = 600;
+  var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
+
+  var ARROW_RIGHT_KEYCODE = 39; // KeyboardEvent.which value for right arrow key
+
+  var TOUCHEVENT_COMPAT_WAIT = 500; // Time for mouse compat events to fire after touch
+
+  var Default = {
+    interval: 5000,
+    keyboard: true,
+    slide: false,
+    pause: 'hover',
+    wrap: true
+  };
+  var DefaultType = {
+    interval: '(number|boolean)',
+    keyboard: 'boolean',
+    slide: '(boolean|string)',
+    pause: '(string|boolean)',
+    wrap: 'boolean'
+  };
+  var Direction = {
+    NEXT: 'next',
+    PREV: 'prev',
+    LEFT: 'left',
+    RIGHT: 'right'
+  };
+  var Event = {
+    SLIDE: "slide" + EVENT_KEY,
+    SLID: "slid" + EVENT_KEY,
+    KEYDOWN: "keydown" + EVENT_KEY,
+    MOUSEENTER: "mouseenter" + EVENT_KEY,
+    MOUSELEAVE: "mouseleave" + EVENT_KEY,
+    TOUCHEND: "touchend" + EVENT_KEY,
+    LOAD_DATA_API: "load" + EVENT_KEY + DATA_API_KEY,
+    CLICK_DATA_API: "click" + EVENT_KEY + DATA_API_KEY
+  };
+  var ClassName = {
+    CAROUSEL: 'carousel',
+    ACTIVE: 'active',
+    SLIDE: 'slide',
+    RIGHT: 'carousel-item-right',
+    LEFT: 'carousel-item-left',
+    NEXT: 'carousel-item-next',
+    PREV: 'carousel-item-prev',
+    ITEM: 'carousel-item'
+  };
+  var Selector = {
+    ACTIVE: '.active',
+    ACTIVE_ITEM: '.active.carousel-item',
+    ITEM: '.carousel-item',
+    NEXT_PREV: '.carousel-item-next, .carousel-item-prev',
+    INDICATORS: '.carousel-indicators',
+    DATA_SLIDE: '[data-slide], [data-slide-to]',
+    DATA_RIDE: '[data-ride="carousel"]'
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
+  };
+
+  var Carousel =
+  /*#__PURE__*/
+  function () {
+    function Carousel(element, config) {
+      this._items = null;
+      this._interval = null;
+      this._activeElement = null;
+      this._isPaused = false;
+      this._isSliding = false;
+      this.touchTimeout = null;
+      this._config = this._getConfig(config);
+      this._element = $$$1(element)[0];
+      this._indicatorsElement = $$$1(this._element).find(Selector.INDICATORS)[0];
+
+      this._addEventListeners();
+    } // Getters
+
+
+    var _proto = Carousel.prototype;
+
+    // Public
+    _proto.next = function next() {
+      if (!this._isSliding) {
+        this._slide(Direction.NEXT);
+      }
+    };
+
+    _proto.nextWhenVisible = function nextWhenVisible() {
+      // Don't call next when the page isn't visible
+      // or the carousel or its parent isn't visible
+      if (!document.hidden && $$$1(this._element).is(':visible') && $$$1(this._element).css('visibility') !== 'hidden') {
+        this.next();
+      }
+    };
+
+    _proto.prev = function prev() {
+      if (!this._isSliding) {
+        this._slide(Direction.PREV);
+      }
+    };
+
+    _proto.pause = function pause(event) {
+      if (!event) {
+        this._isPaused = true;
+      }
+
+      if ($$$1(this._element).find(Selector.NEXT_PREV)[0] && Util.supportsTransitionEnd()) {
+        Util.triggerTransitionEnd(this._element);
+        this.cycle(true);
+      }
+
+      clearInterval(this._interval);
+      this._interval = null;
+    };
+
+    _proto.cycle = function cycle(event) {
+      if (!event) {
+        this._isPaused = false;
+      }
+
+      if (this._interval) {
+        clearInterval(this._interval);
+        this._interval = null;
+      }
+
+      if (this._config.interval && !this._isPaused) {
+        this._interval = setInterval((document.visibilityState ? this.nextWhenVisible : this.next).bind(this), this._config.interval);
+      }
+    };
+
+    _proto.to = function to(index) {
+      var _this = this;
+
+      this._activeElement = $$$1(this._element).find(Selector.ACTIVE_ITEM)[0];
+
+      var activeIndex = this._getItemIndex(this._activeElement);
+
+      if (index > this._items.length - 1 || index < 0) {
+        return;
+      }
+
+      if (this._isSliding) {
+        $$$1(this._element).one(Event.SLID, function () {
+          return _this.to(index);
+        });
+        return;
+      }
+
+      if (activeIndex === index) {
+        this.pause();
+        this.cycle();
+        return;
+      }
+
+      var direction = index > activeIndex ? Direction.NEXT : Direction.PREV;
+
+      this._slide(direction, this._items[index]);
+    };
+
+    _proto.dispose = function dispose() {
+      $$$1(this._element).off(EVENT_KEY);
+      $$$1.removeData(this._element, DATA_KEY);
+      this._items = null;
+      this._config = null;
+      this._element = null;
+      this._interval = null;
+      this._isPaused = null;
+      this._isSliding = null;
+      this._activeElement = null;
+      this._indicatorsElement = null;
+    }; // Private
+
+
+    _proto._getConfig = function _getConfig(config) {
+      config = _extends({}, Default, config);
+      Util.typeCheckConfig(NAME, config, DefaultType);
+      return config;
+    };
+
+    _proto._addEventListeners = function _addEventListeners() {
+      var _this2 = this;
+
+      if (this._config.keyboard) {
+        $$$1(this._element).on(Event.KEYDOWN, function (event) {
+          return _this2._keydown(event);
+        });
+      }
+
+      if (this._config.pause === 'hover') {
+        $$$1(this._element).on(Event.MOUSEENTER, function (event) {
+          return _this2.pause(event);
+        }).on(Event.MOUSELEAVE, function (event) {
+          return _this2.cycle(event);
+        });
+
+        if ('ontouchstart' in document.documentElement) {
+          // If it's a touch-enabled device, mouseenter/leave are fired as
+          // part of the mouse compatibility events on first tap - the carousel
+          // would stop cycling until user tapped out of it;
+          // here, we listen for touchend, explicitly pause the carousel
+          // (as if it's the second time we tap on it, mouseenter compat event
+          // is NOT fired) and after a timeout (to allow for mouse compatibility
+          // events to fire) we explicitly restart cycling
+          $$$1(this._element).on(Event.TOUCHEND, function () {
+            _this2.pause();
+
+            if (_this2.touchTimeout) {
+              clearTimeout(_this2.touchTimeout);
+            }
+
+            _this2.touchTimeout = setTimeout(function (event) {
+              return _this2.cycle(event);
+            }, TOUCHEVENT_COMPAT_WAIT + _this2._config.interval);
+          });
+        }
+      }
+    };
+
+    _proto._keydown = function _keydown(event) {
+      if (/input|textarea/i.test(event.target.tagName)) {
+        return;
+      }
+
+      switch (event.which) {
+        case ARROW_LEFT_KEYCODE:
+          event.preventDefault();
+          this.prev();
+          break;
+
+        case ARROW_RIGHT_KEYCODE:
+          event.preventDefault();
+          this.next();
+          break;
+
+        default:
+      }
+    };
+
+    _proto._getItemIndex = function _getItemIndex(element) {
+      this._items = $$$1.makeArray($$$1(element).parent().find(Selector.ITEM));
+      return this._items.indexOf(element);
+    };
+
+    _proto._getItemByDirection = function _getItemByDirection(direction, activeElement) {
+      var isNextDirection = direction === Direction.NEXT;
+      var isPrevDirection = direction === Direction.PREV;
+
+      var activeIndex = this._getItemIndex(activeElement);
+
+      var lastItemIndex = this._items.length - 1;
+      var isGoingToWrap = isPrevDirection && activeIndex === 0 || isNextDirection && activeIndex === lastItemIndex;
+
+      if (isGoingToWrap && !this._config.wrap) {
+        return activeElement;
+      }
+
+      var delta = direction === Direction.PREV ? -1 : 1;
+      var itemIndex = (activeIndex + delta) % this._items.length;
+      return itemIndex === -1 ? this._items[this._items.length - 1] : this._items[itemIndex];
+    };
+
+    _proto._triggerSlideEvent = function _triggerSlideEvent(relatedTarget, eventDirectionName) {
+      var targetIndex = this._getItemIndex(relatedTarget);
+
+      var fromIndex = this._getItemIndex($$$1(this._element).find(Selector.ACTIVE_ITEM)[0]);
+
+      var slideEvent = $$$1.Event(Event.SLIDE, {
+        relatedTarget: relatedTarget,
+        direction: eventDirectionName,
+        from: fromIndex,
+        to: targetIndex
+      });
+      $$$1(this._element).trigger(slideEvent);
+      return slideEvent;
+    };
+
+    _proto._setActiveIndicatorElement = function _setActiveIndicatorElement(element) {
+      if (this._indicatorsElement) {
+        $$$1(this._indicatorsElement).find(Selector.ACTIVE).removeClass(ClassName.ACTIVE);
+
+        var nextIndicator = this._indicatorsElement.children[this._getItemIndex(element)];
+
+        if (nextIndicator) {
+          $$$1(nextIndicator).addClass(ClassName.ACTIVE);
+        }
+      }
+    };
+
+    _proto._slide = function _slide(direction, element) {
+      var _this3 = this;
+
+      var activeElement = $$$1(this._element).find(Selector.ACTIVE_ITEM)[0];
+
+      var activeElementIndex = this._getItemIndex(activeElement);
+
+      var nextElement = element || activeElement && this._getItemByDirection(direction, activeElement);
+
+      var nextElementIndex = this._getItemIndex(nextElement);
+
+      var isCycling = Boolean(this._interval);
+      var directionalClassName;
+      var orderClassName;
+      var eventDirectionName;
+
+      if (direction === Direction.NEXT) {
+        directionalClassName = ClassName.LEFT;
+        orderClassName = ClassName.NEXT;
+        eventDirectionName = Direction.LEFT;
+      } else {
+        directionalClassName = ClassName.RIGHT;
+        orderClassName = ClassName.PREV;
+        eventDirectionName = Direction.RIGHT;
+      }
+
+      if (nextElement && $$$1(nextElement).hasClass(ClassName.ACTIVE)) {
+        this._isSliding = false;
+        return;
+      }
+
+      var slideEvent = this._triggerSlideEvent(nextElement, eventDirectionName);
+
+      if (slideEvent.isDefaultPrevented()) {
+        return;
+      }
+
+      if (!activeElement || !nextElement) {
+        // Some weirdness is happening, so we bail
+        return;
+      }
+
+      this._isSliding = true;
+
+      if (isCycling) {
+        this.pause();
+      }
+
+      this._setActiveIndicatorElement(nextElement);
+
+      var slidEvent = $$$1.Event(Event.SLID, {
+        relatedTarget: nextElement,
+        direction: eventDirectionName,
+        from: activeElementIndex,
+        to: nextElementIndex
+      });
+
+      if (Util.supportsTransitionEnd() && $$$1(this._element).hasClass(ClassName.SLIDE)) {
+        $$$1(nextElement).addClass(orderClassName);
+        Util.reflow(nextElement);
+        $$$1(activeElement).addClass(directionalClassName);
+        $$$1(nextElement).addClass(directionalClassName);
+        $$$1(activeElement).one(Util.TRANSITION_END, function () {
+          $$$1(nextElement).removeClass(directionalClassName + " " + orderClassName).addClass(ClassName.ACTIVE);
+          $$$1(activeElement).removeClass(ClassName.ACTIVE + " " + orderClassName + " " + directionalClassName);
+          _this3._isSliding = false;
+          setTimeout(function () {
+            return $$$1(_this3._element).trigger(slidEvent);
+          }, 0);
+        }).emulateTransitionEnd(TRANSITION_DURATION);
+      } else {
+        $$$1(activeElement).removeClass(ClassName.ACTIVE);
+        $$$1(nextElement).addClass(ClassName.ACTIVE);
+        this._isSliding = false;
+        $$$1(this._element).trigger(slidEvent);
+      }
+
+      if (isCycling) {
+        this.cycle();
+      }
+    }; // Static
+
+
+    Carousel._jQueryInterface = function _jQueryInterface(config) {
+      return this.each(function () {
+        var data = $$$1(this).data(DATA_KEY);
+
+        var _config = _extends({}, Default, $$$1(this).data());
+
+        if (typeof config === 'object') {
+          _config = _extends({}, _config, config);
+        }
+
+        var action = typeof config === 'string' ? config : _config.slide;
+
+        if (!data) {
+          data = new Carousel(this, _config);
+          $$$1(this).data(DATA_KEY, data);
+        }
+
+        if (typeof config === 'number') {
+          data.to(config);
+        } else if (typeof action === 'string') {
+          if (typeof data[action] === 'undefined') {
+            throw new TypeError("No method named \"" + action + "\"");
+          }
+
+          data[action]();
+        } else if (_config.interval) {
+          data.pause();
+          data.cycle();
+        }
+      });
+    };
+
+    Carousel._dataApiClickHandler = function _dataApiClickHandler(event) {
+      var selector = Util.getSelectorFromElement(this);
+
+      if (!selector) {
+        return;
+      }
+
+      var target = $$$1(selector)[0];
+
+      if (!target || !$$$1(target).hasClass(ClassName.CAROUSEL)) {
+        return;
+      }
+
+      var config = _extends({}, $$$1(target).data(), $$$1(this).data());
+      var slideIndex = this.getAttribute('data-slide-to');
+
+      if (slideIndex) {
+        config.interval = false;
+      }
+
+      Carousel._jQueryInterface.call($$$1(target), config);
+
+      if (slideIndex) {
+        $$$1(target).data(DATA_KEY).to(slideIndex);
+      }
+
+      event.preventDefault();
+    };
+
+    _createClass(Carousel, null, [{
+      key: "VERSION",
+      get: function get() {
+        return VERSION;
+      }
+    }, {
+      key: "Default",
+      get: function get() {
+        return Default;
+      }
+    }]);
+    return Carousel;
+  }();
+  /**
+   * ------------------------------------------------------------------------
+   * Data Api implementation
+   * ------------------------------------------------------------------------
+   */
+
+
+  $$$1(document).on(Event.CLICK_DATA_API, Selector.DATA_SLIDE, Carousel._dataApiClickHandler);
+  $$$1(window).on(Event.LOAD_DATA_API, function () {
+    $$$1(Selector.DATA_RIDE).each(function () {
+      var $carousel = $$$1(this);
+
+      Carousel._jQueryInterface.call($carousel, $carousel.data());
+    });
+  });
+  /**
+   * ------------------------------------------------------------------------
+   * jQuery
+   * ------------------------------------------------------------------------
+   */
+
+  $$$1.fn[NAME] = Carousel._jQueryInterface;
+  $$$1.fn[NAME].Constructor = Carousel;
+
+  $$$1.fn[NAME].noConflict = function () {
+    $$$1.fn[NAME] = JQUERY_NO_CONFLICT;
+    return Carousel._jQueryInterface;
+  };
+
+  return Carousel;
+}($);
+
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap (v4.0.0): collapse.js
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
+var Collapse = function ($$$1) {
+  /**
+   * ------------------------------------------------------------------------
+   * Constants
+   * ------------------------------------------------------------------------
+   */
+  var NAME = 'collapse';
+  var VERSION = '4.0.0';
+  var DATA_KEY = 'bs.collapse';
+  var EVENT_KEY = "." + DATA_KEY;
+  var DATA_API_KEY = '.data-api';
+  var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
+  var TRANSITION_DURATION = 600;
+  var Default = {
+    toggle: true,
+    parent: ''
+  };
+  var DefaultType = {
+    toggle: 'boolean',
+    parent: '(string|element)'
+  };
+  var Event = {
+    SHOW: "show" + EVENT_KEY,
+    SHOWN: "shown" + EVENT_KEY,
+    HIDE: "hide" + EVENT_KEY,
+    HIDDEN: "hidden" + EVENT_KEY,
+    CLICK_DATA_API: "click" + EVENT_KEY + DATA_API_KEY
+  };
+  var ClassName = {
+    SHOW: 'show',
+    COLLAPSE: 'collapse',
+    COLLAPSING: 'collapsing',
+    COLLAPSED: 'collapsed'
+  };
+  var Dimension = {
+    WIDTH: 'width',
+    HEIGHT: 'height'
+  };
+  var Selector = {
+    ACTIVES: '.show, .collapsing',
+    DATA_TOGGLE: '[data-toggle="collapse"]'
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
+  };
+
+  var Collapse =
+  /*#__PURE__*/
+  function () {
+    function Collapse(element, config) {
+      this._isTransitioning = false;
+      this._element = element;
+      this._config = this._getConfig(config);
+      this._triggerArray = $$$1.makeArray($$$1("[data-toggle=\"collapse\"][href=\"#" + element.id + "\"]," + ("[data-toggle=\"collapse\"][data-target=\"#" + element.id + "\"]")));
+      var tabToggles = $$$1(Selector.DATA_TOGGLE);
+
+      for (var i = 0; i < tabToggles.length; i++) {
+        var elem = tabToggles[i];
+        var selector = Util.getSelectorFromElement(elem);
+
+        if (selector !== null && $$$1(selector).filter(element).length > 0) {
+          this._selector = selector;
+
+          this._triggerArray.push(elem);
+        }
+      }
+
+      this._parent = this._config.parent ? this._getParent() : null;
+
+      if (!this._config.parent) {
+        this._addAriaAndCollapsedClass(this._element, this._triggerArray);
+      }
+
+      if (this._config.toggle) {
+        this.toggle();
+      }
+    } // Getters
+
+
+    var _proto = Collapse.prototype;
+
+    // Public
+    _proto.toggle = function toggle() {
+      if ($$$1(this._element).hasClass(ClassName.SHOW)) {
+        this.hide();
+      } else {
+        this.show();
+      }
+    };
+
+    _proto.show = function show() {
+      var _this = this;
+
+      if (this._isTransitioning || $$$1(this._element).hasClass(ClassName.SHOW)) {
+        return;
+      }
+
+      var actives;
+      var activesData;
+
+      if (this._parent) {
+        actives = $$$1.makeArray($$$1(this._parent).find(Selector.ACTIVES).filter("[data-parent=\"" + this._config.parent + "\"]"));
+
+        if (actives.length === 0) {
+          actives = null;
+        }
+      }
+
+      if (actives) {
+        activesData = $$$1(actives).not(this._selector).data(DATA_KEY);
+
+        if (activesData && activesData._isTransitioning) {
+          return;
+        }
+      }
+
+      var startEvent = $$$1.Event(Event.SHOW);
+      $$$1(this._element).trigger(startEvent);
+
+      if (startEvent.isDefaultPrevented()) {
+        return;
+      }
+
+      if (actives) {
+        Collapse._jQueryInterface.call($$$1(actives).not(this._selector), 'hide');
+
+        if (!activesData) {
+          $$$1(actives).data(DATA_KEY, null);
+        }
+      }
+
+      var dimension = this._getDimension();
+
+      $$$1(this._element).removeClass(ClassName.COLLAPSE).addClass(ClassName.COLLAPSING);
+      this._element.style[dimension] = 0;
+
+      if (this._triggerArray.length > 0) {
+        $$$1(this._triggerArray).removeClass(ClassName.COLLAPSED).attr('aria-expanded', true);
+      }
+
+      this.setTransitioning(true);
+
+      var complete = function complete() {
+        $$$1(_this._element).removeClass(ClassName.COLLAPSING).addClass(ClassName.COLLAPSE).addClass(ClassName.SHOW);
+        _this._element.style[dimension] = '';
+
+        _this.setTransitioning(false);
+
+        $$$1(_this._element).trigger(Event.SHOWN);
+      };
+
+      if (!Util.supportsTransitionEnd()) {
+        complete();
+        return;
+      }
+
+      var capitalizedDimension = dimension[0].toUpperCase() + dimension.slice(1);
+      var scrollSize = "scroll" + capitalizedDimension;
+      $$$1(this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(TRANSITION_DURATION);
+      this._element.style[dimension] = this._element[scrollSize] + "px";
+    };
+
+    _proto.hide = function hide() {
+      var _this2 = this;
+
+      if (this._isTransitioning || !$$$1(this._element).hasClass(ClassName.SHOW)) {
+        return;
+      }
+
+      var startEvent = $$$1.Event(Event.HIDE);
+      $$$1(this._element).trigger(startEvent);
+
+      if (startEvent.isDefaultPrevented()) {
+        return;
+      }
+
+      var dimension = this._getDimension();
+
+      this._element.style[dimension] = this._element.getBoundingClientRect()[dimension] + "px";
+      Util.reflow(this._element);
+      $$$1(this._element).addClass(ClassName.COLLAPSING).removeClass(ClassName.COLLAPSE).removeClass(ClassName.SHOW);
+
+      if (this._triggerArray.length > 0) {
+        for (var i = 0; i < this._triggerArray.length; i++) {
+          var trigger = this._triggerArray[i];
+          var selector = Util.getSelectorFromElement(trigger);
+
+          if (selector !== null) {
+            var $elem = $$$1(selector);
+
+            if (!$elem.hasClass(ClassName.SHOW)) {
+              $$$1(trigger).addClass(ClassName.COLLAPSED).attr('aria-expanded', false);
+            }
+          }
+        }
+      }
+
+      this.setTransitioning(true);
+
+      var complete = function complete() {
+        _this2.setTransitioning(false);
+
+        $$$1(_this2._element).removeClass(ClassName.COLLAPSING).addClass(ClassName.COLLAPSE).trigger(Event.HIDDEN);
+      };
+
+      this._element.style[dimension] = '';
+
+      if (!Util.supportsTransitionEnd()) {
+        complete();
+        return;
+      }
+
+      $$$1(this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(TRANSITION_DURATION);
+    };
+
+    _proto.setTransitioning = function setTransitioning(isTransitioning) {
+      this._isTransitioning = isTransitioning;
+    };
+
+    _proto.dispose = function dispose() {
+      $$$1.removeData(this._element, DATA_KEY);
+      this._config = null;
+      this._parent = null;
+      this._element = null;
+      this._triggerArray = null;
+      this._isTransitioning = null;
+    }; // Private
+
+
+    _proto._getConfig = function _getConfig(config) {
+      config = _extends({}, Default, config);
+      config.toggle = Boolean(config.toggle); // Coerce string values
+
+      Util.typeCheckConfig(NAME, config, DefaultType);
+      return config;
+    };
+
+    _proto._getDimension = function _getDimension() {
+      var hasWidth = $$$1(this._element).hasClass(Dimension.WIDTH);
+      return hasWidth ? Dimension.WIDTH : Dimension.HEIGHT;
+    };
+
+    _proto._getParent = function _getParent() {
+      var _this3 = this;
+
+      var parent = null;
+
+      if (Util.isElement(this._config.parent)) {
+        parent = this._config.parent; // It's a jQuery object
+
+        if (typeof this._config.parent.jquery !== 'undefined') {
+          parent = this._config.parent[0];
+        }
+      } else {
+        parent = $$$1(this._config.parent)[0];
+      }
+
+      var selector = "[data-toggle=\"collapse\"][data-parent=\"" + this._config.parent + "\"]";
+      $$$1(parent).find(selector).each(function (i, element) {
+        _this3._addAriaAndCollapsedClass(Collapse._getTargetFromElement(element), [element]);
+      });
+      return parent;
+    };
+
+    _proto._addAriaAndCollapsedClass = function _addAriaAndCollapsedClass(element, triggerArray) {
+      if (element) {
+        var isOpen = $$$1(element).hasClass(ClassName.SHOW);
+
+        if (triggerArray.length > 0) {
+          $$$1(triggerArray).toggleClass(ClassName.COLLAPSED, !isOpen).attr('aria-expanded', isOpen);
+        }
+      }
+    }; // Static
+
+
+    Collapse._getTargetFromElement = function _getTargetFromElement(element) {
+      var selector = Util.getSelectorFromElement(element);
+      return selector ? $$$1(selector)[0] : null;
+    };
+
+    Collapse._jQueryInterface = function _jQueryInterface(config) {
+      return this.each(function () {
+        var $this = $$$1(this);
+        var data = $this.data(DATA_KEY);
+
+        var _config = _extends({}, Default, $this.data(), typeof config === 'object' && config);
+
+        if (!data && _config.toggle && /show|hide/.test(config)) {
+          _config.toggle = false;
+        }
+
+        if (!data) {
+          data = new Collapse(this, _config);
+          $this.data(DATA_KEY, data);
+        }
+
+        if (typeof config === 'string') {
+          if (typeof data[config] === 'undefined') {
+            throw new TypeError("No method named \"" + config + "\"");
+          }
+
+          data[config]();
+        }
+      });
+    };
+
+    _createClass(Collapse, null, [{
+      key: "VERSION",
+      get: function get() {
+        return VERSION;
+      }
+    }, {
+      key: "Default",
+      get: function get() {
+        return Default;
+      }
+    }]);
+    return Collapse;
+  }();
+  /**
+   * ------------------------------------------------------------------------
+   * Data Api implementation
+   * ------------------------------------------------------------------------
+   */
+
+
+  $$$1(document).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, function (event) {
+    // preventDefault only for <a> elements (which change the URL) not inside the collapsible element
+    if (event.currentTarget.tagName === 'A') {
+      event.preventDefault();
+    }
+
+    var $trigger = $$$1(this);
+    var selector = Util.getSelectorFromElement(this);
+    $$$1(selector).each(function () {
+      var $target = $$$1(this);
+      var data = $target.data(DATA_KEY);
+      var config = data ? 'toggle' : $trigger.data();
+
+      Collapse._jQueryInterface.call($target, config);
+    });
+  });
+  /**
+   * ------------------------------------------------------------------------
+   * jQuery
+   * ------------------------------------------------------------------------
+   */
+
+  $$$1.fn[NAME] = Collapse._jQueryInterface;
+  $$$1.fn[NAME].Constructor = Collapse;
+
+  $$$1.fn[NAME].noConflict = function () {
+    $$$1.fn[NAME] = JQUERY_NO_CONFLICT;
+    return Collapse._jQueryInterface;
+  };
+
+  return Collapse;
+}($);
+
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap (v4.0.0): dropdown.js
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
+var Dropdown = function ($$$1) {
+  /**
+   * ------------------------------------------------------------------------
+   * Constants
+   * ------------------------------------------------------------------------
+   */
+  var NAME = 'dropdown';
+  var VERSION = '4.0.0';
+  var DATA_KEY = 'bs.dropdown';
+  var EVENT_KEY = "." + DATA_KEY;
+  var DATA_API_KEY = '.data-api';
+  var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
+  var ESCAPE_KEYCODE = 27; // KeyboardEvent.which value for Escape (Esc) key
+
+  var SPACE_KEYCODE = 32; // KeyboardEvent.which value for space key
+
+  var TAB_KEYCODE = 9; // KeyboardEvent.which value for tab key
+
+  var ARROW_UP_KEYCODE = 38; // KeyboardEvent.which value for up arrow key
+
+  var ARROW_DOWN_KEYCODE = 40; // KeyboardEvent.which value for down arrow key
+
+  var RIGHT_MOUSE_BUTTON_WHICH = 3; // MouseEvent.which value for the right button (assuming a right-handed mouse)
+
+  var REGEXP_KEYDOWN = new RegExp(ARROW_UP_KEYCODE + "|" + ARROW_DOWN_KEYCODE + "|" + ESCAPE_KEYCODE);
+  var Event = {
+    HIDE: "hide" + EVENT_KEY,
+    HIDDEN: "hidden" + EVENT_KEY,
+    SHOW: "show" + EVENT_KEY,
+    SHOWN: "shown" + EVENT_KEY,
+    CLICK: "click" + EVENT_KEY,
+    CLICK_DATA_API: "click" + EVENT_KEY + DATA_API_KEY,
+    KEYDOWN_DATA_API: "keydown" + EVENT_KEY + DATA_API_KEY,
+    KEYUP_DATA_API: "keyup" + EVENT_KEY + DATA_API_KEY
+  };
+  var ClassName = {
+    DISABLED: 'disabled',
+    SHOW: 'show',
+    DROPUP: 'dropup',
+    DROPRIGHT: 'dropright',
+    DROPLEFT: 'dropleft',
+    MENURIGHT: 'dropdown-menu-right',
+    MENULEFT: 'dropdown-menu-left',
+    POSITION_STATIC: 'position-static'
+  };
+  var Selector = {
+    DATA_TOGGLE: '[data-toggle="dropdown"]',
+    FORM_CHILD: '.dropdown form',
+    MENU: '.dropdown-menu',
+    NAVBAR_NAV: '.navbar-nav',
+    VISIBLE_ITEMS: '.dropdown-menu .dropdown-item:not(.disabled)'
+  };
+  var AttachmentMap = {
+    TOP: 'top-start',
+    TOPEND: 'top-end',
+    BOTTOM: 'bottom-start',
+    BOTTOMEND: 'bottom-end',
+    RIGHT: 'right-start',
+    RIGHTEND: 'right-end',
+    LEFT: 'left-start',
+    LEFTEND: 'left-end'
+  };
+  var Default = {
+    offset: 0,
+    flip: true,
+    boundary: 'scrollParent'
+  };
+  var DefaultType = {
+    offset: '(number|string|function)',
+    flip: 'boolean',
+    boundary: '(string|element)'
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
+  };
+
+  var Dropdown =
+  /*#__PURE__*/
+  function () {
+    function Dropdown(element, config) {
+      this._element = element;
+      this._popper = null;
+      this._config = this._getConfig(config);
+      this._menu = this._getMenuElement();
+      this._inNavbar = this._detectNavbar();
+
+      this._addEventListeners();
+    } // Getters
+
+
+    var _proto = Dropdown.prototype;
+
+    // Public
+    _proto.toggle = function toggle() {
+      if (this._element.disabled || $$$1(this._element).hasClass(ClassName.DISABLED)) {
+        return;
+      }
+
+      var parent = Dropdown._getParentFromElement(this._element);
+
+      var isActive = $$$1(this._menu).hasClass(ClassName.SHOW);
+
+      Dropdown._clearMenus();
+
+      if (isActive) {
+        return;
+      }
+
+      var relatedTarget = {
+        relatedTarget: this._element
+      };
+      var showEvent = $$$1.Event(Event.SHOW, relatedTarget);
+      $$$1(parent).trigger(showEvent);
+
+      if (showEvent.isDefaultPrevented()) {
+        return;
+      } // Disable totally Popper.js for Dropdown in Navbar
+
+
+      if (!this._inNavbar) {
         /**
          * Check for Popper dependency
          * Popper - https://popper.js.org
          */
         if (typeof Popper === 'undefined') {
-          throw new TypeError('Bootstrap tooltips require Popper.js (https://popper.js.org)');
-        } // private
+          throw new TypeError('Bootstrap dropdown require Popper.js (https://popper.js.org)');
+        }
+
+        var element = this._element; // For dropup with alignment we use the parent as popper container
+
+        if ($$$1(parent).hasClass(ClassName.DROPUP)) {
+          if ($$$1(this._menu).hasClass(ClassName.MENULEFT) || $$$1(this._menu).hasClass(ClassName.MENURIGHT)) {
+            element = parent;
+          }
+        } // If boundary is not `scrollParent`, then set position to `static`
+        // to allow the menu to "escape" the scroll parent's boundaries
+        // https://github.com/twbs/bootstrap/issues/24251
 
 
-        this._isEnabled = true;
-        this._timeout = 0;
-        this._hoverState = '';
-        this._activeTrigger = {};
-        this._popper = null; // Protected
+        if (this._config.boundary !== 'scrollParent') {
+          $$$1(parent).addClass(ClassName.POSITION_STATIC);
+        }
 
-        this.element = element;
-        this.config = this._getConfig(config);
-        this.tip = null;
-
-        this._setListeners();
-      } // Getters
+        this._popper = new Popper(element, this._menu, this._getPopperConfig());
+      } // If this is a touch-enabled device we add extra
+      // empty mouseover listeners to the body's immediate children;
+      // only needed because of broken event delegation on iOS
+      // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
 
 
-      var _proto = Tooltip.prototype;
+      if ('ontouchstart' in document.documentElement && $$$1(parent).closest(Selector.NAVBAR_NAV).length === 0) {
+        $$$1('body').children().on('mouseover', null, $$$1.noop);
+      }
 
-      // Public
-      _proto.enable = function enable() {
-        this._isEnabled = true;
+      this._element.focus();
+
+      this._element.setAttribute('aria-expanded', true);
+
+      $$$1(this._menu).toggleClass(ClassName.SHOW);
+      $$$1(parent).toggleClass(ClassName.SHOW).trigger($$$1.Event(Event.SHOWN, relatedTarget));
+    };
+
+    _proto.dispose = function dispose() {
+      $$$1.removeData(this._element, DATA_KEY);
+      $$$1(this._element).off(EVENT_KEY);
+      this._element = null;
+      this._menu = null;
+
+      if (this._popper !== null) {
+        this._popper.destroy();
+
+        this._popper = null;
+      }
+    };
+
+    _proto.update = function update() {
+      this._inNavbar = this._detectNavbar();
+
+      if (this._popper !== null) {
+        this._popper.scheduleUpdate();
+      }
+    }; // Private
+
+
+    _proto._addEventListeners = function _addEventListeners() {
+      var _this = this;
+
+      $$$1(this._element).on(Event.CLICK, function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        _this.toggle();
+      });
+    };
+
+    _proto._getConfig = function _getConfig(config) {
+      config = _extends({}, this.constructor.Default, $$$1(this._element).data(), config);
+      Util.typeCheckConfig(NAME, config, this.constructor.DefaultType);
+      return config;
+    };
+
+    _proto._getMenuElement = function _getMenuElement() {
+      if (!this._menu) {
+        var parent = Dropdown._getParentFromElement(this._element);
+
+        this._menu = $$$1(parent).find(Selector.MENU)[0];
+      }
+
+      return this._menu;
+    };
+
+    _proto._getPlacement = function _getPlacement() {
+      var $parentDropdown = $$$1(this._element).parent();
+      var placement = AttachmentMap.BOTTOM; // Handle dropup
+
+      if ($parentDropdown.hasClass(ClassName.DROPUP)) {
+        placement = AttachmentMap.TOP;
+
+        if ($$$1(this._menu).hasClass(ClassName.MENURIGHT)) {
+          placement = AttachmentMap.TOPEND;
+        }
+      } else if ($parentDropdown.hasClass(ClassName.DROPRIGHT)) {
+        placement = AttachmentMap.RIGHT;
+      } else if ($parentDropdown.hasClass(ClassName.DROPLEFT)) {
+        placement = AttachmentMap.LEFT;
+      } else if ($$$1(this._menu).hasClass(ClassName.MENURIGHT)) {
+        placement = AttachmentMap.BOTTOMEND;
+      }
+
+      return placement;
+    };
+
+    _proto._detectNavbar = function _detectNavbar() {
+      return $$$1(this._element).closest('.navbar').length > 0;
+    };
+
+    _proto._getPopperConfig = function _getPopperConfig() {
+      var _this2 = this;
+
+      var offsetConf = {};
+
+      if (typeof this._config.offset === 'function') {
+        offsetConf.fn = function (data) {
+          data.offsets = _extends({}, data.offsets, _this2._config.offset(data.offsets) || {});
+          return data;
+        };
+      } else {
+        offsetConf.offset = this._config.offset;
+      }
+
+      var popperConfig = {
+        placement: this._getPlacement(),
+        modifiers: {
+          offset: offsetConf,
+          flip: {
+            enabled: this._config.flip
+          },
+          preventOverflow: {
+            boundariesElement: this._config.boundary
+          }
+        }
+      };
+      return popperConfig;
+    }; // Static
+
+
+    Dropdown._jQueryInterface = function _jQueryInterface(config) {
+      return this.each(function () {
+        var data = $$$1(this).data(DATA_KEY);
+
+        var _config = typeof config === 'object' ? config : null;
+
+        if (!data) {
+          data = new Dropdown(this, _config);
+          $$$1(this).data(DATA_KEY, data);
+        }
+
+        if (typeof config === 'string') {
+          if (typeof data[config] === 'undefined') {
+            throw new TypeError("No method named \"" + config + "\"");
+          }
+
+          data[config]();
+        }
+      });
+    };
+
+    Dropdown._clearMenus = function _clearMenus(event) {
+      if (event && (event.which === RIGHT_MOUSE_BUTTON_WHICH || event.type === 'keyup' && event.which !== TAB_KEYCODE)) {
+        return;
+      }
+
+      var toggles = $$$1.makeArray($$$1(Selector.DATA_TOGGLE));
+
+      for (var i = 0; i < toggles.length; i++) {
+        var parent = Dropdown._getParentFromElement(toggles[i]);
+
+        var context = $$$1(toggles[i]).data(DATA_KEY);
+        var relatedTarget = {
+          relatedTarget: toggles[i]
+        };
+
+        if (!context) {
+          continue;
+        }
+
+        var dropdownMenu = context._menu;
+
+        if (!$$$1(parent).hasClass(ClassName.SHOW)) {
+          continue;
+        }
+
+        if (event && (event.type === 'click' && /input|textarea/i.test(event.target.tagName) || event.type === 'keyup' && event.which === TAB_KEYCODE) && $$$1.contains(parent, event.target)) {
+          continue;
+        }
+
+        var hideEvent = $$$1.Event(Event.HIDE, relatedTarget);
+        $$$1(parent).trigger(hideEvent);
+
+        if (hideEvent.isDefaultPrevented()) {
+          continue;
+        } // If this is a touch-enabled device we remove the extra
+        // empty mouseover listeners we added for iOS support
+
+
+        if ('ontouchstart' in document.documentElement) {
+          $$$1('body').children().off('mouseover', null, $$$1.noop);
+        }
+
+        toggles[i].setAttribute('aria-expanded', 'false');
+        $$$1(dropdownMenu).removeClass(ClassName.SHOW);
+        $$$1(parent).removeClass(ClassName.SHOW).trigger($$$1.Event(Event.HIDDEN, relatedTarget));
+      }
+    };
+
+    Dropdown._getParentFromElement = function _getParentFromElement(element) {
+      var parent;
+      var selector = Util.getSelectorFromElement(element);
+
+      if (selector) {
+        parent = $$$1(selector)[0];
+      }
+
+      return parent || element.parentNode;
+    }; // eslint-disable-next-line complexity
+
+
+    Dropdown._dataApiKeydownHandler = function _dataApiKeydownHandler(event) {
+      // If not input/textarea:
+      //  - And not a key in REGEXP_KEYDOWN => not a dropdown command
+      // If input/textarea:
+      //  - If space key => not a dropdown command
+      //  - If key is other than escape
+      //    - If key is not up or down => not a dropdown command
+      //    - If trigger inside the menu => not a dropdown command
+      if (/input|textarea/i.test(event.target.tagName) ? event.which === SPACE_KEYCODE || event.which !== ESCAPE_KEYCODE && (event.which !== ARROW_DOWN_KEYCODE && event.which !== ARROW_UP_KEYCODE || $$$1(event.target).closest(Selector.MENU).length) : !REGEXP_KEYDOWN.test(event.which)) {
+        return;
+      }
+
+      event.preventDefault();
+      event.stopPropagation();
+
+      if (this.disabled || $$$1(this).hasClass(ClassName.DISABLED)) {
+        return;
+      }
+
+      var parent = Dropdown._getParentFromElement(this);
+
+      var isActive = $$$1(parent).hasClass(ClassName.SHOW);
+
+      if (!isActive && (event.which !== ESCAPE_KEYCODE || event.which !== SPACE_KEYCODE) || isActive && (event.which === ESCAPE_KEYCODE || event.which === SPACE_KEYCODE)) {
+        if (event.which === ESCAPE_KEYCODE) {
+          var toggle = $$$1(parent).find(Selector.DATA_TOGGLE)[0];
+          $$$1(toggle).trigger('focus');
+        }
+
+        $$$1(this).trigger('click');
+        return;
+      }
+
+      var items = $$$1(parent).find(Selector.VISIBLE_ITEMS).get();
+
+      if (items.length === 0) {
+        return;
+      }
+
+      var index = items.indexOf(event.target);
+
+      if (event.which === ARROW_UP_KEYCODE && index > 0) {
+        // Up
+        index--;
+      }
+
+      if (event.which === ARROW_DOWN_KEYCODE && index < items.length - 1) {
+        // Down
+        index++;
+      }
+
+      if (index < 0) {
+        index = 0;
+      }
+
+      items[index].focus();
+    };
+
+    _createClass(Dropdown, null, [{
+      key: "VERSION",
+      get: function get() {
+        return VERSION;
+      }
+    }, {
+      key: "Default",
+      get: function get() {
+        return Default;
+      }
+    }, {
+      key: "DefaultType",
+      get: function get() {
+        return DefaultType;
+      }
+    }]);
+    return Dropdown;
+  }();
+  /**
+   * ------------------------------------------------------------------------
+   * Data Api implementation
+   * ------------------------------------------------------------------------
+   */
+
+
+  $$$1(document).on(Event.KEYDOWN_DATA_API, Selector.DATA_TOGGLE, Dropdown._dataApiKeydownHandler).on(Event.KEYDOWN_DATA_API, Selector.MENU, Dropdown._dataApiKeydownHandler).on(Event.CLICK_DATA_API + " " + Event.KEYUP_DATA_API, Dropdown._clearMenus).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    Dropdown._jQueryInterface.call($$$1(this), 'toggle');
+  }).on(Event.CLICK_DATA_API, Selector.FORM_CHILD, function (e) {
+    e.stopPropagation();
+  });
+  /**
+   * ------------------------------------------------------------------------
+   * jQuery
+   * ------------------------------------------------------------------------
+   */
+
+  $$$1.fn[NAME] = Dropdown._jQueryInterface;
+  $$$1.fn[NAME].Constructor = Dropdown;
+
+  $$$1.fn[NAME].noConflict = function () {
+    $$$1.fn[NAME] = JQUERY_NO_CONFLICT;
+    return Dropdown._jQueryInterface;
+  };
+
+  return Dropdown;
+}($, Popper);
+
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap (v4.0.0): modal.js
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
+var Modal = function ($$$1) {
+  /**
+   * ------------------------------------------------------------------------
+   * Constants
+   * ------------------------------------------------------------------------
+   */
+  var NAME = 'modal';
+  var VERSION = '4.0.0';
+  var DATA_KEY = 'bs.modal';
+  var EVENT_KEY = "." + DATA_KEY;
+  var DATA_API_KEY = '.data-api';
+  var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
+  var TRANSITION_DURATION = 300;
+  var BACKDROP_TRANSITION_DURATION = 150;
+  var ESCAPE_KEYCODE = 27; // KeyboardEvent.which value for Escape (Esc) key
+
+  var Default = {
+    backdrop: true,
+    keyboard: true,
+    focus: true,
+    show: true
+  };
+  var DefaultType = {
+    backdrop: '(boolean|string)',
+    keyboard: 'boolean',
+    focus: 'boolean',
+    show: 'boolean'
+  };
+  var Event = {
+    HIDE: "hide" + EVENT_KEY,
+    HIDDEN: "hidden" + EVENT_KEY,
+    SHOW: "show" + EVENT_KEY,
+    SHOWN: "shown" + EVENT_KEY,
+    FOCUSIN: "focusin" + EVENT_KEY,
+    RESIZE: "resize" + EVENT_KEY,
+    CLICK_DISMISS: "click.dismiss" + EVENT_KEY,
+    KEYDOWN_DISMISS: "keydown.dismiss" + EVENT_KEY,
+    MOUSEUP_DISMISS: "mouseup.dismiss" + EVENT_KEY,
+    MOUSEDOWN_DISMISS: "mousedown.dismiss" + EVENT_KEY,
+    CLICK_DATA_API: "click" + EVENT_KEY + DATA_API_KEY
+  };
+  var ClassName = {
+    SCROLLBAR_MEASURER: 'modal-scrollbar-measure',
+    BACKDROP: 'modal-backdrop',
+    OPEN: 'modal-open',
+    FADE: 'fade',
+    SHOW: 'show'
+  };
+  var Selector = {
+    DIALOG: '.modal-dialog',
+    DATA_TOGGLE: '[data-toggle="modal"]',
+    DATA_DISMISS: '[data-dismiss="modal"]',
+    FIXED_CONTENT: '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top',
+    STICKY_CONTENT: '.sticky-top',
+    NAVBAR_TOGGLER: '.navbar-toggler'
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
+  };
+
+  var Modal =
+  /*#__PURE__*/
+  function () {
+    function Modal(element, config) {
+      this._config = this._getConfig(config);
+      this._element = element;
+      this._dialog = $$$1(element).find(Selector.DIALOG)[0];
+      this._backdrop = null;
+      this._isShown = false;
+      this._isBodyOverflowing = false;
+      this._ignoreBackdropClick = false;
+      this._originalBodyPadding = 0;
+      this._scrollbarWidth = 0;
+    } // Getters
+
+
+    var _proto = Modal.prototype;
+
+    // Public
+    _proto.toggle = function toggle(relatedTarget) {
+      return this._isShown ? this.hide() : this.show(relatedTarget);
+    };
+
+    _proto.show = function show(relatedTarget) {
+      var _this = this;
+
+      if (this._isTransitioning || this._isShown) {
+        return;
+      }
+
+      if (Util.supportsTransitionEnd() && $$$1(this._element).hasClass(ClassName.FADE)) {
+        this._isTransitioning = true;
+      }
+
+      var showEvent = $$$1.Event(Event.SHOW, {
+        relatedTarget: relatedTarget
+      });
+      $$$1(this._element).trigger(showEvent);
+
+      if (this._isShown || showEvent.isDefaultPrevented()) {
+        return;
+      }
+
+      this._isShown = true;
+
+      this._checkScrollbar();
+
+      this._setScrollbar();
+
+      this._adjustDialog();
+
+      $$$1(document.body).addClass(ClassName.OPEN);
+
+      this._setEscapeEvent();
+
+      this._setResizeEvent();
+
+      $$$1(this._element).on(Event.CLICK_DISMISS, Selector.DATA_DISMISS, function (event) {
+        return _this.hide(event);
+      });
+      $$$1(this._dialog).on(Event.MOUSEDOWN_DISMISS, function () {
+        $$$1(_this._element).one(Event.MOUSEUP_DISMISS, function (event) {
+          if ($$$1(event.target).is(_this._element)) {
+            _this._ignoreBackdropClick = true;
+          }
+        });
+      });
+
+      this._showBackdrop(function () {
+        return _this._showElement(relatedTarget);
+      });
+    };
+
+    _proto.hide = function hide(event) {
+      var _this2 = this;
+
+      if (event) {
+        event.preventDefault();
+      }
+
+      if (this._isTransitioning || !this._isShown) {
+        return;
+      }
+
+      var hideEvent = $$$1.Event(Event.HIDE);
+      $$$1(this._element).trigger(hideEvent);
+
+      if (!this._isShown || hideEvent.isDefaultPrevented()) {
+        return;
+      }
+
+      this._isShown = false;
+      var transition = Util.supportsTransitionEnd() && $$$1(this._element).hasClass(ClassName.FADE);
+
+      if (transition) {
+        this._isTransitioning = true;
+      }
+
+      this._setEscapeEvent();
+
+      this._setResizeEvent();
+
+      $$$1(document).off(Event.FOCUSIN);
+      $$$1(this._element).removeClass(ClassName.SHOW);
+      $$$1(this._element).off(Event.CLICK_DISMISS);
+      $$$1(this._dialog).off(Event.MOUSEDOWN_DISMISS);
+
+      if (transition) {
+        $$$1(this._element).one(Util.TRANSITION_END, function (event) {
+          return _this2._hideModal(event);
+        }).emulateTransitionEnd(TRANSITION_DURATION);
+      } else {
+        this._hideModal();
+      }
+    };
+
+    _proto.dispose = function dispose() {
+      $$$1.removeData(this._element, DATA_KEY);
+      $$$1(window, document, this._element, this._backdrop).off(EVENT_KEY);
+      this._config = null;
+      this._element = null;
+      this._dialog = null;
+      this._backdrop = null;
+      this._isShown = null;
+      this._isBodyOverflowing = null;
+      this._ignoreBackdropClick = null;
+      this._scrollbarWidth = null;
+    };
+
+    _proto.handleUpdate = function handleUpdate() {
+      this._adjustDialog();
+    }; // Private
+
+
+    _proto._getConfig = function _getConfig(config) {
+      config = _extends({}, Default, config);
+      Util.typeCheckConfig(NAME, config, DefaultType);
+      return config;
+    };
+
+    _proto._showElement = function _showElement(relatedTarget) {
+      var _this3 = this;
+
+      var transition = Util.supportsTransitionEnd() && $$$1(this._element).hasClass(ClassName.FADE);
+
+      if (!this._element.parentNode || this._element.parentNode.nodeType !== Node.ELEMENT_NODE) {
+        // Don't move modal's DOM position
+        document.body.appendChild(this._element);
+      }
+
+      this._element.style.display = 'block';
+
+      this._element.removeAttribute('aria-hidden');
+
+      this._element.scrollTop = 0;
+
+      if (transition) {
+        Util.reflow(this._element);
+      }
+
+      $$$1(this._element).addClass(ClassName.SHOW);
+
+      if (this._config.focus) {
+        this._enforceFocus();
+      }
+
+      var shownEvent = $$$1.Event(Event.SHOWN, {
+        relatedTarget: relatedTarget
+      });
+
+      var transitionComplete = function transitionComplete() {
+        if (_this3._config.focus) {
+          _this3._element.focus();
+        }
+
+        _this3._isTransitioning = false;
+        $$$1(_this3._element).trigger(shownEvent);
       };
 
-      _proto.disable = function disable() {
-        this._isEnabled = false;
-      };
+      if (transition) {
+        $$$1(this._dialog).one(Util.TRANSITION_END, transitionComplete).emulateTransitionEnd(TRANSITION_DURATION);
+      } else {
+        transitionComplete();
+      }
+    };
 
-      _proto.toggleEnabled = function toggleEnabled() {
-        this._isEnabled = !this._isEnabled;
-      };
+    _proto._enforceFocus = function _enforceFocus() {
+      var _this4 = this;
 
-      _proto.toggle = function toggle(event) {
-        if (!this._isEnabled) {
+      $$$1(document).off(Event.FOCUSIN) // Guard against infinite focus loop
+      .on(Event.FOCUSIN, function (event) {
+        if (document !== event.target && _this4._element !== event.target && $$$1(_this4._element).has(event.target).length === 0) {
+          _this4._element.focus();
+        }
+      });
+    };
+
+    _proto._setEscapeEvent = function _setEscapeEvent() {
+      var _this5 = this;
+
+      if (this._isShown && this._config.keyboard) {
+        $$$1(this._element).on(Event.KEYDOWN_DISMISS, function (event) {
+          if (event.which === ESCAPE_KEYCODE) {
+            event.preventDefault();
+
+            _this5.hide();
+          }
+        });
+      } else if (!this._isShown) {
+        $$$1(this._element).off(Event.KEYDOWN_DISMISS);
+      }
+    };
+
+    _proto._setResizeEvent = function _setResizeEvent() {
+      var _this6 = this;
+
+      if (this._isShown) {
+        $$$1(window).on(Event.RESIZE, function (event) {
+          return _this6.handleUpdate(event);
+        });
+      } else {
+        $$$1(window).off(Event.RESIZE);
+      }
+    };
+
+    _proto._hideModal = function _hideModal() {
+      var _this7 = this;
+
+      this._element.style.display = 'none';
+
+      this._element.setAttribute('aria-hidden', true);
+
+      this._isTransitioning = false;
+
+      this._showBackdrop(function () {
+        $$$1(document.body).removeClass(ClassName.OPEN);
+
+        _this7._resetAdjustments();
+
+        _this7._resetScrollbar();
+
+        $$$1(_this7._element).trigger(Event.HIDDEN);
+      });
+    };
+
+    _proto._removeBackdrop = function _removeBackdrop() {
+      if (this._backdrop) {
+        $$$1(this._backdrop).remove();
+        this._backdrop = null;
+      }
+    };
+
+    _proto._showBackdrop = function _showBackdrop(callback) {
+      var _this8 = this;
+
+      var animate = $$$1(this._element).hasClass(ClassName.FADE) ? ClassName.FADE : '';
+
+      if (this._isShown && this._config.backdrop) {
+        var doAnimate = Util.supportsTransitionEnd() && animate;
+        this._backdrop = document.createElement('div');
+        this._backdrop.className = ClassName.BACKDROP;
+
+        if (animate) {
+          $$$1(this._backdrop).addClass(animate);
+        }
+
+        $$$1(this._backdrop).appendTo(document.body);
+        $$$1(this._element).on(Event.CLICK_DISMISS, function (event) {
+          if (_this8._ignoreBackdropClick) {
+            _this8._ignoreBackdropClick = false;
+            return;
+          }
+
+          if (event.target !== event.currentTarget) {
+            return;
+          }
+
+          if (_this8._config.backdrop === 'static') {
+            _this8._element.focus();
+          } else {
+            _this8.hide();
+          }
+        });
+
+        if (doAnimate) {
+          Util.reflow(this._backdrop);
+        }
+
+        $$$1(this._backdrop).addClass(ClassName.SHOW);
+
+        if (!callback) {
           return;
         }
 
-        if (event) {
-          var dataKey = this.constructor.DATA_KEY;
-          var context = $$$1(event.currentTarget).data(dataKey);
-
-          if (!context) {
-            context = new this.constructor(event.currentTarget, this._getDelegateConfig());
-            $$$1(event.currentTarget).data(dataKey, context);
-          }
-
-          context._activeTrigger.click = !context._activeTrigger.click;
-
-          if (context._isWithActiveTrigger()) {
-            context._enter(null, context);
-          } else {
-            context._leave(null, context);
-          }
-        } else {
-          if ($$$1(this.getTipElement()).hasClass(ClassName.SHOW)) {
-            this._leave(null, this);
-
-            return;
-          }
-
-          this._enter(null, this);
-        }
-      };
-
-      _proto.dispose = function dispose() {
-        clearTimeout(this._timeout);
-        $$$1.removeData(this.element, this.constructor.DATA_KEY);
-        $$$1(this.element).off(this.constructor.EVENT_KEY);
-        $$$1(this.element).closest('.modal').off('hide.bs.modal');
-
-        if (this.tip) {
-          $$$1(this.tip).remove();
+        if (!doAnimate) {
+          callback();
+          return;
         }
 
-        this._isEnabled = null;
-        this._timeout = null;
-        this._hoverState = null;
-        this._activeTrigger = null;
+        $$$1(this._backdrop).one(Util.TRANSITION_END, callback).emulateTransitionEnd(BACKDROP_TRANSITION_DURATION);
+      } else if (!this._isShown && this._backdrop) {
+        $$$1(this._backdrop).removeClass(ClassName.SHOW);
 
-        if (this._popper !== null) {
-          this._popper.destroy();
-        }
-
-        this._popper = null;
-        this.element = null;
-        this.config = null;
-        this.tip = null;
-      };
-
-      _proto.show = function show() {
-        var _this = this;
-
-        if ($$$1(this.element).css('display') === 'none') {
-          throw new Error('Please use show on visible elements');
-        }
-
-        var showEvent = $$$1.Event(this.constructor.Event.SHOW);
-
-        if (this.isWithContent() && this._isEnabled) {
-          $$$1(this.element).trigger(showEvent);
-          var isInTheDom = $$$1.contains(this.element.ownerDocument.documentElement, this.element);
-
-          if (showEvent.isDefaultPrevented() || !isInTheDom) {
-            return;
-          }
-
-          var tip = this.getTipElement();
-          var tipId = Util.getUID(this.constructor.NAME);
-          tip.setAttribute('id', tipId);
-          this.element.setAttribute('aria-describedby', tipId);
-          this.setContent();
-
-          if (this.config.animation) {
-            $$$1(tip).addClass(ClassName.FADE);
-          }
-
-          var placement = typeof this.config.placement === 'function' ? this.config.placement.call(this, tip, this.element) : this.config.placement;
-
-          var attachment = this._getAttachment(placement);
-
-          this.addAttachmentClass(attachment);
-          var container = this.config.container === false ? document.body : $$$1(document).find(this.config.container);
-          $$$1(tip).data(this.constructor.DATA_KEY, this);
-
-          if (!$$$1.contains(this.element.ownerDocument.documentElement, this.tip)) {
-            $$$1(tip).appendTo(container);
-          }
-
-          $$$1(this.element).trigger(this.constructor.Event.INSERTED);
-          this._popper = new Popper(this.element, tip, {
-            placement: attachment,
-            modifiers: {
-              offset: {
-                offset: this.config.offset
-              },
-              flip: {
-                behavior: this.config.fallbackPlacement
-              },
-              arrow: {
-                element: Selector.ARROW
-              },
-              preventOverflow: {
-                boundariesElement: this.config.boundary
-              }
-            },
-            onCreate: function onCreate(data) {
-              if (data.originalPlacement !== data.placement) {
-                _this._handlePopperPlacementChange(data);
-              }
-            },
-            onUpdate: function onUpdate(data) {
-              _this._handlePopperPlacementChange(data);
-            }
-          });
-          $$$1(tip).addClass(ClassName.SHOW); // If this is a touch-enabled device we add extra
-          // empty mouseover listeners to the body's immediate children;
-          // only needed because of broken event delegation on iOS
-          // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
-
-          if ('ontouchstart' in document.documentElement) {
-            $$$1(document.body).children().on('mouseover', null, $$$1.noop);
-          }
-
-          var complete = function complete() {
-            if (_this.config.animation) {
-              _this._fixTransition();
-            }
-
-            var prevHoverState = _this._hoverState;
-            _this._hoverState = null;
-            $$$1(_this.element).trigger(_this.constructor.Event.SHOWN);
-
-            if (prevHoverState === HoverState.OUT) {
-              _this._leave(null, _this);
-            }
-          };
-
-          if ($$$1(this.tip).hasClass(ClassName.FADE)) {
-            var transitionDuration = Util.getTransitionDurationFromElement(this.tip);
-            $$$1(this.tip).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
-          } else {
-            complete();
-          }
-        }
-      };
-
-      _proto.hide = function hide(callback) {
-        var _this2 = this;
-
-        var tip = this.getTipElement();
-        var hideEvent = $$$1.Event(this.constructor.Event.HIDE);
-
-        var complete = function complete() {
-          if (_this2._hoverState !== HoverState.SHOW && tip.parentNode) {
-            tip.parentNode.removeChild(tip);
-          }
-
-          _this2._cleanTipClass();
-
-          _this2.element.removeAttribute('aria-describedby');
-
-          $$$1(_this2.element).trigger(_this2.constructor.Event.HIDDEN);
-
-          if (_this2._popper !== null) {
-            _this2._popper.destroy();
-          }
+        var callbackRemove = function callbackRemove() {
+          _this8._removeBackdrop();
 
           if (callback) {
             callback();
           }
         };
 
-        $$$1(this.element).trigger(hideEvent);
-
-        if (hideEvent.isDefaultPrevented()) {
-          return;
-        }
-
-        $$$1(tip).removeClass(ClassName.SHOW); // If this is a touch-enabled device we remove the extra
-        // empty mouseover listeners we added for iOS support
-
-        if ('ontouchstart' in document.documentElement) {
-          $$$1(document.body).children().off('mouseover', null, $$$1.noop);
-        }
-
-        this._activeTrigger[Trigger.CLICK] = false;
-        this._activeTrigger[Trigger.FOCUS] = false;
-        this._activeTrigger[Trigger.HOVER] = false;
-
-        if ($$$1(this.tip).hasClass(ClassName.FADE)) {
-          var transitionDuration = Util.getTransitionDurationFromElement(tip);
-          $$$1(tip).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
+        if (Util.supportsTransitionEnd() && $$$1(this._element).hasClass(ClassName.FADE)) {
+          $$$1(this._backdrop).one(Util.TRANSITION_END, callbackRemove).emulateTransitionEnd(BACKDROP_TRANSITION_DURATION);
         } else {
-          complete();
+          callbackRemove();
+        }
+      } else if (callback) {
+        callback();
+      }
+    }; // ----------------------------------------------------------------------
+    // the following methods are used to handle overflowing modals
+    // todo (fat): these should probably be refactored out of modal.js
+    // ----------------------------------------------------------------------
+
+
+    _proto._adjustDialog = function _adjustDialog() {
+      var isModalOverflowing = this._element.scrollHeight > document.documentElement.clientHeight;
+
+      if (!this._isBodyOverflowing && isModalOverflowing) {
+        this._element.style.paddingLeft = this._scrollbarWidth + "px";
+      }
+
+      if (this._isBodyOverflowing && !isModalOverflowing) {
+        this._element.style.paddingRight = this._scrollbarWidth + "px";
+      }
+    };
+
+    _proto._resetAdjustments = function _resetAdjustments() {
+      this._element.style.paddingLeft = '';
+      this._element.style.paddingRight = '';
+    };
+
+    _proto._checkScrollbar = function _checkScrollbar() {
+      var rect = document.body.getBoundingClientRect();
+      this._isBodyOverflowing = rect.left + rect.right < window.innerWidth;
+      this._scrollbarWidth = this._getScrollbarWidth();
+    };
+
+    _proto._setScrollbar = function _setScrollbar() {
+      var _this9 = this;
+
+      if (this._isBodyOverflowing) {
+        // Note: DOMNode.style.paddingRight returns the actual value or '' if not set
+        //   while $(DOMNode).css('padding-right') returns the calculated value or 0 if not set
+        // Adjust fixed content padding
+        $$$1(Selector.FIXED_CONTENT).each(function (index, element) {
+          var actualPadding = $$$1(element)[0].style.paddingRight;
+          var calculatedPadding = $$$1(element).css('padding-right');
+          $$$1(element).data('padding-right', actualPadding).css('padding-right', parseFloat(calculatedPadding) + _this9._scrollbarWidth + "px");
+        }); // Adjust sticky content margin
+
+        $$$1(Selector.STICKY_CONTENT).each(function (index, element) {
+          var actualMargin = $$$1(element)[0].style.marginRight;
+          var calculatedMargin = $$$1(element).css('margin-right');
+          $$$1(element).data('margin-right', actualMargin).css('margin-right', parseFloat(calculatedMargin) - _this9._scrollbarWidth + "px");
+        }); // Adjust navbar-toggler margin
+
+        $$$1(Selector.NAVBAR_TOGGLER).each(function (index, element) {
+          var actualMargin = $$$1(element)[0].style.marginRight;
+          var calculatedMargin = $$$1(element).css('margin-right');
+          $$$1(element).data('margin-right', actualMargin).css('margin-right', parseFloat(calculatedMargin) + _this9._scrollbarWidth + "px");
+        }); // Adjust body padding
+
+        var actualPadding = document.body.style.paddingRight;
+        var calculatedPadding = $$$1('body').css('padding-right');
+        $$$1('body').data('padding-right', actualPadding).css('padding-right', parseFloat(calculatedPadding) + this._scrollbarWidth + "px");
+      }
+    };
+
+    _proto._resetScrollbar = function _resetScrollbar() {
+      // Restore fixed content padding
+      $$$1(Selector.FIXED_CONTENT).each(function (index, element) {
+        var padding = $$$1(element).data('padding-right');
+
+        if (typeof padding !== 'undefined') {
+          $$$1(element).css('padding-right', padding).removeData('padding-right');
+        }
+      }); // Restore sticky content and navbar-toggler margin
+
+      $$$1(Selector.STICKY_CONTENT + ", " + Selector.NAVBAR_TOGGLER).each(function (index, element) {
+        var margin = $$$1(element).data('margin-right');
+
+        if (typeof margin !== 'undefined') {
+          $$$1(element).css('margin-right', margin).removeData('margin-right');
+        }
+      }); // Restore body padding
+
+      var padding = $$$1('body').data('padding-right');
+
+      if (typeof padding !== 'undefined') {
+        $$$1('body').css('padding-right', padding).removeData('padding-right');
+      }
+    };
+
+    _proto._getScrollbarWidth = function _getScrollbarWidth() {
+      // thx d.walsh
+      var scrollDiv = document.createElement('div');
+      scrollDiv.className = ClassName.SCROLLBAR_MEASURER;
+      document.body.appendChild(scrollDiv);
+      var scrollbarWidth = scrollDiv.getBoundingClientRect().width - scrollDiv.clientWidth;
+      document.body.removeChild(scrollDiv);
+      return scrollbarWidth;
+    }; // Static
+
+
+    Modal._jQueryInterface = function _jQueryInterface(config, relatedTarget) {
+      return this.each(function () {
+        var data = $$$1(this).data(DATA_KEY);
+
+        var _config = _extends({}, Modal.Default, $$$1(this).data(), typeof config === 'object' && config);
+
+        if (!data) {
+          data = new Modal(this, _config);
+          $$$1(this).data(DATA_KEY, data);
         }
 
-        this._hoverState = '';
-      };
-
-      _proto.update = function update() {
-        if (this._popper !== null) {
-          this._popper.scheduleUpdate();
-        }
-      }; // Protected
-
-
-      _proto.isWithContent = function isWithContent() {
-        return Boolean(this.getTitle());
-      };
-
-      _proto.addAttachmentClass = function addAttachmentClass(attachment) {
-        $$$1(this.getTipElement()).addClass(CLASS_PREFIX + "-" + attachment);
-      };
-
-      _proto.getTipElement = function getTipElement() {
-        this.tip = this.tip || $$$1(this.config.template)[0];
-        return this.tip;
-      };
-
-      _proto.setContent = function setContent() {
-        var tip = this.getTipElement();
-        this.setElementContent($$$1(tip.querySelectorAll(Selector.TOOLTIP_INNER)), this.getTitle());
-        $$$1(tip).removeClass(ClassName.FADE + " " + ClassName.SHOW);
-      };
-
-      _proto.setElementContent = function setElementContent($element, content) {
-        var html = this.config.html;
-
-        if (typeof content === 'object' && (content.nodeType || content.jquery)) {
-          // Content is a DOM node or a jQuery
-          if (html) {
-            if (!$$$1(content).parent().is($element)) {
-              $element.empty().append(content);
-            }
-          } else {
-            $element.text($$$1(content).text());
+        if (typeof config === 'string') {
+          if (typeof data[config] === 'undefined') {
+            throw new TypeError("No method named \"" + config + "\"");
           }
-        } else {
-          $element[html ? 'html' : 'text'](content);
+
+          data[config](relatedTarget);
+        } else if (_config.show) {
+          data.show(relatedTarget);
         }
-      };
+      });
+    };
 
-      _proto.getTitle = function getTitle() {
-        var title = this.element.getAttribute('data-original-title');
+    _createClass(Modal, null, [{
+      key: "VERSION",
+      get: function get() {
+        return VERSION;
+      }
+    }, {
+      key: "Default",
+      get: function get() {
+        return Default;
+      }
+    }]);
+    return Modal;
+  }();
+  /**
+   * ------------------------------------------------------------------------
+   * Data Api implementation
+   * ------------------------------------------------------------------------
+   */
 
-        if (!title) {
-          title = typeof this.config.title === 'function' ? this.config.title.call(this.element) : this.config.title;
+
+  $$$1(document).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, function (event) {
+    var _this10 = this;
+
+    var target;
+    var selector = Util.getSelectorFromElement(this);
+
+    if (selector) {
+      target = $$$1(selector)[0];
+    }
+
+    var config = $$$1(target).data(DATA_KEY) ? 'toggle' : _extends({}, $$$1(target).data(), $$$1(this).data());
+
+    if (this.tagName === 'A' || this.tagName === 'AREA') {
+      event.preventDefault();
+    }
+
+    var $target = $$$1(target).one(Event.SHOW, function (showEvent) {
+      if (showEvent.isDefaultPrevented()) {
+        // Only register focus restorer if modal will actually get shown
+        return;
+      }
+
+      $target.one(Event.HIDDEN, function () {
+        if ($$$1(_this10).is(':visible')) {
+          _this10.focus();
         }
+      });
+    });
 
-        return title;
-      }; // Private
+    Modal._jQueryInterface.call($$$1(target), config, this);
+  });
+  /**
+   * ------------------------------------------------------------------------
+   * jQuery
+   * ------------------------------------------------------------------------
+   */
+
+  $$$1.fn[NAME] = Modal._jQueryInterface;
+  $$$1.fn[NAME].Constructor = Modal;
+
+  $$$1.fn[NAME].noConflict = function () {
+    $$$1.fn[NAME] = JQUERY_NO_CONFLICT;
+    return Modal._jQueryInterface;
+  };
+
+  return Modal;
+}($);
+
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap (v4.0.0): tooltip.js
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
+var Tooltip = function ($$$1) {
+  /**
+   * ------------------------------------------------------------------------
+   * Constants
+   * ------------------------------------------------------------------------
+   */
+  var NAME = 'tooltip';
+  var VERSION = '4.0.0';
+  var DATA_KEY = 'bs.tooltip';
+  var EVENT_KEY = "." + DATA_KEY;
+  var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
+  var TRANSITION_DURATION = 150;
+  var CLASS_PREFIX = 'bs-tooltip';
+  var BSCLS_PREFIX_REGEX = new RegExp("(^|\\s)" + CLASS_PREFIX + "\\S+", 'g');
+  var DefaultType = {
+    animation: 'boolean',
+    template: 'string',
+    title: '(string|element|function)',
+    trigger: 'string',
+    delay: '(number|object)',
+    html: 'boolean',
+    selector: '(string|boolean)',
+    placement: '(string|function)',
+    offset: '(number|string)',
+    container: '(string|element|boolean)',
+    fallbackPlacement: '(string|array)',
+    boundary: '(string|element)'
+  };
+  var AttachmentMap = {
+    AUTO: 'auto',
+    TOP: 'top',
+    RIGHT: 'right',
+    BOTTOM: 'bottom',
+    LEFT: 'left'
+  };
+  var Default = {
+    animation: true,
+    template: '<div class="tooltip" role="tooltip">' + '<div class="arrow"></div>' + '<div class="tooltip-inner"></div></div>',
+    trigger: 'hover focus',
+    title: '',
+    delay: 0,
+    html: false,
+    selector: false,
+    placement: 'top',
+    offset: 0,
+    container: false,
+    fallbackPlacement: 'flip',
+    boundary: 'scrollParent'
+  };
+  var HoverState = {
+    SHOW: 'show',
+    OUT: 'out'
+  };
+  var Event = {
+    HIDE: "hide" + EVENT_KEY,
+    HIDDEN: "hidden" + EVENT_KEY,
+    SHOW: "show" + EVENT_KEY,
+    SHOWN: "shown" + EVENT_KEY,
+    INSERTED: "inserted" + EVENT_KEY,
+    CLICK: "click" + EVENT_KEY,
+    FOCUSIN: "focusin" + EVENT_KEY,
+    FOCUSOUT: "focusout" + EVENT_KEY,
+    MOUSEENTER: "mouseenter" + EVENT_KEY,
+    MOUSELEAVE: "mouseleave" + EVENT_KEY
+  };
+  var ClassName = {
+    FADE: 'fade',
+    SHOW: 'show'
+  };
+  var Selector = {
+    TOOLTIP: '.tooltip',
+    TOOLTIP_INNER: '.tooltip-inner',
+    ARROW: '.arrow'
+  };
+  var Trigger = {
+    HOVER: 'hover',
+    FOCUS: 'focus',
+    CLICK: 'click',
+    MANUAL: 'manual'
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
+  };
+
+  var Tooltip =
+  /*#__PURE__*/
+  function () {
+    function Tooltip(element, config) {
+      /**
+       * Check for Popper dependency
+       * Popper - https://popper.js.org
+       */
+      if (typeof Popper === 'undefined') {
+        throw new TypeError('Bootstrap tooltips require Popper.js (https://popper.js.org)');
+      } // private
 
 
-      _proto._getAttachment = function _getAttachment(placement) {
-        return AttachmentMap[placement.toUpperCase()];
-      };
+      this._isEnabled = true;
+      this._timeout = 0;
+      this._hoverState = '';
+      this._activeTrigger = {};
+      this._popper = null; // Protected
 
-      _proto._setListeners = function _setListeners() {
-        var _this3 = this;
+      this.element = element;
+      this.config = this._getConfig(config);
+      this.tip = null;
 
-        var triggers = this.config.trigger.split(' ');
-        triggers.forEach(function (trigger) {
-          if (trigger === 'click') {
-            $$$1(_this3.element).on(_this3.constructor.Event.CLICK, _this3.config.selector, function (event) {
-              return _this3.toggle(event);
-            });
-          } else if (trigger !== Trigger.MANUAL) {
-            var eventIn = trigger === Trigger.HOVER ? _this3.constructor.Event.MOUSEENTER : _this3.constructor.Event.FOCUSIN;
-            var eventOut = trigger === Trigger.HOVER ? _this3.constructor.Event.MOUSELEAVE : _this3.constructor.Event.FOCUSOUT;
-            $$$1(_this3.element).on(eventIn, _this3.config.selector, function (event) {
-              return _this3._enter(event);
-            }).on(eventOut, _this3.config.selector, function (event) {
-              return _this3._leave(event);
-            });
-          }
+      this._setListeners();
+    } // Getters
 
-          $$$1(_this3.element).closest('.modal').on('hide.bs.modal', function () {
-            return _this3.hide();
-          });
-        });
 
-        if (this.config.selector) {
-          this.config = _objectSpread({}, this.config, {
-            trigger: 'manual',
-            selector: ''
-          });
-        } else {
-          this._fixTitle();
-        }
-      };
+    var _proto = Tooltip.prototype;
 
-      _proto._fixTitle = function _fixTitle() {
-        var titleType = typeof this.element.getAttribute('data-original-title');
+    // Public
+    _proto.enable = function enable() {
+      this._isEnabled = true;
+    };
 
-        if (this.element.getAttribute('title') || titleType !== 'string') {
-          this.element.setAttribute('data-original-title', this.element.getAttribute('title') || '');
-          this.element.setAttribute('title', '');
-        }
-      };
+    _proto.disable = function disable() {
+      this._isEnabled = false;
+    };
 
-      _proto._enter = function _enter(event, context) {
+    _proto.toggleEnabled = function toggleEnabled() {
+      this._isEnabled = !this._isEnabled;
+    };
+
+    _proto.toggle = function toggle(event) {
+      if (!this._isEnabled) {
+        return;
+      }
+
+      if (event) {
         var dataKey = this.constructor.DATA_KEY;
-        context = context || $$$1(event.currentTarget).data(dataKey);
+        var context = $$$1(event.currentTarget).data(dataKey);
 
         if (!context) {
           context = new this.constructor(event.currentTarget, this._getDelegateConfig());
           $$$1(event.currentTarget).data(dataKey, context);
         }
 
-        if (event) {
-          context._activeTrigger[event.type === 'focusin' ? Trigger.FOCUS : Trigger.HOVER] = true;
-        }
-
-        if ($$$1(context.getTipElement()).hasClass(ClassName.SHOW) || context._hoverState === HoverState.SHOW) {
-          context._hoverState = HoverState.SHOW;
-          return;
-        }
-
-        clearTimeout(context._timeout);
-        context._hoverState = HoverState.SHOW;
-
-        if (!context.config.delay || !context.config.delay.show) {
-          context.show();
-          return;
-        }
-
-        context._timeout = setTimeout(function () {
-          if (context._hoverState === HoverState.SHOW) {
-            context.show();
-          }
-        }, context.config.delay.show);
-      };
-
-      _proto._leave = function _leave(event, context) {
-        var dataKey = this.constructor.DATA_KEY;
-        context = context || $$$1(event.currentTarget).data(dataKey);
-
-        if (!context) {
-          context = new this.constructor(event.currentTarget, this._getDelegateConfig());
-          $$$1(event.currentTarget).data(dataKey, context);
-        }
-
-        if (event) {
-          context._activeTrigger[event.type === 'focusout' ? Trigger.FOCUS : Trigger.HOVER] = false;
-        }
+        context._activeTrigger.click = !context._activeTrigger.click;
 
         if (context._isWithActiveTrigger()) {
+          context._enter(null, context);
+        } else {
+          context._leave(null, context);
+        }
+      } else {
+        if ($$$1(this.getTipElement()).hasClass(ClassName.SHOW)) {
+          this._leave(null, this);
+
           return;
         }
 
-        clearTimeout(context._timeout);
-        context._hoverState = HoverState.OUT;
+        this._enter(null, this);
+      }
+    };
 
-        if (!context.config.delay || !context.config.delay.hide) {
-          context.hide();
+    _proto.dispose = function dispose() {
+      clearTimeout(this._timeout);
+      $$$1.removeData(this.element, this.constructor.DATA_KEY);
+      $$$1(this.element).off(this.constructor.EVENT_KEY);
+      $$$1(this.element).closest('.modal').off('hide.bs.modal');
+
+      if (this.tip) {
+        $$$1(this.tip).remove();
+      }
+
+      this._isEnabled = null;
+      this._timeout = null;
+      this._hoverState = null;
+      this._activeTrigger = null;
+
+      if (this._popper !== null) {
+        this._popper.destroy();
+      }
+
+      this._popper = null;
+      this.element = null;
+      this.config = null;
+      this.tip = null;
+    };
+
+    _proto.show = function show() {
+      var _this = this;
+
+      if ($$$1(this.element).css('display') === 'none') {
+        throw new Error('Please use show on visible elements');
+      }
+
+      var showEvent = $$$1.Event(this.constructor.Event.SHOW);
+
+      if (this.isWithContent() && this._isEnabled) {
+        $$$1(this.element).trigger(showEvent);
+        var isInTheDom = $$$1.contains(this.element.ownerDocument.documentElement, this.element);
+
+        if (showEvent.isDefaultPrevented() || !isInTheDom) {
           return;
         }
 
-        context._timeout = setTimeout(function () {
-          if (context._hoverState === HoverState.OUT) {
-            context.hide();
-          }
-        }, context.config.delay.hide);
-      };
-
-      _proto._isWithActiveTrigger = function _isWithActiveTrigger() {
-        for (var trigger in this._activeTrigger) {
-          if (this._activeTrigger[trigger]) {
-            return true;
-          }
-        }
-
-        return false;
-      };
-
-      _proto._getConfig = function _getConfig(config) {
-        config = _objectSpread({}, this.constructor.Default, $$$1(this.element).data(), typeof config === 'object' && config ? config : {});
-
-        if (typeof config.delay === 'number') {
-          config.delay = {
-            show: config.delay,
-            hide: config.delay
-          };
-        }
-
-        if (typeof config.title === 'number') {
-          config.title = config.title.toString();
-        }
-
-        if (typeof config.content === 'number') {
-          config.content = config.content.toString();
-        }
-
-        Util.typeCheckConfig(NAME, config, this.constructor.DefaultType);
-        return config;
-      };
-
-      _proto._getDelegateConfig = function _getDelegateConfig() {
-        var config = {};
-
-        if (this.config) {
-          for (var key in this.config) {
-            if (this.constructor.Default[key] !== this.config[key]) {
-              config[key] = this.config[key];
-            }
-          }
-        }
-
-        return config;
-      };
-
-      _proto._cleanTipClass = function _cleanTipClass() {
-        var $tip = $$$1(this.getTipElement());
-        var tabClass = $tip.attr('class').match(BSCLS_PREFIX_REGEX);
-
-        if (tabClass !== null && tabClass.length) {
-          $tip.removeClass(tabClass.join(''));
-        }
-      };
-
-      _proto._handlePopperPlacementChange = function _handlePopperPlacementChange(popperData) {
-        var popperInstance = popperData.instance;
-        this.tip = popperInstance.popper;
-
-        this._cleanTipClass();
-
-        this.addAttachmentClass(this._getAttachment(popperData.placement));
-      };
-
-      _proto._fixTransition = function _fixTransition() {
         var tip = this.getTipElement();
-        var initConfigAnimation = this.config.animation;
+        var tipId = Util.getUID(this.constructor.NAME);
+        tip.setAttribute('id', tipId);
+        this.element.setAttribute('aria-describedby', tipId);
+        this.setContent();
 
-        if (tip.getAttribute('x-placement') !== null) {
-          return;
+        if (this.config.animation) {
+          $$$1(tip).addClass(ClassName.FADE);
         }
 
-        $$$1(tip).removeClass(ClassName.FADE);
-        this.config.animation = false;
-        this.hide();
-        this.show();
-        this.config.animation = initConfigAnimation;
-      }; // Static
+        var placement = typeof this.config.placement === 'function' ? this.config.placement.call(this, tip, this.element) : this.config.placement;
 
+        var attachment = this._getAttachment(placement);
 
-      Tooltip._jQueryInterface = function _jQueryInterface(config) {
-        return this.each(function () {
-          var data = $$$1(this).data(DATA_KEY);
+        this.addAttachmentClass(attachment);
+        var container = this.config.container === false ? document.body : $$$1(this.config.container);
+        $$$1(tip).data(this.constructor.DATA_KEY, this);
 
-          var _config = typeof config === 'object' && config;
+        if (!$$$1.contains(this.element.ownerDocument.documentElement, this.tip)) {
+          $$$1(tip).appendTo(container);
+        }
 
-          if (!data && /dispose|hide/.test(config)) {
-            return;
-          }
-
-          if (!data) {
-            data = new Tooltip(this, _config);
-            $$$1(this).data(DATA_KEY, data);
-          }
-
-          if (typeof config === 'string') {
-            if (typeof data[config] === 'undefined') {
-              throw new TypeError("No method named \"" + config + "\"");
+        $$$1(this.element).trigger(this.constructor.Event.INSERTED);
+        this._popper = new Popper(this.element, tip, {
+          placement: attachment,
+          modifiers: {
+            offset: {
+              offset: this.config.offset
+            },
+            flip: {
+              behavior: this.config.fallbackPlacement
+            },
+            arrow: {
+              element: Selector.ARROW
+            },
+            preventOverflow: {
+              boundariesElement: this.config.boundary
             }
-
-            data[config]();
-          }
-        });
-      };
-
-      _createClass(Tooltip, null, [{
-        key: "VERSION",
-        get: function get() {
-          return VERSION;
-        }
-      }, {
-        key: "Default",
-        get: function get() {
-          return Default;
-        }
-      }, {
-        key: "NAME",
-        get: function get() {
-          return NAME;
-        }
-      }, {
-        key: "DATA_KEY",
-        get: function get() {
-          return DATA_KEY;
-        }
-      }, {
-        key: "Event",
-        get: function get() {
-          return Event;
-        }
-      }, {
-        key: "EVENT_KEY",
-        get: function get() {
-          return EVENT_KEY;
-        }
-      }, {
-        key: "DefaultType",
-        get: function get() {
-          return DefaultType;
-        }
-      }]);
-
-      return Tooltip;
-    }();
-    /**
-     * ------------------------------------------------------------------------
-     * jQuery
-     * ------------------------------------------------------------------------
-     */
-
-
-    $$$1.fn[NAME] = Tooltip._jQueryInterface;
-    $$$1.fn[NAME].Constructor = Tooltip;
-
-    $$$1.fn[NAME].noConflict = function () {
-      $$$1.fn[NAME] = JQUERY_NO_CONFLICT;
-      return Tooltip._jQueryInterface;
-    };
-
-    return Tooltip;
-  }($, Popper);
-
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap (v4.1.3): popover.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
-  var Popover = function ($$$1) {
-    /**
-     * ------------------------------------------------------------------------
-     * Constants
-     * ------------------------------------------------------------------------
-     */
-    var NAME = 'popover';
-    var VERSION = '4.1.3';
-    var DATA_KEY = 'bs.popover';
-    var EVENT_KEY = "." + DATA_KEY;
-    var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
-    var CLASS_PREFIX = 'bs-popover';
-    var BSCLS_PREFIX_REGEX = new RegExp("(^|\\s)" + CLASS_PREFIX + "\\S+", 'g');
-
-    var Default = _objectSpread({}, Tooltip.Default, {
-      placement: 'right',
-      trigger: 'click',
-      content: '',
-      template: '<div class="popover" role="tooltip">' + '<div class="arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div></div>'
-    });
-
-    var DefaultType = _objectSpread({}, Tooltip.DefaultType, {
-      content: '(string|element|function)'
-    });
-
-    var ClassName = {
-      FADE: 'fade',
-      SHOW: 'show'
-    };
-    var Selector = {
-      TITLE: '.popover-header',
-      CONTENT: '.popover-body'
-    };
-    var Event = {
-      HIDE: "hide" + EVENT_KEY,
-      HIDDEN: "hidden" + EVENT_KEY,
-      SHOW: "show" + EVENT_KEY,
-      SHOWN: "shown" + EVENT_KEY,
-      INSERTED: "inserted" + EVENT_KEY,
-      CLICK: "click" + EVENT_KEY,
-      FOCUSIN: "focusin" + EVENT_KEY,
-      FOCUSOUT: "focusout" + EVENT_KEY,
-      MOUSEENTER: "mouseenter" + EVENT_KEY,
-      MOUSELEAVE: "mouseleave" + EVENT_KEY
-      /**
-       * ------------------------------------------------------------------------
-       * Class Definition
-       * ------------------------------------------------------------------------
-       */
-
-    };
-
-    var Popover =
-    /*#__PURE__*/
-    function (_Tooltip) {
-      _inheritsLoose(Popover, _Tooltip);
-
-      function Popover() {
-        return _Tooltip.apply(this, arguments) || this;
-      }
-
-      var _proto = Popover.prototype;
-
-      // Overrides
-      _proto.isWithContent = function isWithContent() {
-        return this.getTitle() || this._getContent();
-      };
-
-      _proto.addAttachmentClass = function addAttachmentClass(attachment) {
-        $$$1(this.getTipElement()).addClass(CLASS_PREFIX + "-" + attachment);
-      };
-
-      _proto.getTipElement = function getTipElement() {
-        this.tip = this.tip || $$$1(this.config.template)[0];
-        return this.tip;
-      };
-
-      _proto.setContent = function setContent() {
-        var $tip = $$$1(this.getTipElement()); // We use append for html objects to maintain js events
-
-        this.setElementContent($tip.find(Selector.TITLE), this.getTitle());
-
-        var content = this._getContent();
-
-        if (typeof content === 'function') {
-          content = content.call(this.element);
-        }
-
-        this.setElementContent($tip.find(Selector.CONTENT), content);
-        $tip.removeClass(ClassName.FADE + " " + ClassName.SHOW);
-      }; // Private
-
-
-      _proto._getContent = function _getContent() {
-        return this.element.getAttribute('data-content') || this.config.content;
-      };
-
-      _proto._cleanTipClass = function _cleanTipClass() {
-        var $tip = $$$1(this.getTipElement());
-        var tabClass = $tip.attr('class').match(BSCLS_PREFIX_REGEX);
-
-        if (tabClass !== null && tabClass.length > 0) {
-          $tip.removeClass(tabClass.join(''));
-        }
-      }; // Static
-
-
-      Popover._jQueryInterface = function _jQueryInterface(config) {
-        return this.each(function () {
-          var data = $$$1(this).data(DATA_KEY);
-
-          var _config = typeof config === 'object' ? config : null;
-
-          if (!data && /destroy|hide/.test(config)) {
-            return;
-          }
-
-          if (!data) {
-            data = new Popover(this, _config);
-            $$$1(this).data(DATA_KEY, data);
-          }
-
-          if (typeof config === 'string') {
-            if (typeof data[config] === 'undefined') {
-              throw new TypeError("No method named \"" + config + "\"");
+          },
+          onCreate: function onCreate(data) {
+            if (data.originalPlacement !== data.placement) {
+              _this._handlePopperPlacementChange(data);
             }
-
-            data[config]();
+          },
+          onUpdate: function onUpdate(data) {
+            _this._handlePopperPlacementChange(data);
           }
         });
-      };
+        $$$1(tip).addClass(ClassName.SHOW); // If this is a touch-enabled device we add extra
+        // empty mouseover listeners to the body's immediate children;
+        // only needed because of broken event delegation on iOS
+        // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
 
-      _createClass(Popover, null, [{
-        key: "VERSION",
-        // Getters
-        get: function get() {
-          return VERSION;
+        if ('ontouchstart' in document.documentElement) {
+          $$$1('body').children().on('mouseover', null, $$$1.noop);
         }
-      }, {
-        key: "Default",
-        get: function get() {
-          return Default;
-        }
-      }, {
-        key: "NAME",
-        get: function get() {
-          return NAME;
-        }
-      }, {
-        key: "DATA_KEY",
-        get: function get() {
-          return DATA_KEY;
-        }
-      }, {
-        key: "Event",
-        get: function get() {
-          return Event;
-        }
-      }, {
-        key: "EVENT_KEY",
-        get: function get() {
-          return EVENT_KEY;
-        }
-      }, {
-        key: "DefaultType",
-        get: function get() {
-          return DefaultType;
-        }
-      }]);
-
-      return Popover;
-    }(Tooltip);
-    /**
-     * ------------------------------------------------------------------------
-     * jQuery
-     * ------------------------------------------------------------------------
-     */
-
-
-    $$$1.fn[NAME] = Popover._jQueryInterface;
-    $$$1.fn[NAME].Constructor = Popover;
-
-    $$$1.fn[NAME].noConflict = function () {
-      $$$1.fn[NAME] = JQUERY_NO_CONFLICT;
-      return Popover._jQueryInterface;
-    };
-
-    return Popover;
-  }($);
-
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap (v4.1.3): scrollspy.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
-  var ScrollSpy = function ($$$1) {
-    /**
-     * ------------------------------------------------------------------------
-     * Constants
-     * ------------------------------------------------------------------------
-     */
-    var NAME = 'scrollspy';
-    var VERSION = '4.1.3';
-    var DATA_KEY = 'bs.scrollspy';
-    var EVENT_KEY = "." + DATA_KEY;
-    var DATA_API_KEY = '.data-api';
-    var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
-    var Default = {
-      offset: 10,
-      method: 'auto',
-      target: ''
-    };
-    var DefaultType = {
-      offset: 'number',
-      method: 'string',
-      target: '(string|element)'
-    };
-    var Event = {
-      ACTIVATE: "activate" + EVENT_KEY,
-      SCROLL: "scroll" + EVENT_KEY,
-      LOAD_DATA_API: "load" + EVENT_KEY + DATA_API_KEY
-    };
-    var ClassName = {
-      DROPDOWN_ITEM: 'dropdown-item',
-      DROPDOWN_MENU: 'dropdown-menu',
-      ACTIVE: 'active'
-    };
-    var Selector = {
-      DATA_SPY: '[data-spy="scroll"]',
-      ACTIVE: '.active',
-      NAV_LIST_GROUP: '.nav, .list-group',
-      NAV_LINKS: '.nav-link',
-      NAV_ITEMS: '.nav-item',
-      LIST_ITEMS: '.list-group-item',
-      DROPDOWN: '.dropdown',
-      DROPDOWN_ITEMS: '.dropdown-item',
-      DROPDOWN_TOGGLE: '.dropdown-toggle'
-    };
-    var OffsetMethod = {
-      OFFSET: 'offset',
-      POSITION: 'position'
-      /**
-       * ------------------------------------------------------------------------
-       * Class Definition
-       * ------------------------------------------------------------------------
-       */
-
-    };
-
-    var ScrollSpy =
-    /*#__PURE__*/
-    function () {
-      function ScrollSpy(element, config) {
-        var _this = this;
-
-        this._element = element;
-        this._scrollElement = element.tagName === 'BODY' ? window : element;
-        this._config = this._getConfig(config);
-        this._selector = this._config.target + " " + Selector.NAV_LINKS + "," + (this._config.target + " " + Selector.LIST_ITEMS + ",") + (this._config.target + " " + Selector.DROPDOWN_ITEMS);
-        this._offsets = [];
-        this._targets = [];
-        this._activeTarget = null;
-        this._scrollHeight = 0;
-        $$$1(this._scrollElement).on(Event.SCROLL, function (event) {
-          return _this._process(event);
-        });
-        this.refresh();
-
-        this._process();
-      } // Getters
-
-
-      var _proto = ScrollSpy.prototype;
-
-      // Public
-      _proto.refresh = function refresh() {
-        var _this2 = this;
-
-        var autoMethod = this._scrollElement === this._scrollElement.window ? OffsetMethod.OFFSET : OffsetMethod.POSITION;
-        var offsetMethod = this._config.method === 'auto' ? autoMethod : this._config.method;
-        var offsetBase = offsetMethod === OffsetMethod.POSITION ? this._getScrollTop() : 0;
-        this._offsets = [];
-        this._targets = [];
-        this._scrollHeight = this._getScrollHeight();
-        var targets = [].slice.call(document.querySelectorAll(this._selector));
-        targets.map(function (element) {
-          var target;
-          var targetSelector = Util.getSelectorFromElement(element);
-
-          if (targetSelector) {
-            target = document.querySelector(targetSelector);
-          }
-
-          if (target) {
-            var targetBCR = target.getBoundingClientRect();
-
-            if (targetBCR.width || targetBCR.height) {
-              // TODO (fat): remove sketch reliance on jQuery position/offset
-              return [$$$1(target)[offsetMethod]().top + offsetBase, targetSelector];
-            }
-          }
-
-          return null;
-        }).filter(function (item) {
-          return item;
-        }).sort(function (a, b) {
-          return a[0] - b[0];
-        }).forEach(function (item) {
-          _this2._offsets.push(item[0]);
-
-          _this2._targets.push(item[1]);
-        });
-      };
-
-      _proto.dispose = function dispose() {
-        $$$1.removeData(this._element, DATA_KEY);
-        $$$1(this._scrollElement).off(EVENT_KEY);
-        this._element = null;
-        this._scrollElement = null;
-        this._config = null;
-        this._selector = null;
-        this._offsets = null;
-        this._targets = null;
-        this._activeTarget = null;
-        this._scrollHeight = null;
-      }; // Private
-
-
-      _proto._getConfig = function _getConfig(config) {
-        config = _objectSpread({}, Default, typeof config === 'object' && config ? config : {});
-
-        if (typeof config.target !== 'string') {
-          var id = $$$1(config.target).attr('id');
-
-          if (!id) {
-            id = Util.getUID(NAME);
-            $$$1(config.target).attr('id', id);
-          }
-
-          config.target = "#" + id;
-        }
-
-        Util.typeCheckConfig(NAME, config, DefaultType);
-        return config;
-      };
-
-      _proto._getScrollTop = function _getScrollTop() {
-        return this._scrollElement === window ? this._scrollElement.pageYOffset : this._scrollElement.scrollTop;
-      };
-
-      _proto._getScrollHeight = function _getScrollHeight() {
-        return this._scrollElement.scrollHeight || Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
-      };
-
-      _proto._getOffsetHeight = function _getOffsetHeight() {
-        return this._scrollElement === window ? window.innerHeight : this._scrollElement.getBoundingClientRect().height;
-      };
-
-      _proto._process = function _process() {
-        var scrollTop = this._getScrollTop() + this._config.offset;
-
-        var scrollHeight = this._getScrollHeight();
-
-        var maxScroll = this._config.offset + scrollHeight - this._getOffsetHeight();
-
-        if (this._scrollHeight !== scrollHeight) {
-          this.refresh();
-        }
-
-        if (scrollTop >= maxScroll) {
-          var target = this._targets[this._targets.length - 1];
-
-          if (this._activeTarget !== target) {
-            this._activate(target);
-          }
-
-          return;
-        }
-
-        if (this._activeTarget && scrollTop < this._offsets[0] && this._offsets[0] > 0) {
-          this._activeTarget = null;
-
-          this._clear();
-
-          return;
-        }
-
-        var offsetLength = this._offsets.length;
-
-        for (var i = offsetLength; i--;) {
-          var isActiveTarget = this._activeTarget !== this._targets[i] && scrollTop >= this._offsets[i] && (typeof this._offsets[i + 1] === 'undefined' || scrollTop < this._offsets[i + 1]);
-
-          if (isActiveTarget) {
-            this._activate(this._targets[i]);
-          }
-        }
-      };
-
-      _proto._activate = function _activate(target) {
-        this._activeTarget = target;
-
-        this._clear();
-
-        var queries = this._selector.split(','); // eslint-disable-next-line arrow-body-style
-
-
-        queries = queries.map(function (selector) {
-          return selector + "[data-target=\"" + target + "\"]," + (selector + "[href=\"" + target + "\"]");
-        });
-        var $link = $$$1([].slice.call(document.querySelectorAll(queries.join(','))));
-
-        if ($link.hasClass(ClassName.DROPDOWN_ITEM)) {
-          $link.closest(Selector.DROPDOWN).find(Selector.DROPDOWN_TOGGLE).addClass(ClassName.ACTIVE);
-          $link.addClass(ClassName.ACTIVE);
-        } else {
-          // Set triggered link as active
-          $link.addClass(ClassName.ACTIVE); // Set triggered links parents as active
-          // With both <ul> and <nav> markup a parent is the previous sibling of any nav ancestor
-
-          $link.parents(Selector.NAV_LIST_GROUP).prev(Selector.NAV_LINKS + ", " + Selector.LIST_ITEMS).addClass(ClassName.ACTIVE); // Handle special case when .nav-link is inside .nav-item
-
-          $link.parents(Selector.NAV_LIST_GROUP).prev(Selector.NAV_ITEMS).children(Selector.NAV_LINKS).addClass(ClassName.ACTIVE);
-        }
-
-        $$$1(this._scrollElement).trigger(Event.ACTIVATE, {
-          relatedTarget: target
-        });
-      };
-
-      _proto._clear = function _clear() {
-        var nodes = [].slice.call(document.querySelectorAll(this._selector));
-        $$$1(nodes).filter(Selector.ACTIVE).removeClass(ClassName.ACTIVE);
-      }; // Static
-
-
-      ScrollSpy._jQueryInterface = function _jQueryInterface(config) {
-        return this.each(function () {
-          var data = $$$1(this).data(DATA_KEY);
-
-          var _config = typeof config === 'object' && config;
-
-          if (!data) {
-            data = new ScrollSpy(this, _config);
-            $$$1(this).data(DATA_KEY, data);
-          }
-
-          if (typeof config === 'string') {
-            if (typeof data[config] === 'undefined') {
-              throw new TypeError("No method named \"" + config + "\"");
-            }
-
-            data[config]();
-          }
-        });
-      };
-
-      _createClass(ScrollSpy, null, [{
-        key: "VERSION",
-        get: function get() {
-          return VERSION;
-        }
-      }, {
-        key: "Default",
-        get: function get() {
-          return Default;
-        }
-      }]);
-
-      return ScrollSpy;
-    }();
-    /**
-     * ------------------------------------------------------------------------
-     * Data Api implementation
-     * ------------------------------------------------------------------------
-     */
-
-
-    $$$1(window).on(Event.LOAD_DATA_API, function () {
-      var scrollSpys = [].slice.call(document.querySelectorAll(Selector.DATA_SPY));
-      var scrollSpysLength = scrollSpys.length;
-
-      for (var i = scrollSpysLength; i--;) {
-        var $spy = $$$1(scrollSpys[i]);
-
-        ScrollSpy._jQueryInterface.call($spy, $spy.data());
-      }
-    });
-    /**
-     * ------------------------------------------------------------------------
-     * jQuery
-     * ------------------------------------------------------------------------
-     */
-
-    $$$1.fn[NAME] = ScrollSpy._jQueryInterface;
-    $$$1.fn[NAME].Constructor = ScrollSpy;
-
-    $$$1.fn[NAME].noConflict = function () {
-      $$$1.fn[NAME] = JQUERY_NO_CONFLICT;
-      return ScrollSpy._jQueryInterface;
-    };
-
-    return ScrollSpy;
-  }($);
-
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap (v4.1.3): tab.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
-  var Tab = function ($$$1) {
-    /**
-     * ------------------------------------------------------------------------
-     * Constants
-     * ------------------------------------------------------------------------
-     */
-    var NAME = 'tab';
-    var VERSION = '4.1.3';
-    var DATA_KEY = 'bs.tab';
-    var EVENT_KEY = "." + DATA_KEY;
-    var DATA_API_KEY = '.data-api';
-    var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
-    var Event = {
-      HIDE: "hide" + EVENT_KEY,
-      HIDDEN: "hidden" + EVENT_KEY,
-      SHOW: "show" + EVENT_KEY,
-      SHOWN: "shown" + EVENT_KEY,
-      CLICK_DATA_API: "click" + EVENT_KEY + DATA_API_KEY
-    };
-    var ClassName = {
-      DROPDOWN_MENU: 'dropdown-menu',
-      ACTIVE: 'active',
-      DISABLED: 'disabled',
-      FADE: 'fade',
-      SHOW: 'show'
-    };
-    var Selector = {
-      DROPDOWN: '.dropdown',
-      NAV_LIST_GROUP: '.nav, .list-group',
-      ACTIVE: '.active',
-      ACTIVE_UL: '> li > .active',
-      DATA_TOGGLE: '[data-toggle="tab"], [data-toggle="pill"], [data-toggle="list"]',
-      DROPDOWN_TOGGLE: '.dropdown-toggle',
-      DROPDOWN_ACTIVE_CHILD: '> .dropdown-menu .active'
-      /**
-       * ------------------------------------------------------------------------
-       * Class Definition
-       * ------------------------------------------------------------------------
-       */
-
-    };
-
-    var Tab =
-    /*#__PURE__*/
-    function () {
-      function Tab(element) {
-        this._element = element;
-      } // Getters
-
-
-      var _proto = Tab.prototype;
-
-      // Public
-      _proto.show = function show() {
-        var _this = this;
-
-        if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && $$$1(this._element).hasClass(ClassName.ACTIVE) || $$$1(this._element).hasClass(ClassName.DISABLED)) {
-          return;
-        }
-
-        var target;
-        var previous;
-        var listElement = $$$1(this._element).closest(Selector.NAV_LIST_GROUP)[0];
-        var selector = Util.getSelectorFromElement(this._element);
-
-        if (listElement) {
-          var itemSelector = listElement.nodeName === 'UL' ? Selector.ACTIVE_UL : Selector.ACTIVE;
-          previous = $$$1.makeArray($$$1(listElement).find(itemSelector));
-          previous = previous[previous.length - 1];
-        }
-
-        var hideEvent = $$$1.Event(Event.HIDE, {
-          relatedTarget: this._element
-        });
-        var showEvent = $$$1.Event(Event.SHOW, {
-          relatedTarget: previous
-        });
-
-        if (previous) {
-          $$$1(previous).trigger(hideEvent);
-        }
-
-        $$$1(this._element).trigger(showEvent);
-
-        if (showEvent.isDefaultPrevented() || hideEvent.isDefaultPrevented()) {
-          return;
-        }
-
-        if (selector) {
-          target = document.querySelector(selector);
-        }
-
-        this._activate(this._element, listElement);
 
         var complete = function complete() {
-          var hiddenEvent = $$$1.Event(Event.HIDDEN, {
-            relatedTarget: _this._element
-          });
-          var shownEvent = $$$1.Event(Event.SHOWN, {
-            relatedTarget: previous
-          });
-          $$$1(previous).trigger(hiddenEvent);
-          $$$1(_this._element).trigger(shownEvent);
+          if (_this.config.animation) {
+            _this._fixTransition();
+          }
+
+          var prevHoverState = _this._hoverState;
+          _this._hoverState = null;
+          $$$1(_this.element).trigger(_this.constructor.Event.SHOWN);
+
+          if (prevHoverState === HoverState.OUT) {
+            _this._leave(null, _this);
+          }
         };
 
-        if (target) {
-          this._activate(target, target.parentNode, complete);
+        if (Util.supportsTransitionEnd() && $$$1(this.tip).hasClass(ClassName.FADE)) {
+          $$$1(this.tip).one(Util.TRANSITION_END, complete).emulateTransitionEnd(Tooltip._TRANSITION_DURATION);
         } else {
           complete();
         }
-      };
+      }
+    };
 
-      _proto.dispose = function dispose() {
-        $$$1.removeData(this._element, DATA_KEY);
-        this._element = null;
-      }; // Private
+    _proto.hide = function hide(callback) {
+      var _this2 = this;
 
+      var tip = this.getTipElement();
+      var hideEvent = $$$1.Event(this.constructor.Event.HIDE);
 
-      _proto._activate = function _activate(element, container, callback) {
-        var _this2 = this;
-
-        var activeElements;
-
-        if (container.nodeName === 'UL') {
-          activeElements = $$$1(container).find(Selector.ACTIVE_UL);
-        } else {
-          activeElements = $$$1(container).children(Selector.ACTIVE);
+      var complete = function complete() {
+        if (_this2._hoverState !== HoverState.SHOW && tip.parentNode) {
+          tip.parentNode.removeChild(tip);
         }
 
-        var active = activeElements[0];
-        var isTransitioning = callback && active && $$$1(active).hasClass(ClassName.FADE);
+        _this2._cleanTipClass();
 
-        var complete = function complete() {
-          return _this2._transitionComplete(element, active, callback);
-        };
+        _this2.element.removeAttribute('aria-describedby');
 
-        if (active && isTransitioning) {
-          var transitionDuration = Util.getTransitionDurationFromElement(active);
-          $$$1(active).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
-        } else {
-          complete();
-        }
-      };
+        $$$1(_this2.element).trigger(_this2.constructor.Event.HIDDEN);
 
-      _proto._transitionComplete = function _transitionComplete(element, active, callback) {
-        if (active) {
-          $$$1(active).removeClass(ClassName.SHOW + " " + ClassName.ACTIVE);
-          var dropdownChild = $$$1(active.parentNode).find(Selector.DROPDOWN_ACTIVE_CHILD)[0];
-
-          if (dropdownChild) {
-            $$$1(dropdownChild).removeClass(ClassName.ACTIVE);
-          }
-
-          if (active.getAttribute('role') === 'tab') {
-            active.setAttribute('aria-selected', false);
-          }
-        }
-
-        $$$1(element).addClass(ClassName.ACTIVE);
-
-        if (element.getAttribute('role') === 'tab') {
-          element.setAttribute('aria-selected', true);
-        }
-
-        Util.reflow(element);
-        $$$1(element).addClass(ClassName.SHOW);
-
-        if (element.parentNode && $$$1(element.parentNode).hasClass(ClassName.DROPDOWN_MENU)) {
-          var dropdownElement = $$$1(element).closest(Selector.DROPDOWN)[0];
-
-          if (dropdownElement) {
-            var dropdownToggleList = [].slice.call(dropdownElement.querySelectorAll(Selector.DROPDOWN_TOGGLE));
-            $$$1(dropdownToggleList).addClass(ClassName.ACTIVE);
-          }
-
-          element.setAttribute('aria-expanded', true);
+        if (_this2._popper !== null) {
+          _this2._popper.destroy();
         }
 
         if (callback) {
           callback();
         }
-      }; // Static
-
-
-      Tab._jQueryInterface = function _jQueryInterface(config) {
-        return this.each(function () {
-          var $this = $$$1(this);
-          var data = $this.data(DATA_KEY);
-
-          if (!data) {
-            data = new Tab(this);
-            $this.data(DATA_KEY, data);
-          }
-
-          if (typeof config === 'string') {
-            if (typeof data[config] === 'undefined') {
-              throw new TypeError("No method named \"" + config + "\"");
-            }
-
-            data[config]();
-          }
-        });
       };
 
-      _createClass(Tab, null, [{
-        key: "VERSION",
-        get: function get() {
-          return VERSION;
-        }
-      }]);
+      $$$1(this.element).trigger(hideEvent);
 
-      return Tab;
-    }();
-    /**
-     * ------------------------------------------------------------------------
-     * Data Api implementation
-     * ------------------------------------------------------------------------
-     */
+      if (hideEvent.isDefaultPrevented()) {
+        return;
+      }
 
+      $$$1(tip).removeClass(ClassName.SHOW); // If this is a touch-enabled device we remove the extra
+      // empty mouseover listeners we added for iOS support
 
-    $$$1(document).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, function (event) {
-      event.preventDefault();
+      if ('ontouchstart' in document.documentElement) {
+        $$$1('body').children().off('mouseover', null, $$$1.noop);
+      }
 
-      Tab._jQueryInterface.call($$$1(this), 'show');
-    });
-    /**
-     * ------------------------------------------------------------------------
-     * jQuery
-     * ------------------------------------------------------------------------
-     */
+      this._activeTrigger[Trigger.CLICK] = false;
+      this._activeTrigger[Trigger.FOCUS] = false;
+      this._activeTrigger[Trigger.HOVER] = false;
 
-    $$$1.fn[NAME] = Tab._jQueryInterface;
-    $$$1.fn[NAME].Constructor = Tab;
+      if (Util.supportsTransitionEnd() && $$$1(this.tip).hasClass(ClassName.FADE)) {
+        $$$1(tip).one(Util.TRANSITION_END, complete).emulateTransitionEnd(TRANSITION_DURATION);
+      } else {
+        complete();
+      }
 
-    $$$1.fn[NAME].noConflict = function () {
-      $$$1.fn[NAME] = JQUERY_NO_CONFLICT;
-      return Tab._jQueryInterface;
+      this._hoverState = '';
     };
 
-    return Tab;
-  }($);
+    _proto.update = function update() {
+      if (this._popper !== null) {
+        this._popper.scheduleUpdate();
+      }
+    }; // Protected
 
+
+    _proto.isWithContent = function isWithContent() {
+      return Boolean(this.getTitle());
+    };
+
+    _proto.addAttachmentClass = function addAttachmentClass(attachment) {
+      $$$1(this.getTipElement()).addClass(CLASS_PREFIX + "-" + attachment);
+    };
+
+    _proto.getTipElement = function getTipElement() {
+      this.tip = this.tip || $$$1(this.config.template)[0];
+      return this.tip;
+    };
+
+    _proto.setContent = function setContent() {
+      var $tip = $$$1(this.getTipElement());
+      this.setElementContent($tip.find(Selector.TOOLTIP_INNER), this.getTitle());
+      $tip.removeClass(ClassName.FADE + " " + ClassName.SHOW);
+    };
+
+    _proto.setElementContent = function setElementContent($element, content) {
+      var html = this.config.html;
+
+      if (typeof content === 'object' && (content.nodeType || content.jquery)) {
+        // Content is a DOM node or a jQuery
+        if (html) {
+          if (!$$$1(content).parent().is($element)) {
+            $element.empty().append(content);
+          }
+        } else {
+          $element.text($$$1(content).text());
+        }
+      } else {
+        $element[html ? 'html' : 'text'](content);
+      }
+    };
+
+    _proto.getTitle = function getTitle() {
+      var title = this.element.getAttribute('data-original-title');
+
+      if (!title) {
+        title = typeof this.config.title === 'function' ? this.config.title.call(this.element) : this.config.title;
+      }
+
+      return title;
+    }; // Private
+
+
+    _proto._getAttachment = function _getAttachment(placement) {
+      return AttachmentMap[placement.toUpperCase()];
+    };
+
+    _proto._setListeners = function _setListeners() {
+      var _this3 = this;
+
+      var triggers = this.config.trigger.split(' ');
+      triggers.forEach(function (trigger) {
+        if (trigger === 'click') {
+          $$$1(_this3.element).on(_this3.constructor.Event.CLICK, _this3.config.selector, function (event) {
+            return _this3.toggle(event);
+          });
+        } else if (trigger !== Trigger.MANUAL) {
+          var eventIn = trigger === Trigger.HOVER ? _this3.constructor.Event.MOUSEENTER : _this3.constructor.Event.FOCUSIN;
+          var eventOut = trigger === Trigger.HOVER ? _this3.constructor.Event.MOUSELEAVE : _this3.constructor.Event.FOCUSOUT;
+          $$$1(_this3.element).on(eventIn, _this3.config.selector, function (event) {
+            return _this3._enter(event);
+          }).on(eventOut, _this3.config.selector, function (event) {
+            return _this3._leave(event);
+          });
+        }
+
+        $$$1(_this3.element).closest('.modal').on('hide.bs.modal', function () {
+          return _this3.hide();
+        });
+      });
+
+      if (this.config.selector) {
+        this.config = _extends({}, this.config, {
+          trigger: 'manual',
+          selector: ''
+        });
+      } else {
+        this._fixTitle();
+      }
+    };
+
+    _proto._fixTitle = function _fixTitle() {
+      var titleType = typeof this.element.getAttribute('data-original-title');
+
+      if (this.element.getAttribute('title') || titleType !== 'string') {
+        this.element.setAttribute('data-original-title', this.element.getAttribute('title') || '');
+        this.element.setAttribute('title', '');
+      }
+    };
+
+    _proto._enter = function _enter(event, context) {
+      var dataKey = this.constructor.DATA_KEY;
+      context = context || $$$1(event.currentTarget).data(dataKey);
+
+      if (!context) {
+        context = new this.constructor(event.currentTarget, this._getDelegateConfig());
+        $$$1(event.currentTarget).data(dataKey, context);
+      }
+
+      if (event) {
+        context._activeTrigger[event.type === 'focusin' ? Trigger.FOCUS : Trigger.HOVER] = true;
+      }
+
+      if ($$$1(context.getTipElement()).hasClass(ClassName.SHOW) || context._hoverState === HoverState.SHOW) {
+        context._hoverState = HoverState.SHOW;
+        return;
+      }
+
+      clearTimeout(context._timeout);
+      context._hoverState = HoverState.SHOW;
+
+      if (!context.config.delay || !context.config.delay.show) {
+        context.show();
+        return;
+      }
+
+      context._timeout = setTimeout(function () {
+        if (context._hoverState === HoverState.SHOW) {
+          context.show();
+        }
+      }, context.config.delay.show);
+    };
+
+    _proto._leave = function _leave(event, context) {
+      var dataKey = this.constructor.DATA_KEY;
+      context = context || $$$1(event.currentTarget).data(dataKey);
+
+      if (!context) {
+        context = new this.constructor(event.currentTarget, this._getDelegateConfig());
+        $$$1(event.currentTarget).data(dataKey, context);
+      }
+
+      if (event) {
+        context._activeTrigger[event.type === 'focusout' ? Trigger.FOCUS : Trigger.HOVER] = false;
+      }
+
+      if (context._isWithActiveTrigger()) {
+        return;
+      }
+
+      clearTimeout(context._timeout);
+      context._hoverState = HoverState.OUT;
+
+      if (!context.config.delay || !context.config.delay.hide) {
+        context.hide();
+        return;
+      }
+
+      context._timeout = setTimeout(function () {
+        if (context._hoverState === HoverState.OUT) {
+          context.hide();
+        }
+      }, context.config.delay.hide);
+    };
+
+    _proto._isWithActiveTrigger = function _isWithActiveTrigger() {
+      for (var trigger in this._activeTrigger) {
+        if (this._activeTrigger[trigger]) {
+          return true;
+        }
+      }
+
+      return false;
+    };
+
+    _proto._getConfig = function _getConfig(config) {
+      config = _extends({}, this.constructor.Default, $$$1(this.element).data(), config);
+
+      if (typeof config.delay === 'number') {
+        config.delay = {
+          show: config.delay,
+          hide: config.delay
+        };
+      }
+
+      if (typeof config.title === 'number') {
+        config.title = config.title.toString();
+      }
+
+      if (typeof config.content === 'number') {
+        config.content = config.content.toString();
+      }
+
+      Util.typeCheckConfig(NAME, config, this.constructor.DefaultType);
+      return config;
+    };
+
+    _proto._getDelegateConfig = function _getDelegateConfig() {
+      var config = {};
+
+      if (this.config) {
+        for (var key in this.config) {
+          if (this.constructor.Default[key] !== this.config[key]) {
+            config[key] = this.config[key];
+          }
+        }
+      }
+
+      return config;
+    };
+
+    _proto._cleanTipClass = function _cleanTipClass() {
+      var $tip = $$$1(this.getTipElement());
+      var tabClass = $tip.attr('class').match(BSCLS_PREFIX_REGEX);
+
+      if (tabClass !== null && tabClass.length > 0) {
+        $tip.removeClass(tabClass.join(''));
+      }
+    };
+
+    _proto._handlePopperPlacementChange = function _handlePopperPlacementChange(data) {
+      this._cleanTipClass();
+
+      this.addAttachmentClass(this._getAttachment(data.placement));
+    };
+
+    _proto._fixTransition = function _fixTransition() {
+      var tip = this.getTipElement();
+      var initConfigAnimation = this.config.animation;
+
+      if (tip.getAttribute('x-placement') !== null) {
+        return;
+      }
+
+      $$$1(tip).removeClass(ClassName.FADE);
+      this.config.animation = false;
+      this.hide();
+      this.show();
+      this.config.animation = initConfigAnimation;
+    }; // Static
+
+
+    Tooltip._jQueryInterface = function _jQueryInterface(config) {
+      return this.each(function () {
+        var data = $$$1(this).data(DATA_KEY);
+
+        var _config = typeof config === 'object' && config;
+
+        if (!data && /dispose|hide/.test(config)) {
+          return;
+        }
+
+        if (!data) {
+          data = new Tooltip(this, _config);
+          $$$1(this).data(DATA_KEY, data);
+        }
+
+        if (typeof config === 'string') {
+          if (typeof data[config] === 'undefined') {
+            throw new TypeError("No method named \"" + config + "\"");
+          }
+
+          data[config]();
+        }
+      });
+    };
+
+    _createClass(Tooltip, null, [{
+      key: "VERSION",
+      get: function get() {
+        return VERSION;
+      }
+    }, {
+      key: "Default",
+      get: function get() {
+        return Default;
+      }
+    }, {
+      key: "NAME",
+      get: function get() {
+        return NAME;
+      }
+    }, {
+      key: "DATA_KEY",
+      get: function get() {
+        return DATA_KEY;
+      }
+    }, {
+      key: "Event",
+      get: function get() {
+        return Event;
+      }
+    }, {
+      key: "EVENT_KEY",
+      get: function get() {
+        return EVENT_KEY;
+      }
+    }, {
+      key: "DefaultType",
+      get: function get() {
+        return DefaultType;
+      }
+    }]);
+    return Tooltip;
+  }();
   /**
-   * --------------------------------------------------------------------------
-   * Bootstrap (v4.1.3): index.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-   * --------------------------------------------------------------------------
+   * ------------------------------------------------------------------------
+   * jQuery
+   * ------------------------------------------------------------------------
    */
 
-  (function ($$$1) {
-    if (typeof $$$1 === 'undefined') {
-      throw new TypeError('Bootstrap\'s JavaScript requires jQuery. jQuery must be included before Bootstrap\'s JavaScript.');
+
+  $$$1.fn[NAME] = Tooltip._jQueryInterface;
+  $$$1.fn[NAME].Constructor = Tooltip;
+
+  $$$1.fn[NAME].noConflict = function () {
+    $$$1.fn[NAME] = JQUERY_NO_CONFLICT;
+    return Tooltip._jQueryInterface;
+  };
+
+  return Tooltip;
+}($, Popper);
+
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap (v4.0.0): popover.js
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
+var Popover = function ($$$1) {
+  /**
+   * ------------------------------------------------------------------------
+   * Constants
+   * ------------------------------------------------------------------------
+   */
+  var NAME = 'popover';
+  var VERSION = '4.0.0';
+  var DATA_KEY = 'bs.popover';
+  var EVENT_KEY = "." + DATA_KEY;
+  var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
+  var CLASS_PREFIX = 'bs-popover';
+  var BSCLS_PREFIX_REGEX = new RegExp("(^|\\s)" + CLASS_PREFIX + "\\S+", 'g');
+  var Default = _extends({}, Tooltip.Default, {
+    placement: 'right',
+    trigger: 'click',
+    content: '',
+    template: '<div class="popover" role="tooltip">' + '<div class="arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div></div>'
+  });
+  var DefaultType = _extends({}, Tooltip.DefaultType, {
+    content: '(string|element|function)'
+  });
+  var ClassName = {
+    FADE: 'fade',
+    SHOW: 'show'
+  };
+  var Selector = {
+    TITLE: '.popover-header',
+    CONTENT: '.popover-body'
+  };
+  var Event = {
+    HIDE: "hide" + EVENT_KEY,
+    HIDDEN: "hidden" + EVENT_KEY,
+    SHOW: "show" + EVENT_KEY,
+    SHOWN: "shown" + EVENT_KEY,
+    INSERTED: "inserted" + EVENT_KEY,
+    CLICK: "click" + EVENT_KEY,
+    FOCUSIN: "focusin" + EVENT_KEY,
+    FOCUSOUT: "focusout" + EVENT_KEY,
+    MOUSEENTER: "mouseenter" + EVENT_KEY,
+    MOUSELEAVE: "mouseleave" + EVENT_KEY
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
+  };
+
+  var Popover =
+  /*#__PURE__*/
+  function (_Tooltip) {
+    _inheritsLoose(Popover, _Tooltip);
+
+    function Popover() {
+      return _Tooltip.apply(this, arguments) || this;
     }
 
-    var version = $$$1.fn.jquery.split(' ')[0].split('.');
-    var minMajor = 1;
-    var ltMajor = 2;
-    var minMinor = 9;
-    var minPatch = 1;
-    var maxMajor = 4;
+    var _proto = Popover.prototype;
 
-    if (version[0] < ltMajor && version[1] < minMinor || version[0] === minMajor && version[1] === minMinor && version[2] < minPatch || version[0] >= maxMajor) {
-      throw new Error('Bootstrap\'s JavaScript requires at least jQuery v1.9.1 but less than v4.0.0');
+    // Overrides
+    _proto.isWithContent = function isWithContent() {
+      return this.getTitle() || this._getContent();
+    };
+
+    _proto.addAttachmentClass = function addAttachmentClass(attachment) {
+      $$$1(this.getTipElement()).addClass(CLASS_PREFIX + "-" + attachment);
+    };
+
+    _proto.getTipElement = function getTipElement() {
+      this.tip = this.tip || $$$1(this.config.template)[0];
+      return this.tip;
+    };
+
+    _proto.setContent = function setContent() {
+      var $tip = $$$1(this.getTipElement()); // We use append for html objects to maintain js events
+
+      this.setElementContent($tip.find(Selector.TITLE), this.getTitle());
+
+      var content = this._getContent();
+
+      if (typeof content === 'function') {
+        content = content.call(this.element);
+      }
+
+      this.setElementContent($tip.find(Selector.CONTENT), content);
+      $tip.removeClass(ClassName.FADE + " " + ClassName.SHOW);
+    }; // Private
+
+
+    _proto._getContent = function _getContent() {
+      return this.element.getAttribute('data-content') || this.config.content;
+    };
+
+    _proto._cleanTipClass = function _cleanTipClass() {
+      var $tip = $$$1(this.getTipElement());
+      var tabClass = $tip.attr('class').match(BSCLS_PREFIX_REGEX);
+
+      if (tabClass !== null && tabClass.length > 0) {
+        $tip.removeClass(tabClass.join(''));
+      }
+    }; // Static
+
+
+    Popover._jQueryInterface = function _jQueryInterface(config) {
+      return this.each(function () {
+        var data = $$$1(this).data(DATA_KEY);
+
+        var _config = typeof config === 'object' ? config : null;
+
+        if (!data && /destroy|hide/.test(config)) {
+          return;
+        }
+
+        if (!data) {
+          data = new Popover(this, _config);
+          $$$1(this).data(DATA_KEY, data);
+        }
+
+        if (typeof config === 'string') {
+          if (typeof data[config] === 'undefined') {
+            throw new TypeError("No method named \"" + config + "\"");
+          }
+
+          data[config]();
+        }
+      });
+    };
+
+    _createClass(Popover, null, [{
+      key: "VERSION",
+      // Getters
+      get: function get() {
+        return VERSION;
+      }
+    }, {
+      key: "Default",
+      get: function get() {
+        return Default;
+      }
+    }, {
+      key: "NAME",
+      get: function get() {
+        return NAME;
+      }
+    }, {
+      key: "DATA_KEY",
+      get: function get() {
+        return DATA_KEY;
+      }
+    }, {
+      key: "Event",
+      get: function get() {
+        return Event;
+      }
+    }, {
+      key: "EVENT_KEY",
+      get: function get() {
+        return EVENT_KEY;
+      }
+    }, {
+      key: "DefaultType",
+      get: function get() {
+        return DefaultType;
+      }
+    }]);
+    return Popover;
+  }(Tooltip);
+  /**
+   * ------------------------------------------------------------------------
+   * jQuery
+   * ------------------------------------------------------------------------
+   */
+
+
+  $$$1.fn[NAME] = Popover._jQueryInterface;
+  $$$1.fn[NAME].Constructor = Popover;
+
+  $$$1.fn[NAME].noConflict = function () {
+    $$$1.fn[NAME] = JQUERY_NO_CONFLICT;
+    return Popover._jQueryInterface;
+  };
+
+  return Popover;
+}($);
+
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap (v4.0.0): scrollspy.js
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
+var ScrollSpy = function ($$$1) {
+  /**
+   * ------------------------------------------------------------------------
+   * Constants
+   * ------------------------------------------------------------------------
+   */
+  var NAME = 'scrollspy';
+  var VERSION = '4.0.0';
+  var DATA_KEY = 'bs.scrollspy';
+  var EVENT_KEY = "." + DATA_KEY;
+  var DATA_API_KEY = '.data-api';
+  var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
+  var Default = {
+    offset: 10,
+    method: 'auto',
+    target: ''
+  };
+  var DefaultType = {
+    offset: 'number',
+    method: 'string',
+    target: '(string|element)'
+  };
+  var Event = {
+    ACTIVATE: "activate" + EVENT_KEY,
+    SCROLL: "scroll" + EVENT_KEY,
+    LOAD_DATA_API: "load" + EVENT_KEY + DATA_API_KEY
+  };
+  var ClassName = {
+    DROPDOWN_ITEM: 'dropdown-item',
+    DROPDOWN_MENU: 'dropdown-menu',
+    ACTIVE: 'active'
+  };
+  var Selector = {
+    DATA_SPY: '[data-spy="scroll"]',
+    ACTIVE: '.active',
+    NAV_LIST_GROUP: '.nav, .list-group',
+    NAV_LINKS: '.nav-link',
+    NAV_ITEMS: '.nav-item',
+    LIST_ITEMS: '.list-group-item',
+    DROPDOWN: '.dropdown',
+    DROPDOWN_ITEMS: '.dropdown-item',
+    DROPDOWN_TOGGLE: '.dropdown-toggle'
+  };
+  var OffsetMethod = {
+    OFFSET: 'offset',
+    POSITION: 'position'
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
+  };
+
+  var ScrollSpy =
+  /*#__PURE__*/
+  function () {
+    function ScrollSpy(element, config) {
+      var _this = this;
+
+      this._element = element;
+      this._scrollElement = element.tagName === 'BODY' ? window : element;
+      this._config = this._getConfig(config);
+      this._selector = this._config.target + " " + Selector.NAV_LINKS + "," + (this._config.target + " " + Selector.LIST_ITEMS + ",") + (this._config.target + " " + Selector.DROPDOWN_ITEMS);
+      this._offsets = [];
+      this._targets = [];
+      this._activeTarget = null;
+      this._scrollHeight = 0;
+      $$$1(this._scrollElement).on(Event.SCROLL, function (event) {
+        return _this._process(event);
+      });
+      this.refresh();
+
+      this._process();
+    } // Getters
+
+
+    var _proto = ScrollSpy.prototype;
+
+    // Public
+    _proto.refresh = function refresh() {
+      var _this2 = this;
+
+      var autoMethod = this._scrollElement === this._scrollElement.window ? OffsetMethod.OFFSET : OffsetMethod.POSITION;
+      var offsetMethod = this._config.method === 'auto' ? autoMethod : this._config.method;
+      var offsetBase = offsetMethod === OffsetMethod.POSITION ? this._getScrollTop() : 0;
+      this._offsets = [];
+      this._targets = [];
+      this._scrollHeight = this._getScrollHeight();
+      var targets = $$$1.makeArray($$$1(this._selector));
+      targets.map(function (element) {
+        var target;
+        var targetSelector = Util.getSelectorFromElement(element);
+
+        if (targetSelector) {
+          target = $$$1(targetSelector)[0];
+        }
+
+        if (target) {
+          var targetBCR = target.getBoundingClientRect();
+
+          if (targetBCR.width || targetBCR.height) {
+            // TODO (fat): remove sketch reliance on jQuery position/offset
+            return [$$$1(target)[offsetMethod]().top + offsetBase, targetSelector];
+          }
+        }
+
+        return null;
+      }).filter(function (item) {
+        return item;
+      }).sort(function (a, b) {
+        return a[0] - b[0];
+      }).forEach(function (item) {
+        _this2._offsets.push(item[0]);
+
+        _this2._targets.push(item[1]);
+      });
+    };
+
+    _proto.dispose = function dispose() {
+      $$$1.removeData(this._element, DATA_KEY);
+      $$$1(this._scrollElement).off(EVENT_KEY);
+      this._element = null;
+      this._scrollElement = null;
+      this._config = null;
+      this._selector = null;
+      this._offsets = null;
+      this._targets = null;
+      this._activeTarget = null;
+      this._scrollHeight = null;
+    }; // Private
+
+
+    _proto._getConfig = function _getConfig(config) {
+      config = _extends({}, Default, config);
+
+      if (typeof config.target !== 'string') {
+        var id = $$$1(config.target).attr('id');
+
+        if (!id) {
+          id = Util.getUID(NAME);
+          $$$1(config.target).attr('id', id);
+        }
+
+        config.target = "#" + id;
+      }
+
+      Util.typeCheckConfig(NAME, config, DefaultType);
+      return config;
+    };
+
+    _proto._getScrollTop = function _getScrollTop() {
+      return this._scrollElement === window ? this._scrollElement.pageYOffset : this._scrollElement.scrollTop;
+    };
+
+    _proto._getScrollHeight = function _getScrollHeight() {
+      return this._scrollElement.scrollHeight || Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+    };
+
+    _proto._getOffsetHeight = function _getOffsetHeight() {
+      return this._scrollElement === window ? window.innerHeight : this._scrollElement.getBoundingClientRect().height;
+    };
+
+    _proto._process = function _process() {
+      var scrollTop = this._getScrollTop() + this._config.offset;
+
+      var scrollHeight = this._getScrollHeight();
+
+      var maxScroll = this._config.offset + scrollHeight - this._getOffsetHeight();
+
+      if (this._scrollHeight !== scrollHeight) {
+        this.refresh();
+      }
+
+      if (scrollTop >= maxScroll) {
+        var target = this._targets[this._targets.length - 1];
+
+        if (this._activeTarget !== target) {
+          this._activate(target);
+        }
+
+        return;
+      }
+
+      if (this._activeTarget && scrollTop < this._offsets[0] && this._offsets[0] > 0) {
+        this._activeTarget = null;
+
+        this._clear();
+
+        return;
+      }
+
+      for (var i = this._offsets.length; i--;) {
+        var isActiveTarget = this._activeTarget !== this._targets[i] && scrollTop >= this._offsets[i] && (typeof this._offsets[i + 1] === 'undefined' || scrollTop < this._offsets[i + 1]);
+
+        if (isActiveTarget) {
+          this._activate(this._targets[i]);
+        }
+      }
+    };
+
+    _proto._activate = function _activate(target) {
+      this._activeTarget = target;
+
+      this._clear();
+
+      var queries = this._selector.split(','); // eslint-disable-next-line arrow-body-style
+
+
+      queries = queries.map(function (selector) {
+        return selector + "[data-target=\"" + target + "\"]," + (selector + "[href=\"" + target + "\"]");
+      });
+      var $link = $$$1(queries.join(','));
+
+      if ($link.hasClass(ClassName.DROPDOWN_ITEM)) {
+        $link.closest(Selector.DROPDOWN).find(Selector.DROPDOWN_TOGGLE).addClass(ClassName.ACTIVE);
+        $link.addClass(ClassName.ACTIVE);
+      } else {
+        // Set triggered link as active
+        $link.addClass(ClassName.ACTIVE); // Set triggered links parents as active
+        // With both <ul> and <nav> markup a parent is the previous sibling of any nav ancestor
+
+        $link.parents(Selector.NAV_LIST_GROUP).prev(Selector.NAV_LINKS + ", " + Selector.LIST_ITEMS).addClass(ClassName.ACTIVE); // Handle special case when .nav-link is inside .nav-item
+
+        $link.parents(Selector.NAV_LIST_GROUP).prev(Selector.NAV_ITEMS).children(Selector.NAV_LINKS).addClass(ClassName.ACTIVE);
+      }
+
+      $$$1(this._scrollElement).trigger(Event.ACTIVATE, {
+        relatedTarget: target
+      });
+    };
+
+    _proto._clear = function _clear() {
+      $$$1(this._selector).filter(Selector.ACTIVE).removeClass(ClassName.ACTIVE);
+    }; // Static
+
+
+    ScrollSpy._jQueryInterface = function _jQueryInterface(config) {
+      return this.each(function () {
+        var data = $$$1(this).data(DATA_KEY);
+
+        var _config = typeof config === 'object' && config;
+
+        if (!data) {
+          data = new ScrollSpy(this, _config);
+          $$$1(this).data(DATA_KEY, data);
+        }
+
+        if (typeof config === 'string') {
+          if (typeof data[config] === 'undefined') {
+            throw new TypeError("No method named \"" + config + "\"");
+          }
+
+          data[config]();
+        }
+      });
+    };
+
+    _createClass(ScrollSpy, null, [{
+      key: "VERSION",
+      get: function get() {
+        return VERSION;
+      }
+    }, {
+      key: "Default",
+      get: function get() {
+        return Default;
+      }
+    }]);
+    return ScrollSpy;
+  }();
+  /**
+   * ------------------------------------------------------------------------
+   * Data Api implementation
+   * ------------------------------------------------------------------------
+   */
+
+
+  $$$1(window).on(Event.LOAD_DATA_API, function () {
+    var scrollSpys = $$$1.makeArray($$$1(Selector.DATA_SPY));
+
+    for (var i = scrollSpys.length; i--;) {
+      var $spy = $$$1(scrollSpys[i]);
+
+      ScrollSpy._jQueryInterface.call($spy, $spy.data());
     }
-  })($);
+  });
+  /**
+   * ------------------------------------------------------------------------
+   * jQuery
+   * ------------------------------------------------------------------------
+   */
 
-  exports.Util = Util;
-  exports.Alert = Alert;
-  exports.Button = Button;
-  exports.Carousel = Carousel;
-  exports.Collapse = Collapse;
-  exports.Dropdown = Dropdown;
-  exports.Modal = Modal;
-  exports.Popover = Popover;
-  exports.Scrollspy = ScrollSpy;
-  exports.Tab = Tab;
-  exports.Tooltip = Tooltip;
+  $$$1.fn[NAME] = ScrollSpy._jQueryInterface;
+  $$$1.fn[NAME].Constructor = ScrollSpy;
 
-  Object.defineProperty(exports, '__esModule', { value: true });
+  $$$1.fn[NAME].noConflict = function () {
+    $$$1.fn[NAME] = JQUERY_NO_CONFLICT;
+    return ScrollSpy._jQueryInterface;
+  };
+
+  return ScrollSpy;
+}($);
+
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap (v4.0.0): tab.js
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
+var Tab = function ($$$1) {
+  /**
+   * ------------------------------------------------------------------------
+   * Constants
+   * ------------------------------------------------------------------------
+   */
+  var NAME = 'tab';
+  var VERSION = '4.0.0';
+  var DATA_KEY = 'bs.tab';
+  var EVENT_KEY = "." + DATA_KEY;
+  var DATA_API_KEY = '.data-api';
+  var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
+  var TRANSITION_DURATION = 150;
+  var Event = {
+    HIDE: "hide" + EVENT_KEY,
+    HIDDEN: "hidden" + EVENT_KEY,
+    SHOW: "show" + EVENT_KEY,
+    SHOWN: "shown" + EVENT_KEY,
+    CLICK_DATA_API: "click" + EVENT_KEY + DATA_API_KEY
+  };
+  var ClassName = {
+    DROPDOWN_MENU: 'dropdown-menu',
+    ACTIVE: 'active',
+    DISABLED: 'disabled',
+    FADE: 'fade',
+    SHOW: 'show'
+  };
+  var Selector = {
+    DROPDOWN: '.dropdown',
+    NAV_LIST_GROUP: '.nav, .list-group',
+    ACTIVE: '.active',
+    ACTIVE_UL: '> li > .active',
+    DATA_TOGGLE: '[data-toggle="tab"], [data-toggle="pill"], [data-toggle="list"]',
+    DROPDOWN_TOGGLE: '.dropdown-toggle',
+    DROPDOWN_ACTIVE_CHILD: '> .dropdown-menu .active'
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
+  };
+
+  var Tab =
+  /*#__PURE__*/
+  function () {
+    function Tab(element) {
+      this._element = element;
+    } // Getters
+
+
+    var _proto = Tab.prototype;
+
+    // Public
+    _proto.show = function show() {
+      var _this = this;
+
+      if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && $$$1(this._element).hasClass(ClassName.ACTIVE) || $$$1(this._element).hasClass(ClassName.DISABLED)) {
+        return;
+      }
+
+      var target;
+      var previous;
+      var listElement = $$$1(this._element).closest(Selector.NAV_LIST_GROUP)[0];
+      var selector = Util.getSelectorFromElement(this._element);
+
+      if (listElement) {
+        var itemSelector = listElement.nodeName === 'UL' ? Selector.ACTIVE_UL : Selector.ACTIVE;
+        previous = $$$1.makeArray($$$1(listElement).find(itemSelector));
+        previous = previous[previous.length - 1];
+      }
+
+      var hideEvent = $$$1.Event(Event.HIDE, {
+        relatedTarget: this._element
+      });
+      var showEvent = $$$1.Event(Event.SHOW, {
+        relatedTarget: previous
+      });
+
+      if (previous) {
+        $$$1(previous).trigger(hideEvent);
+      }
+
+      $$$1(this._element).trigger(showEvent);
+
+      if (showEvent.isDefaultPrevented() || hideEvent.isDefaultPrevented()) {
+        return;
+      }
+
+      if (selector) {
+        target = $$$1(selector)[0];
+      }
+
+      this._activate(this._element, listElement);
+
+      var complete = function complete() {
+        var hiddenEvent = $$$1.Event(Event.HIDDEN, {
+          relatedTarget: _this._element
+        });
+        var shownEvent = $$$1.Event(Event.SHOWN, {
+          relatedTarget: previous
+        });
+        $$$1(previous).trigger(hiddenEvent);
+        $$$1(_this._element).trigger(shownEvent);
+      };
+
+      if (target) {
+        this._activate(target, target.parentNode, complete);
+      } else {
+        complete();
+      }
+    };
+
+    _proto.dispose = function dispose() {
+      $$$1.removeData(this._element, DATA_KEY);
+      this._element = null;
+    }; // Private
+
+
+    _proto._activate = function _activate(element, container, callback) {
+      var _this2 = this;
+
+      var activeElements;
+
+      if (container.nodeName === 'UL') {
+        activeElements = $$$1(container).find(Selector.ACTIVE_UL);
+      } else {
+        activeElements = $$$1(container).children(Selector.ACTIVE);
+      }
+
+      var active = activeElements[0];
+      var isTransitioning = callback && Util.supportsTransitionEnd() && active && $$$1(active).hasClass(ClassName.FADE);
+
+      var complete = function complete() {
+        return _this2._transitionComplete(element, active, callback);
+      };
+
+      if (active && isTransitioning) {
+        $$$1(active).one(Util.TRANSITION_END, complete).emulateTransitionEnd(TRANSITION_DURATION);
+      } else {
+        complete();
+      }
+    };
+
+    _proto._transitionComplete = function _transitionComplete(element, active, callback) {
+      if (active) {
+        $$$1(active).removeClass(ClassName.SHOW + " " + ClassName.ACTIVE);
+        var dropdownChild = $$$1(active.parentNode).find(Selector.DROPDOWN_ACTIVE_CHILD)[0];
+
+        if (dropdownChild) {
+          $$$1(dropdownChild).removeClass(ClassName.ACTIVE);
+        }
+
+        if (active.getAttribute('role') === 'tab') {
+          active.setAttribute('aria-selected', false);
+        }
+      }
+
+      $$$1(element).addClass(ClassName.ACTIVE);
+
+      if (element.getAttribute('role') === 'tab') {
+        element.setAttribute('aria-selected', true);
+      }
+
+      Util.reflow(element);
+      $$$1(element).addClass(ClassName.SHOW);
+
+      if (element.parentNode && $$$1(element.parentNode).hasClass(ClassName.DROPDOWN_MENU)) {
+        var dropdownElement = $$$1(element).closest(Selector.DROPDOWN)[0];
+
+        if (dropdownElement) {
+          $$$1(dropdownElement).find(Selector.DROPDOWN_TOGGLE).addClass(ClassName.ACTIVE);
+        }
+
+        element.setAttribute('aria-expanded', true);
+      }
+
+      if (callback) {
+        callback();
+      }
+    }; // Static
+
+
+    Tab._jQueryInterface = function _jQueryInterface(config) {
+      return this.each(function () {
+        var $this = $$$1(this);
+        var data = $this.data(DATA_KEY);
+
+        if (!data) {
+          data = new Tab(this);
+          $this.data(DATA_KEY, data);
+        }
+
+        if (typeof config === 'string') {
+          if (typeof data[config] === 'undefined') {
+            throw new TypeError("No method named \"" + config + "\"");
+          }
+
+          data[config]();
+        }
+      });
+    };
+
+    _createClass(Tab, null, [{
+      key: "VERSION",
+      get: function get() {
+        return VERSION;
+      }
+    }]);
+    return Tab;
+  }();
+  /**
+   * ------------------------------------------------------------------------
+   * Data Api implementation
+   * ------------------------------------------------------------------------
+   */
+
+
+  $$$1(document).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, function (event) {
+    event.preventDefault();
+
+    Tab._jQueryInterface.call($$$1(this), 'show');
+  });
+  /**
+   * ------------------------------------------------------------------------
+   * jQuery
+   * ------------------------------------------------------------------------
+   */
+
+  $$$1.fn[NAME] = Tab._jQueryInterface;
+  $$$1.fn[NAME].Constructor = Tab;
+
+  $$$1.fn[NAME].noConflict = function () {
+    $$$1.fn[NAME] = JQUERY_NO_CONFLICT;
+    return Tab._jQueryInterface;
+  };
+
+  return Tab;
+}($);
+
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap (v4.0.0-alpha.6): index.js
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
+(function ($$$1) {
+  if (typeof $$$1 === 'undefined') {
+    throw new TypeError('Bootstrap\'s JavaScript requires jQuery. jQuery must be included before Bootstrap\'s JavaScript.');
+  }
+
+  var version = $$$1.fn.jquery.split(' ')[0].split('.');
+  var minMajor = 1;
+  var ltMajor = 2;
+  var minMinor = 9;
+  var minPatch = 1;
+  var maxMajor = 4;
+
+  if (version[0] < ltMajor && version[1] < minMinor || version[0] === minMajor && version[1] === minMinor && version[2] < minPatch || version[0] >= maxMajor) {
+    throw new Error('Bootstrap\'s JavaScript requires at least jQuery v1.9.1 but less than v4.0.0');
+  }
+})($);
+
+exports.Util = Util;
+exports.Alert = Alert;
+exports.Button = Button;
+exports.Carousel = Carousel;
+exports.Collapse = Collapse;
+exports.Dropdown = Dropdown;
+exports.Modal = Modal;
+exports.Popover = Popover;
+exports.Scrollspy = ScrollSpy;
+exports.Tab = Tab;
+exports.Tooltip = Tooltip;
+
+Object.defineProperty(exports, '__esModule', { value: true });
 
 })));
 //# sourceMappingURL=bootstrap.js.map
@@ -52624,7 +50609,7 @@ return jQuery;
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* WEBPACK VAR INJECTION */(function(global) {/**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.
- * @version 1.14.4
+ * @version 1.12.9
  * @license
  * Copyright (c) 2016 Federico Zivolo and contributors
  *
@@ -52647,7 +50632,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
  * SOFTWARE.
  */
 var isBrowser = typeof window !== 'undefined' && typeof document !== 'undefined';
-
 var longerTimeoutBrowsers = ['Edge', 'Trident', 'Firefox'];
 var timeoutDuration = 0;
 for (var i = 0; i < longerTimeoutBrowsers.length; i += 1) {
@@ -52767,31 +50751,11 @@ function getScrollParent(element) {
       overflowX = _getStyleComputedProp.overflowX,
       overflowY = _getStyleComputedProp.overflowY;
 
-  if (/(auto|scroll|overlay)/.test(overflow + overflowY + overflowX)) {
+  if (/(auto|scroll)/.test(overflow + overflowY + overflowX)) {
     return element;
   }
 
   return getScrollParent(getParentNode(element));
-}
-
-var isIE11 = isBrowser && !!(window.MSInputMethodContext && document.documentMode);
-var isIE10 = isBrowser && /MSIE 10/.test(navigator.userAgent);
-
-/**
- * Determines if the browser is Internet Explorer
- * @method
- * @memberof Popper.Utils
- * @param {Number} version to check
- * @returns {Boolean} isIE
- */
-function isIE(version) {
-  if (version === 11) {
-    return isIE11;
-  }
-  if (version === 10) {
-    return isIE10;
-  }
-  return isIE11 || isIE10;
 }
 
 /**
@@ -52802,23 +50766,16 @@ function isIE(version) {
  * @returns {Element} offset parent
  */
 function getOffsetParent(element) {
-  if (!element) {
-    return document.documentElement;
-  }
-
-  var noOffsetParent = isIE(10) ? document.body : null;
-
   // NOTE: 1 DOM access here
-  var offsetParent = element.offsetParent;
-  // Skip hidden elements which don't have an offsetParent
-  while (offsetParent === noOffsetParent && element.nextElementSibling) {
-    offsetParent = (element = element.nextElementSibling).offsetParent;
-  }
-
+  var offsetParent = element && element.offsetParent;
   var nodeName = offsetParent && offsetParent.nodeName;
 
   if (!nodeName || nodeName === 'BODY' || nodeName === 'HTML') {
-    return element ? element.ownerDocument.documentElement : document.documentElement;
+    if (element) {
+      return element.ownerDocument.documentElement;
+    }
+
+    return document.documentElement;
   }
 
   // .offsetParent will return the closest TD or TABLE in case
@@ -52960,14 +50917,29 @@ function getBordersSize(styles, axis) {
   return parseFloat(styles['border' + sideA + 'Width'], 10) + parseFloat(styles['border' + sideB + 'Width'], 10);
 }
 
+/**
+ * Tells if you are running Internet Explorer 10
+ * @method
+ * @memberof Popper.Utils
+ * @returns {Boolean} isIE10
+ */
+var isIE10 = undefined;
+
+var isIE10$1 = function () {
+  if (isIE10 === undefined) {
+    isIE10 = navigator.appVersion.indexOf('MSIE 10') !== -1;
+  }
+  return isIE10;
+};
+
 function getSize(axis, body, html, computedStyle) {
-  return Math.max(body['offset' + axis], body['scroll' + axis], html['client' + axis], html['offset' + axis], html['scroll' + axis], isIE(10) ? parseInt(html['offset' + axis]) + parseInt(computedStyle['margin' + (axis === 'Height' ? 'Top' : 'Left')]) + parseInt(computedStyle['margin' + (axis === 'Height' ? 'Bottom' : 'Right')]) : 0);
+  return Math.max(body['offset' + axis], body['scroll' + axis], html['client' + axis], html['offset' + axis], html['scroll' + axis], isIE10$1() ? html['offset' + axis] + computedStyle['margin' + (axis === 'Height' ? 'Top' : 'Left')] + computedStyle['margin' + (axis === 'Height' ? 'Bottom' : 'Right')] : 0);
 }
 
-function getWindowSizes(document) {
+function getWindowSizes() {
   var body = document.body;
   var html = document.documentElement;
-  var computedStyle = isIE(10) && getComputedStyle(html);
+  var computedStyle = isIE10$1() && getComputedStyle(html);
 
   return {
     height: getSize('Height', body, html, computedStyle),
@@ -53059,8 +51031,8 @@ function getBoundingClientRect(element) {
   // IE10 10 FIX: Please, don't ask, the element isn't
   // considered in DOM in some circumstances...
   // This isn't reproducible in IE10 compatibility mode of IE11
-  try {
-    if (isIE(10)) {
+  if (isIE10$1()) {
+    try {
       rect = element.getBoundingClientRect();
       var scrollTop = getScroll(element, 'top');
       var scrollLeft = getScroll(element, 'left');
@@ -53068,10 +51040,10 @@ function getBoundingClientRect(element) {
       rect.left += scrollLeft;
       rect.bottom += scrollTop;
       rect.right += scrollLeft;
-    } else {
-      rect = element.getBoundingClientRect();
-    }
-  } catch (e) {}
+    } catch (err) {}
+  } else {
+    rect = element.getBoundingClientRect();
+  }
 
   var result = {
     left: rect.left,
@@ -53081,7 +51053,7 @@ function getBoundingClientRect(element) {
   };
 
   // subtract scrollbar size from sizes
-  var sizes = element.nodeName === 'HTML' ? getWindowSizes(element.ownerDocument) : {};
+  var sizes = element.nodeName === 'HTML' ? getWindowSizes() : {};
   var width = sizes.width || element.clientWidth || result.right - result.left;
   var height = sizes.height || element.clientHeight || result.bottom - result.top;
 
@@ -53103,9 +51075,7 @@ function getBoundingClientRect(element) {
 }
 
 function getOffsetRectRelativeToArbitraryNode(children, parent) {
-  var fixedPosition = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
-
-  var isIE10 = isIE(10);
+  var isIE10 = isIE10$1();
   var isHTML = parent.nodeName === 'HTML';
   var childrenRect = getBoundingClientRect(children);
   var parentRect = getBoundingClientRect(parent);
@@ -53115,11 +51085,6 @@ function getOffsetRectRelativeToArbitraryNode(children, parent) {
   var borderTopWidth = parseFloat(styles.borderTopWidth, 10);
   var borderLeftWidth = parseFloat(styles.borderLeftWidth, 10);
 
-  // In cases where the parent is fixed, we must ignore negative scroll in offset calc
-  if (fixedPosition && isHTML) {
-    parentRect.top = Math.max(parentRect.top, 0);
-    parentRect.left = Math.max(parentRect.left, 0);
-  }
   var offsets = getClientRect({
     top: childrenRect.top - parentRect.top - borderTopWidth,
     left: childrenRect.left - parentRect.left - borderLeftWidth,
@@ -53147,7 +51112,7 @@ function getOffsetRectRelativeToArbitraryNode(children, parent) {
     offsets.marginLeft = marginLeft;
   }
 
-  if (isIE10 && !fixedPosition ? parent.contains(scrollParent) : parent === scrollParent && scrollParent.nodeName !== 'BODY') {
+  if (isIE10 ? parent.contains(scrollParent) : parent === scrollParent && scrollParent.nodeName !== 'BODY') {
     offsets = includeScroll(offsets, parent);
   }
 
@@ -53155,15 +51120,13 @@ function getOffsetRectRelativeToArbitraryNode(children, parent) {
 }
 
 function getViewportOffsetRectRelativeToArtbitraryNode(element) {
-  var excludeScroll = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-
   var html = element.ownerDocument.documentElement;
   var relativeOffset = getOffsetRectRelativeToArbitraryNode(element, html);
   var width = Math.max(html.clientWidth, window.innerWidth || 0);
   var height = Math.max(html.clientHeight, window.innerHeight || 0);
 
-  var scrollTop = !excludeScroll ? getScroll(html) : 0;
-  var scrollLeft = !excludeScroll ? getScroll(html, 'left') : 0;
+  var scrollTop = getScroll(html);
+  var scrollLeft = getScroll(html, 'left');
 
   var offset = {
     top: scrollTop - relativeOffset.top + relativeOffset.marginTop,
@@ -53195,26 +51158,6 @@ function isFixed(element) {
 }
 
 /**
- * Finds the first parent of an element that has a transformed property defined
- * @method
- * @memberof Popper.Utils
- * @argument {Element} element
- * @returns {Element} first transformed parent or documentElement
- */
-
-function getFixedPositionOffsetParent(element) {
-  // This check is needed to avoid errors in case one of the elements isn't defined for any reason
-  if (!element || !element.parentElement || isIE()) {
-    return document.documentElement;
-  }
-  var el = element.parentElement;
-  while (el && getStyleComputedProperty(el, 'transform') === 'none') {
-    el = el.parentElement;
-  }
-  return el || document.documentElement;
-}
-
-/**
  * Computed the boundaries limits and return them
  * @method
  * @memberof Popper.Utils
@@ -53222,20 +51165,16 @@ function getFixedPositionOffsetParent(element) {
  * @param {HTMLElement} reference
  * @param {number} padding
  * @param {HTMLElement} boundariesElement - Element used to define the boundaries
- * @param {Boolean} fixedPosition - Is in fixed position mode
  * @returns {Object} Coordinates of the boundaries
  */
 function getBoundaries(popper, reference, padding, boundariesElement) {
-  var fixedPosition = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : false;
-
   // NOTE: 1 DOM access here
-
   var boundaries = { top: 0, left: 0 };
-  var offsetParent = fixedPosition ? getFixedPositionOffsetParent(popper) : findCommonOffsetParent(popper, reference);
+  var offsetParent = findCommonOffsetParent(popper, reference);
 
   // Handle viewport case
   if (boundariesElement === 'viewport') {
-    boundaries = getViewportOffsetRectRelativeToArtbitraryNode(offsetParent, fixedPosition);
+    boundaries = getViewportOffsetRectRelativeToArtbitraryNode(offsetParent);
   } else {
     // Handle other cases based on DOM element used as boundaries
     var boundariesNode = void 0;
@@ -53250,11 +51189,11 @@ function getBoundaries(popper, reference, padding, boundariesElement) {
       boundariesNode = boundariesElement;
     }
 
-    var offsets = getOffsetRectRelativeToArbitraryNode(boundariesNode, offsetParent, fixedPosition);
+    var offsets = getOffsetRectRelativeToArbitraryNode(boundariesNode, offsetParent);
 
     // In case of HTML, we need a different computation
     if (boundariesNode.nodeName === 'HTML' && !isFixed(offsetParent)) {
-      var _getWindowSizes = getWindowSizes(popper.ownerDocument),
+      var _getWindowSizes = getWindowSizes(),
           height = _getWindowSizes.height,
           width = _getWindowSizes.width;
 
@@ -53269,12 +51208,10 @@ function getBoundaries(popper, reference, padding, boundariesElement) {
   }
 
   // Add paddings
-  padding = padding || 0;
-  var isPaddingNumber = typeof padding === 'number';
-  boundaries.left += isPaddingNumber ? padding : padding.left || 0;
-  boundaries.top += isPaddingNumber ? padding : padding.top || 0;
-  boundaries.right -= isPaddingNumber ? padding : padding.right || 0;
-  boundaries.bottom -= isPaddingNumber ? padding : padding.bottom || 0;
+  boundaries.left += padding;
+  boundaries.top += padding;
+  boundaries.right -= padding;
+  boundaries.bottom -= padding;
 
   return boundaries;
 }
@@ -53353,14 +51290,11 @@ function computeAutoPlacement(placement, refRect, popper, reference, boundariesE
  * @param {Object} state
  * @param {Element} popper - the popper element
  * @param {Element} reference - the reference element (the popper will be relative to this)
- * @param {Element} fixedPosition - is in fixed position mode
  * @returns {Object} An object containing the offsets which will be applied to the popper
  */
 function getReferenceOffsets(state, popper, reference) {
-  var fixedPosition = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
-
-  var commonOffsetParent = fixedPosition ? getFixedPositionOffsetParent(popper) : findCommonOffsetParent(popper, reference);
-  return getOffsetRectRelativeToArbitraryNode(reference, commonOffsetParent, fixedPosition);
+  var commonOffsetParent = findCommonOffsetParent(popper, reference);
+  return getOffsetRectRelativeToArbitraryNode(reference, commonOffsetParent);
 }
 
 /**
@@ -53533,7 +51467,7 @@ function update() {
   };
 
   // compute reference element offsets
-  data.offsets.reference = getReferenceOffsets(this.state, this.popper, this.reference, this.options.positionFixed);
+  data.offsets.reference = getReferenceOffsets(this.state, this.popper, this.reference);
 
   // compute auto placement, store placement inside the data object,
   // modifiers will be able to edit `placement` if needed
@@ -53543,12 +51477,9 @@ function update() {
   // store the computed placement inside `originalPlacement`
   data.originalPlacement = data.placement;
 
-  data.positionFixed = this.options.positionFixed;
-
   // compute the popper offsets
   data.offsets.popper = getPopperOffsets(this.popper, data.offsets.reference, data.placement);
-
-  data.offsets.popper.position = this.options.positionFixed ? 'fixed' : 'absolute';
+  data.offsets.popper.position = 'absolute';
 
   // run the modifiers
   data = runModifiers(this.modifiers, data);
@@ -53588,7 +51519,7 @@ function getSupportedPropertyName(property) {
   var prefixes = [false, 'ms', 'Webkit', 'Moz', 'O'];
   var upperProp = property.charAt(0).toUpperCase() + property.slice(1);
 
-  for (var i = 0; i < prefixes.length; i++) {
+  for (var i = 0; i < prefixes.length - 1; i++) {
     var prefix = prefixes[i];
     var toCheck = prefix ? '' + prefix + upperProp : property;
     if (typeof document.body.style[toCheck] !== 'undefined') {
@@ -53599,7 +51530,7 @@ function getSupportedPropertyName(property) {
 }
 
 /**
- * Destroys the popper.
+ * Destroy the popper
  * @method
  * @memberof Popper
  */
@@ -53609,12 +51540,9 @@ function destroy() {
   // touch DOM only if `applyStyle` modifier is enabled
   if (isModifierEnabled(this.modifiers, 'applyStyle')) {
     this.popper.removeAttribute('x-placement');
+    this.popper.style.left = '';
     this.popper.style.position = '';
     this.popper.style.top = '';
-    this.popper.style.left = '';
-    this.popper.style.right = '';
-    this.popper.style.bottom = '';
-    this.popper.style.willChange = '';
     this.popper.style[getSupportedPropertyName('transform')] = '';
   }
 
@@ -53706,7 +51634,7 @@ function removeEventListeners(reference, state) {
 
 /**
  * It will remove resize/scroll events and won't recalculate popper position
- * when they are triggered. It also won't trigger `onUpdate` callback anymore,
+ * when they are triggered. It also won't trigger onUpdate callback anymore,
  * unless you call `update` method manually.
  * @method
  * @memberof Popper
@@ -53802,12 +51730,12 @@ function applyStyle(data) {
  * @method
  * @memberof Popper.modifiers
  * @param {HTMLElement} reference - The reference element used to position the popper
- * @param {HTMLElement} popper - The HTML element used as popper
+ * @param {HTMLElement} popper - The HTML element used as popper.
  * @param {Object} options - Popper.js options
  */
 function applyStyleOnLoad(reference, popper, options, modifierOptions, state) {
   // compute reference element offsets
-  var referenceOffsets = getReferenceOffsets(state, popper, reference, options.positionFixed);
+  var referenceOffsets = getReferenceOffsets(state, popper, reference);
 
   // compute auto placement, store placement inside the data object,
   // modifiers will be able to edit `placement` if needed
@@ -53818,7 +51746,7 @@ function applyStyleOnLoad(reference, popper, options, modifierOptions, state) {
 
   // Apply `position` to popper before anything else because
   // without the position applied we can't guarantee correct computations
-  setStyles(popper, { position: options.positionFixed ? 'fixed' : 'absolute' });
+  setStyles(popper, { position: 'absolute' });
 
   return options;
 }
@@ -53853,13 +51781,11 @@ function computeStyle(data, options) {
     position: popper.position
   };
 
-  // Avoid blurry text by using full pixel integers.
-  // For pixel-perfect positioning, top/bottom prefers rounded
-  // values, while left/right prefers floored values.
+  // floor sides to avoid blurry text
   var offsets = {
     left: Math.floor(popper.left),
-    top: Math.round(popper.top),
-    bottom: Math.round(popper.bottom),
+    top: Math.floor(popper.top),
+    bottom: Math.floor(popper.bottom),
     right: Math.floor(popper.right)
   };
 
@@ -53883,22 +51809,12 @@ function computeStyle(data, options) {
   var left = void 0,
       top = void 0;
   if (sideA === 'bottom') {
-    // when offsetParent is <html> the positioning is relative to the bottom of the screen (excluding the scrollbar)
-    // and not the bottom of the html element
-    if (offsetParent.nodeName === 'HTML') {
-      top = -offsetParent.clientHeight + offsets.bottom;
-    } else {
-      top = -offsetParentRect.height + offsets.bottom;
-    }
+    top = -offsetParentRect.height + offsets.bottom;
   } else {
     top = offsets.top;
   }
   if (sideB === 'right') {
-    if (offsetParent.nodeName === 'HTML') {
-      left = -offsetParent.clientWidth + offsets.right;
-    } else {
-      left = -offsetParentRect.width + offsets.right;
-    }
+    left = -offsetParentRect.width + offsets.right;
   } else {
     left = offsets.left;
   }
@@ -54007,7 +51923,7 @@ function arrow(data, options) {
 
   //
   // extends keepTogether behavior making sure the popper and its
-  // reference have enough pixels in conjunction
+  // reference have enough pixels in conjuction
   //
 
   // top/left side
@@ -54077,7 +51993,7 @@ function getOppositeVariation(variation) {
  * - `top-end` (on top of reference, right aligned)
  * - `right-start` (on right of reference, top aligned)
  * - `bottom` (on bottom, centered)
- * - `auto-end` (on the side with more space available, alignment depends by placement)
+ * - `auto-right` (on the side with more space available, alignment depends by placement)
  *
  * @static
  * @type {Array}
@@ -54133,7 +52049,7 @@ function flip(data, options) {
     return data;
   }
 
-  var boundaries = getBoundaries(data.instance.popper, data.instance.reference, options.padding, options.boundariesElement, data.positionFixed);
+  var boundaries = getBoundaries(data.instance.popper, data.instance.reference, options.padding, options.boundariesElement);
 
   var placement = data.placement.split('-')[0];
   var placementOpposite = getOppositePlacement(placement);
@@ -54425,27 +52341,7 @@ function preventOverflow(data, options) {
     boundariesElement = getOffsetParent(boundariesElement);
   }
 
-  // NOTE: DOM access here
-  // resets the popper's position so that the document size can be calculated excluding
-  // the size of the popper element itself
-  var transformProp = getSupportedPropertyName('transform');
-  var popperStyles = data.instance.popper.style; // assignment to help minification
-  var top = popperStyles.top,
-      left = popperStyles.left,
-      transform = popperStyles[transformProp];
-
-  popperStyles.top = '';
-  popperStyles.left = '';
-  popperStyles[transformProp] = '';
-
-  var boundaries = getBoundaries(data.instance.popper, data.instance.reference, options.padding, boundariesElement, data.positionFixed);
-
-  // NOTE: DOM access here
-  // restores the original style properties after the offsets have been computed
-  popperStyles.top = top;
-  popperStyles.left = left;
-  popperStyles[transformProp] = transform;
-
+  var boundaries = getBoundaries(data.instance.popper, data.instance.reference, options.padding, boundariesElement);
   options.boundaries = boundaries;
 
   var order = options.priority;
@@ -54619,7 +52515,7 @@ var modifiers = {
    * The `offset` modifier can shift your popper on both its axis.
    *
    * It accepts the following units:
-   * - `px` or unit-less, interpreted as pixels
+   * - `px` or unitless, interpreted as pixels
    * - `%` or `%r`, percentage relative to the length of the reference element
    * - `%p`, percentage relative to the length of the popper element
    * - `vw`, CSS viewport width unit
@@ -54627,7 +52523,7 @@ var modifiers = {
    *
    * For length is intended the main axis relative to the placement of the popper.<br />
    * This means that if the placement is `top` or `bottom`, the length will be the
-   * `width`. In case of `left` or `right`, it will be the `height`.
+   * `width`. In case of `left` or `right`, it will be the height.
    *
    * You can provide a single value (as `Number` or `String`), or a pair of values
    * as `String` divided by a comma or one (or more) white spaces.<br />
@@ -54648,7 +52544,7 @@ var modifiers = {
    * ```
    * > **NB**: If you desire to apply offsets to your poppers in a way that may make them overlap
    * > with their reference element, unfortunately, you will have to disable the `flip` modifier.
-   * > You can read more on this at this [issue](https://github.com/FezVrasta/popper.js/issues/373).
+   * > More on this [reading this issue](https://github.com/FezVrasta/popper.js/issues/373)
    *
    * @memberof modifiers
    * @inner
@@ -54669,7 +52565,7 @@ var modifiers = {
   /**
    * Modifier used to prevent the popper from being positioned outside the boundary.
    *
-   * A scenario exists where the reference itself is not within the boundaries.<br />
+   * An scenario exists where the reference itself is not within the boundaries.<br />
    * We can say it has "escaped the boundaries" — or just "escaped".<br />
    * In this case we need to decide whether the popper should either:
    *
@@ -54699,23 +52595,23 @@ var modifiers = {
     /**
      * @prop {number} padding=5
      * Amount of pixel used to define a minimum distance between the boundaries
-     * and the popper. This makes sure the popper always has a little padding
+     * and the popper this makes sure the popper has always a little padding
      * between the edges of its container
      */
     padding: 5,
     /**
      * @prop {String|HTMLElement} boundariesElement='scrollParent'
-     * Boundaries used by the modifier. Can be `scrollParent`, `window`,
+     * Boundaries used by the modifier, can be `scrollParent`, `window`,
      * `viewport` or any DOM element.
      */
     boundariesElement: 'scrollParent'
   },
 
   /**
-   * Modifier used to make sure the reference and its popper stay near each other
-   * without leaving any gap between the two. Especially useful when the arrow is
-   * enabled and you want to ensure that it points to its reference element.
-   * It cares only about the first axis. You can still have poppers with margin
+   * Modifier used to make sure the reference and its popper stay near eachothers
+   * without leaving any gap between the two. Expecially useful when the arrow is
+   * enabled and you want to assure it to point to its reference element.
+   * It cares only about the first axis, you can still have poppers with margin
    * between the popper and its reference element.
    * @memberof modifiers
    * @inner
@@ -54733,7 +52629,7 @@ var modifiers = {
    * This modifier is used to move the `arrowElement` of the popper to make
    * sure it is positioned between the reference element and its popper element.
    * It will read the outer size of the `arrowElement` node to detect how many
-   * pixels of conjunction are needed.
+   * pixels of conjuction are needed.
    *
    * It has no effect if no `arrowElement` is provided.
    * @memberof modifiers
@@ -54772,7 +52668,7 @@ var modifiers = {
      * @prop {String|Array} behavior='flip'
      * The behavior used to change the popper's placement. It can be one of
      * `flip`, `clockwise`, `counterclockwise` or an array with a list of valid
-     * placements (with optional variations)
+     * placements (with optional variations).
      */
     behavior: 'flip',
     /**
@@ -54782,9 +52678,9 @@ var modifiers = {
     padding: 5,
     /**
      * @prop {String|HTMLElement} boundariesElement='viewport'
-     * The element which will define the boundaries of the popper position.
-     * The popper will never be placed outside of the defined boundaries
-     * (except if `keepTogether` is enabled)
+     * The element which will define the boundaries of the popper position,
+     * the popper will never be placed outside of the defined boundaries
+     * (except if keepTogether is enabled)
      */
     boundariesElement: 'viewport'
   },
@@ -54848,8 +52744,8 @@ var modifiers = {
     fn: computeStyle,
     /**
      * @prop {Boolean} gpuAcceleration=true
-     * If true, it uses the CSS 3D transformation to position the popper.
-     * Otherwise, it will use the `top` and `left` properties
+     * If true, it uses the CSS 3d transformation to position the popper.
+     * Otherwise, it will use the `top` and `left` properties.
      */
     gpuAcceleration: true,
     /**
@@ -54876,7 +52772,7 @@ var modifiers = {
    * Note that if you disable this modifier, you must make sure the popper element
    * has its position set to `absolute` before Popper.js can do its work!
    *
-   * Just disable this modifier and define your own to achieve the desired effect.
+   * Just disable this modifier and define you own to achieve the desired effect.
    *
    * @memberof modifiers
    * @inner
@@ -54893,27 +52789,27 @@ var modifiers = {
     /**
      * @deprecated since version 1.10.0, the property moved to `computeStyle` modifier
      * @prop {Boolean} gpuAcceleration=true
-     * If true, it uses the CSS 3D transformation to position the popper.
-     * Otherwise, it will use the `top` and `left` properties
+     * If true, it uses the CSS 3d transformation to position the popper.
+     * Otherwise, it will use the `top` and `left` properties.
      */
     gpuAcceleration: undefined
   }
 };
 
 /**
- * The `dataObject` is an object containing all the information used by Popper.js.
- * This object is passed to modifiers and to the `onCreate` and `onUpdate` callbacks.
+ * The `dataObject` is an object containing all the informations used by Popper.js
+ * this object get passed to modifiers and to the `onCreate` and `onUpdate` callbacks.
  * @name dataObject
  * @property {Object} data.instance The Popper.js instance
  * @property {String} data.placement Placement applied to popper
  * @property {String} data.originalPlacement Placement originally defined on init
  * @property {Boolean} data.flipped True if popper has been flipped by flip modifier
- * @property {Boolean} data.hide True if the reference element is out of boundaries, useful to know when to hide the popper
+ * @property {Boolean} data.hide True if the reference element is out of boundaries, useful to know when to hide the popper.
  * @property {HTMLElement} data.arrowElement Node used as arrow by arrow modifier
- * @property {Object} data.styles Any CSS property defined here will be applied to the popper. It expects the JavaScript nomenclature (eg. `marginBottom`)
- * @property {Object} data.arrowStyles Any CSS property defined here will be applied to the popper arrow. It expects the JavaScript nomenclature (eg. `marginBottom`)
+ * @property {Object} data.styles Any CSS property defined here will be applied to the popper, it expects the JavaScript nomenclature (eg. `marginBottom`)
+ * @property {Object} data.arrowStyles Any CSS property defined here will be applied to the popper arrow, it expects the JavaScript nomenclature (eg. `marginBottom`)
  * @property {Object} data.boundaries Offsets of the popper boundaries
- * @property {Object} data.offsets The measurements of popper, reference and arrow elements
+ * @property {Object} data.offsets The measurements of popper, reference and arrow elements.
  * @property {Object} data.offsets.popper `top`, `left`, `width`, `height` values
  * @property {Object} data.offsets.reference `top`, `left`, `width`, `height` values
  * @property {Object} data.offsets.arrow] `top` and `left` offsets, only one of them will be different from 0
@@ -54921,9 +52817,9 @@ var modifiers = {
 
 /**
  * Default options provided to Popper.js constructor.<br />
- * These can be overridden using the `options` argument of Popper.js.<br />
- * To override an option, simply pass an object with the same
- * structure of the `options` object, as the 3rd argument. For example:
+ * These can be overriden using the `options` argument of Popper.js.<br />
+ * To override an option, simply pass as 3rd argument an object with the same
+ * structure of this object, example:
  * ```
  * new Popper(ref, pop, {
  *   modifiers: {
@@ -54937,19 +52833,13 @@ var modifiers = {
  */
 var Defaults = {
   /**
-   * Popper's placement.
+   * Popper's placement
    * @prop {Popper.placements} placement='bottom'
    */
   placement: 'bottom',
 
   /**
-   * Set this to true if you want popper to position it self in 'fixed' mode
-   * @prop {Boolean} positionFixed=false
-   */
-  positionFixed: false,
-
-  /**
-   * Whether events (resize, scroll) are initially enabled.
+   * Whether events (resize, scroll) are initially enabled
    * @prop {Boolean} eventsEnabled=true
    */
   eventsEnabled: true,
@@ -54963,17 +52853,17 @@ var Defaults = {
 
   /**
    * Callback called when the popper is created.<br />
-   * By default, it is set to no-op.<br />
+   * By default, is set to no-op.<br />
    * Access Popper.js instance with `data.instance`.
    * @prop {onCreate}
    */
   onCreate: function onCreate() {},
 
   /**
-   * Callback called when the popper is updated. This callback is not called
+   * Callback called when the popper is updated, this callback is not called
    * on the initialization/creation of the popper, but only on subsequent
    * updates.<br />
-   * By default, it is set to no-op.<br />
+   * By default, is set to no-op.<br />
    * Access Popper.js instance with `data.instance`.
    * @prop {onUpdate}
    */
@@ -54981,7 +52871,7 @@ var Defaults = {
 
   /**
    * List of modifiers used to modify the offsets before they are applied to the popper.
-   * They provide most of the functionalities of Popper.js.
+   * They provide most of the functionalities of Popper.js
    * @prop {modifiers}
    */
   modifiers: modifiers
@@ -55001,10 +52891,10 @@ var Defaults = {
 // Methods
 var Popper = function () {
   /**
-   * Creates a new Popper.js instance.
+   * Create a new Popper.js instance
    * @class Popper
    * @param {HTMLElement|referenceObject} reference - The reference element used to position the popper
-   * @param {HTMLElement} popper - The HTML element used as the popper
+   * @param {HTMLElement} popper - The HTML element used as popper.
    * @param {Object} options - Your custom options to override the ones defined in [Defaults](#defaults)
    * @return {Object} instance - The generated Popper.js instance
    */
@@ -55100,7 +52990,7 @@ var Popper = function () {
     }
 
     /**
-     * Schedules an update. It will run on the next UI update available.
+     * Schedule an update, it will run on the next UI update available
      * @method scheduleUpdate
      * @memberof Popper
      */
@@ -55137,7 +53027,7 @@ var Popper = function () {
  * new Popper(referenceObject, popperNode);
  * ```
  *
- * NB: This feature isn't supported in Internet Explorer 10.
+ * NB: This feature isn't supported in Internet Explorer 10
  * @name referenceObject
  * @property {Function} data.getBoundingClientRect
  * A function that returns a set of coordinates compatible with the native `getBoundingClientRect` method.
@@ -55464,7 +53354,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "/*!\n * Bootstrap v4.1.3 (https://getbootstrap.com/)\n * Copyright 2011-2018 The Bootstrap Authors\n * Copyright 2011-2018 Twitter, Inc.\n * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)\n */:root{--blue:#007bff;--indigo:#6610f2;--purple:#6f42c1;--pink:#e83e8c;--red:#dc3545;--orange:#fd7e14;--yellow:#ffc107;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#6c757d;--gray-dark:#343a40;--primary:#007bff;--secondary:#6c757d;--success:#28a745;--info:#17a2b8;--warning:#ffc107;--danger:#dc3545;--light:#f8f9fa;--dark:#343a40;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\";--font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace}*,::after,::before{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-ms-overflow-style:scrollbar;-webkit-tap-highlight-color:transparent}@-ms-viewport{width:device-width}article,aside,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff}[tabindex=\"-1\"]:focus{outline:0!important}hr{box-sizing:content-box;height:0;overflow:visible}h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:.5rem}p{margin-top:0;margin-bottom:1rem}abbr[data-original-title],abbr[title]{text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted;cursor:help;border-bottom:0}address{margin-bottom:1rem;font-style:normal;line-height:inherit}dl,ol,ul{margin-top:0;margin-bottom:1rem}ol ol,ol ul,ul ol,ul ul{margin-bottom:0}dt{font-weight:700}dd{margin-bottom:.5rem;margin-left:0}blockquote{margin:0 0 1rem}dfn{font-style:italic}b,strong{font-weight:bolder}small{font-size:80%}sub,sup{position:relative;font-size:75%;line-height:0;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}a{color:#007bff;text-decoration:none;background-color:transparent;-webkit-text-decoration-skip:objects}a:hover{color:#0056b3;text-decoration:underline}a:not([href]):not([tabindex]){color:inherit;text-decoration:none}a:not([href]):not([tabindex]):focus,a:not([href]):not([tabindex]):hover{color:inherit;text-decoration:none}a:not([href]):not([tabindex]):focus{outline:0}code,kbd,pre,samp{font-family:SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace;font-size:1em}pre{margin-top:0;margin-bottom:1rem;overflow:auto;-ms-overflow-style:scrollbar}figure{margin:0 0 1rem}img{vertical-align:middle;border-style:none}svg{overflow:hidden;vertical-align:middle}table{border-collapse:collapse}caption{padding-top:.75rem;padding-bottom:.75rem;color:#6c757d;text-align:left;caption-side:bottom}th{text-align:inherit}label{display:inline-block;margin-bottom:.5rem}button{border-radius:0}button:focus{outline:1px dotted;outline:5px auto -webkit-focus-ring-color}button,input,optgroup,select,textarea{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{padding:0;border-style:none}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=date],input[type=datetime-local],input[type=month],input[type=time]{-webkit-appearance:listbox}textarea{overflow:auto;resize:vertical}fieldset{min-width:0;padding:0;margin:0;border:0}legend{display:block;width:100%;max-width:100%;padding:0;margin-bottom:.5rem;font-size:1.5rem;line-height:inherit;color:inherit;white-space:normal}progress{vertical-align:baseline}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{outline-offset:-2px;-webkit-appearance:none}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}output{display:inline-block}summary{display:list-item;cursor:pointer}template{display:none}[hidden]{display:none!important}.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{margin-bottom:.5rem;font-family:inherit;font-weight:500;line-height:1.2;color:inherit}.h1,h1{font-size:2.5rem}.h2,h2{font-size:2rem}.h3,h3{font-size:1.75rem}.h4,h4{font-size:1.5rem}.h5,h5{font-size:1.25rem}.h6,h6{font-size:1rem}.lead{font-size:1.25rem;font-weight:300}.display-1{font-size:6rem;font-weight:300;line-height:1.2}.display-2{font-size:5.5rem;font-weight:300;line-height:1.2}.display-3{font-size:4.5rem;font-weight:300;line-height:1.2}.display-4{font-size:3.5rem;font-weight:300;line-height:1.2}hr{margin-top:1rem;margin-bottom:1rem;border:0;border-top:1px solid rgba(0,0,0,.1)}.small,small{font-size:80%;font-weight:400}.mark,mark{padding:.2em;background-color:#fcf8e3}.list-unstyled{padding-left:0;list-style:none}.list-inline{padding-left:0;list-style:none}.list-inline-item{display:inline-block}.list-inline-item:not(:last-child){margin-right:.5rem}.initialism{font-size:90%;text-transform:uppercase}.blockquote{margin-bottom:1rem;font-size:1.25rem}.blockquote-footer{display:block;font-size:80%;color:#6c757d}.blockquote-footer::before{content:\"\\2014   \\A0\"}.img-fluid{max-width:100%;height:auto}.img-thumbnail{padding:.25rem;background-color:#fff;border:1px solid #dee2e6;border-radius:.25rem;max-width:100%;height:auto}.figure{display:inline-block}.figure-img{margin-bottom:.5rem;line-height:1}.figure-caption{font-size:90%;color:#6c757d}code{font-size:87.5%;color:#e83e8c;word-break:break-word}a>code{color:inherit}kbd{padding:.2rem .4rem;font-size:87.5%;color:#fff;background-color:#212529;border-radius:.2rem}kbd kbd{padding:0;font-size:100%;font-weight:700}pre{display:block;font-size:87.5%;color:#212529}pre code{font-size:inherit;color:inherit;word-break:normal}.pre-scrollable{max-height:340px;overflow-y:scroll}.container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:576px){.container{max-width:540px}}@media (min-width:768px){.container{max-width:720px}}@media (min-width:992px){.container{max-width:960px}}@media (min-width:1200px){.container{max-width:1140px}}.container-fluid{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}.row{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}.no-gutters{margin-right:0;margin-left:0}.no-gutters>.col,.no-gutters>[class*=col-]{padding-right:0;padding-left:0}.col,.col-1,.col-10,.col-11,.col-12,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-auto,.col-lg,.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-auto,.col-md,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-auto,.col-sm,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-auto,.col-xl,.col-xl-1,.col-xl-10,.col-xl-11,.col-xl-12,.col-xl-2,.col-xl-3,.col-xl-4,.col-xl-5,.col-xl-6,.col-xl-7,.col-xl-8,.col-xl-9,.col-xl-auto{position:relative;width:100%;min-height:1px;padding-right:15px;padding-left:15px}.col{-ms-flex-preferred-size:0;flex-basis:0;-ms-flex-positive:1;flex-grow:1;max-width:100%}.col-auto{-ms-flex:0 0 auto;flex:0 0 auto;width:auto;max-width:none}.col-1{-ms-flex:0 0 8.333333%;flex:0 0 8.333333%;max-width:8.333333%}.col-2{-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}.col-3{-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}.col-4{-ms-flex:0 0 33.333333%;flex:0 0 33.333333%;max-width:33.333333%}.col-5{-ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%}.col-6{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}.col-7{-ms-flex:0 0 58.333333%;flex:0 0 58.333333%;max-width:58.333333%}.col-8{-ms-flex:0 0 66.666667%;flex:0 0 66.666667%;max-width:66.666667%}.col-9{-ms-flex:0 0 75%;flex:0 0 75%;max-width:75%}.col-10{-ms-flex:0 0 83.333333%;flex:0 0 83.333333%;max-width:83.333333%}.col-11{-ms-flex:0 0 91.666667%;flex:0 0 91.666667%;max-width:91.666667%}.col-12{-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}.order-first{-ms-flex-order:-1;order:-1}.order-last{-ms-flex-order:13;order:13}.order-0{-ms-flex-order:0;order:0}.order-1{-ms-flex-order:1;order:1}.order-2{-ms-flex-order:2;order:2}.order-3{-ms-flex-order:3;order:3}.order-4{-ms-flex-order:4;order:4}.order-5{-ms-flex-order:5;order:5}.order-6{-ms-flex-order:6;order:6}.order-7{-ms-flex-order:7;order:7}.order-8{-ms-flex-order:8;order:8}.order-9{-ms-flex-order:9;order:9}.order-10{-ms-flex-order:10;order:10}.order-11{-ms-flex-order:11;order:11}.order-12{-ms-flex-order:12;order:12}.offset-1{margin-left:8.333333%}.offset-2{margin-left:16.666667%}.offset-3{margin-left:25%}.offset-4{margin-left:33.333333%}.offset-5{margin-left:41.666667%}.offset-6{margin-left:50%}.offset-7{margin-left:58.333333%}.offset-8{margin-left:66.666667%}.offset-9{margin-left:75%}.offset-10{margin-left:83.333333%}.offset-11{margin-left:91.666667%}@media (min-width:576px){.col-sm{-ms-flex-preferred-size:0;flex-basis:0;-ms-flex-positive:1;flex-grow:1;max-width:100%}.col-sm-auto{-ms-flex:0 0 auto;flex:0 0 auto;width:auto;max-width:none}.col-sm-1{-ms-flex:0 0 8.333333%;flex:0 0 8.333333%;max-width:8.333333%}.col-sm-2{-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}.col-sm-3{-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}.col-sm-4{-ms-flex:0 0 33.333333%;flex:0 0 33.333333%;max-width:33.333333%}.col-sm-5{-ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%}.col-sm-6{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}.col-sm-7{-ms-flex:0 0 58.333333%;flex:0 0 58.333333%;max-width:58.333333%}.col-sm-8{-ms-flex:0 0 66.666667%;flex:0 0 66.666667%;max-width:66.666667%}.col-sm-9{-ms-flex:0 0 75%;flex:0 0 75%;max-width:75%}.col-sm-10{-ms-flex:0 0 83.333333%;flex:0 0 83.333333%;max-width:83.333333%}.col-sm-11{-ms-flex:0 0 91.666667%;flex:0 0 91.666667%;max-width:91.666667%}.col-sm-12{-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}.order-sm-first{-ms-flex-order:-1;order:-1}.order-sm-last{-ms-flex-order:13;order:13}.order-sm-0{-ms-flex-order:0;order:0}.order-sm-1{-ms-flex-order:1;order:1}.order-sm-2{-ms-flex-order:2;order:2}.order-sm-3{-ms-flex-order:3;order:3}.order-sm-4{-ms-flex-order:4;order:4}.order-sm-5{-ms-flex-order:5;order:5}.order-sm-6{-ms-flex-order:6;order:6}.order-sm-7{-ms-flex-order:7;order:7}.order-sm-8{-ms-flex-order:8;order:8}.order-sm-9{-ms-flex-order:9;order:9}.order-sm-10{-ms-flex-order:10;order:10}.order-sm-11{-ms-flex-order:11;order:11}.order-sm-12{-ms-flex-order:12;order:12}.offset-sm-0{margin-left:0}.offset-sm-1{margin-left:8.333333%}.offset-sm-2{margin-left:16.666667%}.offset-sm-3{margin-left:25%}.offset-sm-4{margin-left:33.333333%}.offset-sm-5{margin-left:41.666667%}.offset-sm-6{margin-left:50%}.offset-sm-7{margin-left:58.333333%}.offset-sm-8{margin-left:66.666667%}.offset-sm-9{margin-left:75%}.offset-sm-10{margin-left:83.333333%}.offset-sm-11{margin-left:91.666667%}}@media (min-width:768px){.col-md{-ms-flex-preferred-size:0;flex-basis:0;-ms-flex-positive:1;flex-grow:1;max-width:100%}.col-md-auto{-ms-flex:0 0 auto;flex:0 0 auto;width:auto;max-width:none}.col-md-1{-ms-flex:0 0 8.333333%;flex:0 0 8.333333%;max-width:8.333333%}.col-md-2{-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}.col-md-3{-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}.col-md-4{-ms-flex:0 0 33.333333%;flex:0 0 33.333333%;max-width:33.333333%}.col-md-5{-ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%}.col-md-6{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}.col-md-7{-ms-flex:0 0 58.333333%;flex:0 0 58.333333%;max-width:58.333333%}.col-md-8{-ms-flex:0 0 66.666667%;flex:0 0 66.666667%;max-width:66.666667%}.col-md-9{-ms-flex:0 0 75%;flex:0 0 75%;max-width:75%}.col-md-10{-ms-flex:0 0 83.333333%;flex:0 0 83.333333%;max-width:83.333333%}.col-md-11{-ms-flex:0 0 91.666667%;flex:0 0 91.666667%;max-width:91.666667%}.col-md-12{-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}.order-md-first{-ms-flex-order:-1;order:-1}.order-md-last{-ms-flex-order:13;order:13}.order-md-0{-ms-flex-order:0;order:0}.order-md-1{-ms-flex-order:1;order:1}.order-md-2{-ms-flex-order:2;order:2}.order-md-3{-ms-flex-order:3;order:3}.order-md-4{-ms-flex-order:4;order:4}.order-md-5{-ms-flex-order:5;order:5}.order-md-6{-ms-flex-order:6;order:6}.order-md-7{-ms-flex-order:7;order:7}.order-md-8{-ms-flex-order:8;order:8}.order-md-9{-ms-flex-order:9;order:9}.order-md-10{-ms-flex-order:10;order:10}.order-md-11{-ms-flex-order:11;order:11}.order-md-12{-ms-flex-order:12;order:12}.offset-md-0{margin-left:0}.offset-md-1{margin-left:8.333333%}.offset-md-2{margin-left:16.666667%}.offset-md-3{margin-left:25%}.offset-md-4{margin-left:33.333333%}.offset-md-5{margin-left:41.666667%}.offset-md-6{margin-left:50%}.offset-md-7{margin-left:58.333333%}.offset-md-8{margin-left:66.666667%}.offset-md-9{margin-left:75%}.offset-md-10{margin-left:83.333333%}.offset-md-11{margin-left:91.666667%}}@media (min-width:992px){.col-lg{-ms-flex-preferred-size:0;flex-basis:0;-ms-flex-positive:1;flex-grow:1;max-width:100%}.col-lg-auto{-ms-flex:0 0 auto;flex:0 0 auto;width:auto;max-width:none}.col-lg-1{-ms-flex:0 0 8.333333%;flex:0 0 8.333333%;max-width:8.333333%}.col-lg-2{-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}.col-lg-3{-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}.col-lg-4{-ms-flex:0 0 33.333333%;flex:0 0 33.333333%;max-width:33.333333%}.col-lg-5{-ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%}.col-lg-6{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}.col-lg-7{-ms-flex:0 0 58.333333%;flex:0 0 58.333333%;max-width:58.333333%}.col-lg-8{-ms-flex:0 0 66.666667%;flex:0 0 66.666667%;max-width:66.666667%}.col-lg-9{-ms-flex:0 0 75%;flex:0 0 75%;max-width:75%}.col-lg-10{-ms-flex:0 0 83.333333%;flex:0 0 83.333333%;max-width:83.333333%}.col-lg-11{-ms-flex:0 0 91.666667%;flex:0 0 91.666667%;max-width:91.666667%}.col-lg-12{-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}.order-lg-first{-ms-flex-order:-1;order:-1}.order-lg-last{-ms-flex-order:13;order:13}.order-lg-0{-ms-flex-order:0;order:0}.order-lg-1{-ms-flex-order:1;order:1}.order-lg-2{-ms-flex-order:2;order:2}.order-lg-3{-ms-flex-order:3;order:3}.order-lg-4{-ms-flex-order:4;order:4}.order-lg-5{-ms-flex-order:5;order:5}.order-lg-6{-ms-flex-order:6;order:6}.order-lg-7{-ms-flex-order:7;order:7}.order-lg-8{-ms-flex-order:8;order:8}.order-lg-9{-ms-flex-order:9;order:9}.order-lg-10{-ms-flex-order:10;order:10}.order-lg-11{-ms-flex-order:11;order:11}.order-lg-12{-ms-flex-order:12;order:12}.offset-lg-0{margin-left:0}.offset-lg-1{margin-left:8.333333%}.offset-lg-2{margin-left:16.666667%}.offset-lg-3{margin-left:25%}.offset-lg-4{margin-left:33.333333%}.offset-lg-5{margin-left:41.666667%}.offset-lg-6{margin-left:50%}.offset-lg-7{margin-left:58.333333%}.offset-lg-8{margin-left:66.666667%}.offset-lg-9{margin-left:75%}.offset-lg-10{margin-left:83.333333%}.offset-lg-11{margin-left:91.666667%}}@media (min-width:1200px){.col-xl{-ms-flex-preferred-size:0;flex-basis:0;-ms-flex-positive:1;flex-grow:1;max-width:100%}.col-xl-auto{-ms-flex:0 0 auto;flex:0 0 auto;width:auto;max-width:none}.col-xl-1{-ms-flex:0 0 8.333333%;flex:0 0 8.333333%;max-width:8.333333%}.col-xl-2{-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}.col-xl-3{-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}.col-xl-4{-ms-flex:0 0 33.333333%;flex:0 0 33.333333%;max-width:33.333333%}.col-xl-5{-ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%}.col-xl-6{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}.col-xl-7{-ms-flex:0 0 58.333333%;flex:0 0 58.333333%;max-width:58.333333%}.col-xl-8{-ms-flex:0 0 66.666667%;flex:0 0 66.666667%;max-width:66.666667%}.col-xl-9{-ms-flex:0 0 75%;flex:0 0 75%;max-width:75%}.col-xl-10{-ms-flex:0 0 83.333333%;flex:0 0 83.333333%;max-width:83.333333%}.col-xl-11{-ms-flex:0 0 91.666667%;flex:0 0 91.666667%;max-width:91.666667%}.col-xl-12{-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}.order-xl-first{-ms-flex-order:-1;order:-1}.order-xl-last{-ms-flex-order:13;order:13}.order-xl-0{-ms-flex-order:0;order:0}.order-xl-1{-ms-flex-order:1;order:1}.order-xl-2{-ms-flex-order:2;order:2}.order-xl-3{-ms-flex-order:3;order:3}.order-xl-4{-ms-flex-order:4;order:4}.order-xl-5{-ms-flex-order:5;order:5}.order-xl-6{-ms-flex-order:6;order:6}.order-xl-7{-ms-flex-order:7;order:7}.order-xl-8{-ms-flex-order:8;order:8}.order-xl-9{-ms-flex-order:9;order:9}.order-xl-10{-ms-flex-order:10;order:10}.order-xl-11{-ms-flex-order:11;order:11}.order-xl-12{-ms-flex-order:12;order:12}.offset-xl-0{margin-left:0}.offset-xl-1{margin-left:8.333333%}.offset-xl-2{margin-left:16.666667%}.offset-xl-3{margin-left:25%}.offset-xl-4{margin-left:33.333333%}.offset-xl-5{margin-left:41.666667%}.offset-xl-6{margin-left:50%}.offset-xl-7{margin-left:58.333333%}.offset-xl-8{margin-left:66.666667%}.offset-xl-9{margin-left:75%}.offset-xl-10{margin-left:83.333333%}.offset-xl-11{margin-left:91.666667%}}.table{width:100%;margin-bottom:1rem;background-color:transparent}.table td,.table th{padding:.75rem;vertical-align:top;border-top:1px solid #dee2e6}.table thead th{vertical-align:bottom;border-bottom:2px solid #dee2e6}.table tbody+tbody{border-top:2px solid #dee2e6}.table .table{background-color:#fff}.table-sm td,.table-sm th{padding:.3rem}.table-bordered{border:1px solid #dee2e6}.table-bordered td,.table-bordered th{border:1px solid #dee2e6}.table-bordered thead td,.table-bordered thead th{border-bottom-width:2px}.table-borderless tbody+tbody,.table-borderless td,.table-borderless th,.table-borderless thead th{border:0}.table-striped tbody tr:nth-of-type(odd){background-color:rgba(0,0,0,.05)}.table-hover tbody tr:hover{background-color:rgba(0,0,0,.075)}.table-primary,.table-primary>td,.table-primary>th{background-color:#b8daff}.table-hover .table-primary:hover{background-color:#9fcdff}.table-hover .table-primary:hover>td,.table-hover .table-primary:hover>th{background-color:#9fcdff}.table-secondary,.table-secondary>td,.table-secondary>th{background-color:#d6d8db}.table-hover .table-secondary:hover{background-color:#c8cbcf}.table-hover .table-secondary:hover>td,.table-hover .table-secondary:hover>th{background-color:#c8cbcf}.table-success,.table-success>td,.table-success>th{background-color:#c3e6cb}.table-hover .table-success:hover{background-color:#b1dfbb}.table-hover .table-success:hover>td,.table-hover .table-success:hover>th{background-color:#b1dfbb}.table-info,.table-info>td,.table-info>th{background-color:#bee5eb}.table-hover .table-info:hover{background-color:#abdde5}.table-hover .table-info:hover>td,.table-hover .table-info:hover>th{background-color:#abdde5}.table-warning,.table-warning>td,.table-warning>th{background-color:#ffeeba}.table-hover .table-warning:hover{background-color:#ffe8a1}.table-hover .table-warning:hover>td,.table-hover .table-warning:hover>th{background-color:#ffe8a1}.table-danger,.table-danger>td,.table-danger>th{background-color:#f5c6cb}.table-hover .table-danger:hover{background-color:#f1b0b7}.table-hover .table-danger:hover>td,.table-hover .table-danger:hover>th{background-color:#f1b0b7}.table-light,.table-light>td,.table-light>th{background-color:#fdfdfe}.table-hover .table-light:hover{background-color:#ececf6}.table-hover .table-light:hover>td,.table-hover .table-light:hover>th{background-color:#ececf6}.table-dark,.table-dark>td,.table-dark>th{background-color:#c6c8ca}.table-hover .table-dark:hover{background-color:#b9bbbe}.table-hover .table-dark:hover>td,.table-hover .table-dark:hover>th{background-color:#b9bbbe}.table-active,.table-active>td,.table-active>th{background-color:rgba(0,0,0,.075)}.table-hover .table-active:hover{background-color:rgba(0,0,0,.075)}.table-hover .table-active:hover>td,.table-hover .table-active:hover>th{background-color:rgba(0,0,0,.075)}.table .thead-dark th{color:#fff;background-color:#212529;border-color:#32383e}.table .thead-light th{color:#495057;background-color:#e9ecef;border-color:#dee2e6}.table-dark{color:#fff;background-color:#212529}.table-dark td,.table-dark th,.table-dark thead th{border-color:#32383e}.table-dark.table-bordered{border:0}.table-dark.table-striped tbody tr:nth-of-type(odd){background-color:rgba(255,255,255,.05)}.table-dark.table-hover tbody tr:hover{background-color:rgba(255,255,255,.075)}@media (max-width:575.98px){.table-responsive-sm{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;-ms-overflow-style:-ms-autohiding-scrollbar}.table-responsive-sm>.table-bordered{border:0}}@media (max-width:767.98px){.table-responsive-md{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;-ms-overflow-style:-ms-autohiding-scrollbar}.table-responsive-md>.table-bordered{border:0}}@media (max-width:991.98px){.table-responsive-lg{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;-ms-overflow-style:-ms-autohiding-scrollbar}.table-responsive-lg>.table-bordered{border:0}}@media (max-width:1199.98px){.table-responsive-xl{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;-ms-overflow-style:-ms-autohiding-scrollbar}.table-responsive-xl>.table-bordered{border:0}}.table-responsive{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;-ms-overflow-style:-ms-autohiding-scrollbar}.table-responsive>.table-bordered{border:0}.form-control{display:block;width:100%;height:calc(2.25rem + 2px);padding:.375rem .75rem;font-size:1rem;line-height:1.5;color:#495057;background-color:#fff;background-clip:padding-box;border:1px solid #ced4da;border-radius:.25rem;transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out}@media screen and (prefers-reduced-motion:reduce){.form-control{transition:none}}.form-control::-ms-expand{background-color:transparent;border:0}.form-control:focus{color:#495057;background-color:#fff;border-color:#80bdff;outline:0;box-shadow:0 0 0 .2rem rgba(0,123,255,.25)}.form-control::-webkit-input-placeholder{color:#6c757d;opacity:1}.form-control::-moz-placeholder{color:#6c757d;opacity:1}.form-control:-ms-input-placeholder{color:#6c757d;opacity:1}.form-control::-ms-input-placeholder{color:#6c757d;opacity:1}.form-control::placeholder{color:#6c757d;opacity:1}.form-control:disabled,.form-control[readonly]{background-color:#e9ecef;opacity:1}select.form-control:focus::-ms-value{color:#495057;background-color:#fff}.form-control-file,.form-control-range{display:block;width:100%}.col-form-label{padding-top:calc(.375rem + 1px);padding-bottom:calc(.375rem + 1px);margin-bottom:0;font-size:inherit;line-height:1.5}.col-form-label-lg{padding-top:calc(.5rem + 1px);padding-bottom:calc(.5rem + 1px);font-size:1.25rem;line-height:1.5}.col-form-label-sm{padding-top:calc(.25rem + 1px);padding-bottom:calc(.25rem + 1px);font-size:.875rem;line-height:1.5}.form-control-plaintext{display:block;width:100%;padding-top:.375rem;padding-bottom:.375rem;margin-bottom:0;line-height:1.5;color:#212529;background-color:transparent;border:solid transparent;border-width:1px 0}.form-control-plaintext.form-control-lg,.form-control-plaintext.form-control-sm{padding-right:0;padding-left:0}.form-control-sm{height:calc(1.8125rem + 2px);padding:.25rem .5rem;font-size:.875rem;line-height:1.5;border-radius:.2rem}.form-control-lg{height:calc(2.875rem + 2px);padding:.5rem 1rem;font-size:1.25rem;line-height:1.5;border-radius:.3rem}select.form-control[multiple],select.form-control[size]{height:auto}textarea.form-control{height:auto}.form-group{margin-bottom:1rem}.form-text{display:block;margin-top:.25rem}.form-row{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-5px;margin-left:-5px}.form-row>.col,.form-row>[class*=col-]{padding-right:5px;padding-left:5px}.form-check{position:relative;display:block;padding-left:1.25rem}.form-check-input{position:absolute;margin-top:.3rem;margin-left:-1.25rem}.form-check-input:disabled~.form-check-label{color:#6c757d}.form-check-label{margin-bottom:0}.form-check-inline{display:-ms-inline-flexbox;display:inline-flex;-ms-flex-align:center;align-items:center;padding-left:0;margin-right:.75rem}.form-check-inline .form-check-input{position:static;margin-top:0;margin-right:.3125rem;margin-left:0}.valid-feedback{display:none;width:100%;margin-top:.25rem;font-size:80%;color:#28a745}.valid-tooltip{position:absolute;top:100%;z-index:5;display:none;max-width:100%;padding:.25rem .5rem;margin-top:.1rem;font-size:.875rem;line-height:1.5;color:#fff;background-color:rgba(40,167,69,.9);border-radius:.25rem}.custom-select.is-valid,.form-control.is-valid,.was-validated .custom-select:valid,.was-validated .form-control:valid{border-color:#28a745}.custom-select.is-valid:focus,.form-control.is-valid:focus,.was-validated .custom-select:valid:focus,.was-validated .form-control:valid:focus{border-color:#28a745;box-shadow:0 0 0 .2rem rgba(40,167,69,.25)}.custom-select.is-valid~.valid-feedback,.custom-select.is-valid~.valid-tooltip,.form-control.is-valid~.valid-feedback,.form-control.is-valid~.valid-tooltip,.was-validated .custom-select:valid~.valid-feedback,.was-validated .custom-select:valid~.valid-tooltip,.was-validated .form-control:valid~.valid-feedback,.was-validated .form-control:valid~.valid-tooltip{display:block}.form-control-file.is-valid~.valid-feedback,.form-control-file.is-valid~.valid-tooltip,.was-validated .form-control-file:valid~.valid-feedback,.was-validated .form-control-file:valid~.valid-tooltip{display:block}.form-check-input.is-valid~.form-check-label,.was-validated .form-check-input:valid~.form-check-label{color:#28a745}.form-check-input.is-valid~.valid-feedback,.form-check-input.is-valid~.valid-tooltip,.was-validated .form-check-input:valid~.valid-feedback,.was-validated .form-check-input:valid~.valid-tooltip{display:block}.custom-control-input.is-valid~.custom-control-label,.was-validated .custom-control-input:valid~.custom-control-label{color:#28a745}.custom-control-input.is-valid~.custom-control-label::before,.was-validated .custom-control-input:valid~.custom-control-label::before{background-color:#71dd8a}.custom-control-input.is-valid~.valid-feedback,.custom-control-input.is-valid~.valid-tooltip,.was-validated .custom-control-input:valid~.valid-feedback,.was-validated .custom-control-input:valid~.valid-tooltip{display:block}.custom-control-input.is-valid:checked~.custom-control-label::before,.was-validated .custom-control-input:valid:checked~.custom-control-label::before{background-color:#34ce57}.custom-control-input.is-valid:focus~.custom-control-label::before,.was-validated .custom-control-input:valid:focus~.custom-control-label::before{box-shadow:0 0 0 1px #fff,0 0 0 .2rem rgba(40,167,69,.25)}.custom-file-input.is-valid~.custom-file-label,.was-validated .custom-file-input:valid~.custom-file-label{border-color:#28a745}.custom-file-input.is-valid~.custom-file-label::after,.was-validated .custom-file-input:valid~.custom-file-label::after{border-color:inherit}.custom-file-input.is-valid~.valid-feedback,.custom-file-input.is-valid~.valid-tooltip,.was-validated .custom-file-input:valid~.valid-feedback,.was-validated .custom-file-input:valid~.valid-tooltip{display:block}.custom-file-input.is-valid:focus~.custom-file-label,.was-validated .custom-file-input:valid:focus~.custom-file-label{box-shadow:0 0 0 .2rem rgba(40,167,69,.25)}.invalid-feedback{display:none;width:100%;margin-top:.25rem;font-size:80%;color:#dc3545}.invalid-tooltip{position:absolute;top:100%;z-index:5;display:none;max-width:100%;padding:.25rem .5rem;margin-top:.1rem;font-size:.875rem;line-height:1.5;color:#fff;background-color:rgba(220,53,69,.9);border-radius:.25rem}.custom-select.is-invalid,.form-control.is-invalid,.was-validated .custom-select:invalid,.was-validated .form-control:invalid{border-color:#dc3545}.custom-select.is-invalid:focus,.form-control.is-invalid:focus,.was-validated .custom-select:invalid:focus,.was-validated .form-control:invalid:focus{border-color:#dc3545;box-shadow:0 0 0 .2rem rgba(220,53,69,.25)}.custom-select.is-invalid~.invalid-feedback,.custom-select.is-invalid~.invalid-tooltip,.form-control.is-invalid~.invalid-feedback,.form-control.is-invalid~.invalid-tooltip,.was-validated .custom-select:invalid~.invalid-feedback,.was-validated .custom-select:invalid~.invalid-tooltip,.was-validated .form-control:invalid~.invalid-feedback,.was-validated .form-control:invalid~.invalid-tooltip{display:block}.form-control-file.is-invalid~.invalid-feedback,.form-control-file.is-invalid~.invalid-tooltip,.was-validated .form-control-file:invalid~.invalid-feedback,.was-validated .form-control-file:invalid~.invalid-tooltip{display:block}.form-check-input.is-invalid~.form-check-label,.was-validated .form-check-input:invalid~.form-check-label{color:#dc3545}.form-check-input.is-invalid~.invalid-feedback,.form-check-input.is-invalid~.invalid-tooltip,.was-validated .form-check-input:invalid~.invalid-feedback,.was-validated .form-check-input:invalid~.invalid-tooltip{display:block}.custom-control-input.is-invalid~.custom-control-label,.was-validated .custom-control-input:invalid~.custom-control-label{color:#dc3545}.custom-control-input.is-invalid~.custom-control-label::before,.was-validated .custom-control-input:invalid~.custom-control-label::before{background-color:#efa2a9}.custom-control-input.is-invalid~.invalid-feedback,.custom-control-input.is-invalid~.invalid-tooltip,.was-validated .custom-control-input:invalid~.invalid-feedback,.was-validated .custom-control-input:invalid~.invalid-tooltip{display:block}.custom-control-input.is-invalid:checked~.custom-control-label::before,.was-validated .custom-control-input:invalid:checked~.custom-control-label::before{background-color:#e4606d}.custom-control-input.is-invalid:focus~.custom-control-label::before,.was-validated .custom-control-input:invalid:focus~.custom-control-label::before{box-shadow:0 0 0 1px #fff,0 0 0 .2rem rgba(220,53,69,.25)}.custom-file-input.is-invalid~.custom-file-label,.was-validated .custom-file-input:invalid~.custom-file-label{border-color:#dc3545}.custom-file-input.is-invalid~.custom-file-label::after,.was-validated .custom-file-input:invalid~.custom-file-label::after{border-color:inherit}.custom-file-input.is-invalid~.invalid-feedback,.custom-file-input.is-invalid~.invalid-tooltip,.was-validated .custom-file-input:invalid~.invalid-feedback,.was-validated .custom-file-input:invalid~.invalid-tooltip{display:block}.custom-file-input.is-invalid:focus~.custom-file-label,.was-validated .custom-file-input:invalid:focus~.custom-file-label{box-shadow:0 0 0 .2rem rgba(220,53,69,.25)}.form-inline{display:-ms-flexbox;display:flex;-ms-flex-flow:row wrap;flex-flow:row wrap;-ms-flex-align:center;align-items:center}.form-inline .form-check{width:100%}@media (min-width:576px){.form-inline label{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center;margin-bottom:0}.form-inline .form-group{display:-ms-flexbox;display:flex;-ms-flex:0 0 auto;flex:0 0 auto;-ms-flex-flow:row wrap;flex-flow:row wrap;-ms-flex-align:center;align-items:center;margin-bottom:0}.form-inline .form-control{display:inline-block;width:auto;vertical-align:middle}.form-inline .form-control-plaintext{display:inline-block}.form-inline .custom-select,.form-inline .input-group{width:auto}.form-inline .form-check{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center;width:auto;padding-left:0}.form-inline .form-check-input{position:relative;margin-top:0;margin-right:.25rem;margin-left:0}.form-inline .custom-control{-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center}.form-inline .custom-control-label{margin-bottom:0}}.btn{display:inline-block;font-weight:400;text-align:center;white-space:nowrap;vertical-align:middle;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border:1px solid transparent;padding:.375rem .75rem;font-size:1rem;line-height:1.5;border-radius:.25rem;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out}@media screen and (prefers-reduced-motion:reduce){.btn{transition:none}}.btn:focus,.btn:hover{text-decoration:none}.btn.focus,.btn:focus{outline:0;box-shadow:0 0 0 .2rem rgba(0,123,255,.25)}.btn.disabled,.btn:disabled{opacity:.65}.btn:not(:disabled):not(.disabled){cursor:pointer}a.btn.disabled,fieldset:disabled a.btn{pointer-events:none}.btn-primary{color:#fff;background-color:#007bff;border-color:#007bff}.btn-primary:hover{color:#fff;background-color:#0069d9;border-color:#0062cc}.btn-primary.focus,.btn-primary:focus{box-shadow:0 0 0 .2rem rgba(0,123,255,.5)}.btn-primary.disabled,.btn-primary:disabled{color:#fff;background-color:#007bff;border-color:#007bff}.btn-primary:not(:disabled):not(.disabled).active,.btn-primary:not(:disabled):not(.disabled):active,.show>.btn-primary.dropdown-toggle{color:#fff;background-color:#0062cc;border-color:#005cbf}.btn-primary:not(:disabled):not(.disabled).active:focus,.btn-primary:not(:disabled):not(.disabled):active:focus,.show>.btn-primary.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(0,123,255,.5)}.btn-secondary{color:#fff;background-color:#6c757d;border-color:#6c757d}.btn-secondary:hover{color:#fff;background-color:#5a6268;border-color:#545b62}.btn-secondary.focus,.btn-secondary:focus{box-shadow:0 0 0 .2rem rgba(108,117,125,.5)}.btn-secondary.disabled,.btn-secondary:disabled{color:#fff;background-color:#6c757d;border-color:#6c757d}.btn-secondary:not(:disabled):not(.disabled).active,.btn-secondary:not(:disabled):not(.disabled):active,.show>.btn-secondary.dropdown-toggle{color:#fff;background-color:#545b62;border-color:#4e555b}.btn-secondary:not(:disabled):not(.disabled).active:focus,.btn-secondary:not(:disabled):not(.disabled):active:focus,.show>.btn-secondary.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(108,117,125,.5)}.btn-success{color:#fff;background-color:#28a745;border-color:#28a745}.btn-success:hover{color:#fff;background-color:#218838;border-color:#1e7e34}.btn-success.focus,.btn-success:focus{box-shadow:0 0 0 .2rem rgba(40,167,69,.5)}.btn-success.disabled,.btn-success:disabled{color:#fff;background-color:#28a745;border-color:#28a745}.btn-success:not(:disabled):not(.disabled).active,.btn-success:not(:disabled):not(.disabled):active,.show>.btn-success.dropdown-toggle{color:#fff;background-color:#1e7e34;border-color:#1c7430}.btn-success:not(:disabled):not(.disabled).active:focus,.btn-success:not(:disabled):not(.disabled):active:focus,.show>.btn-success.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(40,167,69,.5)}.btn-info{color:#fff;background-color:#17a2b8;border-color:#17a2b8}.btn-info:hover{color:#fff;background-color:#138496;border-color:#117a8b}.btn-info.focus,.btn-info:focus{box-shadow:0 0 0 .2rem rgba(23,162,184,.5)}.btn-info.disabled,.btn-info:disabled{color:#fff;background-color:#17a2b8;border-color:#17a2b8}.btn-info:not(:disabled):not(.disabled).active,.btn-info:not(:disabled):not(.disabled):active,.show>.btn-info.dropdown-toggle{color:#fff;background-color:#117a8b;border-color:#10707f}.btn-info:not(:disabled):not(.disabled).active:focus,.btn-info:not(:disabled):not(.disabled):active:focus,.show>.btn-info.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(23,162,184,.5)}.btn-warning{color:#212529;background-color:#ffc107;border-color:#ffc107}.btn-warning:hover{color:#212529;background-color:#e0a800;border-color:#d39e00}.btn-warning.focus,.btn-warning:focus{box-shadow:0 0 0 .2rem rgba(255,193,7,.5)}.btn-warning.disabled,.btn-warning:disabled{color:#212529;background-color:#ffc107;border-color:#ffc107}.btn-warning:not(:disabled):not(.disabled).active,.btn-warning:not(:disabled):not(.disabled):active,.show>.btn-warning.dropdown-toggle{color:#212529;background-color:#d39e00;border-color:#c69500}.btn-warning:not(:disabled):not(.disabled).active:focus,.btn-warning:not(:disabled):not(.disabled):active:focus,.show>.btn-warning.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(255,193,7,.5)}.btn-danger{color:#fff;background-color:#dc3545;border-color:#dc3545}.btn-danger:hover{color:#fff;background-color:#c82333;border-color:#bd2130}.btn-danger.focus,.btn-danger:focus{box-shadow:0 0 0 .2rem rgba(220,53,69,.5)}.btn-danger.disabled,.btn-danger:disabled{color:#fff;background-color:#dc3545;border-color:#dc3545}.btn-danger:not(:disabled):not(.disabled).active,.btn-danger:not(:disabled):not(.disabled):active,.show>.btn-danger.dropdown-toggle{color:#fff;background-color:#bd2130;border-color:#b21f2d}.btn-danger:not(:disabled):not(.disabled).active:focus,.btn-danger:not(:disabled):not(.disabled):active:focus,.show>.btn-danger.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(220,53,69,.5)}.btn-light{color:#212529;background-color:#f8f9fa;border-color:#f8f9fa}.btn-light:hover{color:#212529;background-color:#e2e6ea;border-color:#dae0e5}.btn-light.focus,.btn-light:focus{box-shadow:0 0 0 .2rem rgba(248,249,250,.5)}.btn-light.disabled,.btn-light:disabled{color:#212529;background-color:#f8f9fa;border-color:#f8f9fa}.btn-light:not(:disabled):not(.disabled).active,.btn-light:not(:disabled):not(.disabled):active,.show>.btn-light.dropdown-toggle{color:#212529;background-color:#dae0e5;border-color:#d3d9df}.btn-light:not(:disabled):not(.disabled).active:focus,.btn-light:not(:disabled):not(.disabled):active:focus,.show>.btn-light.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(248,249,250,.5)}.btn-dark{color:#fff;background-color:#343a40;border-color:#343a40}.btn-dark:hover{color:#fff;background-color:#23272b;border-color:#1d2124}.btn-dark.focus,.btn-dark:focus{box-shadow:0 0 0 .2rem rgba(52,58,64,.5)}.btn-dark.disabled,.btn-dark:disabled{color:#fff;background-color:#343a40;border-color:#343a40}.btn-dark:not(:disabled):not(.disabled).active,.btn-dark:not(:disabled):not(.disabled):active,.show>.btn-dark.dropdown-toggle{color:#fff;background-color:#1d2124;border-color:#171a1d}.btn-dark:not(:disabled):not(.disabled).active:focus,.btn-dark:not(:disabled):not(.disabled):active:focus,.show>.btn-dark.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(52,58,64,.5)}.btn-outline-primary{color:#007bff;background-color:transparent;background-image:none;border-color:#007bff}.btn-outline-primary:hover{color:#fff;background-color:#007bff;border-color:#007bff}.btn-outline-primary.focus,.btn-outline-primary:focus{box-shadow:0 0 0 .2rem rgba(0,123,255,.5)}.btn-outline-primary.disabled,.btn-outline-primary:disabled{color:#007bff;background-color:transparent}.btn-outline-primary:not(:disabled):not(.disabled).active,.btn-outline-primary:not(:disabled):not(.disabled):active,.show>.btn-outline-primary.dropdown-toggle{color:#fff;background-color:#007bff;border-color:#007bff}.btn-outline-primary:not(:disabled):not(.disabled).active:focus,.btn-outline-primary:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-primary.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(0,123,255,.5)}.btn-outline-secondary{color:#6c757d;background-color:transparent;background-image:none;border-color:#6c757d}.btn-outline-secondary:hover{color:#fff;background-color:#6c757d;border-color:#6c757d}.btn-outline-secondary.focus,.btn-outline-secondary:focus{box-shadow:0 0 0 .2rem rgba(108,117,125,.5)}.btn-outline-secondary.disabled,.btn-outline-secondary:disabled{color:#6c757d;background-color:transparent}.btn-outline-secondary:not(:disabled):not(.disabled).active,.btn-outline-secondary:not(:disabled):not(.disabled):active,.show>.btn-outline-secondary.dropdown-toggle{color:#fff;background-color:#6c757d;border-color:#6c757d}.btn-outline-secondary:not(:disabled):not(.disabled).active:focus,.btn-outline-secondary:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-secondary.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(108,117,125,.5)}.btn-outline-success{color:#28a745;background-color:transparent;background-image:none;border-color:#28a745}.btn-outline-success:hover{color:#fff;background-color:#28a745;border-color:#28a745}.btn-outline-success.focus,.btn-outline-success:focus{box-shadow:0 0 0 .2rem rgba(40,167,69,.5)}.btn-outline-success.disabled,.btn-outline-success:disabled{color:#28a745;background-color:transparent}.btn-outline-success:not(:disabled):not(.disabled).active,.btn-outline-success:not(:disabled):not(.disabled):active,.show>.btn-outline-success.dropdown-toggle{color:#fff;background-color:#28a745;border-color:#28a745}.btn-outline-success:not(:disabled):not(.disabled).active:focus,.btn-outline-success:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-success.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(40,167,69,.5)}.btn-outline-info{color:#17a2b8;background-color:transparent;background-image:none;border-color:#17a2b8}.btn-outline-info:hover{color:#fff;background-color:#17a2b8;border-color:#17a2b8}.btn-outline-info.focus,.btn-outline-info:focus{box-shadow:0 0 0 .2rem rgba(23,162,184,.5)}.btn-outline-info.disabled,.btn-outline-info:disabled{color:#17a2b8;background-color:transparent}.btn-outline-info:not(:disabled):not(.disabled).active,.btn-outline-info:not(:disabled):not(.disabled):active,.show>.btn-outline-info.dropdown-toggle{color:#fff;background-color:#17a2b8;border-color:#17a2b8}.btn-outline-info:not(:disabled):not(.disabled).active:focus,.btn-outline-info:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-info.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(23,162,184,.5)}.btn-outline-warning{color:#ffc107;background-color:transparent;background-image:none;border-color:#ffc107}.btn-outline-warning:hover{color:#212529;background-color:#ffc107;border-color:#ffc107}.btn-outline-warning.focus,.btn-outline-warning:focus{box-shadow:0 0 0 .2rem rgba(255,193,7,.5)}.btn-outline-warning.disabled,.btn-outline-warning:disabled{color:#ffc107;background-color:transparent}.btn-outline-warning:not(:disabled):not(.disabled).active,.btn-outline-warning:not(:disabled):not(.disabled):active,.show>.btn-outline-warning.dropdown-toggle{color:#212529;background-color:#ffc107;border-color:#ffc107}.btn-outline-warning:not(:disabled):not(.disabled).active:focus,.btn-outline-warning:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-warning.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(255,193,7,.5)}.btn-outline-danger{color:#dc3545;background-color:transparent;background-image:none;border-color:#dc3545}.btn-outline-danger:hover{color:#fff;background-color:#dc3545;border-color:#dc3545}.btn-outline-danger.focus,.btn-outline-danger:focus{box-shadow:0 0 0 .2rem rgba(220,53,69,.5)}.btn-outline-danger.disabled,.btn-outline-danger:disabled{color:#dc3545;background-color:transparent}.btn-outline-danger:not(:disabled):not(.disabled).active,.btn-outline-danger:not(:disabled):not(.disabled):active,.show>.btn-outline-danger.dropdown-toggle{color:#fff;background-color:#dc3545;border-color:#dc3545}.btn-outline-danger:not(:disabled):not(.disabled).active:focus,.btn-outline-danger:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-danger.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(220,53,69,.5)}.btn-outline-light{color:#f8f9fa;background-color:transparent;background-image:none;border-color:#f8f9fa}.btn-outline-light:hover{color:#212529;background-color:#f8f9fa;border-color:#f8f9fa}.btn-outline-light.focus,.btn-outline-light:focus{box-shadow:0 0 0 .2rem rgba(248,249,250,.5)}.btn-outline-light.disabled,.btn-outline-light:disabled{color:#f8f9fa;background-color:transparent}.btn-outline-light:not(:disabled):not(.disabled).active,.btn-outline-light:not(:disabled):not(.disabled):active,.show>.btn-outline-light.dropdown-toggle{color:#212529;background-color:#f8f9fa;border-color:#f8f9fa}.btn-outline-light:not(:disabled):not(.disabled).active:focus,.btn-outline-light:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-light.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(248,249,250,.5)}.btn-outline-dark{color:#343a40;background-color:transparent;background-image:none;border-color:#343a40}.btn-outline-dark:hover{color:#fff;background-color:#343a40;border-color:#343a40}.btn-outline-dark.focus,.btn-outline-dark:focus{box-shadow:0 0 0 .2rem rgba(52,58,64,.5)}.btn-outline-dark.disabled,.btn-outline-dark:disabled{color:#343a40;background-color:transparent}.btn-outline-dark:not(:disabled):not(.disabled).active,.btn-outline-dark:not(:disabled):not(.disabled):active,.show>.btn-outline-dark.dropdown-toggle{color:#fff;background-color:#343a40;border-color:#343a40}.btn-outline-dark:not(:disabled):not(.disabled).active:focus,.btn-outline-dark:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-dark.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(52,58,64,.5)}.btn-link{font-weight:400;color:#007bff;background-color:transparent}.btn-link:hover{color:#0056b3;text-decoration:underline;background-color:transparent;border-color:transparent}.btn-link.focus,.btn-link:focus{text-decoration:underline;border-color:transparent;box-shadow:none}.btn-link.disabled,.btn-link:disabled{color:#6c757d;pointer-events:none}.btn-group-lg>.btn,.btn-lg{padding:.5rem 1rem;font-size:1.25rem;line-height:1.5;border-radius:.3rem}.btn-group-sm>.btn,.btn-sm{padding:.25rem .5rem;font-size:.875rem;line-height:1.5;border-radius:.2rem}.btn-block{display:block;width:100%}.btn-block+.btn-block{margin-top:.5rem}input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-block{width:100%}.fade{transition:opacity .15s linear}@media screen and (prefers-reduced-motion:reduce){.fade{transition:none}}.fade:not(.show){opacity:0}.collapse:not(.show){display:none}.collapsing{position:relative;height:0;overflow:hidden;transition:height .35s ease}@media screen and (prefers-reduced-motion:reduce){.collapsing{transition:none}}.dropdown,.dropleft,.dropright,.dropup{position:relative}.dropdown-toggle::after{display:inline-block;width:0;height:0;margin-left:.255em;vertical-align:.255em;content:\"\";border-top:.3em solid;border-right:.3em solid transparent;border-bottom:0;border-left:.3em solid transparent}.dropdown-toggle:empty::after{margin-left:0}.dropdown-menu{position:absolute;top:100%;left:0;z-index:1000;display:none;float:left;min-width:10rem;padding:.5rem 0;margin:.125rem 0 0;font-size:1rem;color:#212529;text-align:left;list-style:none;background-color:#fff;background-clip:padding-box;border:1px solid rgba(0,0,0,.15);border-radius:.25rem}.dropdown-menu-right{right:0;left:auto}.dropup .dropdown-menu{top:auto;bottom:100%;margin-top:0;margin-bottom:.125rem}.dropup .dropdown-toggle::after{display:inline-block;width:0;height:0;margin-left:.255em;vertical-align:.255em;content:\"\";border-top:0;border-right:.3em solid transparent;border-bottom:.3em solid;border-left:.3em solid transparent}.dropup .dropdown-toggle:empty::after{margin-left:0}.dropright .dropdown-menu{top:0;right:auto;left:100%;margin-top:0;margin-left:.125rem}.dropright .dropdown-toggle::after{display:inline-block;width:0;height:0;margin-left:.255em;vertical-align:.255em;content:\"\";border-top:.3em solid transparent;border-right:0;border-bottom:.3em solid transparent;border-left:.3em solid}.dropright .dropdown-toggle:empty::after{margin-left:0}.dropright .dropdown-toggle::after{vertical-align:0}.dropleft .dropdown-menu{top:0;right:100%;left:auto;margin-top:0;margin-right:.125rem}.dropleft .dropdown-toggle::after{display:inline-block;width:0;height:0;margin-left:.255em;vertical-align:.255em;content:\"\"}.dropleft .dropdown-toggle::after{display:none}.dropleft .dropdown-toggle::before{display:inline-block;width:0;height:0;margin-right:.255em;vertical-align:.255em;content:\"\";border-top:.3em solid transparent;border-right:.3em solid;border-bottom:.3em solid transparent}.dropleft .dropdown-toggle:empty::after{margin-left:0}.dropleft .dropdown-toggle::before{vertical-align:0}.dropdown-menu[x-placement^=bottom],.dropdown-menu[x-placement^=left],.dropdown-menu[x-placement^=right],.dropdown-menu[x-placement^=top]{right:auto;bottom:auto}.dropdown-divider{height:0;margin:.5rem 0;overflow:hidden;border-top:1px solid #e9ecef}.dropdown-item{display:block;width:100%;padding:.25rem 1.5rem;clear:both;font-weight:400;color:#212529;text-align:inherit;white-space:nowrap;background-color:transparent;border:0}.dropdown-item:focus,.dropdown-item:hover{color:#16181b;text-decoration:none;background-color:#f8f9fa}.dropdown-item.active,.dropdown-item:active{color:#fff;text-decoration:none;background-color:#007bff}.dropdown-item.disabled,.dropdown-item:disabled{color:#6c757d;background-color:transparent}.dropdown-menu.show{display:block}.dropdown-header{display:block;padding:.5rem 1.5rem;margin-bottom:0;font-size:.875rem;color:#6c757d;white-space:nowrap}.dropdown-item-text{display:block;padding:.25rem 1.5rem;color:#212529}.btn-group,.btn-group-vertical{position:relative;display:-ms-inline-flexbox;display:inline-flex;vertical-align:middle}.btn-group-vertical>.btn,.btn-group>.btn{position:relative;-ms-flex:0 1 auto;flex:0 1 auto}.btn-group-vertical>.btn:hover,.btn-group>.btn:hover{z-index:1}.btn-group-vertical>.btn.active,.btn-group-vertical>.btn:active,.btn-group-vertical>.btn:focus,.btn-group>.btn.active,.btn-group>.btn:active,.btn-group>.btn:focus{z-index:1}.btn-group .btn+.btn,.btn-group .btn+.btn-group,.btn-group .btn-group+.btn,.btn-group .btn-group+.btn-group,.btn-group-vertical .btn+.btn,.btn-group-vertical .btn+.btn-group,.btn-group-vertical .btn-group+.btn,.btn-group-vertical .btn-group+.btn-group{margin-left:-1px}.btn-toolbar{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-pack:start;justify-content:flex-start}.btn-toolbar .input-group{width:auto}.btn-group>.btn:first-child{margin-left:0}.btn-group>.btn-group:not(:last-child)>.btn,.btn-group>.btn:not(:last-child):not(.dropdown-toggle){border-top-right-radius:0;border-bottom-right-radius:0}.btn-group>.btn-group:not(:first-child)>.btn,.btn-group>.btn:not(:first-child){border-top-left-radius:0;border-bottom-left-radius:0}.dropdown-toggle-split{padding-right:.5625rem;padding-left:.5625rem}.dropdown-toggle-split::after,.dropright .dropdown-toggle-split::after,.dropup .dropdown-toggle-split::after{margin-left:0}.dropleft .dropdown-toggle-split::before{margin-right:0}.btn-group-sm>.btn+.dropdown-toggle-split,.btn-sm+.dropdown-toggle-split{padding-right:.375rem;padding-left:.375rem}.btn-group-lg>.btn+.dropdown-toggle-split,.btn-lg+.dropdown-toggle-split{padding-right:.75rem;padding-left:.75rem}.btn-group-vertical{-ms-flex-direction:column;flex-direction:column;-ms-flex-align:start;align-items:flex-start;-ms-flex-pack:center;justify-content:center}.btn-group-vertical .btn,.btn-group-vertical .btn-group{width:100%}.btn-group-vertical>.btn+.btn,.btn-group-vertical>.btn+.btn-group,.btn-group-vertical>.btn-group+.btn,.btn-group-vertical>.btn-group+.btn-group{margin-top:-1px;margin-left:0}.btn-group-vertical>.btn-group:not(:last-child)>.btn,.btn-group-vertical>.btn:not(:last-child):not(.dropdown-toggle){border-bottom-right-radius:0;border-bottom-left-radius:0}.btn-group-vertical>.btn-group:not(:first-child)>.btn,.btn-group-vertical>.btn:not(:first-child){border-top-left-radius:0;border-top-right-radius:0}.btn-group-toggle>.btn,.btn-group-toggle>.btn-group>.btn{margin-bottom:0}.btn-group-toggle>.btn input[type=checkbox],.btn-group-toggle>.btn input[type=radio],.btn-group-toggle>.btn-group>.btn input[type=checkbox],.btn-group-toggle>.btn-group>.btn input[type=radio]{position:absolute;clip:rect(0,0,0,0);pointer-events:none}.input-group{position:relative;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-align:stretch;align-items:stretch;width:100%}.input-group>.custom-file,.input-group>.custom-select,.input-group>.form-control{position:relative;-ms-flex:1 1 auto;flex:1 1 auto;width:1%;margin-bottom:0}.input-group>.custom-file+.custom-file,.input-group>.custom-file+.custom-select,.input-group>.custom-file+.form-control,.input-group>.custom-select+.custom-file,.input-group>.custom-select+.custom-select,.input-group>.custom-select+.form-control,.input-group>.form-control+.custom-file,.input-group>.form-control+.custom-select,.input-group>.form-control+.form-control{margin-left:-1px}.input-group>.custom-file .custom-file-input:focus~.custom-file-label,.input-group>.custom-select:focus,.input-group>.form-control:focus{z-index:3}.input-group>.custom-file .custom-file-input:focus{z-index:4}.input-group>.custom-select:not(:last-child),.input-group>.form-control:not(:last-child){border-top-right-radius:0;border-bottom-right-radius:0}.input-group>.custom-select:not(:first-child),.input-group>.form-control:not(:first-child){border-top-left-radius:0;border-bottom-left-radius:0}.input-group>.custom-file{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center}.input-group>.custom-file:not(:last-child) .custom-file-label,.input-group>.custom-file:not(:last-child) .custom-file-label::after{border-top-right-radius:0;border-bottom-right-radius:0}.input-group>.custom-file:not(:first-child) .custom-file-label{border-top-left-radius:0;border-bottom-left-radius:0}.input-group-append,.input-group-prepend{display:-ms-flexbox;display:flex}.input-group-append .btn,.input-group-prepend .btn{position:relative;z-index:2}.input-group-append .btn+.btn,.input-group-append .btn+.input-group-text,.input-group-append .input-group-text+.btn,.input-group-append .input-group-text+.input-group-text,.input-group-prepend .btn+.btn,.input-group-prepend .btn+.input-group-text,.input-group-prepend .input-group-text+.btn,.input-group-prepend .input-group-text+.input-group-text{margin-left:-1px}.input-group-prepend{margin-right:-1px}.input-group-append{margin-left:-1px}.input-group-text{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;padding:.375rem .75rem;margin-bottom:0;font-size:1rem;font-weight:400;line-height:1.5;color:#495057;text-align:center;white-space:nowrap;background-color:#e9ecef;border:1px solid #ced4da;border-radius:.25rem}.input-group-text input[type=checkbox],.input-group-text input[type=radio]{margin-top:0}.input-group-lg>.form-control,.input-group-lg>.input-group-append>.btn,.input-group-lg>.input-group-append>.input-group-text,.input-group-lg>.input-group-prepend>.btn,.input-group-lg>.input-group-prepend>.input-group-text{height:calc(2.875rem + 2px);padding:.5rem 1rem;font-size:1.25rem;line-height:1.5;border-radius:.3rem}.input-group-sm>.form-control,.input-group-sm>.input-group-append>.btn,.input-group-sm>.input-group-append>.input-group-text,.input-group-sm>.input-group-prepend>.btn,.input-group-sm>.input-group-prepend>.input-group-text{height:calc(1.8125rem + 2px);padding:.25rem .5rem;font-size:.875rem;line-height:1.5;border-radius:.2rem}.input-group>.input-group-append:last-child>.btn:not(:last-child):not(.dropdown-toggle),.input-group>.input-group-append:last-child>.input-group-text:not(:last-child),.input-group>.input-group-append:not(:last-child)>.btn,.input-group>.input-group-append:not(:last-child)>.input-group-text,.input-group>.input-group-prepend>.btn,.input-group>.input-group-prepend>.input-group-text{border-top-right-radius:0;border-bottom-right-radius:0}.input-group>.input-group-append>.btn,.input-group>.input-group-append>.input-group-text,.input-group>.input-group-prepend:first-child>.btn:not(:first-child),.input-group>.input-group-prepend:first-child>.input-group-text:not(:first-child),.input-group>.input-group-prepend:not(:first-child)>.btn,.input-group>.input-group-prepend:not(:first-child)>.input-group-text{border-top-left-radius:0;border-bottom-left-radius:0}.custom-control{position:relative;display:block;min-height:1.5rem;padding-left:1.5rem}.custom-control-inline{display:-ms-inline-flexbox;display:inline-flex;margin-right:1rem}.custom-control-input{position:absolute;z-index:-1;opacity:0}.custom-control-input:checked~.custom-control-label::before{color:#fff;background-color:#007bff}.custom-control-input:focus~.custom-control-label::before{box-shadow:0 0 0 1px #fff,0 0 0 .2rem rgba(0,123,255,.25)}.custom-control-input:active~.custom-control-label::before{color:#fff;background-color:#b3d7ff}.custom-control-input:disabled~.custom-control-label{color:#6c757d}.custom-control-input:disabled~.custom-control-label::before{background-color:#e9ecef}.custom-control-label{position:relative;margin-bottom:0}.custom-control-label::before{position:absolute;top:.25rem;left:-1.5rem;display:block;width:1rem;height:1rem;pointer-events:none;content:\"\";-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:#dee2e6}.custom-control-label::after{position:absolute;top:.25rem;left:-1.5rem;display:block;width:1rem;height:1rem;content:\"\";background-repeat:no-repeat;background-position:center center;background-size:50% 50%}.custom-checkbox .custom-control-label::before{border-radius:.25rem}.custom-checkbox .custom-control-input:checked~.custom-control-label::before{background-color:#007bff}.custom-checkbox .custom-control-input:checked~.custom-control-label::after{background-image:url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E\")}.custom-checkbox .custom-control-input:indeterminate~.custom-control-label::before{background-color:#007bff}.custom-checkbox .custom-control-input:indeterminate~.custom-control-label::after{background-image:url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='%23fff' d='M0 2h4'/%3E%3C/svg%3E\")}.custom-checkbox .custom-control-input:disabled:checked~.custom-control-label::before{background-color:rgba(0,123,255,.5)}.custom-checkbox .custom-control-input:disabled:indeterminate~.custom-control-label::before{background-color:rgba(0,123,255,.5)}.custom-radio .custom-control-label::before{border-radius:50%}.custom-radio .custom-control-input:checked~.custom-control-label::before{background-color:#007bff}.custom-radio .custom-control-input:checked~.custom-control-label::after{background-image:url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23fff'/%3E%3C/svg%3E\")}.custom-radio .custom-control-input:disabled:checked~.custom-control-label::before{background-color:rgba(0,123,255,.5)}.custom-select{display:inline-block;width:100%;height:calc(2.25rem + 2px);padding:.375rem 1.75rem .375rem .75rem;line-height:1.5;color:#495057;vertical-align:middle;background:#fff url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E\") no-repeat right .75rem center;background-size:8px 10px;border:1px solid #ced4da;border-radius:.25rem;-webkit-appearance:none;-moz-appearance:none;appearance:none}.custom-select:focus{border-color:#80bdff;outline:0;box-shadow:0 0 0 .2rem rgba(128,189,255,.5)}.custom-select:focus::-ms-value{color:#495057;background-color:#fff}.custom-select[multiple],.custom-select[size]:not([size=\"1\"]){height:auto;padding-right:.75rem;background-image:none}.custom-select:disabled{color:#6c757d;background-color:#e9ecef}.custom-select::-ms-expand{opacity:0}.custom-select-sm{height:calc(1.8125rem + 2px);padding-top:.375rem;padding-bottom:.375rem;font-size:75%}.custom-select-lg{height:calc(2.875rem + 2px);padding-top:.375rem;padding-bottom:.375rem;font-size:125%}.custom-file{position:relative;display:inline-block;width:100%;height:calc(2.25rem + 2px);margin-bottom:0}.custom-file-input{position:relative;z-index:2;width:100%;height:calc(2.25rem + 2px);margin:0;opacity:0}.custom-file-input:focus~.custom-file-label{border-color:#80bdff;box-shadow:0 0 0 .2rem rgba(0,123,255,.25)}.custom-file-input:focus~.custom-file-label::after{border-color:#80bdff}.custom-file-input:disabled~.custom-file-label{background-color:#e9ecef}.custom-file-input:lang(en)~.custom-file-label::after{content:\"Browse\"}.custom-file-label{position:absolute;top:0;right:0;left:0;z-index:1;height:calc(2.25rem + 2px);padding:.375rem .75rem;line-height:1.5;color:#495057;background-color:#fff;border:1px solid #ced4da;border-radius:.25rem}.custom-file-label::after{position:absolute;top:0;right:0;bottom:0;z-index:3;display:block;height:2.25rem;padding:.375rem .75rem;line-height:1.5;color:#495057;content:\"Browse\";background-color:#e9ecef;border-left:1px solid #ced4da;border-radius:0 .25rem .25rem 0}.custom-range{width:100%;padding-left:0;background-color:transparent;-webkit-appearance:none;-moz-appearance:none;appearance:none}.custom-range:focus{outline:0}.custom-range:focus::-webkit-slider-thumb{box-shadow:0 0 0 1px #fff,0 0 0 .2rem rgba(0,123,255,.25)}.custom-range:focus::-moz-range-thumb{box-shadow:0 0 0 1px #fff,0 0 0 .2rem rgba(0,123,255,.25)}.custom-range:focus::-ms-thumb{box-shadow:0 0 0 1px #fff,0 0 0 .2rem rgba(0,123,255,.25)}.custom-range::-moz-focus-outer{border:0}.custom-range::-webkit-slider-thumb{width:1rem;height:1rem;margin-top:-.25rem;background-color:#007bff;border:0;border-radius:1rem;transition:background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;-webkit-appearance:none;appearance:none}@media screen and (prefers-reduced-motion:reduce){.custom-range::-webkit-slider-thumb{transition:none}}.custom-range::-webkit-slider-thumb:active{background-color:#b3d7ff}.custom-range::-webkit-slider-runnable-track{width:100%;height:.5rem;color:transparent;cursor:pointer;background-color:#dee2e6;border-color:transparent;border-radius:1rem}.custom-range::-moz-range-thumb{width:1rem;height:1rem;background-color:#007bff;border:0;border-radius:1rem;transition:background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;-moz-appearance:none;appearance:none}@media screen and (prefers-reduced-motion:reduce){.custom-range::-moz-range-thumb{transition:none}}.custom-range::-moz-range-thumb:active{background-color:#b3d7ff}.custom-range::-moz-range-track{width:100%;height:.5rem;color:transparent;cursor:pointer;background-color:#dee2e6;border-color:transparent;border-radius:1rem}.custom-range::-ms-thumb{width:1rem;height:1rem;margin-top:0;margin-right:.2rem;margin-left:.2rem;background-color:#007bff;border:0;border-radius:1rem;transition:background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;appearance:none}@media screen and (prefers-reduced-motion:reduce){.custom-range::-ms-thumb{transition:none}}.custom-range::-ms-thumb:active{background-color:#b3d7ff}.custom-range::-ms-track{width:100%;height:.5rem;color:transparent;cursor:pointer;background-color:transparent;border-color:transparent;border-width:.5rem}.custom-range::-ms-fill-lower{background-color:#dee2e6;border-radius:1rem}.custom-range::-ms-fill-upper{margin-right:15px;background-color:#dee2e6;border-radius:1rem}.custom-control-label::before,.custom-file-label,.custom-select{transition:background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out}@media screen and (prefers-reduced-motion:reduce){.custom-control-label::before,.custom-file-label,.custom-select{transition:none}}.nav{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding-left:0;margin-bottom:0;list-style:none}.nav-link{display:block;padding:.5rem 1rem}.nav-link:focus,.nav-link:hover{text-decoration:none}.nav-link.disabled{color:#6c757d}.nav-tabs{border-bottom:1px solid #dee2e6}.nav-tabs .nav-item{margin-bottom:-1px}.nav-tabs .nav-link{border:1px solid transparent;border-top-left-radius:.25rem;border-top-right-radius:.25rem}.nav-tabs .nav-link:focus,.nav-tabs .nav-link:hover{border-color:#e9ecef #e9ecef #dee2e6}.nav-tabs .nav-link.disabled{color:#6c757d;background-color:transparent;border-color:transparent}.nav-tabs .nav-item.show .nav-link,.nav-tabs .nav-link.active{color:#495057;background-color:#fff;border-color:#dee2e6 #dee2e6 #fff}.nav-tabs .dropdown-menu{margin-top:-1px;border-top-left-radius:0;border-top-right-radius:0}.nav-pills .nav-link{border-radius:.25rem}.nav-pills .nav-link.active,.nav-pills .show>.nav-link{color:#fff;background-color:#007bff}.nav-fill .nav-item{-ms-flex:1 1 auto;flex:1 1 auto;text-align:center}.nav-justified .nav-item{-ms-flex-preferred-size:0;flex-basis:0;-ms-flex-positive:1;flex-grow:1;text-align:center}.tab-content>.tab-pane{display:none}.tab-content>.active{display:block}.navbar{position:relative;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-align:center;align-items:center;-ms-flex-pack:justify;justify-content:space-between;padding:.5rem 1rem}.navbar>.container,.navbar>.container-fluid{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-align:center;align-items:center;-ms-flex-pack:justify;justify-content:space-between}.navbar-brand{display:inline-block;padding-top:.3125rem;padding-bottom:.3125rem;margin-right:1rem;font-size:1.25rem;line-height:inherit;white-space:nowrap}.navbar-brand:focus,.navbar-brand:hover{text-decoration:none}.navbar-nav{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;padding-left:0;margin-bottom:0;list-style:none}.navbar-nav .nav-link{padding-right:0;padding-left:0}.navbar-nav .dropdown-menu{position:static;float:none}.navbar-text{display:inline-block;padding-top:.5rem;padding-bottom:.5rem}.navbar-collapse{-ms-flex-preferred-size:100%;flex-basis:100%;-ms-flex-positive:1;flex-grow:1;-ms-flex-align:center;align-items:center}.navbar-toggler{padding:.25rem .75rem;font-size:1.25rem;line-height:1;background-color:transparent;border:1px solid transparent;border-radius:.25rem}.navbar-toggler:focus,.navbar-toggler:hover{text-decoration:none}.navbar-toggler:not(:disabled):not(.disabled){cursor:pointer}.navbar-toggler-icon{display:inline-block;width:1.5em;height:1.5em;vertical-align:middle;content:\"\";background:no-repeat center center;background-size:100% 100%}@media (max-width:575.98px){.navbar-expand-sm>.container,.navbar-expand-sm>.container-fluid{padding-right:0;padding-left:0}}@media (min-width:576px){.navbar-expand-sm{-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:start;justify-content:flex-start}.navbar-expand-sm .navbar-nav{-ms-flex-direction:row;flex-direction:row}.navbar-expand-sm .navbar-nav .dropdown-menu{position:absolute}.navbar-expand-sm .navbar-nav .nav-link{padding-right:.5rem;padding-left:.5rem}.navbar-expand-sm>.container,.navbar-expand-sm>.container-fluid{-ms-flex-wrap:nowrap;flex-wrap:nowrap}.navbar-expand-sm .navbar-collapse{display:-ms-flexbox!important;display:flex!important;-ms-flex-preferred-size:auto;flex-basis:auto}.navbar-expand-sm .navbar-toggler{display:none}}@media (max-width:767.98px){.navbar-expand-md>.container,.navbar-expand-md>.container-fluid{padding-right:0;padding-left:0}}@media (min-width:768px){.navbar-expand-md{-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:start;justify-content:flex-start}.navbar-expand-md .navbar-nav{-ms-flex-direction:row;flex-direction:row}.navbar-expand-md .navbar-nav .dropdown-menu{position:absolute}.navbar-expand-md .navbar-nav .nav-link{padding-right:.5rem;padding-left:.5rem}.navbar-expand-md>.container,.navbar-expand-md>.container-fluid{-ms-flex-wrap:nowrap;flex-wrap:nowrap}.navbar-expand-md .navbar-collapse{display:-ms-flexbox!important;display:flex!important;-ms-flex-preferred-size:auto;flex-basis:auto}.navbar-expand-md .navbar-toggler{display:none}}@media (max-width:991.98px){.navbar-expand-lg>.container,.navbar-expand-lg>.container-fluid{padding-right:0;padding-left:0}}@media (min-width:992px){.navbar-expand-lg{-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:start;justify-content:flex-start}.navbar-expand-lg .navbar-nav{-ms-flex-direction:row;flex-direction:row}.navbar-expand-lg .navbar-nav .dropdown-menu{position:absolute}.navbar-expand-lg .navbar-nav .nav-link{padding-right:.5rem;padding-left:.5rem}.navbar-expand-lg>.container,.navbar-expand-lg>.container-fluid{-ms-flex-wrap:nowrap;flex-wrap:nowrap}.navbar-expand-lg .navbar-collapse{display:-ms-flexbox!important;display:flex!important;-ms-flex-preferred-size:auto;flex-basis:auto}.navbar-expand-lg .navbar-toggler{display:none}}@media (max-width:1199.98px){.navbar-expand-xl>.container,.navbar-expand-xl>.container-fluid{padding-right:0;padding-left:0}}@media (min-width:1200px){.navbar-expand-xl{-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:start;justify-content:flex-start}.navbar-expand-xl .navbar-nav{-ms-flex-direction:row;flex-direction:row}.navbar-expand-xl .navbar-nav .dropdown-menu{position:absolute}.navbar-expand-xl .navbar-nav .nav-link{padding-right:.5rem;padding-left:.5rem}.navbar-expand-xl>.container,.navbar-expand-xl>.container-fluid{-ms-flex-wrap:nowrap;flex-wrap:nowrap}.navbar-expand-xl .navbar-collapse{display:-ms-flexbox!important;display:flex!important;-ms-flex-preferred-size:auto;flex-basis:auto}.navbar-expand-xl .navbar-toggler{display:none}}.navbar-expand{-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:start;justify-content:flex-start}.navbar-expand>.container,.navbar-expand>.container-fluid{padding-right:0;padding-left:0}.navbar-expand .navbar-nav{-ms-flex-direction:row;flex-direction:row}.navbar-expand .navbar-nav .dropdown-menu{position:absolute}.navbar-expand .navbar-nav .nav-link{padding-right:.5rem;padding-left:.5rem}.navbar-expand>.container,.navbar-expand>.container-fluid{-ms-flex-wrap:nowrap;flex-wrap:nowrap}.navbar-expand .navbar-collapse{display:-ms-flexbox!important;display:flex!important;-ms-flex-preferred-size:auto;flex-basis:auto}.navbar-expand .navbar-toggler{display:none}.navbar-light .navbar-brand{color:rgba(0,0,0,.9)}.navbar-light .navbar-brand:focus,.navbar-light .navbar-brand:hover{color:rgba(0,0,0,.9)}.navbar-light .navbar-nav .nav-link{color:rgba(0,0,0,.5)}.navbar-light .navbar-nav .nav-link:focus,.navbar-light .navbar-nav .nav-link:hover{color:rgba(0,0,0,.7)}.navbar-light .navbar-nav .nav-link.disabled{color:rgba(0,0,0,.3)}.navbar-light .navbar-nav .active>.nav-link,.navbar-light .navbar-nav .nav-link.active,.navbar-light .navbar-nav .nav-link.show,.navbar-light .navbar-nav .show>.nav-link{color:rgba(0,0,0,.9)}.navbar-light .navbar-toggler{color:rgba(0,0,0,.5);border-color:rgba(0,0,0,.1)}.navbar-light .navbar-toggler-icon{background-image:url(\"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E\")}.navbar-light .navbar-text{color:rgba(0,0,0,.5)}.navbar-light .navbar-text a{color:rgba(0,0,0,.9)}.navbar-light .navbar-text a:focus,.navbar-light .navbar-text a:hover{color:rgba(0,0,0,.9)}.navbar-dark .navbar-brand{color:#fff}.navbar-dark .navbar-brand:focus,.navbar-dark .navbar-brand:hover{color:#fff}.navbar-dark .navbar-nav .nav-link{color:rgba(255,255,255,.5)}.navbar-dark .navbar-nav .nav-link:focus,.navbar-dark .navbar-nav .nav-link:hover{color:rgba(255,255,255,.75)}.navbar-dark .navbar-nav .nav-link.disabled{color:rgba(255,255,255,.25)}.navbar-dark .navbar-nav .active>.nav-link,.navbar-dark .navbar-nav .nav-link.active,.navbar-dark .navbar-nav .nav-link.show,.navbar-dark .navbar-nav .show>.nav-link{color:#fff}.navbar-dark .navbar-toggler{color:rgba(255,255,255,.5);border-color:rgba(255,255,255,.1)}.navbar-dark .navbar-toggler-icon{background-image:url(\"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E\")}.navbar-dark .navbar-text{color:rgba(255,255,255,.5)}.navbar-dark .navbar-text a{color:#fff}.navbar-dark .navbar-text a:focus,.navbar-dark .navbar-text a:hover{color:#fff}.card{position:relative;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;min-width:0;word-wrap:break-word;background-color:#fff;background-clip:border-box;border:1px solid rgba(0,0,0,.125);border-radius:.25rem}.card>hr{margin-right:0;margin-left:0}.card>.list-group:first-child .list-group-item:first-child{border-top-left-radius:.25rem;border-top-right-radius:.25rem}.card>.list-group:last-child .list-group-item:last-child{border-bottom-right-radius:.25rem;border-bottom-left-radius:.25rem}.card-body{-ms-flex:1 1 auto;flex:1 1 auto;padding:1.25rem}.card-title{margin-bottom:.75rem}.card-subtitle{margin-top:-.375rem;margin-bottom:0}.card-text:last-child{margin-bottom:0}.card-link:hover{text-decoration:none}.card-link+.card-link{margin-left:1.25rem}.card-header{padding:.75rem 1.25rem;margin-bottom:0;background-color:rgba(0,0,0,.03);border-bottom:1px solid rgba(0,0,0,.125)}.card-header:first-child{border-radius:calc(.25rem - 1px) calc(.25rem - 1px) 0 0}.card-header+.list-group .list-group-item:first-child{border-top:0}.card-footer{padding:.75rem 1.25rem;background-color:rgba(0,0,0,.03);border-top:1px solid rgba(0,0,0,.125)}.card-footer:last-child{border-radius:0 0 calc(.25rem - 1px) calc(.25rem - 1px)}.card-header-tabs{margin-right:-.625rem;margin-bottom:-.75rem;margin-left:-.625rem;border-bottom:0}.card-header-pills{margin-right:-.625rem;margin-left:-.625rem}.card-img-overlay{position:absolute;top:0;right:0;bottom:0;left:0;padding:1.25rem}.card-img{width:100%;border-radius:calc(.25rem - 1px)}.card-img-top{width:100%;border-top-left-radius:calc(.25rem - 1px);border-top-right-radius:calc(.25rem - 1px)}.card-img-bottom{width:100%;border-bottom-right-radius:calc(.25rem - 1px);border-bottom-left-radius:calc(.25rem - 1px)}.card-deck{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column}.card-deck .card{margin-bottom:15px}@media (min-width:576px){.card-deck{-ms-flex-flow:row wrap;flex-flow:row wrap;margin-right:-15px;margin-left:-15px}.card-deck .card{display:-ms-flexbox;display:flex;-ms-flex:1 0 0%;flex:1 0 0%;-ms-flex-direction:column;flex-direction:column;margin-right:15px;margin-bottom:0;margin-left:15px}}.card-group{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column}.card-group>.card{margin-bottom:15px}@media (min-width:576px){.card-group{-ms-flex-flow:row wrap;flex-flow:row wrap}.card-group>.card{-ms-flex:1 0 0%;flex:1 0 0%;margin-bottom:0}.card-group>.card+.card{margin-left:0;border-left:0}.card-group>.card:first-child{border-top-right-radius:0;border-bottom-right-radius:0}.card-group>.card:first-child .card-header,.card-group>.card:first-child .card-img-top{border-top-right-radius:0}.card-group>.card:first-child .card-footer,.card-group>.card:first-child .card-img-bottom{border-bottom-right-radius:0}.card-group>.card:last-child{border-top-left-radius:0;border-bottom-left-radius:0}.card-group>.card:last-child .card-header,.card-group>.card:last-child .card-img-top{border-top-left-radius:0}.card-group>.card:last-child .card-footer,.card-group>.card:last-child .card-img-bottom{border-bottom-left-radius:0}.card-group>.card:only-child{border-radius:.25rem}.card-group>.card:only-child .card-header,.card-group>.card:only-child .card-img-top{border-top-left-radius:.25rem;border-top-right-radius:.25rem}.card-group>.card:only-child .card-footer,.card-group>.card:only-child .card-img-bottom{border-bottom-right-radius:.25rem;border-bottom-left-radius:.25rem}.card-group>.card:not(:first-child):not(:last-child):not(:only-child){border-radius:0}.card-group>.card:not(:first-child):not(:last-child):not(:only-child) .card-footer,.card-group>.card:not(:first-child):not(:last-child):not(:only-child) .card-header,.card-group>.card:not(:first-child):not(:last-child):not(:only-child) .card-img-bottom,.card-group>.card:not(:first-child):not(:last-child):not(:only-child) .card-img-top{border-radius:0}}.card-columns .card{margin-bottom:.75rem}@media (min-width:576px){.card-columns{-webkit-column-count:3;-moz-column-count:3;column-count:3;-webkit-column-gap:1.25rem;-moz-column-gap:1.25rem;column-gap:1.25rem;orphans:1;widows:1}.card-columns .card{display:inline-block;width:100%}}.accordion .card:not(:first-of-type):not(:last-of-type){border-bottom:0;border-radius:0}.accordion .card:not(:first-of-type) .card-header:first-child{border-radius:0}.accordion .card:first-of-type{border-bottom:0;border-bottom-right-radius:0;border-bottom-left-radius:0}.accordion .card:last-of-type{border-top-left-radius:0;border-top-right-radius:0}.breadcrumb{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding:.75rem 1rem;margin-bottom:1rem;list-style:none;background-color:#e9ecef;border-radius:.25rem}.breadcrumb-item+.breadcrumb-item{padding-left:.5rem}.breadcrumb-item+.breadcrumb-item::before{display:inline-block;padding-right:.5rem;color:#6c757d;content:\"/\"}.breadcrumb-item+.breadcrumb-item:hover::before{text-decoration:underline}.breadcrumb-item+.breadcrumb-item:hover::before{text-decoration:none}.breadcrumb-item.active{color:#6c757d}.pagination{display:-ms-flexbox;display:flex;padding-left:0;list-style:none;border-radius:.25rem}.page-link{position:relative;display:block;padding:.5rem .75rem;margin-left:-1px;line-height:1.25;color:#007bff;background-color:#fff;border:1px solid #dee2e6}.page-link:hover{z-index:2;color:#0056b3;text-decoration:none;background-color:#e9ecef;border-color:#dee2e6}.page-link:focus{z-index:2;outline:0;box-shadow:0 0 0 .2rem rgba(0,123,255,.25)}.page-link:not(:disabled):not(.disabled){cursor:pointer}.page-item:first-child .page-link{margin-left:0;border-top-left-radius:.25rem;border-bottom-left-radius:.25rem}.page-item:last-child .page-link{border-top-right-radius:.25rem;border-bottom-right-radius:.25rem}.page-item.active .page-link{z-index:1;color:#fff;background-color:#007bff;border-color:#007bff}.page-item.disabled .page-link{color:#6c757d;pointer-events:none;cursor:auto;background-color:#fff;border-color:#dee2e6}.pagination-lg .page-link{padding:.75rem 1.5rem;font-size:1.25rem;line-height:1.5}.pagination-lg .page-item:first-child .page-link{border-top-left-radius:.3rem;border-bottom-left-radius:.3rem}.pagination-lg .page-item:last-child .page-link{border-top-right-radius:.3rem;border-bottom-right-radius:.3rem}.pagination-sm .page-link{padding:.25rem .5rem;font-size:.875rem;line-height:1.5}.pagination-sm .page-item:first-child .page-link{border-top-left-radius:.2rem;border-bottom-left-radius:.2rem}.pagination-sm .page-item:last-child .page-link{border-top-right-radius:.2rem;border-bottom-right-radius:.2rem}.badge{display:inline-block;padding:.25em .4em;font-size:75%;font-weight:700;line-height:1;text-align:center;white-space:nowrap;vertical-align:baseline;border-radius:.25rem}.badge:empty{display:none}.btn .badge{position:relative;top:-1px}.badge-pill{padding-right:.6em;padding-left:.6em;border-radius:10rem}.badge-primary{color:#fff;background-color:#007bff}.badge-primary[href]:focus,.badge-primary[href]:hover{color:#fff;text-decoration:none;background-color:#0062cc}.badge-secondary{color:#fff;background-color:#6c757d}.badge-secondary[href]:focus,.badge-secondary[href]:hover{color:#fff;text-decoration:none;background-color:#545b62}.badge-success{color:#fff;background-color:#28a745}.badge-success[href]:focus,.badge-success[href]:hover{color:#fff;text-decoration:none;background-color:#1e7e34}.badge-info{color:#fff;background-color:#17a2b8}.badge-info[href]:focus,.badge-info[href]:hover{color:#fff;text-decoration:none;background-color:#117a8b}.badge-warning{color:#212529;background-color:#ffc107}.badge-warning[href]:focus,.badge-warning[href]:hover{color:#212529;text-decoration:none;background-color:#d39e00}.badge-danger{color:#fff;background-color:#dc3545}.badge-danger[href]:focus,.badge-danger[href]:hover{color:#fff;text-decoration:none;background-color:#bd2130}.badge-light{color:#212529;background-color:#f8f9fa}.badge-light[href]:focus,.badge-light[href]:hover{color:#212529;text-decoration:none;background-color:#dae0e5}.badge-dark{color:#fff;background-color:#343a40}.badge-dark[href]:focus,.badge-dark[href]:hover{color:#fff;text-decoration:none;background-color:#1d2124}.jumbotron{padding:2rem 1rem;margin-bottom:2rem;background-color:#e9ecef;border-radius:.3rem}@media (min-width:576px){.jumbotron{padding:4rem 2rem}}.jumbotron-fluid{padding-right:0;padding-left:0;border-radius:0}.alert{position:relative;padding:.75rem 1.25rem;margin-bottom:1rem;border:1px solid transparent;border-radius:.25rem}.alert-heading{color:inherit}.alert-link{font-weight:700}.alert-dismissible{padding-right:4rem}.alert-dismissible .close{position:absolute;top:0;right:0;padding:.75rem 1.25rem;color:inherit}.alert-primary{color:#004085;background-color:#cce5ff;border-color:#b8daff}.alert-primary hr{border-top-color:#9fcdff}.alert-primary .alert-link{color:#002752}.alert-secondary{color:#383d41;background-color:#e2e3e5;border-color:#d6d8db}.alert-secondary hr{border-top-color:#c8cbcf}.alert-secondary .alert-link{color:#202326}.alert-success{color:#155724;background-color:#d4edda;border-color:#c3e6cb}.alert-success hr{border-top-color:#b1dfbb}.alert-success .alert-link{color:#0b2e13}.alert-info{color:#0c5460;background-color:#d1ecf1;border-color:#bee5eb}.alert-info hr{border-top-color:#abdde5}.alert-info .alert-link{color:#062c33}.alert-warning{color:#856404;background-color:#fff3cd;border-color:#ffeeba}.alert-warning hr{border-top-color:#ffe8a1}.alert-warning .alert-link{color:#533f03}.alert-danger{color:#721c24;background-color:#f8d7da;border-color:#f5c6cb}.alert-danger hr{border-top-color:#f1b0b7}.alert-danger .alert-link{color:#491217}.alert-light{color:#818182;background-color:#fefefe;border-color:#fdfdfe}.alert-light hr{border-top-color:#ececf6}.alert-light .alert-link{color:#686868}.alert-dark{color:#1b1e21;background-color:#d6d8d9;border-color:#c6c8ca}.alert-dark hr{border-top-color:#b9bbbe}.alert-dark .alert-link{color:#040505}@-webkit-keyframes progress-bar-stripes{from{background-position:1rem 0}to{background-position:0 0}}@keyframes progress-bar-stripes{from{background-position:1rem 0}to{background-position:0 0}}.progress{display:-ms-flexbox;display:flex;height:1rem;overflow:hidden;font-size:.75rem;background-color:#e9ecef;border-radius:.25rem}.progress-bar{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;-ms-flex-pack:center;justify-content:center;color:#fff;text-align:center;white-space:nowrap;background-color:#007bff;transition:width .6s ease}@media screen and (prefers-reduced-motion:reduce){.progress-bar{transition:none}}.progress-bar-striped{background-image:linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-size:1rem 1rem}.progress-bar-animated{-webkit-animation:progress-bar-stripes 1s linear infinite;animation:progress-bar-stripes 1s linear infinite}.media{display:-ms-flexbox;display:flex;-ms-flex-align:start;align-items:flex-start}.media-body{-ms-flex:1;flex:1}.list-group{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;padding-left:0;margin-bottom:0}.list-group-item-action{width:100%;color:#495057;text-align:inherit}.list-group-item-action:focus,.list-group-item-action:hover{color:#495057;text-decoration:none;background-color:#f8f9fa}.list-group-item-action:active{color:#212529;background-color:#e9ecef}.list-group-item{position:relative;display:block;padding:.75rem 1.25rem;margin-bottom:-1px;background-color:#fff;border:1px solid rgba(0,0,0,.125)}.list-group-item:first-child{border-top-left-radius:.25rem;border-top-right-radius:.25rem}.list-group-item:last-child{margin-bottom:0;border-bottom-right-radius:.25rem;border-bottom-left-radius:.25rem}.list-group-item:focus,.list-group-item:hover{z-index:1;text-decoration:none}.list-group-item.disabled,.list-group-item:disabled{color:#6c757d;background-color:#fff}.list-group-item.active{z-index:2;color:#fff;background-color:#007bff;border-color:#007bff}.list-group-flush .list-group-item{border-right:0;border-left:0;border-radius:0}.list-group-flush:first-child .list-group-item:first-child{border-top:0}.list-group-flush:last-child .list-group-item:last-child{border-bottom:0}.list-group-item-primary{color:#004085;background-color:#b8daff}.list-group-item-primary.list-group-item-action:focus,.list-group-item-primary.list-group-item-action:hover{color:#004085;background-color:#9fcdff}.list-group-item-primary.list-group-item-action.active{color:#fff;background-color:#004085;border-color:#004085}.list-group-item-secondary{color:#383d41;background-color:#d6d8db}.list-group-item-secondary.list-group-item-action:focus,.list-group-item-secondary.list-group-item-action:hover{color:#383d41;background-color:#c8cbcf}.list-group-item-secondary.list-group-item-action.active{color:#fff;background-color:#383d41;border-color:#383d41}.list-group-item-success{color:#155724;background-color:#c3e6cb}.list-group-item-success.list-group-item-action:focus,.list-group-item-success.list-group-item-action:hover{color:#155724;background-color:#b1dfbb}.list-group-item-success.list-group-item-action.active{color:#fff;background-color:#155724;border-color:#155724}.list-group-item-info{color:#0c5460;background-color:#bee5eb}.list-group-item-info.list-group-item-action:focus,.list-group-item-info.list-group-item-action:hover{color:#0c5460;background-color:#abdde5}.list-group-item-info.list-group-item-action.active{color:#fff;background-color:#0c5460;border-color:#0c5460}.list-group-item-warning{color:#856404;background-color:#ffeeba}.list-group-item-warning.list-group-item-action:focus,.list-group-item-warning.list-group-item-action:hover{color:#856404;background-color:#ffe8a1}.list-group-item-warning.list-group-item-action.active{color:#fff;background-color:#856404;border-color:#856404}.list-group-item-danger{color:#721c24;background-color:#f5c6cb}.list-group-item-danger.list-group-item-action:focus,.list-group-item-danger.list-group-item-action:hover{color:#721c24;background-color:#f1b0b7}.list-group-item-danger.list-group-item-action.active{color:#fff;background-color:#721c24;border-color:#721c24}.list-group-item-light{color:#818182;background-color:#fdfdfe}.list-group-item-light.list-group-item-action:focus,.list-group-item-light.list-group-item-action:hover{color:#818182;background-color:#ececf6}.list-group-item-light.list-group-item-action.active{color:#fff;background-color:#818182;border-color:#818182}.list-group-item-dark{color:#1b1e21;background-color:#c6c8ca}.list-group-item-dark.list-group-item-action:focus,.list-group-item-dark.list-group-item-action:hover{color:#1b1e21;background-color:#b9bbbe}.list-group-item-dark.list-group-item-action.active{color:#fff;background-color:#1b1e21;border-color:#1b1e21}.close{float:right;font-size:1.5rem;font-weight:700;line-height:1;color:#000;text-shadow:0 1px 0 #fff;opacity:.5}.close:not(:disabled):not(.disabled){cursor:pointer}.close:not(:disabled):not(.disabled):focus,.close:not(:disabled):not(.disabled):hover{color:#000;text-decoration:none;opacity:.75}button.close{padding:0;background-color:transparent;border:0;-webkit-appearance:none}.modal-open{overflow:hidden}.modal-open .modal{overflow-x:hidden;overflow-y:auto}.modal{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1050;display:none;overflow:hidden;outline:0}.modal-dialog{position:relative;width:auto;margin:.5rem;pointer-events:none}.modal.fade .modal-dialog{transition:-webkit-transform .3s ease-out;transition:transform .3s ease-out;transition:transform .3s ease-out,-webkit-transform .3s ease-out;-webkit-transform:translate(0,-25%);transform:translate(0,-25%)}@media screen and (prefers-reduced-motion:reduce){.modal.fade .modal-dialog{transition:none}}.modal.show .modal-dialog{-webkit-transform:translate(0,0);transform:translate(0,0)}.modal-dialog-centered{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;min-height:calc(100% - (.5rem * 2))}.modal-dialog-centered::before{display:block;height:calc(100vh - (.5rem * 2));content:\"\"}.modal-content{position:relative;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;width:100%;pointer-events:auto;background-color:#fff;background-clip:padding-box;border:1px solid rgba(0,0,0,.2);border-radius:.3rem;outline:0}.modal-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1040;background-color:#000}.modal-backdrop.fade{opacity:0}.modal-backdrop.show{opacity:.5}.modal-header{display:-ms-flexbox;display:flex;-ms-flex-align:start;align-items:flex-start;-ms-flex-pack:justify;justify-content:space-between;padding:1rem;border-bottom:1px solid #e9ecef;border-top-left-radius:.3rem;border-top-right-radius:.3rem}.modal-header .close{padding:1rem;margin:-1rem -1rem -1rem auto}.modal-title{margin-bottom:0;line-height:1.5}.modal-body{position:relative;-ms-flex:1 1 auto;flex:1 1 auto;padding:1rem}.modal-footer{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:end;justify-content:flex-end;padding:1rem;border-top:1px solid #e9ecef}.modal-footer>:not(:first-child){margin-left:.25rem}.modal-footer>:not(:last-child){margin-right:.25rem}.modal-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}@media (min-width:576px){.modal-dialog{max-width:500px;margin:1.75rem auto}.modal-dialog-centered{min-height:calc(100% - (1.75rem * 2))}.modal-dialog-centered::before{height:calc(100vh - (1.75rem * 2))}.modal-sm{max-width:300px}}@media (min-width:992px){.modal-lg{max-width:800px}}.tooltip{position:absolute;z-index:1070;display:block;margin:0;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\";font-style:normal;font-weight:400;line-height:1.5;text-align:left;text-align:start;text-decoration:none;text-shadow:none;text-transform:none;letter-spacing:normal;word-break:normal;word-spacing:normal;white-space:normal;line-break:auto;font-size:.875rem;word-wrap:break-word;opacity:0}.tooltip.show{opacity:.9}.tooltip .arrow{position:absolute;display:block;width:.8rem;height:.4rem}.tooltip .arrow::before{position:absolute;content:\"\";border-color:transparent;border-style:solid}.bs-tooltip-auto[x-placement^=top],.bs-tooltip-top{padding:.4rem 0}.bs-tooltip-auto[x-placement^=top] .arrow,.bs-tooltip-top .arrow{bottom:0}.bs-tooltip-auto[x-placement^=top] .arrow::before,.bs-tooltip-top .arrow::before{top:0;border-width:.4rem .4rem 0;border-top-color:#000}.bs-tooltip-auto[x-placement^=right],.bs-tooltip-right{padding:0 .4rem}.bs-tooltip-auto[x-placement^=right] .arrow,.bs-tooltip-right .arrow{left:0;width:.4rem;height:.8rem}.bs-tooltip-auto[x-placement^=right] .arrow::before,.bs-tooltip-right .arrow::before{right:0;border-width:.4rem .4rem .4rem 0;border-right-color:#000}.bs-tooltip-auto[x-placement^=bottom],.bs-tooltip-bottom{padding:.4rem 0}.bs-tooltip-auto[x-placement^=bottom] .arrow,.bs-tooltip-bottom .arrow{top:0}.bs-tooltip-auto[x-placement^=bottom] .arrow::before,.bs-tooltip-bottom .arrow::before{bottom:0;border-width:0 .4rem .4rem;border-bottom-color:#000}.bs-tooltip-auto[x-placement^=left],.bs-tooltip-left{padding:0 .4rem}.bs-tooltip-auto[x-placement^=left] .arrow,.bs-tooltip-left .arrow{right:0;width:.4rem;height:.8rem}.bs-tooltip-auto[x-placement^=left] .arrow::before,.bs-tooltip-left .arrow::before{left:0;border-width:.4rem 0 .4rem .4rem;border-left-color:#000}.tooltip-inner{max-width:200px;padding:.25rem .5rem;color:#fff;text-align:center;background-color:#000;border-radius:.25rem}.popover{position:absolute;top:0;left:0;z-index:1060;display:block;max-width:276px;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\";font-style:normal;font-weight:400;line-height:1.5;text-align:left;text-align:start;text-decoration:none;text-shadow:none;text-transform:none;letter-spacing:normal;word-break:normal;word-spacing:normal;white-space:normal;line-break:auto;font-size:.875rem;word-wrap:break-word;background-color:#fff;background-clip:padding-box;border:1px solid rgba(0,0,0,.2);border-radius:.3rem}.popover .arrow{position:absolute;display:block;width:1rem;height:.5rem;margin:0 .3rem}.popover .arrow::after,.popover .arrow::before{position:absolute;display:block;content:\"\";border-color:transparent;border-style:solid}.bs-popover-auto[x-placement^=top],.bs-popover-top{margin-bottom:.5rem}.bs-popover-auto[x-placement^=top] .arrow,.bs-popover-top .arrow{bottom:calc((.5rem + 1px) * -1)}.bs-popover-auto[x-placement^=top] .arrow::after,.bs-popover-auto[x-placement^=top] .arrow::before,.bs-popover-top .arrow::after,.bs-popover-top .arrow::before{border-width:.5rem .5rem 0}.bs-popover-auto[x-placement^=top] .arrow::before,.bs-popover-top .arrow::before{bottom:0;border-top-color:rgba(0,0,0,.25)}.bs-popover-auto[x-placement^=top] .arrow::after,.bs-popover-top .arrow::after{bottom:1px;border-top-color:#fff}.bs-popover-auto[x-placement^=right],.bs-popover-right{margin-left:.5rem}.bs-popover-auto[x-placement^=right] .arrow,.bs-popover-right .arrow{left:calc((.5rem + 1px) * -1);width:.5rem;height:1rem;margin:.3rem 0}.bs-popover-auto[x-placement^=right] .arrow::after,.bs-popover-auto[x-placement^=right] .arrow::before,.bs-popover-right .arrow::after,.bs-popover-right .arrow::before{border-width:.5rem .5rem .5rem 0}.bs-popover-auto[x-placement^=right] .arrow::before,.bs-popover-right .arrow::before{left:0;border-right-color:rgba(0,0,0,.25)}.bs-popover-auto[x-placement^=right] .arrow::after,.bs-popover-right .arrow::after{left:1px;border-right-color:#fff}.bs-popover-auto[x-placement^=bottom],.bs-popover-bottom{margin-top:.5rem}.bs-popover-auto[x-placement^=bottom] .arrow,.bs-popover-bottom .arrow{top:calc((.5rem + 1px) * -1)}.bs-popover-auto[x-placement^=bottom] .arrow::after,.bs-popover-auto[x-placement^=bottom] .arrow::before,.bs-popover-bottom .arrow::after,.bs-popover-bottom .arrow::before{border-width:0 .5rem .5rem .5rem}.bs-popover-auto[x-placement^=bottom] .arrow::before,.bs-popover-bottom .arrow::before{top:0;border-bottom-color:rgba(0,0,0,.25)}.bs-popover-auto[x-placement^=bottom] .arrow::after,.bs-popover-bottom .arrow::after{top:1px;border-bottom-color:#fff}.bs-popover-auto[x-placement^=bottom] .popover-header::before,.bs-popover-bottom .popover-header::before{position:absolute;top:0;left:50%;display:block;width:1rem;margin-left:-.5rem;content:\"\";border-bottom:1px solid #f7f7f7}.bs-popover-auto[x-placement^=left],.bs-popover-left{margin-right:.5rem}.bs-popover-auto[x-placement^=left] .arrow,.bs-popover-left .arrow{right:calc((.5rem + 1px) * -1);width:.5rem;height:1rem;margin:.3rem 0}.bs-popover-auto[x-placement^=left] .arrow::after,.bs-popover-auto[x-placement^=left] .arrow::before,.bs-popover-left .arrow::after,.bs-popover-left .arrow::before{border-width:.5rem 0 .5rem .5rem}.bs-popover-auto[x-placement^=left] .arrow::before,.bs-popover-left .arrow::before{right:0;border-left-color:rgba(0,0,0,.25)}.bs-popover-auto[x-placement^=left] .arrow::after,.bs-popover-left .arrow::after{right:1px;border-left-color:#fff}.popover-header{padding:.5rem .75rem;margin-bottom:0;font-size:1rem;color:inherit;background-color:#f7f7f7;border-bottom:1px solid #ebebeb;border-top-left-radius:calc(.3rem - 1px);border-top-right-radius:calc(.3rem - 1px)}.popover-header:empty{display:none}.popover-body{padding:.5rem .75rem;color:#212529}.carousel{position:relative}.carousel-inner{position:relative;width:100%;overflow:hidden}.carousel-item{position:relative;display:none;-ms-flex-align:center;align-items:center;width:100%;-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-perspective:1000px;perspective:1000px}.carousel-item-next,.carousel-item-prev,.carousel-item.active{display:block;transition:-webkit-transform .6s ease;transition:transform .6s ease;transition:transform .6s ease,-webkit-transform .6s ease}@media screen and (prefers-reduced-motion:reduce){.carousel-item-next,.carousel-item-prev,.carousel-item.active{transition:none}}.carousel-item-next,.carousel-item-prev{position:absolute;top:0}.carousel-item-next.carousel-item-left,.carousel-item-prev.carousel-item-right{-webkit-transform:translateX(0);transform:translateX(0)}@supports ((-webkit-transform-style:preserve-3d) or (transform-style:preserve-3d)){.carousel-item-next.carousel-item-left,.carousel-item-prev.carousel-item-right{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}.active.carousel-item-right,.carousel-item-next{-webkit-transform:translateX(100%);transform:translateX(100%)}@supports ((-webkit-transform-style:preserve-3d) or (transform-style:preserve-3d)){.active.carousel-item-right,.carousel-item-next{-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}}.active.carousel-item-left,.carousel-item-prev{-webkit-transform:translateX(-100%);transform:translateX(-100%)}@supports ((-webkit-transform-style:preserve-3d) or (transform-style:preserve-3d)){.active.carousel-item-left,.carousel-item-prev{-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0)}}.carousel-fade .carousel-item{opacity:0;transition-duration:.6s;transition-property:opacity}.carousel-fade .carousel-item-next.carousel-item-left,.carousel-fade .carousel-item-prev.carousel-item-right,.carousel-fade .carousel-item.active{opacity:1}.carousel-fade .active.carousel-item-left,.carousel-fade .active.carousel-item-right{opacity:0}.carousel-fade .active.carousel-item-left,.carousel-fade .active.carousel-item-prev,.carousel-fade .carousel-item-next,.carousel-fade .carousel-item-prev,.carousel-fade .carousel-item.active{-webkit-transform:translateX(0);transform:translateX(0)}@supports ((-webkit-transform-style:preserve-3d) or (transform-style:preserve-3d)){.carousel-fade .active.carousel-item-left,.carousel-fade .active.carousel-item-prev,.carousel-fade .carousel-item-next,.carousel-fade .carousel-item-prev,.carousel-fade .carousel-item.active{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}.carousel-control-next,.carousel-control-prev{position:absolute;top:0;bottom:0;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center;width:15%;color:#fff;text-align:center;opacity:.5}.carousel-control-next:focus,.carousel-control-next:hover,.carousel-control-prev:focus,.carousel-control-prev:hover{color:#fff;text-decoration:none;outline:0;opacity:.9}.carousel-control-prev{left:0}.carousel-control-next{right:0}.carousel-control-next-icon,.carousel-control-prev-icon{display:inline-block;width:20px;height:20px;background:transparent no-repeat center center;background-size:100% 100%}.carousel-control-prev-icon{background-image:url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E\")}.carousel-control-next-icon{background-image:url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E\")}.carousel-indicators{position:absolute;right:0;bottom:10px;left:0;z-index:15;display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;padding-left:0;margin-right:15%;margin-left:15%;list-style:none}.carousel-indicators li{position:relative;-ms-flex:0 1 auto;flex:0 1 auto;width:30px;height:3px;margin-right:3px;margin-left:3px;text-indent:-999px;cursor:pointer;background-color:rgba(255,255,255,.5)}.carousel-indicators li::before{position:absolute;top:-10px;left:0;display:inline-block;width:100%;height:10px;content:\"\"}.carousel-indicators li::after{position:absolute;bottom:-10px;left:0;display:inline-block;width:100%;height:10px;content:\"\"}.carousel-indicators .active{background-color:#fff}.carousel-caption{position:absolute;right:15%;bottom:20px;left:15%;z-index:10;padding-top:20px;padding-bottom:20px;color:#fff;text-align:center}.align-baseline{vertical-align:baseline!important}.align-top{vertical-align:top!important}.align-middle{vertical-align:middle!important}.align-bottom{vertical-align:bottom!important}.align-text-bottom{vertical-align:text-bottom!important}.align-text-top{vertical-align:text-top!important}.bg-primary{background-color:#007bff!important}a.bg-primary:focus,a.bg-primary:hover,button.bg-primary:focus,button.bg-primary:hover{background-color:#0062cc!important}.bg-secondary{background-color:#6c757d!important}a.bg-secondary:focus,a.bg-secondary:hover,button.bg-secondary:focus,button.bg-secondary:hover{background-color:#545b62!important}.bg-success{background-color:#28a745!important}a.bg-success:focus,a.bg-success:hover,button.bg-success:focus,button.bg-success:hover{background-color:#1e7e34!important}.bg-info{background-color:#17a2b8!important}a.bg-info:focus,a.bg-info:hover,button.bg-info:focus,button.bg-info:hover{background-color:#117a8b!important}.bg-warning{background-color:#ffc107!important}a.bg-warning:focus,a.bg-warning:hover,button.bg-warning:focus,button.bg-warning:hover{background-color:#d39e00!important}.bg-danger{background-color:#dc3545!important}a.bg-danger:focus,a.bg-danger:hover,button.bg-danger:focus,button.bg-danger:hover{background-color:#bd2130!important}.bg-light{background-color:#f8f9fa!important}a.bg-light:focus,a.bg-light:hover,button.bg-light:focus,button.bg-light:hover{background-color:#dae0e5!important}.bg-dark{background-color:#343a40!important}a.bg-dark:focus,a.bg-dark:hover,button.bg-dark:focus,button.bg-dark:hover{background-color:#1d2124!important}.bg-white{background-color:#fff!important}.bg-transparent{background-color:transparent!important}.border{border:1px solid #dee2e6!important}.border-top{border-top:1px solid #dee2e6!important}.border-right{border-right:1px solid #dee2e6!important}.border-bottom{border-bottom:1px solid #dee2e6!important}.border-left{border-left:1px solid #dee2e6!important}.border-0{border:0!important}.border-top-0{border-top:0!important}.border-right-0{border-right:0!important}.border-bottom-0{border-bottom:0!important}.border-left-0{border-left:0!important}.border-primary{border-color:#007bff!important}.border-secondary{border-color:#6c757d!important}.border-success{border-color:#28a745!important}.border-info{border-color:#17a2b8!important}.border-warning{border-color:#ffc107!important}.border-danger{border-color:#dc3545!important}.border-light{border-color:#f8f9fa!important}.border-dark{border-color:#343a40!important}.border-white{border-color:#fff!important}.rounded{border-radius:.25rem!important}.rounded-top{border-top-left-radius:.25rem!important;border-top-right-radius:.25rem!important}.rounded-right{border-top-right-radius:.25rem!important;border-bottom-right-radius:.25rem!important}.rounded-bottom{border-bottom-right-radius:.25rem!important;border-bottom-left-radius:.25rem!important}.rounded-left{border-top-left-radius:.25rem!important;border-bottom-left-radius:.25rem!important}.rounded-circle{border-radius:50%!important}.rounded-0{border-radius:0!important}.clearfix::after{display:block;clear:both;content:\"\"}.d-none{display:none!important}.d-inline{display:inline!important}.d-inline-block{display:inline-block!important}.d-block{display:block!important}.d-table{display:table!important}.d-table-row{display:table-row!important}.d-table-cell{display:table-cell!important}.d-flex{display:-ms-flexbox!important;display:flex!important}.d-inline-flex{display:-ms-inline-flexbox!important;display:inline-flex!important}@media (min-width:576px){.d-sm-none{display:none!important}.d-sm-inline{display:inline!important}.d-sm-inline-block{display:inline-block!important}.d-sm-block{display:block!important}.d-sm-table{display:table!important}.d-sm-table-row{display:table-row!important}.d-sm-table-cell{display:table-cell!important}.d-sm-flex{display:-ms-flexbox!important;display:flex!important}.d-sm-inline-flex{display:-ms-inline-flexbox!important;display:inline-flex!important}}@media (min-width:768px){.d-md-none{display:none!important}.d-md-inline{display:inline!important}.d-md-inline-block{display:inline-block!important}.d-md-block{display:block!important}.d-md-table{display:table!important}.d-md-table-row{display:table-row!important}.d-md-table-cell{display:table-cell!important}.d-md-flex{display:-ms-flexbox!important;display:flex!important}.d-md-inline-flex{display:-ms-inline-flexbox!important;display:inline-flex!important}}@media (min-width:992px){.d-lg-none{display:none!important}.d-lg-inline{display:inline!important}.d-lg-inline-block{display:inline-block!important}.d-lg-block{display:block!important}.d-lg-table{display:table!important}.d-lg-table-row{display:table-row!important}.d-lg-table-cell{display:table-cell!important}.d-lg-flex{display:-ms-flexbox!important;display:flex!important}.d-lg-inline-flex{display:-ms-inline-flexbox!important;display:inline-flex!important}}@media (min-width:1200px){.d-xl-none{display:none!important}.d-xl-inline{display:inline!important}.d-xl-inline-block{display:inline-block!important}.d-xl-block{display:block!important}.d-xl-table{display:table!important}.d-xl-table-row{display:table-row!important}.d-xl-table-cell{display:table-cell!important}.d-xl-flex{display:-ms-flexbox!important;display:flex!important}.d-xl-inline-flex{display:-ms-inline-flexbox!important;display:inline-flex!important}}@media print{.d-print-none{display:none!important}.d-print-inline{display:inline!important}.d-print-inline-block{display:inline-block!important}.d-print-block{display:block!important}.d-print-table{display:table!important}.d-print-table-row{display:table-row!important}.d-print-table-cell{display:table-cell!important}.d-print-flex{display:-ms-flexbox!important;display:flex!important}.d-print-inline-flex{display:-ms-inline-flexbox!important;display:inline-flex!important}}.embed-responsive{position:relative;display:block;width:100%;padding:0;overflow:hidden}.embed-responsive::before{display:block;content:\"\"}.embed-responsive .embed-responsive-item,.embed-responsive embed,.embed-responsive iframe,.embed-responsive object,.embed-responsive video{position:absolute;top:0;bottom:0;left:0;width:100%;height:100%;border:0}.embed-responsive-21by9::before{padding-top:42.857143%}.embed-responsive-16by9::before{padding-top:56.25%}.embed-responsive-4by3::before{padding-top:75%}.embed-responsive-1by1::before{padding-top:100%}.flex-row{-ms-flex-direction:row!important;flex-direction:row!important}.flex-column{-ms-flex-direction:column!important;flex-direction:column!important}.flex-row-reverse{-ms-flex-direction:row-reverse!important;flex-direction:row-reverse!important}.flex-column-reverse{-ms-flex-direction:column-reverse!important;flex-direction:column-reverse!important}.flex-wrap{-ms-flex-wrap:wrap!important;flex-wrap:wrap!important}.flex-nowrap{-ms-flex-wrap:nowrap!important;flex-wrap:nowrap!important}.flex-wrap-reverse{-ms-flex-wrap:wrap-reverse!important;flex-wrap:wrap-reverse!important}.flex-fill{-ms-flex:1 1 auto!important;flex:1 1 auto!important}.flex-grow-0{-ms-flex-positive:0!important;flex-grow:0!important}.flex-grow-1{-ms-flex-positive:1!important;flex-grow:1!important}.flex-shrink-0{-ms-flex-negative:0!important;flex-shrink:0!important}.flex-shrink-1{-ms-flex-negative:1!important;flex-shrink:1!important}.justify-content-start{-ms-flex-pack:start!important;justify-content:flex-start!important}.justify-content-end{-ms-flex-pack:end!important;justify-content:flex-end!important}.justify-content-center{-ms-flex-pack:center!important;justify-content:center!important}.justify-content-between{-ms-flex-pack:justify!important;justify-content:space-between!important}.justify-content-around{-ms-flex-pack:distribute!important;justify-content:space-around!important}.align-items-start{-ms-flex-align:start!important;align-items:flex-start!important}.align-items-end{-ms-flex-align:end!important;align-items:flex-end!important}.align-items-center{-ms-flex-align:center!important;align-items:center!important}.align-items-baseline{-ms-flex-align:baseline!important;align-items:baseline!important}.align-items-stretch{-ms-flex-align:stretch!important;align-items:stretch!important}.align-content-start{-ms-flex-line-pack:start!important;align-content:flex-start!important}.align-content-end{-ms-flex-line-pack:end!important;align-content:flex-end!important}.align-content-center{-ms-flex-line-pack:center!important;align-content:center!important}.align-content-between{-ms-flex-line-pack:justify!important;align-content:space-between!important}.align-content-around{-ms-flex-line-pack:distribute!important;align-content:space-around!important}.align-content-stretch{-ms-flex-line-pack:stretch!important;align-content:stretch!important}.align-self-auto{-ms-flex-item-align:auto!important;align-self:auto!important}.align-self-start{-ms-flex-item-align:start!important;align-self:flex-start!important}.align-self-end{-ms-flex-item-align:end!important;align-self:flex-end!important}.align-self-center{-ms-flex-item-align:center!important;align-self:center!important}.align-self-baseline{-ms-flex-item-align:baseline!important;align-self:baseline!important}.align-self-stretch{-ms-flex-item-align:stretch!important;align-self:stretch!important}@media (min-width:576px){.flex-sm-row{-ms-flex-direction:row!important;flex-direction:row!important}.flex-sm-column{-ms-flex-direction:column!important;flex-direction:column!important}.flex-sm-row-reverse{-ms-flex-direction:row-reverse!important;flex-direction:row-reverse!important}.flex-sm-column-reverse{-ms-flex-direction:column-reverse!important;flex-direction:column-reverse!important}.flex-sm-wrap{-ms-flex-wrap:wrap!important;flex-wrap:wrap!important}.flex-sm-nowrap{-ms-flex-wrap:nowrap!important;flex-wrap:nowrap!important}.flex-sm-wrap-reverse{-ms-flex-wrap:wrap-reverse!important;flex-wrap:wrap-reverse!important}.flex-sm-fill{-ms-flex:1 1 auto!important;flex:1 1 auto!important}.flex-sm-grow-0{-ms-flex-positive:0!important;flex-grow:0!important}.flex-sm-grow-1{-ms-flex-positive:1!important;flex-grow:1!important}.flex-sm-shrink-0{-ms-flex-negative:0!important;flex-shrink:0!important}.flex-sm-shrink-1{-ms-flex-negative:1!important;flex-shrink:1!important}.justify-content-sm-start{-ms-flex-pack:start!important;justify-content:flex-start!important}.justify-content-sm-end{-ms-flex-pack:end!important;justify-content:flex-end!important}.justify-content-sm-center{-ms-flex-pack:center!important;justify-content:center!important}.justify-content-sm-between{-ms-flex-pack:justify!important;justify-content:space-between!important}.justify-content-sm-around{-ms-flex-pack:distribute!important;justify-content:space-around!important}.align-items-sm-start{-ms-flex-align:start!important;align-items:flex-start!important}.align-items-sm-end{-ms-flex-align:end!important;align-items:flex-end!important}.align-items-sm-center{-ms-flex-align:center!important;align-items:center!important}.align-items-sm-baseline{-ms-flex-align:baseline!important;align-items:baseline!important}.align-items-sm-stretch{-ms-flex-align:stretch!important;align-items:stretch!important}.align-content-sm-start{-ms-flex-line-pack:start!important;align-content:flex-start!important}.align-content-sm-end{-ms-flex-line-pack:end!important;align-content:flex-end!important}.align-content-sm-center{-ms-flex-line-pack:center!important;align-content:center!important}.align-content-sm-between{-ms-flex-line-pack:justify!important;align-content:space-between!important}.align-content-sm-around{-ms-flex-line-pack:distribute!important;align-content:space-around!important}.align-content-sm-stretch{-ms-flex-line-pack:stretch!important;align-content:stretch!important}.align-self-sm-auto{-ms-flex-item-align:auto!important;align-self:auto!important}.align-self-sm-start{-ms-flex-item-align:start!important;align-self:flex-start!important}.align-self-sm-end{-ms-flex-item-align:end!important;align-self:flex-end!important}.align-self-sm-center{-ms-flex-item-align:center!important;align-self:center!important}.align-self-sm-baseline{-ms-flex-item-align:baseline!important;align-self:baseline!important}.align-self-sm-stretch{-ms-flex-item-align:stretch!important;align-self:stretch!important}}@media (min-width:768px){.flex-md-row{-ms-flex-direction:row!important;flex-direction:row!important}.flex-md-column{-ms-flex-direction:column!important;flex-direction:column!important}.flex-md-row-reverse{-ms-flex-direction:row-reverse!important;flex-direction:row-reverse!important}.flex-md-column-reverse{-ms-flex-direction:column-reverse!important;flex-direction:column-reverse!important}.flex-md-wrap{-ms-flex-wrap:wrap!important;flex-wrap:wrap!important}.flex-md-nowrap{-ms-flex-wrap:nowrap!important;flex-wrap:nowrap!important}.flex-md-wrap-reverse{-ms-flex-wrap:wrap-reverse!important;flex-wrap:wrap-reverse!important}.flex-md-fill{-ms-flex:1 1 auto!important;flex:1 1 auto!important}.flex-md-grow-0{-ms-flex-positive:0!important;flex-grow:0!important}.flex-md-grow-1{-ms-flex-positive:1!important;flex-grow:1!important}.flex-md-shrink-0{-ms-flex-negative:0!important;flex-shrink:0!important}.flex-md-shrink-1{-ms-flex-negative:1!important;flex-shrink:1!important}.justify-content-md-start{-ms-flex-pack:start!important;justify-content:flex-start!important}.justify-content-md-end{-ms-flex-pack:end!important;justify-content:flex-end!important}.justify-content-md-center{-ms-flex-pack:center!important;justify-content:center!important}.justify-content-md-between{-ms-flex-pack:justify!important;justify-content:space-between!important}.justify-content-md-around{-ms-flex-pack:distribute!important;justify-content:space-around!important}.align-items-md-start{-ms-flex-align:start!important;align-items:flex-start!important}.align-items-md-end{-ms-flex-align:end!important;align-items:flex-end!important}.align-items-md-center{-ms-flex-align:center!important;align-items:center!important}.align-items-md-baseline{-ms-flex-align:baseline!important;align-items:baseline!important}.align-items-md-stretch{-ms-flex-align:stretch!important;align-items:stretch!important}.align-content-md-start{-ms-flex-line-pack:start!important;align-content:flex-start!important}.align-content-md-end{-ms-flex-line-pack:end!important;align-content:flex-end!important}.align-content-md-center{-ms-flex-line-pack:center!important;align-content:center!important}.align-content-md-between{-ms-flex-line-pack:justify!important;align-content:space-between!important}.align-content-md-around{-ms-flex-line-pack:distribute!important;align-content:space-around!important}.align-content-md-stretch{-ms-flex-line-pack:stretch!important;align-content:stretch!important}.align-self-md-auto{-ms-flex-item-align:auto!important;align-self:auto!important}.align-self-md-start{-ms-flex-item-align:start!important;align-self:flex-start!important}.align-self-md-end{-ms-flex-item-align:end!important;align-self:flex-end!important}.align-self-md-center{-ms-flex-item-align:center!important;align-self:center!important}.align-self-md-baseline{-ms-flex-item-align:baseline!important;align-self:baseline!important}.align-self-md-stretch{-ms-flex-item-align:stretch!important;align-self:stretch!important}}@media (min-width:992px){.flex-lg-row{-ms-flex-direction:row!important;flex-direction:row!important}.flex-lg-column{-ms-flex-direction:column!important;flex-direction:column!important}.flex-lg-row-reverse{-ms-flex-direction:row-reverse!important;flex-direction:row-reverse!important}.flex-lg-column-reverse{-ms-flex-direction:column-reverse!important;flex-direction:column-reverse!important}.flex-lg-wrap{-ms-flex-wrap:wrap!important;flex-wrap:wrap!important}.flex-lg-nowrap{-ms-flex-wrap:nowrap!important;flex-wrap:nowrap!important}.flex-lg-wrap-reverse{-ms-flex-wrap:wrap-reverse!important;flex-wrap:wrap-reverse!important}.flex-lg-fill{-ms-flex:1 1 auto!important;flex:1 1 auto!important}.flex-lg-grow-0{-ms-flex-positive:0!important;flex-grow:0!important}.flex-lg-grow-1{-ms-flex-positive:1!important;flex-grow:1!important}.flex-lg-shrink-0{-ms-flex-negative:0!important;flex-shrink:0!important}.flex-lg-shrink-1{-ms-flex-negative:1!important;flex-shrink:1!important}.justify-content-lg-start{-ms-flex-pack:start!important;justify-content:flex-start!important}.justify-content-lg-end{-ms-flex-pack:end!important;justify-content:flex-end!important}.justify-content-lg-center{-ms-flex-pack:center!important;justify-content:center!important}.justify-content-lg-between{-ms-flex-pack:justify!important;justify-content:space-between!important}.justify-content-lg-around{-ms-flex-pack:distribute!important;justify-content:space-around!important}.align-items-lg-start{-ms-flex-align:start!important;align-items:flex-start!important}.align-items-lg-end{-ms-flex-align:end!important;align-items:flex-end!important}.align-items-lg-center{-ms-flex-align:center!important;align-items:center!important}.align-items-lg-baseline{-ms-flex-align:baseline!important;align-items:baseline!important}.align-items-lg-stretch{-ms-flex-align:stretch!important;align-items:stretch!important}.align-content-lg-start{-ms-flex-line-pack:start!important;align-content:flex-start!important}.align-content-lg-end{-ms-flex-line-pack:end!important;align-content:flex-end!important}.align-content-lg-center{-ms-flex-line-pack:center!important;align-content:center!important}.align-content-lg-between{-ms-flex-line-pack:justify!important;align-content:space-between!important}.align-content-lg-around{-ms-flex-line-pack:distribute!important;align-content:space-around!important}.align-content-lg-stretch{-ms-flex-line-pack:stretch!important;align-content:stretch!important}.align-self-lg-auto{-ms-flex-item-align:auto!important;align-self:auto!important}.align-self-lg-start{-ms-flex-item-align:start!important;align-self:flex-start!important}.align-self-lg-end{-ms-flex-item-align:end!important;align-self:flex-end!important}.align-self-lg-center{-ms-flex-item-align:center!important;align-self:center!important}.align-self-lg-baseline{-ms-flex-item-align:baseline!important;align-self:baseline!important}.align-self-lg-stretch{-ms-flex-item-align:stretch!important;align-self:stretch!important}}@media (min-width:1200px){.flex-xl-row{-ms-flex-direction:row!important;flex-direction:row!important}.flex-xl-column{-ms-flex-direction:column!important;flex-direction:column!important}.flex-xl-row-reverse{-ms-flex-direction:row-reverse!important;flex-direction:row-reverse!important}.flex-xl-column-reverse{-ms-flex-direction:column-reverse!important;flex-direction:column-reverse!important}.flex-xl-wrap{-ms-flex-wrap:wrap!important;flex-wrap:wrap!important}.flex-xl-nowrap{-ms-flex-wrap:nowrap!important;flex-wrap:nowrap!important}.flex-xl-wrap-reverse{-ms-flex-wrap:wrap-reverse!important;flex-wrap:wrap-reverse!important}.flex-xl-fill{-ms-flex:1 1 auto!important;flex:1 1 auto!important}.flex-xl-grow-0{-ms-flex-positive:0!important;flex-grow:0!important}.flex-xl-grow-1{-ms-flex-positive:1!important;flex-grow:1!important}.flex-xl-shrink-0{-ms-flex-negative:0!important;flex-shrink:0!important}.flex-xl-shrink-1{-ms-flex-negative:1!important;flex-shrink:1!important}.justify-content-xl-start{-ms-flex-pack:start!important;justify-content:flex-start!important}.justify-content-xl-end{-ms-flex-pack:end!important;justify-content:flex-end!important}.justify-content-xl-center{-ms-flex-pack:center!important;justify-content:center!important}.justify-content-xl-between{-ms-flex-pack:justify!important;justify-content:space-between!important}.justify-content-xl-around{-ms-flex-pack:distribute!important;justify-content:space-around!important}.align-items-xl-start{-ms-flex-align:start!important;align-items:flex-start!important}.align-items-xl-end{-ms-flex-align:end!important;align-items:flex-end!important}.align-items-xl-center{-ms-flex-align:center!important;align-items:center!important}.align-items-xl-baseline{-ms-flex-align:baseline!important;align-items:baseline!important}.align-items-xl-stretch{-ms-flex-align:stretch!important;align-items:stretch!important}.align-content-xl-start{-ms-flex-line-pack:start!important;align-content:flex-start!important}.align-content-xl-end{-ms-flex-line-pack:end!important;align-content:flex-end!important}.align-content-xl-center{-ms-flex-line-pack:center!important;align-content:center!important}.align-content-xl-between{-ms-flex-line-pack:justify!important;align-content:space-between!important}.align-content-xl-around{-ms-flex-line-pack:distribute!important;align-content:space-around!important}.align-content-xl-stretch{-ms-flex-line-pack:stretch!important;align-content:stretch!important}.align-self-xl-auto{-ms-flex-item-align:auto!important;align-self:auto!important}.align-self-xl-start{-ms-flex-item-align:start!important;align-self:flex-start!important}.align-self-xl-end{-ms-flex-item-align:end!important;align-self:flex-end!important}.align-self-xl-center{-ms-flex-item-align:center!important;align-self:center!important}.align-self-xl-baseline{-ms-flex-item-align:baseline!important;align-self:baseline!important}.align-self-xl-stretch{-ms-flex-item-align:stretch!important;align-self:stretch!important}}.float-left{float:left!important}.float-right{float:right!important}.float-none{float:none!important}@media (min-width:576px){.float-sm-left{float:left!important}.float-sm-right{float:right!important}.float-sm-none{float:none!important}}@media (min-width:768px){.float-md-left{float:left!important}.float-md-right{float:right!important}.float-md-none{float:none!important}}@media (min-width:992px){.float-lg-left{float:left!important}.float-lg-right{float:right!important}.float-lg-none{float:none!important}}@media (min-width:1200px){.float-xl-left{float:left!important}.float-xl-right{float:right!important}.float-xl-none{float:none!important}}.position-static{position:static!important}.position-relative{position:relative!important}.position-absolute{position:absolute!important}.position-fixed{position:fixed!important}.position-sticky{position:-webkit-sticky!important;position:sticky!important}.fixed-top{position:fixed;top:0;right:0;left:0;z-index:1030}.fixed-bottom{position:fixed;right:0;bottom:0;left:0;z-index:1030}@supports ((position:-webkit-sticky) or (position:sticky)){.sticky-top{position:-webkit-sticky;position:sticky;top:0;z-index:1020}}.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;overflow:visible;clip:auto;white-space:normal}.shadow-sm{box-shadow:0 .125rem .25rem rgba(0,0,0,.075)!important}.shadow{box-shadow:0 .5rem 1rem rgba(0,0,0,.15)!important}.shadow-lg{box-shadow:0 1rem 3rem rgba(0,0,0,.175)!important}.shadow-none{box-shadow:none!important}.w-25{width:25%!important}.w-50{width:50%!important}.w-75{width:75%!important}.w-100{width:100%!important}.w-auto{width:auto!important}.h-25{height:25%!important}.h-50{height:50%!important}.h-75{height:75%!important}.h-100{height:100%!important}.h-auto{height:auto!important}.mw-100{max-width:100%!important}.mh-100{max-height:100%!important}.m-0{margin:0!important}.mt-0,.my-0{margin-top:0!important}.mr-0,.mx-0{margin-right:0!important}.mb-0,.my-0{margin-bottom:0!important}.ml-0,.mx-0{margin-left:0!important}.m-1{margin:.25rem!important}.mt-1,.my-1{margin-top:.25rem!important}.mr-1,.mx-1{margin-right:.25rem!important}.mb-1,.my-1{margin-bottom:.25rem!important}.ml-1,.mx-1{margin-left:.25rem!important}.m-2{margin:.5rem!important}.mt-2,.my-2{margin-top:.5rem!important}.mr-2,.mx-2{margin-right:.5rem!important}.mb-2,.my-2{margin-bottom:.5rem!important}.ml-2,.mx-2{margin-left:.5rem!important}.m-3{margin:1rem!important}.mt-3,.my-3{margin-top:1rem!important}.mr-3,.mx-3{margin-right:1rem!important}.mb-3,.my-3{margin-bottom:1rem!important}.ml-3,.mx-3{margin-left:1rem!important}.m-4{margin:1.5rem!important}.mt-4,.my-4{margin-top:1.5rem!important}.mr-4,.mx-4{margin-right:1.5rem!important}.mb-4,.my-4{margin-bottom:1.5rem!important}.ml-4,.mx-4{margin-left:1.5rem!important}.m-5{margin:3rem!important}.mt-5,.my-5{margin-top:3rem!important}.mr-5,.mx-5{margin-right:3rem!important}.mb-5,.my-5{margin-bottom:3rem!important}.ml-5,.mx-5{margin-left:3rem!important}.p-0{padding:0!important}.pt-0,.py-0{padding-top:0!important}.pr-0,.px-0{padding-right:0!important}.pb-0,.py-0{padding-bottom:0!important}.pl-0,.px-0{padding-left:0!important}.p-1{padding:.25rem!important}.pt-1,.py-1{padding-top:.25rem!important}.pr-1,.px-1{padding-right:.25rem!important}.pb-1,.py-1{padding-bottom:.25rem!important}.pl-1,.px-1{padding-left:.25rem!important}.p-2{padding:.5rem!important}.pt-2,.py-2{padding-top:.5rem!important}.pr-2,.px-2{padding-right:.5rem!important}.pb-2,.py-2{padding-bottom:.5rem!important}.pl-2,.px-2{padding-left:.5rem!important}.p-3{padding:1rem!important}.pt-3,.py-3{padding-top:1rem!important}.pr-3,.px-3{padding-right:1rem!important}.pb-3,.py-3{padding-bottom:1rem!important}.pl-3,.px-3{padding-left:1rem!important}.p-4{padding:1.5rem!important}.pt-4,.py-4{padding-top:1.5rem!important}.pr-4,.px-4{padding-right:1.5rem!important}.pb-4,.py-4{padding-bottom:1.5rem!important}.pl-4,.px-4{padding-left:1.5rem!important}.p-5{padding:3rem!important}.pt-5,.py-5{padding-top:3rem!important}.pr-5,.px-5{padding-right:3rem!important}.pb-5,.py-5{padding-bottom:3rem!important}.pl-5,.px-5{padding-left:3rem!important}.m-auto{margin:auto!important}.mt-auto,.my-auto{margin-top:auto!important}.mr-auto,.mx-auto{margin-right:auto!important}.mb-auto,.my-auto{margin-bottom:auto!important}.ml-auto,.mx-auto{margin-left:auto!important}@media (min-width:576px){.m-sm-0{margin:0!important}.mt-sm-0,.my-sm-0{margin-top:0!important}.mr-sm-0,.mx-sm-0{margin-right:0!important}.mb-sm-0,.my-sm-0{margin-bottom:0!important}.ml-sm-0,.mx-sm-0{margin-left:0!important}.m-sm-1{margin:.25rem!important}.mt-sm-1,.my-sm-1{margin-top:.25rem!important}.mr-sm-1,.mx-sm-1{margin-right:.25rem!important}.mb-sm-1,.my-sm-1{margin-bottom:.25rem!important}.ml-sm-1,.mx-sm-1{margin-left:.25rem!important}.m-sm-2{margin:.5rem!important}.mt-sm-2,.my-sm-2{margin-top:.5rem!important}.mr-sm-2,.mx-sm-2{margin-right:.5rem!important}.mb-sm-2,.my-sm-2{margin-bottom:.5rem!important}.ml-sm-2,.mx-sm-2{margin-left:.5rem!important}.m-sm-3{margin:1rem!important}.mt-sm-3,.my-sm-3{margin-top:1rem!important}.mr-sm-3,.mx-sm-3{margin-right:1rem!important}.mb-sm-3,.my-sm-3{margin-bottom:1rem!important}.ml-sm-3,.mx-sm-3{margin-left:1rem!important}.m-sm-4{margin:1.5rem!important}.mt-sm-4,.my-sm-4{margin-top:1.5rem!important}.mr-sm-4,.mx-sm-4{margin-right:1.5rem!important}.mb-sm-4,.my-sm-4{margin-bottom:1.5rem!important}.ml-sm-4,.mx-sm-4{margin-left:1.5rem!important}.m-sm-5{margin:3rem!important}.mt-sm-5,.my-sm-5{margin-top:3rem!important}.mr-sm-5,.mx-sm-5{margin-right:3rem!important}.mb-sm-5,.my-sm-5{margin-bottom:3rem!important}.ml-sm-5,.mx-sm-5{margin-left:3rem!important}.p-sm-0{padding:0!important}.pt-sm-0,.py-sm-0{padding-top:0!important}.pr-sm-0,.px-sm-0{padding-right:0!important}.pb-sm-0,.py-sm-0{padding-bottom:0!important}.pl-sm-0,.px-sm-0{padding-left:0!important}.p-sm-1{padding:.25rem!important}.pt-sm-1,.py-sm-1{padding-top:.25rem!important}.pr-sm-1,.px-sm-1{padding-right:.25rem!important}.pb-sm-1,.py-sm-1{padding-bottom:.25rem!important}.pl-sm-1,.px-sm-1{padding-left:.25rem!important}.p-sm-2{padding:.5rem!important}.pt-sm-2,.py-sm-2{padding-top:.5rem!important}.pr-sm-2,.px-sm-2{padding-right:.5rem!important}.pb-sm-2,.py-sm-2{padding-bottom:.5rem!important}.pl-sm-2,.px-sm-2{padding-left:.5rem!important}.p-sm-3{padding:1rem!important}.pt-sm-3,.py-sm-3{padding-top:1rem!important}.pr-sm-3,.px-sm-3{padding-right:1rem!important}.pb-sm-3,.py-sm-3{padding-bottom:1rem!important}.pl-sm-3,.px-sm-3{padding-left:1rem!important}.p-sm-4{padding:1.5rem!important}.pt-sm-4,.py-sm-4{padding-top:1.5rem!important}.pr-sm-4,.px-sm-4{padding-right:1.5rem!important}.pb-sm-4,.py-sm-4{padding-bottom:1.5rem!important}.pl-sm-4,.px-sm-4{padding-left:1.5rem!important}.p-sm-5{padding:3rem!important}.pt-sm-5,.py-sm-5{padding-top:3rem!important}.pr-sm-5,.px-sm-5{padding-right:3rem!important}.pb-sm-5,.py-sm-5{padding-bottom:3rem!important}.pl-sm-5,.px-sm-5{padding-left:3rem!important}.m-sm-auto{margin:auto!important}.mt-sm-auto,.my-sm-auto{margin-top:auto!important}.mr-sm-auto,.mx-sm-auto{margin-right:auto!important}.mb-sm-auto,.my-sm-auto{margin-bottom:auto!important}.ml-sm-auto,.mx-sm-auto{margin-left:auto!important}}@media (min-width:768px){.m-md-0{margin:0!important}.mt-md-0,.my-md-0{margin-top:0!important}.mr-md-0,.mx-md-0{margin-right:0!important}.mb-md-0,.my-md-0{margin-bottom:0!important}.ml-md-0,.mx-md-0{margin-left:0!important}.m-md-1{margin:.25rem!important}.mt-md-1,.my-md-1{margin-top:.25rem!important}.mr-md-1,.mx-md-1{margin-right:.25rem!important}.mb-md-1,.my-md-1{margin-bottom:.25rem!important}.ml-md-1,.mx-md-1{margin-left:.25rem!important}.m-md-2{margin:.5rem!important}.mt-md-2,.my-md-2{margin-top:.5rem!important}.mr-md-2,.mx-md-2{margin-right:.5rem!important}.mb-md-2,.my-md-2{margin-bottom:.5rem!important}.ml-md-2,.mx-md-2{margin-left:.5rem!important}.m-md-3{margin:1rem!important}.mt-md-3,.my-md-3{margin-top:1rem!important}.mr-md-3,.mx-md-3{margin-right:1rem!important}.mb-md-3,.my-md-3{margin-bottom:1rem!important}.ml-md-3,.mx-md-3{margin-left:1rem!important}.m-md-4{margin:1.5rem!important}.mt-md-4,.my-md-4{margin-top:1.5rem!important}.mr-md-4,.mx-md-4{margin-right:1.5rem!important}.mb-md-4,.my-md-4{margin-bottom:1.5rem!important}.ml-md-4,.mx-md-4{margin-left:1.5rem!important}.m-md-5{margin:3rem!important}.mt-md-5,.my-md-5{margin-top:3rem!important}.mr-md-5,.mx-md-5{margin-right:3rem!important}.mb-md-5,.my-md-5{margin-bottom:3rem!important}.ml-md-5,.mx-md-5{margin-left:3rem!important}.p-md-0{padding:0!important}.pt-md-0,.py-md-0{padding-top:0!important}.pr-md-0,.px-md-0{padding-right:0!important}.pb-md-0,.py-md-0{padding-bottom:0!important}.pl-md-0,.px-md-0{padding-left:0!important}.p-md-1{padding:.25rem!important}.pt-md-1,.py-md-1{padding-top:.25rem!important}.pr-md-1,.px-md-1{padding-right:.25rem!important}.pb-md-1,.py-md-1{padding-bottom:.25rem!important}.pl-md-1,.px-md-1{padding-left:.25rem!important}.p-md-2{padding:.5rem!important}.pt-md-2,.py-md-2{padding-top:.5rem!important}.pr-md-2,.px-md-2{padding-right:.5rem!important}.pb-md-2,.py-md-2{padding-bottom:.5rem!important}.pl-md-2,.px-md-2{padding-left:.5rem!important}.p-md-3{padding:1rem!important}.pt-md-3,.py-md-3{padding-top:1rem!important}.pr-md-3,.px-md-3{padding-right:1rem!important}.pb-md-3,.py-md-3{padding-bottom:1rem!important}.pl-md-3,.px-md-3{padding-left:1rem!important}.p-md-4{padding:1.5rem!important}.pt-md-4,.py-md-4{padding-top:1.5rem!important}.pr-md-4,.px-md-4{padding-right:1.5rem!important}.pb-md-4,.py-md-4{padding-bottom:1.5rem!important}.pl-md-4,.px-md-4{padding-left:1.5rem!important}.p-md-5{padding:3rem!important}.pt-md-5,.py-md-5{padding-top:3rem!important}.pr-md-5,.px-md-5{padding-right:3rem!important}.pb-md-5,.py-md-5{padding-bottom:3rem!important}.pl-md-5,.px-md-5{padding-left:3rem!important}.m-md-auto{margin:auto!important}.mt-md-auto,.my-md-auto{margin-top:auto!important}.mr-md-auto,.mx-md-auto{margin-right:auto!important}.mb-md-auto,.my-md-auto{margin-bottom:auto!important}.ml-md-auto,.mx-md-auto{margin-left:auto!important}}@media (min-width:992px){.m-lg-0{margin:0!important}.mt-lg-0,.my-lg-0{margin-top:0!important}.mr-lg-0,.mx-lg-0{margin-right:0!important}.mb-lg-0,.my-lg-0{margin-bottom:0!important}.ml-lg-0,.mx-lg-0{margin-left:0!important}.m-lg-1{margin:.25rem!important}.mt-lg-1,.my-lg-1{margin-top:.25rem!important}.mr-lg-1,.mx-lg-1{margin-right:.25rem!important}.mb-lg-1,.my-lg-1{margin-bottom:.25rem!important}.ml-lg-1,.mx-lg-1{margin-left:.25rem!important}.m-lg-2{margin:.5rem!important}.mt-lg-2,.my-lg-2{margin-top:.5rem!important}.mr-lg-2,.mx-lg-2{margin-right:.5rem!important}.mb-lg-2,.my-lg-2{margin-bottom:.5rem!important}.ml-lg-2,.mx-lg-2{margin-left:.5rem!important}.m-lg-3{margin:1rem!important}.mt-lg-3,.my-lg-3{margin-top:1rem!important}.mr-lg-3,.mx-lg-3{margin-right:1rem!important}.mb-lg-3,.my-lg-3{margin-bottom:1rem!important}.ml-lg-3,.mx-lg-3{margin-left:1rem!important}.m-lg-4{margin:1.5rem!important}.mt-lg-4,.my-lg-4{margin-top:1.5rem!important}.mr-lg-4,.mx-lg-4{margin-right:1.5rem!important}.mb-lg-4,.my-lg-4{margin-bottom:1.5rem!important}.ml-lg-4,.mx-lg-4{margin-left:1.5rem!important}.m-lg-5{margin:3rem!important}.mt-lg-5,.my-lg-5{margin-top:3rem!important}.mr-lg-5,.mx-lg-5{margin-right:3rem!important}.mb-lg-5,.my-lg-5{margin-bottom:3rem!important}.ml-lg-5,.mx-lg-5{margin-left:3rem!important}.p-lg-0{padding:0!important}.pt-lg-0,.py-lg-0{padding-top:0!important}.pr-lg-0,.px-lg-0{padding-right:0!important}.pb-lg-0,.py-lg-0{padding-bottom:0!important}.pl-lg-0,.px-lg-0{padding-left:0!important}.p-lg-1{padding:.25rem!important}.pt-lg-1,.py-lg-1{padding-top:.25rem!important}.pr-lg-1,.px-lg-1{padding-right:.25rem!important}.pb-lg-1,.py-lg-1{padding-bottom:.25rem!important}.pl-lg-1,.px-lg-1{padding-left:.25rem!important}.p-lg-2{padding:.5rem!important}.pt-lg-2,.py-lg-2{padding-top:.5rem!important}.pr-lg-2,.px-lg-2{padding-right:.5rem!important}.pb-lg-2,.py-lg-2{padding-bottom:.5rem!important}.pl-lg-2,.px-lg-2{padding-left:.5rem!important}.p-lg-3{padding:1rem!important}.pt-lg-3,.py-lg-3{padding-top:1rem!important}.pr-lg-3,.px-lg-3{padding-right:1rem!important}.pb-lg-3,.py-lg-3{padding-bottom:1rem!important}.pl-lg-3,.px-lg-3{padding-left:1rem!important}.p-lg-4{padding:1.5rem!important}.pt-lg-4,.py-lg-4{padding-top:1.5rem!important}.pr-lg-4,.px-lg-4{padding-right:1.5rem!important}.pb-lg-4,.py-lg-4{padding-bottom:1.5rem!important}.pl-lg-4,.px-lg-4{padding-left:1.5rem!important}.p-lg-5{padding:3rem!important}.pt-lg-5,.py-lg-5{padding-top:3rem!important}.pr-lg-5,.px-lg-5{padding-right:3rem!important}.pb-lg-5,.py-lg-5{padding-bottom:3rem!important}.pl-lg-5,.px-lg-5{padding-left:3rem!important}.m-lg-auto{margin:auto!important}.mt-lg-auto,.my-lg-auto{margin-top:auto!important}.mr-lg-auto,.mx-lg-auto{margin-right:auto!important}.mb-lg-auto,.my-lg-auto{margin-bottom:auto!important}.ml-lg-auto,.mx-lg-auto{margin-left:auto!important}}@media (min-width:1200px){.m-xl-0{margin:0!important}.mt-xl-0,.my-xl-0{margin-top:0!important}.mr-xl-0,.mx-xl-0{margin-right:0!important}.mb-xl-0,.my-xl-0{margin-bottom:0!important}.ml-xl-0,.mx-xl-0{margin-left:0!important}.m-xl-1{margin:.25rem!important}.mt-xl-1,.my-xl-1{margin-top:.25rem!important}.mr-xl-1,.mx-xl-1{margin-right:.25rem!important}.mb-xl-1,.my-xl-1{margin-bottom:.25rem!important}.ml-xl-1,.mx-xl-1{margin-left:.25rem!important}.m-xl-2{margin:.5rem!important}.mt-xl-2,.my-xl-2{margin-top:.5rem!important}.mr-xl-2,.mx-xl-2{margin-right:.5rem!important}.mb-xl-2,.my-xl-2{margin-bottom:.5rem!important}.ml-xl-2,.mx-xl-2{margin-left:.5rem!important}.m-xl-3{margin:1rem!important}.mt-xl-3,.my-xl-3{margin-top:1rem!important}.mr-xl-3,.mx-xl-3{margin-right:1rem!important}.mb-xl-3,.my-xl-3{margin-bottom:1rem!important}.ml-xl-3,.mx-xl-3{margin-left:1rem!important}.m-xl-4{margin:1.5rem!important}.mt-xl-4,.my-xl-4{margin-top:1.5rem!important}.mr-xl-4,.mx-xl-4{margin-right:1.5rem!important}.mb-xl-4,.my-xl-4{margin-bottom:1.5rem!important}.ml-xl-4,.mx-xl-4{margin-left:1.5rem!important}.m-xl-5{margin:3rem!important}.mt-xl-5,.my-xl-5{margin-top:3rem!important}.mr-xl-5,.mx-xl-5{margin-right:3rem!important}.mb-xl-5,.my-xl-5{margin-bottom:3rem!important}.ml-xl-5,.mx-xl-5{margin-left:3rem!important}.p-xl-0{padding:0!important}.pt-xl-0,.py-xl-0{padding-top:0!important}.pr-xl-0,.px-xl-0{padding-right:0!important}.pb-xl-0,.py-xl-0{padding-bottom:0!important}.pl-xl-0,.px-xl-0{padding-left:0!important}.p-xl-1{padding:.25rem!important}.pt-xl-1,.py-xl-1{padding-top:.25rem!important}.pr-xl-1,.px-xl-1{padding-right:.25rem!important}.pb-xl-1,.py-xl-1{padding-bottom:.25rem!important}.pl-xl-1,.px-xl-1{padding-left:.25rem!important}.p-xl-2{padding:.5rem!important}.pt-xl-2,.py-xl-2{padding-top:.5rem!important}.pr-xl-2,.px-xl-2{padding-right:.5rem!important}.pb-xl-2,.py-xl-2{padding-bottom:.5rem!important}.pl-xl-2,.px-xl-2{padding-left:.5rem!important}.p-xl-3{padding:1rem!important}.pt-xl-3,.py-xl-3{padding-top:1rem!important}.pr-xl-3,.px-xl-3{padding-right:1rem!important}.pb-xl-3,.py-xl-3{padding-bottom:1rem!important}.pl-xl-3,.px-xl-3{padding-left:1rem!important}.p-xl-4{padding:1.5rem!important}.pt-xl-4,.py-xl-4{padding-top:1.5rem!important}.pr-xl-4,.px-xl-4{padding-right:1.5rem!important}.pb-xl-4,.py-xl-4{padding-bottom:1.5rem!important}.pl-xl-4,.px-xl-4{padding-left:1.5rem!important}.p-xl-5{padding:3rem!important}.pt-xl-5,.py-xl-5{padding-top:3rem!important}.pr-xl-5,.px-xl-5{padding-right:3rem!important}.pb-xl-5,.py-xl-5{padding-bottom:3rem!important}.pl-xl-5,.px-xl-5{padding-left:3rem!important}.m-xl-auto{margin:auto!important}.mt-xl-auto,.my-xl-auto{margin-top:auto!important}.mr-xl-auto,.mx-xl-auto{margin-right:auto!important}.mb-xl-auto,.my-xl-auto{margin-bottom:auto!important}.ml-xl-auto,.mx-xl-auto{margin-left:auto!important}}.text-monospace{font-family:SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace}.text-justify{text-align:justify!important}.text-nowrap{white-space:nowrap!important}.text-truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.text-left{text-align:left!important}.text-right{text-align:right!important}.text-center{text-align:center!important}@media (min-width:576px){.text-sm-left{text-align:left!important}.text-sm-right{text-align:right!important}.text-sm-center{text-align:center!important}}@media (min-width:768px){.text-md-left{text-align:left!important}.text-md-right{text-align:right!important}.text-md-center{text-align:center!important}}@media (min-width:992px){.text-lg-left{text-align:left!important}.text-lg-right{text-align:right!important}.text-lg-center{text-align:center!important}}@media (min-width:1200px){.text-xl-left{text-align:left!important}.text-xl-right{text-align:right!important}.text-xl-center{text-align:center!important}}.text-lowercase{text-transform:lowercase!important}.text-uppercase{text-transform:uppercase!important}.text-capitalize{text-transform:capitalize!important}.font-weight-light{font-weight:300!important}.font-weight-normal{font-weight:400!important}.font-weight-bold{font-weight:700!important}.font-italic{font-style:italic!important}.text-white{color:#fff!important}.text-primary{color:#007bff!important}a.text-primary:focus,a.text-primary:hover{color:#0062cc!important}.text-secondary{color:#6c757d!important}a.text-secondary:focus,a.text-secondary:hover{color:#545b62!important}.text-success{color:#28a745!important}a.text-success:focus,a.text-success:hover{color:#1e7e34!important}.text-info{color:#17a2b8!important}a.text-info:focus,a.text-info:hover{color:#117a8b!important}.text-warning{color:#ffc107!important}a.text-warning:focus,a.text-warning:hover{color:#d39e00!important}.text-danger{color:#dc3545!important}a.text-danger:focus,a.text-danger:hover{color:#bd2130!important}.text-light{color:#f8f9fa!important}a.text-light:focus,a.text-light:hover{color:#dae0e5!important}.text-dark{color:#343a40!important}a.text-dark:focus,a.text-dark:hover{color:#1d2124!important}.text-body{color:#212529!important}.text-muted{color:#6c757d!important}.text-black-50{color:rgba(0,0,0,.5)!important}.text-white-50{color:rgba(255,255,255,.5)!important}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.visible{visibility:visible!important}.invisible{visibility:hidden!important}@media print{*,::after,::before{text-shadow:none!important;box-shadow:none!important}a:not(.btn){text-decoration:underline}abbr[title]::after{content:\" (\" attr(title) \")\"}pre{white-space:pre-wrap!important}blockquote,pre{border:1px solid #adb5bd;page-break-inside:avoid}thead{display:table-header-group}img,tr{page-break-inside:avoid}h2,h3,p{orphans:3;widows:3}h2,h3{page-break-after:avoid}@page{size:a3}body{min-width:992px!important}.container{min-width:992px!important}.navbar{display:none}.badge{border:1px solid #000}.table{border-collapse:collapse!important}.table td,.table th{background-color:#fff!important}.table-bordered td,.table-bordered th{border:1px solid #dee2e6!important}.table-dark{color:inherit}.table-dark tbody+tbody,.table-dark td,.table-dark th,.table-dark thead th{border-color:#dee2e6}.table .thead-dark th{color:inherit;border-color:#dee2e6}}", ""]);
+exports.push([module.i, "/*!\n * Bootstrap v4.0.0 (https://getbootstrap.com)\n * Copyright 2011-2018 The Bootstrap Authors\n * Copyright 2011-2018 Twitter, Inc.\n * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)\n */:root{--blue:#007bff;--indigo:#6610f2;--purple:#6f42c1;--pink:#e83e8c;--red:#dc3545;--orange:#fd7e14;--yellow:#ffc107;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#6c757d;--gray-dark:#343a40;--primary:#007bff;--secondary:#6c757d;--success:#28a745;--info:#17a2b8;--warning:#ffc107;--danger:#dc3545;--light:#f8f9fa;--dark:#343a40;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\";--font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace}*,::after,::before{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-ms-overflow-style:scrollbar;-webkit-tap-highlight-color:transparent}@-ms-viewport{width:device-width}article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff}[tabindex=\"-1\"]:focus{outline:0!important}hr{box-sizing:content-box;height:0;overflow:visible}h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:.5rem}p{margin-top:0;margin-bottom:1rem}abbr[data-original-title],abbr[title]{text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted;cursor:help;border-bottom:0}address{margin-bottom:1rem;font-style:normal;line-height:inherit}dl,ol,ul{margin-top:0;margin-bottom:1rem}ol ol,ol ul,ul ol,ul ul{margin-bottom:0}dt{font-weight:700}dd{margin-bottom:.5rem;margin-left:0}blockquote{margin:0 0 1rem}dfn{font-style:italic}b,strong{font-weight:bolder}small{font-size:80%}sub,sup{position:relative;font-size:75%;line-height:0;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}a{color:#007bff;text-decoration:none;background-color:transparent;-webkit-text-decoration-skip:objects}a:hover{color:#0056b3;text-decoration:underline}a:not([href]):not([tabindex]){color:inherit;text-decoration:none}a:not([href]):not([tabindex]):focus,a:not([href]):not([tabindex]):hover{color:inherit;text-decoration:none}a:not([href]):not([tabindex]):focus{outline:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}pre{margin-top:0;margin-bottom:1rem;overflow:auto;-ms-overflow-style:scrollbar}figure{margin:0 0 1rem}img{vertical-align:middle;border-style:none}svg:not(:root){overflow:hidden}table{border-collapse:collapse}caption{padding-top:.75rem;padding-bottom:.75rem;color:#6c757d;text-align:left;caption-side:bottom}th{text-align:inherit}label{display:inline-block;margin-bottom:.5rem}button{border-radius:0}button:focus{outline:1px dotted;outline:5px auto -webkit-focus-ring-color}button,input,optgroup,select,textarea{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{padding:0;border-style:none}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=date],input[type=datetime-local],input[type=month],input[type=time]{-webkit-appearance:listbox}textarea{overflow:auto;resize:vertical}fieldset{min-width:0;padding:0;margin:0;border:0}legend{display:block;width:100%;max-width:100%;padding:0;margin-bottom:.5rem;font-size:1.5rem;line-height:inherit;color:inherit;white-space:normal}progress{vertical-align:baseline}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{outline-offset:-2px;-webkit-appearance:none}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}output{display:inline-block}summary{display:list-item;cursor:pointer}template{display:none}[hidden]{display:none!important}.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{margin-bottom:.5rem;font-family:inherit;font-weight:500;line-height:1.2;color:inherit}.h1,h1{font-size:2.5rem}.h2,h2{font-size:2rem}.h3,h3{font-size:1.75rem}.h4,h4{font-size:1.5rem}.h5,h5{font-size:1.25rem}.h6,h6{font-size:1rem}.lead{font-size:1.25rem;font-weight:300}.display-1{font-size:6rem;font-weight:300;line-height:1.2}.display-2{font-size:5.5rem;font-weight:300;line-height:1.2}.display-3{font-size:4.5rem;font-weight:300;line-height:1.2}.display-4{font-size:3.5rem;font-weight:300;line-height:1.2}hr{margin-top:1rem;margin-bottom:1rem;border:0;border-top:1px solid rgba(0,0,0,.1)}.small,small{font-size:80%;font-weight:400}.mark,mark{padding:.2em;background-color:#fcf8e3}.list-unstyled{padding-left:0;list-style:none}.list-inline{padding-left:0;list-style:none}.list-inline-item{display:inline-block}.list-inline-item:not(:last-child){margin-right:.5rem}.initialism{font-size:90%;text-transform:uppercase}.blockquote{margin-bottom:1rem;font-size:1.25rem}.blockquote-footer{display:block;font-size:80%;color:#6c757d}.blockquote-footer::before{content:\"\\2014   \\A0\"}.img-fluid{max-width:100%;height:auto}.img-thumbnail{padding:.25rem;background-color:#fff;border:1px solid #dee2e6;border-radius:.25rem;max-width:100%;height:auto}.figure{display:inline-block}.figure-img{margin-bottom:.5rem;line-height:1}.figure-caption{font-size:90%;color:#6c757d}code,kbd,pre,samp{font-family:SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace}code{font-size:87.5%;color:#e83e8c;word-break:break-word}a>code{color:inherit}kbd{padding:.2rem .4rem;font-size:87.5%;color:#fff;background-color:#212529;border-radius:.2rem}kbd kbd{padding:0;font-size:100%;font-weight:700}pre{display:block;font-size:87.5%;color:#212529}pre code{font-size:inherit;color:inherit;word-break:normal}.pre-scrollable{max-height:340px;overflow-y:scroll}.container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:576px){.container{max-width:540px}}@media (min-width:768px){.container{max-width:720px}}@media (min-width:992px){.container{max-width:960px}}@media (min-width:1200px){.container{max-width:1140px}}.container-fluid{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}.row{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}.no-gutters{margin-right:0;margin-left:0}.no-gutters>.col,.no-gutters>[class*=col-]{padding-right:0;padding-left:0}.col,.col-1,.col-10,.col-11,.col-12,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-auto,.col-lg,.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-auto,.col-md,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-auto,.col-sm,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-auto,.col-xl,.col-xl-1,.col-xl-10,.col-xl-11,.col-xl-12,.col-xl-2,.col-xl-3,.col-xl-4,.col-xl-5,.col-xl-6,.col-xl-7,.col-xl-8,.col-xl-9,.col-xl-auto{position:relative;width:100%;min-height:1px;padding-right:15px;padding-left:15px}.col{-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;max-width:100%}.col-auto{-webkit-box-flex:0;-ms-flex:0 0 auto;flex:0 0 auto;width:auto;max-width:none}.col-1{-webkit-box-flex:0;-ms-flex:0 0 8.333333%;flex:0 0 8.333333%;max-width:8.333333%}.col-2{-webkit-box-flex:0;-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}.col-3{-webkit-box-flex:0;-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}.col-4{-webkit-box-flex:0;-ms-flex:0 0 33.333333%;flex:0 0 33.333333%;max-width:33.333333%}.col-5{-webkit-box-flex:0;-ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%}.col-6{-webkit-box-flex:0;-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}.col-7{-webkit-box-flex:0;-ms-flex:0 0 58.333333%;flex:0 0 58.333333%;max-width:58.333333%}.col-8{-webkit-box-flex:0;-ms-flex:0 0 66.666667%;flex:0 0 66.666667%;max-width:66.666667%}.col-9{-webkit-box-flex:0;-ms-flex:0 0 75%;flex:0 0 75%;max-width:75%}.col-10{-webkit-box-flex:0;-ms-flex:0 0 83.333333%;flex:0 0 83.333333%;max-width:83.333333%}.col-11{-webkit-box-flex:0;-ms-flex:0 0 91.666667%;flex:0 0 91.666667%;max-width:91.666667%}.col-12{-webkit-box-flex:0;-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}.order-first{-webkit-box-ordinal-group:0;-ms-flex-order:-1;order:-1}.order-last{-webkit-box-ordinal-group:14;-ms-flex-order:13;order:13}.order-0{-webkit-box-ordinal-group:1;-ms-flex-order:0;order:0}.order-1{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}.order-2{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2}.order-3{-webkit-box-ordinal-group:4;-ms-flex-order:3;order:3}.order-4{-webkit-box-ordinal-group:5;-ms-flex-order:4;order:4}.order-5{-webkit-box-ordinal-group:6;-ms-flex-order:5;order:5}.order-6{-webkit-box-ordinal-group:7;-ms-flex-order:6;order:6}.order-7{-webkit-box-ordinal-group:8;-ms-flex-order:7;order:7}.order-8{-webkit-box-ordinal-group:9;-ms-flex-order:8;order:8}.order-9{-webkit-box-ordinal-group:10;-ms-flex-order:9;order:9}.order-10{-webkit-box-ordinal-group:11;-ms-flex-order:10;order:10}.order-11{-webkit-box-ordinal-group:12;-ms-flex-order:11;order:11}.order-12{-webkit-box-ordinal-group:13;-ms-flex-order:12;order:12}.offset-1{margin-left:8.333333%}.offset-2{margin-left:16.666667%}.offset-3{margin-left:25%}.offset-4{margin-left:33.333333%}.offset-5{margin-left:41.666667%}.offset-6{margin-left:50%}.offset-7{margin-left:58.333333%}.offset-8{margin-left:66.666667%}.offset-9{margin-left:75%}.offset-10{margin-left:83.333333%}.offset-11{margin-left:91.666667%}@media (min-width:576px){.col-sm{-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;max-width:100%}.col-sm-auto{-webkit-box-flex:0;-ms-flex:0 0 auto;flex:0 0 auto;width:auto;max-width:none}.col-sm-1{-webkit-box-flex:0;-ms-flex:0 0 8.333333%;flex:0 0 8.333333%;max-width:8.333333%}.col-sm-2{-webkit-box-flex:0;-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}.col-sm-3{-webkit-box-flex:0;-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}.col-sm-4{-webkit-box-flex:0;-ms-flex:0 0 33.333333%;flex:0 0 33.333333%;max-width:33.333333%}.col-sm-5{-webkit-box-flex:0;-ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%}.col-sm-6{-webkit-box-flex:0;-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}.col-sm-7{-webkit-box-flex:0;-ms-flex:0 0 58.333333%;flex:0 0 58.333333%;max-width:58.333333%}.col-sm-8{-webkit-box-flex:0;-ms-flex:0 0 66.666667%;flex:0 0 66.666667%;max-width:66.666667%}.col-sm-9{-webkit-box-flex:0;-ms-flex:0 0 75%;flex:0 0 75%;max-width:75%}.col-sm-10{-webkit-box-flex:0;-ms-flex:0 0 83.333333%;flex:0 0 83.333333%;max-width:83.333333%}.col-sm-11{-webkit-box-flex:0;-ms-flex:0 0 91.666667%;flex:0 0 91.666667%;max-width:91.666667%}.col-sm-12{-webkit-box-flex:0;-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}.order-sm-first{-webkit-box-ordinal-group:0;-ms-flex-order:-1;order:-1}.order-sm-last{-webkit-box-ordinal-group:14;-ms-flex-order:13;order:13}.order-sm-0{-webkit-box-ordinal-group:1;-ms-flex-order:0;order:0}.order-sm-1{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}.order-sm-2{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2}.order-sm-3{-webkit-box-ordinal-group:4;-ms-flex-order:3;order:3}.order-sm-4{-webkit-box-ordinal-group:5;-ms-flex-order:4;order:4}.order-sm-5{-webkit-box-ordinal-group:6;-ms-flex-order:5;order:5}.order-sm-6{-webkit-box-ordinal-group:7;-ms-flex-order:6;order:6}.order-sm-7{-webkit-box-ordinal-group:8;-ms-flex-order:7;order:7}.order-sm-8{-webkit-box-ordinal-group:9;-ms-flex-order:8;order:8}.order-sm-9{-webkit-box-ordinal-group:10;-ms-flex-order:9;order:9}.order-sm-10{-webkit-box-ordinal-group:11;-ms-flex-order:10;order:10}.order-sm-11{-webkit-box-ordinal-group:12;-ms-flex-order:11;order:11}.order-sm-12{-webkit-box-ordinal-group:13;-ms-flex-order:12;order:12}.offset-sm-0{margin-left:0}.offset-sm-1{margin-left:8.333333%}.offset-sm-2{margin-left:16.666667%}.offset-sm-3{margin-left:25%}.offset-sm-4{margin-left:33.333333%}.offset-sm-5{margin-left:41.666667%}.offset-sm-6{margin-left:50%}.offset-sm-7{margin-left:58.333333%}.offset-sm-8{margin-left:66.666667%}.offset-sm-9{margin-left:75%}.offset-sm-10{margin-left:83.333333%}.offset-sm-11{margin-left:91.666667%}}@media (min-width:768px){.col-md{-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;max-width:100%}.col-md-auto{-webkit-box-flex:0;-ms-flex:0 0 auto;flex:0 0 auto;width:auto;max-width:none}.col-md-1{-webkit-box-flex:0;-ms-flex:0 0 8.333333%;flex:0 0 8.333333%;max-width:8.333333%}.col-md-2{-webkit-box-flex:0;-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}.col-md-3{-webkit-box-flex:0;-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}.col-md-4{-webkit-box-flex:0;-ms-flex:0 0 33.333333%;flex:0 0 33.333333%;max-width:33.333333%}.col-md-5{-webkit-box-flex:0;-ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%}.col-md-6{-webkit-box-flex:0;-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}.col-md-7{-webkit-box-flex:0;-ms-flex:0 0 58.333333%;flex:0 0 58.333333%;max-width:58.333333%}.col-md-8{-webkit-box-flex:0;-ms-flex:0 0 66.666667%;flex:0 0 66.666667%;max-width:66.666667%}.col-md-9{-webkit-box-flex:0;-ms-flex:0 0 75%;flex:0 0 75%;max-width:75%}.col-md-10{-webkit-box-flex:0;-ms-flex:0 0 83.333333%;flex:0 0 83.333333%;max-width:83.333333%}.col-md-11{-webkit-box-flex:0;-ms-flex:0 0 91.666667%;flex:0 0 91.666667%;max-width:91.666667%}.col-md-12{-webkit-box-flex:0;-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}.order-md-first{-webkit-box-ordinal-group:0;-ms-flex-order:-1;order:-1}.order-md-last{-webkit-box-ordinal-group:14;-ms-flex-order:13;order:13}.order-md-0{-webkit-box-ordinal-group:1;-ms-flex-order:0;order:0}.order-md-1{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}.order-md-2{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2}.order-md-3{-webkit-box-ordinal-group:4;-ms-flex-order:3;order:3}.order-md-4{-webkit-box-ordinal-group:5;-ms-flex-order:4;order:4}.order-md-5{-webkit-box-ordinal-group:6;-ms-flex-order:5;order:5}.order-md-6{-webkit-box-ordinal-group:7;-ms-flex-order:6;order:6}.order-md-7{-webkit-box-ordinal-group:8;-ms-flex-order:7;order:7}.order-md-8{-webkit-box-ordinal-group:9;-ms-flex-order:8;order:8}.order-md-9{-webkit-box-ordinal-group:10;-ms-flex-order:9;order:9}.order-md-10{-webkit-box-ordinal-group:11;-ms-flex-order:10;order:10}.order-md-11{-webkit-box-ordinal-group:12;-ms-flex-order:11;order:11}.order-md-12{-webkit-box-ordinal-group:13;-ms-flex-order:12;order:12}.offset-md-0{margin-left:0}.offset-md-1{margin-left:8.333333%}.offset-md-2{margin-left:16.666667%}.offset-md-3{margin-left:25%}.offset-md-4{margin-left:33.333333%}.offset-md-5{margin-left:41.666667%}.offset-md-6{margin-left:50%}.offset-md-7{margin-left:58.333333%}.offset-md-8{margin-left:66.666667%}.offset-md-9{margin-left:75%}.offset-md-10{margin-left:83.333333%}.offset-md-11{margin-left:91.666667%}}@media (min-width:992px){.col-lg{-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;max-width:100%}.col-lg-auto{-webkit-box-flex:0;-ms-flex:0 0 auto;flex:0 0 auto;width:auto;max-width:none}.col-lg-1{-webkit-box-flex:0;-ms-flex:0 0 8.333333%;flex:0 0 8.333333%;max-width:8.333333%}.col-lg-2{-webkit-box-flex:0;-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}.col-lg-3{-webkit-box-flex:0;-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}.col-lg-4{-webkit-box-flex:0;-ms-flex:0 0 33.333333%;flex:0 0 33.333333%;max-width:33.333333%}.col-lg-5{-webkit-box-flex:0;-ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%}.col-lg-6{-webkit-box-flex:0;-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}.col-lg-7{-webkit-box-flex:0;-ms-flex:0 0 58.333333%;flex:0 0 58.333333%;max-width:58.333333%}.col-lg-8{-webkit-box-flex:0;-ms-flex:0 0 66.666667%;flex:0 0 66.666667%;max-width:66.666667%}.col-lg-9{-webkit-box-flex:0;-ms-flex:0 0 75%;flex:0 0 75%;max-width:75%}.col-lg-10{-webkit-box-flex:0;-ms-flex:0 0 83.333333%;flex:0 0 83.333333%;max-width:83.333333%}.col-lg-11{-webkit-box-flex:0;-ms-flex:0 0 91.666667%;flex:0 0 91.666667%;max-width:91.666667%}.col-lg-12{-webkit-box-flex:0;-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}.order-lg-first{-webkit-box-ordinal-group:0;-ms-flex-order:-1;order:-1}.order-lg-last{-webkit-box-ordinal-group:14;-ms-flex-order:13;order:13}.order-lg-0{-webkit-box-ordinal-group:1;-ms-flex-order:0;order:0}.order-lg-1{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}.order-lg-2{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2}.order-lg-3{-webkit-box-ordinal-group:4;-ms-flex-order:3;order:3}.order-lg-4{-webkit-box-ordinal-group:5;-ms-flex-order:4;order:4}.order-lg-5{-webkit-box-ordinal-group:6;-ms-flex-order:5;order:5}.order-lg-6{-webkit-box-ordinal-group:7;-ms-flex-order:6;order:6}.order-lg-7{-webkit-box-ordinal-group:8;-ms-flex-order:7;order:7}.order-lg-8{-webkit-box-ordinal-group:9;-ms-flex-order:8;order:8}.order-lg-9{-webkit-box-ordinal-group:10;-ms-flex-order:9;order:9}.order-lg-10{-webkit-box-ordinal-group:11;-ms-flex-order:10;order:10}.order-lg-11{-webkit-box-ordinal-group:12;-ms-flex-order:11;order:11}.order-lg-12{-webkit-box-ordinal-group:13;-ms-flex-order:12;order:12}.offset-lg-0{margin-left:0}.offset-lg-1{margin-left:8.333333%}.offset-lg-2{margin-left:16.666667%}.offset-lg-3{margin-left:25%}.offset-lg-4{margin-left:33.333333%}.offset-lg-5{margin-left:41.666667%}.offset-lg-6{margin-left:50%}.offset-lg-7{margin-left:58.333333%}.offset-lg-8{margin-left:66.666667%}.offset-lg-9{margin-left:75%}.offset-lg-10{margin-left:83.333333%}.offset-lg-11{margin-left:91.666667%}}@media (min-width:1200px){.col-xl{-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;max-width:100%}.col-xl-auto{-webkit-box-flex:0;-ms-flex:0 0 auto;flex:0 0 auto;width:auto;max-width:none}.col-xl-1{-webkit-box-flex:0;-ms-flex:0 0 8.333333%;flex:0 0 8.333333%;max-width:8.333333%}.col-xl-2{-webkit-box-flex:0;-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}.col-xl-3{-webkit-box-flex:0;-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}.col-xl-4{-webkit-box-flex:0;-ms-flex:0 0 33.333333%;flex:0 0 33.333333%;max-width:33.333333%}.col-xl-5{-webkit-box-flex:0;-ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%}.col-xl-6{-webkit-box-flex:0;-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}.col-xl-7{-webkit-box-flex:0;-ms-flex:0 0 58.333333%;flex:0 0 58.333333%;max-width:58.333333%}.col-xl-8{-webkit-box-flex:0;-ms-flex:0 0 66.666667%;flex:0 0 66.666667%;max-width:66.666667%}.col-xl-9{-webkit-box-flex:0;-ms-flex:0 0 75%;flex:0 0 75%;max-width:75%}.col-xl-10{-webkit-box-flex:0;-ms-flex:0 0 83.333333%;flex:0 0 83.333333%;max-width:83.333333%}.col-xl-11{-webkit-box-flex:0;-ms-flex:0 0 91.666667%;flex:0 0 91.666667%;max-width:91.666667%}.col-xl-12{-webkit-box-flex:0;-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}.order-xl-first{-webkit-box-ordinal-group:0;-ms-flex-order:-1;order:-1}.order-xl-last{-webkit-box-ordinal-group:14;-ms-flex-order:13;order:13}.order-xl-0{-webkit-box-ordinal-group:1;-ms-flex-order:0;order:0}.order-xl-1{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}.order-xl-2{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2}.order-xl-3{-webkit-box-ordinal-group:4;-ms-flex-order:3;order:3}.order-xl-4{-webkit-box-ordinal-group:5;-ms-flex-order:4;order:4}.order-xl-5{-webkit-box-ordinal-group:6;-ms-flex-order:5;order:5}.order-xl-6{-webkit-box-ordinal-group:7;-ms-flex-order:6;order:6}.order-xl-7{-webkit-box-ordinal-group:8;-ms-flex-order:7;order:7}.order-xl-8{-webkit-box-ordinal-group:9;-ms-flex-order:8;order:8}.order-xl-9{-webkit-box-ordinal-group:10;-ms-flex-order:9;order:9}.order-xl-10{-webkit-box-ordinal-group:11;-ms-flex-order:10;order:10}.order-xl-11{-webkit-box-ordinal-group:12;-ms-flex-order:11;order:11}.order-xl-12{-webkit-box-ordinal-group:13;-ms-flex-order:12;order:12}.offset-xl-0{margin-left:0}.offset-xl-1{margin-left:8.333333%}.offset-xl-2{margin-left:16.666667%}.offset-xl-3{margin-left:25%}.offset-xl-4{margin-left:33.333333%}.offset-xl-5{margin-left:41.666667%}.offset-xl-6{margin-left:50%}.offset-xl-7{margin-left:58.333333%}.offset-xl-8{margin-left:66.666667%}.offset-xl-9{margin-left:75%}.offset-xl-10{margin-left:83.333333%}.offset-xl-11{margin-left:91.666667%}}.table{width:100%;max-width:100%;margin-bottom:1rem;background-color:transparent}.table td,.table th{padding:.75rem;vertical-align:top;border-top:1px solid #dee2e6}.table thead th{vertical-align:bottom;border-bottom:2px solid #dee2e6}.table tbody+tbody{border-top:2px solid #dee2e6}.table .table{background-color:#fff}.table-sm td,.table-sm th{padding:.3rem}.table-bordered{border:1px solid #dee2e6}.table-bordered td,.table-bordered th{border:1px solid #dee2e6}.table-bordered thead td,.table-bordered thead th{border-bottom-width:2px}.table-striped tbody tr:nth-of-type(odd){background-color:rgba(0,0,0,.05)}.table-hover tbody tr:hover{background-color:rgba(0,0,0,.075)}.table-primary,.table-primary>td,.table-primary>th{background-color:#b8daff}.table-hover .table-primary:hover{background-color:#9fcdff}.table-hover .table-primary:hover>td,.table-hover .table-primary:hover>th{background-color:#9fcdff}.table-secondary,.table-secondary>td,.table-secondary>th{background-color:#d6d8db}.table-hover .table-secondary:hover{background-color:#c8cbcf}.table-hover .table-secondary:hover>td,.table-hover .table-secondary:hover>th{background-color:#c8cbcf}.table-success,.table-success>td,.table-success>th{background-color:#c3e6cb}.table-hover .table-success:hover{background-color:#b1dfbb}.table-hover .table-success:hover>td,.table-hover .table-success:hover>th{background-color:#b1dfbb}.table-info,.table-info>td,.table-info>th{background-color:#bee5eb}.table-hover .table-info:hover{background-color:#abdde5}.table-hover .table-info:hover>td,.table-hover .table-info:hover>th{background-color:#abdde5}.table-warning,.table-warning>td,.table-warning>th{background-color:#ffeeba}.table-hover .table-warning:hover{background-color:#ffe8a1}.table-hover .table-warning:hover>td,.table-hover .table-warning:hover>th{background-color:#ffe8a1}.table-danger,.table-danger>td,.table-danger>th{background-color:#f5c6cb}.table-hover .table-danger:hover{background-color:#f1b0b7}.table-hover .table-danger:hover>td,.table-hover .table-danger:hover>th{background-color:#f1b0b7}.table-light,.table-light>td,.table-light>th{background-color:#fdfdfe}.table-hover .table-light:hover{background-color:#ececf6}.table-hover .table-light:hover>td,.table-hover .table-light:hover>th{background-color:#ececf6}.table-dark,.table-dark>td,.table-dark>th{background-color:#c6c8ca}.table-hover .table-dark:hover{background-color:#b9bbbe}.table-hover .table-dark:hover>td,.table-hover .table-dark:hover>th{background-color:#b9bbbe}.table-active,.table-active>td,.table-active>th{background-color:rgba(0,0,0,.075)}.table-hover .table-active:hover{background-color:rgba(0,0,0,.075)}.table-hover .table-active:hover>td,.table-hover .table-active:hover>th{background-color:rgba(0,0,0,.075)}.table .thead-dark th{color:#fff;background-color:#212529;border-color:#32383e}.table .thead-light th{color:#495057;background-color:#e9ecef;border-color:#dee2e6}.table-dark{color:#fff;background-color:#212529}.table-dark td,.table-dark th,.table-dark thead th{border-color:#32383e}.table-dark.table-bordered{border:0}.table-dark.table-striped tbody tr:nth-of-type(odd){background-color:rgba(255,255,255,.05)}.table-dark.table-hover tbody tr:hover{background-color:rgba(255,255,255,.075)}@media (max-width:575.98px){.table-responsive-sm{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;-ms-overflow-style:-ms-autohiding-scrollbar}.table-responsive-sm>.table-bordered{border:0}}@media (max-width:767.98px){.table-responsive-md{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;-ms-overflow-style:-ms-autohiding-scrollbar}.table-responsive-md>.table-bordered{border:0}}@media (max-width:991.98px){.table-responsive-lg{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;-ms-overflow-style:-ms-autohiding-scrollbar}.table-responsive-lg>.table-bordered{border:0}}@media (max-width:1199.98px){.table-responsive-xl{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;-ms-overflow-style:-ms-autohiding-scrollbar}.table-responsive-xl>.table-bordered{border:0}}.table-responsive{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;-ms-overflow-style:-ms-autohiding-scrollbar}.table-responsive>.table-bordered{border:0}.form-control{display:block;width:100%;padding:.375rem .75rem;font-size:1rem;line-height:1.5;color:#495057;background-color:#fff;background-clip:padding-box;border:1px solid #ced4da;border-radius:.25rem;transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out}.form-control::-ms-expand{background-color:transparent;border:0}.form-control:focus{color:#495057;background-color:#fff;border-color:#80bdff;outline:0;box-shadow:0 0 0 .2rem rgba(0,123,255,.25)}.form-control::-webkit-input-placeholder{color:#6c757d;opacity:1}.form-control::-moz-placeholder{color:#6c757d;opacity:1}.form-control:-ms-input-placeholder{color:#6c757d;opacity:1}.form-control::-ms-input-placeholder{color:#6c757d;opacity:1}.form-control::placeholder{color:#6c757d;opacity:1}.form-control:disabled,.form-control[readonly]{background-color:#e9ecef;opacity:1}select.form-control:not([size]):not([multiple]){height:calc(2.25rem + 2px)}select.form-control:focus::-ms-value{color:#495057;background-color:#fff}.form-control-file,.form-control-range{display:block;width:100%}.col-form-label{padding-top:calc(.375rem + 1px);padding-bottom:calc(.375rem + 1px);margin-bottom:0;font-size:inherit;line-height:1.5}.col-form-label-lg{padding-top:calc(.5rem + 1px);padding-bottom:calc(.5rem + 1px);font-size:1.25rem;line-height:1.5}.col-form-label-sm{padding-top:calc(.25rem + 1px);padding-bottom:calc(.25rem + 1px);font-size:.875rem;line-height:1.5}.form-control-plaintext{display:block;width:100%;padding-top:.375rem;padding-bottom:.375rem;margin-bottom:0;line-height:1.5;background-color:transparent;border:solid transparent;border-width:1px 0}.form-control-plaintext.form-control-lg,.form-control-plaintext.form-control-sm,.input-group-lg>.form-control-plaintext.form-control,.input-group-lg>.input-group-append>.form-control-plaintext.btn,.input-group-lg>.input-group-append>.form-control-plaintext.input-group-text,.input-group-lg>.input-group-prepend>.form-control-plaintext.btn,.input-group-lg>.input-group-prepend>.form-control-plaintext.input-group-text,.input-group-sm>.form-control-plaintext.form-control,.input-group-sm>.input-group-append>.form-control-plaintext.btn,.input-group-sm>.input-group-append>.form-control-plaintext.input-group-text,.input-group-sm>.input-group-prepend>.form-control-plaintext.btn,.input-group-sm>.input-group-prepend>.form-control-plaintext.input-group-text{padding-right:0;padding-left:0}.form-control-sm,.input-group-sm>.form-control,.input-group-sm>.input-group-append>.btn,.input-group-sm>.input-group-append>.input-group-text,.input-group-sm>.input-group-prepend>.btn,.input-group-sm>.input-group-prepend>.input-group-text{padding:.25rem .5rem;font-size:.875rem;line-height:1.5;border-radius:.2rem}.input-group-sm>.input-group-append>select.btn:not([size]):not([multiple]),.input-group-sm>.input-group-append>select.input-group-text:not([size]):not([multiple]),.input-group-sm>.input-group-prepend>select.btn:not([size]):not([multiple]),.input-group-sm>.input-group-prepend>select.input-group-text:not([size]):not([multiple]),.input-group-sm>select.form-control:not([size]):not([multiple]),select.form-control-sm:not([size]):not([multiple]){height:calc(1.8125rem + 2px)}.form-control-lg,.input-group-lg>.form-control,.input-group-lg>.input-group-append>.btn,.input-group-lg>.input-group-append>.input-group-text,.input-group-lg>.input-group-prepend>.btn,.input-group-lg>.input-group-prepend>.input-group-text{padding:.5rem 1rem;font-size:1.25rem;line-height:1.5;border-radius:.3rem}.input-group-lg>.input-group-append>select.btn:not([size]):not([multiple]),.input-group-lg>.input-group-append>select.input-group-text:not([size]):not([multiple]),.input-group-lg>.input-group-prepend>select.btn:not([size]):not([multiple]),.input-group-lg>.input-group-prepend>select.input-group-text:not([size]):not([multiple]),.input-group-lg>select.form-control:not([size]):not([multiple]),select.form-control-lg:not([size]):not([multiple]){height:calc(2.875rem + 2px)}.form-group{margin-bottom:1rem}.form-text{display:block;margin-top:.25rem}.form-row{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-5px;margin-left:-5px}.form-row>.col,.form-row>[class*=col-]{padding-right:5px;padding-left:5px}.form-check{position:relative;display:block;padding-left:1.25rem}.form-check-input{position:absolute;margin-top:.3rem;margin-left:-1.25rem}.form-check-input:disabled~.form-check-label{color:#6c757d}.form-check-label{margin-bottom:0}.form-check-inline{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding-left:0;margin-right:.75rem}.form-check-inline .form-check-input{position:static;margin-top:0;margin-right:.3125rem;margin-left:0}.valid-feedback{display:none;width:100%;margin-top:.25rem;font-size:80%;color:#28a745}.valid-tooltip{position:absolute;top:100%;z-index:5;display:none;max-width:100%;padding:.5rem;margin-top:.1rem;font-size:.875rem;line-height:1;color:#fff;background-color:rgba(40,167,69,.8);border-radius:.2rem}.custom-select.is-valid,.form-control.is-valid,.was-validated .custom-select:valid,.was-validated .form-control:valid{border-color:#28a745}.custom-select.is-valid:focus,.form-control.is-valid:focus,.was-validated .custom-select:valid:focus,.was-validated .form-control:valid:focus{border-color:#28a745;box-shadow:0 0 0 .2rem rgba(40,167,69,.25)}.custom-select.is-valid~.valid-feedback,.custom-select.is-valid~.valid-tooltip,.form-control.is-valid~.valid-feedback,.form-control.is-valid~.valid-tooltip,.was-validated .custom-select:valid~.valid-feedback,.was-validated .custom-select:valid~.valid-tooltip,.was-validated .form-control:valid~.valid-feedback,.was-validated .form-control:valid~.valid-tooltip{display:block}.form-check-input.is-valid~.form-check-label,.was-validated .form-check-input:valid~.form-check-label{color:#28a745}.form-check-input.is-valid~.valid-feedback,.form-check-input.is-valid~.valid-tooltip,.was-validated .form-check-input:valid~.valid-feedback,.was-validated .form-check-input:valid~.valid-tooltip{display:block}.custom-control-input.is-valid~.custom-control-label,.was-validated .custom-control-input:valid~.custom-control-label{color:#28a745}.custom-control-input.is-valid~.custom-control-label::before,.was-validated .custom-control-input:valid~.custom-control-label::before{background-color:#71dd8a}.custom-control-input.is-valid~.valid-feedback,.custom-control-input.is-valid~.valid-tooltip,.was-validated .custom-control-input:valid~.valid-feedback,.was-validated .custom-control-input:valid~.valid-tooltip{display:block}.custom-control-input.is-valid:checked~.custom-control-label::before,.was-validated .custom-control-input:valid:checked~.custom-control-label::before{background-color:#34ce57}.custom-control-input.is-valid:focus~.custom-control-label::before,.was-validated .custom-control-input:valid:focus~.custom-control-label::before{box-shadow:0 0 0 1px #fff,0 0 0 .2rem rgba(40,167,69,.25)}.custom-file-input.is-valid~.custom-file-label,.was-validated .custom-file-input:valid~.custom-file-label{border-color:#28a745}.custom-file-input.is-valid~.custom-file-label::before,.was-validated .custom-file-input:valid~.custom-file-label::before{border-color:inherit}.custom-file-input.is-valid~.valid-feedback,.custom-file-input.is-valid~.valid-tooltip,.was-validated .custom-file-input:valid~.valid-feedback,.was-validated .custom-file-input:valid~.valid-tooltip{display:block}.custom-file-input.is-valid:focus~.custom-file-label,.was-validated .custom-file-input:valid:focus~.custom-file-label{box-shadow:0 0 0 .2rem rgba(40,167,69,.25)}.invalid-feedback{display:none;width:100%;margin-top:.25rem;font-size:80%;color:#dc3545}.invalid-tooltip{position:absolute;top:100%;z-index:5;display:none;max-width:100%;padding:.5rem;margin-top:.1rem;font-size:.875rem;line-height:1;color:#fff;background-color:rgba(220,53,69,.8);border-radius:.2rem}.custom-select.is-invalid,.form-control.is-invalid,.was-validated .custom-select:invalid,.was-validated .form-control:invalid{border-color:#dc3545}.custom-select.is-invalid:focus,.form-control.is-invalid:focus,.was-validated .custom-select:invalid:focus,.was-validated .form-control:invalid:focus{border-color:#dc3545;box-shadow:0 0 0 .2rem rgba(220,53,69,.25)}.custom-select.is-invalid~.invalid-feedback,.custom-select.is-invalid~.invalid-tooltip,.form-control.is-invalid~.invalid-feedback,.form-control.is-invalid~.invalid-tooltip,.was-validated .custom-select:invalid~.invalid-feedback,.was-validated .custom-select:invalid~.invalid-tooltip,.was-validated .form-control:invalid~.invalid-feedback,.was-validated .form-control:invalid~.invalid-tooltip{display:block}.form-check-input.is-invalid~.form-check-label,.was-validated .form-check-input:invalid~.form-check-label{color:#dc3545}.form-check-input.is-invalid~.invalid-feedback,.form-check-input.is-invalid~.invalid-tooltip,.was-validated .form-check-input:invalid~.invalid-feedback,.was-validated .form-check-input:invalid~.invalid-tooltip{display:block}.custom-control-input.is-invalid~.custom-control-label,.was-validated .custom-control-input:invalid~.custom-control-label{color:#dc3545}.custom-control-input.is-invalid~.custom-control-label::before,.was-validated .custom-control-input:invalid~.custom-control-label::before{background-color:#efa2a9}.custom-control-input.is-invalid~.invalid-feedback,.custom-control-input.is-invalid~.invalid-tooltip,.was-validated .custom-control-input:invalid~.invalid-feedback,.was-validated .custom-control-input:invalid~.invalid-tooltip{display:block}.custom-control-input.is-invalid:checked~.custom-control-label::before,.was-validated .custom-control-input:invalid:checked~.custom-control-label::before{background-color:#e4606d}.custom-control-input.is-invalid:focus~.custom-control-label::before,.was-validated .custom-control-input:invalid:focus~.custom-control-label::before{box-shadow:0 0 0 1px #fff,0 0 0 .2rem rgba(220,53,69,.25)}.custom-file-input.is-invalid~.custom-file-label,.was-validated .custom-file-input:invalid~.custom-file-label{border-color:#dc3545}.custom-file-input.is-invalid~.custom-file-label::before,.was-validated .custom-file-input:invalid~.custom-file-label::before{border-color:inherit}.custom-file-input.is-invalid~.invalid-feedback,.custom-file-input.is-invalid~.invalid-tooltip,.was-validated .custom-file-input:invalid~.invalid-feedback,.was-validated .custom-file-input:invalid~.invalid-tooltip{display:block}.custom-file-input.is-invalid:focus~.custom-file-label,.was-validated .custom-file-input:invalid:focus~.custom-file-label{box-shadow:0 0 0 .2rem rgba(220,53,69,.25)}.form-inline{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.form-inline .form-check{width:100%}@media (min-width:576px){.form-inline label{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin-bottom:0}.form-inline .form-group{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-flex:0;-ms-flex:0 0 auto;flex:0 0 auto;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-bottom:0}.form-inline .form-control{display:inline-block;width:auto;vertical-align:middle}.form-inline .form-control-plaintext{display:inline-block}.form-inline .input-group{width:auto}.form-inline .form-check{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:auto;padding-left:0}.form-inline .form-check-input{position:relative;margin-top:0;margin-right:.25rem;margin-left:0}.form-inline .custom-control{-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.form-inline .custom-control-label{margin-bottom:0}}.btn{display:inline-block;font-weight:400;text-align:center;white-space:nowrap;vertical-align:middle;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border:1px solid transparent;padding:.375rem .75rem;font-size:1rem;line-height:1.5;border-radius:.25rem;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out}.btn:focus,.btn:hover{text-decoration:none}.btn.focus,.btn:focus{outline:0;box-shadow:0 0 0 .2rem rgba(0,123,255,.25)}.btn.disabled,.btn:disabled{opacity:.65}.btn:not(:disabled):not(.disabled){cursor:pointer}.btn:not(:disabled):not(.disabled).active,.btn:not(:disabled):not(.disabled):active{background-image:none}a.btn.disabled,fieldset:disabled a.btn{pointer-events:none}.btn-primary{color:#fff;background-color:#007bff;border-color:#007bff}.btn-primary:hover{color:#fff;background-color:#0069d9;border-color:#0062cc}.btn-primary.focus,.btn-primary:focus{box-shadow:0 0 0 .2rem rgba(0,123,255,.5)}.btn-primary.disabled,.btn-primary:disabled{color:#fff;background-color:#007bff;border-color:#007bff}.btn-primary:not(:disabled):not(.disabled).active,.btn-primary:not(:disabled):not(.disabled):active,.show>.btn-primary.dropdown-toggle{color:#fff;background-color:#0062cc;border-color:#005cbf}.btn-primary:not(:disabled):not(.disabled).active:focus,.btn-primary:not(:disabled):not(.disabled):active:focus,.show>.btn-primary.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(0,123,255,.5)}.btn-secondary{color:#fff;background-color:#6c757d;border-color:#6c757d}.btn-secondary:hover{color:#fff;background-color:#5a6268;border-color:#545b62}.btn-secondary.focus,.btn-secondary:focus{box-shadow:0 0 0 .2rem rgba(108,117,125,.5)}.btn-secondary.disabled,.btn-secondary:disabled{color:#fff;background-color:#6c757d;border-color:#6c757d}.btn-secondary:not(:disabled):not(.disabled).active,.btn-secondary:not(:disabled):not(.disabled):active,.show>.btn-secondary.dropdown-toggle{color:#fff;background-color:#545b62;border-color:#4e555b}.btn-secondary:not(:disabled):not(.disabled).active:focus,.btn-secondary:not(:disabled):not(.disabled):active:focus,.show>.btn-secondary.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(108,117,125,.5)}.btn-success{color:#fff;background-color:#28a745;border-color:#28a745}.btn-success:hover{color:#fff;background-color:#218838;border-color:#1e7e34}.btn-success.focus,.btn-success:focus{box-shadow:0 0 0 .2rem rgba(40,167,69,.5)}.btn-success.disabled,.btn-success:disabled{color:#fff;background-color:#28a745;border-color:#28a745}.btn-success:not(:disabled):not(.disabled).active,.btn-success:not(:disabled):not(.disabled):active,.show>.btn-success.dropdown-toggle{color:#fff;background-color:#1e7e34;border-color:#1c7430}.btn-success:not(:disabled):not(.disabled).active:focus,.btn-success:not(:disabled):not(.disabled):active:focus,.show>.btn-success.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(40,167,69,.5)}.btn-info{color:#fff;background-color:#17a2b8;border-color:#17a2b8}.btn-info:hover{color:#fff;background-color:#138496;border-color:#117a8b}.btn-info.focus,.btn-info:focus{box-shadow:0 0 0 .2rem rgba(23,162,184,.5)}.btn-info.disabled,.btn-info:disabled{color:#fff;background-color:#17a2b8;border-color:#17a2b8}.btn-info:not(:disabled):not(.disabled).active,.btn-info:not(:disabled):not(.disabled):active,.show>.btn-info.dropdown-toggle{color:#fff;background-color:#117a8b;border-color:#10707f}.btn-info:not(:disabled):not(.disabled).active:focus,.btn-info:not(:disabled):not(.disabled):active:focus,.show>.btn-info.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(23,162,184,.5)}.btn-warning{color:#212529;background-color:#ffc107;border-color:#ffc107}.btn-warning:hover{color:#212529;background-color:#e0a800;border-color:#d39e00}.btn-warning.focus,.btn-warning:focus{box-shadow:0 0 0 .2rem rgba(255,193,7,.5)}.btn-warning.disabled,.btn-warning:disabled{color:#212529;background-color:#ffc107;border-color:#ffc107}.btn-warning:not(:disabled):not(.disabled).active,.btn-warning:not(:disabled):not(.disabled):active,.show>.btn-warning.dropdown-toggle{color:#212529;background-color:#d39e00;border-color:#c69500}.btn-warning:not(:disabled):not(.disabled).active:focus,.btn-warning:not(:disabled):not(.disabled):active:focus,.show>.btn-warning.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(255,193,7,.5)}.btn-danger{color:#fff;background-color:#dc3545;border-color:#dc3545}.btn-danger:hover{color:#fff;background-color:#c82333;border-color:#bd2130}.btn-danger.focus,.btn-danger:focus{box-shadow:0 0 0 .2rem rgba(220,53,69,.5)}.btn-danger.disabled,.btn-danger:disabled{color:#fff;background-color:#dc3545;border-color:#dc3545}.btn-danger:not(:disabled):not(.disabled).active,.btn-danger:not(:disabled):not(.disabled):active,.show>.btn-danger.dropdown-toggle{color:#fff;background-color:#bd2130;border-color:#b21f2d}.btn-danger:not(:disabled):not(.disabled).active:focus,.btn-danger:not(:disabled):not(.disabled):active:focus,.show>.btn-danger.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(220,53,69,.5)}.btn-light{color:#212529;background-color:#f8f9fa;border-color:#f8f9fa}.btn-light:hover{color:#212529;background-color:#e2e6ea;border-color:#dae0e5}.btn-light.focus,.btn-light:focus{box-shadow:0 0 0 .2rem rgba(248,249,250,.5)}.btn-light.disabled,.btn-light:disabled{color:#212529;background-color:#f8f9fa;border-color:#f8f9fa}.btn-light:not(:disabled):not(.disabled).active,.btn-light:not(:disabled):not(.disabled):active,.show>.btn-light.dropdown-toggle{color:#212529;background-color:#dae0e5;border-color:#d3d9df}.btn-light:not(:disabled):not(.disabled).active:focus,.btn-light:not(:disabled):not(.disabled):active:focus,.show>.btn-light.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(248,249,250,.5)}.btn-dark{color:#fff;background-color:#343a40;border-color:#343a40}.btn-dark:hover{color:#fff;background-color:#23272b;border-color:#1d2124}.btn-dark.focus,.btn-dark:focus{box-shadow:0 0 0 .2rem rgba(52,58,64,.5)}.btn-dark.disabled,.btn-dark:disabled{color:#fff;background-color:#343a40;border-color:#343a40}.btn-dark:not(:disabled):not(.disabled).active,.btn-dark:not(:disabled):not(.disabled):active,.show>.btn-dark.dropdown-toggle{color:#fff;background-color:#1d2124;border-color:#171a1d}.btn-dark:not(:disabled):not(.disabled).active:focus,.btn-dark:not(:disabled):not(.disabled):active:focus,.show>.btn-dark.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(52,58,64,.5)}.btn-outline-primary{color:#007bff;background-color:transparent;background-image:none;border-color:#007bff}.btn-outline-primary:hover{color:#fff;background-color:#007bff;border-color:#007bff}.btn-outline-primary.focus,.btn-outline-primary:focus{box-shadow:0 0 0 .2rem rgba(0,123,255,.5)}.btn-outline-primary.disabled,.btn-outline-primary:disabled{color:#007bff;background-color:transparent}.btn-outline-primary:not(:disabled):not(.disabled).active,.btn-outline-primary:not(:disabled):not(.disabled):active,.show>.btn-outline-primary.dropdown-toggle{color:#fff;background-color:#007bff;border-color:#007bff}.btn-outline-primary:not(:disabled):not(.disabled).active:focus,.btn-outline-primary:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-primary.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(0,123,255,.5)}.btn-outline-secondary{color:#6c757d;background-color:transparent;background-image:none;border-color:#6c757d}.btn-outline-secondary:hover{color:#fff;background-color:#6c757d;border-color:#6c757d}.btn-outline-secondary.focus,.btn-outline-secondary:focus{box-shadow:0 0 0 .2rem rgba(108,117,125,.5)}.btn-outline-secondary.disabled,.btn-outline-secondary:disabled{color:#6c757d;background-color:transparent}.btn-outline-secondary:not(:disabled):not(.disabled).active,.btn-outline-secondary:not(:disabled):not(.disabled):active,.show>.btn-outline-secondary.dropdown-toggle{color:#fff;background-color:#6c757d;border-color:#6c757d}.btn-outline-secondary:not(:disabled):not(.disabled).active:focus,.btn-outline-secondary:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-secondary.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(108,117,125,.5)}.btn-outline-success{color:#28a745;background-color:transparent;background-image:none;border-color:#28a745}.btn-outline-success:hover{color:#fff;background-color:#28a745;border-color:#28a745}.btn-outline-success.focus,.btn-outline-success:focus{box-shadow:0 0 0 .2rem rgba(40,167,69,.5)}.btn-outline-success.disabled,.btn-outline-success:disabled{color:#28a745;background-color:transparent}.btn-outline-success:not(:disabled):not(.disabled).active,.btn-outline-success:not(:disabled):not(.disabled):active,.show>.btn-outline-success.dropdown-toggle{color:#fff;background-color:#28a745;border-color:#28a745}.btn-outline-success:not(:disabled):not(.disabled).active:focus,.btn-outline-success:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-success.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(40,167,69,.5)}.btn-outline-info{color:#17a2b8;background-color:transparent;background-image:none;border-color:#17a2b8}.btn-outline-info:hover{color:#fff;background-color:#17a2b8;border-color:#17a2b8}.btn-outline-info.focus,.btn-outline-info:focus{box-shadow:0 0 0 .2rem rgba(23,162,184,.5)}.btn-outline-info.disabled,.btn-outline-info:disabled{color:#17a2b8;background-color:transparent}.btn-outline-info:not(:disabled):not(.disabled).active,.btn-outline-info:not(:disabled):not(.disabled):active,.show>.btn-outline-info.dropdown-toggle{color:#fff;background-color:#17a2b8;border-color:#17a2b8}.btn-outline-info:not(:disabled):not(.disabled).active:focus,.btn-outline-info:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-info.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(23,162,184,.5)}.btn-outline-warning{color:#ffc107;background-color:transparent;background-image:none;border-color:#ffc107}.btn-outline-warning:hover{color:#212529;background-color:#ffc107;border-color:#ffc107}.btn-outline-warning.focus,.btn-outline-warning:focus{box-shadow:0 0 0 .2rem rgba(255,193,7,.5)}.btn-outline-warning.disabled,.btn-outline-warning:disabled{color:#ffc107;background-color:transparent}.btn-outline-warning:not(:disabled):not(.disabled).active,.btn-outline-warning:not(:disabled):not(.disabled):active,.show>.btn-outline-warning.dropdown-toggle{color:#212529;background-color:#ffc107;border-color:#ffc107}.btn-outline-warning:not(:disabled):not(.disabled).active:focus,.btn-outline-warning:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-warning.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(255,193,7,.5)}.btn-outline-danger{color:#dc3545;background-color:transparent;background-image:none;border-color:#dc3545}.btn-outline-danger:hover{color:#fff;background-color:#dc3545;border-color:#dc3545}.btn-outline-danger.focus,.btn-outline-danger:focus{box-shadow:0 0 0 .2rem rgba(220,53,69,.5)}.btn-outline-danger.disabled,.btn-outline-danger:disabled{color:#dc3545;background-color:transparent}.btn-outline-danger:not(:disabled):not(.disabled).active,.btn-outline-danger:not(:disabled):not(.disabled):active,.show>.btn-outline-danger.dropdown-toggle{color:#fff;background-color:#dc3545;border-color:#dc3545}.btn-outline-danger:not(:disabled):not(.disabled).active:focus,.btn-outline-danger:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-danger.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(220,53,69,.5)}.btn-outline-light{color:#f8f9fa;background-color:transparent;background-image:none;border-color:#f8f9fa}.btn-outline-light:hover{color:#212529;background-color:#f8f9fa;border-color:#f8f9fa}.btn-outline-light.focus,.btn-outline-light:focus{box-shadow:0 0 0 .2rem rgba(248,249,250,.5)}.btn-outline-light.disabled,.btn-outline-light:disabled{color:#f8f9fa;background-color:transparent}.btn-outline-light:not(:disabled):not(.disabled).active,.btn-outline-light:not(:disabled):not(.disabled):active,.show>.btn-outline-light.dropdown-toggle{color:#212529;background-color:#f8f9fa;border-color:#f8f9fa}.btn-outline-light:not(:disabled):not(.disabled).active:focus,.btn-outline-light:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-light.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(248,249,250,.5)}.btn-outline-dark{color:#343a40;background-color:transparent;background-image:none;border-color:#343a40}.btn-outline-dark:hover{color:#fff;background-color:#343a40;border-color:#343a40}.btn-outline-dark.focus,.btn-outline-dark:focus{box-shadow:0 0 0 .2rem rgba(52,58,64,.5)}.btn-outline-dark.disabled,.btn-outline-dark:disabled{color:#343a40;background-color:transparent}.btn-outline-dark:not(:disabled):not(.disabled).active,.btn-outline-dark:not(:disabled):not(.disabled):active,.show>.btn-outline-dark.dropdown-toggle{color:#fff;background-color:#343a40;border-color:#343a40}.btn-outline-dark:not(:disabled):not(.disabled).active:focus,.btn-outline-dark:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-dark.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(52,58,64,.5)}.btn-link{font-weight:400;color:#007bff;background-color:transparent}.btn-link:hover{color:#0056b3;text-decoration:underline;background-color:transparent;border-color:transparent}.btn-link.focus,.btn-link:focus{text-decoration:underline;border-color:transparent;box-shadow:none}.btn-link.disabled,.btn-link:disabled{color:#6c757d}.btn-group-lg>.btn,.btn-lg{padding:.5rem 1rem;font-size:1.25rem;line-height:1.5;border-radius:.3rem}.btn-group-sm>.btn,.btn-sm{padding:.25rem .5rem;font-size:.875rem;line-height:1.5;border-radius:.2rem}.btn-block{display:block;width:100%}.btn-block+.btn-block{margin-top:.5rem}input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-block{width:100%}.fade{opacity:0;transition:opacity .15s linear}.fade.show{opacity:1}.collapse{display:none}.collapse.show{display:block}tr.collapse.show{display:table-row}tbody.collapse.show{display:table-row-group}.collapsing{position:relative;height:0;overflow:hidden;transition:height .35s ease}.dropdown,.dropup{position:relative}.dropdown-toggle::after{display:inline-block;width:0;height:0;margin-left:.255em;vertical-align:.255em;content:\"\";border-top:.3em solid;border-right:.3em solid transparent;border-bottom:0;border-left:.3em solid transparent}.dropdown-toggle:empty::after{margin-left:0}.dropdown-menu{position:absolute;top:100%;left:0;z-index:1000;display:none;float:left;min-width:10rem;padding:.5rem 0;margin:.125rem 0 0;font-size:1rem;color:#212529;text-align:left;list-style:none;background-color:#fff;background-clip:padding-box;border:1px solid rgba(0,0,0,.15);border-radius:.25rem}.dropup .dropdown-menu{margin-top:0;margin-bottom:.125rem}.dropup .dropdown-toggle::after{display:inline-block;width:0;height:0;margin-left:.255em;vertical-align:.255em;content:\"\";border-top:0;border-right:.3em solid transparent;border-bottom:.3em solid;border-left:.3em solid transparent}.dropup .dropdown-toggle:empty::after{margin-left:0}.dropright .dropdown-menu{margin-top:0;margin-left:.125rem}.dropright .dropdown-toggle::after{display:inline-block;width:0;height:0;margin-left:.255em;vertical-align:.255em;content:\"\";border-top:.3em solid transparent;border-bottom:.3em solid transparent;border-left:.3em solid}.dropright .dropdown-toggle:empty::after{margin-left:0}.dropright .dropdown-toggle::after{vertical-align:0}.dropleft .dropdown-menu{margin-top:0;margin-right:.125rem}.dropleft .dropdown-toggle::after{display:inline-block;width:0;height:0;margin-left:.255em;vertical-align:.255em;content:\"\"}.dropleft .dropdown-toggle::after{display:none}.dropleft .dropdown-toggle::before{display:inline-block;width:0;height:0;margin-right:.255em;vertical-align:.255em;content:\"\";border-top:.3em solid transparent;border-right:.3em solid;border-bottom:.3em solid transparent}.dropleft .dropdown-toggle:empty::after{margin-left:0}.dropleft .dropdown-toggle::before{vertical-align:0}.dropdown-divider{height:0;margin:.5rem 0;overflow:hidden;border-top:1px solid #e9ecef}.dropdown-item{display:block;width:100%;padding:.25rem 1.5rem;clear:both;font-weight:400;color:#212529;text-align:inherit;white-space:nowrap;background-color:transparent;border:0}.dropdown-item:focus,.dropdown-item:hover{color:#16181b;text-decoration:none;background-color:#f8f9fa}.dropdown-item.active,.dropdown-item:active{color:#fff;text-decoration:none;background-color:#007bff}.dropdown-item.disabled,.dropdown-item:disabled{color:#6c757d;background-color:transparent}.dropdown-menu.show{display:block}.dropdown-header{display:block;padding:.5rem 1.5rem;margin-bottom:0;font-size:.875rem;color:#6c757d;white-space:nowrap}.btn-group,.btn-group-vertical{position:relative;display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;vertical-align:middle}.btn-group-vertical>.btn,.btn-group>.btn{position:relative;-webkit-box-flex:0;-ms-flex:0 1 auto;flex:0 1 auto}.btn-group-vertical>.btn:hover,.btn-group>.btn:hover{z-index:1}.btn-group-vertical>.btn.active,.btn-group-vertical>.btn:active,.btn-group-vertical>.btn:focus,.btn-group>.btn.active,.btn-group>.btn:active,.btn-group>.btn:focus{z-index:1}.btn-group .btn+.btn,.btn-group .btn+.btn-group,.btn-group .btn-group+.btn,.btn-group .btn-group+.btn-group,.btn-group-vertical .btn+.btn,.btn-group-vertical .btn+.btn-group,.btn-group-vertical .btn-group+.btn,.btn-group-vertical .btn-group+.btn-group{margin-left:-1px}.btn-toolbar{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}.btn-toolbar .input-group{width:auto}.btn-group>.btn:first-child{margin-left:0}.btn-group>.btn-group:not(:last-child)>.btn,.btn-group>.btn:not(:last-child):not(.dropdown-toggle){border-top-right-radius:0;border-bottom-right-radius:0}.btn-group>.btn-group:not(:first-child)>.btn,.btn-group>.btn:not(:first-child){border-top-left-radius:0;border-bottom-left-radius:0}.dropdown-toggle-split{padding-right:.5625rem;padding-left:.5625rem}.dropdown-toggle-split::after{margin-left:0}.btn-group-sm>.btn+.dropdown-toggle-split,.btn-sm+.dropdown-toggle-split{padding-right:.375rem;padding-left:.375rem}.btn-group-lg>.btn+.dropdown-toggle-split,.btn-lg+.dropdown-toggle-split{padding-right:.75rem;padding-left:.75rem}.btn-group-vertical{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.btn-group-vertical .btn,.btn-group-vertical .btn-group{width:100%}.btn-group-vertical>.btn+.btn,.btn-group-vertical>.btn+.btn-group,.btn-group-vertical>.btn-group+.btn,.btn-group-vertical>.btn-group+.btn-group{margin-top:-1px;margin-left:0}.btn-group-vertical>.btn-group:not(:last-child)>.btn,.btn-group-vertical>.btn:not(:last-child):not(.dropdown-toggle){border-bottom-right-radius:0;border-bottom-left-radius:0}.btn-group-vertical>.btn-group:not(:first-child)>.btn,.btn-group-vertical>.btn:not(:first-child){border-top-left-radius:0;border-top-right-radius:0}.btn-group-toggle>.btn,.btn-group-toggle>.btn-group>.btn{margin-bottom:0}.btn-group-toggle>.btn input[type=checkbox],.btn-group-toggle>.btn input[type=radio],.btn-group-toggle>.btn-group>.btn input[type=checkbox],.btn-group-toggle>.btn-group>.btn input[type=radio]{position:absolute;clip:rect(0,0,0,0);pointer-events:none}.input-group{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;width:100%}.input-group>.custom-file,.input-group>.custom-select,.input-group>.form-control{position:relative;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;width:1%;margin-bottom:0}.input-group>.custom-file:focus,.input-group>.custom-select:focus,.input-group>.form-control:focus{z-index:3}.input-group>.custom-file+.custom-file,.input-group>.custom-file+.custom-select,.input-group>.custom-file+.form-control,.input-group>.custom-select+.custom-file,.input-group>.custom-select+.custom-select,.input-group>.custom-select+.form-control,.input-group>.form-control+.custom-file,.input-group>.form-control+.custom-select,.input-group>.form-control+.form-control{margin-left:-1px}.input-group>.custom-select:not(:last-child),.input-group>.form-control:not(:last-child){border-top-right-radius:0;border-bottom-right-radius:0}.input-group>.custom-select:not(:first-child),.input-group>.form-control:not(:first-child){border-top-left-radius:0;border-bottom-left-radius:0}.input-group>.custom-file{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.input-group>.custom-file:not(:last-child) .custom-file-label,.input-group>.custom-file:not(:last-child) .custom-file-label::before{border-top-right-radius:0;border-bottom-right-radius:0}.input-group>.custom-file:not(:first-child) .custom-file-label,.input-group>.custom-file:not(:first-child) .custom-file-label::before{border-top-left-radius:0;border-bottom-left-radius:0}.input-group-append,.input-group-prepend{display:-webkit-box;display:-ms-flexbox;display:flex}.input-group-append .btn,.input-group-prepend .btn{position:relative;z-index:2}.input-group-append .btn+.btn,.input-group-append .btn+.input-group-text,.input-group-append .input-group-text+.btn,.input-group-append .input-group-text+.input-group-text,.input-group-prepend .btn+.btn,.input-group-prepend .btn+.input-group-text,.input-group-prepend .input-group-text+.btn,.input-group-prepend .input-group-text+.input-group-text{margin-left:-1px}.input-group-prepend{margin-right:-1px}.input-group-append{margin-left:-1px}.input-group-text{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:.375rem .75rem;margin-bottom:0;font-size:1rem;font-weight:400;line-height:1.5;color:#495057;text-align:center;white-space:nowrap;background-color:#e9ecef;border:1px solid #ced4da;border-radius:.25rem}.input-group-text input[type=checkbox],.input-group-text input[type=radio]{margin-top:0}.input-group>.input-group-append:last-child>.btn:not(:last-child):not(.dropdown-toggle),.input-group>.input-group-append:last-child>.input-group-text:not(:last-child),.input-group>.input-group-append:not(:last-child)>.btn,.input-group>.input-group-append:not(:last-child)>.input-group-text,.input-group>.input-group-prepend>.btn,.input-group>.input-group-prepend>.input-group-text{border-top-right-radius:0;border-bottom-right-radius:0}.input-group>.input-group-append>.btn,.input-group>.input-group-append>.input-group-text,.input-group>.input-group-prepend:first-child>.btn:not(:first-child),.input-group>.input-group-prepend:first-child>.input-group-text:not(:first-child),.input-group>.input-group-prepend:not(:first-child)>.btn,.input-group>.input-group-prepend:not(:first-child)>.input-group-text{border-top-left-radius:0;border-bottom-left-radius:0}.custom-control{position:relative;display:block;min-height:1.5rem;padding-left:1.5rem}.custom-control-inline{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;margin-right:1rem}.custom-control-input{position:absolute;z-index:-1;opacity:0}.custom-control-input:checked~.custom-control-label::before{color:#fff;background-color:#007bff}.custom-control-input:focus~.custom-control-label::before{box-shadow:0 0 0 1px #fff,0 0 0 .2rem rgba(0,123,255,.25)}.custom-control-input:active~.custom-control-label::before{color:#fff;background-color:#b3d7ff}.custom-control-input:disabled~.custom-control-label{color:#6c757d}.custom-control-input:disabled~.custom-control-label::before{background-color:#e9ecef}.custom-control-label{margin-bottom:0}.custom-control-label::before{position:absolute;top:.25rem;left:0;display:block;width:1rem;height:1rem;pointer-events:none;content:\"\";-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:#dee2e6}.custom-control-label::after{position:absolute;top:.25rem;left:0;display:block;width:1rem;height:1rem;content:\"\";background-repeat:no-repeat;background-position:center center;background-size:50% 50%}.custom-checkbox .custom-control-label::before{border-radius:.25rem}.custom-checkbox .custom-control-input:checked~.custom-control-label::before{background-color:#007bff}.custom-checkbox .custom-control-input:checked~.custom-control-label::after{background-image:url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E\")}.custom-checkbox .custom-control-input:indeterminate~.custom-control-label::before{background-color:#007bff}.custom-checkbox .custom-control-input:indeterminate~.custom-control-label::after{background-image:url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='%23fff' d='M0 2h4'/%3E%3C/svg%3E\")}.custom-checkbox .custom-control-input:disabled:checked~.custom-control-label::before{background-color:rgba(0,123,255,.5)}.custom-checkbox .custom-control-input:disabled:indeterminate~.custom-control-label::before{background-color:rgba(0,123,255,.5)}.custom-radio .custom-control-label::before{border-radius:50%}.custom-radio .custom-control-input:checked~.custom-control-label::before{background-color:#007bff}.custom-radio .custom-control-input:checked~.custom-control-label::after{background-image:url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23fff'/%3E%3C/svg%3E\")}.custom-radio .custom-control-input:disabled:checked~.custom-control-label::before{background-color:rgba(0,123,255,.5)}.custom-select{display:inline-block;width:100%;height:calc(2.25rem + 2px);padding:.375rem 1.75rem .375rem .75rem;line-height:1.5;color:#495057;vertical-align:middle;background:#fff url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E\") no-repeat right .75rem center;background-size:8px 10px;border:1px solid #ced4da;border-radius:.25rem;-webkit-appearance:none;-moz-appearance:none;appearance:none}.custom-select:focus{border-color:#80bdff;outline:0;box-shadow:inset 0 1px 2px rgba(0,0,0,.075),0 0 5px rgba(128,189,255,.5)}.custom-select:focus::-ms-value{color:#495057;background-color:#fff}.custom-select[multiple],.custom-select[size]:not([size=\"1\"]){height:auto;padding-right:.75rem;background-image:none}.custom-select:disabled{color:#6c757d;background-color:#e9ecef}.custom-select::-ms-expand{opacity:0}.custom-select-sm{height:calc(1.8125rem + 2px);padding-top:.375rem;padding-bottom:.375rem;font-size:75%}.custom-select-lg{height:calc(2.875rem + 2px);padding-top:.375rem;padding-bottom:.375rem;font-size:125%}.custom-file{position:relative;display:inline-block;width:100%;height:calc(2.25rem + 2px);margin-bottom:0}.custom-file-input{position:relative;z-index:2;width:100%;height:calc(2.25rem + 2px);margin:0;opacity:0}.custom-file-input:focus~.custom-file-control{border-color:#80bdff;box-shadow:0 0 0 .2rem rgba(0,123,255,.25)}.custom-file-input:focus~.custom-file-control::before{border-color:#80bdff}.custom-file-input:lang(en)~.custom-file-label::after{content:\"Browse\"}.custom-file-label{position:absolute;top:0;right:0;left:0;z-index:1;height:calc(2.25rem + 2px);padding:.375rem .75rem;line-height:1.5;color:#495057;background-color:#fff;border:1px solid #ced4da;border-radius:.25rem}.custom-file-label::after{position:absolute;top:0;right:0;bottom:0;z-index:3;display:block;height:calc(calc(2.25rem + 2px) - 1px * 2);padding:.375rem .75rem;line-height:1.5;color:#495057;content:\"Browse\";background-color:#e9ecef;border-left:1px solid #ced4da;border-radius:0 .25rem .25rem 0}.nav{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding-left:0;margin-bottom:0;list-style:none}.nav-link{display:block;padding:.5rem 1rem}.nav-link:focus,.nav-link:hover{text-decoration:none}.nav-link.disabled{color:#6c757d}.nav-tabs{border-bottom:1px solid #dee2e6}.nav-tabs .nav-item{margin-bottom:-1px}.nav-tabs .nav-link{border:1px solid transparent;border-top-left-radius:.25rem;border-top-right-radius:.25rem}.nav-tabs .nav-link:focus,.nav-tabs .nav-link:hover{border-color:#e9ecef #e9ecef #dee2e6}.nav-tabs .nav-link.disabled{color:#6c757d;background-color:transparent;border-color:transparent}.nav-tabs .nav-item.show .nav-link,.nav-tabs .nav-link.active{color:#495057;background-color:#fff;border-color:#dee2e6 #dee2e6 #fff}.nav-tabs .dropdown-menu{margin-top:-1px;border-top-left-radius:0;border-top-right-radius:0}.nav-pills .nav-link{border-radius:.25rem}.nav-pills .nav-link.active,.nav-pills .show>.nav-link{color:#fff;background-color:#007bff}.nav-fill .nav-item{-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;text-align:center}.nav-justified .nav-item{-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;text-align:center}.tab-content>.tab-pane{display:none}.tab-content>.active{display:block}.navbar{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;padding:.5rem 1rem}.navbar>.container,.navbar>.container-fluid{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.navbar-brand{display:inline-block;padding-top:.3125rem;padding-bottom:.3125rem;margin-right:1rem;font-size:1.25rem;line-height:inherit;white-space:nowrap}.navbar-brand:focus,.navbar-brand:hover{text-decoration:none}.navbar-nav{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;padding-left:0;margin-bottom:0;list-style:none}.navbar-nav .nav-link{padding-right:0;padding-left:0}.navbar-nav .dropdown-menu{position:static;float:none}.navbar-text{display:inline-block;padding-top:.5rem;padding-bottom:.5rem}.navbar-collapse{-ms-flex-preferred-size:100%;flex-basis:100%;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.navbar-toggler{padding:.25rem .75rem;font-size:1.25rem;line-height:1;background-color:transparent;border:1px solid transparent;border-radius:.25rem}.navbar-toggler:focus,.navbar-toggler:hover{text-decoration:none}.navbar-toggler:not(:disabled):not(.disabled){cursor:pointer}.navbar-toggler-icon{display:inline-block;width:1.5em;height:1.5em;vertical-align:middle;content:\"\";background:no-repeat center center;background-size:100% 100%}@media (max-width:575.98px){.navbar-expand-sm>.container,.navbar-expand-sm>.container-fluid{padding-right:0;padding-left:0}}@media (min-width:576px){.navbar-expand-sm{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}.navbar-expand-sm .navbar-nav{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}.navbar-expand-sm .navbar-nav .dropdown-menu{position:absolute}.navbar-expand-sm .navbar-nav .dropdown-menu-right{right:0;left:auto}.navbar-expand-sm .navbar-nav .nav-link{padding-right:.5rem;padding-left:.5rem}.navbar-expand-sm>.container,.navbar-expand-sm>.container-fluid{-ms-flex-wrap:nowrap;flex-wrap:nowrap}.navbar-expand-sm .navbar-collapse{display:-webkit-box!important;display:-ms-flexbox!important;display:flex!important;-ms-flex-preferred-size:auto;flex-basis:auto}.navbar-expand-sm .navbar-toggler{display:none}.navbar-expand-sm .dropup .dropdown-menu{top:auto;bottom:100%}}@media (max-width:767.98px){.navbar-expand-md>.container,.navbar-expand-md>.container-fluid{padding-right:0;padding-left:0}}@media (min-width:768px){.navbar-expand-md{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}.navbar-expand-md .navbar-nav{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}.navbar-expand-md .navbar-nav .dropdown-menu{position:absolute}.navbar-expand-md .navbar-nav .dropdown-menu-right{right:0;left:auto}.navbar-expand-md .navbar-nav .nav-link{padding-right:.5rem;padding-left:.5rem}.navbar-expand-md>.container,.navbar-expand-md>.container-fluid{-ms-flex-wrap:nowrap;flex-wrap:nowrap}.navbar-expand-md .navbar-collapse{display:-webkit-box!important;display:-ms-flexbox!important;display:flex!important;-ms-flex-preferred-size:auto;flex-basis:auto}.navbar-expand-md .navbar-toggler{display:none}.navbar-expand-md .dropup .dropdown-menu{top:auto;bottom:100%}}@media (max-width:991.98px){.navbar-expand-lg>.container,.navbar-expand-lg>.container-fluid{padding-right:0;padding-left:0}}@media (min-width:992px){.navbar-expand-lg{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}.navbar-expand-lg .navbar-nav{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}.navbar-expand-lg .navbar-nav .dropdown-menu{position:absolute}.navbar-expand-lg .navbar-nav .dropdown-menu-right{right:0;left:auto}.navbar-expand-lg .navbar-nav .nav-link{padding-right:.5rem;padding-left:.5rem}.navbar-expand-lg>.container,.navbar-expand-lg>.container-fluid{-ms-flex-wrap:nowrap;flex-wrap:nowrap}.navbar-expand-lg .navbar-collapse{display:-webkit-box!important;display:-ms-flexbox!important;display:flex!important;-ms-flex-preferred-size:auto;flex-basis:auto}.navbar-expand-lg .navbar-toggler{display:none}.navbar-expand-lg .dropup .dropdown-menu{top:auto;bottom:100%}}@media (max-width:1199.98px){.navbar-expand-xl>.container,.navbar-expand-xl>.container-fluid{padding-right:0;padding-left:0}}@media (min-width:1200px){.navbar-expand-xl{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}.navbar-expand-xl .navbar-nav{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}.navbar-expand-xl .navbar-nav .dropdown-menu{position:absolute}.navbar-expand-xl .navbar-nav .dropdown-menu-right{right:0;left:auto}.navbar-expand-xl .navbar-nav .nav-link{padding-right:.5rem;padding-left:.5rem}.navbar-expand-xl>.container,.navbar-expand-xl>.container-fluid{-ms-flex-wrap:nowrap;flex-wrap:nowrap}.navbar-expand-xl .navbar-collapse{display:-webkit-box!important;display:-ms-flexbox!important;display:flex!important;-ms-flex-preferred-size:auto;flex-basis:auto}.navbar-expand-xl .navbar-toggler{display:none}.navbar-expand-xl .dropup .dropdown-menu{top:auto;bottom:100%}}.navbar-expand{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}.navbar-expand>.container,.navbar-expand>.container-fluid{padding-right:0;padding-left:0}.navbar-expand .navbar-nav{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}.navbar-expand .navbar-nav .dropdown-menu{position:absolute}.navbar-expand .navbar-nav .dropdown-menu-right{right:0;left:auto}.navbar-expand .navbar-nav .nav-link{padding-right:.5rem;padding-left:.5rem}.navbar-expand>.container,.navbar-expand>.container-fluid{-ms-flex-wrap:nowrap;flex-wrap:nowrap}.navbar-expand .navbar-collapse{display:-webkit-box!important;display:-ms-flexbox!important;display:flex!important;-ms-flex-preferred-size:auto;flex-basis:auto}.navbar-expand .navbar-toggler{display:none}.navbar-expand .dropup .dropdown-menu{top:auto;bottom:100%}.navbar-light .navbar-brand{color:rgba(0,0,0,.9)}.navbar-light .navbar-brand:focus,.navbar-light .navbar-brand:hover{color:rgba(0,0,0,.9)}.navbar-light .navbar-nav .nav-link{color:rgba(0,0,0,.5)}.navbar-light .navbar-nav .nav-link:focus,.navbar-light .navbar-nav .nav-link:hover{color:rgba(0,0,0,.7)}.navbar-light .navbar-nav .nav-link.disabled{color:rgba(0,0,0,.3)}.navbar-light .navbar-nav .active>.nav-link,.navbar-light .navbar-nav .nav-link.active,.navbar-light .navbar-nav .nav-link.show,.navbar-light .navbar-nav .show>.nav-link{color:rgba(0,0,0,.9)}.navbar-light .navbar-toggler{color:rgba(0,0,0,.5);border-color:rgba(0,0,0,.1)}.navbar-light .navbar-toggler-icon{background-image:url(\"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E\")}.navbar-light .navbar-text{color:rgba(0,0,0,.5)}.navbar-light .navbar-text a{color:rgba(0,0,0,.9)}.navbar-light .navbar-text a:focus,.navbar-light .navbar-text a:hover{color:rgba(0,0,0,.9)}.navbar-dark .navbar-brand{color:#fff}.navbar-dark .navbar-brand:focus,.navbar-dark .navbar-brand:hover{color:#fff}.navbar-dark .navbar-nav .nav-link{color:rgba(255,255,255,.5)}.navbar-dark .navbar-nav .nav-link:focus,.navbar-dark .navbar-nav .nav-link:hover{color:rgba(255,255,255,.75)}.navbar-dark .navbar-nav .nav-link.disabled{color:rgba(255,255,255,.25)}.navbar-dark .navbar-nav .active>.nav-link,.navbar-dark .navbar-nav .nav-link.active,.navbar-dark .navbar-nav .nav-link.show,.navbar-dark .navbar-nav .show>.nav-link{color:#fff}.navbar-dark .navbar-toggler{color:rgba(255,255,255,.5);border-color:rgba(255,255,255,.1)}.navbar-dark .navbar-toggler-icon{background-image:url(\"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E\")}.navbar-dark .navbar-text{color:rgba(255,255,255,.5)}.navbar-dark .navbar-text a{color:#fff}.navbar-dark .navbar-text a:focus,.navbar-dark .navbar-text a:hover{color:#fff}.card{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;min-width:0;word-wrap:break-word;background-color:#fff;background-clip:border-box;border:1px solid rgba(0,0,0,.125);border-radius:.25rem}.card>hr{margin-right:0;margin-left:0}.card>.list-group:first-child .list-group-item:first-child{border-top-left-radius:.25rem;border-top-right-radius:.25rem}.card>.list-group:last-child .list-group-item:last-child{border-bottom-right-radius:.25rem;border-bottom-left-radius:.25rem}.card-body{-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;padding:1.25rem}.card-title{margin-bottom:.75rem}.card-subtitle{margin-top:-.375rem;margin-bottom:0}.card-text:last-child{margin-bottom:0}.card-link:hover{text-decoration:none}.card-link+.card-link{margin-left:1.25rem}.card-header{padding:.75rem 1.25rem;margin-bottom:0;background-color:rgba(0,0,0,.03);border-bottom:1px solid rgba(0,0,0,.125)}.card-header:first-child{border-radius:calc(.25rem - 1px) calc(.25rem - 1px) 0 0}.card-header+.list-group .list-group-item:first-child{border-top:0}.card-footer{padding:.75rem 1.25rem;background-color:rgba(0,0,0,.03);border-top:1px solid rgba(0,0,0,.125)}.card-footer:last-child{border-radius:0 0 calc(.25rem - 1px) calc(.25rem - 1px)}.card-header-tabs{margin-right:-.625rem;margin-bottom:-.75rem;margin-left:-.625rem;border-bottom:0}.card-header-pills{margin-right:-.625rem;margin-left:-.625rem}.card-img-overlay{position:absolute;top:0;right:0;bottom:0;left:0;padding:1.25rem}.card-img{width:100%;border-radius:calc(.25rem - 1px)}.card-img-top{width:100%;border-top-left-radius:calc(.25rem - 1px);border-top-right-radius:calc(.25rem - 1px)}.card-img-bottom{width:100%;border-bottom-right-radius:calc(.25rem - 1px);border-bottom-left-radius:calc(.25rem - 1px)}.card-deck{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.card-deck .card{margin-bottom:15px}@media (min-width:576px){.card-deck{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap;margin-right:-15px;margin-left:-15px}.card-deck .card{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-flex:1;-ms-flex:1 0 0%;flex:1 0 0%;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;margin-right:15px;margin-bottom:0;margin-left:15px}}.card-group{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.card-group>.card{margin-bottom:15px}@media (min-width:576px){.card-group{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap}.card-group>.card{-webkit-box-flex:1;-ms-flex:1 0 0%;flex:1 0 0%;margin-bottom:0}.card-group>.card+.card{margin-left:0;border-left:0}.card-group>.card:first-child{border-top-right-radius:0;border-bottom-right-radius:0}.card-group>.card:first-child .card-header,.card-group>.card:first-child .card-img-top{border-top-right-radius:0}.card-group>.card:first-child .card-footer,.card-group>.card:first-child .card-img-bottom{border-bottom-right-radius:0}.card-group>.card:last-child{border-top-left-radius:0;border-bottom-left-radius:0}.card-group>.card:last-child .card-header,.card-group>.card:last-child .card-img-top{border-top-left-radius:0}.card-group>.card:last-child .card-footer,.card-group>.card:last-child .card-img-bottom{border-bottom-left-radius:0}.card-group>.card:only-child{border-radius:.25rem}.card-group>.card:only-child .card-header,.card-group>.card:only-child .card-img-top{border-top-left-radius:.25rem;border-top-right-radius:.25rem}.card-group>.card:only-child .card-footer,.card-group>.card:only-child .card-img-bottom{border-bottom-right-radius:.25rem;border-bottom-left-radius:.25rem}.card-group>.card:not(:first-child):not(:last-child):not(:only-child){border-radius:0}.card-group>.card:not(:first-child):not(:last-child):not(:only-child) .card-footer,.card-group>.card:not(:first-child):not(:last-child):not(:only-child) .card-header,.card-group>.card:not(:first-child):not(:last-child):not(:only-child) .card-img-bottom,.card-group>.card:not(:first-child):not(:last-child):not(:only-child) .card-img-top{border-radius:0}}.card-columns .card{margin-bottom:.75rem}@media (min-width:576px){.card-columns{-webkit-column-count:3;-moz-column-count:3;column-count:3;-webkit-column-gap:1.25rem;-moz-column-gap:1.25rem;column-gap:1.25rem}.card-columns .card{display:inline-block;width:100%}}.breadcrumb{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding:.75rem 1rem;margin-bottom:1rem;list-style:none;background-color:#e9ecef;border-radius:.25rem}.breadcrumb-item+.breadcrumb-item::before{display:inline-block;padding-right:.5rem;padding-left:.5rem;color:#6c757d;content:\"/\"}.breadcrumb-item+.breadcrumb-item:hover::before{text-decoration:underline}.breadcrumb-item+.breadcrumb-item:hover::before{text-decoration:none}.breadcrumb-item.active{color:#6c757d}.pagination{display:-webkit-box;display:-ms-flexbox;display:flex;padding-left:0;list-style:none;border-radius:.25rem}.page-link{position:relative;display:block;padding:.5rem .75rem;margin-left:-1px;line-height:1.25;color:#007bff;background-color:#fff;border:1px solid #dee2e6}.page-link:hover{color:#0056b3;text-decoration:none;background-color:#e9ecef;border-color:#dee2e6}.page-link:focus{z-index:2;outline:0;box-shadow:0 0 0 .2rem rgba(0,123,255,.25)}.page-link:not(:disabled):not(.disabled){cursor:pointer}.page-item:first-child .page-link{margin-left:0;border-top-left-radius:.25rem;border-bottom-left-radius:.25rem}.page-item:last-child .page-link{border-top-right-radius:.25rem;border-bottom-right-radius:.25rem}.page-item.active .page-link{z-index:1;color:#fff;background-color:#007bff;border-color:#007bff}.page-item.disabled .page-link{color:#6c757d;pointer-events:none;cursor:auto;background-color:#fff;border-color:#dee2e6}.pagination-lg .page-link{padding:.75rem 1.5rem;font-size:1.25rem;line-height:1.5}.pagination-lg .page-item:first-child .page-link{border-top-left-radius:.3rem;border-bottom-left-radius:.3rem}.pagination-lg .page-item:last-child .page-link{border-top-right-radius:.3rem;border-bottom-right-radius:.3rem}.pagination-sm .page-link{padding:.25rem .5rem;font-size:.875rem;line-height:1.5}.pagination-sm .page-item:first-child .page-link{border-top-left-radius:.2rem;border-bottom-left-radius:.2rem}.pagination-sm .page-item:last-child .page-link{border-top-right-radius:.2rem;border-bottom-right-radius:.2rem}.badge{display:inline-block;padding:.25em .4em;font-size:75%;font-weight:700;line-height:1;text-align:center;white-space:nowrap;vertical-align:baseline;border-radius:.25rem}.badge:empty{display:none}.btn .badge{position:relative;top:-1px}.badge-pill{padding-right:.6em;padding-left:.6em;border-radius:10rem}.badge-primary{color:#fff;background-color:#007bff}.badge-primary[href]:focus,.badge-primary[href]:hover{color:#fff;text-decoration:none;background-color:#0062cc}.badge-secondary{color:#fff;background-color:#6c757d}.badge-secondary[href]:focus,.badge-secondary[href]:hover{color:#fff;text-decoration:none;background-color:#545b62}.badge-success{color:#fff;background-color:#28a745}.badge-success[href]:focus,.badge-success[href]:hover{color:#fff;text-decoration:none;background-color:#1e7e34}.badge-info{color:#fff;background-color:#17a2b8}.badge-info[href]:focus,.badge-info[href]:hover{color:#fff;text-decoration:none;background-color:#117a8b}.badge-warning{color:#212529;background-color:#ffc107}.badge-warning[href]:focus,.badge-warning[href]:hover{color:#212529;text-decoration:none;background-color:#d39e00}.badge-danger{color:#fff;background-color:#dc3545}.badge-danger[href]:focus,.badge-danger[href]:hover{color:#fff;text-decoration:none;background-color:#bd2130}.badge-light{color:#212529;background-color:#f8f9fa}.badge-light[href]:focus,.badge-light[href]:hover{color:#212529;text-decoration:none;background-color:#dae0e5}.badge-dark{color:#fff;background-color:#343a40}.badge-dark[href]:focus,.badge-dark[href]:hover{color:#fff;text-decoration:none;background-color:#1d2124}.jumbotron{padding:2rem 1rem;margin-bottom:2rem;background-color:#e9ecef;border-radius:.3rem}@media (min-width:576px){.jumbotron{padding:4rem 2rem}}.jumbotron-fluid{padding-right:0;padding-left:0;border-radius:0}.alert{position:relative;padding:.75rem 1.25rem;margin-bottom:1rem;border:1px solid transparent;border-radius:.25rem}.alert-heading{color:inherit}.alert-link{font-weight:700}.alert-dismissible{padding-right:4rem}.alert-dismissible .close{position:absolute;top:0;right:0;padding:.75rem 1.25rem;color:inherit}.alert-primary{color:#004085;background-color:#cce5ff;border-color:#b8daff}.alert-primary hr{border-top-color:#9fcdff}.alert-primary .alert-link{color:#002752}.alert-secondary{color:#383d41;background-color:#e2e3e5;border-color:#d6d8db}.alert-secondary hr{border-top-color:#c8cbcf}.alert-secondary .alert-link{color:#202326}.alert-success{color:#155724;background-color:#d4edda;border-color:#c3e6cb}.alert-success hr{border-top-color:#b1dfbb}.alert-success .alert-link{color:#0b2e13}.alert-info{color:#0c5460;background-color:#d1ecf1;border-color:#bee5eb}.alert-info hr{border-top-color:#abdde5}.alert-info .alert-link{color:#062c33}.alert-warning{color:#856404;background-color:#fff3cd;border-color:#ffeeba}.alert-warning hr{border-top-color:#ffe8a1}.alert-warning .alert-link{color:#533f03}.alert-danger{color:#721c24;background-color:#f8d7da;border-color:#f5c6cb}.alert-danger hr{border-top-color:#f1b0b7}.alert-danger .alert-link{color:#491217}.alert-light{color:#818182;background-color:#fefefe;border-color:#fdfdfe}.alert-light hr{border-top-color:#ececf6}.alert-light .alert-link{color:#686868}.alert-dark{color:#1b1e21;background-color:#d6d8d9;border-color:#c6c8ca}.alert-dark hr{border-top-color:#b9bbbe}.alert-dark .alert-link{color:#040505}@-webkit-keyframes progress-bar-stripes{from{background-position:1rem 0}to{background-position:0 0}}@keyframes progress-bar-stripes{from{background-position:1rem 0}to{background-position:0 0}}.progress{display:-webkit-box;display:-ms-flexbox;display:flex;height:1rem;overflow:hidden;font-size:.75rem;background-color:#e9ecef;border-radius:.25rem}.progress-bar{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;color:#fff;text-align:center;background-color:#007bff;transition:width .6s ease}.progress-bar-striped{background-image:linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-size:1rem 1rem}.progress-bar-animated{-webkit-animation:progress-bar-stripes 1s linear infinite;animation:progress-bar-stripes 1s linear infinite}.media{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.media-body{-webkit-box-flex:1;-ms-flex:1;flex:1}.list-group{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;padding-left:0;margin-bottom:0}.list-group-item-action{width:100%;color:#495057;text-align:inherit}.list-group-item-action:focus,.list-group-item-action:hover{color:#495057;text-decoration:none;background-color:#f8f9fa}.list-group-item-action:active{color:#212529;background-color:#e9ecef}.list-group-item{position:relative;display:block;padding:.75rem 1.25rem;margin-bottom:-1px;background-color:#fff;border:1px solid rgba(0,0,0,.125)}.list-group-item:first-child{border-top-left-radius:.25rem;border-top-right-radius:.25rem}.list-group-item:last-child{margin-bottom:0;border-bottom-right-radius:.25rem;border-bottom-left-radius:.25rem}.list-group-item:focus,.list-group-item:hover{z-index:1;text-decoration:none}.list-group-item.disabled,.list-group-item:disabled{color:#6c757d;background-color:#fff}.list-group-item.active{z-index:2;color:#fff;background-color:#007bff;border-color:#007bff}.list-group-flush .list-group-item{border-right:0;border-left:0;border-radius:0}.list-group-flush:first-child .list-group-item:first-child{border-top:0}.list-group-flush:last-child .list-group-item:last-child{border-bottom:0}.list-group-item-primary{color:#004085;background-color:#b8daff}.list-group-item-primary.list-group-item-action:focus,.list-group-item-primary.list-group-item-action:hover{color:#004085;background-color:#9fcdff}.list-group-item-primary.list-group-item-action.active{color:#fff;background-color:#004085;border-color:#004085}.list-group-item-secondary{color:#383d41;background-color:#d6d8db}.list-group-item-secondary.list-group-item-action:focus,.list-group-item-secondary.list-group-item-action:hover{color:#383d41;background-color:#c8cbcf}.list-group-item-secondary.list-group-item-action.active{color:#fff;background-color:#383d41;border-color:#383d41}.list-group-item-success{color:#155724;background-color:#c3e6cb}.list-group-item-success.list-group-item-action:focus,.list-group-item-success.list-group-item-action:hover{color:#155724;background-color:#b1dfbb}.list-group-item-success.list-group-item-action.active{color:#fff;background-color:#155724;border-color:#155724}.list-group-item-info{color:#0c5460;background-color:#bee5eb}.list-group-item-info.list-group-item-action:focus,.list-group-item-info.list-group-item-action:hover{color:#0c5460;background-color:#abdde5}.list-group-item-info.list-group-item-action.active{color:#fff;background-color:#0c5460;border-color:#0c5460}.list-group-item-warning{color:#856404;background-color:#ffeeba}.list-group-item-warning.list-group-item-action:focus,.list-group-item-warning.list-group-item-action:hover{color:#856404;background-color:#ffe8a1}.list-group-item-warning.list-group-item-action.active{color:#fff;background-color:#856404;border-color:#856404}.list-group-item-danger{color:#721c24;background-color:#f5c6cb}.list-group-item-danger.list-group-item-action:focus,.list-group-item-danger.list-group-item-action:hover{color:#721c24;background-color:#f1b0b7}.list-group-item-danger.list-group-item-action.active{color:#fff;background-color:#721c24;border-color:#721c24}.list-group-item-light{color:#818182;background-color:#fdfdfe}.list-group-item-light.list-group-item-action:focus,.list-group-item-light.list-group-item-action:hover{color:#818182;background-color:#ececf6}.list-group-item-light.list-group-item-action.active{color:#fff;background-color:#818182;border-color:#818182}.list-group-item-dark{color:#1b1e21;background-color:#c6c8ca}.list-group-item-dark.list-group-item-action:focus,.list-group-item-dark.list-group-item-action:hover{color:#1b1e21;background-color:#b9bbbe}.list-group-item-dark.list-group-item-action.active{color:#fff;background-color:#1b1e21;border-color:#1b1e21}.close{float:right;font-size:1.5rem;font-weight:700;line-height:1;color:#000;text-shadow:0 1px 0 #fff;opacity:.5}.close:focus,.close:hover{color:#000;text-decoration:none;opacity:.75}.close:not(:disabled):not(.disabled){cursor:pointer}button.close{padding:0;background-color:transparent;border:0;-webkit-appearance:none}.modal-open{overflow:hidden}.modal{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1050;display:none;overflow:hidden;outline:0}.modal-open .modal{overflow-x:hidden;overflow-y:auto}.modal-dialog{position:relative;width:auto;margin:.5rem;pointer-events:none}.modal.fade .modal-dialog{transition:-webkit-transform .3s ease-out;transition:transform .3s ease-out;transition:transform .3s ease-out,-webkit-transform .3s ease-out;-webkit-transform:translate(0,-25%);transform:translate(0,-25%)}.modal.show .modal-dialog{-webkit-transform:translate(0,0);transform:translate(0,0)}.modal-dialog-centered{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;min-height:calc(100% - (.5rem * 2))}.modal-content{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;width:100%;pointer-events:auto;background-color:#fff;background-clip:padding-box;border:1px solid rgba(0,0,0,.2);border-radius:.3rem;outline:0}.modal-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1040;background-color:#000}.modal-backdrop.fade{opacity:0}.modal-backdrop.show{opacity:.5}.modal-header{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;padding:1rem;border-bottom:1px solid #e9ecef;border-top-left-radius:.3rem;border-top-right-radius:.3rem}.modal-header .close{padding:1rem;margin:-1rem -1rem -1rem auto}.modal-title{margin-bottom:0;line-height:1.5}.modal-body{position:relative;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;padding:1rem}.modal-footer{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;padding:1rem;border-top:1px solid #e9ecef}.modal-footer>:not(:first-child){margin-left:.25rem}.modal-footer>:not(:last-child){margin-right:.25rem}.modal-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}@media (min-width:576px){.modal-dialog{max-width:500px;margin:1.75rem auto}.modal-dialog-centered{min-height:calc(100% - (1.75rem * 2))}.modal-sm{max-width:300px}}@media (min-width:992px){.modal-lg{max-width:800px}}.tooltip{position:absolute;z-index:1070;display:block;margin:0;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\";font-style:normal;font-weight:400;line-height:1.5;text-align:left;text-align:start;text-decoration:none;text-shadow:none;text-transform:none;letter-spacing:normal;word-break:normal;word-spacing:normal;white-space:normal;line-break:auto;font-size:.875rem;word-wrap:break-word;opacity:0}.tooltip.show{opacity:.9}.tooltip .arrow{position:absolute;display:block;width:.8rem;height:.4rem}.tooltip .arrow::before{position:absolute;content:\"\";border-color:transparent;border-style:solid}.bs-tooltip-auto[x-placement^=top],.bs-tooltip-top{padding:.4rem 0}.bs-tooltip-auto[x-placement^=top] .arrow,.bs-tooltip-top .arrow{bottom:0}.bs-tooltip-auto[x-placement^=top] .arrow::before,.bs-tooltip-top .arrow::before{top:0;border-width:.4rem .4rem 0;border-top-color:#000}.bs-tooltip-auto[x-placement^=right],.bs-tooltip-right{padding:0 .4rem}.bs-tooltip-auto[x-placement^=right] .arrow,.bs-tooltip-right .arrow{left:0;width:.4rem;height:.8rem}.bs-tooltip-auto[x-placement^=right] .arrow::before,.bs-tooltip-right .arrow::before{right:0;border-width:.4rem .4rem .4rem 0;border-right-color:#000}.bs-tooltip-auto[x-placement^=bottom],.bs-tooltip-bottom{padding:.4rem 0}.bs-tooltip-auto[x-placement^=bottom] .arrow,.bs-tooltip-bottom .arrow{top:0}.bs-tooltip-auto[x-placement^=bottom] .arrow::before,.bs-tooltip-bottom .arrow::before{bottom:0;border-width:0 .4rem .4rem;border-bottom-color:#000}.bs-tooltip-auto[x-placement^=left],.bs-tooltip-left{padding:0 .4rem}.bs-tooltip-auto[x-placement^=left] .arrow,.bs-tooltip-left .arrow{right:0;width:.4rem;height:.8rem}.bs-tooltip-auto[x-placement^=left] .arrow::before,.bs-tooltip-left .arrow::before{left:0;border-width:.4rem 0 .4rem .4rem;border-left-color:#000}.tooltip-inner{max-width:200px;padding:.25rem .5rem;color:#fff;text-align:center;background-color:#000;border-radius:.25rem}.popover{position:absolute;top:0;left:0;z-index:1060;display:block;max-width:276px;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\";font-style:normal;font-weight:400;line-height:1.5;text-align:left;text-align:start;text-decoration:none;text-shadow:none;text-transform:none;letter-spacing:normal;word-break:normal;word-spacing:normal;white-space:normal;line-break:auto;font-size:.875rem;word-wrap:break-word;background-color:#fff;background-clip:padding-box;border:1px solid rgba(0,0,0,.2);border-radius:.3rem}.popover .arrow{position:absolute;display:block;width:1rem;height:.5rem;margin:0 .3rem}.popover .arrow::after,.popover .arrow::before{position:absolute;display:block;content:\"\";border-color:transparent;border-style:solid}.bs-popover-auto[x-placement^=top],.bs-popover-top{margin-bottom:.5rem}.bs-popover-auto[x-placement^=top] .arrow,.bs-popover-top .arrow{bottom:calc((.5rem + 1px) * -1)}.bs-popover-auto[x-placement^=top] .arrow::after,.bs-popover-auto[x-placement^=top] .arrow::before,.bs-popover-top .arrow::after,.bs-popover-top .arrow::before{border-width:.5rem .5rem 0}.bs-popover-auto[x-placement^=top] .arrow::before,.bs-popover-top .arrow::before{bottom:0;border-top-color:rgba(0,0,0,.25)}.bs-popover-auto[x-placement^=top] .arrow::after,.bs-popover-top .arrow::after{bottom:1px;border-top-color:#fff}.bs-popover-auto[x-placement^=right],.bs-popover-right{margin-left:.5rem}.bs-popover-auto[x-placement^=right] .arrow,.bs-popover-right .arrow{left:calc((.5rem + 1px) * -1);width:.5rem;height:1rem;margin:.3rem 0}.bs-popover-auto[x-placement^=right] .arrow::after,.bs-popover-auto[x-placement^=right] .arrow::before,.bs-popover-right .arrow::after,.bs-popover-right .arrow::before{border-width:.5rem .5rem .5rem 0}.bs-popover-auto[x-placement^=right] .arrow::before,.bs-popover-right .arrow::before{left:0;border-right-color:rgba(0,0,0,.25)}.bs-popover-auto[x-placement^=right] .arrow::after,.bs-popover-right .arrow::after{left:1px;border-right-color:#fff}.bs-popover-auto[x-placement^=bottom],.bs-popover-bottom{margin-top:.5rem}.bs-popover-auto[x-placement^=bottom] .arrow,.bs-popover-bottom .arrow{top:calc((.5rem + 1px) * -1)}.bs-popover-auto[x-placement^=bottom] .arrow::after,.bs-popover-auto[x-placement^=bottom] .arrow::before,.bs-popover-bottom .arrow::after,.bs-popover-bottom .arrow::before{border-width:0 .5rem .5rem .5rem}.bs-popover-auto[x-placement^=bottom] .arrow::before,.bs-popover-bottom .arrow::before{top:0;border-bottom-color:rgba(0,0,0,.25)}.bs-popover-auto[x-placement^=bottom] .arrow::after,.bs-popover-bottom .arrow::after{top:1px;border-bottom-color:#fff}.bs-popover-auto[x-placement^=bottom] .popover-header::before,.bs-popover-bottom .popover-header::before{position:absolute;top:0;left:50%;display:block;width:1rem;margin-left:-.5rem;content:\"\";border-bottom:1px solid #f7f7f7}.bs-popover-auto[x-placement^=left],.bs-popover-left{margin-right:.5rem}.bs-popover-auto[x-placement^=left] .arrow,.bs-popover-left .arrow{right:calc((.5rem + 1px) * -1);width:.5rem;height:1rem;margin:.3rem 0}.bs-popover-auto[x-placement^=left] .arrow::after,.bs-popover-auto[x-placement^=left] .arrow::before,.bs-popover-left .arrow::after,.bs-popover-left .arrow::before{border-width:.5rem 0 .5rem .5rem}.bs-popover-auto[x-placement^=left] .arrow::before,.bs-popover-left .arrow::before{right:0;border-left-color:rgba(0,0,0,.25)}.bs-popover-auto[x-placement^=left] .arrow::after,.bs-popover-left .arrow::after{right:1px;border-left-color:#fff}.popover-header{padding:.5rem .75rem;margin-bottom:0;font-size:1rem;color:inherit;background-color:#f7f7f7;border-bottom:1px solid #ebebeb;border-top-left-radius:calc(.3rem - 1px);border-top-right-radius:calc(.3rem - 1px)}.popover-header:empty{display:none}.popover-body{padding:.5rem .75rem;color:#212529}.carousel{position:relative}.carousel-inner{position:relative;width:100%;overflow:hidden}.carousel-item{position:relative;display:none;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;transition:-webkit-transform .6s ease;transition:transform .6s ease;transition:transform .6s ease,-webkit-transform .6s ease;-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-perspective:1000px;perspective:1000px}.carousel-item-next,.carousel-item-prev,.carousel-item.active{display:block}.carousel-item-next,.carousel-item-prev{position:absolute;top:0}.carousel-item-next.carousel-item-left,.carousel-item-prev.carousel-item-right{-webkit-transform:translateX(0);transform:translateX(0)}@supports ((-webkit-transform-style:preserve-3d) or (transform-style:preserve-3d)){.carousel-item-next.carousel-item-left,.carousel-item-prev.carousel-item-right{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}.active.carousel-item-right,.carousel-item-next{-webkit-transform:translateX(100%);transform:translateX(100%)}@supports ((-webkit-transform-style:preserve-3d) or (transform-style:preserve-3d)){.active.carousel-item-right,.carousel-item-next{-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}}.active.carousel-item-left,.carousel-item-prev{-webkit-transform:translateX(-100%);transform:translateX(-100%)}@supports ((-webkit-transform-style:preserve-3d) or (transform-style:preserve-3d)){.active.carousel-item-left,.carousel-item-prev{-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0)}}.carousel-control-next,.carousel-control-prev{position:absolute;top:0;bottom:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:15%;color:#fff;text-align:center;opacity:.5}.carousel-control-next:focus,.carousel-control-next:hover,.carousel-control-prev:focus,.carousel-control-prev:hover{color:#fff;text-decoration:none;outline:0;opacity:.9}.carousel-control-prev{left:0}.carousel-control-next{right:0}.carousel-control-next-icon,.carousel-control-prev-icon{display:inline-block;width:20px;height:20px;background:transparent no-repeat center center;background-size:100% 100%}.carousel-control-prev-icon{background-image:url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E\")}.carousel-control-next-icon{background-image:url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E\")}.carousel-indicators{position:absolute;right:0;bottom:10px;left:0;z-index:15;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding-left:0;margin-right:15%;margin-left:15%;list-style:none}.carousel-indicators li{position:relative;-webkit-box-flex:0;-ms-flex:0 1 auto;flex:0 1 auto;width:30px;height:3px;margin-right:3px;margin-left:3px;text-indent:-999px;background-color:rgba(255,255,255,.5)}.carousel-indicators li::before{position:absolute;top:-10px;left:0;display:inline-block;width:100%;height:10px;content:\"\"}.carousel-indicators li::after{position:absolute;bottom:-10px;left:0;display:inline-block;width:100%;height:10px;content:\"\"}.carousel-indicators .active{background-color:#fff}.carousel-caption{position:absolute;right:15%;bottom:20px;left:15%;z-index:10;padding-top:20px;padding-bottom:20px;color:#fff;text-align:center}.align-baseline{vertical-align:baseline!important}.align-top{vertical-align:top!important}.align-middle{vertical-align:middle!important}.align-bottom{vertical-align:bottom!important}.align-text-bottom{vertical-align:text-bottom!important}.align-text-top{vertical-align:text-top!important}.bg-primary{background-color:#007bff!important}a.bg-primary:focus,a.bg-primary:hover,button.bg-primary:focus,button.bg-primary:hover{background-color:#0062cc!important}.bg-secondary{background-color:#6c757d!important}a.bg-secondary:focus,a.bg-secondary:hover,button.bg-secondary:focus,button.bg-secondary:hover{background-color:#545b62!important}.bg-success{background-color:#28a745!important}a.bg-success:focus,a.bg-success:hover,button.bg-success:focus,button.bg-success:hover{background-color:#1e7e34!important}.bg-info{background-color:#17a2b8!important}a.bg-info:focus,a.bg-info:hover,button.bg-info:focus,button.bg-info:hover{background-color:#117a8b!important}.bg-warning{background-color:#ffc107!important}a.bg-warning:focus,a.bg-warning:hover,button.bg-warning:focus,button.bg-warning:hover{background-color:#d39e00!important}.bg-danger{background-color:#dc3545!important}a.bg-danger:focus,a.bg-danger:hover,button.bg-danger:focus,button.bg-danger:hover{background-color:#bd2130!important}.bg-light{background-color:#f8f9fa!important}a.bg-light:focus,a.bg-light:hover,button.bg-light:focus,button.bg-light:hover{background-color:#dae0e5!important}.bg-dark{background-color:#343a40!important}a.bg-dark:focus,a.bg-dark:hover,button.bg-dark:focus,button.bg-dark:hover{background-color:#1d2124!important}.bg-white{background-color:#fff!important}.bg-transparent{background-color:transparent!important}.border{border:1px solid #dee2e6!important}.border-top{border-top:1px solid #dee2e6!important}.border-right{border-right:1px solid #dee2e6!important}.border-bottom{border-bottom:1px solid #dee2e6!important}.border-left{border-left:1px solid #dee2e6!important}.border-0{border:0!important}.border-top-0{border-top:0!important}.border-right-0{border-right:0!important}.border-bottom-0{border-bottom:0!important}.border-left-0{border-left:0!important}.border-primary{border-color:#007bff!important}.border-secondary{border-color:#6c757d!important}.border-success{border-color:#28a745!important}.border-info{border-color:#17a2b8!important}.border-warning{border-color:#ffc107!important}.border-danger{border-color:#dc3545!important}.border-light{border-color:#f8f9fa!important}.border-dark{border-color:#343a40!important}.border-white{border-color:#fff!important}.rounded{border-radius:.25rem!important}.rounded-top{border-top-left-radius:.25rem!important;border-top-right-radius:.25rem!important}.rounded-right{border-top-right-radius:.25rem!important;border-bottom-right-radius:.25rem!important}.rounded-bottom{border-bottom-right-radius:.25rem!important;border-bottom-left-radius:.25rem!important}.rounded-left{border-top-left-radius:.25rem!important;border-bottom-left-radius:.25rem!important}.rounded-circle{border-radius:50%!important}.rounded-0{border-radius:0!important}.clearfix::after{display:block;clear:both;content:\"\"}.d-none{display:none!important}.d-inline{display:inline!important}.d-inline-block{display:inline-block!important}.d-block{display:block!important}.d-table{display:table!important}.d-table-row{display:table-row!important}.d-table-cell{display:table-cell!important}.d-flex{display:-webkit-box!important;display:-ms-flexbox!important;display:flex!important}.d-inline-flex{display:-webkit-inline-box!important;display:-ms-inline-flexbox!important;display:inline-flex!important}@media (min-width:576px){.d-sm-none{display:none!important}.d-sm-inline{display:inline!important}.d-sm-inline-block{display:inline-block!important}.d-sm-block{display:block!important}.d-sm-table{display:table!important}.d-sm-table-row{display:table-row!important}.d-sm-table-cell{display:table-cell!important}.d-sm-flex{display:-webkit-box!important;display:-ms-flexbox!important;display:flex!important}.d-sm-inline-flex{display:-webkit-inline-box!important;display:-ms-inline-flexbox!important;display:inline-flex!important}}@media (min-width:768px){.d-md-none{display:none!important}.d-md-inline{display:inline!important}.d-md-inline-block{display:inline-block!important}.d-md-block{display:block!important}.d-md-table{display:table!important}.d-md-table-row{display:table-row!important}.d-md-table-cell{display:table-cell!important}.d-md-flex{display:-webkit-box!important;display:-ms-flexbox!important;display:flex!important}.d-md-inline-flex{display:-webkit-inline-box!important;display:-ms-inline-flexbox!important;display:inline-flex!important}}@media (min-width:992px){.d-lg-none{display:none!important}.d-lg-inline{display:inline!important}.d-lg-inline-block{display:inline-block!important}.d-lg-block{display:block!important}.d-lg-table{display:table!important}.d-lg-table-row{display:table-row!important}.d-lg-table-cell{display:table-cell!important}.d-lg-flex{display:-webkit-box!important;display:-ms-flexbox!important;display:flex!important}.d-lg-inline-flex{display:-webkit-inline-box!important;display:-ms-inline-flexbox!important;display:inline-flex!important}}@media (min-width:1200px){.d-xl-none{display:none!important}.d-xl-inline{display:inline!important}.d-xl-inline-block{display:inline-block!important}.d-xl-block{display:block!important}.d-xl-table{display:table!important}.d-xl-table-row{display:table-row!important}.d-xl-table-cell{display:table-cell!important}.d-xl-flex{display:-webkit-box!important;display:-ms-flexbox!important;display:flex!important}.d-xl-inline-flex{display:-webkit-inline-box!important;display:-ms-inline-flexbox!important;display:inline-flex!important}}@media print{.d-print-none{display:none!important}.d-print-inline{display:inline!important}.d-print-inline-block{display:inline-block!important}.d-print-block{display:block!important}.d-print-table{display:table!important}.d-print-table-row{display:table-row!important}.d-print-table-cell{display:table-cell!important}.d-print-flex{display:-webkit-box!important;display:-ms-flexbox!important;display:flex!important}.d-print-inline-flex{display:-webkit-inline-box!important;display:-ms-inline-flexbox!important;display:inline-flex!important}}.embed-responsive{position:relative;display:block;width:100%;padding:0;overflow:hidden}.embed-responsive::before{display:block;content:\"\"}.embed-responsive .embed-responsive-item,.embed-responsive embed,.embed-responsive iframe,.embed-responsive object,.embed-responsive video{position:absolute;top:0;bottom:0;left:0;width:100%;height:100%;border:0}.embed-responsive-21by9::before{padding-top:42.857143%}.embed-responsive-16by9::before{padding-top:56.25%}.embed-responsive-4by3::before{padding-top:75%}.embed-responsive-1by1::before{padding-top:100%}.flex-row{-webkit-box-orient:horizontal!important;-webkit-box-direction:normal!important;-ms-flex-direction:row!important;flex-direction:row!important}.flex-column{-webkit-box-orient:vertical!important;-webkit-box-direction:normal!important;-ms-flex-direction:column!important;flex-direction:column!important}.flex-row-reverse{-webkit-box-orient:horizontal!important;-webkit-box-direction:reverse!important;-ms-flex-direction:row-reverse!important;flex-direction:row-reverse!important}.flex-column-reverse{-webkit-box-orient:vertical!important;-webkit-box-direction:reverse!important;-ms-flex-direction:column-reverse!important;flex-direction:column-reverse!important}.flex-wrap{-ms-flex-wrap:wrap!important;flex-wrap:wrap!important}.flex-nowrap{-ms-flex-wrap:nowrap!important;flex-wrap:nowrap!important}.flex-wrap-reverse{-ms-flex-wrap:wrap-reverse!important;flex-wrap:wrap-reverse!important}.justify-content-start{-webkit-box-pack:start!important;-ms-flex-pack:start!important;justify-content:flex-start!important}.justify-content-end{-webkit-box-pack:end!important;-ms-flex-pack:end!important;justify-content:flex-end!important}.justify-content-center{-webkit-box-pack:center!important;-ms-flex-pack:center!important;justify-content:center!important}.justify-content-between{-webkit-box-pack:justify!important;-ms-flex-pack:justify!important;justify-content:space-between!important}.justify-content-around{-ms-flex-pack:distribute!important;justify-content:space-around!important}.align-items-start{-webkit-box-align:start!important;-ms-flex-align:start!important;align-items:flex-start!important}.align-items-end{-webkit-box-align:end!important;-ms-flex-align:end!important;align-items:flex-end!important}.align-items-center{-webkit-box-align:center!important;-ms-flex-align:center!important;align-items:center!important}.align-items-baseline{-webkit-box-align:baseline!important;-ms-flex-align:baseline!important;align-items:baseline!important}.align-items-stretch{-webkit-box-align:stretch!important;-ms-flex-align:stretch!important;align-items:stretch!important}.align-content-start{-ms-flex-line-pack:start!important;align-content:flex-start!important}.align-content-end{-ms-flex-line-pack:end!important;align-content:flex-end!important}.align-content-center{-ms-flex-line-pack:center!important;align-content:center!important}.align-content-between{-ms-flex-line-pack:justify!important;align-content:space-between!important}.align-content-around{-ms-flex-line-pack:distribute!important;align-content:space-around!important}.align-content-stretch{-ms-flex-line-pack:stretch!important;align-content:stretch!important}.align-self-auto{-ms-flex-item-align:auto!important;align-self:auto!important}.align-self-start{-ms-flex-item-align:start!important;align-self:flex-start!important}.align-self-end{-ms-flex-item-align:end!important;align-self:flex-end!important}.align-self-center{-ms-flex-item-align:center!important;align-self:center!important}.align-self-baseline{-ms-flex-item-align:baseline!important;align-self:baseline!important}.align-self-stretch{-ms-flex-item-align:stretch!important;align-self:stretch!important}@media (min-width:576px){.flex-sm-row{-webkit-box-orient:horizontal!important;-webkit-box-direction:normal!important;-ms-flex-direction:row!important;flex-direction:row!important}.flex-sm-column{-webkit-box-orient:vertical!important;-webkit-box-direction:normal!important;-ms-flex-direction:column!important;flex-direction:column!important}.flex-sm-row-reverse{-webkit-box-orient:horizontal!important;-webkit-box-direction:reverse!important;-ms-flex-direction:row-reverse!important;flex-direction:row-reverse!important}.flex-sm-column-reverse{-webkit-box-orient:vertical!important;-webkit-box-direction:reverse!important;-ms-flex-direction:column-reverse!important;flex-direction:column-reverse!important}.flex-sm-wrap{-ms-flex-wrap:wrap!important;flex-wrap:wrap!important}.flex-sm-nowrap{-ms-flex-wrap:nowrap!important;flex-wrap:nowrap!important}.flex-sm-wrap-reverse{-ms-flex-wrap:wrap-reverse!important;flex-wrap:wrap-reverse!important}.justify-content-sm-start{-webkit-box-pack:start!important;-ms-flex-pack:start!important;justify-content:flex-start!important}.justify-content-sm-end{-webkit-box-pack:end!important;-ms-flex-pack:end!important;justify-content:flex-end!important}.justify-content-sm-center{-webkit-box-pack:center!important;-ms-flex-pack:center!important;justify-content:center!important}.justify-content-sm-between{-webkit-box-pack:justify!important;-ms-flex-pack:justify!important;justify-content:space-between!important}.justify-content-sm-around{-ms-flex-pack:distribute!important;justify-content:space-around!important}.align-items-sm-start{-webkit-box-align:start!important;-ms-flex-align:start!important;align-items:flex-start!important}.align-items-sm-end{-webkit-box-align:end!important;-ms-flex-align:end!important;align-items:flex-end!important}.align-items-sm-center{-webkit-box-align:center!important;-ms-flex-align:center!important;align-items:center!important}.align-items-sm-baseline{-webkit-box-align:baseline!important;-ms-flex-align:baseline!important;align-items:baseline!important}.align-items-sm-stretch{-webkit-box-align:stretch!important;-ms-flex-align:stretch!important;align-items:stretch!important}.align-content-sm-start{-ms-flex-line-pack:start!important;align-content:flex-start!important}.align-content-sm-end{-ms-flex-line-pack:end!important;align-content:flex-end!important}.align-content-sm-center{-ms-flex-line-pack:center!important;align-content:center!important}.align-content-sm-between{-ms-flex-line-pack:justify!important;align-content:space-between!important}.align-content-sm-around{-ms-flex-line-pack:distribute!important;align-content:space-around!important}.align-content-sm-stretch{-ms-flex-line-pack:stretch!important;align-content:stretch!important}.align-self-sm-auto{-ms-flex-item-align:auto!important;align-self:auto!important}.align-self-sm-start{-ms-flex-item-align:start!important;align-self:flex-start!important}.align-self-sm-end{-ms-flex-item-align:end!important;align-self:flex-end!important}.align-self-sm-center{-ms-flex-item-align:center!important;align-self:center!important}.align-self-sm-baseline{-ms-flex-item-align:baseline!important;align-self:baseline!important}.align-self-sm-stretch{-ms-flex-item-align:stretch!important;align-self:stretch!important}}@media (min-width:768px){.flex-md-row{-webkit-box-orient:horizontal!important;-webkit-box-direction:normal!important;-ms-flex-direction:row!important;flex-direction:row!important}.flex-md-column{-webkit-box-orient:vertical!important;-webkit-box-direction:normal!important;-ms-flex-direction:column!important;flex-direction:column!important}.flex-md-row-reverse{-webkit-box-orient:horizontal!important;-webkit-box-direction:reverse!important;-ms-flex-direction:row-reverse!important;flex-direction:row-reverse!important}.flex-md-column-reverse{-webkit-box-orient:vertical!important;-webkit-box-direction:reverse!important;-ms-flex-direction:column-reverse!important;flex-direction:column-reverse!important}.flex-md-wrap{-ms-flex-wrap:wrap!important;flex-wrap:wrap!important}.flex-md-nowrap{-ms-flex-wrap:nowrap!important;flex-wrap:nowrap!important}.flex-md-wrap-reverse{-ms-flex-wrap:wrap-reverse!important;flex-wrap:wrap-reverse!important}.justify-content-md-start{-webkit-box-pack:start!important;-ms-flex-pack:start!important;justify-content:flex-start!important}.justify-content-md-end{-webkit-box-pack:end!important;-ms-flex-pack:end!important;justify-content:flex-end!important}.justify-content-md-center{-webkit-box-pack:center!important;-ms-flex-pack:center!important;justify-content:center!important}.justify-content-md-between{-webkit-box-pack:justify!important;-ms-flex-pack:justify!important;justify-content:space-between!important}.justify-content-md-around{-ms-flex-pack:distribute!important;justify-content:space-around!important}.align-items-md-start{-webkit-box-align:start!important;-ms-flex-align:start!important;align-items:flex-start!important}.align-items-md-end{-webkit-box-align:end!important;-ms-flex-align:end!important;align-items:flex-end!important}.align-items-md-center{-webkit-box-align:center!important;-ms-flex-align:center!important;align-items:center!important}.align-items-md-baseline{-webkit-box-align:baseline!important;-ms-flex-align:baseline!important;align-items:baseline!important}.align-items-md-stretch{-webkit-box-align:stretch!important;-ms-flex-align:stretch!important;align-items:stretch!important}.align-content-md-start{-ms-flex-line-pack:start!important;align-content:flex-start!important}.align-content-md-end{-ms-flex-line-pack:end!important;align-content:flex-end!important}.align-content-md-center{-ms-flex-line-pack:center!important;align-content:center!important}.align-content-md-between{-ms-flex-line-pack:justify!important;align-content:space-between!important}.align-content-md-around{-ms-flex-line-pack:distribute!important;align-content:space-around!important}.align-content-md-stretch{-ms-flex-line-pack:stretch!important;align-content:stretch!important}.align-self-md-auto{-ms-flex-item-align:auto!important;align-self:auto!important}.align-self-md-start{-ms-flex-item-align:start!important;align-self:flex-start!important}.align-self-md-end{-ms-flex-item-align:end!important;align-self:flex-end!important}.align-self-md-center{-ms-flex-item-align:center!important;align-self:center!important}.align-self-md-baseline{-ms-flex-item-align:baseline!important;align-self:baseline!important}.align-self-md-stretch{-ms-flex-item-align:stretch!important;align-self:stretch!important}}@media (min-width:992px){.flex-lg-row{-webkit-box-orient:horizontal!important;-webkit-box-direction:normal!important;-ms-flex-direction:row!important;flex-direction:row!important}.flex-lg-column{-webkit-box-orient:vertical!important;-webkit-box-direction:normal!important;-ms-flex-direction:column!important;flex-direction:column!important}.flex-lg-row-reverse{-webkit-box-orient:horizontal!important;-webkit-box-direction:reverse!important;-ms-flex-direction:row-reverse!important;flex-direction:row-reverse!important}.flex-lg-column-reverse{-webkit-box-orient:vertical!important;-webkit-box-direction:reverse!important;-ms-flex-direction:column-reverse!important;flex-direction:column-reverse!important}.flex-lg-wrap{-ms-flex-wrap:wrap!important;flex-wrap:wrap!important}.flex-lg-nowrap{-ms-flex-wrap:nowrap!important;flex-wrap:nowrap!important}.flex-lg-wrap-reverse{-ms-flex-wrap:wrap-reverse!important;flex-wrap:wrap-reverse!important}.justify-content-lg-start{-webkit-box-pack:start!important;-ms-flex-pack:start!important;justify-content:flex-start!important}.justify-content-lg-end{-webkit-box-pack:end!important;-ms-flex-pack:end!important;justify-content:flex-end!important}.justify-content-lg-center{-webkit-box-pack:center!important;-ms-flex-pack:center!important;justify-content:center!important}.justify-content-lg-between{-webkit-box-pack:justify!important;-ms-flex-pack:justify!important;justify-content:space-between!important}.justify-content-lg-around{-ms-flex-pack:distribute!important;justify-content:space-around!important}.align-items-lg-start{-webkit-box-align:start!important;-ms-flex-align:start!important;align-items:flex-start!important}.align-items-lg-end{-webkit-box-align:end!important;-ms-flex-align:end!important;align-items:flex-end!important}.align-items-lg-center{-webkit-box-align:center!important;-ms-flex-align:center!important;align-items:center!important}.align-items-lg-baseline{-webkit-box-align:baseline!important;-ms-flex-align:baseline!important;align-items:baseline!important}.align-items-lg-stretch{-webkit-box-align:stretch!important;-ms-flex-align:stretch!important;align-items:stretch!important}.align-content-lg-start{-ms-flex-line-pack:start!important;align-content:flex-start!important}.align-content-lg-end{-ms-flex-line-pack:end!important;align-content:flex-end!important}.align-content-lg-center{-ms-flex-line-pack:center!important;align-content:center!important}.align-content-lg-between{-ms-flex-line-pack:justify!important;align-content:space-between!important}.align-content-lg-around{-ms-flex-line-pack:distribute!important;align-content:space-around!important}.align-content-lg-stretch{-ms-flex-line-pack:stretch!important;align-content:stretch!important}.align-self-lg-auto{-ms-flex-item-align:auto!important;align-self:auto!important}.align-self-lg-start{-ms-flex-item-align:start!important;align-self:flex-start!important}.align-self-lg-end{-ms-flex-item-align:end!important;align-self:flex-end!important}.align-self-lg-center{-ms-flex-item-align:center!important;align-self:center!important}.align-self-lg-baseline{-ms-flex-item-align:baseline!important;align-self:baseline!important}.align-self-lg-stretch{-ms-flex-item-align:stretch!important;align-self:stretch!important}}@media (min-width:1200px){.flex-xl-row{-webkit-box-orient:horizontal!important;-webkit-box-direction:normal!important;-ms-flex-direction:row!important;flex-direction:row!important}.flex-xl-column{-webkit-box-orient:vertical!important;-webkit-box-direction:normal!important;-ms-flex-direction:column!important;flex-direction:column!important}.flex-xl-row-reverse{-webkit-box-orient:horizontal!important;-webkit-box-direction:reverse!important;-ms-flex-direction:row-reverse!important;flex-direction:row-reverse!important}.flex-xl-column-reverse{-webkit-box-orient:vertical!important;-webkit-box-direction:reverse!important;-ms-flex-direction:column-reverse!important;flex-direction:column-reverse!important}.flex-xl-wrap{-ms-flex-wrap:wrap!important;flex-wrap:wrap!important}.flex-xl-nowrap{-ms-flex-wrap:nowrap!important;flex-wrap:nowrap!important}.flex-xl-wrap-reverse{-ms-flex-wrap:wrap-reverse!important;flex-wrap:wrap-reverse!important}.justify-content-xl-start{-webkit-box-pack:start!important;-ms-flex-pack:start!important;justify-content:flex-start!important}.justify-content-xl-end{-webkit-box-pack:end!important;-ms-flex-pack:end!important;justify-content:flex-end!important}.justify-content-xl-center{-webkit-box-pack:center!important;-ms-flex-pack:center!important;justify-content:center!important}.justify-content-xl-between{-webkit-box-pack:justify!important;-ms-flex-pack:justify!important;justify-content:space-between!important}.justify-content-xl-around{-ms-flex-pack:distribute!important;justify-content:space-around!important}.align-items-xl-start{-webkit-box-align:start!important;-ms-flex-align:start!important;align-items:flex-start!important}.align-items-xl-end{-webkit-box-align:end!important;-ms-flex-align:end!important;align-items:flex-end!important}.align-items-xl-center{-webkit-box-align:center!important;-ms-flex-align:center!important;align-items:center!important}.align-items-xl-baseline{-webkit-box-align:baseline!important;-ms-flex-align:baseline!important;align-items:baseline!important}.align-items-xl-stretch{-webkit-box-align:stretch!important;-ms-flex-align:stretch!important;align-items:stretch!important}.align-content-xl-start{-ms-flex-line-pack:start!important;align-content:flex-start!important}.align-content-xl-end{-ms-flex-line-pack:end!important;align-content:flex-end!important}.align-content-xl-center{-ms-flex-line-pack:center!important;align-content:center!important}.align-content-xl-between{-ms-flex-line-pack:justify!important;align-content:space-between!important}.align-content-xl-around{-ms-flex-line-pack:distribute!important;align-content:space-around!important}.align-content-xl-stretch{-ms-flex-line-pack:stretch!important;align-content:stretch!important}.align-self-xl-auto{-ms-flex-item-align:auto!important;align-self:auto!important}.align-self-xl-start{-ms-flex-item-align:start!important;align-self:flex-start!important}.align-self-xl-end{-ms-flex-item-align:end!important;align-self:flex-end!important}.align-self-xl-center{-ms-flex-item-align:center!important;align-self:center!important}.align-self-xl-baseline{-ms-flex-item-align:baseline!important;align-self:baseline!important}.align-self-xl-stretch{-ms-flex-item-align:stretch!important;align-self:stretch!important}}.float-left{float:left!important}.float-right{float:right!important}.float-none{float:none!important}@media (min-width:576px){.float-sm-left{float:left!important}.float-sm-right{float:right!important}.float-sm-none{float:none!important}}@media (min-width:768px){.float-md-left{float:left!important}.float-md-right{float:right!important}.float-md-none{float:none!important}}@media (min-width:992px){.float-lg-left{float:left!important}.float-lg-right{float:right!important}.float-lg-none{float:none!important}}@media (min-width:1200px){.float-xl-left{float:left!important}.float-xl-right{float:right!important}.float-xl-none{float:none!important}}.position-static{position:static!important}.position-relative{position:relative!important}.position-absolute{position:absolute!important}.position-fixed{position:fixed!important}.position-sticky{position:-webkit-sticky!important;position:sticky!important}.fixed-top{position:fixed;top:0;right:0;left:0;z-index:1030}.fixed-bottom{position:fixed;right:0;bottom:0;left:0;z-index:1030}@supports ((position:-webkit-sticky) or (position:sticky)){.sticky-top{position:-webkit-sticky;position:sticky;top:0;z-index:1020}}.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;-webkit-clip-path:inset(50%);clip-path:inset(50%);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;overflow:visible;clip:auto;white-space:normal;-webkit-clip-path:none;clip-path:none}.w-25{width:25%!important}.w-50{width:50%!important}.w-75{width:75%!important}.w-100{width:100%!important}.h-25{height:25%!important}.h-50{height:50%!important}.h-75{height:75%!important}.h-100{height:100%!important}.mw-100{max-width:100%!important}.mh-100{max-height:100%!important}.m-0{margin:0!important}.mt-0,.my-0{margin-top:0!important}.mr-0,.mx-0{margin-right:0!important}.mb-0,.my-0{margin-bottom:0!important}.ml-0,.mx-0{margin-left:0!important}.m-1{margin:.25rem!important}.mt-1,.my-1{margin-top:.25rem!important}.mr-1,.mx-1{margin-right:.25rem!important}.mb-1,.my-1{margin-bottom:.25rem!important}.ml-1,.mx-1{margin-left:.25rem!important}.m-2{margin:.5rem!important}.mt-2,.my-2{margin-top:.5rem!important}.mr-2,.mx-2{margin-right:.5rem!important}.mb-2,.my-2{margin-bottom:.5rem!important}.ml-2,.mx-2{margin-left:.5rem!important}.m-3{margin:1rem!important}.mt-3,.my-3{margin-top:1rem!important}.mr-3,.mx-3{margin-right:1rem!important}.mb-3,.my-3{margin-bottom:1rem!important}.ml-3,.mx-3{margin-left:1rem!important}.m-4{margin:1.5rem!important}.mt-4,.my-4{margin-top:1.5rem!important}.mr-4,.mx-4{margin-right:1.5rem!important}.mb-4,.my-4{margin-bottom:1.5rem!important}.ml-4,.mx-4{margin-left:1.5rem!important}.m-5{margin:3rem!important}.mt-5,.my-5{margin-top:3rem!important}.mr-5,.mx-5{margin-right:3rem!important}.mb-5,.my-5{margin-bottom:3rem!important}.ml-5,.mx-5{margin-left:3rem!important}.p-0{padding:0!important}.pt-0,.py-0{padding-top:0!important}.pr-0,.px-0{padding-right:0!important}.pb-0,.py-0{padding-bottom:0!important}.pl-0,.px-0{padding-left:0!important}.p-1{padding:.25rem!important}.pt-1,.py-1{padding-top:.25rem!important}.pr-1,.px-1{padding-right:.25rem!important}.pb-1,.py-1{padding-bottom:.25rem!important}.pl-1,.px-1{padding-left:.25rem!important}.p-2{padding:.5rem!important}.pt-2,.py-2{padding-top:.5rem!important}.pr-2,.px-2{padding-right:.5rem!important}.pb-2,.py-2{padding-bottom:.5rem!important}.pl-2,.px-2{padding-left:.5rem!important}.p-3{padding:1rem!important}.pt-3,.py-3{padding-top:1rem!important}.pr-3,.px-3{padding-right:1rem!important}.pb-3,.py-3{padding-bottom:1rem!important}.pl-3,.px-3{padding-left:1rem!important}.p-4{padding:1.5rem!important}.pt-4,.py-4{padding-top:1.5rem!important}.pr-4,.px-4{padding-right:1.5rem!important}.pb-4,.py-4{padding-bottom:1.5rem!important}.pl-4,.px-4{padding-left:1.5rem!important}.p-5{padding:3rem!important}.pt-5,.py-5{padding-top:3rem!important}.pr-5,.px-5{padding-right:3rem!important}.pb-5,.py-5{padding-bottom:3rem!important}.pl-5,.px-5{padding-left:3rem!important}.m-auto{margin:auto!important}.mt-auto,.my-auto{margin-top:auto!important}.mr-auto,.mx-auto{margin-right:auto!important}.mb-auto,.my-auto{margin-bottom:auto!important}.ml-auto,.mx-auto{margin-left:auto!important}@media (min-width:576px){.m-sm-0{margin:0!important}.mt-sm-0,.my-sm-0{margin-top:0!important}.mr-sm-0,.mx-sm-0{margin-right:0!important}.mb-sm-0,.my-sm-0{margin-bottom:0!important}.ml-sm-0,.mx-sm-0{margin-left:0!important}.m-sm-1{margin:.25rem!important}.mt-sm-1,.my-sm-1{margin-top:.25rem!important}.mr-sm-1,.mx-sm-1{margin-right:.25rem!important}.mb-sm-1,.my-sm-1{margin-bottom:.25rem!important}.ml-sm-1,.mx-sm-1{margin-left:.25rem!important}.m-sm-2{margin:.5rem!important}.mt-sm-2,.my-sm-2{margin-top:.5rem!important}.mr-sm-2,.mx-sm-2{margin-right:.5rem!important}.mb-sm-2,.my-sm-2{margin-bottom:.5rem!important}.ml-sm-2,.mx-sm-2{margin-left:.5rem!important}.m-sm-3{margin:1rem!important}.mt-sm-3,.my-sm-3{margin-top:1rem!important}.mr-sm-3,.mx-sm-3{margin-right:1rem!important}.mb-sm-3,.my-sm-3{margin-bottom:1rem!important}.ml-sm-3,.mx-sm-3{margin-left:1rem!important}.m-sm-4{margin:1.5rem!important}.mt-sm-4,.my-sm-4{margin-top:1.5rem!important}.mr-sm-4,.mx-sm-4{margin-right:1.5rem!important}.mb-sm-4,.my-sm-4{margin-bottom:1.5rem!important}.ml-sm-4,.mx-sm-4{margin-left:1.5rem!important}.m-sm-5{margin:3rem!important}.mt-sm-5,.my-sm-5{margin-top:3rem!important}.mr-sm-5,.mx-sm-5{margin-right:3rem!important}.mb-sm-5,.my-sm-5{margin-bottom:3rem!important}.ml-sm-5,.mx-sm-5{margin-left:3rem!important}.p-sm-0{padding:0!important}.pt-sm-0,.py-sm-0{padding-top:0!important}.pr-sm-0,.px-sm-0{padding-right:0!important}.pb-sm-0,.py-sm-0{padding-bottom:0!important}.pl-sm-0,.px-sm-0{padding-left:0!important}.p-sm-1{padding:.25rem!important}.pt-sm-1,.py-sm-1{padding-top:.25rem!important}.pr-sm-1,.px-sm-1{padding-right:.25rem!important}.pb-sm-1,.py-sm-1{padding-bottom:.25rem!important}.pl-sm-1,.px-sm-1{padding-left:.25rem!important}.p-sm-2{padding:.5rem!important}.pt-sm-2,.py-sm-2{padding-top:.5rem!important}.pr-sm-2,.px-sm-2{padding-right:.5rem!important}.pb-sm-2,.py-sm-2{padding-bottom:.5rem!important}.pl-sm-2,.px-sm-2{padding-left:.5rem!important}.p-sm-3{padding:1rem!important}.pt-sm-3,.py-sm-3{padding-top:1rem!important}.pr-sm-3,.px-sm-3{padding-right:1rem!important}.pb-sm-3,.py-sm-3{padding-bottom:1rem!important}.pl-sm-3,.px-sm-3{padding-left:1rem!important}.p-sm-4{padding:1.5rem!important}.pt-sm-4,.py-sm-4{padding-top:1.5rem!important}.pr-sm-4,.px-sm-4{padding-right:1.5rem!important}.pb-sm-4,.py-sm-4{padding-bottom:1.5rem!important}.pl-sm-4,.px-sm-4{padding-left:1.5rem!important}.p-sm-5{padding:3rem!important}.pt-sm-5,.py-sm-5{padding-top:3rem!important}.pr-sm-5,.px-sm-5{padding-right:3rem!important}.pb-sm-5,.py-sm-5{padding-bottom:3rem!important}.pl-sm-5,.px-sm-5{padding-left:3rem!important}.m-sm-auto{margin:auto!important}.mt-sm-auto,.my-sm-auto{margin-top:auto!important}.mr-sm-auto,.mx-sm-auto{margin-right:auto!important}.mb-sm-auto,.my-sm-auto{margin-bottom:auto!important}.ml-sm-auto,.mx-sm-auto{margin-left:auto!important}}@media (min-width:768px){.m-md-0{margin:0!important}.mt-md-0,.my-md-0{margin-top:0!important}.mr-md-0,.mx-md-0{margin-right:0!important}.mb-md-0,.my-md-0{margin-bottom:0!important}.ml-md-0,.mx-md-0{margin-left:0!important}.m-md-1{margin:.25rem!important}.mt-md-1,.my-md-1{margin-top:.25rem!important}.mr-md-1,.mx-md-1{margin-right:.25rem!important}.mb-md-1,.my-md-1{margin-bottom:.25rem!important}.ml-md-1,.mx-md-1{margin-left:.25rem!important}.m-md-2{margin:.5rem!important}.mt-md-2,.my-md-2{margin-top:.5rem!important}.mr-md-2,.mx-md-2{margin-right:.5rem!important}.mb-md-2,.my-md-2{margin-bottom:.5rem!important}.ml-md-2,.mx-md-2{margin-left:.5rem!important}.m-md-3{margin:1rem!important}.mt-md-3,.my-md-3{margin-top:1rem!important}.mr-md-3,.mx-md-3{margin-right:1rem!important}.mb-md-3,.my-md-3{margin-bottom:1rem!important}.ml-md-3,.mx-md-3{margin-left:1rem!important}.m-md-4{margin:1.5rem!important}.mt-md-4,.my-md-4{margin-top:1.5rem!important}.mr-md-4,.mx-md-4{margin-right:1.5rem!important}.mb-md-4,.my-md-4{margin-bottom:1.5rem!important}.ml-md-4,.mx-md-4{margin-left:1.5rem!important}.m-md-5{margin:3rem!important}.mt-md-5,.my-md-5{margin-top:3rem!important}.mr-md-5,.mx-md-5{margin-right:3rem!important}.mb-md-5,.my-md-5{margin-bottom:3rem!important}.ml-md-5,.mx-md-5{margin-left:3rem!important}.p-md-0{padding:0!important}.pt-md-0,.py-md-0{padding-top:0!important}.pr-md-0,.px-md-0{padding-right:0!important}.pb-md-0,.py-md-0{padding-bottom:0!important}.pl-md-0,.px-md-0{padding-left:0!important}.p-md-1{padding:.25rem!important}.pt-md-1,.py-md-1{padding-top:.25rem!important}.pr-md-1,.px-md-1{padding-right:.25rem!important}.pb-md-1,.py-md-1{padding-bottom:.25rem!important}.pl-md-1,.px-md-1{padding-left:.25rem!important}.p-md-2{padding:.5rem!important}.pt-md-2,.py-md-2{padding-top:.5rem!important}.pr-md-2,.px-md-2{padding-right:.5rem!important}.pb-md-2,.py-md-2{padding-bottom:.5rem!important}.pl-md-2,.px-md-2{padding-left:.5rem!important}.p-md-3{padding:1rem!important}.pt-md-3,.py-md-3{padding-top:1rem!important}.pr-md-3,.px-md-3{padding-right:1rem!important}.pb-md-3,.py-md-3{padding-bottom:1rem!important}.pl-md-3,.px-md-3{padding-left:1rem!important}.p-md-4{padding:1.5rem!important}.pt-md-4,.py-md-4{padding-top:1.5rem!important}.pr-md-4,.px-md-4{padding-right:1.5rem!important}.pb-md-4,.py-md-4{padding-bottom:1.5rem!important}.pl-md-4,.px-md-4{padding-left:1.5rem!important}.p-md-5{padding:3rem!important}.pt-md-5,.py-md-5{padding-top:3rem!important}.pr-md-5,.px-md-5{padding-right:3rem!important}.pb-md-5,.py-md-5{padding-bottom:3rem!important}.pl-md-5,.px-md-5{padding-left:3rem!important}.m-md-auto{margin:auto!important}.mt-md-auto,.my-md-auto{margin-top:auto!important}.mr-md-auto,.mx-md-auto{margin-right:auto!important}.mb-md-auto,.my-md-auto{margin-bottom:auto!important}.ml-md-auto,.mx-md-auto{margin-left:auto!important}}@media (min-width:992px){.m-lg-0{margin:0!important}.mt-lg-0,.my-lg-0{margin-top:0!important}.mr-lg-0,.mx-lg-0{margin-right:0!important}.mb-lg-0,.my-lg-0{margin-bottom:0!important}.ml-lg-0,.mx-lg-0{margin-left:0!important}.m-lg-1{margin:.25rem!important}.mt-lg-1,.my-lg-1{margin-top:.25rem!important}.mr-lg-1,.mx-lg-1{margin-right:.25rem!important}.mb-lg-1,.my-lg-1{margin-bottom:.25rem!important}.ml-lg-1,.mx-lg-1{margin-left:.25rem!important}.m-lg-2{margin:.5rem!important}.mt-lg-2,.my-lg-2{margin-top:.5rem!important}.mr-lg-2,.mx-lg-2{margin-right:.5rem!important}.mb-lg-2,.my-lg-2{margin-bottom:.5rem!important}.ml-lg-2,.mx-lg-2{margin-left:.5rem!important}.m-lg-3{margin:1rem!important}.mt-lg-3,.my-lg-3{margin-top:1rem!important}.mr-lg-3,.mx-lg-3{margin-right:1rem!important}.mb-lg-3,.my-lg-3{margin-bottom:1rem!important}.ml-lg-3,.mx-lg-3{margin-left:1rem!important}.m-lg-4{margin:1.5rem!important}.mt-lg-4,.my-lg-4{margin-top:1.5rem!important}.mr-lg-4,.mx-lg-4{margin-right:1.5rem!important}.mb-lg-4,.my-lg-4{margin-bottom:1.5rem!important}.ml-lg-4,.mx-lg-4{margin-left:1.5rem!important}.m-lg-5{margin:3rem!important}.mt-lg-5,.my-lg-5{margin-top:3rem!important}.mr-lg-5,.mx-lg-5{margin-right:3rem!important}.mb-lg-5,.my-lg-5{margin-bottom:3rem!important}.ml-lg-5,.mx-lg-5{margin-left:3rem!important}.p-lg-0{padding:0!important}.pt-lg-0,.py-lg-0{padding-top:0!important}.pr-lg-0,.px-lg-0{padding-right:0!important}.pb-lg-0,.py-lg-0{padding-bottom:0!important}.pl-lg-0,.px-lg-0{padding-left:0!important}.p-lg-1{padding:.25rem!important}.pt-lg-1,.py-lg-1{padding-top:.25rem!important}.pr-lg-1,.px-lg-1{padding-right:.25rem!important}.pb-lg-1,.py-lg-1{padding-bottom:.25rem!important}.pl-lg-1,.px-lg-1{padding-left:.25rem!important}.p-lg-2{padding:.5rem!important}.pt-lg-2,.py-lg-2{padding-top:.5rem!important}.pr-lg-2,.px-lg-2{padding-right:.5rem!important}.pb-lg-2,.py-lg-2{padding-bottom:.5rem!important}.pl-lg-2,.px-lg-2{padding-left:.5rem!important}.p-lg-3{padding:1rem!important}.pt-lg-3,.py-lg-3{padding-top:1rem!important}.pr-lg-3,.px-lg-3{padding-right:1rem!important}.pb-lg-3,.py-lg-3{padding-bottom:1rem!important}.pl-lg-3,.px-lg-3{padding-left:1rem!important}.p-lg-4{padding:1.5rem!important}.pt-lg-4,.py-lg-4{padding-top:1.5rem!important}.pr-lg-4,.px-lg-4{padding-right:1.5rem!important}.pb-lg-4,.py-lg-4{padding-bottom:1.5rem!important}.pl-lg-4,.px-lg-4{padding-left:1.5rem!important}.p-lg-5{padding:3rem!important}.pt-lg-5,.py-lg-5{padding-top:3rem!important}.pr-lg-5,.px-lg-5{padding-right:3rem!important}.pb-lg-5,.py-lg-5{padding-bottom:3rem!important}.pl-lg-5,.px-lg-5{padding-left:3rem!important}.m-lg-auto{margin:auto!important}.mt-lg-auto,.my-lg-auto{margin-top:auto!important}.mr-lg-auto,.mx-lg-auto{margin-right:auto!important}.mb-lg-auto,.my-lg-auto{margin-bottom:auto!important}.ml-lg-auto,.mx-lg-auto{margin-left:auto!important}}@media (min-width:1200px){.m-xl-0{margin:0!important}.mt-xl-0,.my-xl-0{margin-top:0!important}.mr-xl-0,.mx-xl-0{margin-right:0!important}.mb-xl-0,.my-xl-0{margin-bottom:0!important}.ml-xl-0,.mx-xl-0{margin-left:0!important}.m-xl-1{margin:.25rem!important}.mt-xl-1,.my-xl-1{margin-top:.25rem!important}.mr-xl-1,.mx-xl-1{margin-right:.25rem!important}.mb-xl-1,.my-xl-1{margin-bottom:.25rem!important}.ml-xl-1,.mx-xl-1{margin-left:.25rem!important}.m-xl-2{margin:.5rem!important}.mt-xl-2,.my-xl-2{margin-top:.5rem!important}.mr-xl-2,.mx-xl-2{margin-right:.5rem!important}.mb-xl-2,.my-xl-2{margin-bottom:.5rem!important}.ml-xl-2,.mx-xl-2{margin-left:.5rem!important}.m-xl-3{margin:1rem!important}.mt-xl-3,.my-xl-3{margin-top:1rem!important}.mr-xl-3,.mx-xl-3{margin-right:1rem!important}.mb-xl-3,.my-xl-3{margin-bottom:1rem!important}.ml-xl-3,.mx-xl-3{margin-left:1rem!important}.m-xl-4{margin:1.5rem!important}.mt-xl-4,.my-xl-4{margin-top:1.5rem!important}.mr-xl-4,.mx-xl-4{margin-right:1.5rem!important}.mb-xl-4,.my-xl-4{margin-bottom:1.5rem!important}.ml-xl-4,.mx-xl-4{margin-left:1.5rem!important}.m-xl-5{margin:3rem!important}.mt-xl-5,.my-xl-5{margin-top:3rem!important}.mr-xl-5,.mx-xl-5{margin-right:3rem!important}.mb-xl-5,.my-xl-5{margin-bottom:3rem!important}.ml-xl-5,.mx-xl-5{margin-left:3rem!important}.p-xl-0{padding:0!important}.pt-xl-0,.py-xl-0{padding-top:0!important}.pr-xl-0,.px-xl-0{padding-right:0!important}.pb-xl-0,.py-xl-0{padding-bottom:0!important}.pl-xl-0,.px-xl-0{padding-left:0!important}.p-xl-1{padding:.25rem!important}.pt-xl-1,.py-xl-1{padding-top:.25rem!important}.pr-xl-1,.px-xl-1{padding-right:.25rem!important}.pb-xl-1,.py-xl-1{padding-bottom:.25rem!important}.pl-xl-1,.px-xl-1{padding-left:.25rem!important}.p-xl-2{padding:.5rem!important}.pt-xl-2,.py-xl-2{padding-top:.5rem!important}.pr-xl-2,.px-xl-2{padding-right:.5rem!important}.pb-xl-2,.py-xl-2{padding-bottom:.5rem!important}.pl-xl-2,.px-xl-2{padding-left:.5rem!important}.p-xl-3{padding:1rem!important}.pt-xl-3,.py-xl-3{padding-top:1rem!important}.pr-xl-3,.px-xl-3{padding-right:1rem!important}.pb-xl-3,.py-xl-3{padding-bottom:1rem!important}.pl-xl-3,.px-xl-3{padding-left:1rem!important}.p-xl-4{padding:1.5rem!important}.pt-xl-4,.py-xl-4{padding-top:1.5rem!important}.pr-xl-4,.px-xl-4{padding-right:1.5rem!important}.pb-xl-4,.py-xl-4{padding-bottom:1.5rem!important}.pl-xl-4,.px-xl-4{padding-left:1.5rem!important}.p-xl-5{padding:3rem!important}.pt-xl-5,.py-xl-5{padding-top:3rem!important}.pr-xl-5,.px-xl-5{padding-right:3rem!important}.pb-xl-5,.py-xl-5{padding-bottom:3rem!important}.pl-xl-5,.px-xl-5{padding-left:3rem!important}.m-xl-auto{margin:auto!important}.mt-xl-auto,.my-xl-auto{margin-top:auto!important}.mr-xl-auto,.mx-xl-auto{margin-right:auto!important}.mb-xl-auto,.my-xl-auto{margin-bottom:auto!important}.ml-xl-auto,.mx-xl-auto{margin-left:auto!important}}.text-justify{text-align:justify!important}.text-nowrap{white-space:nowrap!important}.text-truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.text-left{text-align:left!important}.text-right{text-align:right!important}.text-center{text-align:center!important}@media (min-width:576px){.text-sm-left{text-align:left!important}.text-sm-right{text-align:right!important}.text-sm-center{text-align:center!important}}@media (min-width:768px){.text-md-left{text-align:left!important}.text-md-right{text-align:right!important}.text-md-center{text-align:center!important}}@media (min-width:992px){.text-lg-left{text-align:left!important}.text-lg-right{text-align:right!important}.text-lg-center{text-align:center!important}}@media (min-width:1200px){.text-xl-left{text-align:left!important}.text-xl-right{text-align:right!important}.text-xl-center{text-align:center!important}}.text-lowercase{text-transform:lowercase!important}.text-uppercase{text-transform:uppercase!important}.text-capitalize{text-transform:capitalize!important}.font-weight-light{font-weight:300!important}.font-weight-normal{font-weight:400!important}.font-weight-bold{font-weight:700!important}.font-italic{font-style:italic!important}.text-white{color:#fff!important}.text-primary{color:#007bff!important}a.text-primary:focus,a.text-primary:hover{color:#0062cc!important}.text-secondary{color:#6c757d!important}a.text-secondary:focus,a.text-secondary:hover{color:#545b62!important}.text-success{color:#28a745!important}a.text-success:focus,a.text-success:hover{color:#1e7e34!important}.text-info{color:#17a2b8!important}a.text-info:focus,a.text-info:hover{color:#117a8b!important}.text-warning{color:#ffc107!important}a.text-warning:focus,a.text-warning:hover{color:#d39e00!important}.text-danger{color:#dc3545!important}a.text-danger:focus,a.text-danger:hover{color:#bd2130!important}.text-light{color:#f8f9fa!important}a.text-light:focus,a.text-light:hover{color:#dae0e5!important}.text-dark{color:#343a40!important}a.text-dark:focus,a.text-dark:hover{color:#1d2124!important}.text-muted{color:#6c757d!important}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.visible{visibility:visible!important}.invisible{visibility:hidden!important}@media print{*,::after,::before{text-shadow:none!important;box-shadow:none!important}a:not(.btn){text-decoration:underline}abbr[title]::after{content:\" (\" attr(title) \")\"}pre{white-space:pre-wrap!important}blockquote,pre{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}img,tr{page-break-inside:avoid}h2,h3,p{orphans:3;widows:3}h2,h3{page-break-after:avoid}@page{size:a3}body{min-width:992px!important}.container{min-width:992px!important}.navbar{display:none}.badge{border:1px solid #000}.table{border-collapse:collapse!important}.table td,.table th{background-color:#fff!important}.table-bordered td,.table-bordered th{border:1px solid #ddd!important}}", ""]);
 
 // exports
 
