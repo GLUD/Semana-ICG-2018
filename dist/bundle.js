@@ -55244,21 +55244,29 @@ var data = {};
 data.agenda = [{
     header: 'Lunes',
     charlas: [{
-        hora: '08:00 - 08:30',
+        hora: '08:00 - 09:30',
         nombre: 'Acto de apertura XXIV Semana de Ingenieria Catastral y Geodesia',
         expositor: ' - '
     }, {
-        hora: '08:30 - 09:30',
-        nombre: 'Semillero de innovación geografica',
-        expositor: 'ESRI COLOMBIA'
-    }, {
-        hora: '09:30 - 11:00',
-        nombre: 'Modelo de Administracion de Tierras LADM',
-        expositor: 'Fernando Pineda'
-    }, {
-        hora: '11:30 - 12:00',
+        hora: '08:30 - 09:00',
         nombre: 'Conoce el API DE ArcGIS para Python',
         expositor: 'ESRI COLOMBIA'
+    }, {
+        hora: '09:00 - 9:30',
+        nombre: 'Administración de Tierras: Pre-Pilotos en Vista Hermosa y Apartadó por medio de la implementación del enfoque FIT-FOR-PURPOSE  ',
+        expositor: 'Angie Katherine Melo & Jhonattan Montoya'
+    }, {
+        hora: '9:30 - 11:00',
+        nombre: 'Modelo de Administracion de Tierras LADM ',
+        expositor: 'Fernando Pineda'
+    }, {
+        hora: '11:00 - 11:30',
+        nombre: 'Receso',
+        expositor: '-'
+    }, {
+        hora: '12:00 - 12:30',
+        nombre: 'Actividad Cultural',
+        expositor: 'Tuna UDFJC'
     }]
 }, {
     header: 'Martes',
@@ -55271,13 +55279,21 @@ data.agenda = [{
         nombre: 'Drones, una experiencia de investigacion en la UDFJC',
         expositor: 'Victor Angulo'
     }, {
-        hora: '10:00 - 11:00',
+        hora: '10:00 - 10:30',
         nombre: 'IDECA',
         expositor: 'Patricia Toro'
     }, {
+        hora: '10:30 - 11:00',
+        nombre: 'Receso',
+        expositor: '-'
+    }, {
+        hora: '11:30 - 12:00',
+        nombre: 'Foro Abierto: Crisis presupuestal en la UDFJC y sus consecuencias en la ICG',
+        expositor: 'Camilo Pardo'
+    }, {
         hora: '12:00 - 12:30',
-        nombre: 'Actividad Cultural',
-        expositor: 'Tuna UDFJC'
+        nombre: 'Actividad cultural',
+        expositor: 'Grupo Musical'
     }]
 }, {
     header: 'Miércoles',
@@ -55286,9 +55302,17 @@ data.agenda = [{
         nombre: 'Trasnformacion Digital',
         expositor: 'Fabian Castellanos'
     }, {
+        hora: '9:00 - 11:00',
+        nombre: 'SIMULACRO DISTRITAL DE EVACUACION 2018',
+        expositor: 'UD FJC'
+    }, {
         hora: '11:00 - 11:30',
         nombre: 'Árboles de decisión ZHF',
         expositor: 'Ing. Karen Bastidas'
+    }, {
+        hora: '11:30 - 12:00',
+        nombre: 'Receso',
+        expositor: '-'
     }, {
         hora: '12:00 - 12:30',
         nombre: 'Actividad Cultural Presenta',
@@ -55312,6 +55336,10 @@ data.agenda = [{
         hora: '10:00 - 10:30',
         nombre: 'Algoritmos genéticos en avalúos Expositor',
         expositor: 'Ing. Camilo Pulido'
+    }, {
+        hora: '10:30 - 12:00',
+        nombre: 'Socializacion aspectos y perspectivas de la Ingenieria Catastral y Geodesia - Acto de entrega de premios ',
+        expositor: '-'
     }, {
         hora: '12:00 - 12:30',
         nombre: 'Analisis de la ionosfera colombiana mediante el estudio del TEC',
