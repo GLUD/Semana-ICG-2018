@@ -108,14 +108,26 @@ body {
 
 /*MAS INVENTOS WII*/
 
-
-
-.infoa {
-  background: url('../img/bogota.jpg') fixed;
+.infoinicio {
+  background: url('../img/back9.jpg') fixed;
   background-color: #f4f5f6; text-shadow: white 0.1em 0.1em 0.2em;
 }
 
-.infob {
+.infoiniciob {
+  background: url('../img/back1.jpg') no-repeat fixed;
+  background-color: #f4f5f6; 
+  text-shadow: white 0.1em 0.1em 0.2em;
+  background-size: cover;
+}
+
+
+
+.infoorganiza {
+  background: url('../img/ud1.jpg') fixed;
+  background-color: #f4f5f6; text-shadow: white 0.1em 0.1em 0.2em;
+}
+
+.infoagenda {
   background-color: #f4f5f6; text-shadow: white 0.1em 0.1em 0.2em;
   background:url('../img/back7.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -124,17 +136,17 @@ body {
   background-size: cover;
 }
 
-
-.infoc {
-  background: url('../img/back4.jpg') fixed;
-  background-color: #f4f5f6; text-shadow: white 0.1em 0.1em 0.2em;
-}
-.infod {
-  background: url('../img/back5.jpg') fixed;
-  background-color: #f4f5f6; text-shadow: white 0.1em 0.1em 0.2em;
+.logos {
+  display: flex;
+  align-items:center;
+  justify-content: center;
 }
 
 
+
+.detallesorganiza h2 {
+  margin: 25px 0px;
+}
 
 .detalles {
   padding-top: 15px;
@@ -148,7 +160,7 @@ width:1024px;
 height:50%;
 position:relative;
 margin:auto;
-}
+} 
 .contenedor_imagen_texto{
 width:335px;
 /* height:45%; */
@@ -248,11 +260,13 @@ text-align:center
 }
 
 .agenda {
-  /* background: url('../img/bogota.jpg') fixed; */
+  background: url('../img/bogota.jpg') fixed; */
   background-size: cover;
   padding-top: 70px;
   padding-bottom: 40px;
 }
+
+
 
   .agenda div {
     border: none;
@@ -322,6 +336,7 @@ text-align:center
 .informacion .descripcion  div{
   margin: 20px;
 }
+
 
 .informacion .items {
   display: flex;
