@@ -115,7 +115,7 @@ body {
 
 .infoiniciob {
   background: url('../img/back1.jpg') no-repeat fixed;
-  background-color: #f4f5f6; 
+  background-color: #f4f5f6;
   text-shadow: white 0.1em 0.1em 0.2em;
   background-size: cover;
 }
@@ -160,7 +160,7 @@ width:1024px;
 height:50%;
 position:relative;
 margin:auto;
-} 
+}
 .contenedor_imagen_texto{
 width:335px;
 /* height:45%; */
@@ -172,6 +172,7 @@ overflow:hidden;
 
 .imagen img {
     max-width: -moz-available;
+    max-width: -webkit-fill-available;
 }
 
 .actividades {
