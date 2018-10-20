@@ -55337,8 +55337,12 @@ data.agenda = [{
         nombre: 'Algoritmos genéticos en avalúos Expositor',
         expositor: 'Ing. Camilo Pulido'
     }, {
-        hora: '10:30 - 12:00',
+        hora: '10:30 - 11:30',
         nombre: 'Socializacion aspectos y perspectivas de la Ingenieria Catastral y Geodesia - Acto de entrega de premios ',
+        expositor: '-'
+    }, {
+        hora: '11:30 - 12:00',
+        nombre: 'Receso',
         expositor: '-'
     }, {
         hora: '12:00 - 12:30',
