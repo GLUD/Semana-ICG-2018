@@ -21,8 +21,8 @@ import data from '../js/data.js';
         .when('/comite', {
             templateUrl: 'views/comite.html'
         })
-        .when('/contacto', {
-            templateUrl: 'views/contacto.html'
+        .when('/organiza', {
+            templateUrl: 'views/organiza.html'
         })
         .otherwise('/');
 
@@ -33,7 +33,7 @@ import data from '../js/data.js';
       // {url: '#tematica', text: 'Temática'},
       {url: '/#!/', text: 'Inicio'},
       {url: '/#!/agenda', text: 'Talleres y Conferencias'},
-      {url: '/#!/contacto', text: 'Contáctenos'},
+      {url: '/#!/organiza', text: 'Organiza'},
     ];
   })
   .controller('Agenda', function AgendaController() {
