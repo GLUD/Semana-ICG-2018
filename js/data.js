@@ -7,7 +7,7 @@ data.agenda = [
         header: 'Lunes',
         charlas: [
             {
-                hora: '08:00 - 09:30',
+                hora: '08:00 - 08:30',
                 nombre: 'Acto de apertura XXIV Semana de Ingenieria Catastral y Geodesia',
                 expositor: ' - '
             },
@@ -168,7 +168,7 @@ data.talleres = [
         charlas: [
             {
                 hora: '10:00 - 12:00',
-                nombre: '<p>Procesamiento GNSS herramientas disponibles en la web.  <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5yzV_G4cqZXA7w3-sCcBfdI2nBxCjJvrX-TyRgqAbDvNjnQ/viewform"> Inscríbete! </a> </p>',
+                nombre: '<p>Procesamiento GNSS herramientas disponibles en la web.  <a href="#"> Inscríbete! </a> </p>',
                 expositor: 'Ing. Andrés Cardenas',
                 lugar: 'Salón 703 Edificio Sabio Caldas'
             },
@@ -203,7 +203,7 @@ data.talleres = [
             {
                 hora: '14:00 - 16:00',
                 nombre: 'Introducciòn a NETLOGO.  <a href="https://docs.google.com/forms/d/e/1FAIpQLSft9s_QUPnhikTi0KMJt95s2-27kizhh1dD69rwDPEfNoqLWA/viewform"> Inscríbete! </a>',
-                expositor:  'Ing. Felox Lopez',
+                expositor:  'Ing. Felix Lopez',
                 lugar: 'Salón 507 Edificio Sabio Caldas'
             },
             {
