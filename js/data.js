@@ -168,7 +168,7 @@ data.talleres = [
         charlas: [
             {
                 hora: '10:00 - 12:00',
-                nombre: '<p>Procesamiento GNSS herramientas disponibles en la web.  <a href="#"> Inscríbete! </a> </p>',
+                nombre: '<p>Procesamiento GNSS herramientas disponibles en la web.  <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5yzV_G4cqZXA7w3-sCcBfdI2nBxCjJvrX-TyRgqAbDvNjnQ/viewform"> Inscríbete! </a> </p>',
                 expositor: 'Ing. Andrés Cardenas',
                 lugar: 'Salón 703 Edificio Sabio Caldas'
             },
