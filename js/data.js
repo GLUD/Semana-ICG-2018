@@ -209,7 +209,7 @@ data.talleres = [
         ]
     },
     {
-        header: 'Jueves',
+        header: 'Viernes',
         charlas: [
             {
                 hora: '10:00 - 12:00',
