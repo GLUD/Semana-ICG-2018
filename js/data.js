@@ -167,12 +167,6 @@ data.talleres = [
         header: 'Lunes',
         charlas: [
             {
-                hora: '10:00 - 12:00',
-                nombre: '<p>Procesamiento GNSS herramientas disponibles en la web.  <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5yzV_G4cqZXA7w3-sCcBfdI2nBxCjJvrX-TyRgqAbDvNjnQ/viewform"> Inscríbete! </a> </p>',
-                expositor: 'Ing. Andrés Cardenas',
-                lugar: 'Salón 703 Edificio Sabio Caldas'
-            },
-            {
                 hora: '14:00 - 18:00',
                 nombre: 'Herramientas para la modernización de la administración de tierras en colombia.  <a href="https://docs.google.com/forms/d/e/1FAIpQLSev5ZzLYe9x8vlZhB1IqXCGgxjZw0kli7VewaMuF9pSzRVdrg/viewform"> Inscríbete! </a>',
                 expositor:  'AGENCIA BSF',
@@ -186,11 +180,11 @@ data.talleres = [
             {
                 hora: '14:00 - 16:00',
                 nombre: 'Usos herramientas SIG en el catastro.  <a href="https://docs.google.com/forms/d/e/1FAIpQLSflLKB5d5IXbWbMxWbo3JEhNLCZZz31jPwFfYuoko89YBtXbg/closedform"> Inscríbete! </a>',
-                expositor:  'AGENCIA BSF',
-                lugar: 'Salón 703 Edificio Sabio Caldas'
+                expositor:  'Ing. Berenice Rojas',
+                lugar: 'Salon 505 Edificio Sabio Caldas'
             },
             {
-                hora: '14:00 - 18:00',
+                hora: '14:00 - 16:00',
                 nombre: 'Taller básico de ARCGIS PRO.  <a href="https://docs.google.com/forms/d/e/1FAIpQLScEUlbv3tDycq5K6V0mUez16Ujmfvi_OKJ6YF1eq8NmEnDM6w/viewform"> Inscríbete! </a>',
                 expositor:  'ESRI COLOMBIA',
                 lugar: ''
@@ -210,6 +204,17 @@ data.talleres = [
                 hora: '14:00 - 16:00',
                 nombre: 'Taller de procesamiento digital e interpretación de imágenes UAB para mapas de uso y coberturas del suelo.  <a href="https://docs.google.com/forms/d/e/1FAIpQLScDE0TJGaqDsW5EV29RtzFkzlPETSPlHS1YIfm5FN19uO-k_Q/viewform"> Inscríbete! </a>',
                 expositor:  'Rafael Gonzalez Rubio',
+                lugar: 'Salón 703 Edificio Sabio Caldas'
+            },
+        ]
+    },
+    {
+        header: 'Jueves',
+        charlas: [
+            {
+                hora: '10:00 - 12:00',
+                nombre: '<p>Procesamiento GNSS herramientas disponibles en la web.  Requisito: Bases de datos espaciales <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5yzV_G4cqZXA7w3-sCcBfdI2nBxCjJvrX-TyRgqAbDvNjnQ/viewform"> Inscríbete! </a> </p>',
+                expositor: 'Ing. Andrés Cardenas',
                 lugar: 'Salón 703 Edificio Sabio Caldas'
             },
         ]
