@@ -168,7 +168,7 @@ data.talleres = [
         charlas: [
             {
                 hora: '14:00 - 18:00',
-                nombre: 'Herramientas para la modernización de la administración de tierras en colombia.  <a href="https://docs.google.com/forms/d/e/1FAIpQLSev5ZzLYe9x8vlZhB1IqXCGgxjZw0kli7VewaMuF9pSzRVdrg/viewform"> Inscríbete! </a>',
+                nombre: 'Herramientas para la modernización de la administración de tierras en colombia.',
                 expositor:  'AGENCIA BSF',
                 lugar: 'Salón 703 Edificio Sabio Caldas'
             },
